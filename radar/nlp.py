@@ -124,16 +124,25 @@ def model_labels(rows: list[dict], analyzers: dict, batch: int = 64) -> list[dic
                 break
             ids = idx[k:k + batch]
             texts = [rows[i]["text"][:500] for i in ids]
-            for i, p in zip(ids, _out(analyzers[(lang, "sentiment")].predict(texts))):
-                out[i]["tono"] = p.output
-                out[i]["metodo"] = "modelo"
-            if (lang, "emotion") in analyzers:
-                for i, p in zip(ids, _out(analyzers[(lang, "emotion")].predict(texts))):
-                    out[i]["emocion"] = EMO_MAP.get(p.output, "otra")
-            if (lang, "hate_speech") in analyzers:
-                for i, p in zip(ids, _out(analyzers[(lang, "hate_speech")].predict(texts))):
+            for task in ("sentiment", "emotion", "hate_speech"):
+                if (lang, task) not in analyzers:
+                    continue
+                try:
+                    preds = _out(analyzers[(lang, task)].predict(texts))
+                except Exception as e:  # un modelo que falla no tira abajo la corrida: queda el diccionario
+                    print(f"nlp: {task}/{lang} falló: {str(e)[:80]}", flush=True)
+                    continue
+                for i, p in zip(ids, preds):
                     labels = p.output if isinstance(p.output, list) else [p.output]
-                    out[i]["agresivo"] = bool({"aggressive", "hateful"} & set(labels))
+                    if task == "sentiment" and labels:
+                        out[i]["tono"] = labels[0]
+                        out[i]["metodo"] = "modelo"
+                    elif task == "emotion":  # en portugués el modelo es multietiqueta: se toma la más probable
+                        probs = getattr(p, "probas", None) or {}
+                        best = max(labels, key=lambda l: probs.get(l, 0)) if labels else "others"
+                        out[i]["emocion"] = EMO_MAP.get(best, "otra")
+                    elif task == "hate_speech":
+                        out[i]["agresivo"] = bool({"aggressive", "hateful"} & set(labels))
             done += len(ids)
         print(f"nlp: {done} de {len(idx)} textos en {lang} clasificados con modelo", flush=True)
     return out
