@@ -79,17 +79,28 @@ def youtube():
     api = "https://www.googleapis.com/youtube/v3/"
     since = iso(datetime.now(timezone.utc) - timedelta(days=CONFIG["window_days"]))
     ctx, excl = cfg["contexto"], cfg["excluir"]
-    out, seen = [], set()
+    out, seen, fails = [], set(), 0
     for q in cfg["queries"]:
         params = {"part": "snippet", "type": "video", "q": q, "regionCode": cfg["region"], "relevanceLanguage": cfg["language"],
                   "publishedAfter": since, "maxResults": cfg["videos_per_query"], "order": "relevance", "key": key}
-        try:
-            items = get_json(api + "search?" + urllib.parse.urlencode(params)).get("items", [])
-        except urllib.error.HTTPError as e:
-            log(youtube_query=q, error=e.code)
-            if e.code in (403, 429):  # cuota agotada o límite de ritmo: seguir mañana
+        items = None
+        for attempt in range(2):
+            try:
+                items = get_json(api + "search?" + urllib.parse.urlencode(params)).get("items", [])
+                break
+            except urllib.error.HTTPError as e:
+                log(youtube_query=q, error=e.code, attempt=attempt)
+                if e.code == 429 and attempt == 0:  # límite de ritmo: esperar y reintentar una vez
+                    time.sleep(60)
+                    continue
+                items = None
+                break
+        if items is None:
+            fails += 1
+            if fails >= 3:  # cuota agotada (403) o límite persistente: seguir mañana
                 break
             continue
+        fails = 0
         for v in items:
             vid = v["id"]["videoId"]
             if vid in seen:
@@ -121,7 +132,7 @@ def youtube():
                             "created_at": c["publishedAt"][:19] + "Z",
                             "url": f"https://www.youtube.com/watch?v={vid}&lc={t['id']}", "query": q,
                             "engagement": c.get("likeCount", 0) + t["snippet"].get("totalReplyCount", 0)})
-        time.sleep(0.3)
+        time.sleep(2)
     return out
 
 

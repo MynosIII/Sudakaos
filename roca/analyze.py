@@ -147,7 +147,7 @@ def build_geo():
     if not GEO.exists():
         return locs, [], {}
     g = json.loads(GEO.read_text(encoding="utf8"))
-    ejido = None
+    ejido, ejido_rank = None, 9
     for el in g.get("boundaries", []):
         tags = el.get("tags", {})
         name = fold(tags.get("name", ""))
@@ -156,8 +156,10 @@ def build_geo():
             continue
         lvl = tags.get("admin_level")
         if "roca" in name and lvl in ("7", "8", "9"):
-            if ejido is None or sum(map(area_km2, rings)) < sum(map(area_km2, ejido)):
-                ejido = rings
+            # Preferir el municipio (nivel 8); si no, el nivel más cercano
+            rank = {"8": 0, "7": 1, "9": 2}[lvl]
+            if ejido is None or rank < ejido_rank:
+                ejido, ejido_rank = rings, rank
             continue
         if lvl in ("9", "10"):
             for k, l in locs.items():
@@ -169,9 +171,8 @@ def build_geo():
     for p in g.get("places", []):
         if p["kind"] in ("city", "town") and "roca" in fold(p["name"]):
             continue
-        if ejido and not any(inside(p["lon"], p["lat"], r) for r in ejido):
-            continue
         nf = fold(p["name"]).replace("barrio ", "").strip()
+        in_ejido = not ejido or any(inside(p["lon"], p["lat"], r) for r in ejido)
         hit = None
         for k, l in locs.items():
             names = {fold(k)} | {fold(a).replace("barrio ", "") for a in l["alias"]}
@@ -184,7 +185,7 @@ def build_geo():
                 hit["fuente_geo"] = "OSM"
             continue
         # Lugar con nombre en OSM que no estaba en la lista: se suma con alias seguros ("barrio X" o nombre largo)
-        if len(nf) < 5 or nf in GENERIC:
+        if not in_ejido or len(nf) < 5 or nf in GENERIC:
             continue
         alias = [f"barrio {nf}"] + ([nf] if (" " in nf and len(nf) >= 10) or re.search(r"\d", nf) else [])
         locs[p["name"]] = {"nombre": p["name"], "alias": alias, "centro": [p["lat"], p["lon"]], "fuente_geo": "OSM", "osm_extra": True}
@@ -303,8 +304,11 @@ def main():
         def tone(rs):
             return {t: pct(sum(1 for r in rs if r["tono"] == t) / len(rs)) for t in ("NEG", "NEU", "POS")} if rs else None
         emo = [r["emocion"] for r in tone_src if r["emocion"] in EMOS]
-        narr = Counter(n for r in m for n in r["narr"])
-        nn = sum(1 for r in m if r["narr"]) or 1
+        # Narrativas sin contar el propio nombre (si no, "Weretilneck" siempre cae en "Relación con la Provincia")
+        own = POLS[k]
+        narr_m = [[n for n, p in NARR.items() if p.search(" " + own.sub(" ", r["_f"]) + " ")] for r in m]
+        narr = Counter(n for ns in narr_m for n in ns)
+        nn = sum(1 for ns in narr_m if ns) or 1
         mine = Counter(w for i in idx for w in word_sets[i])
         negc = Counter(w for i in idx if conv[i]["tono"] == "NEG" for w in word_sets[i])
         nm, nall = len(idx), len(conv)
@@ -330,7 +334,7 @@ def main():
             "outlets": [{"o": o, "n": c} for o, c in outlets.most_common(10)],
             "temas_reclamo": Counter(t for r in m if r["reclamo"] for t in r["temas"]).most_common(5),
             "headlines": [{"t": r["title"], "o": r.get("outlet", ""), "u": r["url"], "d": r["created_at"][:10], "tono": r["tono"],
-                           "narr": r["narr"][:3]} for r in heads],
+                           "narr": [n for n, p in NARR.items() if p.search(" " + own.sub(" ", r["_f"]) + " ")][:3]} for r in heads],
             "metodo_nlp": Counter(r["metodo_nlp"] for r in m).most_common(1)[0][0],
         })
         pols_out.append(info)

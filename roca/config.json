@@ -380,13 +380,19 @@
     "j. j. gómez",
     "j. j. gomez",
     "juan josé gómez",
-    "juan jose gomez"
+    "juan jose gomez",
+    "coronel juan josé gómez",
+    "coronel juan jose gomez",
+    "cnel. j. j. gómez",
+    "cnel. j.j. gómez"
    ]
   },
   "Paso Córdoba": {
    "alias": [
     "paso córdoba",
-    "paso cordoba"
+    "paso cordoba",
+    "paso córdova",
+    "paso cordova"
    ]
   },
   "Fiske Menuco": {
@@ -775,7 +781,10 @@
    "patagonia",
    "neuquén",
    "neuquen",
-   "cipolletti"
+   "cipolletti",
+   "general roca",
+   "stefenelli",
+   "alta barda"
   ],
   "excluir": [
    "españa",
@@ -854,28 +863,8 @@
    "url": "https://www.rionegro.com.ar/feed/"
   },
   {
-   "name": "LM Cipolletti",
-   "url": "https://www.lmcipolletti.com/rss/pages/home.xml"
-  },
-  {
-   "name": "LM Neuquén",
-   "url": "https://www.lmneuquen.com/rss/pages/home.xml"
-  },
-  {
-   "name": "Letra P",
-   "url": "https://www.letrap.com.ar/rss/pages/home.xml"
-  },
-  {
    "name": "ADN Río Negro",
    "url": "https://www.adnrionegro.com.ar/feed/"
-  },
-  {
-   "name": "Noticias NQN",
-   "url": "https://www.noticiasnqn.com.ar/rss/"
-  },
-  {
-   "name": "Municipalidad de General Roca",
-   "url": "https://www.roca.gob.ar/feed/"
   }
  ]
 }
