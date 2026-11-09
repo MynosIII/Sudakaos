@@ -1,0 +1,49 @@
+name: Publicar tablero (GitHub Pages)
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  # Los workflows de datos hacen commit con el token de Actions, que no dispara "push": se publica al terminar
+  workflow_run:
+    workflows: ['Radar social listening', 'San Isidro reclamos']
+    types: [completed]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - name: Copiar solo archivos públicos
+        run: |
+          mkdir -p _site/radar/data _site/sanisidro
+          cp dashboard.html .nojekyll _site/
+          cp dashboard.html _site/index.html
+          cp -R assets _site/
+          cp radar/index.html _site/radar/
+          cp radar/data/*.json _site/radar/data/
+          cp -R sanisidro/index.html sanisidro/data _site/sanisidro/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
