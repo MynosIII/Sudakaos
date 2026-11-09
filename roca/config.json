@@ -1,0 +1,881 @@
+{
+ "municipio": "General Roca",
+ "provincia": "Río Negro",
+ "foco": "María Emilia Soria",
+ "window_days": 365,
+ "conversacion_dias": 180,
+ "centro": [
+  -39.0333,
+  -67.5833
+ ],
+ "bbox_osm": "-39.20,-67.80,-38.90,-67.40",
+ "politicos": {
+  "María Emilia Soria": {
+   "alias": [
+    "maría emilia soria",
+    "maria emilia soria",
+    "emilia soria",
+    "intendenta soria",
+    "intendenta de roca",
+    "intendenta de general roca",
+    "maría emilia",
+    "maria emilia"
+   ],
+   "espacio": "PJ · Fuerza Patria",
+   "cargo": "Intendenta de General Roca · precandidata a gobernadora 2027",
+   "foco": true
+  },
+  "Martín Soria": {
+   "alias": [
+    "martín soria",
+    "martin soria"
+   ],
+   "espacio": "PJ · Fuerza Patria",
+   "cargo": "Senador nacional por Río Negro"
+  },
+  "Carlos Soria (h)": {
+   "alias": [
+    "carlitos soria",
+    "carlos soria (h)",
+    "carlos soria hijo"
+   ],
+   "espacio": "PJ · Fuerza Patria",
+   "cargo": "Mencionado para suceder a su hermana en Roca"
+  },
+  "Alberto Weretilneck": {
+   "alias": [
+    "weretilneck",
+    "weretilnek",
+    "weretilnec"
+   ],
+   "espacio": "Juntos Somos Río Negro",
+   "cargo": "Gobernador de Río Negro"
+  },
+  "Pedro Pesatti": {
+   "alias": [
+    "pesatti"
+   ],
+   "espacio": "Juntos Somos Río Negro",
+   "cargo": "Vicegobernador de Río Negro"
+  },
+  "Aníbal Tortoriello": {
+   "alias": [
+    "tortoriello"
+   ],
+   "espacio": "CREO · aliado de LLA",
+   "cargo": "Precandidato a gobernador"
+  },
+  "Enzo Fullone": {
+   "alias": [
+    "fullone"
+   ],
+   "espacio": "La Libertad Avanza",
+   "cargo": "Armador de LLA en Río Negro"
+  },
+  "Lorena Villaverde": {
+   "alias": [
+    "lorena villaverde",
+    "villaverde"
+   ],
+   "espacio": "La Libertad Avanza",
+   "cargo": "Dirigente de LLA Río Negro"
+  },
+  "Juan Martín": {
+   "alias": [
+    "juan martín",
+    "juan martin"
+   ],
+   "espacio": "PRO",
+   "cargo": "Presidente del PRO Río Negro, legislador"
+  },
+  "Andrés Barresi": {
+   "alias": [
+    "barresi"
+   ],
+   "espacio": "Ex Juntos Somos Río Negro",
+   "cargo": "Excandidato a intendente de Roca (2019)"
+  },
+  "Marcial Peralta": {
+   "alias": [
+    "marcial peralta"
+   ],
+   "espacio": "Radical · cercano a LLA",
+   "cargo": "Mencionado como candidato en Roca"
+  },
+  "Javier Milei": {
+   "alias": [
+    "milei"
+   ],
+   "espacio": "La Libertad Avanza",
+   "cargo": "Presidente de la Nación"
+  }
+ },
+ "posiciones": {
+  "escala": {
+   "eco": "0 = Estado interventor · 100 = libre mercado",
+   "soc": "0 = progresista · 100 = conservador",
+   "pol": "0 = antisistema / outsider · 100 = institucionalista / establishment"
+  },
+  "metodo": "Codificación editorial inicial a partir de declaraciones y trayectoria pública, para revisar con el cliente. No es una medición de opinión.",
+  "excluidos": {
+   "Carlos Soria (h)": "Sin posiciones públicas suficientes para ubicarlo."
+  },
+  "puntos": {
+   "María Emilia Soria": {
+    "eco": 25,
+    "soc": 35,
+    "pol": 85,
+    "nota": "Defiende un 'mejor Estado' y más presencia estatal frente al ajuste nacional (eco); peronismo clásico, sin agenda cultural fuerte (soc); tercera gestión y apellido con dos décadas de poder en Roca (pol)."
+   },
+   "Martín Soria": {
+    "eco": 25,
+    "soc": 30,
+    "pol": 70,
+    "nota": "Exministro de Justicia de Alberto Fernández, kirchnerismo duro; choque abierto con la Corte Suprema le resta perfil institucionalista."
+   },
+   "Alberto Weretilneck": {
+    "eco": 55,
+    "soc": 55,
+    "pol": 85,
+    "nota": "Provincialismo pragmático de JSRN: acuerda con cada gobierno nacional (obras, petróleo, RIGI) y gobierna desde 2011 con interrupciones."
+   },
+   "Pedro Pesatti": {
+    "eco": 50,
+    "soc": 50,
+    "pol": 80,
+    "nota": "Vicegobernador de JSRN, perfil moderado y de gestión."
+   },
+   "Aníbal Tortoriello": {
+    "eco": 80,
+    "soc": 65,
+    "pol": 55,
+    "nota": "Empresario y exintendente de Cipolletti; promercado, se acercó a LLA para la gobernación."
+   },
+   "Enzo Fullone": {
+    "eco": 90,
+    "soc": 75,
+    "pol": 30,
+    "nota": "Armador de LLA en la provincia; acompaña el programa del Presidente."
+   },
+   "Lorena Villaverde": {
+    "eco": 90,
+    "soc": 80,
+    "pol": 25,
+    "nota": "Referente libertaria rionegrina, discurso anticasta y conservador."
+   },
+   "Juan Martín": {
+    "eco": 75,
+    "soc": 60,
+    "pol": 65,
+    "nota": "Presidente del PRO rionegrino; centroderecha promercado de perfil institucional."
+   },
+   "Andrés Barresi": {
+    "eco": 55,
+    "soc": 50,
+    "pol": 70,
+    "nota": "Exfuncionario provincial y excandidato de JSRN en Roca; perfil técnico."
+   },
+   "Marcial Peralta": {
+    "eco": 60,
+    "soc": 55,
+    "pol": 70,
+    "nota": "Origen radical, fue parte de los gobiernos de Verani y Saiz; hoy cercano a LLA."
+   },
+   "Javier Milei": {
+    "eco": 95,
+    "soc": 75,
+    "pol": 15,
+    "nota": "Déficit cero, desregulación y apertura; llegó como outsider contra 'la casta'. Referencia nacional."
+   }
+  }
+ },
+ "narrativas": {
+  "Gestión y obra pública": [
+   "obra",
+   "obras",
+   "asfalt",
+   "pavimen",
+   "cloaca",
+   "inaugur",
+   "licitaci",
+   "plaza",
+   "luminaria",
+   "gestión municipal",
+   "gestion municipal"
+  ],
+  "Candidatura 2027": [
+   "gobernación",
+   "gobernacion",
+   "gobernadora",
+   "2027",
+   "candidatura",
+   "candidata",
+   "precandidat",
+   "vamos río negro",
+   "vamos rio negro"
+  ],
+  "Unidad e interna peronista": [
+   "peronismo",
+   "peronista",
+   "justicialista",
+   "pj",
+   "unidad",
+   "interna",
+   "fuerza patria",
+   "kirchner",
+   "cristina"
+  ],
+  "Confrontación con Milei": [
+   "milei",
+   "gobierno nacional",
+   "motosierra",
+   "ajuste",
+   "recorte",
+   "libertari",
+   "nación"
+  ],
+  "Relación con la Provincia": [
+   "weretilneck",
+   "gobierno provincial",
+   "provincia",
+   "gobernador",
+   "legislatura",
+   "pacto"
+  ],
+  "Dinastía y sucesión Soria": [
+   "dinastía",
+   "dinastia",
+   "clan",
+   "familia soria",
+   "hermano",
+   "sucesi",
+   "carlitos",
+   "gringo soria",
+   "apellido"
+  ],
+  "Seguridad": [
+   "insegur",
+   "robo",
+   "policía",
+   "policia",
+   "delito",
+   "homicid",
+   "crimen"
+  ],
+  "Economía regional": [
+   "fruticultura",
+   "frutícola",
+   "fruticola",
+   "fruta",
+   "chacra",
+   "productores",
+   "vaca muerta",
+   "petróleo",
+   "petroleo",
+   "empleo",
+   "comercio"
+  ],
+  "Servicios": [
+   "sin agua",
+   "aguas rionegrinas",
+   "corte de luz",
+   "cortes de luz",
+   "edersa",
+   "camuzzi",
+   "garrafa",
+   "red de gas",
+   "transporte publico",
+   "colectivo"
+  ],
+  "Salarios, tasas y municipales": [
+   "paritaria",
+   "salario",
+   "municipales",
+   "sindicato",
+   "aumento",
+   "tasa",
+   "tasas",
+   "impuesto"
+  ],
+  "Cultura, deporte y eventos": [
+   "fiesta",
+   "festival",
+   "cultura",
+   "deporte",
+   "vendimia",
+   "manzana",
+   "evento"
+  ],
+  "Denuncias y justicia": [
+   "denuncia",
+   "causa judicial",
+   "justicia",
+   "irregular",
+   "corrupci",
+   "fiscalia",
+   "fiscalía",
+   "imputad",
+   "allanamiento"
+  ]
+ },
+ "localidades": {
+  "Centro": {
+   "centro": [
+    -39.0333,
+    -67.5833
+   ],
+   "alias": [
+    "centro de roca",
+    "microcentro",
+    "centro roquense",
+    "centro de general roca"
+   ]
+  },
+  "Alta Barda": {
+   "alias": [
+    "alta barda"
+   ]
+  },
+  "Quinta 25": {
+   "alias": [
+    "quinta 25"
+   ]
+  },
+  "Villa Obrera": {
+   "alias": [
+    "villa obrera"
+   ]
+  },
+  "Barrio Nuevo": {
+   "alias": [
+    "barrio nuevo"
+   ]
+  },
+  "Mosconi": {
+   "alias": [
+    "mosconi"
+   ]
+  },
+  "Chacra Monte": {
+   "centro": [
+    -39.0528,
+    -67.6333
+   ],
+   "alias": [
+    "chacra monte"
+   ]
+  },
+  "Stefenelli": {
+   "alias": [
+    "stefenelli",
+    "padre alejandro stefenelli"
+   ]
+  },
+  "J. J. Gómez": {
+   "alias": [
+    "j.j. gómez",
+    "j.j. gomez",
+    "jj gómez",
+    "jj gomez",
+    "j. j. gómez",
+    "j. j. gomez",
+    "juan josé gómez",
+    "juan jose gomez"
+   ]
+  },
+  "Paso Córdoba": {
+   "alias": [
+    "paso córdoba",
+    "paso cordoba"
+   ]
+  },
+  "Fiske Menuco": {
+   "alias": [
+    "barrio fiske menuco",
+    "barrio fiske"
+   ]
+  },
+  "Universitario": {
+   "alias": [
+    "barrio universitario"
+   ]
+  },
+  "Belgrano": {
+   "alias": [
+    "barrio belgrano"
+   ]
+  },
+  "Malvinas": {
+   "alias": [
+    "barrio malvinas",
+    "barrio islas malvinas"
+   ]
+  },
+  "Tiro Federal": {
+   "alias": [
+    "barrio tiro federal"
+   ]
+  },
+  "La Ribera": {
+   "alias": [
+    "barrio la ribera"
+   ]
+  },
+  "Barrio Norte": {
+   "alias": [
+    "barrio norte",
+    "zona norte de roca"
+   ]
+  },
+  "Zona Sur": {
+   "alias": [
+    "zona sur de roca",
+    "sur de roca"
+   ]
+  }
+ },
+ "contexto": [
+  "general roca",
+  "roca",
+  "fiske menuco",
+  "roquense",
+  "roquenses",
+  "alto valle",
+  "soria",
+  "stefenelli",
+  "chacra monte",
+  "mosconi",
+  "paso córdoba",
+  "paso cordoba",
+  "alta barda",
+  "quinta 25",
+  "villa obrera"
+ ],
+ "temas": {
+  "Inseguridad": [
+   "insegur",
+   "robo",
+   "robaron",
+   "roban",
+   "asalt",
+   "delinc",
+   "motochorr",
+   "entradera",
+   "tiroteo",
+   "balacera",
+   "baleado",
+   "arrebat",
+   "policía",
+   "policia",
+   "narco",
+   "droga",
+   "homicid"
+  ],
+  "Calles, ripio y polvo": [
+   "bache",
+   "pozo",
+   "asfalt",
+   "pavimen",
+   "ripio",
+   "calle de tierra",
+   "calles de tierra",
+   "polvo",
+   "regador",
+   "enripi",
+   "cordón cuneta",
+   "cordon cuneta",
+   "vereda"
+  ],
+  "Agua potable": [
+   "sin agua",
+   "falta de agua",
+   "falta agua",
+   "baja presión",
+   "baja presion",
+   "aguas rionegrinas",
+   "corte de agua",
+   "cortes de agua",
+   "agua potable",
+   "red de agua"
+  ],
+  "Cloacas y desagües": [
+   "cloaca",
+   "desagüe",
+   "desague",
+   "pluvial",
+   "inund",
+   "anegad",
+   "líquidos cloacales",
+   "liquidos cloacales",
+   "pozo ciego"
+  ],
+  "Luz y alumbrado": [
+   "corte de luz",
+   "cortes de luz",
+   "sin luz",
+   "edersa",
+   "alumbrado",
+   "luminaria",
+   "a oscuras"
+  ],
+  "Gas": [
+   "sin gas",
+   "red de gas",
+   "camuzzi",
+   "garrafa",
+   "pérdida de gas",
+   "perdida de gas"
+  ],
+  "Basura y microbasurales": [
+   "basura",
+   "residuo",
+   "recolecci",
+   "microbasural",
+   "basural",
+   "contenedo",
+   "escombro",
+   "limpieza"
+  ],
+  "Tránsito y transporte": [
+   "tránsito",
+   "transito",
+   "colectivo",
+   "pasaje",
+   "ruta 22",
+   "ruta 6",
+   "semáforo",
+   "semaforo",
+   "accidente",
+   "choque",
+   "lomo de burro",
+   "velocidad",
+   "picada",
+   "estacionam"
+  ],
+  "Tierras, tomas y vivienda": [
+   "toma de tierra",
+   "tomas de tierra",
+   "una toma",
+   "la toma",
+   "usurpa",
+   "lotes sociales",
+   "loteo",
+   "terrenos",
+   "vivienda",
+   "viviendas",
+   "alquiler",
+   "desalojo",
+   "asentamiento"
+  ],
+  "Canales y riego": [
+   "canal de riego",
+   "canales de riego",
+   "canal grande",
+   "canal principal",
+   "riego",
+   "acequia",
+   "desagüe agrícola",
+   "desague agricola",
+   "drenaje"
+  ],
+  "Salud": [
+   "hospital",
+   "lópez lima",
+   "lopez lima",
+   "salita",
+   "centro de salud",
+   "guardia",
+   "turno",
+   "médico",
+   "medico",
+   "ambulancia"
+  ],
+  "Educación": [
+   "escuela",
+   "colegio",
+   "jardín",
+   "jardin",
+   "docente",
+   "aula",
+   "vacante",
+   "comedor escolar"
+  ],
+  "Espacios verdes y arbolado": [
+   "plaza",
+   "árbol",
+   "arbol",
+   "árboles",
+   "arboles",
+   "álamo",
+   "alamo",
+   "poda",
+   "espacio verde",
+   "costanera",
+   "parque"
+  ],
+  "Situación social y empleo": [
+   "situación de calle",
+   "situacion de calle",
+   "comedor",
+   "olla popular",
+   "hambre",
+   "pobreza",
+   "desocup",
+   "despido",
+   "trabajo"
+  ],
+  "Tasas y municipio": [
+   "tasa",
+   "tasas",
+   "impuesto",
+   "aumento",
+   "boleta",
+   "municipales",
+   "paritaria",
+   "concejo deliberante"
+  ],
+  "Perros y convivencia": [
+   "perros sueltos",
+   "jauría",
+   "jauria",
+   "mordedura",
+   "ruido",
+   "fiesta clandestina",
+   "boliche",
+   "picadas"
+  ]
+ },
+ "marcadores_reclamo": [
+  "reclam",
+  "queja",
+  "quej",
+  "denunci",
+  "nadie hace",
+  "nadie viene",
+  "abandon",
+  "vergüenza",
+  "verguenza",
+  "desastre",
+  "harto",
+  "harta",
+  "cansad",
+  "no hacen nada",
+  "no aparece",
+  "olvidad",
+  "peligro",
+  "inseguro",
+  "insegura",
+  "pésimo",
+  "pesimo",
+  "horrible",
+  "mal estado",
+  "roto",
+  "rota",
+  "rotas",
+  "rotos",
+  "falta",
+  "faltan",
+  "sin respuesta",
+  "pedimos",
+  "exigimos",
+  "piden",
+  "reclaman",
+  "vecinos denuncian",
+  "un asco",
+  "no da más",
+  "no da mas",
+  "terrible",
+  "basta",
+  "otra vez",
+  "de nuevo",
+  "cada vez peor",
+  "inaceptable",
+  "lamentable",
+  "preocupa",
+  "sufren",
+  "padecen"
+ ],
+ "positivo": [
+  "gracias",
+  "excelente",
+  "bien hecho",
+  "muy bien",
+  "mejoró",
+  "mejoro",
+  "felicit",
+  "impecable",
+  "genial",
+  "bravo",
+  "buenísimo",
+  "buenisimo",
+  "por fin",
+  "aplaudo",
+  "orgullo",
+  "gran gestión",
+  "gran gestion",
+  "inaugur"
+ ],
+ "negativo": [
+  "chorro",
+  "corrupt",
+  "inútil",
+  "inutil",
+  "mentiroso",
+  "mentirosa",
+  "verso",
+  "vergüenza",
+  "verguenza",
+  "desastre",
+  "basura",
+  "ladr",
+  "nefasto",
+  "patético",
+  "patetico",
+  "fuera",
+  "vende humo",
+  "no hace nada",
+  "no hacen nada",
+  "abandon",
+  "peor",
+  "feudo",
+  "clan"
+ ],
+ "youtube": {
+  "region": "AR",
+  "language": "es",
+  "videos_per_query": 10,
+  "comments_per_video": 100,
+  "queries": [
+   "María Emilia Soria",
+   "María Emilia Soria gobernadora",
+   "María Emilia Soria intendenta Roca",
+   "Soria General Roca",
+   "General Roca vecinos reclamo",
+   "General Roca inseguridad",
+   "General Roca barrio vecinos",
+   "Roca Río Negro barrio sin agua",
+   "Alta Barda Roca",
+   "Stefenelli Roca",
+   "Chacra Monte Roca",
+   "Paso Córdoba Roca",
+   "J.J. Gómez Roca",
+   "Weretilneck Soria",
+   "elecciones Río Negro 2027",
+   "Tortoriello Río Negro",
+   "Martín Soria senador"
+  ],
+  "contexto": [
+   "roca",
+   "río negro",
+   "rio negro",
+   "fiske menuco",
+   "alto valle",
+   "soria",
+   "weretilneck",
+   "patagonia",
+   "neuquén",
+   "neuquen",
+   "cipolletti"
+  ],
+  "excluir": [
+   "españa",
+   "castilla",
+   "soria ciudad",
+   "numancia",
+   "méxico",
+   "mexico",
+   "chile",
+   "colombia",
+   "perú",
+   "peru"
+  ]
+ },
+ "google_news": {
+  "queries": [
+   "\"María Emilia Soria\"",
+   "\"Emilia Soria\" Roca",
+   "\"Emilia Soria\" gobernación",
+   "\"Emilia Soria\" Weretilneck",
+   "\"Emilia Soria\" Milei",
+   "\"General Roca\" municipio",
+   "\"General Roca\" vecinos reclamo",
+   "\"General Roca\" vecinos",
+   "\"General Roca\" barrio",
+   "Roca \"Río Negro\" barrio vecinos",
+   "\"General Roca\" inseguridad",
+   "\"General Roca\" robo",
+   "\"General Roca\" agua barrio",
+   "\"General Roca\" cloacas",
+   "\"General Roca\" asfalto",
+   "\"General Roca\" basura",
+   "\"General Roca\" tránsito",
+   "\"General Roca\" tomas",
+   "\"General Roca\" Concejo Deliberante",
+   "\"General Roca\" Edersa",
+   "\"Alta Barda\" Roca",
+   "Stefenelli Roca",
+   "\"Chacra Monte\"",
+   "\"Paso Córdoba\" Roca",
+   "\"J.J. Gómez\" Roca",
+   "Mosconi Roca vecinos",
+   "\"Quinta 25\" Roca",
+   "\"Villa Obrera\" Roca",
+   "\"Martín Soria\"",
+   "Weretilneck",
+   "Pesatti",
+   "Tortoriello",
+   "Fullone",
+   "\"Lorena Villaverde\"",
+   "\"Juan Martín\" PRO Río Negro",
+   "Barresi Roca",
+   "\"Marcial Peralta\"",
+   "\"Carlos Soria\" Roca",
+   "\"Río Negro\" elecciones 2027",
+   "Milei \"Río Negro\""
+  ],
+  "sites": [
+   "rionegro.com.ar",
+   "lmcipolletti.com",
+   "lmneuquen.com",
+   "letrap.com.ar",
+   "adnrionegro.com.ar",
+   "noticiasnqn.com.ar",
+   "vaconfirma.com.ar",
+   "roca.gob.ar"
+  ],
+  "site_terms": [
+   "\"General Roca\"",
+   "\"Emilia Soria\""
+  ]
+ },
+ "rss": [
+  {
+   "name": "Diario Río Negro",
+   "url": "https://www.rionegro.com.ar/feed/"
+  },
+  {
+   "name": "LM Cipolletti",
+   "url": "https://www.lmcipolletti.com/rss/pages/home.xml"
+  },
+  {
+   "name": "LM Neuquén",
+   "url": "https://www.lmneuquen.com/rss/pages/home.xml"
+  },
+  {
+   "name": "Letra P",
+   "url": "https://www.letrap.com.ar/rss/pages/home.xml"
+  },
+  {
+   "name": "ADN Río Negro",
+   "url": "https://www.adnrionegro.com.ar/feed/"
+  },
+  {
+   "name": "Noticias NQN",
+   "url": "https://www.noticiasnqn.com.ar/rss/"
+  },
+  {
+   "name": "Municipalidad de General Roca",
+   "url": "https://www.roca.gob.ar/feed/"
+  }
+ ]
+}
