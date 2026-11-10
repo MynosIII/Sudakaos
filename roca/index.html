@@ -345,9 +345,10 @@ function vecinal(){const V=D.vecinal,T=D.totales;
   P.forEach(p=>(p.temas_reclamo||[]).length&&(pc[p.name]=pc[p.name]||0));
   $('#v-pol').innerHTML=bars(P.filter(p=>(p.temas_reclamo||[]).length).map(p=>[p.name,p.temas_reclamo.reduce((a,b)=>a+b[1],0),colorOf[p.name]]).sort((a,b)=>b[1]-a[1]));
 }
-// Estilo propio: si los mosaicos de CARTO no cargan, el fondo liso igual deja ver los barrios
-const MAPSTYLE={version:8,sources:{carto:{type:'raster',tileSize:256,attribution:'© CARTO © OpenStreetMap',tiles:['a','b','c','d'].map(x=>'https://'+x+'.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png')}},
-  layers:[{id:'bg',type:'background',paint:{'background-color':'#0f1218'}},{id:'carto',type:'raster',source:'carto'}]};
+// Fondo oscuro gratis y sin clave (Esri World Dark Gray); si los mosaicos no cargan, el fondo liso igual deja ver los barrios
+const MAPSTYLE={version:8,sources:{base:{type:'raster',tileSize:256,maxzoom:16,attribution:'Esri, HERE, Garmin, © colaboradores de OpenStreetMap',
+  tiles:['https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}']}},
+  layers:[{id:'bg',type:'background',paint:{'background-color':'#0f1218'}},{id:'base',type:'raster',source:'base'}]};
 function vVal(l){const M=D.vecinal.matriz;if(vMetric==='reclamos')return l.reclamos;if(vMetric==='menciones')return l.menciones;
   const r=M.localidades.indexOf(l.nombre);return r<0?0:M.valores[r][M.temas.indexOf(vMetric)]}
 function vMap(){const V=D.vecinal,L=V.localidades.filter(l=>l.centro),vs=L.map(vVal),mx=Math.max(1,...vs),tr=[];
@@ -362,7 +363,7 @@ function vMap(){const V=D.vecinal,L=V.localidades.filter(l=>l.centro),vs=L.map(v
   Plotly.newPlot('v-map',tr,base({margin:{l:0,r:0,t:0,b:0},map:{style:MAPSTYLE,center:{lat:c[0],lon:c[1]},zoom:11.3},legend:{orientation:'h',y:0,x:0,bgcolor:'rgba(11,13,18,.8)'}}),CFG);
   $('#v-map').on('plotly_click',e=>{const n=e.points[0]&&e.points[0].customdata;if(n&&typeof n==='string'){vFicha(n)}});
   const sin=V.localidades.filter(l=>!l.centro&&l.reclamos).map(l=>l.nombre);
-  $('#v-mapnote').textContent='Tamaño y color según el valor elegido. Ubicaciones: OpenStreetMap. Mapa base © CARTO / OSM.'+(sin.length?' Sin ubicación en el mapa: '+sin.join(', ')+'.':'');
+  $('#v-mapnote').textContent='Tamaño y color según el valor elegido. Ubicaciones: OpenStreetMap. Mapa base: Esri World Dark Gray.'+(sin.length?' Sin ubicación en el mapa: '+sin.join(', ')+'.':'');
 }
 function vFicha(n){const V=D.vecinal,l=V.localidades.find(x=>x.nombre===n);if(!l){$('#v-ficha').innerHTML='<div class="empty">Elegí un barrio en el mapa.</div>';return}
   vSel=n;const M=V.matriz,r=M.localidades.indexOf(n),row=r<0?[]:M.valores[r],tot=row.reduce((a,b)=>a+b,0)||1;
