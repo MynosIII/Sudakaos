@@ -135,6 +135,10 @@
       "alexandre de moraes",
       "moraes",
       "xandao"
+    ],
+    "Malena Galmarini": [
+      "malena galmarini",
+      "galmarini"
     ]
   },
   "risk_terms": [
@@ -769,6 +773,10 @@
     "Alexandre de Moraes": {
       "pais": "BR",
       "espacio": "STF"
+    },
+    "Malena Galmarini": {
+      "pais": "AR",
+      "espacio": "Peronismo"
     }
   },
   "exclude_platforms": [

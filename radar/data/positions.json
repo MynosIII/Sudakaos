@@ -267,6 +267,13 @@
    "pol": 60,
    "distrito": "Goiás",
    "nota": "Gobernador de União Brasil; derecha agraria y de seguridad."
+  },
+  "Malena Galmarini": {
+   "eco": 35,
+   "soc": 40,
+   "pol": 80,
+   "distrito": "Buenos Aires",
+   "nota": "Frente Renovador: gestión estatal de servicios (expresidenta de AySA) y agenda social (discapacidad, salud); senadora bonaerense con perfil propio dentro del armado de Massa. Codificación editorial a revisar con el cliente."
   }
  },
  "validacion": "En economía, el orden de los 5 políticos que también aparecen como referentes en la encuesta PJM (Milei, Adorni, Bullrich, Cristina Kirchner, Bregman) coincide exactamente con el promedio económico de quienes los eligen (Spearman ρ = 1,0). En sociedad la coincidencia es parcial (ρ = 0,67). El eje político no es comparable con el de la encuesta."

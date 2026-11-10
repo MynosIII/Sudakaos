@@ -1,0 +1,813 @@
+{
+ "titulo": "Massa · Galmarini",
+ "foco": "Sergio Massa",
+ "foco2": "Malena Galmarini",
+ "window_days": 365,
+ "conversacion_dias": 180,
+ "politicos": {
+  "Sergio Massa": {
+   "alias": [
+    "sergio massa",
+    "massa",
+    "massismo",
+    "massista"
+   ],
+   "espacio": "Frente Renovador · Fuerza Patria",
+   "cargo": "Líder del Frente Renovador · excandidato presidencial 2023",
+   "foco": true,
+   "wiki": [
+    "Sergio Massa"
+   ]
+  },
+  "Malena Galmarini": {
+   "alias": [
+    "malena galmarini",
+    "galmarini"
+   ],
+   "excluir": [
+    "sebastián galmarini",
+    "sebastian galmarini",
+    "fernando galmarini",
+    "pato galmarini"
+   ],
+   "espacio": "Frente Renovador · Fuerza Patria",
+   "cargo": "Senadora bonaerense (bloque Frente Renovador)",
+   "foco": true,
+   "wiki": [
+    "Malena Galmarini"
+   ]
+  },
+  "Axel Kicillof": {
+   "alias": [
+    "axel kicillof",
+    "kicillof"
+   ],
+   "espacio": "Fuerza Patria · MDF",
+   "cargo": "Gobernador de Buenos Aires",
+   "wiki": [
+    "Axel Kicillof"
+   ]
+  },
+  "Cristina Kirchner": {
+   "alias": [
+    "cristina kirchner",
+    "cristina fernández de kirchner",
+    "cristina fernandez de kirchner",
+    "cfk"
+   ],
+   "espacio": "Fuerza Patria · kirchnerismo",
+   "cargo": "Expresidenta, presidenta del PJ",
+   "wiki": [
+    "Cristina Fernández de Kirchner"
+   ]
+  },
+  "Máximo Kirchner": {
+   "alias": [
+    "máximo kirchner",
+    "maximo kirchner"
+   ],
+   "espacio": "La Cámpora",
+   "cargo": "Diputado nacional",
+   "wiki": [
+    "Máximo Kirchner"
+   ]
+  },
+  "Verónica Magario": {
+   "alias": [
+    "verónica magario",
+    "veronica magario",
+    "magario"
+   ],
+   "espacio": "Fuerza Patria",
+   "cargo": "Vicegobernadora, presidenta del Senado bonaerense",
+   "wiki": [
+    "Verónica Magario"
+   ]
+  },
+  "Julio Zamora": {
+   "alias": [
+    "julio zamora",
+    "zamora"
+   ],
+   "excluir": [
+    "zamora (españa)"
+   ],
+   "espacio": "Peronismo · Tigre",
+   "cargo": "Intendente de Tigre",
+   "wiki": [
+    "Julio Zamora"
+   ]
+  },
+  "Mario Ishii": {
+   "alias": [
+    "mario ishii",
+    "ishii"
+   ],
+   "espacio": "Fuerza Patria",
+   "cargo": "Senador bonaerense, exintendente de José C. Paz",
+   "wiki": [
+    "Mario Ishii"
+   ]
+  },
+  "Juan Grabois": {
+   "alias": [
+    "juan grabois",
+    "grabois"
+   ],
+   "espacio": "Patria Grande",
+   "cargo": "Dirigente social",
+   "wiki": [
+    "Juan Grabois"
+   ]
+  },
+  "Diego Santilli": {
+   "alias": [
+    "diego santilli",
+    "santilli"
+   ],
+   "espacio": "La Libertad Avanza",
+   "cargo": "Referente de LLA en Buenos Aires",
+   "wiki": [
+    "Diego Santilli"
+   ]
+  },
+  "Karina Milei": {
+   "alias": [
+    "karina milei"
+   ],
+   "espacio": "La Libertad Avanza",
+   "cargo": "Secretaria General de la Presidencia",
+   "wiki": [
+    "Karina Milei"
+   ]
+  },
+  "Javier Milei": {
+   "alias": [
+    "javier milei",
+    "milei"
+   ],
+   "excluir": [
+    "karina milei"
+   ],
+   "espacio": "La Libertad Avanza",
+   "cargo": "Presidente de la Nación",
+   "wiki": [
+    "Javier Milei"
+   ]
+  }
+ },
+ "narrativas": {
+  "Frente Renovador y armado propio": [
+   "frente renovador",
+   "renovador",
+   "massismo",
+   "massista",
+   "armado",
+   "bloque propio"
+  ],
+  "Interna peronista": [
+   "kicillof",
+   "cristina",
+   "cámpora",
+   "campora",
+   "máximo kirchner",
+   "maximo kirchner",
+   "interna",
+   "unidad",
+   "fuerza patria",
+   "peronismo",
+   "peronista",
+   "justicialista"
+  ],
+  "Oposición a Milei": [
+   "milei",
+   "motosierra",
+   "ajuste",
+   "gobierno nacional",
+   "libertari",
+   "casta"
+  ],
+  "Economía y su paso por Economía": [
+   "inflación",
+   "inflacion",
+   "ministro de economía",
+   "ministro de economia",
+   "dólar",
+   "dolar",
+   "fmi",
+   "deuda",
+   "devaluaci",
+   "plan platita",
+   "reservas"
+  ],
+  "Candidatura 2027": [
+   "2027",
+   "candidat",
+   "presidencial",
+   "gobernación",
+   "gobernacion",
+   "encuesta"
+  ],
+  "Legislatura bonaerense": [
+   "senado bonaerense",
+   "legislatura",
+   "senadora",
+   "proyecto de ley",
+   "comisión",
+   "comision",
+   "sesión",
+   "sesion",
+   "reelecciones indefinidas",
+   "reelección",
+   "reeleccion"
+  ],
+  "Tigre y Zamora": [
+   "tigre",
+   "zamora",
+   "nordelta",
+   "intendente de tigre"
+  ],
+  "Agua y AySA": [
+   "aysa",
+   "agua potable",
+   "cloaca",
+   "saneamiento",
+   "privatizaci"
+  ],
+  "Familia y vida privada": [
+   "pato galmarini",
+   "esposa",
+   "marido",
+   "su mujer",
+   "familia",
+   "hijos",
+   "matrimonio"
+  ],
+  "Justicia y denuncias": [
+   "denuncia",
+   "causa judicial",
+   "justicia",
+   "imputad",
+   "fiscal",
+   "allanamiento",
+   "corrupci"
+  ],
+  "Salud mental y juventudes": [
+   "salud mental",
+   "suicidio",
+   "adolescente",
+   "juventud",
+   "ludopatía",
+   "ludopatia",
+   "apuestas",
+   "grooming"
+  ],
+  "Datos y tecnología": [
+   "datos personales",
+   "hackeo",
+   "filtración",
+   "filtracion",
+   "ciberseguridad",
+   "ciberataque",
+   "inteligencia artificial",
+   "soberanía digital",
+   "soberania digital"
+  ]
+ },
+ "positivo": [
+  "gracias",
+  "excelente",
+  "bien hecho",
+  "muy bien",
+  "felicit",
+  "genial",
+  "bravo",
+  "aplaudo",
+  "orgullo",
+  "capaz",
+  "preparado",
+  "preparada",
+  "estadista",
+  "propuesta"
+ ],
+ "negativo": [
+  "chorro",
+  "corrupt",
+  "inútil",
+  "inutil",
+  "mentiroso",
+  "mentirosa",
+  "ventajita",
+  "panqueque",
+  "traidor",
+  "traidora",
+  "vergüenza",
+  "verguenza",
+  "desastre",
+  "ladr",
+  "nefasto",
+  "patético",
+  "patetico",
+  "fracaso",
+  "inflación",
+  "inflacion",
+  "casta"
+ ],
+ "youtube": {
+  "region": "AR",
+  "language": "es",
+  "videos_per_query": 8,
+  "comments_per_video": 80,
+  "queries": [
+   "Malena Galmarini",
+   "Malena Galmarini senadora",
+   "Malena Galmarini entrevista",
+   "Sergio Massa",
+   "Sergio Massa entrevista",
+   "Massa 2027",
+   "Frente Renovador",
+   "Massa Galmarini"
+  ],
+  "contexto": [
+   "massa",
+   "galmarini",
+   "renovador",
+   "malena"
+  ],
+  "excluir": [
+   "massa muscular",
+   "massa de pizza"
+  ]
+ },
+ "google_news": {
+  "queries": [
+   "\"Malena Galmarini\"",
+   "Galmarini senadora",
+   "Galmarini Kicillof",
+   "Galmarini Milei",
+   "Galmarini Tigre",
+   "\"Sergio Massa\"",
+   "Massa 2027",
+   "Massa Kicillof",
+   "Massa Milei",
+   "Massa Cristina",
+   "\"Frente Renovador\"",
+   "\"Senado bonaerense\" Galmarini",
+   "Zamora Tigre Massa"
+  ],
+  "sites": [
+   "infocielo.com",
+   "lapoliticaonline.com",
+   "letrap.com.ar",
+   "perfil.com",
+   "pagina12.com.ar",
+   "clarin.com",
+   "lanacion.com.ar",
+   "infobae.com"
+  ],
+  "site_terms": [
+   "Galmarini",
+   "Massa"
+  ]
+ },
+ "agenda": {
+  "Suicidio adolescente y salud mental juvenil": {
+   "corto": "Suicidio adolescente",
+   "color": "#9085e9",
+   "terms": [
+    "suicidio adolescente",
+    "suicidios adolescentes",
+    "suicidio juvenil",
+    "suicidio en adolescentes",
+    "suicidio en la adolescencia",
+    "suicidios de adolescentes",
+    "suicidio de un adolescente",
+    "suicidio de una adolescente",
+    "salud mental adolescente",
+    "salud mental de los adolescentes",
+    "salud mental de los jóvenes",
+    "salud mental juvenil",
+    "salud mental en las escuelas",
+    "riesgo suicida",
+    "prevención del suicidio",
+    "prevencion del suicidio",
+    "ideación suicida",
+    "ideacion suicida",
+    "autolesion",
+    "autolesión"
+   ],
+   "queries": [
+    "\"suicidio adolescente\"",
+    "\"salud mental\" adolescentes Argentina",
+    "\"prevención del suicidio\" jóvenes",
+    "suicidio adolescente \"provincia de Buenos Aires\"",
+    "\"riesgo suicida\" adolescentes"
+   ],
+   "wiki": [
+    "Suicidio",
+    "Salud mental"
+   ],
+   "datos": [
+    {
+     "v": "4,8",
+     "l": "suicidios cada 100.000 adolescentes de 10 a 19 años (2024)",
+     "f": "UNICEF Argentina, Monitor Suicidio adolescente (oct. 2026)",
+     "u": "https://www.unicef.org/argentina/comunicados-prensa/monitor-suicidio"
+    },
+    {
+     "v": "7,4",
+     "l": "pico histórico de la tasa adolescente, en 2014; a fines de los 90 era 2 a 3",
+     "f": "UNICEF Argentina (oct. 2026)",
+     "u": "https://www.unicef.org/argentina/comunicados-prensa/monitor-suicidio"
+    },
+    {
+     "v": "2,5×",
+     "l": "la tasa de varones de 15 a 19 años frente a la de mujeres",
+     "f": "UNICEF Argentina (oct. 2026)",
+     "u": "https://www.unicef.org/argentina/comunicados-prensa/monitor-suicidio"
+    },
+    {
+     "v": "14,6",
+     "l": "tasa en jóvenes de 20 a 29 años (sube 14%, de 12,8)",
+     "f": "UNICEF Argentina (oct. 2026)",
+     "u": "https://www.unicef.org/argentina/comunicados-prensa/monitor-suicidio"
+    }
+   ],
+   "marco": [
+    "Ley 27.130 de Prevención del Suicidio (2015)",
+    "Ley 26.657 de Salud Mental (2010)",
+    "Línea 135 del Centro de Asistencia al Suicida (CABA y GBA)"
+   ],
+   "propuestas": [
+    "Protocolo bonaerense de posvención en escuelas (qué hacer después de un suicidio para evitar el contagio)",
+    "Observatorio provincial con datos abiertos por municipio y edad, actualizado cada año",
+    "Guardias de salud mental adolescente 24 h en hospitales de la Primera sección",
+    "Formación en detección temprana para docentes, clubes y referentes barriales",
+    "Pauta de cobertura responsable para medios, con las recomendaciones de la OMS"
+   ],
+   "fuentes": [
+    {
+     "t": "UNICEF: Monitor Suicidio adolescente",
+     "u": "https://www.unicef.org/argentina/media/29121/file/Monitor%202%20-%20Suicidio.pdf.pdf"
+    },
+    {
+     "t": "UNICEF: El suicidio en la adolescencia, recomendaciones de política pública",
+     "u": "https://www.unicef.org/argentina/media/7196/file/El%20suicidio%20en%20la%20adolescencia%20en%20la%20Argentina%20-%20Recomendaciones%20de%20pol%C3%ADtica%20p%C3%BAblica.pdf"
+    },
+    {
+     "t": "UNICEF: Abordaje integral del suicidio en las adolescencias",
+     "u": "https://www.unicef.org/argentina/media/11246/file/Abordajeintegraldelsuicidioenlasadolescencias.pdf"
+    }
+   ]
+  },
+  "Apuestas online en adolescentes": {
+   "corto": "Apuestas online",
+   "color": "#c98500",
+   "terms": [
+    "apuestas online",
+    "apuestas en línea",
+    "apuestas en linea",
+    "apuestas virtuales",
+    "apuestas deportivas",
+    "casino online",
+    "casinos online",
+    "casinos virtuales",
+    "casas de apuestas",
+    "ludopatía",
+    "ludopatia",
+    "juego online",
+    "juegos de azar en línea",
+    "juegos de azar en linea",
+    "apuestas ilegales"
+   ],
+   "queries": [
+    "\"apuestas online\" adolescentes",
+    "ludopatía adolescentes Argentina",
+    "\"apuestas online\" menores ley",
+    "\"apuestas online\" \"provincia de Buenos Aires\"",
+    "ludopatía digital escuelas"
+   ],
+   "wiki": [
+    "Ludopatía",
+    "Apuesta deportiva"
+   ],
+   "datos": [
+    {
+     "v": "8 de 10",
+     "l": "adolescentes y jóvenes apostaron online o conocen a alguien que lo hizo en el último año",
+     "f": "UNICEF y Bienestar Digital, encuesta a ~600 personas de 13 a 24 años (2024)",
+     "u": "https://chequeado.com/el-explicador/apuestas-online-8-de-cada-10-adolescentes-accedieron-a-jugar-en-apps-o-casinos-virtuales-en-el-ultimo-ano/"
+    },
+    {
+     "v": "37%",
+     "l": "de ellos entra a apps o sitios de apuestas muy seguido o todos los días",
+     "f": "UNICEF y Bienestar Digital (2024)",
+     "u": "https://chequeado.com/el-explicador/apuestas-online-8-de-cada-10-adolescentes-accedieron-a-jugar-en-apps-o-casinos-virtuales-en-el-ultimo-ano/"
+    },
+    {
+     "v": "30%",
+     "l": "apuesta a través de un «cajero» u otra persona, sin pasar por la verificación de edad",
+     "f": "UNICEF y Bienestar Digital (2024)",
+     "u": "https://chequeado.com/el-explicador/apuestas-online-8-de-cada-10-adolescentes-accedieron-a-jugar-en-apps-o-casinos-virtuales-en-el-ultimo-ano/"
+    },
+    {
+     "v": "94%",
+     "l": "cree que hay que tomar medidas (prohibir menores, limitar publicidad, multar)",
+     "f": "UNICEF y Bienestar Digital (2024)",
+     "u": "https://chequeado.com/el-explicador/apuestas-online-8-de-cada-10-adolescentes-accedieron-a-jugar-en-apps-o-casinos-virtuales-en-el-ultimo-ano/"
+    }
+   ],
+   "marco": [
+    "El juego online lo regula cada provincia (en Buenos Aires, el Instituto Provincial de Lotería y Casinos)",
+    "No hay ley nacional vigente sobre publicidad de apuestas y menores; el debate en el Congreso sigue abierto"
+   ],
+   "propuestas": [
+    "Prohibir la publicidad de apuestas en camisetas, transmisiones deportivas y redes en horario apto todo público",
+    "Verificación de edad obligatoria que no obligue a entregar más datos de los necesarios (puente con la agenda de datos)",
+    "Sancionar a los «cajeros» que habilitan a menores",
+    "Programa escolar de educación financiera y prevención de la ludopatía"
+   ],
+   "fuentes": [
+    {
+     "t": "Cruz Roja Argentina: informe Apuestas online y adolescencia (2025)",
+     "u": "https://cruzroja.org.ar/observatorio-humanitario/wp-content/uploads/2025/12/INFORME-APUESTAS-ONLINE-Y-ADOLESCENCIA-pdf.pdf"
+    },
+    {
+     "t": "Chequeado: 8 de cada 10 adolescentes accedieron a apuestas",
+     "u": "https://chequeado.com/el-explicador/apuestas-online-8-de-cada-10-adolescentes-accedieron-a-jugar-en-apps-o-casinos-virtuales-en-el-ultimo-ano/"
+    }
+   ]
+  },
+  "Grooming y violencia digital contra chicos": {
+   "corto": "Grooming",
+   "color": "#d55181",
+   "terms": [
+    "grooming",
+    "ciberacoso",
+    "ciberbullying",
+    "acoso en redes",
+    "sextorsi",
+    "fotos íntimas",
+    "fotos intimas",
+    "material de abuso sexual infantil",
+    "abuso sexual infantil en internet",
+    "explotación sexual infantil en línea",
+    "pedófilo",
+    "pedofilo",
+    "ley mica ortega"
+   ],
+   "queries": [
+    "grooming Argentina",
+    "grooming \"provincia de Buenos Aires\"",
+    "ciberacoso adolescentes Argentina",
+    "\"Ley Mica Ortega\"",
+    "sextorsión adolescentes"
+   ],
+   "wiki": [
+    "Grooming",
+    "Ciberacoso"
+   ],
+   "datos": [
+    {
+     "v": "1 de 4",
+     "l": "chicos y chicas recibió pedidos de fotos íntimas por redes, sobre todo de desconocidos",
+     "f": "Grooming Argentina (citado por TodoJujuy, 2024)",
+     "u": "https://www.todojujuy.com/pais/a-1-cada-4-chicos-argentina-le-pidieron-fotos-intimas-donde-pedir-ayuda-jujuy-n260749"
+    },
+    {
+     "v": "73%",
+     "l": "de esos pedidos vino de personas que no conocían en persona",
+     "f": "Grooming Argentina (2024)",
+     "u": "https://www.todojujuy.com/pais/a-1-cada-4-chicos-argentina-le-pidieron-fotos-intimas-donde-pedir-ayuda-jujuy-n260749"
+    },
+    {
+     "v": "2 de 3",
+     "l": "víctimas son niñas",
+     "f": "Grooming Argentina (2024)",
+     "u": "https://www.todojujuy.com/pais/a-1-cada-4-chicos-argentina-le-pidieron-fotos-intimas-donde-pedir-ayuda-jujuy-n260749"
+    }
+   ],
+   "marco": [
+    "Ley 26.904 (2013): el grooming es delito (art. 131 del Código Penal)",
+    "Ley 27.590 «Mica Ortega» (2020): programa nacional de prevención y concientización"
+   ],
+   "propuestas": [
+    "Adhesión e implementación de la Ley Mica Ortega en Buenos Aires con metas y datos públicos",
+    "Canal único de denuncia con respuesta en 24 h y unidad fiscal especializada por departamento judicial",
+    "Educación digital obligatoria desde primaria (privacidad, consentimiento, cómo pedir ayuda)"
+   ],
+   "fuentes": [
+    {
+     "t": "Ministerio Público Fiscal PBA: informes de Política Criminal",
+     "u": "https://www.mpba.gov.ar/files/informes/Informe-PI-2024.pdf"
+    }
+   ]
+  }
+ },
+ "datos": {
+  "tema": "Soberanía y seguridad de datos",
+  "terms": [
+   "datos personales",
+   "filtración de datos",
+   "filtracion de datos",
+   "filtración masiva",
+   "filtracion masiva",
+   "base de datos",
+   "hackeo",
+   "hackearon",
+   "hackers",
+   "ciberataque",
+   "ciberataques",
+   "ransomware",
+   "ciberseguridad",
+   "protección de datos",
+   "proteccion de datos",
+   "soberanía digital",
+   "soberania digital",
+   "soberanía de datos",
+   "soberania de datos",
+   "reconocimiento facial",
+   "renaper",
+   "vigilancia masiva",
+   "ley 25.326",
+   "datos sensibles"
+  ],
+  "incidente": [
+   "filtración",
+   "filtracion",
+   "filtraron",
+   "hackeo",
+   "hackearon",
+   "hackers",
+   "ciberataque",
+   "ransomware",
+   "expuso",
+   "expuestos",
+   "vulnerab",
+   "robo de datos",
+   "venta de datos",
+   "a la venta"
+  ],
+  "queries": [
+   "\"filtración de datos\" Argentina",
+   "ciberataque organismo Argentina",
+   "hackeo \"base de datos\" Argentina",
+   "\"protección de datos personales\" ley Argentina",
+   "\"soberanía digital\" Argentina",
+   "ciberataque municipio \"Buenos Aires\"",
+   "\"reconocimiento facial\" Argentina datos",
+   "ransomware Argentina"
+  ],
+  "wiki": [
+   "Protección de datos personales",
+   "Ciberseguridad",
+   "Soberanía tecnológica"
+  ],
+  "sitios": {
+   "gba.gob.ar": "Gobierno de la Provincia",
+   "abc.gob.ar": "Dirección General de Escuelas",
+   "ioma.gba.gob.ar": "IOMA",
+   "senado-ba.gov.ar": "Senado bonaerense",
+   "hcdiputados-ba.gov.ar": "Diputados bonaerense",
+   "argentina.gob.ar": "Gobierno nacional",
+   "aysa.com.ar": "AySA",
+   "tigre.gob.ar": "Municipio de Tigre",
+   "sanisidro.gob.ar": "Municipio de San Isidro",
+   "vicentelopez.gov.ar": "Municipio de Vicente López",
+   "sanfernando.gob.ar": "Municipio de San Fernando",
+   "pilar.gov.ar": "Municipio de Pilar",
+   "escobar.gob.ar": "Municipio de Escobar",
+   "malvinasargentinas.gob.ar": "Municipio de Malvinas Argentinas",
+   "msm.gov.ar": "Municipio de San Miguel",
+   "lamatanza.gov.ar": "Municipio de La Matanza",
+   "moron.gob.ar": "Municipio de Morón",
+   "tresdefebrero.gov.ar": "Municipio de Tres de Febrero",
+   "merlo.gob.ar": "Municipio de Merlo",
+   "hurlingham.gob.ar": "Municipio de Hurlingham"
+  },
+  "marco": [
+   {
+    "t": "Ley 25.326 de Protección de Datos Personales (2000)",
+    "d": "La ley vigente. Pensada antes de las redes sociales y la nube; no obliga a avisar de filtraciones."
+   },
+   {
+    "t": "Ley 27.699 (2022): Convenio 108+ del Consejo de Europa",
+    "d": "Argentina adhirió al estándar internacional modernizado; falta adecuar la ley interna."
+   },
+   {
+    "t": "Ley 27.411 (2017): Convenio de Budapest sobre ciberdelito",
+    "d": "Marco de cooperación penal internacional para delitos informáticos."
+   },
+   {
+    "t": "AAIP: Agencia de Acceso a la Información Pública",
+    "d": "Autoridad de control de datos personales: recibe denuncias y puede sancionar."
+   },
+   {
+    "t": "Proyectos de nueva ley de datos personales",
+    "d": "Hay proyectos en el Congreso para reemplazar la 25.326 (notificación de brechas, sanciones, datos sensibles). En PBA no hay una ley provincial específica: espacio para tomarlo."
+   }
+  ],
+  "herramientas": [
+   {
+    "g": "Diagnóstico",
+    "t": "Have I Been Pwned",
+    "u": "https://haveibeenpwned.com/",
+    "d": "Ver si un correo o dominio aparece en filtraciones conocidas."
+   },
+   {
+    "g": "Diagnóstico",
+    "t": "Mozilla HTTP Observatory",
+    "u": "https://developer.mozilla.org/en-US/observatory",
+    "d": "Nota de seguridad de cualquier sitio web, gratis."
+   },
+   {
+    "g": "Diagnóstico",
+    "t": "Qualys SSL Labs",
+    "u": "https://www.ssllabs.com/ssltest/",
+    "d": "Revisa el cifrado y el certificado de un sitio."
+   },
+   {
+    "g": "Diagnóstico",
+    "t": "Internet.nl",
+    "u": "https://internet.nl/",
+    "d": "Chequea sitio y correo (SPF, DKIM, DMARC) contra estándares modernos."
+   },
+   {
+    "g": "Diagnóstico",
+    "t": "Blacklight (The Markup)",
+    "u": "https://themarkup.org/blacklight",
+    "d": "Muestra qué rastreadores y terceros carga una página."
+   },
+   {
+    "g": "Diagnóstico",
+    "t": "Exodus Privacy",
+    "u": "https://reports.exodus-privacy.eu.org/",
+    "d": "Qué rastreadores traen las apps de Android (sirve para auditar apps municipales)."
+   },
+   {
+    "g": "Protección del equipo",
+    "t": "Bitwarden",
+    "u": "https://bitwarden.com/",
+    "d": "Gestor de contraseñas gratuito y de código abierto."
+   },
+   {
+    "g": "Protección del equipo",
+    "t": "Ente Auth / Aegis",
+    "u": "https://ente.io/auth/",
+    "d": "Códigos de doble factor (2FA) sin depender de SMS."
+   },
+   {
+    "g": "Protección del equipo",
+    "t": "Signal",
+    "u": "https://signal.org/",
+    "d": "Mensajería cifrada de punta a punta, sin guardar metadatos."
+   },
+   {
+    "g": "Protección del equipo",
+    "t": "Proton Mail / Drive",
+    "u": "https://proton.me/",
+    "d": "Correo y almacenamiento cifrados con plan gratis."
+   },
+   {
+    "g": "Protección del equipo",
+    "t": "Cryptomator",
+    "u": "https://cryptomator.org/",
+    "d": "Cifra carpetas antes de subirlas a cualquier nube."
+   },
+   {
+    "g": "Denuncia y ayuda",
+    "t": "AAIP: denuncias por datos personales",
+    "u": "https://www.argentina.gob.ar/aaip/datospersonales",
+    "d": "Dónde denunciar el mal uso de datos personales."
+   },
+   {
+    "g": "Denuncia y ayuda",
+    "t": "CERT.ar",
+    "u": "https://www.argentina.gob.ar/jefatura/innovacion-publica/ciberseguridad/cert-ar",
+    "d": "Equipo nacional de respuesta a incidentes informáticos."
+   },
+   {
+    "g": "Formación",
+    "t": "Security Planner (Consumer Reports)",
+    "u": "https://securityplanner.consumerreports.org/",
+    "d": "Plan de seguridad personal paso a paso, en español."
+   },
+   {
+    "g": "Formación",
+    "t": "Surveillance Self-Defense (EFF)",
+    "u": "https://ssd.eff.org/es",
+    "d": "Guías de autodefensa digital para equipos y activistas."
+   }
+  ],
+  "propuestas": [
+   "Ley bonaerense de protección de datos y notificación obligatoria de filtraciones en 72 horas",
+   "Auditoría anual y pública de seguridad de los sitios y sistemas de la Provincia y los municipios",
+   "Datos sensibles del Estado (salud, escuelas, padrones) alojados en el país, con prioridad a infraestructura pública (ARSAT)",
+   "Prohibir rastreadores publicitarios de terceros en sitios estatales",
+   "Registro público de incidentes y de bases de datos estatales",
+   "Programa de higiene digital para concejos, municipios y escuelas (2FA, gestor de contraseñas, respaldo)"
+  ],
+  "corto": "Datos personales"
+ },
+ "intendentes": {}
+}
