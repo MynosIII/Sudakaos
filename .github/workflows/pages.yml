@@ -37,6 +37,8 @@ jobs:
           mkdir -p _site/radar/data _site/sanisidro
           cp dashboard.html .nojekyll _site/
           cp dashboard.html _site/index.html
+          # Versión en la URL del script: así el navegador no usa un panel.js viejo de caché tras publicar
+          sed -i "s#massa/panel.js\"#massa/panel.js?v=${GITHUB_SHA::8}\"#" _site/dashboard.html _site/index.html
           cp -R assets _site/
           cp radar/index.html _site/radar/
           cp radar/data/*.json _site/radar/data/
