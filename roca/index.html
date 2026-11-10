@@ -91,6 +91,22 @@ select,input[type=search]{background:var(--s2);color:var(--txt);border:1px solid
 .facts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}.facts div{background:var(--s2);border:1px solid var(--line);border-radius:6px;padding:8px 10px}
 .facts b{display:block;font:700 18px Inter,system-ui,sans-serif;color:var(--txt)}.facts span{color:var(--dim);font-size:11.5px}
 .wk{color:var(--muted);font-size:13px;line-height:1.55}
+.dw{position:fixed;inset:0;z-index:50;display:none}.dw.on{display:block}
+.dw .bg{position:absolute;inset:0;background:rgba(5,6,9,.62)}
+.dw .pn{position:absolute;top:0;right:0;bottom:0;width:min(560px,100%);background:var(--s1);border-left:1px solid var(--line2);display:flex;flex-direction:column;box-shadow:-12px 0 40px rgba(0,0,0,.45)}
+.dw .hd{padding:14px 16px;border-bottom:1px solid var(--line);display:flex;gap:10px;align-items:flex-start}
+.dw .hd h4{margin:0;font-size:16px}.dw .hd .s{color:var(--dim);font:11.5px var(--mono);margin-top:3px}
+.dw .x{margin-left:auto;background:var(--s2);border:1px solid var(--line);border-radius:5px;padding:2px 9px;cursor:pointer;font-size:16px}
+.dw .ctl{padding:8px 16px;border-bottom:1px solid var(--line)}
+.dw .ls{overflow:auto;padding:12px 16px;display:flex;flex-direction:column;gap:8px}
+.tx{border:1px solid var(--line);border-left:3px solid var(--neu);border-radius:6px;padding:8px 11px;background:var(--s2)}
+.tx.NEG{border-left-color:var(--neg)}.tx.POS{border-left-color:var(--pos)}
+.tx .m{font:11px var(--mono);color:var(--dim);display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:4px}
+.tx .m .k{color:var(--txt);border:1px solid var(--line2);border-radius:3px;padding:0 5px}
+.tx .t{color:var(--txt);font-size:13.5px;line-height:1.5;white-space:pre-line}.tx mark{background:#5a3220;color:#ffd2bd;border-radius:2px;padding:0 1px}
+.tx a.o{font-size:12px}
+.cloud text[data-c]{cursor:pointer}.cloud text[data-c]:hover{text-decoration:underline}
+.chip[data-fr],.tag2[data-fr]{cursor:pointer}.chip[data-fr]:hover,.tag2[data-fr]:hover{border-color:var(--foco);color:var(--txt)}
 .warnbox{border:1px solid #5a4520;background:#1f1a0e;color:#f0d9a0;padding:10px 14px;font-size:13px;margin-bottom:14px;border-radius:6px}
 footer{color:var(--dim);font-size:12px;max-width:1560px;margin:0 auto;padding:0 20px 30px}
 @media(max-width:1100px){.kpis{grid-template-columns:repeat(3,minmax(0,1fr))}.c3,.c4,.c5,.c6,.c7,.c8{grid-column:span 12}}
@@ -186,7 +202,7 @@ footer{color:var(--dim);font-size:12px;max-width:1560px;margin:0 auto;padding:0 
       <div class="card c6"><h3>Reclamos vs. agenda de medios</h3><div id="v-temas" style="height:480px"></div></div>
       <div class="card c6"><h3>Perfil de reclamos por barrio <span class="tag">% de cada fila</span></h3><div id="v-matriz" style="height:480px"></div></div>
       <div class="card c12"><h3>Evolución semanal</h3><div id="v-serie" style="height:320px"></div></div>
-      <div class="card c12"><h3>Qué dicen los vecinos <span class="tag">frases repetidas, sin textos individuales</span></h3>
+      <div class="card c12"><h3>Qué dicen los vecinos <span class="tag">frases repetidas · clic para ver los comentarios</span></h3>
         <div class="ctrl" id="v-ft"></div><div id="v-frases"></div>
         <div class="sect">Titulares con tono de reclamo</div><div class="hl" id="v-ej" style="max-height:420px"></div></div>
       <div class="card c6"><h3>Videos con más reclamos en comentarios</h3><div id="v-vid"></div></div>
@@ -214,6 +230,7 @@ footer{color:var(--dim);font-size:12px;max-width:1560px;margin:0 auto;padding:0 
     </div>
   </section>
 </main>
+<div class="dw" id="dw" aria-hidden="true"><div class="bg"></div><div class="pn" role="dialog" aria-label="Textos de origen"><div class="hd"><div><h4 id="dw-t"></h4><div class="s" id="dw-s"></div></div><button class="x" id="dw-x" aria-label="Cerrar">×</button></div><div class="ctl" id="dw-c"></div><div class="ls" id="dw-l"></div></div></div>
 <footer>Datos: YouTube Data API v3, Google News, RSS de medios del Alto Valle, © colaboradores de OpenStreetMap (ODbL), Wikipedia (CC BY-SA) y Wikidata (CC0). Solo se publican agregados: los comentarios no se guardan en el repositorio. Posiciones del cubo: codificación editorial a revisar con el cliente.</footer>
 <script src="../assets/plotly.min.js"></script>
 <script>
@@ -228,7 +245,7 @@ const fmt=n=>n==null?'–':Number(n).toLocaleString('es-AR');
 const base=x=>Object.assign({paper_bgcolor:'rgba(0,0,0,0)',plot_bgcolor:'rgba(0,0,0,0)',font:{color:C.muted,family:'Inter,system-ui,sans-serif',size:12},
   margin:{l:40,r:10,t:10,b:40},hoverlabel:{bgcolor:'#0b0d12',bordercolor:C.line,font:{color:C.txt}},xaxis:{gridcolor:C.grid,zerolinecolor:C.line},yaxis:{gridcolor:C.grid,zerolinecolor:C.line},legend:{orientation:'h',y:-.15}},x||{});
 const ini=n=>n.replace(/\(.*?\)/g,'').split(/\s+/).filter(Boolean).map(w=>w[0]).slice(0,3).join('').toUpperCase();
-let D,P,FO,colorOf={},drawn=new Set(),cmp=null,nat=null;
+let CLOUDS=[],D,P,FO,colorOf={},drawn=new Set(),cmp=null,nat=null;
 
 $$('#tabs button').forEach(b=>b.onclick=()=>{$$('#tabs button').forEach(x=>x.classList.toggle('on',x===b));
   $$('.tab').forEach(t=>t.classList.toggle('on',t.id==='t-'+b.dataset.t));drawTab(b.dataset.t);setTimeout(()=>window.dispatchEvent(new Event('resize')),60)});
@@ -289,14 +306,14 @@ function panorama(){
 
 // ---------------------------------------------------------------- Soria
 const mctx=document.createElement('canvas').getContext('2d');
-function cloudSVG(list,W,H,maxF){list=(list||[]).filter(x=>x.s>0).slice(0,60);if(list.length<3)return '<div class="empty">Pocos textos todavía.</div>';
+function cloudSVG(list,W,H,maxF,pol){const ck=CLOUDS.push({pol,list:list||[]})-1;list=(list||[]).filter(x=>x.s>0).slice(0,60);if(list.length<3)return '<div class="empty">Pocos textos todavía.</div>';
   const smax=Math.max(...list.map(x=>x.s)),smin=Math.min(...list.map(x=>x.s)),minF=11,placed=[],out=[];
   for(const x of list){const f=Math.round(minF+(maxF-minF)*Math.pow((x.s-smin)/Math.max(smax-smin,1e-9),.6));
     mctx.font=`600 ${f}px Inter, system-ui, sans-serif`;const w=mctx.measureText(x.w).width+4,h=f*1.02;let ok=null;
     for(let t=0;t<900;t+=.18){const r=1.6*t,cx=W/2+r*Math.cos(t)*1.35-w/2,cy=H/2+r*Math.sin(t)-h/2;if(r>Math.max(W,H))break;
       if(cx<2||cy<2||cx+w>W-2||cy+h>H-2)continue;if(!placed.some(p=>cx<p.x+p.w&&cx+w>p.x&&cy<p.y+p.h&&cy+h>p.y)){ok={x:cx,y:cy,w,h};break}}
     if(!ok)continue;placed.push(ok);const col=x.neg==null?'#c4c9d4':x.neg>=55?C.neg:x.neg<=25?C.pos:C.muted;
-    out.push(`<text x="${(ok.x+ok.w/2).toFixed(1)}" y="${(ok.y+ok.h*.8).toFixed(1)}" text-anchor="middle" font-size="${f}" fill="${col}"><title>${esc(x.w)} · ${fmt(x.n)} textos · ${x.neg}% en textos negativos</title>${esc(x.w)}</text>`)}
+    out.push(`<text data-c="${ck}:${list.indexOf(x)}" x="${(ok.x+ok.w/2).toFixed(1)}" y="${(ok.y+ok.h*.8).toFixed(1)}" text-anchor="middle" font-size="${f}" fill="${col}"><title>${esc(x.w)} · ${fmt(x.n)} textos · ${x.neg}% en textos negativos</title>${esc(x.w)}</text>`)}
   return `<svg class="cloud" viewBox="0 0 ${W} ${H}" role="img" aria-label="Nube de palabras">${out.join('')}</svg>`}
 const toneBar=t=>t?`<div class="tone"><i style="width:${t.NEG}%;background:var(--neg)"></i><i style="width:${t.NEU}%;background:var(--neu)"></i><i style="width:${t.POS}%;background:var(--pos)"></i></div>`:'<div class="empty" style="padding:6px 0">s/d</div>';
 const bars=(arr,col)=>{if(!arr.length)return '<div class="empty">Sin datos todavía.</div>';const m=Math.max(...arr.map(a=>a[1]),1);
@@ -310,7 +327,7 @@ function soria(){const f=FO;
   $('#s-agr').textContent=f.agresivo!=null?`Textos con lenguaje agresivo: ${f.agresivo}%.`:'';
   const n=(f.narrativas||[]).slice().reverse();
   Plotly.newPlot('s-narr',n.length?[{type:'bar',orientation:'h',y:n.map(x=>x.n),x:n.map(x=>x.pct),marker:{color:C.foco},text:n.map(x=>x.pct+'%'),textposition:'outside',cliponaxis:false,hovertemplate:'%{y}: %{x}% (%{customdata} textos)<extra></extra>',customdata:n.map(x=>x.c)}]:[],base({margin:{l:190,r:40,t:10,b:30},xaxis:{gridcolor:C.grid,ticksuffix:'%'}}),CFG);
-  $('#s-cloud').innerHTML=cloudSVG(f.cloud,560,300,40);
+  $('#s-cloud').innerHTML=cloudSVG(f.cloud,560,300,40,f.name);
   const NW=D.foco_semanal.narrativas,top=(f.narrativas||[]).slice(0,6).map(x=>x.n);
   Plotly.newPlot('s-narrw',top.map((k,i)=>({x:D.semanas,y:NW[k],name:k,type:'scatter',mode:'lines',stackgroup:'a',line:{width:1,color:PAL[i]}})),base({margin:{l:40,r:10,t:10,b:60}}),CFG);
   $('#s-co').innerHTML=bars((f.co||[]).map(c=>[c.a,c.n,colorOf[c.a]]));
@@ -337,7 +354,7 @@ function cmpView(){const a=FO,b=P.find(p=>p.name===cmp)||{name:'–',narrativas:
   Plotly.newPlot('c-narr',[{type:'bar',orientation:'h',y:ks,x:ks.map(k=>v(a,k)),name:a.name,marker:{color:colorOf[a.name]}},{type:'bar',orientation:'h',y:ks,x:ks.map(k=>v(b,k)),name:b.name,marker:{color:colorOf[b.name]||C.pos}}],base({barmode:'group',margin:{l:190,r:10,t:10,b:40},xaxis:{gridcolor:C.grid,ticksuffix:'%'}}),CFG);
   $('#c-cl1').innerHTML=`<span class="av sm" style="background:${colorOf[a.name]};display:inline-grid">${ini(a.name)}</span>${esc(a.name)}<span class="tag">${fmt(a.n)} menciones</span>`;
   $('#c-cl2').innerHTML=`<span class="av sm" style="background:${colorOf[b.name]||C.pos};display:inline-grid">${ini(b.name)}</span>${esc(b.name)}<span class="tag">${fmt(b.n)} menciones</span>`;
-  $('#c-cloud1').innerHTML=cloudSVG(a.cloud,560,280,36);$('#c-cloud2').innerHTML=cloudSVG(b.cloud,560,280,36);
+  $('#c-cloud1').innerHTML=cloudSVG(a.cloud,560,280,36,a.name);$('#c-cloud2').innerHTML=cloudSVG(b.cloud,560,280,36,b.name);
 }
 
 // ---------------------------------------------------------------- cubo
@@ -388,10 +405,10 @@ function vMap(){const V=D.vecinal,L=V.localidades.filter(l=>l.centro),vs=L.map(v
   layersOn.forEach(k=>{const p=V.equipamiento_puntos[k]||[];if(p.length)tr.push({type:'scattermap',lon:p.map(q=>q[0]),lat:p.map(q=>q[1]),mode:'markers',marker:{size:k==='paradas'?4:6,color:LAYERS[k][1]},name:LAYERS[k][0],hoverinfo:'name'})});
   tr.push({type:'scattermap',lon:L.map(l=>l.centro[1]),lat:L.map(l=>l.centro[0]),mode:'markers',
     marker:{size:vs.map(v=>12+38*Math.sqrt(v/mx)),color:vs.map(v=>col(v/mx)),opacity:.85},customdata:L.map(l=>l.nombre),
-    hovertext:L.map((l,i)=>`<b>${esc(l.nombre)}</b><br>${esc($('#v-metric').selectedOptions[0]?.text||'')}: ${fmt(vs[i])}<br>Reclamos: ${fmt(l.reclamos)} · textos: ${fmt(l.menciones)}`),hoverinfo:'text',showlegend:false});
+    hovertext:L.map((l,i)=>`<b>${esc(l.nombre)}</b><br>${vMetric==='reclamos'?'':esc($('#v-metric').selectedOptions[0]?.text||'')+': '+fmt(vs[i])+'<br>'}Reclamos: ${fmt(l.reclamos)} · textos que lo nombran: ${fmt(l.menciones)}<br><i>clic para ver los textos</i>`),hoverinfo:'text',showlegend:false});
   const c=V.centro;
   Plotly.newPlot('v-map',tr,base({margin:{l:0,r:0,t:0,b:0},map:{style:MAPSTYLE,center:{lat:c[0],lon:c[1]},zoom:11.3},legend:{orientation:'h',y:0,x:0,bgcolor:'rgba(11,13,18,.8)'}}),CFG);
-  $('#v-map').on('plotly_click',e=>{const n=e.points[0]&&e.points[0].customdata;if(n&&typeof n==='string'){vFicha(n)}});
+  $('#v-map').on('plotly_click',e=>{const n=e.points[0]&&e.points[0].customdata;if(n&&typeof n==='string'){vFicha(n);showTexts(n,'notas y comentarios que nombran el barrio',r=>r.loc===n,[])}});
   const sin=V.localidades.filter(l=>!l.centro&&l.reclamos).map(l=>l.nombre);
   $('#v-mapnote').textContent='Tamaño y color según el valor elegido. Ubicaciones: OpenStreetMap. Mapa base: Esri World Dark Gray.'+(sin.length?' Sin ubicación en el mapa: '+sin.join(', ')+'.':'');
 }
@@ -402,7 +419,9 @@ function vFicha(n){const V=D.vecinal,l=V.localidades.find(x=>x.nombre===n);if(!l
   $('#v-ficha').innerHTML=`<h4>${esc(l.nombre)}</h4><div class="s">${l.centro?`${l.centro[0].toFixed(3)}, ${l.centro[1].toFixed(3)} · ${esc(l.fuente_geo||'')}`:'sin ubicación en OSM'}${l.area_km2?' · '+l.area_km2+' km²':''}</div>
   <div class="kpis" style="grid-template-columns:1fr 1fr;margin-bottom:10px"><div class="kpi"><div class="l">Reclamos</div><div class="v">${fmt(l.reclamos)}</div><div class="d">${l.inferidos?l.inferidos+' inferidos':''}</div></div><div class="kpi"><div class="l">Textos que lo nombran</div><div class="v">${fmt(l.menciones)}</div><div class="d">${l.tono_neg!=null?l.tono_neg+'% tono negativo':''}</div></div></div>
   <div class="sect" style="margin-top:6px">Qué reclaman</div><div class="bars">${tops.length?tops.map(x=>`<div class="r"><span>${esc(x[0])}</span><i style="width:${Math.max(4,x[1]/tops[0][1]*100)}%;background:${PAL[M.temas.indexOf(x[0])%PAL.length]}"></i><b>${Math.round(x[1]/tot*100)}%</b></div>`).join(''):'<div class="empty" style="padding:8px 0">Sin reclamos ubicados acá todavía.</div>'}</div>
-  ${fr.length?'<div class="sect">Frases repetidas</div>'+fr.map(([g,k])=>`<span class="tag2">${esc(g)} · ${k}</span>`).join(''):''}`;
+  <div class="sect">De dónde sale</div><div id="v-ftx"><div class="empty" style="padding:8px 0">Cargando textos…</div></div>
+  ${fr.length?'<div class="sect">Frases repetidas</div>'+fr.map(([g,k])=>`<span class="tag2" data-fr="${esc(g)}">${esc(g)} · ${k}</span>`).join(''):''}`;
+  vFichaTx(n);
 }
 function vTemas(){const V=D.vecinal,t=V.temas.filter(x=>x.reclamos||x.agenda_medios).reverse();
   Plotly.newPlot('v-temas',[{type:'bar',orientation:'h',y:t.map(x=>x.tema),x:t.map(x=>x.reclamos),name:'Reclamos',marker:{color:'#c98500'}},{type:'bar',orientation:'h',y:t.map(x=>x.tema),x:t.map(x=>x.agenda_medios),name:'Notas de medios',marker:{color:C.pos}}],base({barmode:'group',margin:{l:180,r:10,t:10,b:40}}),CFG);
@@ -418,7 +437,7 @@ function vFrases(){const V=D.vecinal,ts=V.matriz.temas.filter(t=>(V.frases_tema[
   $$('#v-ft button').forEach(b=>b.onclick=()=>{vT=b.dataset.v||null;vFrases()});
   let fr;if(vT)fr=V.frases_tema[vT]||[];else{const c={};Object.values(V.frases_tema).flat().forEach(([g,k])=>c[g]=Math.max(c[g]||0,k));fr=Object.entries(c).sort((a,b)=>b[1]-a[1]).slice(0,30)}
   const mx=fr.length?fr[0][1]:1;
-  $('#v-frases').innerHTML=fr.length?fr.map(([g,k])=>`<span class="chip" style="cursor:default;font-size:${12+Math.round(k/mx*8)}px;border-color:${k/mx>.6?'var(--foco)':'var(--line)'}">${esc(g)} <span style="color:var(--dim);font-family:var(--mono)">${k}</span></span>`).join(''):'<div class="empty" style="padding:8px 0">Todavía no hay frases repetidas suficientes.</div>';
+  $('#v-frases').innerHTML=fr.length?fr.map(([g,k])=>`<span class="chip" data-fr="${esc(g)}" style="font-size:${12+Math.round(k/mx*8)}px;border-color:${k/mx>.6?'var(--foco)':'var(--line)'}">${esc(g)} <span style="color:var(--dim);font-family:var(--mono)">${k}</span></span>`).join(''):'<div class="empty" style="padding:8px 0">Todavía no hay frases repetidas suficientes.</div>';
   const ev=V.ejemplos.filter(e=>!vT||e.temas.includes(vT)).sort((a,b)=>b.fecha.localeCompare(a.fecha)).slice(0,30);
   $('#v-ej').innerHTML=ev.length?ev.map(e=>`<a class="it NEG" href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.texto)}<div class="m">${esc(e.fuente)} · ${esc(e.fecha)}${e.localidad!=='Sin barrio'?' · '+esc(e.localidad):''} · ${e.temas.map(esc).join(' · ')}</div></a>`).join(''):'<div class="empty">Sin titulares de reclamo para este filtro.</div>';
 }
@@ -484,7 +503,7 @@ function intendentes(){const I=D.intendentes||[],W=D.wiki||{},col={};
 function vRank(){const L=[...D.vecinal.localidades].filter(l=>l.menciones||l.reclamos).sort((a,b)=>b.reclamos-a.reclamos||b.menciones-a.menciones),mx=Math.max(1,...L.map(l=>l.reclamos));
   $('#v-rank').innerHTML=L.length?'<thead><tr><th>#</th><th>Barrio</th><th class="n">Reclamos</th><th></th><th class="n">Textos</th><th class="n">% neg.</th><th>Temas principales</th></tr></thead><tbody>'+
     L.map((l,i)=>`<tr data-n="${esc(l.nombre)}"><td class="n" style="color:var(--dim)">${i+1}</td><td style="color:var(--txt)">${esc(l.nombre)}${l.centro?'':' <span style="color:var(--dim);font-size:11px">(sin ubicación)</span>'}</td><td class="n">${fmt(l.reclamos)}</td><td style="width:22%"><div style="height:8px;border-radius:2px;background:#c98500;width:${l.reclamos/mx*100}%"></div></td><td class="n">${fmt(l.menciones)}</td><td class="n">${l.tono_neg!=null?l.tono_neg+'%':'–'}</td><td>${(l.tema_top||[]).map(t=>`<span class="tag2">${esc(t[0])} ${t[1]}</span>`).join('')}</td></tr>`).join('')+'</tbody>':'<tr><td class="empty">Sin barrios nombrados todavía.</td></tr>';
-  $$('#v-rank tbody tr').forEach(tr=>tr.onclick=()=>{vFicha(tr.dataset.n);$('#v-ficha').scrollIntoView({behavior:'smooth',block:'nearest'})});
+  $$('#v-rank tbody tr').forEach(tr=>tr.onclick=()=>{vFicha(tr.dataset.n);showTexts(tr.dataset.n,'notas y comentarios que nombran el barrio',r=>r.loc===tr.dataset.n,[])});
 }
 function vMuni(){const M=(D.wiki||{}).municipio,el=$('#v-muni');
   if(!M){el.innerHTML='<div class="empty">Se completa con la próxima corrida diaria.</div>';return}
@@ -507,6 +526,38 @@ function mExtra(){const M=D.medios_matriz;
     base({barmode:'stack',margin:{l:170,r:10,t:10,b:50},xaxis:{gridcolor:C.grid,ticksuffix:'%',range:[0,100]}}),CFG);
   else $('#m-tono').innerHTML='<div class="empty">Hacen falta al menos 2 notas por medio.</div>';
 }
+// ---------------------------------------------------------------- textos de origen (drawer)
+let TX=null;
+const foldJS=s=>String(s||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+function loadTx(){if(!TX)TX=fetch('data/textos.json',{cache:'no-store'}).then(r=>r.ok?r.json():{items:[]}).then(d=>d.items||[]).catch(()=>[]);return TX}
+function hl(text,terms){let h=esc(text);if(!terms||!terms.length)return h;
+  const f=foldJS(text);const marks=[];terms.forEach(t=>{const re=new RegExp('(^|[^a-z0-9])('+foldJS(t).replace(/[.*+?^${}()|[\]\\]/g,'\\$&').replace(/ +/g,'[^a-z0-9]+')+')(?=[^a-z0-9]|$)','g');let m;while((m=re.exec(f))){marks.push([m.index+m[1].length,m.index+m[1].length+m[2].length])}});
+  if(!marks.length)return h;marks.sort((a,b)=>a[0]-b[0]);let out='',i=0;marks.forEach(([a,b])=>{if(a<i)return;out+=esc(text.slice(i,a))+'<mark>'+esc(text.slice(a,b))+'</mark>';i=b});return out+esc(text.slice(i))}
+function txHTML(r,terms){const com=r.k==='c';
+  return `<div class="tx ${esc(r.tono||'')}"><div class="m"><span class="k">${com?'Comentario YouTube':'Nota'}</span><span>${esc(r.d)}</span>${r.loc&&r.loc!=='Sin barrio'?`<span>${esc(r.loc)}</span>`:''}${r.rec?'<span style="color:#e0a64a">reclamo</span>':''}${(r.temas||[]).slice(0,2).map(t=>`<span>${esc(t)}</span>`).join('')}</div>
+    <div class="t">${r.t?hl(r.t,terms):'<span style="color:var(--dim)">Texto no publicado.</span>'}</div>
+    <div class="m" style="margin:5px 0 0">${esc(com?'en: '+r.o:r.o)}${r.u?` · <a class="o" href="${esc(r.u)}" target="_blank" rel="noopener">${com?'ver en YouTube':'abrir nota'} ↗</a>`:''}</div></div>`}
+let DW={rows:[],terms:[],k:'all'};
+function dwRender(){const R=DW.rows.filter(r=>DW.k==='all'||r.k===DW.k),nc=DW.rows.filter(r=>r.k==='c').length,nn=DW.rows.length-nc;
+  $('#dw-c').innerHTML=[['all','Todos',DW.rows.length],['c','Comentarios',nc],['n','Notas',nn]].map(([k,l,n])=>`<button class="chip ${DW.k===k?'on':''}" data-k="${k}">${l} · ${n}</button>`).join('');
+  $$('#dw-c button').forEach(b=>b.onclick=()=>{DW.k=b.dataset.k;dwRender()});
+  $('#dw-l').innerHTML=R.length?R.slice(0,300).map(r=>txHTML(r,DW.terms)).join('')+(R.length>300?`<p class="note">Se muestran los 300 más recientes de ${fmt(R.length)}.</p>`:''):'<div class="empty">No hay textos publicados para esto todavía.</div>';
+  $('#dw-l').scrollTop=0}
+function showTexts(title,sub,sel,terms){$('#dw-t').textContent=title;$('#dw-s').textContent=sub||'';$('#dw-l').innerHTML='<div class="empty">Cargando…</div>';$('#dw-c').innerHTML='';
+  $('#dw').classList.add('on');$('#dw').setAttribute('aria-hidden','false');
+  loadTx().then(T=>{DW={rows:(typeof sel==='function'?T.filter(sel):sel.map(i=>T[i]).filter(Boolean)).sort((a,b)=>b.d.localeCompare(a.d)),terms:terms||[],k:'all'};dwRender()})}
+function closeDw(){$('#dw').classList.remove('on');$('#dw').setAttribute('aria-hidden','true')}
+$('#dw-x').onclick=closeDw;$('#dw .bg').onclick=closeDw;document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDw()});
+document.addEventListener('click',e=>{
+  const c=e.target.closest&&e.target.closest('text[data-c]');
+  if(c){const [ck,i]=c.dataset.c.split(':').map(Number),C0=CLOUDS[ck],x=C0&&C0.list[i];if(!x)return;
+    showTexts(`«${x.w}»`,`${fmt(x.n)} textos sobre ${C0.pol} que usan esta palabra`,x.ids||(r=>(r.pols||[]).includes(C0.pol)&&foldJS(r.t).includes(x.w)),[x.w]);return}
+  const f=e.target.closest&&e.target.closest('[data-fr]');
+  if(f){const g=f.dataset.fr,ids=(D.vecinal.frases_ids||{})[g];showTexts(`«${g}»`,'comentarios de vecinos que repiten esta frase',ids||(r=>r.k==='c'&&foldJS(r.t).includes(g)),[g])}
+});
+function vFichaTx(n){loadTx().then(T=>{if(vSel!==n)return;const el=$('#v-ftx');if(!el)return;const R=T.filter(r=>r.loc===n).sort((a,b)=>b.d.localeCompare(a.d));
+  el.innerHTML=R.length?R.slice(0,3).map(r=>txHTML(r,[])).join('<div style="height:6px"></div>')+`<button class="chip on" id="v-ftx-all" style="margin-top:8px">Ver los ${fmt(R.length)} textos de ${esc(n)} →</button>`:'<div class="empty" style="padding:8px 0">Sin textos publicados que nombren este barrio.</div>';
+  const b=$('#v-ftx-all');if(b)b.onclick=()=>showTexts(n,'notas y comentarios que nombran el barrio',r=>r.loc===n,[])})}
 })();
 </script>
 </body>

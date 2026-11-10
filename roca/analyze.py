@@ -31,6 +31,7 @@ STATUS = HERE / ".store" / "status.json"
 WIKI = HERE / ".store" / "wiki.json"
 NLP_CACHE = HERE / ".store" / "nlp.jsonl.gz"
 OUT = HERE / "data" / "roca.json"
+TEXTOS = HERE / "data" / "textos.json"
 FOCO = CONFIG["foco"]
 STOP = set("""que los las del por con una para como mas pero sus les este esta esto eso esa son hay fue ser muy todo todos
 todas nos ese hace hacer sin sobre entre cuando donde porque tambien solo ya asi aca alli ahi tiene tienen estan esta
@@ -63,6 +64,7 @@ NARR = {k: rx([t.strip() for t in v]) for k, v in CONFIG["narrativas"].items()}
 RECLAMO = rx(CONFIG["marcadores_reclamo"])
 POS, NEG = rx(CONFIG["positivo"]), rx(CONFIG["negativo"])
 POLS = {k: rx_exact(v["alias"]) for k, v in CONFIG["politicos"].items()}
+SHOW_COMMENTS = CONFIG.get("textos_comentarios") == "extracto"  # "link" (default) o "extracto" sin autor
 INTEND = {k: rx_exact(v["alias"]) for k, v in CONFIG.get("intendentes", {}).items()}
 CTX = rx_exact(CONFIG["contexto"] + [a for v in CONFIG["localidades"].values() for a in v["alias"]])
 MASK = [(re.compile(r"@[\w.\-]{2,}"), "@…"), (re.compile(r"\S+@\S+\.\w+"), "[correo]"),
@@ -331,7 +333,8 @@ def main():
             "emotions": {e: pct(emo.count(e) / len(emo)) for e in EMOS} if len(emo) >= 5 else None,
             "agresivo": pct(sum(r["agresivo"] for r in tone_src) / len(tone_src)),
             "narrativas": [{"n": a, "c": c, "pct": pct(c / nn)} for a, c in narr.most_common()],
-            "cloud": [{"w": w, "n": mine[w], "s": round(v, 1), "neg": pct(negc[w] / mine[w])} for w, v in cloud],
+            "cloud": [{"w": w, "n": mine[w], "s": round(v, 1), "neg": pct(negc[w] / mine[w]),
+                       "_rid": [conv[i]["id"] for i in idx if w in word_sets[i]]} for w, v in cloud],
             "co": [{"a": a, "n": c} for a, c in co.most_common(8)],
             "outlets": [{"o": o, "n": c} for o, c in outlets.most_common(10)],
             "temas_reclamo": Counter(t for r in m if r["reclamo"] for t in r["temas"]).most_common(5),
@@ -544,6 +547,37 @@ def main():
                     "perfil": {"extract": fp.get("extract"), "url": fp.get("url")} if fp else None,
                     "municipio": W.get("municipio"), "fetched_at": W.get("fetched_at")}
 
+    frases_tema = {t: frases([r for r in vec_com if t in r["temas"]]) for t in temas}
+    frases_loc = {l: frases([r for r in vec_com if r["loc"] == l]) for l in kept}
+
+    # ------------------------------------------------ textos de origen (para ver de dónde sale cada número)
+    # Notas: titular + link. Comentarios: extracto sin autor + link al comentario en YouTube.
+    OUT.parent.mkdir(parents=True, exist_ok=True)
+    pub, seen_ids, seen_ids_order = [], set(), []
+    for r in sorted(conv + vec, key=lambda r: r["created_at"], reverse=True):
+        if r["id"] in seen_ids:
+            continue
+        seen_ids.add(r["id"])
+        seen_ids_order.append(r["id"])
+        com = r["kind"] == "comment"
+        if com and not SHOW_COMMENTS:
+            txt = ""  # sin decisión de publicar el texto: solo fuente, fecha y link al comentario
+        else:
+            txt = excerpt(r.get("text", ""), 600) if com else (r.get("title") or r.get("text", ""))
+        pub.append({"k": "c" if com else "n", "t": txt,
+                    "o": (r.get("video_title") or "YouTube") if com else r.get("outlet", ""), "d": r["created_at"][:10],
+                    "u": r.get("url", ""), "tono": r.get("tono"), "loc": r.get("loc"), "temas": r.get("temas", []),
+                    "pols": r.get("pols", []), "rec": bool(r.get("reclamo"))})
+    pidx = {r_id: i for i, r_id in enumerate(seen_ids_order)}
+    for p in pols_out:
+        for c in p.get("cloud", []):
+            c["ids"] = [pidx[x] for x in c.pop("_rid", []) if x in pidx][:120]
+    tok_s = {r["id"]: " " + " ".join(w for w in re.findall(r"[a-zñ]{3,}", fold(r["text"])) if w not in STOP) + " " for r in vec_com}
+    all_fr = {g for d in (frases_tema, frases_loc) for v in d.values() for g, _ in v}
+    frases_ids = {g: [pidx[i] for i, ts in tok_s.items() if f" {g} " in ts and i in pidx][:120] for g in all_fr}
+    TEXTOS.write_text(json.dumps({"updated_at": now.strftime("%Y-%m-%dT%H:%M:%SZ"), "items": pub}, ensure_ascii=False,
+                                 separators=(",", ":")), encoding="utf8")
+
     status = json.loads(STATUS.read_text(encoding="utf8")) if STATUS.exists() else {}
     news_all = [r for r in texts if r["kind"] == "news"]
     out = {
@@ -568,8 +602,7 @@ def main():
             "serie": {"semanas": sem_v, "temas": {t: [serie[w][t] for w in sem_v] for t in temas}},
             "localidades": locs_out, "ejido_poligono": [simplify(rg) for rg in ejido], "centro": CONFIG["centro"],
             "equipamiento_puntos": pts, "ejemplos": ejemplos,
-            "frases_tema": {t: frases([r for r in vec_com if t in r["temas"]]) for t in temas},
-            "frases_localidad": {l: frases([r for r in vec_com if r["loc"] == l]) for l in kept},
+            "frases_tema": frases_tema, "frases_localidad": frases_loc, "frases_ids": frases_ids,
             "videos": top_videos, "titulares": titulares,
         },
         "metodo": {
@@ -581,7 +614,6 @@ def main():
             "menciones": "Un texto menciona a un político si contiene alguno de sus alias. Los comentarios de un video sobre un único político se le atribuyen aunque no lo nombren (inferido).",
         },
     }
-    OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")), encoding="utf8")
     print(json.dumps(out["totales"], ensure_ascii=False))
 
