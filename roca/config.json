@@ -23,7 +23,10 @@
    ],
    "espacio": "PJ · Fuerza Patria",
    "cargo": "Intendenta de General Roca · precandidata a gobernadora 2027",
-   "foco": true
+   "foco": true,
+   "wiki": [
+    "María Emilia Soria"
+   ]
   },
   "Martín Soria": {
    "alias": [
@@ -31,7 +34,10 @@
     "martin soria"
    ],
    "espacio": "PJ · Fuerza Patria",
-   "cargo": "Senador nacional por Río Negro"
+   "cargo": "Senador nacional por Río Negro",
+   "wiki": [
+    "Martín Soria"
+   ]
   },
   "Carlos Soria (h)": {
    "alias": [
@@ -40,7 +46,11 @@
     "carlos soria hijo"
    ],
    "espacio": "PJ · Fuerza Patria",
-   "cargo": "Mencionado para suceder a su hermana en Roca"
+   "cargo": "Mencionado para suceder a su hermana en Roca",
+   "wiki": [
+    "Carlos Soria (hijo)",
+    "Carlos Soria (político)"
+   ]
   },
   "Alberto Weretilneck": {
    "alias": [
@@ -840,7 +850,12 @@
    "\"Marcial Peralta\"",
    "\"Carlos Soria\" Roca",
    "\"Río Negro\" elecciones 2027",
-   "Milei \"Río Negro\""
+   "Milei \"Río Negro\"",
+   "\"Mariano Gaido\"",
+   "Gaido intendente Neuquén",
+   "\"Rodrigo Buteler\"",
+   "\"Walter Cortés\" Bariloche",
+   "\"Marcos Castro\" Viedma"
   ],
   "sites": [
    "rionegro.com.ar",
@@ -866,5 +881,72 @@
    "name": "ADN Río Negro",
    "url": "https://www.adnrionegro.com.ar/feed/"
   }
+ ],
+ "intendentes": {
+  "María Emilia Soria": {
+   "ciudad": "General Roca",
+   "espacio": "Fuerza Patria (PJ)",
+   "alias": [
+    "maría emilia soria",
+    "maria emilia soria",
+    "emilia soria",
+    "intendenta soria",
+    "intendenta de roca",
+    "intendenta de general roca",
+    "maría emilia",
+    "maria emilia"
+   ],
+   "foco": true
+  },
+  "Mariano Gaido": {
+   "ciudad": "Neuquén",
+   "espacio": "Comprometidos con Neuquén",
+   "alias": [
+    "mariano gaido",
+    "gaido"
+   ],
+   "wiki": [
+    "Mariano Gaido"
+   ]
+  },
+  "Rodrigo Buteler": {
+   "ciudad": "Cipolletti",
+   "espacio": "Juntos Somos Río Negro",
+   "alias": [
+    "rodrigo buteler",
+    "buteler"
+   ],
+   "wiki": [
+    "Rodrigo Buteler"
+   ]
+  },
+  "Walter Cortés": {
+   "ciudad": "San Carlos de Bariloche",
+   "espacio": "Primero Río Negro",
+   "alias": [
+    "walter cortes",
+    "walter cortés",
+    "intendente cortes",
+    "intendente cortés"
+   ],
+   "wiki": [
+    "Walter Cortés"
+   ]
+  },
+  "Marcos Castro": {
+   "ciudad": "Viedma",
+   "espacio": "Juntos Somos Río Negro",
+   "alias": [
+    "marcos castro"
+   ],
+   "wiki": [
+    "Marcos Castro (político)",
+    "Marcos Castro"
+   ]
+  }
+ },
+ "wiki_municipio": [
+  "General Roca (Río Negro)",
+  "General Roca (ciudad)"
  ]
 }

@@ -6,6 +6,8 @@ Fuentes (cada una falla por separado sin frenar a las demás):
     de medios del Alto Valle (Río Negro, LM Cipolletti, LM Neuquén, Letra P, ADN, Noticias NQN…).
   - RSS directos de medios regionales (se guardan solo las notas que hablan de Roca o de los políticos seguidos).
   - OpenStreetMap (Overpass): límite del ejido, barrios/lugares con nombre y equipamiento urbano.
+  - Wikipedia / Wikimedia: visitas diarias a los artículos de cada político (interés de búsqueda, sin clave)
+    y datos del municipio desde Wikidata (población, superficie, fundación).
 Facebook e Instagram no tienen API abierta para buscar publicaciones y scrapearlas viola sus términos.
 
 Uso: python roca/collect.py            (recolecta y luego corre analyze.py)
@@ -256,6 +258,83 @@ def osm():
     return len(bounds), len(places), {k: len(v) for k, v in pois.items()}
 
 
+# ---------------------------------------------------------------- Wikipedia / Wikidata
+WIKI = HERE / ".store" / "wiki.json"
+WAPI = "https://es.wikipedia.org/w/api.php?"
+
+
+def wiki():
+    """Visitas diarias a Wikipedia de cada político seguido + ficha del municipio (Wikidata)."""
+    people = {**CONFIG["politicos"], **CONFIG.get("intendentes", {})}
+    cands = {k: v.get("wiki") or [k] for k, v in people.items()}
+    titles = sorted({t for ts in cands.values() for t in ts} | set(CONFIG.get("wiki_municipio", [])))
+    resolved, pages = {}, {}
+    for i in range(0, len(titles), 40):
+        q = get_json(WAPI + urllib.parse.urlencode({"action": "query", "format": "json", "formatversion": 2, "redirects": 1,
+                                                     "titles": "|".join(titles[i:i + 40]), "prop": "pageprops|extracts|info",
+                                                     "exintro": 1, "explaintext": 1, "exsentences": 3, "inprop": "url"}),
+                     headers={"User-Agent": UA})["query"]
+        alias = {}
+        for n in q.get("normalized", []) + q.get("redirects", []):
+            alias[n["from"]] = n["to"]
+        for pg in q.get("pages", []):
+            if pg.get("missing") or "disambiguation" in (pg.get("pageprops") or {}):
+                continue
+            pages[pg["title"]] = {"title": pg["title"], "url": pg.get("fullurl"), "extract": (pg.get("extract") or "")[:700],
+                                  "qid": (pg.get("pageprops") or {}).get("wikibase_item")}
+        for t in titles[i:i + 40]:
+            u = t
+            while u in alias and alias[u] != u:
+                u = alias[u]
+            if u in pages:
+                resolved[t] = u
+        time.sleep(1)
+    end = datetime.now(timezone.utc) - timedelta(days=1)
+    start = end - timedelta(days=CONFIG["window_days"])
+    out = {"fetched_at": iso(datetime.now(timezone.utc)), "personas": {}, "municipio": None}
+    for k, ts in cands.items():
+        t = next((resolved[x] for x in ts if x in resolved), None)
+        if not t:
+            continue
+        url = ("https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/es.wikipedia/all-access/user/"
+               + urllib.parse.quote(t.replace(" ", "_"), safe="") + f"/daily/{start:%Y%m%d}/{end:%Y%m%d}")
+        try:
+            items = get_json(url, headers={"User-Agent": UA}).get("items", [])
+        except Exception as e:
+            log(wiki=k, error=str(e)[:120])
+            items = []
+        out["personas"][k] = pages[t] | {"vistas": {it["timestamp"][:8]: it["views"] for it in items}}
+        time.sleep(0.3)
+    muni = next((resolved[x] for x in CONFIG.get("wiki_municipio", []) if x in resolved), None)
+    if muni:
+        m = dict(pages[muni])
+        if m.get("qid"):
+            ent = get_json("https://www.wikidata.org/w/api.php?" + urllib.parse.urlencode(
+                {"action": "wbgetentities", "ids": m["qid"], "props": "claims", "format": "json"}),
+                headers={"User-Agent": UA})["entities"][m["qid"]]["claims"]
+
+            def best(pid):
+                cl = [c for c in ent.get(pid, []) if c["mainsnak"].get("datavalue")]
+                if not cl:
+                    return None
+                def when(c):
+                    q = c.get("qualifiers", {}).get("P585")
+                    return q[0]["datavalue"]["value"]["time"] if q and q[0].get("datavalue") else ""
+                pref = [c for c in cl if c.get("rank") == "preferred"] or cl
+                c = max(pref, key=when)
+                v = c["mainsnak"]["datavalue"]["value"]
+                if isinstance(v, dict) and "amount" in v:
+                    return {"v": float(v["amount"]), "anio": when(c)[1:5] or None}
+                if isinstance(v, dict) and "time" in v:
+                    return {"v": v["time"][1:11]}
+                return None
+            m["datos"] = {"poblacion": best("P1082"), "superficie_km2": best("P2046"), "fundacion": best("P571"),
+                          "altitud_m": best("P2044")}
+        out["municipio"] = m
+    WIKI.write_text(json.dumps(out, ensure_ascii=False), encoding="utf8")
+    return len(out["personas"]), bool(muni)
+
+
 def save(known):
     cutoff = iso(datetime.now(timezone.utc) - timedelta(days=CONFIG["window_days"] + 30))
     keep = [r for r in known.values() if r.get("created_at", "") >= cutoff]
@@ -292,6 +371,12 @@ def main():
     except Exception as e:
         status["openstreetmap"] = {"ok": GEO.exists(), "error": str(e)[:200]}
     log(source="openstreetmap", **status["openstreetmap"])
+    try:
+        npers, has_m = wiki()
+        status["wikipedia"] = {"ok": npers > 0, "items": npers, "municipio": has_m}
+    except Exception as e:
+        status["wikipedia"] = {"ok": WIKI.exists(), "error": str(e)[:200]}
+    log(source="wikipedia", **status["wikipedia"])
     status_path.write_text(json.dumps(status, ensure_ascii=False), encoding="utf8")
 
 

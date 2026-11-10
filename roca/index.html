@@ -81,6 +81,16 @@ tr.sel td{background:#1d140f}tbody tr{cursor:pointer}tbody tr:hover td{backgroun
 select,input[type=search]{background:var(--s2);color:var(--txt);border:1px solid var(--line);padding:6px 9px;font-size:13px;border-radius:5px}
 .geo{position:relative}.geo::before{content:"GEO · ALTO VALLE · 39°02′S 67°35′O";position:absolute;top:10px;right:14px;font:11px var(--mono);color:var(--dim);letter-spacing:.08em;z-index:2}
 .ficha h4{margin:0;font-size:20px}.ficha .s{color:var(--dim);font:12px var(--mono);margin-bottom:10px}
+.alerts{display:flex;flex-direction:column;gap:8px}
+.alerts .a{display:grid;grid-template-columns:26px 1fr;gap:8px;align-items:start;background:var(--s2);border:1px solid var(--line);border-radius:6px;padding:8px 10px;font-size:13px;color:var(--txt)}
+.alerts .a i{font-style:normal;font:600 13px var(--mono);width:24px;height:24px;border-radius:5px;display:grid;place-items:center;background:var(--s3);color:var(--muted)}
+.alerts .a i.up{color:#ffb08a}.alerts .a i.down{color:#8ec1ff}.alerts .a small{display:block;color:var(--dim);font:10.5px var(--mono);letter-spacing:.6px;text-transform:uppercase}
+.tl{display:flex;flex-direction:column;gap:0;border-left:2px solid var(--line2);margin-left:6px;padding-left:14px;max-height:420px;overflow:auto}
+.tl .h{position:relative;padding:6px 0 10px}.tl .h::before{content:"";position:absolute;left:-20px;top:11px;width:10px;height:10px;border-radius:50%;background:var(--foco);box-shadow:0 0 0 3px #2a1a12}
+.tl .h .d{font:600 11px var(--mono);color:var(--dim)}.tl .h .t{color:var(--txt);font-size:13px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}.facts div{background:var(--s2);border:1px solid var(--line);border-radius:6px;padding:8px 10px}
+.facts b{display:block;font:700 18px Inter,system-ui,sans-serif;color:var(--txt)}.facts span{color:var(--dim);font-size:11.5px}
+.wk{color:var(--muted);font-size:13px;line-height:1.55}
 .warnbox{border:1px solid #5a4520;background:#1f1a0e;color:#f0d9a0;padding:10px 14px;font-size:13px;margin-bottom:14px;border-radius:6px}
 footer{color:var(--dim);font-size:12px;max-width:1560px;margin:0 auto;padding:0 20px 30px}
 @media(max-width:1100px){.kpis{grid-template-columns:repeat(3,minmax(0,1fr))}.c3,.c4,.c5,.c6,.c7,.c8{grid-column:span 12}}
@@ -97,7 +107,7 @@ footer{color:var(--dim);font-size:12px;max-width:1560px;margin:0 auto;padding:0 
 <div class="ticker"><div class="lab">ÚLTIMO</div><div class="run" id="ticker"></div></div>
 <nav><div class="in" id="tabs">
   <button data-t="panorama" class="on">Panorama</button><button data-t="soria">María Emilia Soria</button>
-  <button data-t="competidores">Competidores</button><button data-t="cubo">Cubo político</button>
+  <button data-t="competidores">Competidores</button><button data-t="intendentes">Intendentes</button><button data-t="cubo">Cubo político</button>
   <button data-t="vecinal">Radar vecinal</button><button data-t="medios">Medios</button><button data-t="metodo">Fuentes y método</button>
 </div></nav>
 <main>
@@ -112,11 +122,15 @@ footer{color:var(--dim);font-size:12px;max-width:1560px;margin:0 auto;padding:0 
       <div class="card c4"><h3>Participación en la conversación <span class="tag">share of voice</span></h3><div id="g-sov" style="height:360px"></div></div>
       <div class="card c6"><h3>Tono de la conversación sobre Soria <span class="tag">semanal</span></h3><div id="g-tonew" style="height:300px"></div></div>
       <div class="card c6"><h3>Qué reclaman en Roca <span class="tag">radar vecinal</span></h3><div id="g-recl-mini" style="height:300px"></div></div>
+      <div class="card c4"><h3>Alertas <span class="tag">automáticas</span></h3><div class="alerts" id="p-alert"></div></div>
+      <div class="card c8"><h3>Línea de tiempo <span class="tag">semanas pico de Soria y qué las explicó</span></h3><div id="p-hitos" style="height:250px"></div><div class="tl" id="p-tl"></div></div>
     </div>
   </section>
 
   <section class="tab" id="t-soria">
     <div class="g">
+      <div class="card c5"><h3>Perfil <span class="tag">Wikipedia</span></h3><div class="wk" id="s-wiki"></div></div>
+      <div class="card c7"><h3>Interés en Wikipedia <span class="tag">visitas semanales al artículo</span></h3><div id="s-wikiv" style="height:260px"></div></div>
       <div class="card c4"><h3>Tono <span class="tag" id="tone-base"></span></h3><div id="s-tone"></div>
         <div class="sect" style="margin-top:16px">Emociones</div><div class="bars" id="s-emo"></div>
         <p class="note" id="s-agr"></p></div>
@@ -141,6 +155,16 @@ footer{color:var(--dim);font-size:12px;max-width:1560px;margin:0 auto;padding:0 
     </div>
   </section>
 
+  <section class="tab" id="t-intendentes">
+    <div class="g">
+      <div class="card c12"><h3>Soria frente a otros intendentes de la región <span class="tag">últimos <span class="cdays"></span> días</span></h3><div style="overflow-x:auto"><table id="i-table"></table></div></div>
+      <div class="card c6"><h3>Menciones por semana</h3><div id="i-weekly" style="height:340px"></div></div>
+      <div class="card c6"><h3>Interés en Wikipedia <span class="tag">visitas, últimos 90 días</span></h3><div id="i-wiki" style="height:340px"></div></div>
+      <div class="card c6"><h3>Tono de la cobertura</h3><div id="i-tone" style="height:300px"></div></div>
+      <div class="card c6"><h3>De qué se habla en cada ciudad <span class="tag">temas de gestión</span></h3><div id="i-temas" style="height:300px"></div></div>
+    </div>
+  </section>
+
   <section class="tab" id="t-cubo">
     <div class="g">
       <div class="card c8"><h3>Cubo político <span class="tag">economía · sociedad · política</span></h3>
@@ -157,6 +181,8 @@ footer{color:var(--dim);font-size:12px;max-width:1560px;margin:0 auto;padding:0 
         <div class="ctrl"><label>Ver <select id="v-metric"></select></label><span id="v-layers"></span></div>
         <div id="v-map" style="height:560px"></div><p class="note" id="v-mapnote"></p></div>
       <div class="card c4 ficha" id="v-ficha"></div>
+      <div class="card c8"><h3>Ranking de barrios <span class="tag">clic para ver en el mapa</span></h3><div style="overflow-x:auto;max-height:420px"><table id="v-rank"></table></div></div>
+      <div class="card c4"><h3>General Roca en datos <span class="tag">Wikidata</span></h3><div id="v-muni"></div></div>
       <div class="card c6"><h3>Reclamos vs. agenda de medios</h3><div id="v-temas" style="height:480px"></div></div>
       <div class="card c6"><h3>Perfil de reclamos por barrio <span class="tag">% de cada fila</span></h3><div id="v-matriz" style="height:480px"></div></div>
       <div class="card c12"><h3>Evolución semanal</h3><div id="v-serie" style="height:320px"></div></div>
@@ -172,6 +198,8 @@ footer{color:var(--dim);font-size:12px;max-width:1560px;margin:0 auto;padding:0 
     <div class="g">
       <div class="card c5"><h3>Medios que más cubren Roca y a sus políticos</h3><div class="bars" id="m-out"></div></div>
       <div class="card c7"><h3>Titulares recientes <span class="tag">filtrá por político</span></h3><div class="ctrl" id="m-f"></div><div class="hl" id="m-heads"></div></div>
+      <div class="card c7"><h3>Quién cubre a quién <span class="tag">notas por medio y político</span></h3><div id="m-mat" style="height:460px"></div></div>
+      <div class="card c5"><h3>Tono de cada medio sobre Soria</h3><div id="m-tono" style="height:460px"></div></div>
     </div>
   </section>
 
@@ -186,7 +214,7 @@ footer{color:var(--dim);font-size:12px;max-width:1560px;margin:0 auto;padding:0 
     </div>
   </section>
 </main>
-<footer>Datos: YouTube Data API v3, Google News, RSS de medios del Alto Valle, © colaboradores de OpenStreetMap (ODbL). Solo se publican agregados: los comentarios no se guardan en el repositorio. Posiciones del cubo: codificación editorial a revisar con el cliente.</footer>
+<footer>Datos: YouTube Data API v3, Google News, RSS de medios del Alto Valle, © colaboradores de OpenStreetMap (ODbL), Wikipedia (CC BY-SA) y Wikidata (CC0). Solo se publican agregados: los comentarios no se guardan en el repositorio. Posiciones del cubo: codificación editorial a revisar con el cliente.</footer>
 <script src="../assets/plotly.min.js"></script>
 <script>
 (function(){
@@ -221,7 +249,7 @@ function init(){
   $$('.cdays').forEach(e=>e.textContent=D.conversacion_dias);
   drawTab('panorama');
 }
-function drawTab(id){if(!D||drawn.has(id)&&id!=='cubo')return;drawn.add(id);({panorama,soria,competidores,cubo:renderCube,vecinal,medios,metodo}[id]||(()=>{}))()}
+function drawTab(id){if(!D||drawn.has(id)&&id!=='cubo')return;drawn.add(id);({panorama,soria,competidores,intendentes,cubo:renderCube,vecinal,medios,metodo}[id]||(()=>{}))()}
 
 // ---------------------------------------------------------------- panorama
 function spark(arr,col){if(!arr||arr.length<2)return'';const m=Math.max(...arr,1),w=84,h=30;
@@ -255,6 +283,7 @@ function panorama(){
   const tw=D.foco_semanal.tono;
   Plotly.newPlot('g-tonew',[['NEG','Negativo',C.neg],['NEU','Neutro',C.neu],['POS','Positivo',C.pos]].map(([k,n,c])=>({x:D.semanas,y:tw[k],name:n,type:'bar',marker:{color:c}})),base({barmode:'stack'}),CFG);
   const t=V.temas.filter(x=>x.reclamos).slice(0,8).reverse();
+  pExtra();
   Plotly.newPlot('g-recl-mini',t.length?[{type:'bar',orientation:'h',y:t.map(x=>x.tema),x:t.map(x=>x.reclamos),marker:{color:'#c98500'},hovertemplate:'%{y}: %{x}<extra></extra>'}]:[],base({margin:{l:170,r:10,t:10,b:30}}),CFG);
 }
 
@@ -288,6 +317,7 @@ function soria(){const f=FO;
   $('#s-out').innerHTML=bars((f.outlets||[]).map(o=>[o.o,o.n,'#5fb3c9']));
   $('#s-vid').innerHTML=(D.foco_videos||[]).length?'<table><thead><tr><th>Video</th><th class="n">Coment.</th><th class="n">% neg.</th></tr></thead><tbody>'+D.foco_videos.map(v=>`<tr><td><a href="${esc(v.url)}" target="_blank" rel="noopener">${esc(v.titulo)}</a><br><span style="font-size:11.5px">${esc(v.canal)} · ${esc(v.fecha)}</span></td><td class="n">${fmt(v.comentarios)}</td><td class="n">${v.neg}%</td></tr>`).join('')+'</tbody></table>':'<div class="empty">Sin videos con comentarios todavía.</div>';
   $('#s-heads').innerHTML=headsHTML(f.headlines);
+  sWiki();
 }
 
 // ---------------------------------------------------------------- competidores
@@ -339,7 +369,7 @@ function vecinal(){const V=D.vecinal,T=D.totales;
   $('#v-metric').onchange=e=>{vMetric=e.target.value;vMap()};
   $('#v-layers').innerHTML=Object.entries(LAYERS).filter(([k])=>(V.equipamiento_puntos[k]||[]).length).map(([k,v])=>`<button class="chip ${layersOn.has(k)?'on':''}" data-k="${k}"><span style="color:${v[1]}">●</span> ${v[0]}</button>`).join('');
   $$('#v-layers button').forEach(b=>b.onclick=()=>{const k=b.dataset.k;layersOn.has(k)?layersOn.delete(k):layersOn.add(k);b.classList.toggle('on');vMap()});
-  vMap();vFicha(lmax.nombre||(L[0]||{}).nombre);vTemas();vFrases();
+  vMap();vFicha(lmax.nombre||(L[0]||{}).nombre);vTemas();vFrases();vRank();vMuni();
   $('#v-vid').innerHTML=V.videos.length?'<table><thead><tr><th>Video</th><th class="n">Reclamos</th><th class="n">Coment.</th></tr></thead><tbody>'+V.videos.map(v=>`<tr><td><a href="${esc(v.url)}" target="_blank" rel="noopener">${esc(v.titulo)}</a><br><span style="font-size:11.5px">${esc(v.canal)} · ${esc(v.fecha)}</span></td><td class="n">${v.reclamos}</td><td class="n">${v.comentarios}</td></tr>`).join('')+'</tbody></table>':'<div class="empty">Sin videos con reclamos todavía.</div>';
   const pc={};V.titulares.filter(t=>t.reclamo).forEach(t=>t.pols.forEach(p=>pc[p]=(pc[p]||0)+1));
   P.forEach(p=>(p.temas_reclamo||[]).length&&(pc[p.name]=pc[p.name]||0));
@@ -396,7 +426,7 @@ function vFrases(){const V=D.vecinal,ts=V.matriz.temas.filter(t=>(V.frases_tema[
 // ---------------------------------------------------------------- medios
 let mF=null;
 function medios(){const all={};P.forEach(p=>(p.outlets||[]).forEach(o=>all[o.o]=(all[o.o]||0)+o.n));
-  $('#m-out').innerHTML=bars(Object.entries(all).sort((a,b)=>b[1]-a[1]).slice(0,15).map(([k,v])=>[k,v,'#5fb3c9']));mHeads()}
+  $('#m-out').innerHTML=bars(Object.entries(all).sort((a,b)=>b[1]-a[1]).slice(0,15).map(([k,v])=>[k,v,'#5fb3c9']));mHeads();mExtra()}
 function mHeads(){const ps=P.filter(p=>(p.headlines||[]).length);
   $('#m-f').innerHTML=`<button class="chip ${mF?'':'on'}" data-v="">Todos</button>`+ps.map(p=>`<button class="chip ${mF===p.name?'on':''}" data-v="${esc(p.name)}">${esc(p.name)}</button>`).join('');
   $$('#m-f button').forEach(b=>b.onclick=()=>{mF=b.dataset.v||null;mHeads()});
@@ -404,12 +434,78 @@ function mHeads(){const ps=P.filter(p=>(p.headlines||[]).length);
   $('#m-heads').innerHTML=headsHTML(h.slice(0,60))}
 
 // ---------------------------------------------------------------- método
-function metodo(){const S=D.status||{},nm={youtube:'YouTube (comentarios)',google_news:'Google News (medios)',rss:'RSS de medios regionales',openstreetmap:'OpenStreetMap (mapa)'};
+function metodo(){const S=D.status||{},nm={youtube:'YouTube (comentarios)',google_news:'Google News (medios)',rss:'RSS de medios regionales',openstreetmap:'OpenStreetMap (mapa)',wikipedia:'Wikipedia / Wikidata'};
   $('#st').innerHTML=Object.entries(nm).map(([k,n])=>{const s=S[k]||{};return `<span class="chip ${s.ok?'ok':'no'}">${n}${s.items!=null?' · '+fmt(s.items):''}${s.places!=null?' · '+s.places+' lugares':''}</span>`}).join('')+'<span class="chip no">Facebook / Instagram · sin API abierta</span><span class="chip no">X · API paga</span>';
   $('#st-n').textContent=`Ventana: ${D.window_days} días para el radar vecinal, ${D.conversacion_dias} días para la conversación política. Tono calculado con ${D.totales.metodo_nlp==='modelo'?'modelos pysentimiento':'diccionarios'}. Se actualiza todos los días desde GitHub Actions.`;
   const M=D.metodo;$('#mt').innerHTML=['menciones','tono','regla','localidad'].map(k=>`<p>${esc(M[k])}</p>`).join('')+'<p>Son indicadores para orientar la mirada, no una encuesta representativa: YouTube y los medios no son toda la población de Roca.</p>';
   const tbl=o=>'<thead><tr><th></th><th>Términos</th></tr></thead><tbody>'+Object.entries(o).map(([k,v])=>`<tr><td style="color:var(--txt)">${esc(k)}</td><td style="font-size:12px">${esc(v.join(', '))}</td></tr>`).join('')+'</tbody>';
   $('#mt-al').innerHTML=tbl(M.politicos);$('#mt-nar').innerHTML=tbl(M.narrativas);$('#mt-tem').innerHTML=tbl(M.temas);
+}
+// ---------------------------------------------------------------- agregados: alertas, hitos, Wikipedia, intendentes, ranking, medios
+const AIC={volumen:'▲',tono:'±',narrativa:'◆',competidor:'⚑',reclamo:'⌂',cruce:'⇄'};
+const ALAB={volumen:'Volumen',tono:'Tono',narrativa:'Narrativa',competidor:'Competidor',reclamo:'Radar vecinal',cruce:'Cruce'};
+const fdate=s=>new Date(s+'T12:00:00').toLocaleDateString('es-AR',{day:'2-digit',month:'short'});
+function pExtra(){
+  const A=D.alertas||[];
+  $('#p-alert').innerHTML=A.length?A.map(a=>`<div class="a"><i class="${a.dir}">${AIC[a.tipo]||'•'}</i><div><small>${ALAB[a.tipo]||a.tipo}</small>${esc(a.texto)}</div></div>`).join(''):'<div class="empty">Sin cambios fuertes esta semana.</div>';
+  const H=D.hitos||[],w=FO.weekly||[];
+  Plotly.newPlot('p-hitos',[{x:D.semanas,y:w,type:'scatter',mode:'lines',fill:'tozeroy',line:{color:C.foco,width:2,shape:'spline'},fillcolor:'rgba(217,89,38,.14)',name:'Menciones',hovertemplate:'%{x}: %{y}<extra></extra>'},
+    {x:H.map(h=>h.semana),y:H.map(h=>h.n),type:'scatter',mode:'markers+text',text:H.map((h,i)=>String(i+1)),textposition:'top center',textfont:{color:C.txt,size:11},marker:{size:11,color:'#0b0d12',line:{color:'#ffb08a',width:2}},hovertext:H.map(h=>h.titular?h.titular.t:(h.narrativas||[]).join(', ')),hovertemplate:'%{hovertext}<extra></extra>',name:'Pico'}],
+    base({showlegend:false,margin:{l:36,r:10,t:16,b:30}}),CFG);
+  $('#p-tl').innerHTML=H.length?H.slice().reverse().map((h,i)=>`<div class="h"><div class="d">${H.length-i} · SEMANA DEL ${fdate(h.semana).toUpperCase()} · ${h.n} MENCIONES${h.neg!=null?' · '+h.neg+'% NEG.':''}</div>
+    <div class="t">${h.titular?`<a href="${esc(h.titular.u)}" target="_blank" rel="noopener">${esc(h.titular.t)}</a> <span style="color:var(--dim);font-size:12px">${esc(h.titular.o)}</span>`:'Pico en comentarios de YouTube'}</div>
+    <div>${(h.narrativas||[]).map(n=>`<span class="tag2">${esc(n)}</span>`).join('')}</div></div>`).join(''):'<div class="empty">Todavía no hay semanas pico.</div>';
+}
+function sWiki(){const W=D.wiki;
+  if(!W){$('#s-wiki').innerHTML='<div class="empty">Se completa con la próxima corrida diaria.</div>';$('#s-wikiv').innerHTML='<div class="empty">Sin datos de Wikipedia todavía.</div>';return}
+  const pf=W.perfil;
+  $('#s-wiki').innerHTML=(pf&&pf.extract?`<p style="margin:0 0 10px">${esc(pf.extract)}</p><a href="${esc(pf.url)}" target="_blank" rel="noopener">Ver artículo completo ↗</a>`:'<div class="empty">Sin artículo en Wikipedia en español.</div>')
+    +(W.total_90&&W.total_90[FO.name]!=null?`<div class="facts"><div><b>${fmt(W.total_90[FO.name])}</b><span>visitas en 90 días</span></div><div><b>${fmt(Math.round(W.total_90[FO.name]/90))}</b><span>visitas por día</span></div></div>`:'');
+  const ks=Object.keys(W.series).filter(k=>P.some(p=>p.name===k)).sort((a,b)=>(W.total_90[b]||0)-(W.total_90[a]||0));
+  const sel=[FO.name,...ks.filter(k=>k!==FO.name&&k!=='Javier Milei').slice(0,3)].filter(k=>W.series[k]);
+  Plotly.newPlot('s-wikiv',sel.map(k=>({x:W.semanas,y:W.series[k],name:k,type:'scatter',mode:'lines',line:{color:colorOf[k]||C.dim,width:k===FO.name?3:1.5,shape:'spline'}})),base({hovermode:'x unified',margin:{l:46,r:10,t:10,b:50}}),CFG);
+}
+function intendentes(){const I=D.intendentes||[],W=D.wiki||{},col={};
+  I.forEach((x,i)=>col[x.name]=x.foco?C.foco:PAL[(i+1)%PAL.length]);
+  if(!I.length){$('#i-table').innerHTML='<tr><td class="empty">Sin datos todavía.</td></tr>';return}
+  const r=[...I].sort((a,b)=>b.n-a.n);
+  $('#i-table').innerHTML='<thead><tr><th>Intendente</th><th>Ciudad</th><th class="n">Menciones</th><th class="n">Esta semana</th><th class="n">Medios</th><th>Tono</th><th class="n">Wikipedia 90 d</th><th>Último titular</th></tr></thead><tbody>'+
+    r.map(x=>`<tr class="${x.foco?'sel':''}"><td style="color:var(--txt);white-space:nowrap"><span class="av sm" style="background:${col[x.name]};display:inline-grid;vertical-align:middle;margin-right:6px">${ini(x.name)}</span>${esc(x.name)}<br><span style="font-size:11.5px;color:var(--dim)">${esc(x.espacio)}</span></td><td>${esc(x.ciudad)}</td><td class="n">${fmt(x.n)}</td><td class="n">${fmt(x.last7)}</td><td class="n">${fmt(x.medios)}</td><td style="min-width:120px">${toneBar(x.tone)}</td><td class="n">${W.total_90&&W.total_90[x.name]!=null?fmt(W.total_90[x.name]):'–'}</td><td style="font-size:12.5px">${x.titular?`<a href="${esc(x.titular.u)}" target="_blank" rel="noopener">${esc(x.titular.t)}</a> <span style="color:var(--dim)">${esc(x.titular.o)}</span>`:'–'}</td></tr>`).join('')+'</tbody>';
+  Plotly.newPlot('i-weekly',r.map(x=>({x:D.semanas,y:x.weekly,name:x.name,type:'scatter',mode:'lines',line:{color:col[x.name],width:x.foco?3:1.6,shape:'spline'}})),base({hovermode:'x unified',margin:{l:40,r:10,t:10,b:50}}),CFG);
+  const wv=r.filter(x=>W.total_90&&W.total_90[x.name]!=null).reverse();
+  if(wv.length)Plotly.newPlot('i-wiki',[{type:'bar',orientation:'h',y:wv.map(x=>x.name),x:wv.map(x=>W.total_90[x.name]),marker:{color:wv.map(x=>col[x.name])},text:wv.map(x=>fmt(W.total_90[x.name])),textposition:'outside',cliponaxis:false,hovertemplate:'%{y}: %{x}<extra></extra>'}],base({margin:{l:130,r:50,t:10,b:30}}),CFG);
+  else $('#i-wiki').innerHTML='<div class="empty">Sin datos de Wikipedia todavía.</div>';
+  const tn=r.filter(x=>x.tone).reverse();
+  Plotly.newPlot('i-tone',[['NEG','Negativo',C.neg],['NEU','Neutro',C.neu],['POS','Positivo',C.pos]].map(([k,n,c])=>({type:'bar',orientation:'h',name:n,y:tn.map(x=>x.name),x:tn.map(x=>x.tone[k]),marker:{color:c},hovertemplate:'%{y}: %{x}%<extra>'+n+'</extra>'})),base({barmode:'stack',margin:{l:130,r:10,t:10,b:50},xaxis:{gridcolor:C.grid,ticksuffix:'%',range:[0,100]}}),CFG);
+  const tem=[...new Set(r.flatMap(x=>(x.temas||[]).map(t=>t[0])))];
+  if(!tem.length){$('#i-temas').innerHTML='<div class="empty">Sin temas de gestión todavía.</div>';return}
+  Plotly.newPlot('i-temas',tem.length?tem.map((t,i)=>({type:'bar',orientation:'h',name:t,y:r.map(x=>x.name).reverse(),x:r.map(x=>((x.temas||[]).find(z=>z[0]===t)||[0,0])[1]).reverse(),marker:{color:PAL[i%PAL.length]}})):[],base({barmode:'stack',margin:{l:130,r:10,t:10,b:60}}),CFG);
+}
+function vRank(){const L=[...D.vecinal.localidades].filter(l=>l.menciones||l.reclamos).sort((a,b)=>b.reclamos-a.reclamos||b.menciones-a.menciones),mx=Math.max(1,...L.map(l=>l.reclamos));
+  $('#v-rank').innerHTML=L.length?'<thead><tr><th>#</th><th>Barrio</th><th class="n">Reclamos</th><th></th><th class="n">Textos</th><th class="n">% neg.</th><th>Temas principales</th></tr></thead><tbody>'+
+    L.map((l,i)=>`<tr data-n="${esc(l.nombre)}"><td class="n" style="color:var(--dim)">${i+1}</td><td style="color:var(--txt)">${esc(l.nombre)}${l.centro?'':' <span style="color:var(--dim);font-size:11px">(sin ubicación)</span>'}</td><td class="n">${fmt(l.reclamos)}</td><td style="width:22%"><div style="height:8px;border-radius:2px;background:#c98500;width:${l.reclamos/mx*100}%"></div></td><td class="n">${fmt(l.menciones)}</td><td class="n">${l.tono_neg!=null?l.tono_neg+'%':'–'}</td><td>${(l.tema_top||[]).map(t=>`<span class="tag2">${esc(t[0])} ${t[1]}</span>`).join('')}</td></tr>`).join('')+'</tbody>':'<tr><td class="empty">Sin barrios nombrados todavía.</td></tr>';
+  $$('#v-rank tbody tr').forEach(tr=>tr.onclick=()=>{vFicha(tr.dataset.n);$('#v-ficha').scrollIntoView({behavior:'smooth',block:'nearest'})});
+}
+function vMuni(){const M=(D.wiki||{}).municipio,el=$('#v-muni');
+  if(!M){el.innerHTML='<div class="empty">Se completa con la próxima corrida diaria.</div>';return}
+  const d=M.datos||{},f=[];
+  if(d.poblacion)f.push([fmt(Math.round(d.poblacion.v)),'habitantes'+(d.poblacion.anio?' ('+d.poblacion.anio+')':'')]);
+  if(d.superficie_km2)f.push([fmt(Math.round(d.superficie_km2.v))+' km²','superficie']);
+  if(d.fundacion)f.push([d.fundacion.v.slice(0,4),'fundación']);
+  if(d.altitud_m)f.push([fmt(Math.round(d.altitud_m.v))+' m','altitud']);
+  const T=D.totales;if(d.poblacion&&T.reclamos)f.push([(T.reclamos/d.poblacion.v*1e4).toFixed(1),'reclamos detectados cada 10.000 hab.']);
+  if(D.vecinal.localidades)f.push([fmt(D.vecinal.localidades.filter(l=>l.centro).length),'barrios ubicados en el mapa']);
+  el.innerHTML=`<div class="facts">${f.map(x=>`<div><b>${x[0]}</b><span>${x[1]}</span></div>`).join('')}</div>`+(M.extract?`<p class="wk" style="margin:0 0 8px">${esc(M.extract)}</p>`:'')+(M.url?`<a href="${esc(M.url)}" target="_blank" rel="noopener">Wikipedia ↗</a>`:'');
+}
+function mExtra(){const M=D.medios_matriz;
+  if(M&&M.medios.length){const z=M.valores.slice().reverse(),y=M.medios.slice().reverse();
+    Plotly.newPlot('m-mat',[{type:'heatmap',z,x:M.politicos,y,colorscale:[[0,'#13161d'],[.15,'#2a3550'],[.5,'#3987e5'],[1,'#d95926']],showscale:false,text:z,texttemplate:'%{text}',textfont:{size:10.5},hovertemplate:'%{y} · %{x}: %{z} notas<extra></extra>',xgap:2,ygap:2}],
+      base({margin:{l:150,r:10,t:10,b:110},xaxis:{tickangle:-35,gridcolor:'rgba(0,0,0,0)'},yaxis:{gridcolor:'rgba(0,0,0,0)'}}),CFG)}
+  else $('#m-mat').innerHTML='<div class="empty">Sin notas todavía.</div>';
+  const T=(D.medios_tono||[]).slice().reverse();
+  if(T.length)Plotly.newPlot('m-tono',[['neg','Negativo',C.neg],['neu','Neutro',C.neu],['pos','Positivo',C.pos]].map(([k,n,c])=>({type:'bar',orientation:'h',name:n,y:T.map(t=>t.medio+' ('+t.n+')'),x:T.map(t=>k==='neu'?Math.max(0,+(100-t.neg-t.pos).toFixed(1)):t[k]),marker:{color:c},hovertemplate:'%{y}: %{x}%<extra>'+n+'</extra>'})),
+    base({barmode:'stack',margin:{l:170,r:10,t:10,b:50},xaxis:{gridcolor:C.grid,ticksuffix:'%',range:[0,100]}}),CFG);
+  else $('#m-tono').innerHTML='<div class="empty">Hacen falta al menos 2 notas por medio.</div>';
 }
 })();
 </script>
