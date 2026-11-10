@@ -28,6 +28,7 @@ CONFIG = json.loads((HERE / "config.json").read_text(encoding="utf8"))
 STORE = HERE / ".store" / "items.jsonl"
 GEO = HERE / ".store" / "osm.json"
 STATUS = HERE / ".store" / "status.json"
+WIKI = HERE / ".store" / "wiki.json"
 NLP_CACHE = HERE / ".store" / "nlp.jsonl.gz"
 OUT = HERE / "data" / "roca.json"
 FOCO = CONFIG["foco"]
@@ -62,6 +63,7 @@ NARR = {k: rx([t.strip() for t in v]) for k, v in CONFIG["narrativas"].items()}
 RECLAMO = rx(CONFIG["marcadores_reclamo"])
 POS, NEG = rx(CONFIG["positivo"]), rx(CONFIG["negativo"])
 POLS = {k: rx_exact(v["alias"]) for k, v in CONFIG["politicos"].items()}
+INTEND = {k: rx_exact(v["alias"]) for k, v in CONFIG.get("intendentes", {}).items()}
 CTX = rx_exact(CONFIG["contexto"] + [a for v in CONFIG["localidades"].values() for a in v["alias"]])
 MASK = [(re.compile(r"@[\w.\-]{2,}"), "@…"), (re.compile(r"\S+@\S+\.\w+"), "[correo]"),
         (re.compile(r"(?:\+?54)?[\s\-]?\d{3,4}[\s\-]?\d{6,7}\b"), "[tel]")]
@@ -428,6 +430,120 @@ def main():
     titulares = [{"titulo": r["title"], "medio": r.get("outlet", ""), "fecha": r["created_at"][:10], "url": r["url"], "temas": r["temas"],
                   "localidad": r["loc"], "reclamo": r["reclamo"], "pols": r["pols"], "tono": r["tono"]} for r in titulares]
 
+    # ------------------------------------------------ intendentes de la región (comparación de visibilidad)
+    conv_all = [r for r in texts if r["created_at"] >= conv_since]
+    intend_out = []
+    for k, meta in CONFIG.get("intendentes", {}).items():
+        m = [r for r in conv_all if (FOCO in r["pols"] if meta.get("foco") else INTEND[k].search(r["_f"]))]
+        news = [r for r in m if r["kind"] == "news"]
+        wk = Counter(week(r["created_at"]) for r in m)
+        l7 = sum(1 for r in m if r["created_at"] >= last.strftime("%Y-%m-%dT%H:%M:%SZ"))
+        intend_out.append({
+            "name": k, "ciudad": meta.get("ciudad", ""), "espacio": meta.get("espacio", ""), "foco": bool(meta.get("foco")),
+            "n": len(m), "n_news": len(news), "last7": l7, "weekly": [wk.get(x, 0) for x in semanas],
+            "medios": len({r.get("outlet") for r in news if r.get("outlet")}),
+            "tone": {t: pct(sum(1 for r in m if r["tono"] == t) / len(m)) for t in ("NEG", "NEU", "POS")} if m else None,
+            "temas": Counter(t for r in m for t in r["temas"]).most_common(4),
+            "titular": next(({"t": r["title"], "o": r.get("outlet", ""), "u": r["url"], "d": r["created_at"][:10]}
+                             for r in sorted(news, key=lambda r: r["created_at"], reverse=True)), None),
+        })
+
+    # ------------------------------------------------ hitos (semanas pico) y alertas
+    foco_info = next((p for p in pols_out if p["foco"]), {})
+    fw = foco_info.get("weekly") or [0] * len(semanas)
+    hitos = []
+    if any(fw):
+        nz = [v for v in fw if v] or [0]
+        mu = sum(nz) / len(nz)
+        sd = (sum((v - mu) ** 2 for v in nz) / len(nz)) ** 0.5
+        thr = max(3, mu + 1.0 * sd)
+        for i, v in enumerate(fw):
+            if v < thr:
+                continue
+            wrows = [r for r in foco_rows if week(r["created_at"]) == semanas[i]]
+            wnews = [r for r in wrows if r["kind"] == "news"]
+            # titular representativo: el que comparte más palabras con el resto de la semana
+            wsets = [set(WORD.findall(r["_f"])) - STOP for r in wnews]
+            best = max(range(len(wnews)), key=lambda j: sum(len(wsets[j] & o) for o in wsets), default=None)
+            nar = Counter(n for r in wrows for n in r["narr"]).most_common(2)
+            hitos.append({"semana": semanas[i], "n": v, "neg": pct(sum(1 for r in wrows if r["tono"] == "NEG") / len(wrows)) if wrows else None,
+                          "narrativas": [n for n, _ in nar],
+                          "titular": ({"t": wnews[best]["title"], "o": wnews[best].get("outlet", ""), "u": wnews[best]["url"]}
+                                      if best is not None else None)})
+        hitos = sorted(sorted(hitos, key=lambda h: -h["n"])[:8], key=lambda h: h["semana"])
+
+    def share_neg(rows):
+        return sum(1 for r in rows if r["tono"] == "NEG") / len(rows) if rows else None
+    alertas = []
+    d = foco_info.get("delta")
+    if d is not None and abs(d) >= 30:
+        alertas.append({"tipo": "volumen", "dir": "up" if d > 0 else "down",
+                        "texto": f"Las menciones de {FOCO} {'subieron' if d > 0 else 'bajaron'} {abs(d)}% esta semana ({foco_info['last7']} vs. {foco_info['prev7']})."})
+    cut4 = (now - timedelta(days=28)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    cut12 = (now - timedelta(days=84)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    rec, base_r = [r for r in foco_rows if r["created_at"] >= cut4], [r for r in foco_rows if cut12 <= r["created_at"] < cut4]
+    if len(rec) >= 8 and len(base_r) >= 8:
+        a, b = share_neg(rec), share_neg(base_r)
+        if abs(a - b) >= 0.08:
+            alertas.append({"tipo": "tono", "dir": "up" if a > b else "down",
+                            "texto": f"El tono negativo sobre {FOCO} {'subió' if a > b else 'bajó'} de {pct(b)}% a {pct(a)}% en las últimas 4 semanas."})
+        nr, nb = Counter(n for r in rec for n in r["narr"]), Counter(n for r in base_r for n in r["narr"])
+        grow = sorted(((n, c / len(rec) - nb[n] / len(base_r)) for n, c in nr.items() if c >= 3), key=lambda x: -x[1])
+        if grow and grow[0][1] >= 0.08:
+            alertas.append({"tipo": "narrativa", "dir": "up",
+                            "texto": f"Gana peso la narrativa «{grow[0][0]}»: {pct(nr[grow[0][0]] / len(rec))}% de los textos recientes vs. {pct(nb[grow[0][0]] / len(base_r))}% antes."})
+    riv = sorted((p for p in pols_out if not p["foco"] and p.get("delta") is not None and p.get("last7", 0) >= 5), key=lambda p: -p["delta"])
+    if riv and riv[0]["delta"] >= 50:
+        alertas.append({"tipo": "competidor", "dir": "up",
+                        "texto": f"{riv[0]['name']} crece {riv[0]['delta']}% en menciones esta semana ({riv[0]['last7']} textos)."})
+    rec_v = [r for r in reclamos if r["created_at"] >= cut4]
+    old_v = [r for r in reclamos if cut12 <= r["created_at"] < cut4]
+    if len(rec_v) >= 6:
+        cr, co_ = Counter(t for r in rec_v for t in r["temas"]), Counter(t for r in old_v for t in r["temas"])
+        t, c = cr.most_common(1)[0]
+        alertas.append({"tipo": "reclamo", "dir": "up" if c / len(rec_v) > (co_[t] / len(old_v) if old_v else 0) else "flat",
+                        "texto": f"Reclamo más repetido del último mes: {t} ({c} de {len(rec_v)} reclamos)."})
+    co_s = Counter(p for r in rec for p in r["pols"] if p != FOCO)
+    if co_s:
+        p_, c = co_s.most_common(1)[0]
+        alertas.append({"tipo": "cruce", "dir": "flat", "texto": f"En el último mes aparece junto a {p_} en {c} textos."})
+
+    # ------------------------------------------------ medios: tono por medio y matriz medio × político
+    foco_news = [r for r in foco_rows if r["kind"] == "news"]
+    by_out = defaultdict(list)
+    for r in foco_news:
+        if r.get("outlet"):
+            by_out[r["outlet"]].append(r)
+    medios_tono = sorted(({"medio": o, "n": len(rs), "neg": pct(share_neg(rs)), "pos": pct(sum(1 for r in rs if r["tono"] == "POS") / len(rs))}
+                          for o, rs in by_out.items() if len(rs) >= 2), key=lambda x: -x["n"])[:16]
+    conv_news = [r for r in conv if r["kind"] == "news" and r.get("outlet")]
+    top_out = [o for o, _ in Counter(r["outlet"] for r in conv_news).most_common(14)]
+    top_pol = [p["name"] for p in sorted(pols_out, key=lambda p: -p["n"]) if p["n"]][:9]
+    mm = Counter((r["outlet"], p) for r in conv_news for p in r["pols"])
+    medios_matriz = {"medios": top_out, "politicos": top_pol, "valores": [[mm[(o, p)] for p in top_pol] for o in top_out]}
+
+    # ------------------------------------------------ Wikipedia: interés de búsqueda y ficha del municipio
+    wiki_out = None
+    if WIKI.exists():
+        W = json.loads(WIKI.read_text(encoding="utf8"))
+        wsem = semanas
+        series, tot90 = {}, {}
+        c90 = (now - timedelta(days=90)).strftime("%Y%m%d")
+        for k, v in W.get("personas", {}).items():
+            vw = v.get("vistas") or {}
+            if not vw:
+                continue
+            wc = Counter()
+            for dd, n in vw.items():
+                wc[week(f"{dd[:4]}-{dd[4:6]}-{dd[6:]}T00:00:00Z")] += n
+            series[k] = [wc.get(x, 0) for x in wsem]
+            tot90[k] = sum(n for dd, n in vw.items() if dd >= c90)
+        fp = W.get("personas", {}).get(FOCO) or {}
+        wiki_out = {"semanas": wsem, "series": series, "total_90": tot90,
+                    "articulos": {k: v.get("url") for k, v in W.get("personas", {}).items()},
+                    "perfil": {"extract": fp.get("extract"), "url": fp.get("url")} if fp else None,
+                    "municipio": W.get("municipio"), "fetched_at": W.get("fetched_at")}
+
     status = json.loads(STATUS.read_text(encoding="utf8")) if STATUS.exists() else {}
     news_all = [r for r in texts if r["kind"] == "news"]
     out = {
@@ -444,6 +560,8 @@ def main():
         "foco_semanal": {"tono": tone_w, "narrativas": narr_serie},
         "foco_videos": top_soria_videos,
         "cubo": CONFIG["posiciones"],
+        "intendentes": intend_out, "hitos": hitos, "alertas": alertas,
+        "medios_tono": medios_tono, "medios_matriz": medios_matriz, "wiki": wiki_out,
         "vecinal": {
             "temas": tema_tbl,
             "matriz": {"localidades": loc_keys, "temas": temas, "valores": [[matriz[l][t] for t in temas] for l in loc_keys]},
