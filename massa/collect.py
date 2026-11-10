@@ -364,7 +364,8 @@ def seguridad():
         log(sitio=d, https=r.get("https"), error=r.get("error"))
         time.sleep(1)
     try:
-        br = get_json("https://haveibeenpwned.com/api/v3/breaches", headers={"User-Agent": UA}, retries=1)
+        # HIBP pide un User-Agent que identifique la app; con el genérico respondía 403 desde Actions
+        br = get_json("https://haveibeenpwned.com/api/v3/breaches", headers={"User-Agent": "Sudakaos-Monitor", "Accept": "application/json"}, retries=1)
         for b in br:
             txt = (b.get("Domain", "") + " " + b.get("Title", "") + " " + b.get("Description", "")).lower()
             if b.get("Domain", "").endswith(".ar") or "argentin" in txt:
