@@ -76,7 +76,7 @@ function cloud(list,col){list=(list||[]).filter(x=>x.s>0).slice(0,55);if(list.le
     for(let t=0;t<900;t+=.18){const r=1.6*t,cx=W/2+r*Math.cos(t)*1.35-w/2,cy=H/2+r*Math.sin(t)-h/2;if(r>Math.max(W,H))break;if(cx<2||cy<2||cx+w>W-2||cy+h>H-2)continue;
       if(!placed.some(p=>cx<p.x+p.w&&cx+w>p.x&&cy<p.y+p.h&&cy+h>p.y)){ok={x:cx,y:cy,w,h};break}}
     if(!ok)continue;placed.push(ok);const c=x.neg>=55?C.neg:x.neg<=25?col:C.muted;
-    out.push(`<text x="${(ok.x+ok.w/2).toFixed(1)}" y="${(ok.y+ok.h*.8).toFixed(1)}" text-anchor="middle" font-size="${f}" font-weight="600" fill="${c}"><title>${esc(x.w)} · ${fmt(x.n)} textos · ${x.neg}% en textos negativos</title>${esc(x.w)}</text>`)}
+    out.push(`<text data-w="${esc(x.w)}" data-n="${x.n??''}" x="${(ok.x+ok.w/2).toFixed(1)}" y="${(ok.y+ok.h*.8).toFixed(1)}" text-anchor="middle" font-size="${f}" font-weight="600" fill="${c}"><title>${esc(x.w)} · ${fmt(x.n)} textos · ${x.neg}% en textos negativos</title>${esc(x.w)}</text>`)}
   return `<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto;display:block" role="img" aria-label="Nube de palabras">${out.join('')}</svg>`}
 
 // ---------------------------------------------------------------- agenda vacante
@@ -196,6 +196,6 @@ function datosQuant(S){const ok=S.filter(s=>s.https===true&&s.puntaje);
   ok.forEach(s=>Object.keys(s.rastreadores||{}).forEach(e=>{if(!lab.includes(e)){lab.push(e);par.push('Rastreadores');val.push(0)}lab.push(e+' · '+s.nombre);par.push(e);val.push(1)}));
   plot('mg-sun',lab.length>1?[{type:'sunburst',labels:lab,parents:par,values:val,branchvalues:'remainder',marker:{colors:lab.map((l,i)=>par[i]==='Rastreadores'?PAL[i%PAL.length]:null)},
     insidetextfont:{size:10},hovertemplate:'%{label}<extra></extra>'}]:[],{margin:{l:0,r:0,t:0,b:0}})}
-window.MassaPanel={draw};
+window.MassaPanel={draw,src:n=>{const p=D&&(D.politicos||[]).find(x=>x.name===n);return p&&p.cloud_src||null}};
 
 })();

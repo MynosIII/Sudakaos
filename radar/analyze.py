@@ -702,6 +702,43 @@ def history_since(store_dir: Path, last_day) -> str | None:
     return first.strftime("%Y-%m-%d")
 
 
+MASK = [(re.compile(r"https?://\S+"), ""), (re.compile(r"@[\w.\-]{2,}"), "@…"), (re.compile(r"\S+@\S+\.\w+"), "[correo]"),
+        (re.compile(r"\+?\d[\d\s\-]{7,}\d"), "[tel]")]
+WORD_SRC = {}  # político -> textos de origen de cada palabra de su nube (se escribe aparte, se carga al hacer clic)
+
+
+def excerpt(text: str, n=280) -> str:
+    """Extracto sin autor: sin links, menciones, correos ni teléfonos."""
+    text = str(text)
+    for r, rep in MASK:
+        text = r.sub(rep, text)
+    text = re.sub(r"\s+", " ", text).strip()
+    return text if len(text) <= n else text[: n - 1].rsplit(" ", 1)[0] + "…"
+
+
+def word_sources(df, rows, words, pos_of, vocab, per_word=10):
+    """Para cada palabra de la nube, los textos más recientes que la contienen. Notas: titular + medio + link.
+    Comentarios: extracto sin autor + link al comentario."""
+    rows = rows.sort_values("ts", ascending=False)
+    items, where, wmap = [], {}, {}
+    for w in vocab:
+        ids = []
+        for ix in rows.index:
+            if w not in words[pos_of[ix]]:
+                continue
+            if ix not in where:
+                r = df.loc[ix]
+                news = r["kind"] == "news"
+                where[ix] = len(items)
+                items.append({"k": "n" if news else "c", "t": headline(r["text"]) if news else excerpt(r["text"]),
+                              "o": r["who"] if news else r["platform"], "u": r["url"] if isinstance(r["url"], str) else "", "d": r["ts"].strftime("%Y-%m-%d")})
+            ids.append(where[ix])
+            if len(ids) >= per_word:
+                break
+        wmap[w] = ids
+    return {"items": items, "w": wmap}
+
+
 def actor_profiles(df, men, fc, days):
     """Perfil público y agregado de cada político configurado (para el buscador del tablero)."""
     meta = CONFIG.get("actor_meta", {})
@@ -748,6 +785,7 @@ def actor_profiles(df, men, fc, days):
         neg_ix = set(m.index[m["tono"] == "NEG"].unique())
         negc = Counter(w for ix in neg_ix for w in words[pos_of[ix]])
         cloud = sorted(((w, c * min(lift[w], 4) ** 0.5) for w, c in mine.items() if c >= 2 and w not in own), key=lambda x: -x[1])[:60]
+        WORD_SRC[a] = word_sources(df, df.loc[m.index.unique()], words, pos_of, [w for w, _ in cloud])
         co = Counter()
         for ix in m.index.unique():
             co.update(by_ix.get(ix, set()) - {a})
@@ -900,6 +938,16 @@ def main():
     Path(args.out).parent.mkdir(parents=True, exist_ok=True)
     Path(args.out).write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")), encoding="utf8")
     # Perfiles por político (buscador del tablero) y capa "en vivo": titulares públicos, alertas y mapa por provincia
+    # Textos de origen de cada nube, un archivo por político (el tablero lo pide al hacer clic en una palabra)
+    src_dir = Path(args.out).with_name("fuentes")
+    src_dir.mkdir(exist_ok=True)
+    for f in src_dir.glob("*.json"):
+        f.unlink()
+    for p in profiles:
+        if p["name"] in WORD_SRC:
+            slug = re.sub(r"[^a-z0-9]+", "-", norm(p["name"])).strip("-")
+            (src_dir / f"{slug}.json").write_text(json.dumps(WORD_SRC[p["name"]], ensure_ascii=False, separators=(",", ":")), encoding="utf8")
+            p["fuentes"] = f"fuentes/{slug}.json"
     Path(args.out).with_name("actors.json").write_text(json.dumps({
         "updated_at": out["updated_at"], "days": [d.strftime("%Y-%m-%d") for d in days], "actors": profiles},
         ensure_ascii=False, separators=(",", ":")), encoding="utf8")

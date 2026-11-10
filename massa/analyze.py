@@ -173,6 +173,42 @@ def head(r, extra=None):
     return h | (extra or {})
 
 
+MASK = [(re.compile(r"https?://\S+"), ""), (re.compile(r"@[\w.\-]{2,}"), "@…"), (re.compile(r"\S+@\S+\.\w+"), "[correo]"),
+        (re.compile(r"\+?\d[\d\s\-]{7,}\d"), "[tel]")]
+
+
+def excerpt(text: str, n=280) -> str:
+    """Extracto de comentario sin autor: sin links, menciones, correos ni teléfonos."""
+    for r, rep in MASK:
+        text = r.sub(rep, text)
+    text = re.sub(r"\s+", " ", text).strip()
+    return text if len(text) <= n else text[: n - 1].rsplit(" ", 1)[0] + "…"
+
+
+def word_sources(conv, idx, word_sets, vocab, per_word=10):
+    """De dónde sale cada palabra de la nube: notas (titular + medio + link) y comentarios (extracto sin autor + link)."""
+    idx = sorted(idx, key=lambda i: conv[i]["created_at"], reverse=True)
+    items, where, wmap = [], {}, {}
+    for w in vocab:
+        ids = []
+        for i in idx:
+            if w not in word_sets[i]:
+                continue
+            if i not in where:
+                r = conv[i]
+                com = r["kind"] == "comment"
+                where[i] = len(items)
+                items.append({"k": "c" if com else ("v" if r["kind"] == "video" else "n"),
+                              "t": excerpt(r.get("text", "")) if com else (r.get("title") or r.get("text", "")[:200]),
+                              "o": (r.get("video_title") or "YouTube") if com else (r.get("outlet") or r.get("channel") or "YouTube"),
+                              "u": r.get("url", ""), "d": r["created_at"][:10]})
+            ids.append(where[i])
+            if len(ids) >= per_word:
+                break
+        wmap[w] = ids
+    return {"items": items, "w": wmap}
+
+
 def weeks_since(since, now):
     out, w = [], datetime.fromisoformat(week(ts(since)).replace("Z", ""))
     while w <= now.replace(tzinfo=None):
@@ -221,6 +257,8 @@ def dupla(texts, vinfo, now, semanas, conv_since):
         lift = {w: (c / nm) / ((total_words[w] - c + 1) / max(nall - nm, 1)) for w, c in mine.items()}
         cloud = sorted(((w, c * min(lift[w], 4) ** 0.5) for w, c in mine.items() if c >= 3 and w not in alias_words),
                        key=lambda x: -x[1])[:60]
+        if k in (FOCO, FOCO2):
+            info["cloud_src"] = word_sources(conv, idx, word_sets, [w for w, _ in cloud])
         co = Counter(p for r in m for p in r["pols"] if p != k)
         outlets = Counter(r.get("outlet") for r in news if r.get("outlet"))
         l7 = sum(1 for r in m if r["created_at"] >= last)
