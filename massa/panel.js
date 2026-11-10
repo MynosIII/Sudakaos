@@ -16,7 +16,7 @@ const hb=(arr,col,w,em)=>{if(!arr.length)return `<div class="empty" style="paddi
 const tbar=t=>t?`<div class="mg-tone"><i style="width:${t.NEG}%;background:${C.neg}"></i><i style="width:${t.NEU}%;background:${C.neu}"></i><i style="width:${t.POS}%;background:${C.pos}"></i></div>`:'<span style="color:var(--dim)">s/d</span>';
 const heads=h=>h&&h.length?'<ul class="list">'+h.map(x=>`<li><span class="mg-dot ${esc(x.tono||'')}"></span><a href="${esc(x.u)}" target="_blank" rel="noopener" style="color:var(--txt)">${esc(x.t)}</a><small>${esc(x.o)} · ${esc(x.d)}${(x.narr||x.dir||[]).length?' · '+(x.narr||x.dir).map(esc).join(' · '):''}</small></li>`).join('')+'</ul>':'<div class="empty">Sin titulares todavía.</div>';
 let D=null,drawn=new Set(),sub='dupla';
-const voces=(V,n)=>V&&V.length?`<table class="rank"><thead><tr><th>Dirigente</th><th class="num">Notas</th><th style="width:22%">Peso en el tema</th><th>Dónde lo dijo (últimas notas)</th></tr></thead><tbody>`+V.map(v=>`<tr><td><b style="color:var(--txt)">${esc(v.name)}</b><small style="display:block;color:var(--dim)">${esc(v.espacio||'')}${v.tipo==='por cargo'?' · detectado por su cargo en el titular':''}</small></td><td class="num">${fmt(v.n)}</td><td><div class="meter"><i style="width:${Math.min(100,v.pct)}%;background:${COL[v.name]||'#8aa1c1'}"></i></div><small style="color:var(--dim)">${v.pct}% de ${fmt(n)} notas</small></td><td style="font-size:12.5px">${(v.notas||[]).slice(0,2).map(h=>`<a href="${esc(h.u)}" target="_blank" rel="noopener">${esc(h.t)}</a> <span style="color:var(--dim)">${esc(h.o)} · ${esc(h.d)}</span>`).join('<br>')}</td></tr>`).join('')+'</tbody></table>':'<div class="empty">Ningún dirigente aparece hablando del tema en las notas recolectadas: la bandera está libre.</div>';
+const voces=(V,n,who)=>V&&V.length?`<table class="rank"><thead><tr><th>${who||'Dirigente'}</th><th class="num">Notas</th><th style="width:22%">Peso en el tema</th><th>Dónde lo dijo (últimas notas)</th></tr></thead><tbody>`+V.map(v=>`<tr><td><b style="color:var(--txt)">${esc(v.name)}</b><small style="display:block;color:var(--dim)">${esc(v.espacio||'')}${v.tipo==='por cargo'?' · detectado por su cargo en el titular':''}</small></td><td class="num">${fmt(v.n)}</td><td><div class="meter"><i style="width:${Math.min(100,v.pct)}%;background:${COL[v.name]||'#8aa1c1'}"></i></div><small style="color:var(--dim)">${v.pct}% de ${fmt(n)} notas</small></td><td style="font-size:12.5px">${(v.notas||[]).slice(0,2).map(h=>`<a href="${esc(h.u)}" target="_blank" rel="noopener">${esc(h.t)}</a> <span style="color:var(--dim)">${esc(h.o)} · ${esc(h.d)}</span>`).join('<br>')}</td></tr>`).join('')+'</tbody></table>':'<div class="empty">Ningún dirigente aparece hablando del tema en las notas recolectadas: la bandera está libre.</div>';
 
 function load(){if(D)return Promise.resolve(D);return fetch('massa/data/massa.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json()}).then(d=>D=d)}
 function draw(){const box=$('#t-massa');if(!box)return;
@@ -80,18 +80,23 @@ function cloud(list,col){list=(list||[]).filter(x=>x.s>0).slice(0,55);if(list.le
   return `<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto;display:block" role="img" aria-label="Nube de palabras">${out.join('')}</svg>`}
 
 // ---------------------------------------------------------------- agenda vacante
+let tsel=-1;
 function agenda(){const T=D.agenda||[],all=[...T,D.datos].filter(Boolean);
-  const wk=t=>Object.values(t.wiki||{}).reduce((a,w)=>a+(w.total_90||0),0);
+  $('#mg-tsel').innerHTML=`<button class="pill ${tsel<0?'on':''}" data-t="-1">Todos los temas</button>`+T.map((t,i)=>`<button class="pill ${tsel===i?'on':''}" data-t="${i}"><span class="mg-sw" style="background:${t.color}"></span>${esc(t.corto||t.tema)}</button>`).join('');
+  $$('#mg-tsel .pill').forEach(b=>b.onclick=()=>{tsel=+b.dataset.t;agenda();setTimeout(()=>window.dispatchEvent(new Event('resize')),60)});
+  $('#mg-agall').hidden=tsel>=0;
+  if(tsel<0){const wk=t=>Object.values(t.wiki||{}).reduce((a,w)=>a+(w.total_90||0),0);
   const mx=Math.max(1,...all.map(wk));
   plot('mg-op',all.filter(t=>t.n).length?[{type:'scatter',mode:'markers+text',x:all.map(t=>t.n),y:all.map(t=>t.pct_sin_dirigente??0),text:all.map(t=>t.corto||t.tema),textposition:'bottom center',textfont:{color:C.txt,size:11.5},
     marker:{size:all.map(t=>16+44*Math.sqrt(wk(t)/mx)),color:all.map(t=>t.color||'#5fb3c9'),opacity:.85,line:{color:'#0b0d12',width:1}},
     hovertext:all.map(t=>`<b>${esc(t.tema)}</b><br>${fmt(t.n)} notas en ${D.conversacion_dias} días<br>${t.pct_sin_dirigente??'–'}% sin ningún dirigente<br>${t.dirigente_top?'Más asociado: '+esc(t.dirigente_top.name)+' ('+t.dirigente_top.pct+'%)':'Ningún dirigente asociado'}<br>${fmt(wk(t))} visitas en Wikipedia (90 días)`),hoverinfo:'text'}]:[],
     {margin:{l:60,r:20,t:30,b:50},xaxis:{title:{text:'Cobertura en medios (notas)'},gridcolor:C.grid,range:[0,Math.max(10,...all.map(t=>t.n))*1.15]},yaxis:{title:{text:'% de notas sin ningún dirigente'},gridcolor:C.grid,range:[-12,118],ticksuffix:'%'}});
-  agendaQuant(all);
-  $('#mg-agenda-list').innerHTML=T.map((t,i)=>dossier(t,i)).join('');
-  T.forEach((t,i)=>dossierPlots(t,i));
+  agendaQuant(all);}
+  const show=tsel<0?T.map((t,i)=>[t,i]):[[T[tsel],tsel]];
+  $('#mg-agenda-list').innerHTML=show.map(([t,i])=>dossier(t,i)).join('');
+  show.forEach(([t,i])=>dossierPlots(t,i));
 }
-function dossier(t,i){const top=t.dirigente_top;
+function dossier(t,i){const top=t.dirigente_top,tr=t.trends||{};
   return `<div class="sect" style="margin-top:26px"><span class="mg-sw" style="background:${t.color}"></span>${esc(t.tema)}</div>
   <div class="g">
     <div class="card c12"><div class="mg-facts">${(t.datos||[]).map(x=>`<div class="mg-fact" style="border-top-color:${t.color}"><b>${esc(x.v)}</b><span>${esc(x.l)}</span><a href="${esc(x.u)}" target="_blank" rel="noopener">${esc(x.f)} ↗</a></div>`).join('')}</div></div>
@@ -102,15 +107,23 @@ function dossier(t,i){const top=t.dirigente_top;
 </div>
     <div class="card c8"><h3>Cobertura e interés <span class="tag">notas por semana · visitas a Wikipedia</span></h3><div id="mg-ag${i}" style="height:300px"></div>
       <p class="note">${t.delta4!=null?`Últimas 4 semanas: ${fmt(t.ultimas4)} notas (${t.delta4>0?'+':''}${t.delta4}% vs. las 4 anteriores). `:''}${t.medios?`${fmt(t.medios)} medios distintos.`:''}</p></div>
-    <div class="card c12"><h3>Quiénes ya hablan del tema <span class="tag">${D.conversacion_dias} días · con link a la nota</span></h3><div style="overflow-x:auto">${voces(t.voces,t.n)}</div></div>
-    <div class="card c4"><h3>Marco vigente</h3><ul class="list">${(t.marco||[]).map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
-      <div class="sect">Para leer</div><ul class="list">${(t.fuentes||[]).map(x=>`<li><a href="${esc(x.u)}" target="_blank" rel="noopener">${esc(x.t)} ↗</a></li>`).join('')}</ul></div>
-    <div class="card c4"><h3>Cómo tomar la bandera <span class="tag">propuestas para discutir</span></h3><ol class="mg-ol">${(t.propuestas||[]).map(x=>`<li>${esc(x)}</li>`).join('')}</ol></div>
-    <div class="card c4"><h3>Últimos titulares</h3><div style="max-height:330px;overflow:auto">${heads((t.titulares||[]).slice(0,12))}</div></div>
+    <div class="card c6"><h3>Búsquedas en Google <span class="tag">Google Trends · “${esc(tr.term||'')}” · Argentina</span></h3><div id="mg-tr${i}" style="height:260px"></div>
+      <p class="note">${tr.fechas&&tr.fechas.length?`100 = el pico de búsquedas del período (${tr.periodo==='today 12-m'?'últimos 12 meses':'últimos 3 meses'}).`:''}</p></div>
+    <div class="card c6"><h3>Qué medios lo cubren y con qué tono</h3><div id="mg-to${i}"></div>${hb((t.outlets||[]).map(o=>[o.o,o.n,t.color]),null,120)}</div>
+    <div class="card c12"><h3>Quiénes ya hablan del tema <span class="tag">${D.conversacion_dias} días · con link a la nota</span></h3>
+      <div class="sect" style="margin-top:4px">Dirigentes</div><div style="overflow-x:auto">${voces(t.voces,t.n)}</div>
+      <div class="sect">Otras voces · especialistas, ONG, funcionarios y otras personas nombradas en los titulares</div><div style="overflow-x:auto">${(t.otras_voces||[]).length?voces(t.otras_voces,t.n,'Persona'):'<div class="empty" style="padding:10px 0">Ninguna persona nombrada con nombre y apellido en los titulares.</div>'}</div></div>
+    <div class="card c6"><h3>Cómo tomar la bandera <span class="tag">propuestas para discutir</span></h3><ol class="mg-ol">${(t.propuestas||[]).map(x=>`<li>${esc(x)}</li>`).join('')}</ol>
+      ${(t.fuentes||[]).length?`<div class="sect">Para leer</div><ul class="list">${t.fuentes.map(x=>`<li><a href="${esc(x.u)}" target="_blank" rel="noopener">${esc(x.t)} ↗</a></li>`).join('')}</ul>`:''}</div>
+    <div class="card c6"><h3>Últimos titulares</h3><div style="max-height:330px;overflow:auto">${heads((t.titulares||[]).slice(0,12))}</div></div>
   </div>`}
 function dossierPlots(t,i){const tr=[{x:D.semanas,y:t.semanal,name:'Notas',type:'bar',marker:{color:t.color||'#5fb3c9'},hovertemplate:'%{x}: %{y} notas<extra></extra>'}];
   Object.entries(t.wiki||{}).forEach(([a,w],j)=>tr.push({x:D.semanas,y:w.semanal,name:'Wikipedia: '+a,type:'scatter',mode:'lines',yaxis:'y2',line:{color:j?'#8aa1c1':'#eef0f4',width:1.6,shape:'spline'},hovertemplate:'%{x}: %{y} visitas<extra>'+esc(a)+'</extra>'}));
-  plot('mg-ag'+i,t.n||Object.keys(t.wiki||{}).length?tr:[],{margin:{l:40,r:50,t:10,b:50},yaxis2:{overlaying:'y',side:'right',gridcolor:'rgba(0,0,0,0)',showgrid:false},hovermode:'x unified'})}
+  plot('mg-ag'+i,t.n||Object.keys(t.wiki||{}).length?tr:[],{margin:{l:40,r:50,t:10,b:50},yaxis2:{overlaying:'y',side:'right',gridcolor:'rgba(0,0,0,0)',showgrid:false},hovermode:'x unified'});
+  const g=t.trends||{};
+  if(g.fechas&&g.fechas.length)plot('mg-tr'+i,[{x:g.fechas,y:g.valores,type:'scatter',mode:'lines',fill:'tozeroy',line:{color:t.color||'#5fb3c9',width:2,shape:'spline'},fillcolor:(t.color||'#5fb3c9')+'33',hovertemplate:'%{x}: %{y}<extra></extra>'}],{margin:{l:36,r:10,t:10,b:40},yaxis:{range:[0,105],gridcolor:C.grid}});
+  else $('#mg-tr'+i).innerHTML='<div class="empty">Google Trends no respondió desde el servidor. La serie aparece cuando se corre collect_trends.py desde una PC y se sube a radar/data/trends/.</div>';
+  const to=t.tono;$('#mg-to'+i).innerHTML=to?`<div style="margin:2px 0 12px"><div class="mg-tone" style="height:10px">${['NEG','NEU','POS'].map(k=>`<i style="width:${to[k]}%;background:${k==='NEG'?C.neg:k==='POS'?C.pos:C.neu}"></i>`).join('')}</div><small style="color:var(--dim)">Tono de los titulares: ${to.NEG}% negativo · ${to.NEU}% neutro · ${to.POS}% positivo</small></div>`:''}
 
 // ---------------------------------------------------------------- soberanía y seguridad de datos
 function datos(){const T=D.datos;if(!T){$('#mg-datos').innerHTML='<div class="empty">Sin datos todavía.</div>';return}

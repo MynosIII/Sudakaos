@@ -435,11 +435,6 @@
      "u": "https://www.unicef.org/argentina/comunicados-prensa/monitor-suicidio"
     }
    ],
-   "marco": [
-    "Ley 27.130 de Prevención del Suicidio (2015)",
-    "Ley 26.657 de Salud Mental (2010)",
-    "Línea 135 del Centro de Asistencia al Suicida (CABA y GBA)"
-   ],
    "propuestas": [
     "Protocolo bonaerense de posvención en escuelas (qué hacer después de un suicidio para evitar el contagio)",
     "Observatorio provincial con datos abiertos por municipio y edad, actualizado cada año",
@@ -460,7 +455,8 @@
      "t": "UNICEF: Abordaje integral del suicidio en las adolescencias",
      "u": "https://www.unicef.org/argentina/media/11246/file/Abordajeintegraldelsuicidioenlasadolescencias.pdf"
     }
-   ]
+   ],
+   "trends": "salud mental"
   },
   "Apuestas online en adolescentes": {
    "corto": "Apuestas online",
@@ -521,10 +517,6 @@
      "u": "https://chequeado.com/el-explicador/apuestas-online-8-de-cada-10-adolescentes-accedieron-a-jugar-en-apps-o-casinos-virtuales-en-el-ultimo-ano/"
     }
    ],
-   "marco": [
-    "El juego online lo regula cada provincia (en Buenos Aires, el Instituto Provincial de Lotería y Casinos)",
-    "No hay ley nacional vigente sobre publicidad de apuestas y menores; el debate en el Congreso sigue abierto"
-   ],
    "propuestas": [
     "Prohibir la publicidad de apuestas en camisetas, transmisiones deportivas y redes en horario apto todo público",
     "Verificación de edad obligatoria que no obligue a entregar más datos de los necesarios (puente con la agenda de datos)",
@@ -540,7 +532,8 @@
      "t": "Chequeado: 8 de cada 10 adolescentes accedieron a apuestas",
      "u": "https://chequeado.com/el-explicador/apuestas-online-8-de-cada-10-adolescentes-accedieron-a-jugar-en-apps-o-casinos-virtuales-en-el-ultimo-ano/"
     }
-   ]
+   ],
+   "trends": "apuestas online"
   },
   "Grooming y violencia digital contra chicos": {
    "corto": "Grooming",
@@ -593,10 +586,6 @@
      "u": "https://www.todojujuy.com/pais/a-1-cada-4-chicos-argentina-le-pidieron-fotos-intimas-donde-pedir-ayuda-jujuy-n260749"
     }
    ],
-   "marco": [
-    "Ley 26.904 (2013): el grooming es delito (art. 131 del Código Penal)",
-    "Ley 27.590 «Mica Ortega» (2020): programa nacional de prevención y concientización"
-   ],
    "propuestas": [
     "Adhesión e implementación de la Ley Mica Ortega en Buenos Aires con metas y datos públicos",
     "Canal único de denuncia con respuesta en 24 h y unidad fiscal especializada por departamento judicial",
@@ -606,6 +595,145 @@
     {
      "t": "Ministerio Público Fiscal PBA: informes de Política Criminal",
      "u": "https://www.mpba.gov.ar/files/informes/Informe-PI-2024.pdf"
+    }
+   ],
+   "trends": "grooming"
+  },
+  "Estafas virtuales y fraude digital": {
+   "corto": "Estafas virtuales",
+   "color": "#199e70",
+   "trends": "estafa virtual",
+   "terms": [
+    "estafa virtual",
+    "estafas virtuales",
+    "estafa digital",
+    "estafas digitales",
+    "estafa telefónica",
+    "estafas telefónicas",
+    "cuento del tío",
+    "phishing",
+    "vishing",
+    "fraude en línea",
+    "fraude online",
+    "fraudes en línea",
+    "ciberestafa",
+    "ciberestafas",
+    "hackeo de whatsapp",
+    "hackearon el whatsapp",
+    "robo de identidad",
+    "suplantación de identidad",
+    "vaciaron la cuenta",
+    "delitos informáticos",
+    "ciberdelito",
+    "ciberdelitos"
+   ],
+   "queries": [
+    "\"estafas virtuales\" Argentina",
+    "\"estafas virtuales\" jubilados",
+    "\"estafas virtuales\" \"provincia de Buenos Aires\"",
+    "\"cuento del tío\" estafa",
+    "phishing bancos Argentina",
+    "\"estafas virtuales\" proyecto de ley",
+    "\"delitos informáticos\" diputada OR diputado OR senadora OR senador"
+   ],
+   "wiki": [
+    "Phishing",
+    "Robo de identidad"
+   ],
+   "datos": [
+    {
+     "v": "34.468",
+     "l": "reportes por delitos informáticos recibió la fiscalía especializada en 2024",
+     "f": "UFECI, Ministerio Público Fiscal (vía Chequeado, 2025)",
+     "u": "https://chequeado.com/el-explicador/las-denuncias-de-estafas-virtuales-aumentaron-un-21-en-2024-cuales-son-los-tipos-de-fraude-mas-comunes/"
+    },
+    {
+     "v": "+21,1%",
+     "l": "más reportes que en 2023",
+     "f": "UFECI, Ministerio Público Fiscal (vía Chequeado, 2025)",
+     "u": "https://chequeado.com/el-explicador/las-denuncias-de-estafas-virtuales-aumentaron-un-21-en-2024-cuales-son-los-tipos-de-fraude-mas-comunes/"
+    },
+    {
+     "v": "63%",
+     "l": "de esos reportes fueron fraudes en línea",
+     "f": "UFECI, Ministerio Público Fiscal (vía Chequeado, 2025)",
+     "u": "https://chequeado.com/el-explicador/las-denuncias-de-estafas-virtuales-aumentaron-un-21-en-2024-cuales-son-los-tipos-de-fraude-mas-comunes/"
+    }
+   ],
+   "propuestas": [
+    "Protocolo bancario de bloqueo inmediato y devolución cuando la víctima denuncia en las primeras horas",
+    "Fiscalía y línea de denuncia de ciberestafas en cada departamento judicial de la provincia",
+    "Talleres de prevención para jubilados en centros de día, PAMI y bibliotecas, con material simple"
+   ],
+   "fuentes": [
+    {
+     "t": "Chequeado: tipos de fraude más denunciados (UFECI 2024)",
+     "u": "https://chequeado.com/el-explicador/las-denuncias-de-estafas-virtuales-aumentaron-un-21-en-2024-cuales-son-los-tipos-de-fraude-mas-comunes/"
+    }
+   ]
+  },
+  "Pantallas y celulares en la infancia": {
+   "corto": "Pantallas en la infancia",
+   "color": "#5fb3c9",
+   "trends": "uso de pantallas",
+   "terms": [
+    "uso de pantallas",
+    "tiempo de pantalla",
+    "exposición a pantallas",
+    "celulares en las escuelas",
+    "celular en el aula",
+    "celulares en el aula",
+    "prohibición de celulares",
+    "primer celular",
+    "adicción a las pantallas",
+    "adicción al celular",
+    "uso problemático de internet",
+    "redes sociales y adolescentes",
+    "nomofobia",
+    "kids online"
+   ],
+   "queries": [
+    "\"uso de pantallas\" niños Argentina",
+    "\"celulares en las escuelas\" Argentina",
+    "\"primer celular\" chicos",
+    "\"Kids Online\" Argentina UNICEF",
+    "\"tiempo de pantalla\" adolescentes",
+    "celulares escuelas \"provincia de Buenos Aires\"",
+    "pantallas infancia proyecto de ley"
+   ],
+   "wiki": [
+    "Nomofobia",
+    "Adicción a Internet"
+   ],
+   "datos": [
+    {
+     "v": "9,6 años",
+     "l": "edad promedio a la que los chicos reciben su primer celular con internet",
+     "f": "Kids Online Argentina 2025, UNICEF y UNESCO (vía La Nación)",
+     "u": "https://www.lanacion.com.ar/sociedad/radiografia-y-alerta-una-encuesta-revela-la-temprana-edad-a-la-que-los-chicos-argentinos-reciben-su-nid06052025/"
+    },
+    {
+     "v": "46%",
+     "l": "de chicos y chicas percibe algún uso problemático de internet, celular o videojuegos",
+     "f": "Kids Online Argentina 2025, UNICEF (vía Chequeado)",
+     "u": "https://chequeado.com/el-explicador/la-mitad-de-los-ninos-ninas-y-adolescentes-de-la-argentina-percibe-tener-un-uso-problematico-de-internet-celulares-y-videojuegos/"
+    },
+    {
+     "v": "80%",
+     "l": "usa redes sociales todos los días",
+     "f": "Kids Online Argentina 2025, UNICEF (vía Chequeado)",
+     "u": "https://chequeado.com/el-explicador/la-mitad-de-los-ninos-ninas-y-adolescentes-de-la-argentina-percibe-tener-un-uso-problematico-de-internet-celulares-y-videojuegos/"
+    }
+   ],
+   "propuestas": [
+    "Guía provincial de uso de celulares en el aula acordada con docentes y familias, no solo prohibición",
+    "Programa de acompañamiento a familias: a qué edad, con qué controles y cómo hablar del tema",
+    "Encuesta provincial anual de bienestar digital en escuelas para medir y publicar avances"
+   ],
+   "fuentes": [
+    {
+     "t": "UNICEF Argentina: Kids Online Argentina 2025",
+     "u": "https://chequeado.com/el-explicador/la-mitad-de-los-ninos-ninas-y-adolescentes-de-la-argentina-percibe-tener-un-uso-problematico-de-internet-celulares-y-videojuegos/"
     }
    ]
   }

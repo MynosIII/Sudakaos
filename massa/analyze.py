@@ -104,6 +104,36 @@ CARGO = re.compile(r"\b(?:[Ee]l|[Ll]a|[Ll]os|[Ll]as|[Dd]el)\s+(diputad[oa]s?|sen
 NO_NOMBRE = {"Buenos Aires", "La Plata", "Mar Del Plata", "Provincia", "Nación", "Ciudad"}
 
 
+# Nombres de pila frecuentes en Argentina: sirven para reconocer personas citadas en un titular ("Hernán Navarro")
+# aunque no sean dirigentes (especialistas, ONG, familiares de víctimas). Así "Quiénes ya hablan" no queda vacío.
+NOMBRES = set("""
+Adrián Agustín Agustina Alberto Alejandra Alejandro Alicia Ana Andrea Andrés Ángel Ángela Antonella Antonio Ariel Belén Bernardo
+Camila Carina Carla Carlos Carolina Catalina Cecilia Celeste Claudia Claudio Cristian Cristina Damián Daniel Daniela Diego Eduardo
+Elena Elisa Emilia Emiliano Enrique Ernesto Esteban Eugenia Evelyn Ezequiel Facundo Federico Felipe Fernanda Fernando Florencia
+Francisco Franco Gabriel Gabriela Germán Gisela Graciela Guadalupe Guillermo Gustavo Héctor Hernán Horacio Hugo Ignacio Inés Iván
+Javier Jimena Joaquín Jorge José Josefina Juan Julia Julián Juliana Julieta Julio Karina Laura Leandro Leonardo Leticia Liliana
+Lorena Lucas Lucía Luciana Luciano Luis Luisa Malena Manuel Marcela Marcelo Marcos Margarita María Mariana Mariano Marina Mario
+Marta Martín Martina Matías Mauricio Maximiliano Mayra Melina Micaela Miguel Milagros Mirta Mónica Natalia Nicolás Noelia Norma
+Oscar Pablo Paola Patricia Paula Pedro Rafael Ramiro Ramón Raúl Ricardo Roberto Rodolfo Rodrigo Romina Rosa Rubén Sabrina Santiago
+Sebastián Sergio Silvana Silvia Sofía Soledad Susana Tomás Valeria Verónica Victoria Virginia Walter Ximena Yamila Yanina
+""".split())
+PERSONA = re.compile(r"\b([A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)\s+((?:de\s+(?:la\s+)?)?[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+(?:\s+[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)?)")
+NO_APELLIDO = {"Argentina", "Aires", "Buenos", "Navidad", "Pública", "Ley", "Santa", "San", "Fe", "Federal", "Nacional", "Provincia"}
+
+
+def personas(texto):
+    """Personas nombradas con nombre y apellido en un titular (no hace falta que sean dirigentes)."""
+    out = []
+    for m in PERSONA.finditer(texto or ""):
+        if m.group(1) not in NOMBRES:
+            continue
+        ap = m.group(2).split()
+        if ap[-1] in NO_APELLIDO or ap[0] in NO_APELLIDO:
+            continue
+        out.append(f"{m.group(1)} {m.group(2)}")
+    return out
+
+
 def cargos(texto):
     """Dirigentes que no seguimos pero que el titular presenta por su cargo ("la diputada Ana Pérez")."""
     out = []
@@ -292,6 +322,37 @@ def dupla(texts, vinfo, now, semanas, conv_since):
     return conv, out, voz, videos
 
 
+TRENDS_FILES = [HERE / ".store" / "trends.jsonl", *sorted((HERE.parent / "radar" / "data" / "trends").glob("trends_*.jsonl"))]
+_TRENDS: list = []
+
+
+def trends_tema(term):
+    """Serie de Google Trends (Argentina) del término del tema. Viene de la recolección diaria si Google la deja pasar,
+    o de collect_trends.py corrido desde una PC (grupo "temas_mg"). Se usa la descarga más reciente y el período más corto."""
+    if not term:
+        return None
+    if not _TRENDS:
+        for f in TRENDS_FILES:
+            if f.exists():
+                for line in f.read_text(encoding="utf8").splitlines():
+                    try:
+                        r = json.loads(line)
+                    except ValueError:
+                        continue
+                    if r.get("series") == "time":
+                        r["_f"] = f.name
+                        _TRENDS.append(r)
+        _TRENDS.append({})  # marca de cargado
+    rows = [r for r in _TRENDS if r and fold(r.get("term", "")) == fold(term)]
+    if not rows:
+        return {"term": term, "fechas": [], "valores": []}
+    last = max({r["_f"] for r in rows}, key=lambda f: max(r["date"] for r in rows if r["_f"] == f))  # la descarga más nueva
+    rows = [r for r in rows if r["_f"] == last]
+    tf = sorted({r.get("timeframe", "") for r in rows}, key=lambda x: ("12" in x, x))[0]
+    rows = sorted((r for r in rows if r.get("timeframe", "") == tf), key=lambda r: r["date"])
+    return {"term": term, "grupo": rows[0].get("group"), "periodo": tf, "fechas": [r["date"] for r in rows], "valores": [r["value"] for r in rows]}
+
+
 def tema_block(nombre, cfg, news, dirig, semanas, now, conv_since, wiki_t, dmeta=None):
     trx = rx(cfg["terms"])
     rows = [r for r in news if trx.search(r["_f"])]
@@ -306,6 +367,10 @@ def tema_block(nombre, cfg, news, dirig, semanas, now, conv_since, wiki_t, dmeta
             if not any(fold(quien_c) in fold(k) or fold(k) in fold(quien_c) for k, _, _ in found):
                 found.append((quien_c, cargo, "por cargo"))
         r["_voz"] = [f[0] for f in found]
+        titulo = r.get("title") or r.get("text", "")
+        for quien_p in personas(titulo):
+            if not any(fold(quien_p) in fold(k) or fold(k).split()[-1] in fold(quien_p).split() for k, _, _ in found):
+                found.append((quien_p, "", "otra voz"))
         for k, esp, tipo in found:
             v = voces.setdefault(k, {"name": k, "espacio": esp, "tipo": tipo, "n": 0, "notas": []})
             v["n"] += 1
@@ -313,6 +378,7 @@ def tema_block(nombre, cfg, news, dirig, semanas, now, conv_since, wiki_t, dmeta
                 v["notas"].append(head(r))
     con = [r for r in rec if r["_voz"]]
     quien = Counter(k for r in rec for k in r["_voz"])
+    otras = Counter({k: v["n"] for k, v in voces.items() if v["tipo"] == "otra voz"})
     top = quien.most_common(1)[0] if quien else None
     wk = Counter(week(r["created_at"]) for r in rec)
     c90 = ts(now - timedelta(days=90))
@@ -330,12 +396,13 @@ def tema_block(nombre, cfg, news, dirig, semanas, now, conv_since, wiki_t, dmeta
         "dirigente_top": {"name": top[0], "n": top[1], "pct": pct(top[1] / len(rec))} if top else None,
         "dirigentes": [{"name": k, "n": c, "pct": pct(c / len(rec))} for k, c in quien.most_common(10)],
         "voces": [voces[k] | {"pct": pct(voces[k]["n"] / len(rec))} for k, _ in quien.most_common(15)],
+        "otras_voces": [voces[k] | {"pct": pct(voces[k]["n"] / len(rec))} for k, _ in otras.most_common(12)],
         "foco": {k: sum(1 for r in rec if k in r["_dir"]) for k in (FOCO, FOCO2)},
         "tono": tone(rec), "semanal": [wk.get(s, 0) for s in semanas],
         "outlets": [{"o": o, "n": c} for o, c in Counter(r.get("outlet") for r in rec if r.get("outlet")).most_common(8)],
         "titulares": [head(r, {"dir": r["_voz"][:3]}) for r in sorted(rec, key=lambda r: r["created_at"], reverse=True)[:25]],
         "wiki": arts,
-        "datos": cfg.get("datos", []), "marco": cfg.get("marco", []), "propuestas": cfg.get("propuestas", []), "fuentes": cfg.get("fuentes", []),
+        "trends": trends_tema(cfg.get("trends")), "datos": cfg.get("datos", []), "propuestas": cfg.get("propuestas", []), "fuentes": cfg.get("fuentes", []),
     }
 
 
