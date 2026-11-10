@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   # Los workflows de datos hacen commit con el token de Actions, que no dispara "push": se publica al terminar
   workflow_run:
-    workflows: ['Radar social listening', 'San Isidro reclamos']
+    workflows: ['Radar social listening', 'San Isidro reclamos', 'General Roca monitor']
     types: [completed]
 
 permissions:
@@ -41,6 +41,8 @@ jobs:
           cp radar/index.html _site/radar/
           cp radar/data/*.json _site/radar/data/
           cp -R sanisidro/index.html sanisidro/data _site/sanisidro/
+          mkdir -p _site/roca
+          cp -R roca/index.html roca/data _site/roca/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
