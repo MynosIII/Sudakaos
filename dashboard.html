@@ -527,7 +527,8 @@ Promise.all([J('radar/data/radar.json',window.RADAR),J('radar/data/actors.json',
   const renderClouds=()=>{
     let pool=ACT.filter(a=>a.pais===nPais&&a.n>0).sort((a,b)=>b.n-a.n).slice(0,12);
     const ma=byName['Sergio Massa'];
-    if(nPais==='AR'&&ma&&ma.n&&!pool.includes(ma))pool=[...pool.slice(0,11),ma];
+    const ex=nPais==='AR'?[ma,byName['Malena Galmarini']].filter(x=>x&&x.n&&!pool.includes(x)):[];
+    pool=[...pool.slice(0,12-ex.length),...ex];
     $('#clouds').innerHTML=pool.map(a=>`<div class="card c4 ccard"><h3>${av(a)}${esc(a.name)}<span class="tag">${fmt(a.n)} menciones</span><a href="#" data-goprof="${esc(a.name)}">Ficha →</a></h3><div data-wsrc="${esc(a.name)}">${cloudSVG(cloudOf(a),360,230,32)||'<div class="empty">Pocos textos.</div>'}<div class="wsrc"></div></div></div>`).join('')||'<div class="empty">Sin datos todavía.</div>';
   };
   $$('#npais .pill').forEach(b=>b.addEventListener('click',()=>{nPais=b.dataset.p;$$('#npais .pill').forEach(x=>x.classList.toggle('on',x===b));renderClouds()}));
@@ -536,7 +537,9 @@ Promise.all([J('radar/data/radar.json',window.RADAR),J('radar/data/actors.json',
   let sel=[],paisF='';
   const def=[...ACT].sort((a,b)=>b.n-a.n);if(def[0])sel=[def[0].name];
   const massa=byName['Sergio Massa'];
-  const quick=()=>{$('#quick').innerHTML='<span style="color:var(--dim);font-size:12px;align-self:center">Más nombrados:</span>'+def.filter(a=>!paisF||a.pais===paisF).slice(0,12).map(a=>`<button class="pill" data-add="${esc(a.name)}">${esc(a.name)} <span class="num" style="color:var(--dim)">${fmt(a.n)}</span></button>`).join('')};
+  const quick=()=>{$('#quick').innerHTML='<span style="color:var(--dim);font-size:12px;align-self:center">Más nombrados:</span>'+(()=>{let l=def.filter(a=>!paisF||a.pais===paisF).slice(0,12);
+    // Massa y Galmarini siempre a mano (paquete Massa · Galmarini), aunque no estén entre los más nombrados
+    if(paisF!=='BR')['Sergio Massa','Malena Galmarini'].forEach(n=>{const x=byName[n];if(x&&!l.includes(x))l=[...l,x]});return l})().map(a=>`<button class="pill" data-add="${esc(a.name)}">${esc(a.name)} <span class="num" style="color:var(--dim)">${fmt(a.n)}</span></button>`).join('')};
   quick();
   const add=n=>{if(!byName[n])return;if(sel.includes(n)){sel=[n,...sel.filter(x=>x!==n)]}else{sel=[n,...sel].slice(0,4)}renderProfile()};
   const rm=n=>{sel=sel.filter(x=>x!==n);renderProfile()};
