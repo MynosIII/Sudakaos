@@ -112,7 +112,7 @@ function dossier(t,i){const top=t.dirigente_top,tr=t.trends||{};
     <div class="card c6"><h3>Qué medios lo cubren y con qué tono</h3><div id="mg-to${i}"></div>${hb((t.outlets||[]).map(o=>[o.o,o.n,t.color]),null,120)}</div>
     <div class="card c12"><h3>Quiénes ya hablan del tema <span class="tag">${D.conversacion_dias} días · con link a la nota</span></h3>
       <div class="sect" style="margin-top:4px">Dirigentes</div><div style="overflow-x:auto">${voces(t.voces,t.n)}</div>
-      <div class="sect">Otras voces · especialistas, ONG, funcionarios y otras personas nombradas en los titulares</div><div style="overflow-x:auto">${(t.otras_voces||[]).length?voces(t.otras_voces,t.n,'Persona'):'<div class="empty" style="padding:10px 0">Ninguna persona nombrada con nombre y apellido en los titulares.</div>'}</div></div>
+      <div class="sect">Otras voces · personas nombradas en los titulares que no están en la lista de dirigentes seguidos (especialistas, ONG, funcionarios y legisladores locales)</div><div style="overflow-x:auto">${(t.otras_voces||[]).length?voces(t.otras_voces,t.n,'Persona'):'<div class="empty" style="padding:10px 0">Ninguna persona nombrada con nombre y apellido en los titulares.</div>'}</div></div>
     <div class="card c6"><h3>Cómo tomar la bandera <span class="tag">propuestas para discutir</span></h3><ol class="mg-ol">${(t.propuestas||[]).map(x=>`<li>${esc(x)}</li>`).join('')}</ol>
       ${(t.fuentes||[]).length?`<div class="sect">Para leer</div><ul class="list">${t.fuentes.map(x=>`<li><a href="${esc(x.u)}" target="_blank" rel="noopener">${esc(x.t)} ↗</a></li>`).join('')}</ul>`:''}</div>
     <div class="card c6"><h3>Últimos titulares</h3><div style="max-height:330px;overflow:auto">${heads((t.titulares||[]).slice(0,12))}</div></div>

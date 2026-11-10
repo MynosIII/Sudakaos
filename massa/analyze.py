@@ -118,6 +118,7 @@ Oscar Pablo Paola Patricia Paula Pedro Rafael Ramiro Ramón Raúl Ricardo Robert
 Sebastián Sergio Silvana Silvia Sofía Soledad Susana Tomás Valeria Verónica Victoria Virginia Walter Ximena Yamila Yanina
 """.split())
 PERSONA = re.compile(r"\b([A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)\s+((?:de\s+(?:la\s+)?)?[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+(?:\s+[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)?)")
+NO_PERSONA = {"Juan José Paso", "Juan Domingo Perón", "Julio Argentino Roca", "José Hernández", "Manuel Belgrano", "José Martí"}  # calles, hospitales, próceres
 NO_APELLIDO = {"Argentina", "Aires", "Buenos", "Navidad", "Pública", "Ley", "Santa", "San", "Fe", "Federal", "Nacional", "Provincia"}
 
 
@@ -130,7 +131,9 @@ def personas(texto):
         ap = m.group(2).split()
         if ap[-1] in NO_APELLIDO or ap[0] in NO_APELLIDO:
             continue
-        out.append(f"{m.group(1)} {m.group(2)}")
+        nombre = f"{m.group(1)} {m.group(2)}"
+        if nombre not in NO_PERSONA:
+            out.append(nombre)
     return out
 
 
