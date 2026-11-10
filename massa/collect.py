@@ -5,6 +5,8 @@ Fuentes (cada una falla por separado sin frenar a las demás):
   - Google News RSS: notas sobre los dos, sus competidores y los temas de agenda (salud mental adolescente,
     apuestas online, grooming, soberanía y seguridad de datos).
   - Wikipedia / Wikimedia: visitas diarias a los artículos de cada político y de cada tema (sin clave).
+  - Google Trends: interés de búsqueda en Argentina de cada tema de agenda (sin clave). Google suele cortar
+    pedidos desde servidores; si falla, se usa lo que suba collect_trends.py desde una PC (radar/data/trends/).
   - Have I Been Pwned: catálogo público de filtraciones conocidas (sin clave), filtrado a Argentina.
   - Chequeo pasivo de sitios públicos (Provincia, Legislatura, municipios de la Primera sección):
     una sola visita a la portada para leer encabezados de seguridad, certificado, terceros que carga y
@@ -378,6 +380,49 @@ def seguridad():
     return sum(1 for s in out["sitios"] if s.get("https") is not None), len(out["filtraciones"])
 
 
+def trends():
+    """Google Trends sin clave (mismo método que collect_trends.py): un solo grupo con el término de cada tema."""
+    import http.cookiejar
+    terms = [a["trends"] for a in CONFIG.get("agenda", {}).values() if a.get("trends")][:5]
+    if not terms:
+        return 0
+    op = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
+    op.addheaders = [("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36"),
+                     ("Accept-Language", "es-AR,es;q=0.9")]
+
+    def call(url):
+        for i in range(3):
+            try:
+                return op.open(url, timeout=30).read().decode("utf-8")
+            except urllib.error.HTTPError as e:
+                if e.code == 429 and i < 2:
+                    time.sleep(20 * (i + 1))
+                    continue
+                raise
+
+    try:  # la primera visita devuelve 429 con la cookie NID; la siguiente pasa
+        op.open("https://trends.google.com/trends/explore?geo=AR", timeout=30).read()
+    except urllib.error.HTTPError:
+        time.sleep(5)
+    js = lambda t: json.loads(t[t.index("{"):])
+    rows = []
+    for tf in ("today 3-m", "today 12-m"):
+        req = {"comparisonItem": [{"keyword": t, "geo": "AR", "time": tf} for t in terms], "category": 0, "property": ""}
+        ex = js(call("https://trends.google.com/trends/api/explore?" + urllib.parse.urlencode({"hl": "es-AR", "tz": 180, "req": json.dumps(req)})))
+        w = next(w for w in ex["widgets"] if w.get("id") == "TIMESERIES")
+        d = js(call("https://trends.google.com/trends/api/widgetdata/multiline?" + urllib.parse.urlencode(
+            {"hl": "es-AR", "tz": 180, "req": json.dumps(w["request"]), "token": w["token"]})))
+        for pt in d["default"]["timelineData"]:
+            day = datetime.fromtimestamp(int(pt["time"]), timezone.utc).strftime("%Y-%m-%d")
+            for t, v in zip(terms, pt["value"]):
+                rows.append({"source": "Google Trends", "series": "time", "group": "temas_mg", "term": t, "geo": "AR",
+                             "region": "", "date": day, "value": v, "timeframe": tf})
+        time.sleep(5)
+    if rows:
+        (HERE / ".store" / "trends.jsonl").write_text("\n".join(json.dumps(r, ensure_ascii=False) for r in rows) + "\n", encoding="utf8")
+    return len(rows)
+
+
 def save(known):
     cutoff = iso(datetime.now(timezone.utc) - timedelta(days=CONFIG["window_days"] + 30))
     keep = [r for r in known.values() if r.get("created_at", "") >= cutoff]
@@ -420,6 +465,12 @@ def main():
     except Exception as e:
         status["seguridad"] = {"ok": SEG.exists(), "error": str(e)[:200]}
     log(source="seguridad", **status["seguridad"])
+    try:
+        nt = trends()
+        status["google_trends"] = {"ok": nt > 0, "items": nt}
+    except Exception as e:
+        status["google_trends"] = {"ok": False, "error": f"{type(e).__name__}: {str(e)[:160]}"}
+    log(source="google_trends", **status["google_trends"])
     status_path.write_text(json.dumps(status, ensure_ascii=False), encoding="utf8")
 
 
