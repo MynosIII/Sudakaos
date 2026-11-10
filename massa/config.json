@@ -401,7 +401,9 @@
     "\"salud mental\" adolescentes Argentina",
     "\"prevención del suicidio\" jóvenes",
     "suicidio adolescente \"provincia de Buenos Aires\"",
-    "\"riesgo suicida\" adolescentes"
+    "\"riesgo suicida\" adolescentes",
+    "\"suicidio adolescente\" proyecto de ley",
+    "\"salud mental\" adolescentes diputada OR diputado OR senadora OR senador"
    ],
    "wiki": [
     "Suicidio",
@@ -485,7 +487,9 @@
     "ludopatía adolescentes Argentina",
     "\"apuestas online\" menores ley",
     "\"apuestas online\" \"provincia de Buenos Aires\"",
-    "ludopatía digital escuelas"
+    "ludopatía digital escuelas",
+    "\"apuestas online\" proyecto de ley diputados",
+    "ludopatía menores senadora OR senador OR legisladora OR legislador"
    ],
    "wiki": [
     "Ludopatía",
@@ -561,7 +565,9 @@
     "grooming \"provincia de Buenos Aires\"",
     "ciberacoso adolescentes Argentina",
     "\"Ley Mica Ortega\"",
-    "sextorsión adolescentes"
+    "sextorsión adolescentes",
+    "grooming proyecto de ley",
+    "grooming diputada OR diputado OR legisladora OR concejal"
    ],
    "wiki": [
     "Grooming",
@@ -656,7 +662,9 @@
    "\"soberanía digital\" Argentina",
    "ciberataque municipio \"Buenos Aires\"",
    "\"reconocimiento facial\" Argentina datos",
-   "ransomware Argentina"
+   "ransomware Argentina",
+   "\"datos personales\" proyecto de ley diputado OR senador",
+   "ciberseguridad legislador OR legisladora OR diputada proyecto"
   ],
   "wiki": [
    "Protección de datos personales",

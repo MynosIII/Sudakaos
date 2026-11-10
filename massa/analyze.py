@@ -43,6 +43,7 @@ the and you jaja jajaja jajajaja gente video videos nota notas diario noticias n
 dijo afirmo aseguro senalo sostuvo explico ademas mientras sino aunque donde quienes cual cuales mismo misma
 sergio massa malena galmarini argentina buenos aires infobae clarin nacion perfil pagina""".split())
 WORD = re.compile(r"[a-zñ]{4,}")
+DIAS: list[str] = []
 EMOS = ["ira", "miedo", "tristeza", "alegria", "asco", "sorpresa"]
 
 
@@ -97,9 +98,28 @@ POS, NEG = rx(CONFIG["positivo"]), rx(CONFIG["negativo"])
 POLS = {k: Matcher(v["alias"], v.get("excluir", ())) for k, v in CONFIG["politicos"].items()}
 
 
-def dirigentes():
+CARGO = re.compile(r"\b(?:[Ee]l|[Ll]a|[Ll]os|[Ll]as|[Dd]el)\s+(diputad[oa]s?|senador(?:a|es)?|legislador(?:a|es)?|concejal(?:a|es)?|intendent[ea]s?|ministr[oa]|gobernador(?:a)?|vicegobernador(?:a)?|defensor(?:a)? del pueblo)"
+                   r"(?:\s+(?:nacional|provincial|bonaerense|porteñ[oa]|del [A-Z][a-záéíóú]+|de la [A-Z][a-záéíóú]+|de [A-Z][a-záéíóú]+))?,?\s+"
+                   r"([A-ZÁÉÍÓÚÑ][a-záéíóúñ]+(?:\s+(?:de\s+)?[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+){1,2})")
+NO_NOMBRE = {"Buenos Aires", "La Plata", "Mar Del Plata", "Provincia", "Nación", "Ciudad"}
+
+
+def cargos(texto):
+    """Dirigentes que no seguimos pero que el titular presenta por su cargo ("la diputada Ana Pérez")."""
+    out = []
+    for m in CARGO.finditer(texto or ""):
+        nombre = m.group(2).strip()
+        if nombre in NO_NOMBRE or len(nombre) < 6:
+            continue
+        out.append((nombre, m.group(1).lower().rstrip("s")))
+    return out
+
+
+def dirigentes(meta_out=None):
     """Todos los dirigentes que se buscan para medir si un tema 'tiene dueño': los del paquete y los del tablero nacional."""
     d = {k: Matcher(v["alias"], v.get("excluir", ())) for k, v in CONFIG["politicos"].items()}
+    if meta_out is not None:
+        meta_out.update({k: v.get("espacio", "") for k, v in CONFIG["politicos"].items()})
     try:
         rc = json.loads(RADAR_CFG.read_text(encoding="utf8"))
         for k, al in rc.get("actors", {}).items():
@@ -108,6 +128,8 @@ def dirigentes():
             al = [a for a in al if len(a) >= 5]  # apellidos cortos dan falsos positivos
             if al:
                 d[k] = Matcher(al)
+                if meta_out is not None:
+                    meta_out[k] = rc.get("actor_meta", {}).get(k, {}).get("espacio", "")
     except (OSError, ValueError):
         pass
     return d
@@ -186,6 +208,7 @@ def dupla(texts, vinfo, now, semanas, conv_since):
         news = [r for r in m if r["kind"] == "news"]
         com = [r for r in m if r["kind"] == "comment"]
         wk = Counter(week(r["created_at"]) for r in m)
+        dc = Counter(r["created_at"][:10] for r in m)
         tone_src = com if len(com) >= 15 else m
         emo = [r["emocion"] for r in tone_src if r["emocion"] in EMOS]
         own = POLS[k]
@@ -205,7 +228,7 @@ def dupla(texts, vinfo, now, semanas, conv_since):
         info.update({
             "n_news": len(news), "n_comments": len(com), "share": round(len(m) / total_m * 100, 1),
             "last7": l7, "prev7": p7, "delta": round((l7 - p7) / p7 * 100) if p7 >= 3 else None,
-            "weekly": [wk.get(s, 0) for s in semanas],
+            "weekly": [wk.get(s, 0) for s in semanas], "daily": [dc.get(x, 0) for x in DIAS],
             "tone": tone(tone_src), "tone_base": "comentarios" if tone_src is com else "todos", "tone_news": tone(news), "tone_comments": tone(com),
             "emotions": {e: pct(emo.count(e) / len(emo)) for e in EMOS} if len(emo) >= 5 else None,
             "agresivo": pct(sum(r["agresivo"] for r in tone_src) / len(tone_src)),
@@ -231,14 +254,27 @@ def dupla(texts, vinfo, now, semanas, conv_since):
     return conv, out, voz, videos
 
 
-def tema_block(nombre, cfg, news, dirig, semanas, now, conv_since, wiki_t):
+def tema_block(nombre, cfg, news, dirig, semanas, now, conv_since, wiki_t, dmeta=None):
     trx = rx(cfg["terms"])
     rows = [r for r in news if trx.search(r["_f"])]
     rec = [r for r in rows if r["created_at"] >= ts(conv_since)]
     for r in rec:
         r["_dir"] = [k for k, m in dirig.items() if m.search(r["_f"])]
-    con = [r for r in rec if r["_dir"]]
-    quien = Counter(k for r in rec for k in r["_dir"])
+    # Voces: dirigentes seguidos más los que el titular presenta por su cargo
+    voces = {}
+    for r in sorted(rec, key=lambda r: r["created_at"], reverse=True):
+        found = [(k, dmeta.get(k, "") if dmeta else "", "seguido") for k in r["_dir"]]
+        for quien_c, cargo in cargos(r.get("title") or r.get("text", "")):
+            if not any(fold(quien_c) in fold(k) or fold(k) in fold(quien_c) for k, _, _ in found):
+                found.append((quien_c, cargo, "por cargo"))
+        r["_voz"] = [f[0] for f in found]
+        for k, esp, tipo in found:
+            v = voces.setdefault(k, {"name": k, "espacio": esp, "tipo": tipo, "n": 0, "notas": []})
+            v["n"] += 1
+            if len(v["notas"]) < 3:
+                v["notas"].append(head(r))
+    con = [r for r in rec if r["_voz"]]
+    quien = Counter(k for r in rec for k in r["_voz"])
     top = quien.most_common(1)[0] if quien else None
     wk = Counter(week(r["created_at"]) for r in rec)
     c90 = ts(now - timedelta(days=90))
@@ -255,10 +291,11 @@ def tema_block(nombre, cfg, news, dirig, semanas, now, conv_since, wiki_t):
         "pct_sin_dirigente": pct(1 - len(con) / len(rec)) if rec else None,
         "dirigente_top": {"name": top[0], "n": top[1], "pct": pct(top[1] / len(rec))} if top else None,
         "dirigentes": [{"name": k, "n": c, "pct": pct(c / len(rec))} for k, c in quien.most_common(10)],
+        "voces": [voces[k] | {"pct": pct(voces[k]["n"] / len(rec))} for k, _ in quien.most_common(15)],
         "foco": {k: sum(1 for r in rec if k in r["_dir"]) for k in (FOCO, FOCO2)},
         "tono": tone(rec), "semanal": [wk.get(s, 0) for s in semanas],
         "outlets": [{"o": o, "n": c} for o, c in Counter(r.get("outlet") for r in rec if r.get("outlet")).most_common(8)],
-        "titulares": [head(r, {"dir": r["_dir"][:3]}) for r in sorted(rec, key=lambda r: r["created_at"], reverse=True)[:25]],
+        "titulares": [head(r, {"dir": r["_voz"][:3]}) for r in sorted(rec, key=lambda r: r["created_at"], reverse=True)[:25]],
         "wiki": arts,
         "datos": cfg.get("datos", []), "marco": cfg.get("marco", []), "propuestas": cfg.get("propuestas", []), "fuentes": cfg.get("fuentes", []),
     }
@@ -298,16 +335,18 @@ def main():
         if r["kind"] == "comment" and not r["pols"] and len(vpols.get(r.get("video_id"), [])) == 1:
             r["pols"] = list(vpols[r["video_id"]])
     semanas = weeks_since(conv_since, now)
+    DIAS[:] = [(conv_since + timedelta(days=i)).strftime("%Y-%m-%d") for i in range((now - conv_since).days + 1)]
     conv, pols_out, voz, videos = dupla(texts, vinfo, now, semanas, conv_since)
 
     # ------------------------------------------------ agenda vacante y datos
     news = [r for r in texts if r["kind"] == "news"]
-    dirig = dirigentes()
+    dmeta = {}
+    dirig = dirigentes(dmeta)
     W = json.loads(WIKI.read_text(encoding="utf8")) if WIKI.exists() else {}
-    agenda = [tema_block(k, v, news, dirig, semanas, now, conv_since, (W.get("temas") or {}).get(k))
+    agenda = [tema_block(k, v, news, dirig, semanas, now, conv_since, (W.get("temas") or {}).get(k), dmeta)
               for k, v in CONFIG.get("agenda", {}).items()]
     D = CONFIG["datos"]
-    datos = tema_block(D["tema"], D, news, dirig, semanas, now, conv_since, (W.get("temas") or {}).get(D["tema"]))
+    datos = tema_block(D["tema"], D, news, dirig, semanas, now, conv_since, (W.get("temas") or {}).get(D["tema"]), dmeta)
     inc = rx(D["incidente"])
     datos["incidentes"] = [head(r) for r in sorted((r for r in news if r["created_at"] >= ts(conv_since) and rx(D["terms"]).search(r["_f"])
                                                    and inc.search(r["_f"])), key=lambda r: r["created_at"], reverse=True)[:30]]
@@ -354,7 +393,7 @@ def main():
     status = json.loads(STATUS.read_text(encoding="utf8")) if STATUS.exists() else {}
     out = {
         "updated_at": ts(now), "foco": FOCO, "foco2": FOCO2, "window_days": CONFIG["window_days"], "conversacion_dias": CONFIG["conversacion_dias"],
-        "status": status, "semanas": semanas,
+        "status": status, "semanas": semanas, "dias": DIAS,
         "totales": {"textos": len(texts), "comentarios": sum(1 for r in texts if r["kind"] == "comment"), "videos": len(vinfo),
                     "noticias": len(news), "medios": len({r.get("outlet") for r in news if r.get("outlet")}),
                     "metodo_nlp": Counter(r["metodo_nlp"] for r in texts).most_common(1)[0][0] if texts else "lexico"},
