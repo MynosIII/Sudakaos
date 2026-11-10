@@ -148,6 +148,16 @@ main{max-width:1560px;margin:0 auto;padding:18px 20px 40px}
 .words{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:baseline}
 .words span{color:var(--txt)}
 .cloud{width:100%;height:auto;display:block}
+svg text[data-w]{cursor:pointer;transition:opacity .15s}svg text[data-w]:hover{opacity:.75}svg.has-on text[data-w]:not(.on){opacity:.35}svg text[data-w].on{text-decoration:underline}
+.wsrc:empty{display:none}.wsrc{margin-top:10px;border-top:1px solid var(--line);padding-top:10px}
+.wsrc .wh{display:flex;align-items:baseline;gap:8px;font-size:13px;color:var(--muted);margin-bottom:6px}.wsrc .wh b{color:var(--txt);font-size:14px}
+.wsrc .wh button{margin-left:auto;background:none;border:0;color:var(--dim);font-size:18px;line-height:1;cursor:pointer;padding:0 2px}.wsrc .wh button:hover{color:var(--txt)}
+.wsrc ul{list-style:none;margin:0;padding:0;max-height:340px;overflow-y:auto}
+.wsrc li{padding:7px 0;border-bottom:1px solid var(--line);font-size:13px;line-height:1.4}.wsrc li:last-child{border-bottom:0}
+.wsrc li a{color:var(--txt);text-decoration:none}.wsrc li a:hover{text-decoration:underline}.wsrc li q{color:var(--txt)}
+.wsrc li small{display:block;color:var(--dim);font-size:11.5px;margin-top:2px}.wsrc li small a{color:#5fb3c9}
+.wsrc .kd{display:inline-block;font-size:10.5px;font-weight:600;letter-spacing:.02em;padding:1px 6px;border-radius:3px;margin-right:6px;vertical-align:1px;background:#272c38;color:var(--muted)}
+.wsrc .kd.c{background:#2a2440;color:#b4a9f5}.wsrc .kd.v{background:#3a1f22;color:#f08b8b}
 .cloud text{font-family:Inter,system-ui,sans-serif;font-weight:600;cursor:default}
 .cloud text:hover{fill:var(--txt)!important}
 .clead{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;margin-bottom:12px}
@@ -189,10 +199,8 @@ footer{color:var(--dim);font-size:12px;max-width:1560px;margin:0 auto;padding:0 
   <button data-t="conversacion">Conversación</button>
   <button data-t="busquedas">Búsquedas</button>
   <button data-t="integridad">Desinformación</button>
-  <button data-t="encuesta">Encuesta</button>
   <button data-t="metodo">Fuentes y método</button>
   <a class="navlink" id="nav-si" href="sanisidro/" hidden>San Isidro ↗</a>
-  <a class="navlink" id="nav-roca" href="roca/" hidden>General Roca · Soria ↗</a>
 </div></nav>
 <main>
   <!-- ======================= PANORAMA ======================= -->
@@ -239,8 +247,8 @@ footer{color:var(--dim);font-size:12px;max-width:1560px;margin:0 auto;padding:0 
         <div class="card c4"><h3>Señal de momentum <span class="tag">z-score</span></h3><div id="mg-mom" style="height:396px"></div></div>
         <div class="card c6"><h3>Voz propia de Galmarini <span class="tag">sus menciones, solas o junto a Massa</span></h3><div id="mg-voz" style="height:300px"></div></div>
         <div class="card c6"><h3>Narrativas <span class="tag">Massa vs. Galmarini</span></h3><div id="mg-narr" style="height:300px"></div></div>
-        <div class="card c6"><h3>Sergio Massa <span class="tag">nube de palabras</span></h3><div id="mg-cl1"></div></div>
-        <div class="card c6"><h3>Malena Galmarini <span class="tag">nube de palabras</span></h3><div id="mg-cl2"></div></div>
+        <div class="card c6"><h3>Sergio Massa <span class="tag">nube de palabras</span></h3><div data-wsrc-mg="Sergio Massa"><div id="mg-cl1"></div><div class="wsrc"></div></div></div>
+        <div class="card c6"><h3>Malena Galmarini <span class="tag">nube de palabras</span></h3><div data-wsrc-mg="Malena Galmarini"><div id="mg-cl2"></div><div class="wsrc"></div></div></div>
         <div class="card c12"><h3>Frente a sus competidores <span class="tag">conversación sobre la dupla</span></h3><div style="overflow-x:auto"><table class="rank" id="mg-tab"></table></div></div>
         <div class="card c6"><h3>Correlación entre series <span class="tag">menciones diarias · ρ de Pearson</span></h3><div id="mg-corr" style="height:380px"></div></div>
         <div class="card c6"><h3>Interés en Wikipedia <span class="tag">visitas semanales</span></h3><div id="mg-wiki" style="height:380px"></div></div>
@@ -344,18 +352,6 @@ footer{color:var(--dim);font-size:12px;max-width:1560px;margin:0 auto;padding:0 
     </div>
   </section>
 
-  <!-- ======================= ENCUESTA ======================= -->
-  <section class="tab" id="t-encuesta">
-    <div class="kpis" id="kpis-enc"></div>
-    <div class="g">
-      <div class="card c12"><h3>Qué problema prioriza cada identidad</h3><div class="plot" data-src="survey" data-fig="g24" data-h="600"></div></div>
-      <div class="card c6"><h3>Evaluación de dirigentes por identidad</h3><div class="plot" data-src="survey" data-fig="g21" data-h="540"></div></div>
-      <div class="card c6"><h3>Medios e identidades: afinidad relativa</h3><div class="plot" data-src="survey" data-fig="g23" data-h="540"></div></div>
-      <div class="card c12"><h3>Identidades declaradas según fuente de información</h3><div class="plot" data-src="survey" data-fig="g12" data-h="470"></div></div>
-    </div>
-    <p style="margin-top:14px"><a href="https://mynosiii.github.io/ProjectMilei2/">Abrir el explorador completo de la encuesta (32 gráficos) →</a></p>
-  </section>
-
   <!-- ======================= MÉTODO ======================= -->
   <section class="tab" id="t-metodo">
     <div class="g">
@@ -376,7 +372,6 @@ footer{color:var(--dim);font-size:12px;max-width:1560px;margin:0 auto;padding:0 
           <li><b>Tono, emoción y agresividad</b>: <span id="nlp-m">modelos pysentimiento (RoBERTuito/BERTweet, entrenados con tuits en español y portugués)</span>. Son estimaciones automáticas: la ironía y el sarcasmo se clasifican mal.</li>
           <li><b>Índice de presión reputacional</b> (0-100): tono negativo (35 pts, tope 60%), agresividad (20 pts, tope 20%), términos de riesgo (25 pts, tope 15%) y aceleración de menciones en 7 días (20 pts, tope +200%). Solo con 20 menciones o más.</li>
           <li><b>Menciones</b>: alias por político (nombre y apellido). En textos en portugués, los políticos argentinos solo cuentan con nombre completo.</li>
-          <li>La encuesta (977 respuestas) es exploratoria y no está ponderada a la población.</li>
           <li>Cuentas seudonimizadas; de redes solo se publican agregados. Los titulares de medios y verificadores son públicos.</li>
           <li>Recolección y cálculo diarios en GitHub Actions, gratis; ventana de 30 días.</li>
         </ul>
@@ -405,12 +400,33 @@ const BASE={paper_bgcolor:C.s1,plot_bgcolor:C.s1,font:{family:'Inter,system-ui,s
 const CFG={responsive:true,displaylogo:false,modeBarButtonsToRemove:['lasso2d','select2d','toImage']};
 const merge=(a,b)=>{const o=JSON.parse(JSON.stringify(a));for(const k in b){o[k]=(b[k]&&typeof b[k]==='object'&&!Array.isArray(b[k])&&o[k]&&typeof o[k]==='object')?merge(o[k],b[k]):b[k]}return o};
 const P=(el,data,lay)=>Plotly.react(el,data,merge(BASE,lay||{}),CFG);
+// ---------- de dónde sale cada palabra de una nube (clic en la palabra) ----------
+// Notas: titular + medio + link. Comentarios: extracto sin autor + link al comentario.
+const WSRC={act:{},cache:{}};
+const wsrcLoad=host=>{if(host.dataset.wsrcMg)return Promise.resolve(window.MassaPanel&&MassaPanel.src(host.dataset.wsrcMg));
+  const a=WSRC.act[host.dataset.wsrc];if(!a||!a.fuentes)return Promise.resolve(null);
+  const u='radar/data/'+a.fuentes;return WSRC.cache[u]=WSRC.cache[u]||fetch(u,{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null)};
+const wsrcItem=x=>{const lnk=x.u?` · <a href="${esc(x.u)}" target="_blank" rel="noopener">ver ↗</a>`:'';
+  if(x.k==='c')return `<li><span class="kd c">Comentario</span><q>${esc(x.t)}</q><small>${x.o&&x.o!=='YouTube'?'en “'+esc(x.o)+'” · ':esc(x.o||'')+' · '}${esc(x.d)}${lnk}</small></li>`;
+  const t=x.u?`<a href="${esc(x.u)}" target="_blank" rel="noopener">${esc(x.t)}</a>`:esc(x.t);
+  return `<li><span class="kd ${x.k==='v'?'v':''}">${x.k==='v'?'Video':'Nota'}</span>${t}<small>${esc(x.o)} · ${esc(x.d)}${lnk}</small></li>`};
+document.addEventListener('click',e=>{
+  const x=e.target.closest('.wsrc .wh button');if(x){const b=x.closest('.wsrc'),sv=b.parentElement.querySelector('svg');b.innerHTML='';if(sv){sv.classList.remove('has-on');sv.querySelectorAll('.on').forEach(t=>t.classList.remove('on'))}return}
+  const t=e.target.closest('svg text[data-w]');if(!t)return;const host=t.closest('[data-wsrc],[data-wsrc-mg]');if(!host)return;
+  const box=host.querySelector('.wsrc'),w=t.dataset.w,n=+t.dataset.n||null,sv=t.closest('svg');if(!box)return;
+  sv.querySelectorAll('.on').forEach(o=>o.classList.remove('on'));t.classList.add('on');sv.classList.add('has-on');
+  box.innerHTML=`<div class="wh"><b>“${esc(w)}”</b><span>buscando textos…</span></div>`;
+  wsrcLoad(host).then(S=>{if(t.closest('svg')!==sv||!t.classList.contains('on'))return;
+    const ids=S&&S.w&&S.w[w]||[],it=ids.map(i=>S.items[i]).filter(Boolean);
+    box.innerHTML=`<div class="wh"><b>“${esc(w)}”</b><span>${n?fmt(n)+' textos la usan':''}${it.length?(n?' · ':'')+(n&&n>it.length?'los '+it.length+' más recientes':it.length+' textos'):''}</span><button title="Cerrar" aria-label="Cerrar">×</button></div>`+
+      (it.length?'<ul>'+it.map(wsrcItem).join('')+'</ul>':'<div class="empty" style="padding:6px 0">Los textos de origen se suman en la próxima actualización diaria.</div>');
+    box.scrollIntoView({block:'nearest',behavior:'smooth'})})});
 
 Promise.all([J('radar/data/radar.json',window.RADAR),J('radar/data/actors.json',window.ACTORS),J('radar/data/live.json',window.LIVE),
-  Promise.resolve(null),J('../ProjectMilei2/data/charts.json',window.SURVEY),J('../ProjectMilei2/data/manifest.json',window.MANIFEST),J('radar/data/positions.json',window.POSITIONS)])
+  Promise.resolve(null),Promise.resolve(null),Promise.resolve(null),J('radar/data/positions.json',window.POSITIONS)])
 .then(([R,A,L,E,S,M,POS])=>{
   const s=R?R.summary:{},F=R?R.figures:{},ACT=A?A.actors:[],DAYS=A?A.days:[],alerts=L?L.alerts.filter(a=>a.tipo!=='Exposición digital'):[],feed=L?L.feed:[];
-  const byName=Object.fromEntries(ACT.map(a=>[a.name,a]));
+  const byName=Object.fromEntries(ACT.map(a=>[a.name,a]));WSRC.act=byName;
   // ---------- barra superior ----------
   const upd=R?new Date(R.updated_at):null,hrs=upd?(Date.now()-upd)/36e5:999;
   if(hrs>36){$('#live').classList.add('old');$('#live').lastChild.textContent='DIFERIDO';}
@@ -502,7 +518,7 @@ Promise.all([J('radar/data/radar.json',window.RADAR),J('radar/data/actors.json',
       if(!ok)continue;placed.push(ok);
       const col=x.neg==null?'#c4c9d4':x.neg>=55?C.neg:x.neg<=25?C.pos:C.muted;
       const tip=x.n!=null?`${x.w} · ${fmt(x.n)} textos · ${x.neg}% en textos negativos`:x.w;
-      out.push(`<text x="${(ok.x+ok.w/2).toFixed(1)}" y="${(ok.y+ok.h*.8).toFixed(1)}" text-anchor="middle" font-size="${f}" fill="${col}"><title>${esc(tip)}</title>${esc(x.w)}</text>`);
+      out.push(`<text data-w="${esc(x.w)}" data-n="${x.n??''}" x="${(ok.x+ok.w/2).toFixed(1)}" y="${(ok.y+ok.h*.8).toFixed(1)}" text-anchor="middle" font-size="${f}" fill="${col}"><title>${esc(tip)}</title>${esc(x.w)}</text>`);
     }
     return `<svg class="cloud" viewBox="0 0 ${W} ${H}" role="img" aria-label="Nube de palabras">${out.join('')}</svg>`;
   };
@@ -511,7 +527,7 @@ Promise.all([J('radar/data/radar.json',window.RADAR),J('radar/data/actors.json',
     let pool=ACT.filter(a=>a.pais===nPais&&a.n>0).sort((a,b)=>b.n-a.n).slice(0,12);
     const ma=byName['Sergio Massa'];
     if(nPais==='AR'&&ma&&ma.n&&!pool.includes(ma))pool=[...pool.slice(0,11),ma];
-    $('#clouds').innerHTML=pool.map(a=>`<div class="card c4 ccard"><h3>${av(a)}${esc(a.name)}<span class="tag">${fmt(a.n)} menciones</span><a href="#" data-goprof="${esc(a.name)}">Ficha →</a></h3>${cloudSVG(cloudOf(a),360,230,32)||'<div class="empty">Pocos textos.</div>'}</div>`).join('')||'<div class="empty">Sin datos todavía.</div>';
+    $('#clouds').innerHTML=pool.map(a=>`<div class="card c4 ccard"><h3>${av(a)}${esc(a.name)}<span class="tag">${fmt(a.n)} menciones</span><a href="#" data-goprof="${esc(a.name)}">Ficha →</a></h3><div data-wsrc="${esc(a.name)}">${cloudSVG(cloudOf(a),360,230,32)||'<div class="empty">Pocos textos.</div>'}<div class="wsrc"></div></div></div>`).join('')||'<div class="empty">Sin datos todavía.</div>';
   };
   $$('#npais .pill').forEach(b=>b.addEventListener('click',()=>{nPais=b.dataset.p;$$('#npais .pill').forEach(x=>x.classList.toggle('on',x===b));renderClouds()}));
   document.addEventListener('click',e=>{const g=e.target.closest('[data-goprof]');if(g){e.preventDefault();go(g.dataset.goprof)}});
@@ -596,7 +612,7 @@ Promise.all([J('radar/data/radar.json',window.RADAR),J('radar/data/actors.json',
     // narrativas
     $('#p-narr').innerHTML=a.narratives.length?a.narratives.map(n=>`<div class="hbar" style="grid-template-columns:minmax(0,1fr) 160px 44px"><span>${esc(n.n)}</span><div class="meter"><i style="width:${n.pct}%;background:#3987e5"></i></div><span class="num">${n.pct}%</span></div>`).join(''):'<div class="empty">Sin narrativas asignadas.</div>';
     // palabras
-    $('#p-words').innerHTML=cloudSVG(cloudOf(a),360,240,34)||'<div class="empty">Pocos textos.</div>';
+    $('#p-words').dataset.wsrc=a.name;$('#p-words').innerHTML=(cloudSVG(cloudOf(a),360,240,34)||'<div class="empty">Pocos textos.</div>')+'<div class="wsrc"></div>';
     // co-menciones
     const cm=Math.max(...(a.co||[]).map(c=>c.n),1);
     $('#p-co').innerHTML=(a.co||[]).length?a.co.map(c=>`<div class="hbar" style="cursor:pointer" data-add="${esc(c.a)}"><span>${esc(c.a)}</span><div class="meter"><i style="width:${c.n/cm*100}%;background:#9085e9"></i></div><span class="num">${c.n}</span></div>`).join('')+'':'<div class="empty">Sin co-menciones.</div>';
@@ -666,15 +682,13 @@ Promise.all([J('radar/data/radar.json',window.RADAR),J('radar/data/actors.json',
   document.addEventListener('click',e=>{if(e.target.closest('[data-mgo]')){e.preventDefault();$('#tabs button[data-t="massa"]').click();window.scrollTo({top:0})}});
   document.addEventListener('click',e=>{const g=e.target.closest('[data-cubego]');if(g){e.preventDefault();cSel=g.dataset.cubego;$('#tabs button[data-t="cubo"]').click()}});
   fetch('sanisidro/',{method:'HEAD'}).then(r=>{if(r.ok)$('#nav-si').hidden=false}).catch(()=>{});
-  fetch('roca/',{method:'HEAD'}).then(r=>{if(r.ok)$('#nav-roca').hidden=false}).catch(()=>{});
   // ---------- integridad ----------
   const col={verde:'#0ca30c',amarillo:'#fab219',rojo:'#d03b3b'};
   const mail=m=>m.dmarc_policy==='reject'||m.dmarc_policy==='quarantine'?`Protegido (DMARC ${m.dmarc_policy})`:(m.dmarc?'DMARC solo monitorea':'Sin DMARC')+(m.spf?'':' · sin SPF');
   // ---------- método ----------
   const nm=s.nlp_method||{};if(!nm.modelo&&nm.lexico)$('#nlp-m').textContent='diccionarios de palabras en español y portugués (los modelos pysentimiento se activan en la corrida diaria)';
   $('#chips').innerHTML=(s.platforms||[]).map(p=>`<span class="chip">● ${esc(p)}</span>`).join('')+'<span class="chip">● Google Trends (foto con fecha)</span><span class="chip">● Verificadores</span>';
-  $('#kpis-enc').innerHTML=[['Respuestas',fmt(M?M.responses:977),'encuesta PJM'],['Gráficos','32','en el explorador'],['Ejes','3','economía, social, político'],['Ponderación','No','muestra exploratoria']].map(([l,v,d])=>`<div class="kpi"><div class="l">${l}</div><div class="v">${v}</div><div class="d">${d}</div></div>`).join('');
-  $('#foot').innerHTML=`Tablero exploratorio con fuentes públicas y gratuitas. Encuesta: ${M?new Date(M.updated_at).toLocaleDateString('es-AR'):''} · Radar: ${upd?upd.toLocaleDateString('es-AR'):''}. Las asociaciones no implican causalidad; las redes no representan a la población.`;
+  $('#foot').innerHTML=`Tablero exploratorio con fuentes públicas y gratuitas. Radar: ${upd?upd.toLocaleDateString('es-AR'):''}. Las asociaciones no implican causalidad; las redes no representan a la población.`;
   // ---------- navegación ----------
   $$('#tabs button').forEach(b=>b.addEventListener('click',()=>{$$('#tabs button').forEach(x=>x.classList.toggle('on',x===b));
     $$('.tab').forEach(t=>t.classList.toggle('on',t.id==='t-'+b.dataset.t));drawTab(b.dataset.t);try{history.replaceState(null,'','#'+b.dataset.t)}catch(e){}}));
