@@ -156,6 +156,10 @@
    ]
   }
  },
+ "dirigentes_extra": {
+  "Mayra Mendoza": "intendenta de Quilmes",
+  "Facundo Tignanelli": "diputado bonaerense"
+ },
  "narrativas": {
   "Frente Renovador y armado propio": [
    "frente renovador",

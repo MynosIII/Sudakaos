@@ -137,6 +137,16 @@ def personas(texto):
     return out
 
 
+# Dirigentes que no están en las listas seguidas pero que son cargos políticos: los de config
+# ("dirigentes_extra") y los que algún titular del corpus presenta por su cargo ("la intendenta de Quilmes, Mayra Mendoza").
+DIRIG_EXTRA: dict[str, str] = {}
+
+
+def cargo_de(nombre):
+    f = fold(nombre)
+    return next((c for k, c in DIRIG_EXTRA.items() if fold(k) == f), None)
+
+
 def cargos(texto):
     """Dirigentes que no seguimos pero que el titular presenta por su cargo ("la diputada Ana Pérez")."""
     out = []
@@ -369,11 +379,12 @@ def tema_block(nombre, cfg, news, dirig, semanas, now, conv_since, wiki_t, dmeta
         for quien_c, cargo in cargos(r.get("title") or r.get("text", "")):
             if not any(fold(quien_c) in fold(k) or fold(k) in fold(quien_c) for k, _, _ in found):
                 found.append((quien_c, cargo, "por cargo"))
-        r["_voz"] = [f[0] for f in found]
         titulo = r.get("title") or r.get("text", "")
         for quien_p in personas(titulo):
             if not any(fold(quien_p) in fold(k) or fold(k).split()[-1] in fold(quien_p).split() for k, _, _ in found):
-                found.append((quien_p, "", "otra voz"))
+                c = cargo_de(quien_p)
+                found.append((quien_p, c or "", "por cargo" if c else "otra voz"))
+        r["_voz"] = [f[0] for f in found if f[2] != "otra voz"]  # la bandera la miden solo los dirigentes
         for k, esp, tipo in found:
             v = voces.setdefault(k, {"name": k, "espacio": esp, "tipo": tipo, "n": 0, "notas": []})
             v["n"] += 1
@@ -450,6 +461,11 @@ def main():
     news = [r for r in texts if r["kind"] == "news"]
     dmeta = {}
     dirig = dirigentes(dmeta)
+    DIRIG_EXTRA.update(CONFIG.get("dirigentes_extra", {}))
+    for r in news:
+        for t in {r.get("title") or "", r.get("text") or ""}:
+            for quien_c, cargo in cargos(t):
+                DIRIG_EXTRA.setdefault(quien_c, cargo)
     W = json.loads(WIKI.read_text(encoding="utf8")) if WIKI.exists() else {}
     agenda = [tema_block(k, v, news, dirig, semanas, now, conv_since, (W.get("temas") or {}).get(k), dmeta)
               for k, v in CONFIG.get("agenda", {}).items()]
