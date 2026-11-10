@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:
-      YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+      YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY_ROCA || secrets.YOUTUBE_API_KEY }}
       RADAR_NLP_SECONDS: '900'
     steps:
       - uses: actions/checkout@v4
