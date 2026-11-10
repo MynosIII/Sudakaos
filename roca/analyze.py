@@ -456,7 +456,7 @@ def main():
         nz = [v for v in fw if v] or [0]
         mu = sum(nz) / len(nz)
         sd = (sum((v - mu) ** 2 for v in nz) / len(nz)) ** 0.5
-        thr = max(3, mu + 1.0 * sd)
+        thr = max(3, mu + 0.5 * sd)
         for i, v in enumerate(fw):
             if v < thr:
                 continue
