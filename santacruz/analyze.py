@@ -65,7 +65,13 @@ def rx_exact(terms):
 
 
 FIG = CONFIG["figuras"]
-POLS = {k: rx_exact(v["alias"]) for k, v in FIG.items()}
+# Alias fuertes (nombre completo, "cura Molina") cuentan siempre; los apellidos solos ("molina", "grasso") solo con contexto
+# santacruceño en el texto, porque hay otros Molina (Nahuel, La Molina en Perú…) en las búsquedas.
+POLS = {k: rx_exact([a for a in v["alias"] if a not in v.get("alias_contexto", [])]) for k, v in FIG.items()}
+POLS_CTX = {k: rx_exact(v["alias_contexto"]) for k, v in FIG.items() if v.get("alias_contexto")}
+EXCL = rx_exact(CONFIG.get("excluir_frases", ["zzzz"]))
+SITIOS_LOC = CONFIG.get("sitios_locales", [])
+RSS_LOC = {f["name"] for f in CONFIG["rss"][:7]}
 TEMAS = {k: rx(v) for k, v in CONFIG["temas"].items()}
 NARR = {k: rx(v) for k, v in CONFIG["narrativas"].items()}
 INT_RX = {k: rx(v) for k, v in CONFIG["intenciones"].items()}
@@ -230,17 +236,21 @@ def main():
 
     def pertinente(r):
         t = fold(r.get("text", ""))
-        if CTX.search(t):
+        if CTX.search(EXCL.sub(" ", t)) or any(x in r.get("query", "") for x in SITIOS_LOC):
             return True
         q = fold(r.get("query", ""))
-        return any(any(a in q for a in al) and POLS[f].search(t) for f, al in FOCO_Q.items())
+        return any(any(a in q for a in al) and POLS[f].search(EXCL.sub(" ", t)) for f, al in FOCO_Q.items())
     texts = [r for r in texts if r["kind"] == "comment" or pertinente(r)]
     label_tone(texts)
 
     for r in texts:
         t = fold(re.sub(r"@[\w.\-]+", " ", r.get("text", "")))
         r["_f"] = t
-        r["pols"] = [k for k, p in POLS.items() if p.search(t)]
+        tx = EXCL.sub(" ", t)
+        q = r.get("query", "")
+        ctx_ok = bool(CTX.search(tx + " " + fold(r.get("video_title", "")))) or any(x in q for x in SITIOS_LOC) \
+            or r.get("outlet", "") in RSS_LOC
+        r["pols"] = [k for k, p in POLS.items() if p.search(tx) or (ctx_ok and k in POLS_CTX and POLS_CTX[k].search(tx))]
         r["narr"] = [k for k, p in NARR.items() if p.search(t)]
         r["temas"] = [k for k, p in TEMAS.items() if p.search(t)]
         hits = {k for k, p in INT_RX.items() if p.search(t)}

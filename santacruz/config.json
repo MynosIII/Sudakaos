@@ -25,6 +25,9 @@
       "wiki": [
         "Juan Carlos Molina (sacerdote)",
         "Juan Carlos Molina"
+      ],
+      "alias_contexto": [
+        "molina"
       ]
     },
     "Pablo Grasso": {
@@ -40,6 +43,9 @@
       "foco": true,
       "wiki": [
         "Pablo Grasso"
+      ],
+      "alias_contexto": [
+        "grasso"
       ]
     },
     "Claudio Vidal": {
@@ -867,5 +873,26 @@
     "el caletense",
     "la otra voz",
     "santa cruz en el mundo"
+  ],
+  "excluir_frases": [
+    "torres molina",
+    "nahuel molina",
+    "la molina",
+    "rodolfo molina",
+    "andrea molina",
+    "fernando molina",
+    "silva molina",
+    "ricardo molina",
+    "molina de segura"
+  ],
+  "sitios_locales": [
+    "laopinionaustral.com.ar",
+    "tiemposur.com.ar",
+    "opisantacruz.com.ar",
+    "eldiarionuevodia.com.ar",
+    "ahoracalafate.com.ar",
+    "lavanguardianoticias.com.ar",
+    "winfo.ar",
+    "santacruznuestrolugar.com"
   ]
 }
