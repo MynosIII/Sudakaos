@@ -73,11 +73,18 @@ SHOW_COMMENTS = CONFIG.get("textos_comentarios") == "extracto"
 MASK = [(re.compile(r"@[\w.\-]{2,}"), "@…"), (re.compile(r"\S+@\S+\.\w+"), "[correo]"),
         (re.compile(r"(?:\+?54)?[\s\-]?\d{3,4}[\s\-]?\d{6,7}\b"), "[tel]")]
 EMOS = ["ira", "miedo", "tristeza", "alegria", "asco", "sorpresa"]
-# Pedidos y deseos: disparador + hasta 3 palabras (se corta en puntuación)
-PEDIDO = re.compile(r"\b(queremos|quiero|necesitamos|hace falta|nos falta|falta un|falta una|traigan|hay que|que se vayan?|"
-                    r"se tienen? que ir|fuera|afuera|que renuncie|que vuelvan?|pedimos|exigimos|saquen|compren|"
-                    r"que pongan|que juegue|que jueguen|denle)\s+([a-zñ0-9]+(?: [a-zñ0-9]+){0,2})")
-DESEO = re.compile(r"\b(ojala|espero que|esperemos que|a ver si|tengo fe en|tengo fe que|confio en|se viene)\s+([a-zñ0-9]+(?: [a-zñ0-9]+){0,3})")
+# Pedidos y deseos: categoría del disparador + la palabra que sigue (saltando artículos): «Que se vaya: vasco», «Que traigan: 9»
+PED_CAT = [
+    ("Que se vaya", r"que se vayan?|se tienen? que ir|que renuncien?|fuera|saquen|saquenlo|echen|rajen"),
+    ("Que traigan", r"traigan|compren|contraten"),
+    ("Queremos", r"queremos|quiero|necesitamos|necesita|hace falta|nos falta|falta un|falta una"),
+    ("Que vuelva", r"que vuelvan?|volve|vuelva"),
+    ("Que juegue", r"que juegue|que jueguen|pongan a|pongan al|que pongan|denle"),
+    ("Hay que", r"hay que|pedimos|exigimos"),
+]
+DES_CAT = [("Ojalá", r"ojala|ojala que"), ("Espero", r"espero que|esperemos que|espero"), ("A ver si", r"a ver si"),
+           ("Tengo fe en", r"tengo fe en|tengo fe que|confio en|confiamos en"), ("Se viene", r"se viene|se vienen")]
+ART = set("el la los las un una unos unas al a de del lo le les que se nos me te mi su".split())
 CUT = set("de la el los las y o a en que con por para un una al del se le lo me te mas muy ya no si es".split())
 
 
@@ -144,6 +151,10 @@ def frases(rs, n=16, extra_stop=()):
     return sorted(bi + uni, key=lambda x: -x[1])
 
 
+INT_WORDS = {k: set(re.findall(r"[a-zñ]{3,}", fold(" ".join(v)))) for k, v in CONFIG["intenciones"].items()}
+NAME_WORDS = set(re.findall(r"[a-zñ]{3,}", fold(" ".join(a for v in FIG.values() for a in v["alias"]))))
+
+
 def trim(words):
     w = words.split()
     while w and w[-1] in CUT:
@@ -151,33 +162,34 @@ def trim(words):
     return " ".join(w)
 
 
-def pedidos(rs, rgx, n=24):
-    """Pedidos/deseos repetidos: 'que se vaya riquelme', 'traigan un nueve'… (mínimo 3 comentarios)."""
+PED_RX = [(n, re.compile(r"\b(?:" + t + r")\b((?: [a-zñ0-9]+){1,4})")) for n, t in PED_CAT]
+DES_RX = [(n, re.compile(r"\b(?:" + t + r")\b((?: [a-zñ0-9]+){1,4})")) for n, t in DES_CAT]
+VERBOS_VACIOS = set("ser estar hacer tener haber ir ver poder dar mucho muchos mucha poco buscar traer poner sacar cambiar seguir "
+                    "mas ahora ya todo todos nada algo alguien".split())
+# palabra suelta → figura ("mauricio" en «que vuelva Mauricio» es Macri)
+OBJ_FIG = {"riquelme": "Riquelme", "roman": "Riquelme", "macri": "Macri", "mauricio": "Macri", "vasco": "Arruabarrena",
+           "arruabarrena": "Arruabarrena", "ibarra": "Ibarra", "angelici": "Angelici", "tano": "Angelici", "ameal": "Ameal",
+           "beraldi": "Beraldi", "paredes": "Paredes", "tapia": "Tapia", "chiqui": "Tapia", "milei": "Milei", "pergolini": "Pergolini"}
+
+
+def pedidos(rs, cats, n=24):
+    """Pedidos/deseos repetidos: «Que se vaya: vasco», «Que traigan: nueve», «Ojalá: libertadores» (≥3 comentarios)."""
     c, ids = Counter(), defaultdict(list)
     for r in rs:
+        t = re.sub(r"[^a-zñ0-9 ]+", " | ", r["_f"])
         seen = set()
-        for m in rgx.finditer(r["_f"].replace(",", " , ").replace(".", " . ")):
-            obj = trim(m.group(2))
-            if not obj or obj in CUT:
-                continue
-            for k in {f"{m.group(1)} {obj}", f"{m.group(1)} {' '.join(obj.split()[:2])}"}:
+        for name, rgx in cats:
+            for m in rgx.finditer(t):
+                obj = next((w for w in m.group(1).split() if w not in ART and w not in VERBOS_VACIOS), None)
+                if not obj or obj in STOP or obj in CUT or len(obj) < 2:
+                    continue
+                obj = OBJ_FIG.get(obj, obj)
+                k = f"{name}: {obj}"
                 if k not in seen:
                     seen.add(k)
                     c[k] += 1
                     ids[k].append(r["id"])
-    # quedarse con la forma más larga que mantenga casi el mismo conteo
-    out = []
-    for k, v in sorted(c.items(), key=lambda x: (-x[1], -len(x[0]))):
-        if v < 3:
-            break
-        if any(o.startswith(k + " ") and c[o] >= 0.8 * v for o in c if c[o] >= 3):
-            continue
-        if any(k.startswith(o["p"] + " ") or o["p"].startswith(k + " ") for o in out):
-            continue
-        out.append({"p": k, "n": v, "_rid": ids[k]})
-        if len(out) >= n:
-            break
-    return out
+    return [{"p": k, "n": v, "_rid": ids[k]} for k, v in c.most_common(n) if v >= 3]
 
 
 def tone(rs):
@@ -350,7 +362,7 @@ def main():
             "weekly": [wk.get(s, 0) for s in semanas], "last28": l28, "prev28": p28,
             "figuras": Counter(p for r in rs for p in r["pols"]).most_common(5),
             "frases": frases(rc, 14),
-            "pedidos": pedidos(rc, PEDIDO, 8),
+            "pedidos": pedidos(rc, PED_RX, 8),
         })
     tema_out.sort(key=lambda x: -x["n"])
     voz = {
@@ -359,9 +371,9 @@ def main():
         "intenciones": {k: sum(1 for r in coms if k in r["int"]) for k in INTS},
         "semanal": int_w,
         "matriz": {"temas": temas, "valores": [[sum(1 for r in coms if t in r["temas"] and k in r["int"]) for k in INTS] for t in temas]},
-        "pedidos": pedidos(coms, PEDIDO, 30),
-        "deseos": pedidos(coms, DESEO, 24),
-        "frases": {k: frases([r for r in coms if k in r["int"]], 18) for k in INTS},
+        "pedidos": pedidos(coms, PED_RX, 30),
+        "deseos": pedidos(coms, DES_RX, 24),
+        "frases": {k: frases([r for r in coms if k in r["int"]], 18, INT_WORDS[k] | NAME_WORDS) for k in INTS},
         "temas": tema_out,
     }
 
@@ -381,7 +393,7 @@ def main():
                      "balance": balance([r for r in el_com if k in r["pols"]])} for k, c in el_figs.most_common(12)],
         "bandos": Counter(FIG[p].get("bando", "") for r in el_rows for p in r["pols"]).most_common(),
         "intenciones": intents(el_com) if el_com else None,
-        "frases": frases(el_com, 16), "pedidos": pedidos(el_com, PEDIDO, 10),
+        "frases": frases(el_com, 16), "pedidos": pedidos(el_com, PED_RX, 10),
         "titulares": [{"t": r["title"], "o": r.get("outlet", ""), "u": r["url"], "d": r["created_at"][:10], "tono": r["tono"],
                        "pols": r["pols"]} for r in el_heads],
     }

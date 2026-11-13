@@ -302,7 +302,7 @@ const bars=(arr,col)=>{if(!arr.length)return '<div class="empty">Sin datos todav
   return arr.map(a=>`<div class="r"><span>${esc(a[0])}</span><i style="width:${Math.max(3,a[1]/m*100)}%;background:${a[2]||col||'var(--foco)'}"></i><b>${a[3]??fmt(a[1])}</b></div>`).join('')};
 const headsHTML=h=>h&&h.length?h.map(x=>`<a class="it ${esc(x.tono||'')}" href="${esc(x.u||x.url)}" target="_blank" rel="noopener">${esc(x.t||x.titulo)}<div class="m">${esc(x.o||x.medio)} · ${esc(x.d||x.fecha)}${(x.narr||x.pols||[]).length?' · '+(x.narr||x.pols).map(esc).join(' · '):''}</div></a>`).join(''):'<div class="empty">Sin titulares todavía.</div>';
 let PEDS=[];
-const pedHTML=(arr,col,ctx)=>arr&&arr.length?arr.map(p=>{const i=PEDS.push({...p,ctx})-1;return `<button data-ped="${i}" style="--c:${col}"><span>«${esc(p.p)}»</span><b>${fmt(p.n)}</b></button>`}).join(''):'<div class="empty" style="padding:10px 0">Todavía no hay pedidos repetidos (mínimo 3 comentarios).</div>';
+const pedHTML=(arr,col,ctx)=>arr&&arr.length?arr.map(p=>{const i=PEDS.push({...p,ctx})-1;return `<button data-ped="${i}" style="--c:${col}"><span>${esc(p.p)}</span><b>${fmt(p.n)}</b></button>`}).join(''):'<div class="empty" style="padding:10px 0">Todavía no hay pedidos repetidos (mínimo 3 comentarios).</div>';
 const frHTML=(fr,sel)=>{if(!fr||!fr.length)return '<div class="empty" style="padding:8px 0">Todavía no hay frases repetidas suficientes.</div>';const mx=fr[0][1];
   return fr.map(([g,k])=>`<span class="chip" data-fr="${esc(g)}" data-sel="${esc(sel||'')}" style="font-size:${12+Math.round(k/mx*8)}px;border-color:${k/mx>.6?'var(--foco)':'var(--line)'}">${esc(g)} <span style="color:var(--dim);font-family:var(--mono)">${k}</span></span>`).join('')};
 function intCards(el,clickable){const V=D.voz,T=V.comentarios||1,q={quiere:(V.pedidos[0]||{}).p,espera:(V.deseos[0]||{}).p,critica:((V.frases.critica||[])[0]||[])[0],apoya:((V.frases.apoya||[])[0]||[])[0]};
@@ -526,7 +526,7 @@ document.addEventListener('click',e=>{
   if(c){const [ck,i]=c.dataset.c.split(':').map(Number),C0=CLOUDS[ck],x=C0&&C0.list[i];if(!x)return;
     showTexts(`«${x.w}»`,`${fmt(x.n)} textos sobre ${C0.pol} que usan esta palabra`,x.ids||(r=>(r.pols||[]).includes(C0.pol)&&foldJS(r.t).includes(x.w)),[x.w]);return}
   const p=e.target.closest&&e.target.closest('[data-ped]');
-  if(p){const x=PEDS[+p.dataset.ped];if(x)showTexts(`«${x.p}»`,`${fmt(x.n)} comentarios con este ${x.ctx}`,x.ids||[],[x.p]);return}
+  if(p){const x=PEDS[+p.dataset.ped];if(x)showTexts(`«${x.p}»`,`${fmt(x.n)} comentarios con este ${x.ctx}`,x.ids||[],[x.p.split(': ').pop()]);return}
   const f=e.target.closest&&e.target.closest('[data-fr]');
   if(f){const g=f.dataset.fr,s=f.dataset.sel||'',[kind,a,b]=s.split(':');let flt=r=>r.k==='c';
     if(kind==='int')flt=r=>r.k==='c'&&(r.int||[]).includes(a);
