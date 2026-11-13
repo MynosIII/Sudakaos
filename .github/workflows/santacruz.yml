@@ -1,0 +1,80 @@
+name: Santa Cruz monitor
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 12 * * *'
+  # Primera corrida (y cada vez que cambia el código o la configuración) en cualquier rama
+  push:
+    paths:
+      - 'santacruz/config.json'
+      - 'santacruz/*.py'
+      - '.github/workflows/santacruz.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: santacruz-${{ github.ref_name }}
+  cancel-in-progress: false
+
+jobs:
+  collect-and-analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      # Clave propia si se carga YOUTUBE_API_KEY_SANTACRUZ; si no, comparte la de Roca para no tocar la del tablero nacional
+      YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY_SANTACRUZ || secrets.YOUTUBE_API_KEY_ROCA || secrets.YOUTUBE_API_KEY }}
+      RADAR_NLP_SECONDS: '900'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install dependencies
+        run: python -m pip install pandas
+      # Tono, emoción y agresividad con pysentimiento (gratis, CPU). Si falla, el análisis usa diccionarios.
+      - name: Install NLP models
+        continue-on-error: true
+        run: |
+          python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install pysentimiento
+      - name: Cache NLP models
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-pysentimiento-v1
+      # Los textos completos no se suben al repositorio: viven en la caché del workflow.
+      - name: Restore store
+        uses: actions/cache/restore@v4
+        with:
+          path: santacruz/.store
+          key: santacruz-store-${{ github.run_id }}
+          restore-keys: santacruz-store-
+      - name: Collect public sources
+        run: timeout 1200 python santacruz/collect.py || echo "recolección cortada por tiempo"
+      - name: Analyze
+        run: python santacruz/analyze.py
+      - name: Save store
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: santacruz/.store
+          key: santacruz-store-${{ github.run_id }}
+      - name: Show collection status
+        if: always()
+        run: cat santacruz/.store/status.json || true
+      - name: Commit aggregates
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add santacruz/data/santacruz.json santacruz/data/textos.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Santa Cruz: actualizar agregados'
+            for i in 1 2 3; do
+              git pull --rebase -X theirs origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+              sleep $((i * 5))
+            done
+            exit 1
+          fi

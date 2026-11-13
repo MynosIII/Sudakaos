@@ -1,0 +1,871 @@
+{
+  "nombre": "Santa Cruz 2027",
+  "focos": [
+    "Juan Carlos Molina",
+    "Pablo Grasso"
+  ],
+  "window_days": 365,
+  "conversacion_dias": 180,
+  "eleccion": "2027-10-24",
+  "eleccion_nota": "Fecha de referencia: generales nacionales de octubre de 2027. Santa Cruz todavía no tiene código electoral nuevo (la Ley de Lemas se derogó en 2024 y el régimen transitorio venció en 2025), así que la fecha provincial está a confirmar.",
+  "figuras": {
+    "Juan Carlos Molina": {
+      "alias": [
+        "juan carlos molina",
+        "cura molina",
+        "padre molina",
+        "sacerdote molina",
+        "diputado molina",
+        "padre juan carlos molina",
+        "molina"
+      ],
+      "bando": "Peronismo",
+      "cargo": "Diputado nacional (Fuerza Santacruceña, 2025-2029); sacerdote, ex Sedronar",
+      "foco": true,
+      "wiki": [
+        "Juan Carlos Molina (sacerdote)",
+        "Juan Carlos Molina"
+      ]
+    },
+    "Pablo Grasso": {
+      "alias": [
+        "pablo grasso",
+        "grasso",
+        "intendente grasso",
+        "intendente de rio gallegos",
+        "intendente de río gallegos"
+      ],
+      "bando": "Peronismo",
+      "cargo": "Intendente de Río Gallegos (desde 2019); presidente del PJ Santa Cruz",
+      "foco": true,
+      "wiki": [
+        "Pablo Grasso"
+      ]
+    },
+    "Claudio Vidal": {
+      "alias": [
+        "claudio vidal",
+        "vidal",
+        "gobernador vidal",
+        "gobernador de santa cruz"
+      ],
+      "bando": "Por Santa Cruz",
+      "cargo": "Gobernador de Santa Cruz; buscará la reelección",
+      "wiki": [
+        "Claudio Vidal"
+      ]
+    },
+    "Fabián Leguizamón": {
+      "alias": [
+        "fabian leguizamon",
+        "leguizamon",
+        "vicegobernador leguizamon"
+      ],
+      "bando": "Por Santa Cruz",
+      "cargo": "Vicegobernador de Santa Cruz",
+      "wiki": [
+        "Fabián Leguizamón"
+      ]
+    },
+    "José Luis Garrido": {
+      "alias": [
+        "jose luis garrido",
+        "diputado garrido"
+      ],
+      "bando": "Por Santa Cruz",
+      "cargo": "Diputado nacional; trabaja para ser candidato",
+      "wiki": [
+        "José Luis Garrido"
+      ]
+    },
+    "Jairo Guzmán": {
+      "alias": [
+        "jairo guzman",
+        "guzman lla",
+        "diputado guzman"
+      ],
+      "bando": "La Libertad Avanza",
+      "cargo": "Diputado nacional (LLA); aspirante a gobernador",
+      "wiki": [
+        "Jairo Guzmán"
+      ]
+    },
+    "José María Carambia": {
+      "alias": [
+        "jose maria carambia",
+        "carambia",
+        "jose carambia"
+      ],
+      "bando": "Moveré",
+      "cargo": "Senador nacional (Moveré); se prepara para competir",
+      "wiki": [
+        "José María Carambia"
+      ]
+    },
+    "Roxana Reyes": {
+      "alias": [
+        "roxana reyes"
+      ],
+      "bando": "UCR",
+      "cargo": "Exdiputada nacional (UCR); candidata a gobernadora en 2023",
+      "wiki": [
+        "Roxana Reyes"
+      ]
+    },
+    "Javier Belloni": {
+      "alias": [
+        "javier belloni",
+        "belloni"
+      ],
+      "bando": "Peronismo",
+      "cargo": "Intendente de El Calafate (Nace una Esperanza)",
+      "wiki": [
+        "Javier Belloni"
+      ]
+    },
+    "Pablo González": {
+      "alias": [
+        "pablo gonzalez",
+        "pablo gonzález"
+      ],
+      "bando": "Peronismo",
+      "cargo": "Ex vicegobernador y ex presidente de YPF (Propongamos un Sueño)",
+      "wiki": [
+        "Pablo González (político)"
+      ]
+    },
+    "Alicia Kirchner": {
+      "alias": [
+        "alicia kirchner"
+      ],
+      "bando": "Peronismo",
+      "cargo": "Exgobernadora de Santa Cruz",
+      "wiki": [
+        "Alicia Kirchner"
+      ]
+    },
+    "Cristina Kirchner": {
+      "alias": [
+        "cristina kirchner",
+        "cristina fernandez",
+        "cfk",
+        "cristina"
+      ],
+      "bando": "Nacional",
+      "cargo": "Expresidenta; referente del peronismo santacruceño",
+      "wiki": [
+        "Cristina Fernández de Kirchner"
+      ]
+    },
+    "Javier Milei": {
+      "alias": [
+        "javier milei",
+        "milei"
+      ],
+      "bando": "Nacional",
+      "cargo": "Presidente de la Nación",
+      "wiki": [
+        "Javier Milei"
+      ]
+    }
+  },
+  "mapa_poder": {
+    "metodo": "Codificación editorial inicial, a revisar con el cliente. Eje horizontal: 0 = peronismo/kirchnerismo, 100 = alineado con Milei (pasando por el vidalismo en el centro). Eje vertical: peso territorial (cargo, aparato, votos propios en 2023/2025). El tamaño de cada punto sale de las menciones medidas.",
+    "puntos": {
+      "Juan Carlos Molina": {
+        "alineamiento": 15,
+        "peso": 62,
+        "nota": "Encabezó la lista que ganó las legislativas 2025 (32,1%). Figura de unidad elegida por CFK; no se declara candidato pero no lo descarta."
+      },
+      "Pablo Grasso": {
+        "alineamiento": 22,
+        "peso": 78,
+        "nota": "Intendente de la capital desde 2019 y presidente del PJ por lista de unidad (2026). Candidato en 2023; arma un frente amplio."
+      },
+      "Claudio Vidal": {
+        "alineamiento": 58,
+        "peso": 90,
+        "nota": "Gobernador; va por la reelección. Su lista salió tercera en 2025. Campaña sobre el 'riesgo kuka'."
+      },
+      "Fabián Leguizamón": {
+        "alineamiento": 58,
+        "peso": 45,
+        "nota": "Vicegobernador del oficialismo provincial."
+      },
+      "José Luis Garrido": {
+        "alineamiento": 55,
+        "peso": 40,
+        "nota": "Diputado del bloque Por Santa Cruz; propone coalición con primarias."
+      },
+      "Jairo Guzmán": {
+        "alineamiento": 92,
+        "peso": 48,
+        "nota": "Arma La Libertad Avanza en la provincia; descartó acuerdos con Vidal y Grasso."
+      },
+      "José María Carambia": {
+        "alineamiento": 65,
+        "peso": 45,
+        "nota": "Senador de Moveré; candidato a gobernador en 2023 dentro de Por Santa Cruz."
+      },
+      "Roxana Reyes": {
+        "alineamiento": 72,
+        "peso": 35,
+        "nota": "Radical; candidata en 2023, arma equipos técnicos."
+      },
+      "Javier Belloni": {
+        "alineamiento": 28,
+        "peso": 45,
+        "nota": "Intendente de El Calafate; bajó su lista en la interna del PJ."
+      },
+      "Pablo González": {
+        "alineamiento": 25,
+        "peso": 40,
+        "nota": "Ex vicegobernador; bajó su lista en la interna del PJ."
+      },
+      "Alicia Kirchner": {
+        "alineamiento": 8,
+        "peso": 50,
+        "nota": "Exgobernadora; referencia histórica del kirchnerismo provincial."
+      }
+    }
+  },
+  "intenciones": {
+    "quiere": [
+      "queremos",
+      "quiero",
+      "hay que",
+      "necesitamos",
+      "necesita",
+      "necesitan",
+      "hace falta",
+      "falta de",
+      "que se vaya",
+      "que se vayan",
+      "se tiene que ir",
+      "que renuncie",
+      "fuera",
+      "pedimos",
+      "exigimos",
+      "reclamamos",
+      "que pongan",
+      "que arreglen",
+      "que paguen",
+      "aumento",
+      "trabajo genuino",
+      "que vuelva",
+      "que gobierne",
+      "que se presente",
+      "candidato ya"
+    ],
+    "espera": [
+      "ojalá",
+      "ojala",
+      "espero",
+      "esperamos",
+      "a ver si",
+      "tengo fe",
+      "fe en",
+      "confío",
+      "confio",
+      "confiamos",
+      "se viene",
+      "se vienen",
+      "en 2027",
+      "el año que viene",
+      "vamos a ganar",
+      "vamos a volver",
+      "volver a gobernar",
+      "recuperar santa cruz",
+      "recuperar la provincia",
+      "ilusión",
+      "ilusion",
+      "esperanza",
+      "sueño",
+      "próximo gobernador",
+      "proximo gobernador",
+      "futuro gobernador",
+      "gobernador 2027"
+    ],
+    "critica": [
+      "vergüenza",
+      "verguenza",
+      "desastre",
+      "fracaso",
+      "horrible",
+      "inútil",
+      "inutil",
+      "no sabe",
+      "no saben",
+      "mediocre",
+      "culpa",
+      "culpable",
+      "pésimo",
+      "pesimo",
+      "un asco",
+      "basta",
+      "lamentable",
+      "patético",
+      "patetico",
+      "ridículo",
+      "ridiculo",
+      "nefasto",
+      "incapaz",
+      "chanta",
+      "mentiroso",
+      "mentira",
+      "se robó",
+      "se robo",
+      "chorro",
+      "chorros",
+      "ladrón",
+      "ladron",
+      "corrupto",
+      "corruptos",
+      "corrupción",
+      "corrupcion",
+      "kukas",
+      "kuka",
+      "caradura",
+      "decepción",
+      "decepcion",
+      "hipócrita",
+      "hipocrita",
+      "traidor",
+      "oportunista",
+      "cínico",
+      "cinico",
+      "peor",
+      "fundieron",
+      "destruyeron",
+      "nunca más",
+      "nunca mas"
+    ],
+    "apoya": [
+      "gracias",
+      "excelente",
+      "bien ahí",
+      "bien ahi",
+      "acierto",
+      "felicitaciones",
+      "bravo",
+      "aplausos",
+      "el mejor",
+      "impecable",
+      "lo banco",
+      "bancamos",
+      "todos con",
+      "vamos pablo",
+      "vamos padre",
+      "fuerza padre",
+      "fuerza pablo",
+      "gran persona",
+      "gran tipo",
+      "un lujo",
+      "coherente",
+      "honesto",
+      "buen intendente",
+      "buena gestión",
+      "buena gestion",
+      "orgullo",
+      "genio",
+      "capo",
+      "querido",
+      "sí se puede",
+      "si se puede",
+      "mi voto",
+      "tiene mi voto",
+      "lo voto",
+      "la voto"
+    ]
+  },
+  "temas": {
+    "Empleo y salarios": [
+      "salario",
+      "salarios",
+      "sueldo",
+      "sueldos",
+      "paritaria",
+      "aumento",
+      "empleo",
+      "trabajo",
+      "desocupa",
+      "despido",
+      "despidos",
+      "estatal",
+      "estatales",
+      "empleados públicos",
+      "empleados publicos",
+      "aguinaldo",
+      "atraso salarial"
+    ],
+    "Petróleo, YPF y minería": [
+      "petróleo",
+      "petroleo",
+      "petroler",
+      "ypf",
+      "áreas maduras",
+      "areas maduras",
+      "yacimiento",
+      "hidrocarburo",
+      "cuenca del golfo",
+      "cuenca austral",
+      "minería",
+      "mineria",
+      "minera",
+      "minero",
+      "regalías",
+      "regalias",
+      "vaca muerta",
+      "pozos"
+    ],
+    "Docentes y educación": [
+      "docente",
+      "docentes",
+      "adosac",
+      "escuela",
+      "escuelas",
+      "educación",
+      "educacion",
+      "clases",
+      "paro docente",
+      "universidad",
+      "unpa"
+    ],
+    "Salud": [
+      "salud",
+      "hospital",
+      "hospitales",
+      "médicos",
+      "medicos",
+      "obra social",
+      "caja de servicios sociales",
+      "css",
+      "guardia",
+      "medicamento",
+      "turnos"
+    ],
+    "Jubilados y Caja de Previsión": [
+      "jubilad",
+      "jubilación",
+      "jubilacion",
+      "caja de previsión",
+      "caja de prevision",
+      "previsional",
+      "pasivos",
+      "reforma previsional"
+    ],
+    "Servicios públicos e infraestructura": [
+      "agua",
+      "servicios públicos",
+      "servicios publicos",
+      "spse",
+      "luz",
+      "energía",
+      "energia",
+      "gas",
+      "cloacas",
+      "calles",
+      "asfalto",
+      "pavimento",
+      "obra pública",
+      "obra publica",
+      "represas",
+      "vivienda",
+      "viviendas",
+      "idduv"
+    ],
+    "Seguridad y justicia": [
+      "seguridad",
+      "inseguridad",
+      "policía",
+      "policia",
+      "delito",
+      "robo",
+      "justicia",
+      "tribunal",
+      "fiscal",
+      "narco",
+      "droga"
+    ],
+    "Gestión en Río Gallegos": [
+      "río gallegos",
+      "rio gallegos",
+      "municipio",
+      "municipalidad",
+      "concejo deliberante",
+      "basura",
+      "residuos",
+      "intendencia",
+      "barrio",
+      "barrios",
+      "recolección"
+    ],
+    "Peronismo: unidad e internas": [
+      "unidad",
+      "interna",
+      "internas",
+      "pj",
+      "partido justicialista",
+      "peronismo",
+      "peronista",
+      "kirchnerismo",
+      "frente amplio",
+      "fuerza santacruceña",
+      "fuerza santacrucena",
+      "unión por la patria",
+      "union por la patria",
+      "lista de unidad"
+    ],
+    "Elecciones 2027 y candidaturas": [
+      "2027",
+      "candidato",
+      "candidata",
+      "candidatura",
+      "gobernación",
+      "gobernacion",
+      "gobernador",
+      "reelección",
+      "reeleccion",
+      "elecciones",
+      "encuesta",
+      "fórmula",
+      "formula",
+      "boleta única",
+      "boleta unica",
+      "ley de lemas",
+      "lemas",
+      "primarias",
+      "código electoral",
+      "codigo electoral"
+    ],
+    "Nación y Milei": [
+      "milei",
+      "nación",
+      "nacion",
+      "gobierno nacional",
+      "ajuste",
+      "motosierra",
+      "fondos",
+      "coparticipación",
+      "coparticipacion",
+      "transferencias",
+      "casa rosada",
+      "caputo",
+      "libertad avanza"
+    ],
+    "Iglesia, droga y lo social": [
+      "iglesia",
+      "cura",
+      "sacerdote",
+      "obispo",
+      "sedronar",
+      "adicciones",
+      "valdocco",
+      "pobreza",
+      "comedor",
+      "curas villeros",
+      "consumo problemático",
+      "consumo problematico"
+    ]
+  },
+  "narrativas": {
+    "Unidad y armado": [
+      "unidad",
+      "frente",
+      "armado",
+      "acuerdo",
+      "lista",
+      "interna",
+      "candidatura"
+    ],
+    "Oposición a Vidal": [
+      "vidal",
+      "gobierno provincial",
+      "gobernador",
+      "oposición",
+      "oposicion"
+    ],
+    "Oposición a Milei": [
+      "milei",
+      "ajuste",
+      "motosierra",
+      "gobierno nacional",
+      "libertad avanza"
+    ],
+    "Gestión y obra": [
+      "obra",
+      "gestión",
+      "gestion",
+      "inaugur",
+      "asfalto",
+      "vivienda",
+      "servicio"
+    ],
+    "Trabajo y producción": [
+      "empleo",
+      "trabajo",
+      "petróleo",
+      "petroleo",
+      "ypf",
+      "pyme",
+      "pymes",
+      "producción",
+      "produccion",
+      "industria"
+    ],
+    "Lo social y la fe": [
+      "iglesia",
+      "fe",
+      "pobreza",
+      "adicciones",
+      "jóvenes",
+      "jovenes",
+      "social",
+      "sedronar"
+    ],
+    "Conflicto y denuncias": [
+      "denuncia",
+      "causa",
+      "justicia",
+      "polémica",
+      "polemica",
+      "escándalo",
+      "escandalo",
+      "conflicto",
+      "crisis"
+    ]
+  },
+  "positivo": [
+    "gracias",
+    "excelente",
+    "bien hecho",
+    "muy bien",
+    "felicit",
+    "impecable",
+    "genial",
+    "bravo",
+    "gran persona",
+    "orgullo",
+    "el mejor",
+    "esperanza",
+    "honesto",
+    "coherente"
+  ],
+  "negativo": [
+    "vergüenza",
+    "verguenza",
+    "desastre",
+    "fracaso",
+    "inútil",
+    "inutil",
+    "mentiroso",
+    "chorro",
+    "corrupto",
+    "mediocre",
+    "basta",
+    "patético",
+    "patetico",
+    "horrible",
+    "peor",
+    "nefasto",
+    "kuka"
+  ],
+  "contexto": [
+    "santa cruz",
+    "santacruceño",
+    "santacruceña",
+    "santacruceños",
+    "santacrucenos",
+    "santacruceno",
+    "santacrucena",
+    "río gallegos",
+    "rio gallegos",
+    "caleta olivia",
+    "el calafate",
+    "pico truncado",
+    "las heras",
+    "puerto deseado",
+    "puerto san julián",
+    "puerto san julian",
+    "perito moreno",
+    "28 de noviembre",
+    "río turbio",
+    "rio turbio",
+    "fuerza santacruceña",
+    "pj santa cruz",
+    "sedronar"
+  ],
+  "youtube": {
+    "region": "AR",
+    "language": "es",
+    "videos_per_query": 10,
+    "comments_per_video": 100,
+    "queries": [
+      "Pablo Grasso",
+      "Pablo Grasso Río Gallegos",
+      "Grasso gobernador Santa Cruz",
+      "Grasso intendente entrevista",
+      "Juan Carlos Molina",
+      "cura Molina Santa Cruz",
+      "padre Juan Carlos Molina",
+      "Juan Carlos Molina diputado",
+      "Molina Grasso peronismo Santa Cruz",
+      "Santa Cruz elecciones 2027",
+      "Claudio Vidal gobernador",
+      "Claudio Vidal Grasso",
+      "Santa Cruz gobernación 2027",
+      "Jairo Guzmán Santa Cruz",
+      "Carambia Santa Cruz",
+      "Río Gallegos vecinos reclamo",
+      "Santa Cruz docentes paro",
+      "Santa Cruz YPF áreas maduras"
+    ],
+    "contexto": [
+      "santa cruz",
+      "santacruce",
+      "río gallegos",
+      "rio gallegos",
+      "caleta olivia",
+      "calafate",
+      "grasso",
+      "cura molina",
+      "padre molina",
+      "juan carlos molina",
+      "vidal",
+      "patagonia",
+      "sedronar",
+      "gallegos"
+    ],
+    "excluir": [
+      "santa cruz de la sierra",
+      "bolivia",
+      "tenerife",
+      "santa cruz de tenerife",
+      "california",
+      "santa cruz fc",
+      "santa cruz futebol",
+      "recife"
+    ]
+  },
+  "google_news": {
+    "queries": [
+      "\"Pablo Grasso\"",
+      "\"Pablo Grasso\" gobernación",
+      "\"Pablo Grasso\" Río Gallegos",
+      "\"Pablo Grasso\" PJ",
+      "\"Juan Carlos Molina\" Santa Cruz",
+      "\"cura Molina\"",
+      "\"padre Molina\" Santa Cruz",
+      "\"Juan Carlos Molina\" diputado",
+      "Molina Grasso Santa Cruz",
+      "Santa Cruz 2027 gobernación",
+      "\"Claudio Vidal\" 2027",
+      "\"Claudio Vidal\" Grasso",
+      "\"Jairo Guzmán\" Santa Cruz",
+      "Carambia Santa Cruz 2027",
+      "\"Roxana Reyes\" Santa Cruz",
+      "\"José Luis Garrido\" Santa Cruz",
+      "Belloni El Calafate PJ",
+      "peronismo Santa Cruz unidad",
+      "Río Gallegos municipio Grasso"
+    ],
+    "sites": [
+      "laopinionaustral.com.ar",
+      "tiemposur.com.ar",
+      "opisantacruz.com.ar",
+      "eldiarionuevodia.com.ar",
+      "ahoracalafate.com.ar",
+      "lavanguardianoticias.com.ar",
+      "winfo.ar",
+      "santacruznuestrolugar.com",
+      "infobae.com",
+      "pagina12.com.ar",
+      "letrap.com.ar",
+      "lapoliticaonline.com",
+      "perfil.com",
+      "clarin.com",
+      "lanacion.com.ar"
+    ],
+    "site_terms": [
+      "Grasso",
+      "Molina"
+    ]
+  },
+  "rss": [
+    {
+      "name": "La Opinión Austral",
+      "url": "https://laopinionaustral.com.ar/feed"
+    },
+    {
+      "name": "TiempoSur",
+      "url": "https://www.tiemposur.com.ar/rss"
+    },
+    {
+      "name": "OPI Santa Cruz",
+      "url": "https://www.opisantacruz.com.ar/feed/"
+    },
+    {
+      "name": "Nuevo Día",
+      "url": "https://www.eldiarionuevodia.com.ar/feed/"
+    },
+    {
+      "name": "Ahora Calafate",
+      "url": "https://www.ahoracalafate.com.ar/feed/"
+    },
+    {
+      "name": "La Vanguardia Noticias",
+      "url": "https://www.lavanguardianoticias.com.ar/feed/"
+    },
+    {
+      "name": "Santa Cruz Nuestro Lugar",
+      "url": "https://www.santacruznuestrolugar.com/blog-feed.xml"
+    },
+    {
+      "name": "Letra P",
+      "url": "https://www.letrap.com.ar/rss/home.xml"
+    },
+    {
+      "name": "Página/12",
+      "url": "https://www.pagina12.com.ar/rss/portada"
+    },
+    {
+      "name": "Infobae Política",
+      "url": "https://www.infobae.com/arc/outboundfeeds/rss/category/politica/"
+    }
+  ],
+  "trends": {
+    "terminos": [
+      "Pablo Grasso",
+      "Juan Carlos Molina",
+      "Claudio Vidal",
+      "Jairo Guzmán",
+      "Carambia"
+    ],
+    "geos": {
+      "AR-Z": "Santa Cruz",
+      "AR": "Argentina"
+    }
+  },
+  "wiki_provincia": [
+    "Provincia de Santa Cruz (Argentina)"
+  ],
+  "textos_comentarios": "extracto",
+  "medios_locales": [
+    "opinión austral",
+    "opinion austral",
+    "tiemposur",
+    "tiempo sur",
+    "opi santa cruz",
+    "nuevo día",
+    "nuevo dia",
+    "ahora calafate",
+    "vanguardia noticias",
+    "winfo",
+    "nuestro lugar",
+    "señal calafate",
+    "senal calafate",
+    "el caletense",
+    "la otra voz",
+    "santa cruz en el mundo"
+  ]
+}
