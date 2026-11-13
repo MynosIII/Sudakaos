@@ -142,7 +142,7 @@ footer{color:var(--dim);font-size:12px;max-width:1560px;margin:0 auto;padding:0 
 <nav><div class="in" id="tabs">
   <button data-t="panorama" class="on">Panorama</button><button data-t="gente">Qué dice la gente</button>
   <button data-t="temas">Temas</button><button data-t="riquelme">Riquelme</button><button data-t="figuras">Figuras</button>
-  <button data-t="elecciones">Hacia 2027</button><button data-t="poder">Mapa de poder</button>
+  <button data-t="elecciones">Hacia 2027</button><button data-t="aspirante" id="tb-asp" hidden>Klix · vice</button><button data-t="poder">Mapa de poder</button>
   <button data-t="medios">Medios</button><button data-t="metodo">Fuentes y método</button>
 </div></nav>
 <main>
@@ -222,6 +222,25 @@ footer{color:var(--dim);font-size:12px;max-width:1560px;margin:0 auto;padding:0 
     </div>
   </section>
 
+  <section class="tab" id="t-aspirante">
+    <div class="hero"><div class="av" id="a-av" style="background:#3987e5;color:#fff">WK</div>
+      <div><h1 id="a-name"></h1><div class="k" id="a-cargo"></div><ul class="find" id="a-lect"></ul></div></div>
+    <div class="kpis" id="a-kpis"></div>
+    <div class="g">
+      <div class="card c8"><h3>Menciones por semana <span class="tag">total y vinculadas a candidatura / vice</span></h3><div id="a-weekly" style="height:300px"></div></div>
+      <div class="card c4"><h3>Con qué se lo asocia <span class="tag">encuadres · clic para ver textos</span></h3><div class="bars" id="a-enc"></div></div>
+      <div class="card c6 osint" data-o="OPOSICIÓN CABJ"><h3>Frente al resto de la oposición</h3><div style="overflow-x:auto"><table id="a-opo"></table></div><p class="note">Elecciones = textos sobre elecciones del club que nombran a cada figura. Clic en una fila para ver sus textos.</p></div>
+      <div class="card c6"><h3>Cuando se habla de él como candidato <span class="tag">comentarios y notas</span></h3>
+        <div class="sect" style="margin-top:0">Con quién aparece</div><div class="bars" id="a-co"></div>
+        <div class="sect">Qué hace la gente</div><div id="a-int"></div>
+        <div class="sect">Frases repetidas</div><div id="a-fr"></div></div>
+      <div class="card c6"><h3>Nube de palabras <span class="tag">clic en una palabra</span></h3><div id="a-cloud"></div></div>
+      <div class="card c6"><h3>Qué le critican y qué le bancan</h3><div class="sect" style="margin-top:0;color:var(--critica)">Crítica</div><div id="a-fc"></div><div class="sect" style="color:var(--apoya)">Apoyo</div><div id="a-fa"></div>
+        <button class="chip on" id="a-all" style="margin-top:14px">Ver todos los textos que lo nombran →</button></div>
+      <div class="card c12"><h3>Titulares que lo vinculan a una candidatura</h3><div class="hl" id="a-heads" style="max-height:380px"></div></div>
+    </div>
+  </section>
+
   <section class="tab" id="t-poder">
     <div class="g">
       <div class="card c8 osint" data-o="POWER MAP · CABJ"><h3>Mapa de poder</h3><div id="pw" style="height:600px"></div></div>
@@ -288,9 +307,10 @@ function init(){
   const seen=new Set();$('#ticker').innerHTML=heads.filter(h=>!seen.has(h.t)&&seen.add(h.t)).slice(0,18).map(h=>`<span><em>${esc(h.p.toUpperCase())}</em>${esc(h.t)} · ${esc(h.o)}</span>`).join('')||'<span>Sin titulares todavía</span>';
   if(!D.totales.textos)$('#warn').innerHTML='<div class="warnbox">Todavía no hay textos recolectados: la primera corrida del recolector diario completa el tablero.</div>';
   $$('.cdays').forEach(e=>e.textContent=D.conversacion_dias);
+  if(D.aspirante){const b=$('#tb-asp');b.hidden=false;b.textContent=D.aspirante.name.split(' ').pop()+' · '+(D.aspirante.rol==='vicepresidente'?'vice':D.aspirante.rol)}
   drawTab('panorama');
 }
-function drawTab(id){if(!D||drawn.has(id))return;drawn.add(id);({panorama,gente,temas,riquelme,figuras,elecciones,poder,medios,metodo}[id]||(()=>{}))()}
+function drawTab(id){if(!D||drawn.has(id))return;drawn.add(id);({panorama,gente,temas,riquelme,figuras,elecciones,aspirante,poder,medios,metodo}[id]||(()=>{}))()}
 
 // ---------------------------------------------------------------- helpers
 function spark(arr,col){if(!arr||arr.length<2)return'';const m=Math.max(...arr,1),w=84,h=30;
@@ -458,6 +478,40 @@ function elecciones(){const E=D.elecciones;if(!E)return;
   $('#e-heads').innerHTML=headsHTML(E.titulares);
 }
 
+// ---------------------------------------------------------------- aspirante (Klix como posible vice)
+const rolRx=A=>new RegExp('(^|[^a-z0-9])('+A.rol_terms.map(t=>foldJS(t).replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).sort((a,b)=>b.length-a.length).join('|')+')','');
+function aspirante(){const A=D.aspirante;if(!A)return;const f=F.find(p=>p.name===A.name)||{},isA=r=>(r.pols||[]).includes(A.name);
+  $('#a-name').textContent=A.name;$('#a-av').textContent=ini(A.name);$('#a-cargo').textContent=(f.cargo||'')+' · se mide como posible '+A.rol;
+  $('#a-lect').innerHTML=(A.lectura||[]).map(t=>`<li>${esc(t)}</li>`).join('');
+  const ro=A.rank_oposicion||{};
+  $('#a-kpis').innerHTML=[
+    ['f','Menciones',fmt(A.n),`${D.conversacion_dias} días · ${fmt(A.n_news)} notas · ${fmt(A.n_comments)} comentarios`,spark((f.weekly||[]).slice(-12),'#3987e5')],
+    ['','Asociado a candidatura',A.rol_pct==null?'–':A.rol_pct+'%',`${fmt(A.rol_n)} textos hablan de fórmula, lista o vice`,''],
+    ['','Balance apoyo − crítica',sgn(f.balance),'en comentarios que lo nombran (−100 a +100)',''],
+    ['','Balance como candidato',sgn(A.balance_rol),`${fmt(A.rol_comments)} comentarios sobre su candidatura`,''],
+    ['','Puesto en la oposición',ro.pos?ro.pos+'º de '+ro.de:'–','por volumen de menciones',''],
+    ['','En la charla electoral',fmt(A.elecciones_n),A.rank_elecciones?`textos · ${A.rank_elecciones}º opositor más nombrado`:'textos sobre elecciones del club',''],
+  ].map(k=>`<div class="kpi ${k[0]}"><div class="l">${k[1]}</div><div class="v">${k[2]}</div><div class="d">${k[3]}</div>${k[4]}</div>`).join('');
+  Plotly.newPlot('a-weekly',[{x:D.semanas,y:f.weekly||D.semanas.map(()=>0),name:'Todas las menciones',type:'bar',marker:{color:'#3987e5'},hovertemplate:'%{x}: %{y}<extra>menciones</extra>'},
+    {x:D.semanas,y:A.rol_weekly,name:'Vinculadas a candidatura / vice',type:'scatter',mode:'lines+markers',line:{color:C.foco,width:2.4},hovertemplate:'%{x}: %{y}<extra>candidatura</extra>'}],
+    base({hovermode:'x unified',margin:{l:36,r:10,t:10,b:50}}),CFG);
+  const E=A.encuadres||[],ENCT=(D.metodo.aspirante_encuadres||{});
+  $('#a-enc').innerHTML=E.length?E.map((e,i)=>`<div class="r" data-enc="${i}" style="cursor:pointer"><span>${esc(e.n)}</span><i style="width:${Math.max(3,e.pct)}%;background:${PAL[i%PAL.length]}"></i><b>${e.pct}%</b></div>`).join(''):'<div class="empty">Sin textos todavía.</div>';
+  $$('#a-enc [data-enc]').forEach(el=>el.onclick=()=>{const e=E[+el.dataset.enc],ts=(ENCT[e.n]||[]).map(foldJS);
+    showTexts(e.n,`textos sobre ${A.name} con este encuadre`,r=>isA(r)&&ts.some(t=>foldJS(r.t).includes(t)),ENCT[e.n]||[])});
+  const O=A.oposicion||[];
+  $('#a-opo').innerHTML=O.length?'<thead><tr><th>Figura</th><th class="n">Menciones</th><th class="n">Part.</th><th class="n">Elecciones</th><th class="n">% neg.</th><th class="n">Balance</th></tr></thead><tbody>'+O.map(o=>`<tr data-n="${esc(o.name)}" class="${o.name===A.name?'sel':''}"><td style="color:var(--txt)">${o.name===A.name?'<b>'+esc(o.name)+'</b>':esc(o.name)}</td><td class="n">${fmt(o.n)}</td><td class="n">${o.share??'–'}%</td><td class="n">${fmt(o.elecciones)}</td><td class="n">${o.neg??'–'}</td><td class="n">${balHTML(o.balance)}</td></tr>`).join('')+'</tbody>':'<tr><td class="empty">Sin datos todavía.</td></tr>';
+  $$('#a-opo tbody tr').forEach(tr=>tr.onclick=()=>showTexts(tr.dataset.n,'textos que lo nombran',r=>(r.pols||[]).includes(tr.dataset.n),[]));
+  $('#a-co').innerHTML=bars((A.co_rol||[]).map(c=>[c.a,c.n,BC[c.bando]]));
+  const I=A.int_rol;
+  $('#a-int').innerHTML=I?'<div class="bars">'+Object.keys(IN).map(k=>`<div class="r"><span>${IN[k]}</span><i style="width:${Math.max(2,I[k])}%;background:${IC[k]}"></i><b>${I[k]}%</b></div>`).join('')+'</div>':'<div class="empty" style="padding:6px 0">Todavía hay menos de 5 comentarios sobre su candidatura.</div>';
+  $('#a-fr').innerHTML=frHTML(A.frases_rol,'asp:'+A.name);
+  $('#a-cloud').innerHTML=cloudSVG(f.cloud,560,300,40,A.name);
+  $('#a-fc').innerHTML=frHTML(f.frases_critica,'figint:'+A.name+':critica');$('#a-fa').innerHTML=frHTML(f.frases_apoya,'figint:'+A.name+':apoya');
+  $('#a-all').onclick=()=>showTexts(A.name,'todos los textos que lo nombran',isA,(f.alias||[]));
+  $('#a-heads').innerHTML=(A.titulares_rol||[]).length?headsHTML(A.titulares_rol):headsHTML(f.headlines);
+}
+
 // ---------------------------------------------------------------- mapa de poder
 function poder(){const M=D.mapa_poder,P=M.puntos,mx=Math.max(1,...P.map(p=>p.n));
   const groups={};P.forEach(p=>(groups[p.bando]=groups[p.bando]||[]).push(p));
@@ -494,7 +548,7 @@ function mHeads(){const ps=F.filter(p=>(p.headlines||[]).length);
 function metodo(){const S=D.status||{},nm={youtube:'YouTube (comentarios)',google_news:'Google News (medios)',rss:'RSS de medios deportivos',wikipedia:'Wikipedia'};
   $('#st').innerHTML=Object.entries(nm).map(([k,n])=>{const s=S[k]||{};return `<span class="chip ${s.ok?'ok':'no'}">${n}${s.items!=null?' · '+fmt(s.items):''}</span>`}).join('')+'<span class="chip no">Facebook / Instagram · sin API abierta</span><span class="chip no">X · API paga</span>';
   $('#st-n').textContent=`Ventana: ${D.window_days} días de almacenamiento, ${D.conversacion_dias} días para los indicadores. Tono calculado con ${D.totales.metodo_nlp==='modelo'?'modelos pysentimiento':'diccionarios'}. Se actualiza todos los días desde GitHub Actions.`;
-  const M=D.metodo;$('#mt').innerHTML=['menciones','intencion','balance','pedidos','tono'].map(k=>`<p>${esc(M[k])}</p>`).join('')+'<p>Son indicadores para orientar la mirada, no una encuesta: quienes comentan en YouTube no son todos los hinchas ni todos los socios.</p>';
+  const M=D.metodo;$('#mt').innerHTML=['menciones','intencion','balance','pedidos','tono','aspirante'].filter(k=>M[k]).map(k=>`<p>${esc(M[k])}</p>`).join('')+'<p>Son indicadores para orientar la mirada, no una encuesta: quienes comentan en YouTube no son todos los hinchas ni todos los socios.</p>';
   const tbl=o=>'<thead><tr><th></th><th>Términos</th></tr></thead><tbody>'+Object.entries(o).map(([k,v])=>`<tr><td style="color:var(--txt)">${esc(IN[k]||k)}</td><td style="font-size:12px">${esc(v.join(', '))}</td></tr>`).join('')+'</tbody>';
   $('#mt-al').innerHTML=tbl(M.figuras);$('#mt-int').innerHTML=tbl(M.intenciones);$('#mt-tem').innerHTML=tbl(M.temas);
 }
@@ -532,6 +586,7 @@ document.addEventListener('click',e=>{
     if(kind==='int')flt=r=>r.k==='c'&&(r.int||[]).includes(a);
     else if(kind==='tema')flt=r=>r.k==='c'&&(r.temas||[]).includes(a);
     else if(kind==='figint')flt=r=>r.k==='c'&&(r.pols||[]).includes(a)&&(r.int||[]).includes(b);
+    else if(kind==='asp'){const RR=rolRx(D.aspirante);flt=r=>r.k==='c'&&(r.pols||[]).includes(a)&&RR.test(foldJS(r.t))}
     const words=g.split(' ');
     showTexts(`«${g}»`,'comentarios que repiten esta frase',r=>{if(!flt(r))return false;const t=' '+foldJS(r.t).replace(/[^a-zñ0-9]+/g,' ')+' ';return words.length>1?t.includes(' '+g+' ')||words.every(w=>t.includes(' '+w+' ')):t.includes(' '+g+' ')},[g])}
 });

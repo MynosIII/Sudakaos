@@ -197,6 +197,15 @@
     "Claudio Tapia"
    ],
    "espacio": "Externo"
+  },
+  "Walter Klix": {
+   "alias": [
+    "klix",
+    "walter klix"
+   ],
+   "bando": "Oposición",
+   "cargo": "Socio, cercano a Patricia Bullrich; denunció a Riquelme y busca ser vice en 2027",
+   "espacio": "Oposición"
   }
  },
  "mapa_poder": {
@@ -276,6 +285,11 @@
     "alineamiento": 30,
     "peso": 75,
     "nota": "Conduce la AFA; relación institucional con la dirigencia del club."
+   },
+   "Walter Klix": {
+    "alineamiento": 97,
+    "peso": 18,
+    "nota": "Denunció a Riquelme (asociación ilícita, reventa, administración fraudulenta); el club evaluó expulsarlo como socio. Sin estructura propia en el club: busca lugar como vice en una fórmula opositora."
    }
   }
  },
@@ -806,7 +820,10 @@
    "Ameal Riquelme",
    "ampliación Bombonera",
    "Boca SAD sociedades anónimas",
-   "Boca Juniors socios entradas"
+   "Boca Juniors socios entradas",
+   "Walter Klix Riquelme",
+   "Walter Klix Boca",
+   "Klix denuncia Riquelme"
   ],
   "contexto": [
    "boca",
@@ -852,7 +869,11 @@
    "Boca Juniors deuda balance",
    "Boca Juniors barra",
    "Paredes Boca capitán",
-   "Tapia Riquelme"
+   "Tapia Riquelme",
+   "\"Walter Klix\"",
+   "Klix Riquelme",
+   "Klix Boca vicepresidente",
+   "Klix Boca elecciones"
   ],
   "sites": [
    "ole.com.ar",
@@ -898,5 +919,89 @@
  "wiki_club": [
   "Club Atlético Boca Juniors"
  ],
- "textos_comentarios": "extracto"
+ "textos_comentarios": "extracto",
+ "aspirante": {
+  "figura": "Walter Klix",
+  "rol": "vicepresidente",
+  "rol_terms": [
+   "vice",
+   "vicepresidente",
+   "vicepresidencia",
+   "formula",
+   "fórmula",
+   "compañero de fórmula",
+   "binomio",
+   "dupla",
+   "lista",
+   "candidato",
+   "candidata",
+   "candidatura",
+   "postula",
+   "2027",
+   "elecciones",
+   "elección"
+  ],
+  "encuadres": {
+   "Denuncias contra Riquelme": [
+    "denuncia",
+    "denunció",
+    "denuncio",
+    "denunciante",
+    "asociación ilícita",
+    "asociacion ilicita",
+    "administración fraudulenta",
+    "administracion fraudulenta",
+    "fiscal",
+    "fiscalía",
+    "juzgado",
+    "comodoro py",
+    "causa",
+    "imputa"
+   ],
+   "Reventa de entradas": [
+    "reventa",
+    "entradas",
+    "revendedor",
+    "carnet",
+    "abono"
+   ],
+   "Gobierno y Bullrich": [
+    "bullrich",
+    "ministerio de seguridad",
+    "funcionario",
+    "gobierno",
+    "milei",
+    "libertario",
+    "libertad avanza"
+   ],
+   "Expulsión como socio": [
+    "expuls",
+    "tribunal de disciplina",
+    "sanción",
+    "sancion",
+    "suspensión",
+    "suspension",
+    "dar de baja"
+   ],
+   "Candidatura y fórmula 2027": [
+    "vice",
+    "vicepresidente",
+    "fórmula",
+    "formula",
+    "candidato",
+    "candidatura",
+    "lista",
+    "2027",
+    "elecciones"
+   ],
+   "Macrismo y oposición": [
+    "macri",
+    "angelici",
+    "ibarra",
+    "oposición",
+    "oposicion",
+    "macrismo"
+   ]
+  }
+ }
 }
