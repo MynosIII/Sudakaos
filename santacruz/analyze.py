@@ -225,7 +225,16 @@ def main():
     vinfo = {i["video_id"]: i for i in items if i["kind"] == "video"}
     texts = [i for i in items if i["kind"] != "video"]
     # Notas: solo las que tienen contexto santacruceño o nombran a una figura provincial (Google News trae ruido con apellidos comunes)
-    texts = [r for r in texts if r["kind"] == "comment" or CTX.search(fold(r.get("text", "")))]
+    # Una nota que salió de una búsqueda por el nombre de un candidato y lo nombra también vale aunque no diga "Santa Cruz"
+    FOCO_Q = {f: [fold(a) for a in FIG[f]["alias"] if len(a) > 5] for f in FOCOS}
+
+    def pertinente(r):
+        t = fold(r.get("text", ""))
+        if CTX.search(t):
+            return True
+        q = fold(r.get("query", ""))
+        return any(any(a in q for a in al) and POLS[f].search(t) for f, al in FOCO_Q.items())
+    texts = [r for r in texts if r["kind"] == "comment" or pertinente(r)]
     label_tone(texts)
 
     for r in texts:
