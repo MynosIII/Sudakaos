@@ -213,6 +213,7 @@ def main():
     now = datetime.now(timezone.utc)
     since = iso(now - timedelta(days=CONFIG["window_days"]))
     items = [i for i in load_items() if i.get("created_at", "") >= since]
+    raw = items
     seen, dedup = set(), []
     for i in sorted(items, key=lambda x: x.get("query") == "rss"):
         key = (i["kind"], fold(i.get("title") or i.get("text", ""))[:120]) if i["kind"] == "news" else (i["kind"], i["id"])
@@ -221,6 +222,12 @@ def main():
         seen.add(key)
         dedup.append(i)
     items = dedup
+    # Aspirante: muchos titulares sobre él no dicen su nombre ("un funcionario de Bullrich denunció a Riquelme").
+    # Las notas que trajeron sus búsquedas propias (aspirante.atribuir_queries) se le atribuyen igual.
+    ASP = CONFIG.get("aspirante") or {}
+    asp_q = set(ASP.get("atribuir_queries", []))
+    asp_titles = {fold(i.get("title") or i.get("text", ""))[:120] for i in raw
+                  if i["kind"] == "news" and asp_q & set(i.get("queries") or [i.get("query")])}
     vinfo = {i["video_id"]: i for i in items if i["kind"] == "video"}
     texts = [i for i in items if i["kind"] != "video"]
     # Notas: solo las que hablan de Boca o de alguna figura (Google News trae ruido con apellidos comunes)
@@ -243,6 +250,16 @@ def main():
             if "critica" in hits and "apoya" in hits:  # el tono desempata
                 hits.discard("apoya" if r["tono"] == "NEG" else "critica" if r["tono"] == "POS" else "")
         r["int"] = sorted(hits) if r["kind"] == "comment" else []
+    if ASP.get("figura") in FIG:
+        ka, pa = ASP["figura"], POLS[ASP["figura"]]
+        asp_vid = {v for v, i in vinfo.items() if pa.search(fold(i.get("text", "")))}
+        for r in texts:
+            if ka in r["pols"]:
+                continue
+            if (r["kind"] == "news" and fold(r.get("title") or r.get("text", ""))[:120] in asp_titles) or \
+               (r["kind"] == "comment" and r.get("video_id") in asp_vid):
+                r["pols"].append(ka)
+                r["pol_inferido"] = True
     # Comentarios heredan la figura del video cuando el video es sobre una sola
     vpols = {v: [k for k, p in POLS.items() if p.search(fold(i.get("text", "")))] for v, i in vinfo.items()}
     vtem = {v: [k for k, p in TEMAS.items() if p.search(fold(i.get("text", "")))] for v, i in vinfo.items()}

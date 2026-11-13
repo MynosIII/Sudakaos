@@ -805,6 +805,9 @@
   "videos_per_query": 10,
   "comments_per_video": 100,
   "queries": [
+   "Walter Klix Riquelme",
+   "Walter Klix Boca",
+   "Klix denuncia Riquelme",
    "Riquelme Boca",
    "Riquelme conferencia",
    "Riquelme hinchas Boca",
@@ -820,10 +823,7 @@
    "Ameal Riquelme",
    "ampliación Bombonera",
    "Boca SAD sociedades anónimas",
-   "Boca Juniors socios entradas",
-   "Walter Klix Riquelme",
-   "Walter Klix Boca",
-   "Klix denuncia Riquelme"
+   "Boca Juniors socios entradas"
   ],
   "contexto": [
    "boca",
@@ -844,6 +844,10 @@
  },
  "google_news": {
   "queries": [
+   "\"Walter Klix\"",
+   "Klix Riquelme",
+   "Klix Boca vicepresidente",
+   "Klix Boca elecciones",
    "Riquelme Boca",
    "\"Juan Román Riquelme\"",
    "Riquelme hinchas",
@@ -869,11 +873,7 @@
    "Boca Juniors deuda balance",
    "Boca Juniors barra",
    "Paredes Boca capitán",
-   "Tapia Riquelme",
-   "\"Walter Klix\"",
-   "Klix Riquelme",
-   "Klix Boca vicepresidente",
-   "Klix Boca elecciones"
+   "Tapia Riquelme"
   ],
   "sites": [
    "ole.com.ar",
@@ -1002,6 +1002,13 @@
     "oposicion",
     "macrismo"
    ]
-  }
+  },
+  "atribuir_queries": [
+   "\"Walter Klix\"",
+   "Klix Riquelme",
+   "Walter Klix Riquelme",
+   "Walter Klix Boca",
+   "Klix denuncia Riquelme"
+  ]
  }
 }
