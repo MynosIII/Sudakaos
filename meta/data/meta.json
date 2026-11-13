@@ -1,0 +1,125 @@
+{
+ "updated_at": "2026-11-13T17:20-03:00",
+ "grupos": [
+  "País",
+  "Boca",
+  "Provincia de Buenos Aires",
+  "CABA",
+  "San Isidro"
+ ],
+ "estado": "sin token",
+ "faltan": [
+  "META_TOKEN",
+  "META_IG_USER_ID"
+ ],
+ "dirigentes": [
+  {
+   "name": "Sergio Massa",
+   "grupo": "País",
+   "espacio": "Peronismo",
+   "distrito": null
+  },
+  {
+   "name": "Javier Milei",
+   "grupo": "País",
+   "espacio": "La Libertad Avanza",
+   "distrito": null
+  },
+  {
+   "name": "Cristina Kirchner",
+   "grupo": "País",
+   "espacio": "Peronismo",
+   "distrito": null
+  },
+  {
+   "name": "Axel Kicillof",
+   "grupo": "País",
+   "espacio": "Peronismo",
+   "distrito": null
+  },
+  {
+   "name": "Patricia Bullrich",
+   "grupo": "País",
+   "espacio": "La Libertad Avanza",
+   "distrito": null
+  },
+  {
+   "name": "Victoria Villarruel",
+   "grupo": "País",
+   "espacio": "La Libertad Avanza",
+   "distrito": null
+  },
+  {
+   "name": "Juan Román Riquelme",
+   "grupo": "Boca",
+   "espacio": "Oficialismo Boca",
+   "distrito": null
+  },
+  {
+   "name": "Mauricio Macri",
+   "grupo": "Boca",
+   "espacio": "PRO",
+   "distrito": null
+  },
+  {
+   "name": "Andrés Ibarra",
+   "grupo": "Boca",
+   "espacio": "Oposición Boca",
+   "distrito": null
+  },
+  {
+   "name": "Diego Santilli",
+   "grupo": "Provincia de Buenos Aires",
+   "espacio": "La Libertad Avanza",
+   "distrito": null
+  },
+  {
+   "name": "Verónica Magario",
+   "grupo": "Provincia de Buenos Aires",
+   "espacio": "Peronismo",
+   "distrito": null
+  },
+  {
+   "name": "Julio Zamora",
+   "grupo": "Provincia de Buenos Aires",
+   "espacio": "Peronismo",
+   "distrito": "Tigre"
+  },
+  {
+   "name": "Malena Galmarini",
+   "grupo": "Provincia de Buenos Aires",
+   "espacio": "Peronismo",
+   "distrito": "Tigre"
+  },
+  {
+   "name": "Jorge Macri",
+   "grupo": "CABA",
+   "espacio": "PRO",
+   "distrito": null
+  },
+  {
+   "name": "Leandro Santoro",
+   "grupo": "CABA",
+   "espacio": "Peronismo",
+   "distrito": null
+  },
+  {
+   "name": "Ramón Lanús",
+   "grupo": "San Isidro",
+   "espacio": "PRO",
+   "distrito": null
+  },
+  {
+   "name": "Gustavo Posse",
+   "grupo": "San Isidro",
+   "espacio": "Acción Vecinal",
+   "distrito": null
+  },
+  {
+   "name": "Federico Meca",
+   "grupo": "San Isidro",
+   "espacio": "Frente Renovador",
+   "distrito": null
+  }
+ ]
+}

@@ -139,6 +139,33 @@
     "Malena Galmarini": [
       "malena galmarini",
       "galmarini"
+    ],
+    "Juan Román Riquelme": [
+      "riquelme",
+      "juan román riquelme",
+      "juan roman riquelme"
+    ],
+    "Andrés Ibarra": [
+      "andrés ibarra",
+      "andres ibarra"
+    ],
+    "Verónica Magario": [
+      "magario",
+      "verónica magario",
+      "veronica magario"
+    ],
+    "Julio Zamora": [
+      "julio zamora"
+    ],
+    "Ramón Lanús": [
+      "ramón lanús",
+      "ramon lanus"
+    ],
+    "Gustavo Posse": [
+      "gustavo posse"
+    ],
+    "Federico Meca": [
+      "federico meca"
     ]
   },
   "risk_terms": [
@@ -775,6 +802,34 @@
       "espacio": "STF"
     },
     "Malena Galmarini": {
+      "pais": "AR",
+      "espacio": "Peronismo"
+    },
+    "Juan Román Riquelme": {
+      "pais": "AR",
+      "espacio": "Boca"
+    },
+    "Andrés Ibarra": {
+      "pais": "AR",
+      "espacio": "Boca"
+    },
+    "Verónica Magario": {
+      "pais": "AR",
+      "espacio": "Peronismo"
+    },
+    "Julio Zamora": {
+      "pais": "AR",
+      "espacio": "Peronismo"
+    },
+    "Ramón Lanús": {
+      "pais": "AR",
+      "espacio": "PRO"
+    },
+    "Gustavo Posse": {
+      "pais": "AR",
+      "espacio": "Acción Vecinal"
+    },
+    "Federico Meca": {
       "pais": "AR",
       "espacio": "Peronismo"
     }
