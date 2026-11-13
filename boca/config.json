@@ -1,0 +1,902 @@
+{
+ "nombre": "Boca Juniors",
+ "foco": "Juan Román Riquelme",
+ "window_days": 365,
+ "conversacion_dias": 180,
+ "eleccion": "2027-12-01",
+ "figuras": {
+  "Juan Román Riquelme": {
+   "alias": [
+    "riquelme",
+    "román",
+    "roman riquelme",
+    "juan román",
+    "juan roman",
+    "jrr",
+    "presidente de boca",
+    "romancito"
+   ],
+   "bando": "Oficialismo",
+   "cargo": "Presidente de Boca (mandato hasta dic. 2027)",
+   "foco": true,
+   "wiki": [
+    "Juan Román Riquelme"
+   ],
+   "espacio": "Oficialismo"
+  },
+  "Mauricio Macri": {
+   "alias": [
+    "macri",
+    "mauricio macri",
+    "mm"
+   ],
+   "bando": "Oposición",
+   "cargo": "Expresidente de Boca y de la Nación; referente opositor",
+   "wiki": [
+    "Mauricio Macri"
+   ],
+   "espacio": "Oposición"
+  },
+  "Andrés Ibarra": {
+   "alias": [
+    "andrés ibarra",
+    "andres ibarra",
+    "ibarra"
+   ],
+   "bando": "Oposición",
+   "cargo": "Candidato opositor en 2023, exgerente general del club",
+   "wiki": [
+    "Andrés Ibarra"
+   ],
+   "espacio": "Oposición"
+  },
+  "Daniel Angelici": {
+   "alias": [
+    "angelici",
+    "tano angelici",
+    "el tano"
+   ],
+   "bando": "Oposición",
+   "cargo": "Expresidente de Boca (2011-2019), armador opositor",
+   "wiki": [
+    "Daniel Angelici"
+   ],
+   "espacio": "Oposición"
+  },
+  "José Beraldi": {
+   "alias": [
+    "beraldi",
+    "josé beraldi",
+    "jose beraldi"
+   ],
+   "bando": "Oposición",
+   "cargo": "Exvicepresidente; lanzó candidatura para 2027",
+   "espacio": "Oposición"
+  },
+  "Jorge Amor Ameal": {
+   "alias": [
+    "ameal",
+    "jorge amor ameal"
+   ],
+   "bando": "Distanciado",
+   "cargo": "Expresidente (2019-2023), aliado de Riquelme hoy distanciado",
+   "wiki": [
+    "Jorge Amor Ameal"
+   ],
+   "espacio": "Distanciado"
+  },
+  "Mario Pergolini": {
+   "alias": [
+    "pergolini"
+   ],
+   "bando": "Distanciado",
+   "cargo": "Exvicepresidente (2019-2023)",
+   "wiki": [
+    "Mario Pergolini"
+   ],
+   "espacio": "Distanciado"
+  },
+  "Christian Gribaudo": {
+   "alias": [
+    "gribaudo"
+   ],
+   "bando": "Oposición",
+   "cargo": "Excandidato 2019, armador",
+   "wiki": [
+    "Christian Gribaudo"
+   ],
+   "espacio": "Oposición"
+  },
+  "Horacio Paolini": {
+   "alias": [
+    "paolini",
+    "horacio paolini"
+   ],
+   "bando": "Oposición",
+   "cargo": "Exvicepresidente de Angelici, busca lugar en 2027",
+   "espacio": "Oposición"
+  },
+  "Jorge Reale": {
+   "alias": [
+    "jorge reale",
+    "reale"
+   ],
+   "bando": "Oposición",
+   "cargo": "Dirigente opositor, por fuera del macrismo",
+   "espacio": "Oposición"
+  },
+  "Rodolfo Arruabarrena": {
+   "alias": [
+    "arruabarrena",
+    "vasco arruabarrena",
+    "el vasco"
+   ],
+   "bando": "Fútbol",
+   "cargo": "Director técnico (desde jun. 2026)",
+   "wiki": [
+    "Rodolfo Arruabarrena"
+   ],
+   "espacio": "Fútbol"
+  },
+  "Marcelo Delgado": {
+   "alias": [
+    "chelo delgado",
+    "marcelo delgado"
+   ],
+   "bando": "Fútbol",
+   "cargo": "Consejo de Fútbol",
+   "wiki": [
+    "Marcelo Delgado"
+   ],
+   "espacio": "Fútbol"
+  },
+  "Mauricio Serna": {
+   "alias": [
+    "chicho serna",
+    "mauricio serna"
+   ],
+   "bando": "Fútbol",
+   "cargo": "Consejo de Fútbol",
+   "wiki": [
+    "Mauricio Serna"
+   ],
+   "espacio": "Fútbol"
+  },
+  "Leandro Paredes": {
+   "alias": [
+    "paredes",
+    "leandro paredes"
+   ],
+   "bando": "Fútbol",
+   "cargo": "Capitán del plantel",
+   "wiki": [
+    "Leandro Paredes"
+   ],
+   "espacio": "Fútbol"
+  },
+  "Javier Milei": {
+   "alias": [
+    "milei"
+   ],
+   "bando": "Externo",
+   "cargo": "Presidente de la Nación; impulsa las SAD",
+   "wiki": [
+    "Javier Milei"
+   ],
+   "espacio": "Externo"
+  },
+  "Claudio Tapia": {
+   "alias": [
+    "chiqui tapia",
+    "claudio tapia",
+    "tapia"
+   ],
+   "bando": "Externo",
+   "cargo": "Presidente de la AFA",
+   "wiki": [
+    "Claudio Tapia"
+   ],
+   "espacio": "Externo"
+  }
+ },
+ "mapa_poder": {
+  "metodo": "Codificación editorial inicial para ubicar a cada figura en el tablero de poder del club, a revisar con el cliente. Eje horizontal: 0 = núcleo de Riquelme, 100 = oposición macrista/angelicista. Eje vertical: peso institucional (cargo, historia, capacidad de armar listas). El tamaño de cada punto sale de las menciones medidas.",
+  "puntos": {
+   "Juan Román Riquelme": {
+    "alineamiento": 5,
+    "peso": 90,
+    "nota": "Conduce el club desde 2019 (vice) y 2023 (presidente); máximo ídolo, gana con voto socio y defiende 'Boca de los socios', contra las SAD."
+   },
+   "Mauricio Macri": {
+    "alineamiento": 95,
+    "peso": 85,
+    "nota": "Expresidente del club y de la Nación; históricamente a favor de abrir el fútbol a capitales privados (SAD)."
+   },
+   "Andrés Ibarra": {
+    "alineamiento": 92,
+    "peso": 55,
+    "nota": "Fórmula con Macri en 2023; perfil de gestión y modernización."
+   },
+   "Daniel Angelici": {
+    "alineamiento": 88,
+    "peso": 70,
+    "nota": "Sucesor de Macri en el club; armador del 'angelicismo' y kingmaker opositor."
+   },
+   "José Beraldi": {
+    "alineamiento": 75,
+    "peso": 50,
+    "nota": "Opositor que pide unidad ya; tercero en 2019."
+   },
+   "Jorge Amor Ameal": {
+    "alineamiento": 45,
+    "peso": 40,
+    "nota": "Ganó en 2019 con Riquelme; se diferenció de la gestión actual."
+   },
+   "Mario Pergolini": {
+    "alineamiento": 55,
+    "peso": 45,
+    "nota": "Vice de Ameal; se reúne con sectores opositores."
+   },
+   "Christian Gribaudo": {
+    "alineamiento": 80,
+    "peso": 35,
+    "nota": "Candidato del oficialismo angelicista en 2019; hoy armador."
+   },
+   "Horacio Paolini": {
+    "alineamiento": 70,
+    "peso": 27,
+    "nota": "Exvice de Angelici, cercano a Pergolini."
+   },
+   "Jorge Reale": {
+    "alineamiento": 65,
+    "peso": 25,
+    "nota": "Opositor por fuera del macrismo, trabaja con Battaglia."
+   },
+   "Rodolfo Arruabarrena": {
+    "alineamiento": 15,
+    "peso": 70,
+    "nota": "DT elegido por la conducción de Riquelme."
+   },
+   "Marcelo Delgado": {
+    "alineamiento": 6,
+    "peso": 49,
+    "nota": "Consejo de Fútbol, núcleo riquelmista."
+   },
+   "Mauricio Serna": {
+    "alineamiento": 11,
+    "peso": 41,
+    "nota": "Consejo de Fútbol, núcleo riquelmista."
+   },
+   "Javier Milei": {
+    "alineamiento": 98,
+    "peso": 40,
+    "nota": "Promueve las Sociedades Anónimas Deportivas; choca con la postura de Riquelme."
+   },
+   "Claudio Tapia": {
+    "alineamiento": 30,
+    "peso": 75,
+    "nota": "Conduce la AFA; relación institucional con la dirigencia del club."
+   }
+  }
+ },
+ "intenciones": {
+  "quiere": [
+   "queremos",
+   "quiero",
+   "que traigan",
+   "traigan",
+   "hay que",
+   "necesitamos",
+   "necesita",
+   "necesitan",
+   "falta un",
+   "nos falta",
+   "que se vaya",
+   "que se vayan",
+   "se tiene que ir",
+   "se tienen que ir",
+   "que renuncie",
+   "renuncia",
+   "fuera",
+   "que vuelva",
+   "pedimos",
+   "exigimos",
+   "que pongan",
+   "que saquen",
+   "sáquenlo",
+   "saquenlo",
+   "compren",
+   "comprar un",
+   "un 9",
+   "un nueve",
+   "un técnico",
+   "cambio de técnico",
+   "que juegue",
+   "que jueguen",
+   "dale la",
+   "denle",
+   "elecciones ya"
+  ],
+  "espera": [
+   "ojalá",
+   "ojala",
+   "espero",
+   "esperamos",
+   "a ver si",
+   "tengo fe",
+   "fe en",
+   "confío",
+   "confio",
+   "confiamos",
+   "se viene",
+   "se vienen",
+   "este año",
+   "el año que viene",
+   "vamos a ganar",
+   "vamos a salir",
+   "vamos a volver",
+   "volver a ganar",
+   "la séptima",
+   "la septima",
+   "la libertadores",
+   "ilusión",
+   "ilusion",
+   "ilusiona",
+   "sueño",
+   "sueno",
+   "cuando vuelva",
+   "en 2027",
+   "las elecciones"
+  ],
+  "critica": [
+   "vergüenza",
+   "verguenza",
+   "desastre",
+   "fracaso",
+   "horrible",
+   "papelón",
+   "papelon",
+   "inútil",
+   "inutil",
+   "no sabe",
+   "no saben",
+   "no da más",
+   "no da mas",
+   "mediocre",
+   "mediocres",
+   "pecho frío",
+   "pecho frio",
+   "cagón",
+   "cagon",
+   "culpa",
+   "culpable",
+   "malísimo",
+   "malisimo",
+   "pésimo",
+   "pesimo",
+   "un asco",
+   "basta",
+   "lamentable",
+   "patético",
+   "patetico",
+   "ridículo",
+   "ridiculo",
+   "nefasto",
+   "incapaz",
+   "amateur",
+   "chanta",
+   "mentiroso",
+   "se robó",
+   "se robo",
+   "chorro",
+   "dictador",
+   "caprichoso",
+   "soberbio",
+   "soberbia",
+   "ego",
+   "no aprende",
+   "decepción",
+   "decepcion",
+   "bochorno",
+   "desastroso",
+   "peor"
+  ],
+  "apoya": [
+   "gracias",
+   "ídolo",
+   "idolo",
+   "crack",
+   "el más grande",
+   "el mas grande",
+   "aguante román",
+   "aguante roman",
+   "aguante riquelme",
+   "lo banco",
+   "bancamos",
+   "todos con",
+   "con román",
+   "con roman",
+   "bien román",
+   "bien roman",
+   "grande román",
+   "grande roman",
+   "genio",
+   "maestro",
+   "orgullo",
+   "excelente",
+   "bien ahí",
+   "bien ahi",
+   "acierto",
+   "felicitaciones",
+   "bravo",
+   "aplausos",
+   "el mejor",
+   "impecable",
+   "te amo",
+   "lo amo"
+  ]
+ },
+ "temas": {
+  "Plantel y refuerzos": [
+   "refuerzo",
+   "refuerzos",
+   "mercado de pases",
+   "libro de pases",
+   "fichaje",
+   "compra",
+   "comprar",
+   "contratar",
+   "contratación",
+   "contratacion",
+   "delantero",
+   "nueve",
+   "arquero",
+   "defensor",
+   "lateral",
+   "volante",
+   "enganche",
+   "plantel",
+   "cavani",
+   "paredes",
+   "bareiro",
+   "valencia",
+   "ascacibar",
+   "ascacíbar",
+   "montero",
+   "romero",
+   "merentiel",
+   "zenón",
+   "zenon"
+  ],
+  "DT y cuerpo técnico": [
+   "técnico",
+   "tecnico",
+   "entrenador",
+   "dt",
+   "arruabarrena",
+   "vasco",
+   "úbeda",
+   "ubeda",
+   "gago",
+   "russo",
+   "cuerpo técnico",
+   "cuerpo tecnico",
+   "táctica",
+   "tactica",
+   "planteo",
+   "esquema",
+   "formación",
+   "formacion"
+  ],
+  "Consejo de Fútbol": [
+   "consejo de fútbol",
+   "consejo de futbol",
+   "consejo",
+   "delgado",
+   "serna",
+   "cascini",
+   "chelo",
+   "chicho",
+   "manager",
+   "secretario técnico"
+  ],
+  "Resultados y copas": [
+   "libertadores",
+   "sudamericana",
+   "copa argentina",
+   "campeonato",
+   "torneo",
+   "clausura",
+   "apertura",
+   "título",
+   "titulo",
+   "campeón",
+   "campeon",
+   "eliminado",
+   "eliminación",
+   "eliminacion",
+   "derrota",
+   "perdió",
+   "perdio",
+   "ganó",
+   "gano",
+   "empate",
+   "tabla",
+   "descenso",
+   "clasificar",
+   "clasific"
+  ],
+  "Superclásico y River": [
+   "river",
+   "superclásico",
+   "superclasico",
+   "gallina",
+   "gallinas",
+   "millonario",
+   "monumental",
+   "gallardo"
+  ],
+  "La Bombonera y el estadio": [
+   "bombonera",
+   "estadio",
+   "ampliación",
+   "ampliacion",
+   "cancha nueva",
+   "casa amarilla",
+   "palcos",
+   "cuarta bandeja",
+   "80.000",
+   "80 mil",
+   "legislatura",
+   "remodelación",
+   "remodelacion"
+  ],
+  "Elecciones 2027 y oposición": [
+   "elecciones",
+   "elección",
+   "eleccion",
+   "candidato",
+   "candidatura",
+   "oposición",
+   "oposicion",
+   "lista",
+   "votar",
+   "voto",
+   "socios votan",
+   "2027",
+   "mandato",
+   "comisión directiva",
+   "comision directiva",
+   "asamblea"
+  ],
+  "SAD y privatización": [
+   "sad",
+   "sociedad anónima",
+   "sociedad anonima",
+   "sociedades anónimas",
+   "sociedades anonimas",
+   "privatiz",
+   "inversores",
+   "capitales privados",
+   "club de los socios",
+   "boca es de los socios",
+   "no se vende"
+  ],
+  "Socios, entradas y carnet": [
+   "socio",
+   "socios",
+   "carnet",
+   "entrada",
+   "entradas",
+   "abono",
+   "cuota",
+   "adherente",
+   "padrón",
+   "padron",
+   "reventa",
+   "popular",
+   "platea",
+   "lista de espera"
+  ],
+  "Finanzas y negocios": [
+   "deuda",
+   "presupuesto",
+   "balance",
+   "finanzas",
+   "sponsor",
+   "ingresos",
+   "venta de jugadores",
+   "plata",
+   "millones",
+   "dólares",
+   "dolares",
+   "economía",
+   "economia",
+   "superávit",
+   "superavit",
+   "déficit",
+   "deficit"
+  ],
+  "Juveniles e inferiores": [
+   "inferiores",
+   "juveniles",
+   "pibes",
+   "cantera",
+   "reserva",
+   "proyección",
+   "proyeccion",
+   "debut",
+   "juvenil",
+   "de las inferiores"
+  ],
+  "Barras y seguridad": [
+   "barra",
+   "barras",
+   "la 12",
+   "di zeo",
+   "mauro martín",
+   "mauro martin",
+   "violencia",
+   "seguridad",
+   "incidentes",
+   "derecho de admisión",
+   "derecho de admision",
+   "tribuna visitante"
+  ],
+  "AFA y arbitraje": [
+   "afa",
+   "tapia",
+   "árbitro",
+   "arbitro",
+   "arbitraje",
+   "var",
+   "penal",
+   "referí",
+   "referi",
+   "toviggino",
+   "liga profesional"
+  ]
+ },
+ "narrativas": {
+  "Gestión deportiva": [
+   "refuerzo",
+   "técnico",
+   "tecnico",
+   "plantel",
+   "consejo de fútbol",
+   "consejo de futbol",
+   "mercado de pases",
+   "dt"
+  ],
+  "Resultados": [
+   "libertadores",
+   "sudamericana",
+   "campeonato",
+   "eliminado",
+   "derrota",
+   "título",
+   "titulo",
+   "ganó",
+   "perdió"
+  ],
+  "Elecciones y poder interno": [
+   "elecciones",
+   "candidato",
+   "oposición",
+   "oposicion",
+   "2027",
+   "comisión directiva",
+   "asamblea",
+   "lista"
+  ],
+  "Estadio y obras": [
+   "bombonera",
+   "estadio",
+   "ampliación",
+   "ampliacion",
+   "casa amarilla",
+   "obra"
+  ],
+  "Modelo de club y SAD": [
+   "sad",
+   "sociedad anónima",
+   "sociedad anonima",
+   "privatiz",
+   "socios"
+  ],
+  "Ídolo y personalismo": [
+   "ídolo",
+   "idolo",
+   "personalismo",
+   "ego",
+   "caprich",
+   "soberbi",
+   "todo pasa por román",
+   "todo pasa por roman"
+  ],
+  "Conflictos y justicia": [
+   "justicia",
+   "denuncia",
+   "juez",
+   "jueza",
+   "fallo",
+   "cautelar",
+   "demanda",
+   "conflicto",
+   "pelea"
+  ],
+  "Relación con el poder político": [
+   "milei",
+   "gobierno",
+   "macri",
+   "política",
+   "politica",
+   "afa",
+   "tapia"
+  ]
+ },
+ "positivo": [
+  "gracias",
+  "excelente",
+  "bien hecho",
+  "muy bien",
+  "felicit",
+  "impecable",
+  "genial",
+  "bravo",
+  "ídolo",
+  "idolo",
+  "crack",
+  "aguante",
+  "orgullo",
+  "el mejor",
+  "grande"
+ ],
+ "negativo": [
+  "vergüenza",
+  "verguenza",
+  "desastre",
+  "fracaso",
+  "inútil",
+  "inutil",
+  "mentiroso",
+  "chorro",
+  "mediocre",
+  "basta",
+  "papelón",
+  "papelon",
+  "pecho frío",
+  "pecho frio",
+  "patético",
+  "patetico",
+  "horrible",
+  "peor",
+  "fuera"
+ ],
+ "contexto": [
+  "boca",
+  "boca juniors",
+  "xeneize",
+  "xeneizes",
+  "bombonera",
+  "riquelme",
+  "bostero",
+  "bosteros",
+  "cabj",
+  "la ribera"
+ ],
+ "youtube": {
+  "region": "AR",
+  "language": "es",
+  "videos_per_query": 10,
+  "comments_per_video": 100,
+  "queries": [
+   "Riquelme Boca",
+   "Riquelme conferencia",
+   "Riquelme hinchas Boca",
+   "Boca Juniors hinchas opinan",
+   "Boca Juniors refuerzos",
+   "Boca Arruabarrena",
+   "Boca Consejo de Fútbol",
+   "Boca elecciones 2027",
+   "Macri Boca",
+   "Andrés Ibarra Boca",
+   "Angelici Boca",
+   "Beraldi Boca",
+   "Ameal Riquelme",
+   "ampliación Bombonera",
+   "Boca SAD sociedades anónimas",
+   "Boca Juniors socios entradas"
+  ],
+  "contexto": [
+   "boca",
+   "xeneize",
+   "bombonera",
+   "riquelme",
+   "cabj",
+   "bostero"
+  ],
+  "excluir": [
+   "boca unidos",
+   "boca río",
+   "boca rio",
+   "mi boca",
+   "tu boca",
+   "en la boca del"
+  ]
+ },
+ "google_news": {
+  "queries": [
+   "Riquelme Boca",
+   "\"Juan Román Riquelme\"",
+   "Riquelme hinchas",
+   "Riquelme críticas",
+   "Riquelme oposición Boca",
+   "Boca elecciones 2027",
+   "Macri Boca Juniors",
+   "\"Andrés Ibarra\" Boca",
+   "Angelici Boca",
+   "Beraldi Boca",
+   "Ameal Boca",
+   "Pergolini Boca",
+   "Gribaudo Boca",
+   "Paolini Boca",
+   "\"Jorge Reale\" Boca",
+   "Arruabarrena Boca",
+   "\"Consejo de Fútbol\" Boca",
+   "Boca refuerzos",
+   "Boca hinchas",
+   "Bombonera ampliación",
+   "Boca SAD",
+   "Boca socios entradas",
+   "Boca Juniors deuda balance",
+   "Boca Juniors barra",
+   "Paredes Boca capitán",
+   "Tapia Riquelme"
+  ],
+  "sites": [
+   "ole.com.ar",
+   "tycsports.com",
+   "infobae.com",
+   "lanacion.com.ar",
+   "clarin.com",
+   "pagina12.com.ar",
+   "perfil.com",
+   "tn.com.ar",
+   "doble-amarilla.com",
+   "bocanoticias.com",
+   "planetabj.com",
+   "letrap.com.ar",
+   "lapoliticaonline.com"
+  ],
+  "site_terms": [
+   "Riquelme Boca"
+  ]
+ },
+ "rss": [
+  {
+   "name": "Olé",
+   "url": "https://www.ole.com.ar/rss/ultimas-noticias/"
+  },
+  {
+   "name": "Página/12",
+   "url": "https://www.pagina12.com.ar/rss/secciones/deportes/notas"
+  },
+  {
+   "name": "Infobae",
+   "url": "https://www.infobae.com/arc/outboundfeeds/rss/category/deportes/"
+  },
+  {
+   "name": "Clarín",
+   "url": "https://www.clarin.com/rss/deportes/"
+  },
+  {
+   "name": "La Nación",
+   "url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/deportes/?outputType=xml"
+  }
+ ],
+ "wiki_club": [
+  "Club Atlético Boca Juniors"
+ ],
+ "textos_comentarios": "extracto"
+}

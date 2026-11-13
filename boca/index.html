@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Monitor Boca</title>
+<meta name="description" content="Qué quiere, qué espera, qué critica y qué dice la gente sobre Riquelme, la dirigencia y las figuras políticas de Boca Juniors.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --page:#0b0d12;--s1:#13161d;--s2:#1a1e27;--s3:#222734;--line:#272c38;--line2:#323848;
+  --txt:#eef0f4;--muted:#a6adbb;--dim:#717887;
+  --blue:#3987e5;--orange:#d95926;--aqua:#199e70;--yellow:#c98500;--magenta:#d55181;--violet:#9085e9;--red:#e66767;--teal:#5fb3c9;
+  --neg:#e66767;--neu:#5d6470;--pos:#3987e5;--foco:#f2b705;--azul:#2c5fd6;--quiere:#3987e5;--espera:#f2b705;--critica:#e66767;--apoya:#199e70;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;color-scheme:dark}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--page);color:var(--txt);font:14px/1.5 Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:#7fb3f0;text-decoration:none}a:hover{text-decoration:underline}button{font:inherit;color:inherit}
+.top{background:var(--s1);border-bottom:1px solid var(--line)}
+.bar{max-width:1560px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:16px}
+.logo i{width:26px;height:26px;border-radius:6px;background:linear-gradient(180deg,var(--azul) 0 36%,var(--foco) 36% 64%,var(--azul) 64%);display:grid;place-items:center;font-style:normal;font-size:10px;color:#fff;text-shadow:0 1px 2px #000}
+.logo small{font-weight:500;color:var(--dim);font-size:12px;margin-left:4px}
+.back{color:var(--muted);font-size:12.5px;border:1px solid var(--line);padding:3px 10px;border-radius:12px}
+.live{display:inline-flex;align-items:center;gap:7px;font:600 11px var(--mono);letter-spacing:1px;padding:4px 9px;border-radius:4px;background:#0f2a12;color:#5fd35f;border:1px solid #1d4a21}
+.live b{width:7px;height:7px;border-radius:50%;background:#2ecc40;animation:pulse 1.6s infinite}
+.live.old{background:#2a230f;color:#fab219;border-color:#4a3d1d}.live.old b{background:#fab219}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(46,204,64,.7)}70%{box-shadow:0 0 0 7px rgba(46,204,64,0)}100%{box-shadow:0 0 0 0 rgba(46,204,64,0)}}
+.clock{font:500 12px var(--mono);color:var(--muted);margin-left:auto;display:flex;gap:14px;flex-wrap:wrap}.clock b{color:var(--txt);font-weight:600}
+.ticker{background:#10131a;border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;height:32px;display:flex;align-items:center}
+.ticker .lab{flex:none;height:100%;display:flex;align-items:center;padding:0 12px;background:var(--azul);color:#ffd84a;font:600 11px var(--mono);letter-spacing:1px}
+.ticker .run{display:inline-block;padding-left:100%;animation:tick 110s linear infinite;font:12px var(--mono);color:var(--muted)}
+.ticker:hover .run{animation-play-state:paused}.ticker .run span{margin-right:42px}.ticker .run em{font-style:normal;font-weight:600;margin-right:6px;color:var(--txt)}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+@media (prefers-reduced-motion:reduce){.ticker .run{animation:none;padding-left:12px}.live b{animation:none}}
+nav{background:var(--s1);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+nav .in{max-width:1560px;margin:0 auto;padding:0 12px;display:flex;overflow-x:auto;scrollbar-width:none}
+nav button{background:none;border:0;border-bottom:2px solid transparent;color:var(--muted);padding:12px 14px;cursor:pointer;white-space:nowrap;font-weight:500}
+nav button:hover{color:var(--txt)}nav button.on{color:var(--txt);border-bottom-color:var(--foco)}
+main{max-width:1560px;margin:0 auto;padding:18px 20px 40px}
+.tab{display:none}.tab.on{display:block}
+.g{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:14px}
+.c3{grid-column:span 3}.c4{grid-column:span 4}.c5{grid-column:span 5}.c6{grid-column:span 6}.c7{grid-column:span 7}.c8{grid-column:span 8}.c12{grid-column:span 12}
+.card{background:var(--s1);border:1px solid var(--line);border-radius:8px;padding:14px 16px;min-width:0}
+.card h3{margin:0 0 10px;font-size:14px;font-weight:600;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.card h3 .tag{font:600 10px var(--mono);letter-spacing:.8px;color:var(--dim);border:1px solid var(--line2);border-radius:3px;padding:1px 6px;text-transform:uppercase}
+.sect{font:600 11px var(--mono);letter-spacing:1.4px;color:var(--dim);text-transform:uppercase;margin:22px 0 10px;display:flex;align-items:center;gap:10px}
+.sect::after{content:"";flex:1;height:1px;background:var(--line)}
+.note{margin:10px 0 0;color:var(--dim);font-size:12px}
+.empty{color:var(--dim);font-size:13px;padding:28px 0;text-align:center}
+.kpis{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px;margin-bottom:14px}
+.kpi{background:var(--s1);border:1px solid var(--line);border-radius:8px;padding:12px 14px;position:relative;overflow:hidden}
+.kpi .l{color:var(--muted);font-size:12px}.kpi .v{font-size:26px;font-weight:700;letter-spacing:-.5px;margin-top:2px}
+.kpi .v.t{font-size:17px;line-height:1.25;padding:5px 0 3px}.kpi .d{font:600 11px var(--mono);color:var(--dim)}
+.kpi .spark{position:absolute;right:12px;top:12px;width:72px;height:26px}
+.kpi.f{border-color:#5a4a14;background:#19160b}
+.up{color:#ff8a8a}.down{color:#7fd17f}
+.hero{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;background:linear-gradient(90deg,#0f1a3a,var(--s1) 62%);border:1px solid #23345e;border-radius:8px;padding:16px 18px;margin-bottom:14px}
+.av{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:19px;color:#fff;flex:none}
+.av.sm{width:22px;height:22px;font-size:9.5px}
+.hero h1{margin:0;font-size:22px;letter-spacing:-.3px}.hero .k{color:var(--muted);font-size:13px}
+.find{margin:8px 0 0;padding-left:18px;color:var(--muted)}.find li{margin:4px 0}.find b{color:var(--txt)}
+table{border-collapse:collapse;width:100%;font-size:13px}th,td{border-bottom:1px solid var(--line);padding:7px 8px;text-align:left;color:var(--muted);vertical-align:top}
+th{color:var(--dim);font:600 10.5px var(--mono);letter-spacing:.6px;text-transform:uppercase}td.n,th.n{text-align:right;font-family:var(--mono);color:var(--txt)}
+tr.sel td{background:#14203f}tbody tr{cursor:pointer}tbody tr:hover td{background:var(--s2)}
+.chip{display:inline-block;border:1px solid var(--line);border-radius:12px;padding:3px 10px;margin:3px 4px 3px 0;font-size:12.5px;color:var(--muted);background:none;cursor:pointer}
+.chip.on{border-color:var(--foco);color:var(--txt);background:#2a2410}
+.chip.ok::before{content:"● ";color:#0ca30c}.chip.no::before{content:"● ";color:var(--red)}
+.tag2{display:inline-block;font-size:11px;padding:1px 7px;border-radius:9px;background:var(--s2);border:1px solid var(--line);color:var(--muted);margin:2px 4px 2px 0}
+.hl{display:flex;flex-direction:column;gap:7px;max-height:540px;overflow:auto;padding-right:4px}
+.hl a.it{display:block;border:1px solid var(--line);border-left:3px solid var(--neu);border-radius:6px;padding:7px 10px;background:var(--s2);color:var(--txt)}
+.hl a.it.NEG{border-left-color:var(--neg)}.hl a.it.POS{border-left-color:var(--pos)}.hl a.it:hover{text-decoration:none;border-color:var(--line2)}
+.hl .m{font:11px var(--mono);color:var(--dim)}
+.bars .r{display:grid;grid-template-columns:170px 1fr 52px;gap:8px;align-items:center;font-size:12.5px;color:var(--muted);margin:5px 0}
+.bars .r i{display:block;height:9px;border-radius:2px;background:var(--foco)}.bars .r b{font:600 12px var(--mono);color:var(--txt);text-align:right}
+.tone{display:flex;height:12px;border-radius:3px;overflow:hidden;background:var(--s3)}.tone i{display:block;height:100%}
+.legend{display:flex;gap:12px;font-size:11.5px;color:var(--dim);margin-top:6px}.legend span::before{content:"";display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px;background:var(--c)}
+.cloud{width:100%;height:auto;display:block}.cloud text{font-family:Inter,system-ui,sans-serif;font-weight:600;cursor:default}
+.ctrl{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:0 0 10px}
+select,input[type=search]{background:var(--s2);color:var(--txt);border:1px solid var(--line);padding:6px 9px;font-size:13px;border-radius:5px}
+.osint{position:relative}.osint::before{content:attr(data-o);position:absolute;top:12px;right:14px;font:10.5px var(--mono);color:var(--dim);letter-spacing:.08em}
+.ficha h4{margin:0;font-size:20px}.ficha .s{color:var(--dim);font:12px var(--mono);margin-bottom:10px}
+.alerts{display:flex;flex-direction:column;gap:8px}
+.alerts .a{display:grid;grid-template-columns:26px 1fr;gap:8px;align-items:start;background:var(--s2);border:1px solid var(--line);border-radius:6px;padding:8px 10px;font-size:13px;color:var(--txt)}
+.alerts .a i{font-style:normal;font:600 13px var(--mono);width:24px;height:24px;border-radius:5px;display:grid;place-items:center;background:var(--s3);color:var(--muted)}
+.alerts .a i.up{color:#ffb08a}.alerts .a i.down{color:#8ec1ff}.alerts .a small{display:block;color:var(--dim);font:10.5px var(--mono);letter-spacing:.6px;text-transform:uppercase}
+.tl{display:flex;flex-direction:column;gap:0;border-left:2px solid var(--line2);margin-left:6px;padding-left:14px;max-height:420px;overflow:auto}
+.tl .h{position:relative;padding:6px 0 10px}.tl .h::before{content:"";position:absolute;left:-20px;top:11px;width:10px;height:10px;border-radius:50%;background:var(--foco);box-shadow:0 0 0 3px #2a2410}
+.tl .h .d{font:600 11px var(--mono);color:var(--dim)}.tl .h .t{color:var(--txt);font-size:13px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}.facts div{background:var(--s2);border:1px solid var(--line);border-radius:6px;padding:8px 10px}
+.facts b{display:block;font:700 18px Inter,system-ui,sans-serif;color:var(--txt)}.facts span{color:var(--dim);font-size:11.5px}
+.wk{color:var(--muted);font-size:13px;line-height:1.55}
+.dw{position:fixed;inset:0;z-index:50;display:none}.dw.on{display:block}
+.dw .bg{position:absolute;inset:0;background:rgba(5,6,9,.62)}
+.dw .pn{position:absolute;top:0;right:0;bottom:0;width:min(560px,100%);background:var(--s1);border-left:1px solid var(--line2);display:flex;flex-direction:column;box-shadow:-12px 0 40px rgba(0,0,0,.45)}
+.dw .hd{padding:14px 16px;border-bottom:1px solid var(--line);display:flex;gap:10px;align-items:flex-start}
+.dw .hd h4{margin:0;font-size:16px}.dw .hd .s{color:var(--dim);font:11.5px var(--mono);margin-top:3px}
+.dw .x{margin-left:auto;background:var(--s2);border:1px solid var(--line);border-radius:5px;padding:2px 9px;cursor:pointer;font-size:16px}
+.dw .ctl{padding:8px 16px;border-bottom:1px solid var(--line)}
+.dw .ls{overflow:auto;padding:12px 16px;display:flex;flex-direction:column;gap:8px}
+.tx{border:1px solid var(--line);border-left:3px solid var(--neu);border-radius:6px;padding:8px 11px;background:var(--s2)}
+.tx.NEG{border-left-color:var(--neg)}.tx.POS{border-left-color:var(--pos)}
+.tx .m{font:11px var(--mono);color:var(--dim);display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:4px}
+.tx .m .k{color:var(--txt);border:1px solid var(--line2);border-radius:3px;padding:0 5px}
+.tx .t{color:var(--txt);font-size:13.5px;line-height:1.5;white-space:pre-line}.tx mark{background:#5a4a14;color:#ffe79a;border-radius:2px;padding:0 1px}
+.tx a.o{font-size:12px}
+.cloud text[data-c]{cursor:pointer}.cloud text[data-c]:hover{text-decoration:underline}
+.chip[data-fr],.tag2[data-fr]{cursor:pointer}.chip[data-fr]:hover,.tag2[data-fr]:hover{border-color:var(--foco);color:var(--txt)}
+.warnbox{border:1px solid #5a4520;background:#1f1a0e;color:#f0d9a0;padding:10px 14px;font-size:13px;margin-bottom:14px;border-radius:6px}
+footer{color:var(--dim);font-size:12px;max-width:1560px;margin:0 auto;padding:0 20px 30px}
+@media(max-width:1100px){.kpis{grid-template-columns:repeat(3,minmax(0,1fr))}.c3,.c4,.c5,.c6,.c7,.c8{grid-column:span 12}}
+@media(max-width:620px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.bar,main{padding-left:16px;padding-right:16px}.clock{margin-left:0}.hero{grid-template-columns:1fr}.bars .r{grid-template-columns:110px 1fr 46px}}
+.ints{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:14px}
+.int{background:var(--s1);border:1px solid var(--line);border-top:3px solid var(--c);border-radius:8px;padding:12px 14px;cursor:pointer}
+.int:hover{border-color:var(--line2);border-top-color:var(--c)}.int.on{background:var(--s2);box-shadow:inset 0 0 0 1px var(--c)}
+.int .l{font:600 11px var(--mono);letter-spacing:1.2px;color:var(--c);text-transform:uppercase}.int .v{font-size:28px;font-weight:700;letter-spacing:-.5px}
+.int .d{color:var(--dim);font-size:12px}.int .q{margin-top:6px;color:var(--muted);font-size:12.5px;line-height:1.4;min-height:34px}
+.ped{display:flex;flex-direction:column;gap:6px}
+.ped button{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;text-align:left;background:var(--s2);border:1px solid var(--line);border-left:3px solid var(--c,var(--quiere));border-radius:6px;padding:7px 10px;cursor:pointer;color:var(--txt);font-size:13.5px}
+.ped button:hover{border-color:var(--line2);border-left-color:var(--c,var(--quiere))}.ped b{font:600 12px var(--mono);color:var(--muted)}
+.ibar{display:flex;height:12px;border-radius:3px;overflow:hidden;background:var(--s3)}.ibar i{display:block;height:100%}
+.bal{font:700 13px var(--mono)}.bal.p{color:#4fd1a1}.bal.n{color:#ff8a8a}
+.count{display:flex;align-items:baseline;gap:10px}.count b{font:800 44px Inter,system-ui,sans-serif;letter-spacing:-1px;color:var(--foco)}.count span{color:var(--muted)}
+.bando{display:inline-block;font:600 10px var(--mono);letter-spacing:.6px;text-transform:uppercase;border-radius:3px;padding:1px 6px;border:1px solid var(--line2);color:var(--muted)}
+.tm{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.tm .t{background:var(--s2);border:1px solid var(--line);border-radius:6px;padding:10px 12px;cursor:pointer}.tm .t:hover,.tm .t.on{border-color:var(--foco)}
+.tm .t h5{margin:0 0 6px;font-size:13.5px;color:var(--txt);display:flex;justify-content:space-between;gap:6px}.tm .t h5 span{font:600 12px var(--mono);color:var(--dim)}
+@media(max-width:900px){.ints{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+</style>
+</head>
+<body>
+<div class="top"><div class="bar">
+  <a class="back" href="../dashboard.html">← Tablero nacional</a>
+  <div class="logo"><i>CABJ</i>Monitor Boca<small>RIQUELME · DIRIGENCIA · HINCHAS</small></div>
+  <span class="live" id="live"><b></b>EN VIVO</span>
+  <div class="clock" id="clock"></div>
+</div></div>
+<div class="ticker"><div class="lab">ÚLTIMO</div><div class="run" id="ticker"></div></div>
+<nav><div class="in" id="tabs">
+  <button data-t="panorama" class="on">Panorama</button><button data-t="gente">Qué dice la gente</button>
+  <button data-t="temas">Temas</button><button data-t="riquelme">Riquelme</button><button data-t="figuras">Figuras</button>
+  <button data-t="elecciones">Hacia 2027</button><button data-t="poder">Mapa de poder</button>
+  <button data-t="medios">Medios</button><button data-t="metodo">Fuentes y método</button>
+</div></nav>
+<main>
+  <div id="warn"></div>
+
+  <section class="tab on" id="t-panorama">
+    <div class="hero"><div class="av" style="background:linear-gradient(180deg,var(--azul) 0 36%,var(--foco) 36% 64%,var(--azul) 64%);text-shadow:0 1px 3px #000">JRR</div>
+      <div><h1>Juan Román Riquelme</h1><div class="k" id="hero-k"></div><ul class="find" id="find"></ul></div></div>
+    <div class="kpis" id="kpis"></div>
+    <div class="ints" id="p-ints"></div>
+    <div class="g">
+      <div class="card c8"><h3>Menciones por semana <span class="tag">Riquelme y figuras del mundo Boca</span></h3><div id="g-weekly" style="height:340px"></div></div>
+      <div class="card c4"><h3>Participación en la conversación <span class="tag">share of voice</span></h3><div id="g-sov" style="height:340px"></div></div>
+      <div class="card c6"><h3>Lo que más piden los hinchas <span class="tag">clic para ver los comentarios</span></h3><div class="ped" id="p-ped"></div></div>
+      <div class="card c6"><h3>De qué se habla <span class="tag">textos por tema</span></h3><div id="p-temas" style="height:360px"></div></div>
+      <div class="card c4"><h3>Alertas <span class="tag">automáticas</span></h3><div class="alerts" id="p-alert"></div></div>
+      <div class="card c8"><h3>Línea de tiempo <span class="tag">semanas pico de Riquelme y qué las explicó</span></h3><div id="p-hitos" style="height:230px"></div><div class="tl" id="p-tl"></div></div>
+    </div>
+  </section>
+
+  <section class="tab" id="t-gente">
+    <div class="ints" id="g-ints"></div>
+    <div class="g">
+      <div class="card c7"><h3>Qué <span id="g-iname"></span> la gente <span class="tag">frases repetidas · clic para ver comentarios</span></h3><div id="g-frases"></div>
+        <div class="sect">Pedidos y deseos textuales</div><div class="ped" id="g-ped"></div></div>
+      <div class="card c5"><h3>Intención por tema <span class="tag">comentarios</span></h3><div id="g-mat" style="height:520px"></div></div>
+      <div class="card c8"><h3>Evolución semanal <span class="tag">comentarios por intención</span></h3><div id="g-serie" style="height:300px"></div></div>
+      <div class="card c4"><h3>Lo que espera la gente <span class="tag">ojalá · a ver si · tengo fe</span></h3><div class="ped" id="g-des"></div></div>
+      <div class="card c12"><h3>Videos con más conversación <span class="tag">% de comentarios que critican y que apoyan</span></h3><div style="overflow-x:auto"><table id="g-vid"></table></div></div>
+    </div>
+  </section>
+
+  <section class="tab" id="t-temas">
+    <div class="g">
+      <div class="card c12"><h3>Temas <span class="tag">elegí uno</span></h3><div class="tm" id="tm-list"></div></div>
+      <div class="card c5" id="tm-ficha"></div>
+      <div class="card c7"><h3>Evolución del tema <span class="tag">textos por semana</span></h3><div id="tm-serie" style="height:260px"></div>
+        <div class="sect">Frases que más se repiten</div><div id="tm-frases"></div></div>
+    </div>
+  </section>
+
+  <section class="tab" id="t-riquelme">
+    <div class="g">
+      <div class="card c5"><h3>Perfil <span class="tag">Wikipedia</span></h3><div class="wk" id="r-wiki"></div></div>
+      <div class="card c7"><h3>Balance apoyo − crítica <span class="tag">comentarios que lo nombran, por semana</span></h3><div id="r-bal" style="height:280px"></div></div>
+      <div class="card c4"><h3>Tono <span class="tag" id="tone-base"></span></h3><div id="r-tone"></div>
+        <div class="sect" style="margin-top:16px">Emociones</div><div class="bars" id="r-emo"></div><p class="note" id="r-agr"></p></div>
+      <div class="card c8"><h3>Narrativas <span class="tag">marcos con los que se habla de él</span></h3><div id="r-narr" style="height:320px"></div></div>
+      <div class="card c6"><h3>Nube de palabras <span class="tag">clic en una palabra</span></h3><div id="r-cloud"></div>
+        <div class="legend"><span style="--c:var(--neg)">más en textos negativos</span><span style="--c:var(--pos)">más en textos positivos</span><span style="--c:var(--muted)">mixto</span></div></div>
+      <div class="card c6"><h3>Qué le critican y qué le bancan</h3><div class="sect" style="margin-top:0;color:var(--critica)">Crítica</div><div id="r-fc"></div><div class="sect" style="color:var(--apoya)">Apoyo</div><div id="r-fa"></div></div>
+      <div class="card c4"><h3>Con quién aparece</h3><div class="bars" id="r-co"></div></div>
+      <div class="card c4"><h3>Interés en Wikipedia <span class="tag">visitas semanales</span></h3><div id="r-wikiv" style="height:250px"></div></div>
+      <div class="card c4"><h3>Medios que más lo nombran</h3><div class="bars" id="r-out"></div></div>
+      <div class="card c12"><h3>Últimos titulares</h3><div class="hl" id="r-heads" style="max-height:360px"></div></div>
+    </div>
+  </section>
+
+  <section class="tab" id="t-figuras">
+    <div class="g">
+      <div class="card c12"><h3>Tabla comparativa <span class="tag">últimos <span class="cdays"></span> días · clic para comparar con Riquelme</span></h3><div style="overflow-x:auto"><table id="f-table"></table></div></div>
+      <div class="card c6"><h3>Qué hace la gente cuando los nombra <span class="tag">intención en comentarios</span></h3><div id="f-int" style="height:440px"></div></div>
+      <div class="card c6"><h3>Narrativas: Riquelme vs. <span id="f-name2"></span></h3><div id="f-narr" style="height:440px"></div></div>
+      <div class="card c6"><h3 id="f-cl1"></h3><div id="f-cloud1"></div></div>
+      <div class="card c6"><h3 id="f-cl2"></h3><div id="f-cloud2"></div><div id="f-fr2"></div></div>
+    </div>
+  </section>
+
+  <section class="tab" id="t-elecciones">
+    <div class="g">
+      <div class="card c4 osint" data-o="ELECCIONES CABJ"><h3>Cuenta regresiva</h3><div class="count"><b id="e-dias"></b><span>días para las elecciones del club</span></div>
+        <p class="note" id="e-n"></p><div class="sect">Peso por bando</div><div class="bars" id="e-bandos"></div></div>
+      <div class="card c8"><h3>Conversación electoral por semana</h3><div id="e-weekly" style="height:280px"></div></div>
+      <div class="card c6"><h3>Quiénes aparecen cuando se habla de elecciones</h3><div style="overflow-x:auto"><table id="e-figs"></table></div></div>
+      <div class="card c6"><h3>Qué dicen los socios e hinchas</h3><div id="e-int"></div><div class="sect">Frases repetidas</div><div id="e-frases"></div><div class="sect">Pedidos</div><div class="ped" id="e-ped"></div></div>
+      <div class="card c12"><h3>Titulares sobre las elecciones</h3><div class="hl" id="e-heads" style="max-height:420px"></div></div>
+    </div>
+  </section>
+
+  <section class="tab" id="t-poder">
+    <div class="g">
+      <div class="card c8 osint" data-o="POWER MAP · CABJ"><h3>Mapa de poder</h3><div id="pw" style="height:600px"></div></div>
+      <div class="card c4"><h3>Fichas</h3><table id="pw-t"></table><p class="note" id="pw-m"></p></div>
+    </div>
+  </section>
+
+  <section class="tab" id="t-medios">
+    <div class="g">
+      <div class="card c5"><h3>Medios que más cubren el mundo Boca</h3><div class="bars" id="m-out"></div></div>
+      <div class="card c7"><h3>Titulares recientes <span class="tag">filtrá por figura</span></h3><div class="ctrl" id="m-f"></div><div class="hl" id="m-heads"></div></div>
+      <div class="card c7"><h3>Quién cubre a quién <span class="tag">notas por medio y figura</span></h3><div id="m-mat" style="height:460px"></div></div>
+      <div class="card c5"><h3>Tono de cada medio sobre Riquelme</h3><div id="m-tono" style="height:460px"></div></div>
+    </div>
+  </section>
+
+  <section class="tab" id="t-metodo">
+    <div class="g">
+      <div class="card c6"><h3>Estado de las fuentes</h3><div id="st"></div><p class="note" id="st-n"></p></div>
+      <div class="card c6"><h3>Por qué no hay Facebook, Instagram ni X</h3><p style="color:var(--muted);margin:0">Meta no ofrece una API abierta para buscar publicaciones o comentarios, y scrapear sus sitios viola sus términos. La API de X es paga. El monitor usa fuentes públicas y gratuitas: comentarios de YouTube (API oficial), notas de medios (Google News y RSS) y visitas a Wikipedia.</p></div>
+      <div class="card c6"><h3>Cómo se mide</h3><div id="mt" style="color:var(--muted)"></div></div>
+      <div class="card c6"><h3>Alias de cada figura</h3><table id="mt-al"></table></div>
+      <div class="card c6"><h3>Diccionario de intenciones</h3><table id="mt-int"></table></div>
+      <div class="card c6"><h3>Diccionario de temas</h3><table id="mt-tem"></table></div>
+    </div>
+  </section>
+</main>
+<div class="dw" id="dw" aria-hidden="true"><div class="bg"></div><div class="pn" role="dialog" aria-label="Textos de origen"><div class="hd"><div><h4 id="dw-t"></h4><div class="s" id="dw-s"></div></div><button class="x" id="dw-x" aria-label="Cerrar">×</button></div><div class="ctl" id="dw-c"></div><div class="ls" id="dw-l"></div></div></div>
+<footer>Datos: YouTube Data API v3, Google News, RSS de medios deportivos, Wikipedia (CC BY-SA). Los comentarios se muestran como extracto sin autor, con link al original. Mapa de poder: codificación editorial a revisar con el cliente. Indicadores para orientar la mirada, no una encuesta.</footer>
+<script src="../assets/plotly.min.js"></script>
+<script>
+(function(){
+const C={s1:'#13161d',s2:'#1a1e27',line:'#272c38',grid:'#1f2430',txt:'#eef0f4',muted:'#a6adbb',dim:'#717887',neg:'#e66767',neu:'#5d6470',pos:'#3987e5',foco:'#f2b705',azul:'#2c5fd6'};
+const IC={quiere:'#3987e5',espera:'#f2b705',critica:'#e66767',apoya:'#199e70'};
+const IN={quiere:'Quiere',espera:'Espera',critica:'Critica',apoya:'Apoya'};
+const IQ={quiere:'pide',espera:'espera',critica:'critica',apoya:'apoya'};
+const BC={'Oficialismo':'#f2b705','Oposición':'#3987e5','Distanciado':'#9085e9','Fútbol':'#199e70','Externo':'#a6adbb'};
+const PAL=['#3987e5','#199e70','#9085e9','#d55181','#5fb3c9','#e66767','#8aa1c1','#b38f3e','#5c9e5c','#c47fb0','#6f7fd6','#d9a05b','#a6adbb','#2c5fd6'];
+const EMO={ira:'Ira',miedo:'Miedo',tristeza:'Tristeza',alegria:'Alegría',asco:'Asco',sorpresa:'Sorpresa'};
+const CFG={displayModeBar:false,responsive:true};
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fmt=n=>n==null?'–':Number(n).toLocaleString('es-AR');
+const base=x=>Object.assign({paper_bgcolor:'rgba(0,0,0,0)',plot_bgcolor:'rgba(0,0,0,0)',font:{color:C.muted,family:'Inter,system-ui,sans-serif',size:12},
+  margin:{l:40,r:10,t:10,b:40},hoverlabel:{bgcolor:'#0b0d12',bordercolor:C.line,font:{color:C.txt}},xaxis:{gridcolor:C.grid,zerolinecolor:C.line},yaxis:{gridcolor:C.grid,zerolinecolor:C.line},legend:{orientation:'h',y:-.15}},x||{});
+const ini=n=>n.replace(/\(.*?\)/g,'').split(/\s+/).filter(Boolean).map(w=>w[0]).slice(0,3).join('').toUpperCase();
+const sgn=v=>v==null?'–':(v>0?'+':'')+v;
+const balHTML=v=>v==null?'<span style="color:var(--dim)">–</span>':`<span class="bal ${v>0?'p':v<0?'n':''}">${sgn(v)}</span>`;
+let CLOUDS=[],D,F,FO,colorOf={},drawn=new Set(),cmp=null,gI='quiere',tmSel=null;
+
+$$('#tabs button').forEach(b=>b.onclick=()=>{$$('#tabs button').forEach(x=>x.classList.toggle('on',x===b));
+  $$('.tab').forEach(t=>t.classList.toggle('on',t.id==='t-'+b.dataset.t));drawTab(b.dataset.t);setTimeout(()=>window.dispatchEvent(new Event('resize')),60)});
+
+fetch('data/boca.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{D=d;init()}).catch(e=>{$('#warn').innerHTML='<div class="warnbox">No se pudieron cargar los datos.</div>';console.error(e)});
+
+function init(){
+  F=D.figuras;FO=F.find(p=>p.foco)||F[0];
+  let j=0;F.forEach(p=>colorOf[p.name]=p.foco?C.foco:PAL[j++%PAL.length]);
+  cmp=(F.filter(p=>!p.foco&&p.n&&p.bando!=='Fútbol').sort((a,b)=>b.n-a.n)[0]||F.filter(p=>!p.foco&&p.n)[0]||{}).name;
+  const age=(Date.now()-new Date(D.updated_at))/36e5;
+  if(age>36){$('#live').classList.add('old');$('#live').innerHTML='<b></b>DATOS DE HACE '+Math.round(age/24)+' DÍAS'}
+  const tick=()=>{const t=new Date();$('#clock').innerHTML=`<span>LA BOCA <b>${t.toLocaleTimeString('es-AR',{timeZone:'America/Argentina/Buenos_Aires',hour:'2-digit',minute:'2-digit'})}</b></span><span>ELECCIONES <b>${D.elecciones?D.elecciones.dias+' DÍAS':'–'}</b></span><span>ACTUALIZADO <b>${new Date(D.updated_at).toLocaleString('es-AR',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'})}</b></span>`};tick();setInterval(tick,30000);
+  const heads=F.flatMap(p=>(p.headlines||[]).map(h=>({...h,p:p.name}))).sort((a,b)=>b.d.localeCompare(a.d));
+  const seen=new Set();$('#ticker').innerHTML=heads.filter(h=>!seen.has(h.t)&&seen.add(h.t)).slice(0,18).map(h=>`<span><em>${esc(h.p.toUpperCase())}</em>${esc(h.t)} · ${esc(h.o)}</span>`).join('')||'<span>Sin titulares todavía</span>';
+  if(!D.totales.textos)$('#warn').innerHTML='<div class="warnbox">Todavía no hay textos recolectados: la primera corrida del recolector diario completa el tablero.</div>';
+  $$('.cdays').forEach(e=>e.textContent=D.conversacion_dias);
+  drawTab('panorama');
+}
+function drawTab(id){if(!D||drawn.has(id))return;drawn.add(id);({panorama,gente,temas,riquelme,figuras,elecciones,poder,medios,metodo}[id]||(()=>{}))()}
+
+// ---------------------------------------------------------------- helpers
+function spark(arr,col){if(!arr||arr.length<2)return'';const m=Math.max(...arr,1),w=84,h=30;
+  return `<svg class="spark" viewBox="0 0 ${w} ${h}"><polyline fill="none" stroke="${col}" stroke-width="1.6" points="${arr.map((v,i)=>(i/(arr.length-1)*w).toFixed(1)+','+(h-2-v/m*(h-4)).toFixed(1)).join(' ')}"/></svg>`}
+const toneBar=t=>t?`<div class="tone"><i style="width:${t.NEG}%;background:var(--neg)"></i><i style="width:${t.NEU}%;background:var(--neu)"></i><i style="width:${t.POS}%;background:var(--pos)"></i></div>`:'<div class="empty" style="padding:6px 0">s/d</div>';
+const intBar=t=>{if(!t)return '<span style="color:var(--dim)">–</span>';const s=Object.values(t).reduce((a,b)=>a+b,0)||1;
+  return `<div class="ibar" title="${Object.entries(t).map(([k,v])=>IN[k]+' '+v+'%').join(' · ')}">${Object.entries(t).map(([k,v])=>`<i style="width:${v/s*100}%;background:${IC[k]}"></i>`).join('')}</div>`};
+const bars=(arr,col)=>{if(!arr.length)return '<div class="empty">Sin datos todavía.</div>';const m=Math.max(...arr.map(a=>a[1]),1);
+  return arr.map(a=>`<div class="r"><span>${esc(a[0])}</span><i style="width:${Math.max(3,a[1]/m*100)}%;background:${a[2]||col||'var(--foco)'}"></i><b>${a[3]??fmt(a[1])}</b></div>`).join('')};
+const headsHTML=h=>h&&h.length?h.map(x=>`<a class="it ${esc(x.tono||'')}" href="${esc(x.u||x.url)}" target="_blank" rel="noopener">${esc(x.t||x.titulo)}<div class="m">${esc(x.o||x.medio)} · ${esc(x.d||x.fecha)}${(x.narr||x.pols||[]).length?' · '+(x.narr||x.pols).map(esc).join(' · '):''}</div></a>`).join(''):'<div class="empty">Sin titulares todavía.</div>';
+let PEDS=[];
+const pedHTML=(arr,col,ctx)=>arr&&arr.length?arr.map(p=>{const i=PEDS.push({...p,ctx})-1;return `<button data-ped="${i}" style="--c:${col}"><span>${esc(p.p)}</span><b>${fmt(p.n)}</b></button>`}).join(''):'<div class="empty" style="padding:10px 0">Todavía no hay pedidos repetidos (mínimo 3 comentarios).</div>';
+const frHTML=(fr,sel)=>{if(!fr||!fr.length)return '<div class="empty" style="padding:8px 0">Todavía no hay frases repetidas suficientes.</div>';const mx=fr[0][1];
+  return fr.map(([g,k])=>`<span class="chip" data-fr="${esc(g)}" data-sel="${esc(sel||'')}" style="font-size:${12+Math.round(k/mx*8)}px;border-color:${k/mx>.6?'var(--foco)':'var(--line)'}">${esc(g)} <span style="color:var(--dim);font-family:var(--mono)">${k}</span></span>`).join('')};
+function intCards(el,clickable){const V=D.voz,T=V.comentarios||1,q={quiere:(V.pedidos[0]||{}).p,espera:(V.deseos[0]||{}).p,critica:((V.frases.critica||[])[0]||[])[0],apoya:((V.frases.apoya||[])[0]||[])[0]};
+  $(el).innerHTML=Object.keys(IN).map(k=>`<div class="int ${clickable&&k===gI?'on':''}" data-i="${k}" style="--c:${IC[k]}"><div class="l">${IN[k]}</div><div class="v">${Math.round(V.intenciones[k]/T*100)}%</div><div class="d">${fmt(V.intenciones[k])} de ${fmt(V.comentarios)} comentarios</div><div class="q">${q[k]?'«'+esc(q[k])+'»':'&nbsp;'}</div></div>`).join('');
+  $$(el+' .int').forEach(c=>c.onclick=()=>{gI=c.dataset.i;if(!clickable){$('#tabs button[data-t=gente]').click()}if(drawn.has('gente'))gSel()})}
+
+// ---------------------------------------------------------------- panorama
+function panorama(){
+  const f=FO,T=D.totales,V=D.voz,rank=[...F].filter(p=>p.n).sort((a,b)=>b.n-a.n),pos=rank.findIndex(p=>p.name===f.name)+1,d=f.delta;
+  $('#hero-k').textContent=`${f.cargo}`;
+  const tt=(V.temas||[]).find(x=>x.n),ped=(V.pedidos||[])[0];
+  $('#kpis').innerHTML=[
+    ['f','Menciones de Riquelme',fmt(f.n),`${D.conversacion_dias} días · ${fmt(f.last7||0)} esta semana`,spark((f.weekly||[]).slice(-12),C.foco)],
+    ['','Variación semanal',d==null?'–':(d>0?'+':'')+d+'%',d==null?'pocos datos para comparar':`vs. semana anterior (${fmt(f.prev7)})`,''],
+    ['','Participación',(f.share??0)+'%',pos?`puesto ${pos} de ${rank.length} figuras`:'',''],
+    ['','Balance apoyo − crítica',sgn(f.balance),'en comentarios que lo nombran (−100 a +100)',''],
+    ['','Tema #1',tt?esc(tt.tema):'–',tt?fmt(tt.n)+' textos':'',''],
+    ['','Elecciones',D.elecciones?fmt(D.elecciones.dias)+' días':'–',D.elecciones?fmt(D.elecciones.n)+' textos hablan de ellas':'',''],
+  ].map(k=>`<div class="kpi ${k[0]}"><div class="l">${k[1]}</div><div class="v ${/^[\d.,%+\-–]+$/.test(k[2])?'':'t'}">${k[2]}</div><div class="d">${k[3]}</div>${k[4]}</div>`).join('');
+  intCards('#p-ints',false);
+  const H=[];
+  if(rank[0])H.push(rank[0].name===f.name?`<b>Riquelme</b> concentra el ${f.share}% de las menciones del mundo Boca.`:`<b>${esc(rank[0].name)}</b> lo supera en volumen (${rank[0].share}% vs. ${f.share}%).`);
+  if(f.balance!=null)H.push(`En comentarios, el balance hacia él es <b class="${f.balance>=0?'down':'up'}">${sgn(f.balance)}</b>: ${f.balance>=0?'pesa más el apoyo':'pesa más la crítica'}.`);
+  if(ped)H.push(`El pedido más repetido de los hinchas: <b>«${esc(ped.p)}»</b> (${fmt(ped.n)} comentarios).`);
+  if(tt)H.push(`El tema que más conversación genera es <b>${esc(tt.tema)}</b>.`);
+  const op=rank.find(p=>p.bando==='Oposición');if(op)H.push(`La figura opositora más nombrada es <b>${esc(op.name)}</b> (${fmt(op.n)} menciones).`);
+  if(d!=null&&Math.abs(d)>=25)H.push(`Su conversación ${d>0?'<b class="up">creció':'<b class="down">bajó'} ${Math.abs(d)}%</b> respecto de la semana anterior.`);
+  $('#find').innerHTML=H.slice(0,5).map(x=>'<li>'+x+'</li>').join('')||'<li>Sin datos suficientes todavía.</li>';
+  const top=rank.slice(0,6);if(!top.includes(f)&&f.n)top.push(f);
+  Plotly.newPlot('g-weekly',top.map(p=>({x:D.semanas,y:p.weekly,name:p.name,type:'scatter',mode:'lines',line:{color:colorOf[p.name],width:p.foco?3.2:1.6,shape:'spline'}})),base({hovermode:'x unified',margin:{l:40,r:10,t:10,b:50}}),CFG);
+  const sv=rank.slice(0,10).reverse();
+  Plotly.newPlot('g-sov',[{type:'bar',orientation:'h',y:sv.map(p=>p.name),x:sv.map(p=>p.share),marker:{color:sv.map(p=>colorOf[p.name])},text:sv.map(p=>p.share+'%'),textposition:'outside',cliponaxis:false,hovertemplate:'%{y}: %{x}%<extra></extra>'}],base({margin:{l:140,r:40,t:10,b:30},xaxis:{gridcolor:C.grid,ticksuffix:'%'}}),CFG);
+  $('#p-ped').innerHTML=pedHTML((V.pedidos||[]).slice(0,8),IC.quiere,'pedido');
+  const t=(V.temas||[]).filter(x=>x.n).slice(0,10).reverse();
+  Plotly.newPlot('p-temas',t.length?Object.keys(IN).map(k=>({type:'bar',orientation:'h',name:IN[k],y:t.map(x=>x.tema),x:t.map(x=>Math.round(x.comentarios*((x.intenciones||{})[k]||0)/100)),marker:{color:IC[k]},hovertemplate:'%{y}: %{x} comentarios<extra>'+IN[k]+'</extra>'})).concat([{type:'bar',orientation:'h',name:'Notas',y:t.map(x=>x.tema),x:t.map(x=>x.notas),marker:{color:'#3a4150'},hovertemplate:'%{y}: %{x} notas<extra></extra>'}]):[],base({barmode:'stack',margin:{l:170,r:10,t:10,b:60}}),CFG);
+  pExtra();
+}
+const AIC={volumen:'▲',balance:'±',tema:'◆',figura:'⚑',pedido:'✎',eleccion:'☐'};
+const ALAB={volumen:'Volumen',balance:'Balance',tema:'Tema',figura:'Figura',pedido:'Pedido',eleccion:'Elecciones'};
+const fdate=s=>new Date(s+'T12:00:00').toLocaleDateString('es-AR',{day:'2-digit',month:'short'});
+function pExtra(){
+  const A=D.alertas||[];
+  $('#p-alert').innerHTML=A.length?A.map(a=>`<div class="a"><i class="${a.dir}">${AIC[a.tipo]||'•'}</i><div><small>${ALAB[a.tipo]||a.tipo}</small>${esc(a.texto)}</div></div>`).join(''):'<div class="empty">Sin cambios fuertes esta semana.</div>';
+  const H=D.hitos||[],w=FO.weekly||[];
+  Plotly.newPlot('p-hitos',[{x:D.semanas,y:w,type:'scatter',mode:'lines',fill:'tozeroy',line:{color:C.foco,width:2,shape:'spline'},fillcolor:'rgba(242,183,5,.12)',name:'Menciones',hovertemplate:'%{x}: %{y}<extra></extra>'},
+    {x:H.map(h=>h.semana),y:H.map(h=>h.n),type:'scatter',mode:'markers+text',text:H.map((h,i)=>String(i+1)),textposition:'top center',textfont:{color:C.txt,size:11},marker:{size:11,color:'#0b0d12',line:{color:C.foco,width:2}},hovertext:H.map(h=>h.titular?h.titular.t:(h.temas||[]).join(', ')),hovertemplate:'%{hovertext}<extra></extra>',name:'Pico'}],
+    base({showlegend:false,margin:{l:36,r:10,t:16,b:30}}),CFG);
+  $('#p-tl').innerHTML=H.length?H.slice().reverse().map((h,i)=>`<div class="h"><div class="d">${H.length-i} · SEMANA DEL ${fdate(h.semana).toUpperCase()} · ${h.n} MENCIONES${h.neg!=null?' · '+h.neg+'% NEG.':''}</div>
+    <div class="t">${h.titular?`<a href="${esc(h.titular.u)}" target="_blank" rel="noopener">${esc(h.titular.t)}</a> <span style="color:var(--dim);font-size:12px">${esc(h.titular.o)}</span>`:'Pico en comentarios de YouTube'}</div>
+    <div>${(h.temas||[]).map(n=>`<span class="tag2">${esc(n)}</span>`).join('')}</div></div>`).join(''):'<div class="empty">Todavía no hay semanas pico.</div>';
+}
+
+// ---------------------------------------------------------------- qué dice la gente
+function gente(){const V=D.voz;
+  gSel();
+  const M=V.matriz,rows=M.temas.map((t,i)=>[t,M.valores[i]]).filter(r=>r[1].some(Boolean)).reverse();
+  Plotly.newPlot('g-mat',rows.length?Object.keys(IN).map((k,j)=>({type:'bar',orientation:'h',name:IN[k],y:rows.map(r=>r[0]),x:rows.map(r=>{const s=r[1].reduce((a,b)=>a+b,0)||1;return +(r[1][j]/s*100).toFixed(1)}),customdata:rows.map(r=>r[1][j]),marker:{color:IC[k]},hovertemplate:'%{y}: %{x}% (%{customdata})<extra>'+IN[k]+'</extra>'})):[],base({barmode:'stack',margin:{l:170,r:10,t:10,b:60},xaxis:{gridcolor:C.grid,ticksuffix:'%',range:[0,100]}}),CFG);
+  Plotly.newPlot('g-serie',Object.keys(IN).map(k=>({x:D.semanas,y:V.semanal[k],name:IN[k],type:'scatter',mode:'lines',line:{color:IC[k],width:2,shape:'spline'}})),base({hovermode:'x unified',margin:{l:40,r:10,t:10,b:50}}),CFG);
+  $('#g-des').innerHTML=pedHTML((V.deseos||[]).slice(0,12),IC.espera,'deseo');
+  const vids=D.videos||[];
+  $('#g-vid').innerHTML=vids.length?'<thead><tr><th>Video</th><th class="n">Coment.</th><th class="n">Critican</th><th class="n">Apoyan</th><th style="width:22%"></th></tr></thead><tbody>'+vids.map((v,i)=>`<tr data-v="${i}"><td><a href="${esc(v.url)}" target="_blank" rel="noopener">${esc(v.titulo)}</a><br><span style="font-size:11.5px">${esc(v.canal)} · ${esc(v.fecha)}</span></td><td class="n">${fmt(v.comentarios)}</td><td class="n" style="color:var(--critica)">${v.critica}%</td><td class="n" style="color:var(--apoya)">${v.apoya}%</td><td><div class="ibar"><i style="width:${v.critica}%;background:var(--critica)"></i><i style="width:${v.apoya}%;background:var(--apoya)"></i></div></td></tr>`).join('')+'</tbody>':'<tr><td class="empty">Sin videos todavía.</td></tr>';
+}
+function gSel(){const V=D.voz;intCards('#g-ints',true);$('#g-iname').textContent=IQ[gI];
+  $('#g-frases').innerHTML=frHTML(V.frases[gI],'int:'+gI);
+  $('#g-ped').innerHTML=gI==='espera'?pedHTML((V.deseos||[]).slice(0,10),IC.espera,'deseo'):gI==='quiere'?pedHTML((V.pedidos||[]).slice(0,14),IC.quiere,'pedido'):'<div class="empty" style="padding:8px 0">Los pedidos textuales se listan en «Quiere» y «Espera». Tocá una frase de arriba para ver los comentarios.</div>'}
+
+// ---------------------------------------------------------------- temas
+function temas(){const T=(D.voz.temas||[]).filter(t=>t.n);if(!T.length){$('#tm-list').innerHTML='<div class="empty">Sin datos todavía.</div>';return}
+  tmSel=tmSel||T[0].tema;
+  $('#tm-list').innerHTML=T.map(t=>`<div class="t ${t.tema===tmSel?'on':''}" data-t="${esc(t.tema)}"><h5>${esc(t.tema)}<span>${fmt(t.n)}</span></h5>${intBar(t.intenciones)}<div style="margin-top:6px;font-size:11.5px;color:var(--dim)">${fmt(t.comentarios)} coment. · ${fmt(t.notas)} notas · balance ${t.balance==null?'–':sgn(t.balance)}</div></div>`).join('');
+  $$('#tm-list .t').forEach(x=>x.onclick=()=>{tmSel=x.dataset.t;$$('#tm-list .t').forEach(y=>y.classList.toggle('on',y===x));tmFicha()});tmFicha()}
+function tmFicha(){const t=D.voz.temas.find(x=>x.tema===tmSel);if(!t)return;
+  const I=t.intenciones;
+  $('#tm-ficha').innerHTML=`<h3>${esc(t.tema)} <span class="tag">${fmt(t.n)} textos</span></h3>
+    <div class="facts"><div><b>${fmt(t.comentarios)}</b><span>comentarios de hinchas</span></div><div><b>${fmt(t.notas)}</b><span>notas de medios</span></div><div><b>${balHTML(t.balance)}</b><span>balance apoyo − crítica</span></div><div><b>${fmt(t.apoyo_likes)}</b><span>likes y respuestas</span></div></div>
+    ${I?'<div class="bars">'+Object.keys(IN).map(k=>`<div class="r"><span>${IN[k]}</span><i style="width:${Math.max(2,I[k])}%;background:${IC[k]}"></i><b>${I[k]}%</b></div>`).join('')+'</div>':''}
+    <div class="sect">Figuras que aparecen</div><div>${(t.figuras||[]).map(([n,c])=>`<span class="tag2">${esc(n)} ${c}</span>`).join('')||'<span style="color:var(--dim)">–</span>'}</div>
+    <div class="sect">Pedidos</div><div class="ped">${pedHTML(t.pedidos,IC.quiere,'pedido')}</div>
+    <button class="chip on" id="tm-all" style="margin-top:12px">Ver los textos del tema →</button>`;
+  $('#tm-all').onclick=()=>showTexts(t.tema,'notas y comentarios del tema',r=>(r.temas||[]).includes(t.tema),[]);
+  Plotly.newPlot('tm-serie',[{x:D.semanas,y:t.weekly,type:'bar',marker:{color:C.foco},hovertemplate:'%{x}: %{y}<extra></extra>'}],base({margin:{l:36,r:10,t:10,b:30}}),CFG);
+  $('#tm-frases').innerHTML=frHTML(t.frases,'tema:'+t.tema)}
+
+// ---------------------------------------------------------------- Riquelme
+const mctx=document.createElement('canvas').getContext('2d');
+function cloudSVG(list,W,H,maxF,pol){const ck=CLOUDS.push({pol,list:list||[]})-1;list=(list||[]).filter(x=>x.s>0).slice(0,60);if(list.length<3)return '<div class="empty">Pocos textos todavía.</div>';
+  const smax=Math.max(...list.map(x=>x.s)),smin=Math.min(...list.map(x=>x.s)),minF=11,placed=[],out=[];
+  for(const x of list){const f=Math.round(minF+(maxF-minF)*Math.pow((x.s-smin)/Math.max(smax-smin,1e-9),.6));
+    mctx.font=`600 ${f}px Inter, system-ui, sans-serif`;const w=mctx.measureText(x.w).width+4,h=f*1.02;let ok=null;
+    for(let t=0;t<900;t+=.18){const r=1.6*t,cx=W/2+r*Math.cos(t)*1.35-w/2,cy=H/2+r*Math.sin(t)-h/2;if(r>Math.max(W,H))break;
+      if(cx<2||cy<2||cx+w>W-2||cy+h>H-2)continue;if(!placed.some(p=>cx<p.x+p.w&&cx+w>p.x&&cy<p.y+p.h&&cy+h>p.y)){ok={x:cx,y:cy,w,h};break}}
+    if(!ok)continue;placed.push(ok);const col=x.neg==null?'#c4c9d4':x.neg>=55?C.neg:x.neg<=25?C.pos:C.muted;
+    out.push(`<text data-c="${ck}:${list.indexOf(x)}" x="${(ok.x+ok.w/2).toFixed(1)}" y="${(ok.y+ok.h*.8).toFixed(1)}" text-anchor="middle" font-size="${f}" fill="${col}"><title>${esc(x.w)} · ${fmt(x.n)} textos · ${x.neg}% en textos negativos</title>${esc(x.w)}</text>`)}
+  return `<svg class="cloud" viewBox="0 0 ${W} ${H}" role="img" aria-label="Nube de palabras">${out.join('')}</svg>`}
+function riquelme(){const f=FO;
+  $('#tone-base').textContent='base: '+(f.tone_base||'–');
+  const row=(l,t)=>`<div style="margin:8px 0 2px;font-size:12.5px;color:var(--muted);display:flex;justify-content:space-between"><span>${l}</span><span style="font-family:var(--mono)">${t?`<span style="color:var(--neg)">${t.NEG}%</span> · ${t.NEU}% · <span style="color:var(--pos)">${t.POS}%</span>`:''}</span></div>${toneBar(t)}`;
+  $('#r-tone').innerHTML=row('Total',f.tone)+row('Comentarios de YouTube',f.tone_comments)+row('Medios',f.tone_news)+'<div class="legend"><span style="--c:var(--neg)">negativo</span><span style="--c:var(--neu)">neutro</span><span style="--c:var(--pos)">positivo</span></div>';
+  $('#r-emo').innerHTML=f.emotions?bars(Object.entries(f.emotions).sort((a,b)=>b[1]-a[1]).map(([k,v])=>[EMO[k],v,null,v+'%']),'#9085e9'):'<div class="empty">Pocos textos con emoción.</div>';
+  $('#r-agr').textContent=f.agresivo!=null?`Textos con lenguaje agresivo: ${f.agresivo}%.`:'';
+  const B=D.foco_semanal.balance,FI=D.foco_semanal.intenciones;
+  Plotly.newPlot('r-bal',[{x:D.semanas,y:FI.apoya,name:'Apoyan',type:'bar',marker:{color:IC.apoya}},{x:D.semanas,y:FI.critica.map(v=>-v),name:'Critican',type:'bar',marker:{color:IC.critica},customdata:FI.critica,hovertemplate:'%{customdata}<extra>Critican</extra>'},
+    {x:D.semanas,y:B,name:'Balance',type:'scatter',mode:'lines+markers',yaxis:'y2',line:{color:C.foco,width:2.4},connectgaps:true}],
+    base({barmode:'relative',hovermode:'x unified',margin:{l:40,r:40,t:10,b:50},yaxis2:{overlaying:'y',side:'right',range:[-100,100],gridcolor:'rgba(0,0,0,0)',zerolinecolor:C.line,color:C.foco}}),CFG);
+  const n=(f.narrativas||[]).slice().reverse();
+  Plotly.newPlot('r-narr',n.length?[{type:'bar',orientation:'h',y:n.map(x=>x.n),x:n.map(x=>x.pct),marker:{color:C.foco},text:n.map(x=>x.pct+'%'),textposition:'outside',cliponaxis:false,hovertemplate:'%{y}: %{x}% (%{customdata} textos)<extra></extra>',customdata:n.map(x=>x.c)}]:[],base({margin:{l:190,r:40,t:10,b:30},xaxis:{gridcolor:C.grid,ticksuffix:'%'}}),CFG);
+  $('#r-cloud').innerHTML=cloudSVG(f.cloud,560,300,40,f.name);
+  $('#r-fc').innerHTML=frHTML(f.frases_critica,'figint:'+f.name+':critica');$('#r-fa').innerHTML=frHTML(f.frases_apoya,'figint:'+f.name+':apoya');
+  $('#r-co').innerHTML=bars((f.co||[]).map(c=>[c.a,c.n,colorOf[c.a]]));
+  $('#r-out').innerHTML=bars((f.outlets||[]).map(o=>[o.o,o.n,'#5fb3c9']));
+  $('#r-heads').innerHTML=headsHTML(f.headlines);
+  const W=D.wiki;
+  if(!W){$('#r-wiki').innerHTML='<div class="empty">Se completa con la próxima corrida diaria.</div>';$('#r-wikiv').innerHTML='<div class="empty">Sin datos de Wikipedia todavía.</div>';return}
+  const pf=W.perfil;
+  $('#r-wiki').innerHTML=(pf&&pf.extract?`<p style="margin:0 0 10px">${esc(pf.extract)}</p><a href="${esc(pf.url)}" target="_blank" rel="noopener">Ver artículo completo ↗</a>`:'<div class="empty">Sin artículo.</div>')
+    +(W.total_90&&W.total_90[FO.name]!=null?`<div class="facts"><div><b>${fmt(W.total_90[FO.name])}</b><span>visitas en 90 días</span></div><div><b>${fmt(Math.round(W.total_90[FO.name]/90))}</b><span>visitas por día</span></div></div>`:'');
+  const ks=Object.keys(W.series).sort((a,b)=>(W.total_90[b]||0)-(W.total_90[a]||0));
+  const sel=[FO.name,...ks.filter(k=>k!==FO.name&&!['Javier Milei','Mauricio Macri','Mario Pergolini','Leandro Paredes'].includes(k)).slice(0,3)].filter(k=>W.series[k]);
+  Plotly.newPlot('r-wikiv',sel.map(k=>({x:W.semanas,y:W.series[k],name:k,type:'scatter',mode:'lines',line:{color:colorOf[k]||C.dim,width:k===FO.name?3:1.5,shape:'spline'}})),base({hovermode:'x unified',margin:{l:46,r:10,t:10,b:50}}),CFG);
+}
+
+// ---------------------------------------------------------------- figuras
+function figuras(){
+  const rows=[...F].sort((a,b)=>b.n-a.n);
+  $('#f-table').innerHTML='<thead><tr><th>Figura</th><th>Bando</th><th class="n">Menciones</th><th class="n">Part.</th><th class="n">7 días</th><th class="n">Var.</th><th>Tono</th><th>Intención en comentarios</th><th class="n">Balance</th><th>Tema principal</th></tr></thead><tbody>'+
+    rows.map(p=>`<tr data-n="${esc(p.name)}" class="${p.name===cmp?'sel':''}"><td><span class="av sm" style="background:${colorOf[p.name]};display:inline-grid;vertical-align:middle;margin-right:6px;color:${p.foco?'#0b0d12':'#fff'}">${ini(p.name)}</span><b style="color:var(--txt)">${esc(p.name)}</b><br><span style="font-size:11.5px">${esc(p.cargo)}</span></td><td><span class="bando" style="color:${BC[p.bando]||C.muted};border-color:${BC[p.bando]||C.line}">${esc(p.bando)}</span></td><td class="n">${fmt(p.n)}</td><td class="n">${p.share??'–'}${p.share!=null?'%':''}</td><td class="n">${fmt(p.last7)}</td><td class="n ${p.delta>0?'up':p.delta<0?'down':''}">${p.delta==null?'–':(p.delta>0?'+':'')+p.delta+'%'}</td><td style="min-width:100px">${toneBar(p.tone)}</td><td style="min-width:120px">${intBar(p.intenciones)}</td><td class="n">${balHTML(p.balance)}</td><td>${p.temas&&p.temas[0]?esc(p.temas[0][0]):'–'}</td></tr>`).join('')+'</tbody>';
+  $$('#f-table tbody tr').forEach(tr=>tr.onclick=()=>{if(tr.dataset.n===FO.name)return;cmp=tr.dataset.n;$$('#f-table tbody tr').forEach(x=>x.classList.toggle('sel',x===tr));cmpView()});
+  const t=rows.filter(p=>p.intenciones).reverse();
+  Plotly.newPlot('f-int',t.length?Object.keys(IN).map(k=>({type:'bar',orientation:'h',y:t.map(p=>p.name),x:t.map(p=>p.intenciones[k]),name:IN[k],marker:{color:IC[k]},hovertemplate:'%{y}: %{x}%<extra>'+IN[k]+'</extra>'})):[],base({barmode:'group',margin:{l:150,r:10,t:10,b:40},xaxis:{gridcolor:C.grid,ticksuffix:'%'}}),CFG);
+  cmpView();
+}
+function cmpView(){const a=FO,b=F.find(p=>p.name===cmp)||{name:'–',narrativas:[],cloud:[]};
+  $('#f-name2').textContent=b.name;
+  const ks=[...new Set([...(a.narrativas||[]),...(b.narrativas||[])].map(x=>x.n))],v=(p,k)=>((p.narrativas||[]).find(x=>x.n===k)||{}).pct||0;
+  ks.sort((x,y)=>(v(a,x)+v(b,x))-(v(a,y)+v(b,y)));
+  Plotly.newPlot('f-narr',[{type:'bar',orientation:'h',y:ks,x:ks.map(k=>v(a,k)),name:a.name,marker:{color:colorOf[a.name]}},{type:'bar',orientation:'h',y:ks,x:ks.map(k=>v(b,k)),name:b.name,marker:{color:colorOf[b.name]||C.pos}}],base({barmode:'group',margin:{l:190,r:10,t:10,b:40},xaxis:{gridcolor:C.grid,ticksuffix:'%'}}),CFG);
+  const hd=p=>`<span class="av sm" style="background:${colorOf[p.name]||C.pos};display:inline-grid;color:${p.foco?'#0b0d12':'#fff'}">${ini(p.name)}</span>${esc(p.name)}<span class="tag">${fmt(p.n)} menciones</span>`;
+  $('#f-cl1').innerHTML=hd(a);$('#f-cl2').innerHTML=hd(b);
+  $('#f-cloud1').innerHTML=cloudSVG(a.cloud,560,280,36,a.name);$('#f-cloud2').innerHTML=cloudSVG(b.cloud,560,280,36,b.name);
+  $('#f-fr2').innerHTML=(b.frases_critica||[]).length?'<div class="sect" style="color:var(--critica)">Lo que le critican</div>'+frHTML(b.frases_critica.slice(0,10),'figint:'+b.name+':critica'):'';
+}
+
+// ---------------------------------------------------------------- hacia 2027
+function elecciones(){const E=D.elecciones;if(!E)return;
+  $('#e-dias').textContent=fmt(E.dias);$('#e-n').textContent=`Fecha de referencia: diciembre de 2027. ${fmt(E.n)} textos de los últimos ${D.conversacion_dias} días hablan de elecciones, candidaturas u oposición (${fmt(E.comentarios)} comentarios).`;
+  $('#e-bandos').innerHTML=bars((E.bandos||[]).filter(b=>b[0]).map(([k,v])=>[k,v,BC[k]]));
+  Plotly.newPlot('e-weekly',[{x:D.semanas,y:E.weekly,type:'bar',marker:{color:C.azul},hovertemplate:'%{x}: %{y}<extra></extra>'}],base({margin:{l:36,r:10,t:10,b:30}}),CFG);
+  $('#e-figs').innerHTML=(E.figuras||[]).length?'<thead><tr><th>Figura</th><th>Bando</th><th class="n">Textos</th><th>Tono</th><th class="n">Balance</th></tr></thead><tbody>'+E.figuras.map(f=>`<tr data-n="${esc(f.name)}"><td style="color:var(--txt)">${esc(f.name)}</td><td><span class="bando" style="color:${BC[f.bando]||C.muted};border-color:${BC[f.bando]||C.line}">${esc(f.bando)}</span></td><td class="n">${fmt(f.n)}</td><td style="min-width:110px">${toneBar(f.tono)}</td><td class="n">${balHTML(f.balance)}</td></tr>`).join('')+'</tbody>':'<tr><td class="empty">Sin datos todavía.</td></tr>';
+  $$('#e-figs tbody tr').forEach(tr=>tr.onclick=()=>showTexts(tr.dataset.n,'textos sobre elecciones que lo nombran',r=>(r.temas||[]).includes('Elecciones 2027 y oposición')&&(r.pols||[]).includes(tr.dataset.n),[]));
+  const I=E.intenciones;
+  $('#e-int').innerHTML=I?'<div class="bars">'+Object.keys(IN).map(k=>`<div class="r"><span>${IN[k]}</span><i style="width:${Math.max(2,I[k])}%;background:${IC[k]}"></i><b>${I[k]}%</b></div>`).join('')+'</div>':'<div class="empty">Sin comentarios todavía.</div>';
+  $('#e-frases').innerHTML=frHTML(E.frases,'tema:Elecciones 2027 y oposición');$('#e-ped').innerHTML=pedHTML(E.pedidos,IC.quiere,'pedido');
+  $('#e-heads').innerHTML=headsHTML(E.titulares);
+}
+
+// ---------------------------------------------------------------- mapa de poder
+function poder(){const M=D.mapa_poder,P=M.puntos,mx=Math.max(1,...P.map(p=>p.n));
+  const groups={};P.forEach(p=>(groups[p.bando]=groups[p.bando]||[]).push(p));
+  const tr=Object.entries(groups).map(([g,ps])=>({type:'scatter',mode:'markers+text',name:g,x:ps.map(p=>p.alineamiento),y:ps.map(p=>p.peso),text:ps.map(p=>p.name),textposition:'top center',textfont:{color:C.txt,size:11.5},
+    marker:{size:ps.map(p=>12+Math.sqrt(p.n/mx)*46),color:BC[g]||C.muted,opacity:.85,line:{color:'#0b0d12',width:1.5}},
+    hovertext:ps.map(p=>`<b>${esc(p.name)}</b> · ${esc(g)}<br>${fmt(p.n)} menciones · balance ${sgn(p.balance)}${p.neg!=null?' · '+p.neg+'% neg.':''}<br>${esc(p.nota)}`),hoverinfo:'text'}));
+  Plotly.newPlot('pw',tr,base({margin:{l:50,r:20,t:20,b:60},xaxis:{title:{text:'← núcleo de Riquelme · · · oposición →'},range:[-8,108],gridcolor:C.grid,zeroline:false},yaxis:{title:{text:'peso institucional'},range:[0,105],gridcolor:C.grid,zeroline:false},
+    shapes:[{type:'line',x0:50,x1:50,y0:0,y1:105,line:{color:C.line,dash:'dot'}}],annotations:[{x:2,y:102,text:'OFICIALISMO',showarrow:false,font:{color:C.foco,size:11,family:'JetBrains Mono'}},{x:98,y:102,text:'OPOSICIÓN',showarrow:false,font:{color:'#3987e5',size:11,family:'JetBrains Mono'}}]}),CFG);
+  $('#pw-t').innerHTML='<thead><tr><th>Figura</th><th class="n">Menc.</th><th class="n">Bal.</th></tr></thead><tbody>'+[...P].sort((a,b)=>b.n-a.n).map(p=>`<tr><td><b style="color:var(--txt)">${esc(p.name)}</b> <span class="bando" style="color:${BC[p.bando]};border-color:${BC[p.bando]}">${esc(p.bando)}</span><br><span style="font-size:11.5px">${esc(p.nota)}</span></td><td class="n">${fmt(p.n)}</td><td class="n">${balHTML(p.balance)}</td></tr>`).join('')+'</tbody>';
+  $('#pw-m').textContent=M.metodo;
+}
+
+// ---------------------------------------------------------------- medios
+let mF=null;
+function medios(){const all={};F.forEach(p=>(p.outlets||[]).forEach(o=>all[o.o]=(all[o.o]||0)+o.n));
+  $('#m-out').innerHTML=bars(Object.entries(all).sort((a,b)=>b[1]-a[1]).slice(0,15).map(([k,v])=>[k,v,'#5fb3c9']));mHeads();
+  const M=D.medios_matriz;
+  if(M&&M.medios.length){const z=M.valores.slice().reverse(),y=M.medios.slice().reverse();
+    Plotly.newPlot('m-mat',[{type:'heatmap',z,x:M.politicos,y,colorscale:[[0,'#13161d'],[.15,'#1c2b55'],[.5,'#2c5fd6'],[1,'#f2b705']],showscale:false,text:z,texttemplate:'%{text}',textfont:{size:10.5},hovertemplate:'%{y} · %{x}: %{z} notas<extra></extra>',xgap:2,ygap:2}],
+      base({margin:{l:150,r:10,t:10,b:120},xaxis:{tickangle:-35,gridcolor:'rgba(0,0,0,0)'},yaxis:{gridcolor:'rgba(0,0,0,0)'}}),CFG)}
+  else $('#m-mat').innerHTML='<div class="empty">Sin notas todavía.</div>';
+  const T=(D.medios_tono||[]).slice().reverse();
+  if(T.length)Plotly.newPlot('m-tono',[['neg','Negativo',C.neg],['neu','Neutro',C.neu],['pos','Positivo',C.pos]].map(([k,n,c])=>({type:'bar',orientation:'h',name:n,y:T.map(t=>t.medio+' ('+t.n+')'),x:T.map(t=>k==='neu'?Math.max(0,+(100-t.neg-t.pos).toFixed(1)):t[k]),marker:{color:c},hovertemplate:'%{y}: %{x}%<extra>'+n+'</extra>'})),
+    base({barmode:'stack',margin:{l:170,r:10,t:10,b:50},xaxis:{gridcolor:C.grid,ticksuffix:'%',range:[0,100]}}),CFG);
+  else $('#m-tono').innerHTML='<div class="empty">Hacen falta al menos 2 notas por medio.</div>';
+}
+function mHeads(){const ps=F.filter(p=>(p.headlines||[]).length);
+  $('#m-f').innerHTML=`<button class="chip ${mF?'':'on'}" data-v="">Todos</button>`+ps.map(p=>`<button class="chip ${mF===p.name?'on':''}" data-v="${esc(p.name)}">${esc(p.name)}</button>`).join('');
+  $$('#m-f button').forEach(b=>b.onclick=()=>{mF=b.dataset.v||null;mHeads()});
+  const seen=new Set(),h=ps.filter(p=>!mF||p.name===mF).flatMap(p=>p.headlines).sort((a,b)=>b.d.localeCompare(a.d)).filter(x=>!seen.has(x.t)&&seen.add(x.t));
+  $('#m-heads').innerHTML=headsHTML(h.slice(0,60))}
+
+// ---------------------------------------------------------------- método
+function metodo(){const S=D.status||{},nm={youtube:'YouTube (comentarios)',google_news:'Google News (medios)',rss:'RSS de medios deportivos',wikipedia:'Wikipedia'};
+  $('#st').innerHTML=Object.entries(nm).map(([k,n])=>{const s=S[k]||{};return `<span class="chip ${s.ok?'ok':'no'}">${n}${s.items!=null?' · '+fmt(s.items):''}</span>`}).join('')+'<span class="chip no">Facebook / Instagram · sin API abierta</span><span class="chip no">X · API paga</span>';
+  $('#st-n').textContent=`Ventana: ${D.window_days} días de almacenamiento, ${D.conversacion_dias} días para los indicadores. Tono calculado con ${D.totales.metodo_nlp==='modelo'?'modelos pysentimiento':'diccionarios'}. Se actualiza todos los días desde GitHub Actions.`;
+  const M=D.metodo;$('#mt').innerHTML=['menciones','intencion','balance','pedidos','tono'].map(k=>`<p>${esc(M[k])}</p>`).join('')+'<p>Son indicadores para orientar la mirada, no una encuesta: quienes comentan en YouTube no son todos los hinchas ni todos los socios.</p>';
+  const tbl=o=>'<thead><tr><th></th><th>Términos</th></tr></thead><tbody>'+Object.entries(o).map(([k,v])=>`<tr><td style="color:var(--txt)">${esc(IN[k]||k)}</td><td style="font-size:12px">${esc(v.join(', '))}</td></tr>`).join('')+'</tbody>';
+  $('#mt-al').innerHTML=tbl(M.figuras);$('#mt-int').innerHTML=tbl(M.intenciones);$('#mt-tem').innerHTML=tbl(M.temas);
+}
+
+// ---------------------------------------------------------------- textos de origen (drawer)
+let TX=null;
+const foldJS=s=>String(s||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+function loadTx(){if(!TX)TX=fetch('data/textos.json',{cache:'no-store'}).then(r=>r.ok?r.json():{items:[]}).then(d=>d.items||[]).catch(()=>[]);return TX}
+function hl(text,terms){let h=esc(text);if(!terms||!terms.length)return h;
+  const f=foldJS(text);const marks=[];terms.forEach(t=>{const re=new RegExp('(^|[^a-z0-9])('+foldJS(t).replace(/[.*+?^${}()|[\]\\]/g,'\\$&').replace(/ +/g,'[^a-z0-9]+')+')(?=[^a-z0-9]|$)','g');let m;while((m=re.exec(f))){marks.push([m.index+m[1].length,m.index+m[1].length+m[2].length])}});
+  if(!marks.length)return h;marks.sort((a,b)=>a[0]-b[0]);let out='',i=0;marks.forEach(([a,b])=>{if(a<i)return;out+=esc(text.slice(i,a))+'<mark>'+esc(text.slice(a,b))+'</mark>';i=b});return out+esc(text.slice(i))}
+function txHTML(r,terms){const com=r.k==='c';
+  return `<div class="tx ${esc(r.tono||'')}"><div class="m"><span class="k">${com?'Comentario YouTube':'Nota'}</span><span>${esc(r.d)}</span>${(r.int||[]).map(k=>`<span style="color:${IC[k]}">${IN[k].toLowerCase()}</span>`).join('')}${(r.temas||[]).slice(0,2).map(t=>`<span>${esc(t)}</span>`).join('')}${com&&r.lk?`<span>♥ ${fmt(r.lk)}</span>`:''}</div>
+    <div class="t">${r.t?hl(r.t,terms):'<span style="color:var(--dim)">Texto no publicado.</span>'}</div>
+    <div class="m" style="margin:5px 0 0">${esc(com?'en: '+r.o:r.o)}${r.u?` · <a class="o" href="${esc(r.u)}" target="_blank" rel="noopener">${com?'ver en YouTube':'abrir nota'} ↗</a>`:''}</div></div>`}
+let DW={rows:[],terms:[],k:'all'};
+function dwRender(){const R=DW.rows.filter(r=>DW.k==='all'||r.k===DW.k),nc=DW.rows.filter(r=>r.k==='c').length,nn=DW.rows.length-nc;
+  $('#dw-c').innerHTML=[['all','Todos',DW.rows.length],['c','Comentarios',nc],['n','Notas',nn]].map(([k,l,n])=>`<button class="chip ${DW.k===k?'on':''}" data-k="${k}">${l} · ${n}</button>`).join('');
+  $$('#dw-c button').forEach(b=>b.onclick=()=>{DW.k=b.dataset.k;dwRender()});
+  $('#dw-l').innerHTML=R.length?R.slice(0,300).map(r=>txHTML(r,DW.terms)).join('')+(R.length>300?`<p class="note">Se muestran los 300 más recientes de ${fmt(R.length)}.</p>`:''):'<div class="empty">No hay textos publicados para esto todavía.</div>';
+  $('#dw-l').scrollTop=0}
+function showTexts(title,sub,sel,terms){$('#dw-t').textContent=title;$('#dw-s').textContent=sub||'';$('#dw-l').innerHTML='<div class="empty">Cargando…</div>';$('#dw-c').innerHTML='';
+  $('#dw').classList.add('on');$('#dw').setAttribute('aria-hidden','false');
+  loadTx().then(T=>{DW={rows:(typeof sel==='function'?T.filter(sel):sel.map(i=>T[i]).filter(Boolean)).sort((a,b)=>b.d.localeCompare(a.d)),terms:terms||[],k:'all'};dwRender()})}
+function closeDw(){$('#dw').classList.remove('on');$('#dw').setAttribute('aria-hidden','true')}
+$('#dw-x').onclick=closeDw;$('#dw .bg').onclick=closeDw;document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDw()});
+document.addEventListener('click',e=>{
+  const c=e.target.closest&&e.target.closest('text[data-c]');
+  if(c){const [ck,i]=c.dataset.c.split(':').map(Number),C0=CLOUDS[ck],x=C0&&C0.list[i];if(!x)return;
+    showTexts(`«${x.w}»`,`${fmt(x.n)} textos sobre ${C0.pol} que usan esta palabra`,x.ids||(r=>(r.pols||[]).includes(C0.pol)&&foldJS(r.t).includes(x.w)),[x.w]);return}
+  const p=e.target.closest&&e.target.closest('[data-ped]');
+  if(p){const x=PEDS[+p.dataset.ped];if(x)showTexts(`«${x.p}»`,`${fmt(x.n)} comentarios con este ${x.ctx}`,x.ids||[],[x.p.split(': ').pop()]);return}
+  const f=e.target.closest&&e.target.closest('[data-fr]');
+  if(f){const g=f.dataset.fr,s=f.dataset.sel||'',[kind,a,b]=s.split(':');let flt=r=>r.k==='c';
+    if(kind==='int')flt=r=>r.k==='c'&&(r.int||[]).includes(a);
+    else if(kind==='tema')flt=r=>r.k==='c'&&(r.temas||[]).includes(a);
+    else if(kind==='figint')flt=r=>r.k==='c'&&(r.pols||[]).includes(a)&&(r.int||[]).includes(b);
+    const words=g.split(' ');
+    showTexts(`«${g}»`,'comentarios que repiten esta frase',r=>{if(!flt(r))return false;const t=' '+foldJS(r.t).replace(/[^a-zñ0-9]+/g,' ')+' ';return words.length>1?t.includes(' '+g+' ')||words.every(w=>t.includes(' '+w+' ')):t.includes(' '+g+' ')},[g])}
+});
+})();
+</script>
+</body>
+</html>
