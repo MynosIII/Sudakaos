@@ -279,7 +279,10 @@ def main():
             rows = fn()
             new = sum(1 for r in rows if r["id"] not in known)
             for r in rows:
-                known[r["id"]] = r | {"collected_at": iso(datetime.now(timezone.utc))}
+                old = known.get(r["id"]) or {}
+                # una nota puede llegar por varias búsquedas: se guardan todas (sirve para atribuirla a una figura)
+                qs = sorted({q for q in (old.get("queries") or [old.get("query")]) + [r.get("query")] if q})
+                known[r["id"]] = r | {"collected_at": iso(datetime.now(timezone.utc)), "queries": qs}
             status[name] = {"ok": True, "items": len(rows), "new": new}
         except Exception as e:
             status[name] = {"ok": False, "error": str(e)[:200]}
