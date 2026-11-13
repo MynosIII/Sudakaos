@@ -1,0 +1,27 @@
+{
+  "_nota": "Dirigentes medidos en Instagram (Business Discovery) y en la Biblioteca de Anuncios de Meta. 'ig' es una lista de usuarios posibles: se usa el primero que exista. Si alguno sale 'no encontrado' en meta/data/meta.json, corregir el usuario acá.",
+  "api_version": "v21.0",
+  "media_limit": 60,
+  "ads_days": 90,
+  "grupos": ["País", "Boca", "Provincia de Buenos Aires", "CABA", "San Isidro"],
+  "dirigentes": [
+    {"name": "Sergio Massa", "grupo": "País", "espacio": "Peronismo", "ig": ["sergiomassa"], "ads": ["Sergio Massa"]},
+    {"name": "Javier Milei", "grupo": "País", "espacio": "La Libertad Avanza", "ig": ["javiermilei"], "ads": ["Javier Milei"]},
+    {"name": "Cristina Kirchner", "grupo": "País", "espacio": "Peronismo", "ig": ["cfkargentina"], "ads": ["Cristina Fernández de Kirchner", "Cristina Kirchner"]},
+    {"name": "Axel Kicillof", "grupo": "País", "espacio": "Peronismo", "ig": ["kicillofok", "axelkicillof"], "ads": ["Axel Kicillof"]},
+    {"name": "Patricia Bullrich", "grupo": "País", "espacio": "La Libertad Avanza", "ig": ["patobullrich", "patriciabullrich"], "ads": ["Patricia Bullrich"]},
+    {"name": "Victoria Villarruel", "grupo": "País", "espacio": "La Libertad Avanza", "ig": ["villarruelvictoria", "vickyvillarruel", "victoriavillarruel"], "ads": ["Victoria Villarruel"]},
+    {"name": "Juan Román Riquelme", "grupo": "Boca", "espacio": "Oficialismo Boca", "ig": ["riquelmejuanroman", "romanriquelme", "jrriquelme10"], "ads": ["Riquelme"]},
+    {"name": "Mauricio Macri", "grupo": "Boca", "espacio": "PRO", "ig": ["mauriciomacri"], "ads": ["Mauricio Macri"]},
+    {"name": "Andrés Ibarra", "grupo": "Boca", "espacio": "Oposición Boca", "ig": ["andresibarraok", "andresibarra"], "ads": ["Andrés Ibarra"]},
+    {"name": "Diego Santilli", "grupo": "Provincia de Buenos Aires", "espacio": "La Libertad Avanza", "ig": ["diegosantilli"], "ads": ["Diego Santilli"]},
+    {"name": "Verónica Magario", "grupo": "Provincia de Buenos Aires", "espacio": "Peronismo", "ig": ["veronicamagario", "magarioveronica"], "ads": ["Verónica Magario"]},
+    {"name": "Julio Zamora", "grupo": "Provincia de Buenos Aires", "distrito": "Tigre", "espacio": "Peronismo", "ig": ["juliozamoraok", "juliozamora"], "ads": ["Julio Zamora"]},
+    {"name": "Malena Galmarini", "grupo": "Provincia de Buenos Aires", "distrito": "Tigre", "espacio": "Peronismo", "ig": ["malegalmarini", "malenagalmarini"], "ads": ["Malena Galmarini"]},
+    {"name": "Jorge Macri", "grupo": "CABA", "espacio": "PRO", "ig": ["jorgemacri", "jorgemacriok"], "ads": ["Jorge Macri"]},
+    {"name": "Leandro Santoro", "grupo": "CABA", "espacio": "Peronismo", "ig": ["leandrosantoro", "santoroleandro"], "ads": ["Leandro Santoro"]},
+    {"name": "Ramón Lanús", "grupo": "San Isidro", "espacio": "PRO", "ig": ["ramonlanus", "lanusramon"], "ads": ["Ramón Lanús"]},
+    {"name": "Gustavo Posse", "grupo": "San Isidro", "espacio": "Acción Vecinal", "ig": ["gustavoposse", "gustavoposseok"], "ads": ["Gustavo Posse"]},
+    {"name": "Federico Meca", "grupo": "San Isidro", "espacio": "Frente Renovador", "ig": ["federicomeca", "fedemeca"], "ads": ["Federico Meca"]}
+  ]
+}
