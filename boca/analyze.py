@@ -408,74 +408,113 @@ def main():
                                                       neg=(fby.get(k, {}).get("tone") or {}).get("NEG")) for k, v in MP["puntos"].items()]}
 
     # ------------------------------------------------ aspirante (p. ej. Walter Klix como posible vice)
-    aspirante = None
+    # Ventana propia (config aspirante.dias, por defecto la de almacenamiento): una figura chica tiene pocas
+    # menciones y con 180 días puede quedar en cero aunque haya sido noticia hace unos meses.
+    aspirante, asp_rows = None, []
     AS = CONFIG.get("aspirante")
     if AS and AS["figura"] in FIG:
         k = AS["figura"]
+        a_days = AS.get("dias", CONFIG["window_days"])
+        a_since = iso(now - timedelta(days=a_days))
+        abase = [r for r in texts if r["created_at"] >= a_since]
+        a_sem, w = [], datetime.fromisoformat(week(a_since))
+        while w <= now.replace(tzinfo=None):
+            a_sem.append(w.strftime("%Y-%m-%d"))
+            w += timedelta(days=7)
+        a_pos = {s: i for i, s in enumerate(a_sem)}
         ROL = rx(AS["rol_terms"])
         ENC = {n: rx(v) for n, v in AS["encuadres"].items()}
         own = POLS[k]
-        arows = [r for r in recent if k in r["pols"]]
+        arows = [r for r in abase if k in r["pols"]]
+        asp_rows = arows
         for r in arows:
             t = own.sub(" ", r["_f"])
             r["_rol"] = bool(ROL.search(t))
             r["_enc"] = [n for n, p in ENC.items() if p.search(t)]
         rol = [r for r in arows if r["_rol"]]
         acom = [r for r in arows if r["kind"] == "comment"]
+        anews = [r for r in arows if r["kind"] == "news"]
         rcom = [r for r in rol if r["kind"] == "comment"]
         ne = sum(1 for r in arows if r["_enc"]) or 1
         enc_c = Counter(n for r in arows for n in r["_enc"])
-        enc_w = {n: [0] * len(semanas) for n in AS["encuadres"]}
-        rol_w = [0] * len(semanas)
+        enc_w = {n: [0] * len(a_sem) for n in AS["encuadres"]}
+        rol_w, all_w = [0] * len(a_sem), [0] * len(a_sem)
         for r in arows:
-            i = wpos.get(week(r["created_at"]))
+            i = a_pos.get(week(r["created_at"]))
             if i is None:
                 continue
+            all_w[i] += 1
             for n in r["_enc"]:
                 enc_w[n][i] += 1
             if r["_rol"]:
                 rol_w[i] += 1
-        opos = [f for f in figs if f.get("bando") == "Oposición"]
-        rank_n = sorted(opos, key=lambda f: -f["n"])
-        el_opos = [(p, c) for p, c in el_figs.most_common() if FIG[p].get("bando") == "Oposición"]
+        # Oposición en la misma ventana, para comparar con la misma vara
+        opos = [n for n, v in FIG.items() if v.get("bando") == "Oposición"]
+        a_men = [r for r in abase if r["pols"]]
+        tot = sum(len(r["pols"]) for r in a_men) or 1
+        el_a = [r for r in abase if "Elecciones 2027 y oposición" in r["temas"]]
+        el_c = Counter(p for r in el_a for p in r["pols"])
+        op_rows = []
+        for n in opos:
+            rs = [r for r in a_men if n in r["pols"]]
+            if rs:
+                op_rows.append({"name": n, "n": len(rs), "share": round(len(rs) / tot * 100, 1),
+                                "balance": balance([r for r in rs if r["kind"] == "comment"]),
+                                "neg": tone(rs)["NEG"], "elecciones": el_c.get(n, 0)})
+        op_rows.sort(key=lambda x: -x["n"])
+        el_opos = sorted(((n, el_c[n]) for n in opos if el_c.get(n)), key=lambda x: -x[1])
         co_rol = Counter(p for r in rol for p in r["pols"] if p != k)
-        fa = fby.get(k, {})
+        stop_own = set(WORD.findall(" ".join(fold(a) for a in FIG[k]["alias"]) + " " + fold(k)))
+        wsets = [set(w for w in WORD.findall(r["_f"]) if w not in STOP and w not in stop_own) for r in arows]
+        wc = Counter(w for ws in wsets for w in ws)
+        negc = Counter(w for ws, r in zip(wsets, arows) if r["tono"] == "NEG" for w in ws)
+        cloud = [{"w": w, "n": c, "s": c, "neg": pct(negc[w] / c), "_rid": [r["id"] for ws, r in zip(wsets, arows) if w in ws]}
+                 for w, c in wc.most_common(60) if c >= 2]
         heads_r = sorted([r for r in rol if r["kind"] == "news"], key=lambda r: r["created_at"], reverse=True)[:20]
+        heads_a = sorted(anews, key=lambda r: r["created_at"], reverse=True)[:20]
+        hd = lambda rs: [{"t": r["title"], "o": r.get("outlet", ""), "u": r["url"], "d": r["created_at"][:10], "tono": r["tono"],
+                          "narr": r["_enc"][:3]} for r in rs]
+        pos = next((i + 1 for i, x in enumerate(op_rows) if x["name"] == k), None)
+        b_all = balance(acom)
         aspirante = {
-            "name": k, "rol": AS["rol"], "rol_terms": AS["rol_terms"], "n": len(arows),
-            "n_news": sum(1 for r in arows if r["kind"] == "news"), "n_comments": len(acom),
+            "name": k, "rol": AS["rol"], "rol_terms": AS["rol_terms"], "dias": a_days, "semanas": a_sem,
+            "n": len(arows), "n_news": len(anews), "n_comments": len(acom), "weekly": all_w,
+            "share": next((x["share"] for x in op_rows if x["name"] == k), 0),
+            "tone": tone(arows), "balance": b_all,
             "rol_n": len(rol), "rol_pct": pct(len(rol) / len(arows)) if arows else None, "rol_comments": len(rcom),
             "rol_weekly": rol_w, "tone_rol": tone(rol), "balance_rol": balance(rcom), "int_rol": intents(rcom) if len(rcom) >= 5 else None,
             "encuadres": [{"n": n, "c": c, "pct": pct(c / ne)} for n, c in enc_c.most_common()],
             "encuadres_semanal": enc_w,
             "co_rol": [{"a": a, "n": c, "bando": FIG[a].get("bando", "")} for a, c in co_rol.most_common(8)],
-            "rank_oposicion": {"pos": next((i + 1 for i, f in enumerate(rank_n) if f["name"] == k), None), "de": len([f for f in rank_n if f["n"]])},
-            "oposicion": [{"name": f["name"], "n": f["n"], "share": f.get("share"), "balance": f.get("balance"),
-                           "neg": (f.get("tone") or {}).get("NEG"), "elecciones": el_figs.get(f["name"], 0)} for f in rank_n if f["n"]],
-            "rank_elecciones": next((i + 1 for i, (p, _) in enumerate(el_opos) if p == k), None), "elecciones_n": el_figs.get(k, 0),
-            "frases_rol": frases(rcom, 12, set(WORD.findall(" ".join(fold(a) for a in FIG[k]["alias"])))),
-            "titulares_rol": [{"t": r["title"], "o": r.get("outlet", ""), "u": r["url"], "d": r["created_at"][:10], "tono": r["tono"],
-                               "narr": r["_enc"][:3]} for r in heads_r],
+            "rank_oposicion": {"pos": pos, "de": len(op_rows)},
+            "oposicion": op_rows,
+            "rank_elecciones": next((i + 1 for i, (p, _) in enumerate(el_opos) if p == k), None), "elecciones_n": el_c.get(k, 0),
+            "frases_rol": frases(rcom, 12, stop_own),
+            "frases_critica": frases([r for r in acom if "critica" in r["int"]], 12, stop_own),
+            "frases_apoya": frases([r for r in acom if "apoya" in r["int"]], 12, stop_own),
+            "cloud": cloud,
+            "titulares_rol": hd(heads_r), "titulares": hd(heads_a),
+            "ultima": max((r["created_at"][:10] for r in arows), default=None),
         }
         # Lectura automática: frases cortas a partir de los números (no es una opinión editorial)
         L = []
         if not arows:
-            L.append(f"Todavía no hay textos que nombren a {k} en los últimos {CONFIG['conversacion_dias']} días: el recolector diario suma sus búsquedas propias.")
+            L.append(f"Todavía no hay textos que nombren a {k} en los últimos {a_days} días: el recolector diario suma sus búsquedas propias.")
         else:
-            L.append(f"{k} aparece en {len(arows)} textos ({fa.get('share', 0)}% de las menciones del mundo Boca); es la figura opositora n.º {aspirante['rank_oposicion']['pos']} de {aspirante['rank_oposicion']['de']} por volumen.")
+            L.append(f"{k} aparece en {len(arows)} textos de los últimos {a_days} días ({len(anews)} notas, {len(acom)} comentarios); "
+                     f"es la figura opositora n.º {pos} de {len(op_rows)} por volumen ({aspirante['share']}% de las menciones). Última mención: {aspirante['ultima']}.")
             if rol:
                 L.append(f"En {aspirante['rol_pct']}% de esos textos se lo vincula con elecciones, candidaturas, fórmulas o la vicepresidencia ({len(rol)} textos).")
             else:
-                L.append("Todavía casi nadie lo asocia a una candidatura: la conversación sobre él no habla de fórmulas ni de la vicepresidencia.")
+                L.append("Todavía nadie lo asocia a una candidatura: lo que se dice de él no habla de fórmulas ni de la vicepresidencia.")
             if enc_c:
                 n0, c0 = enc_c.most_common(1)[0]
                 L.append(f"El encuadre dominante es «{n0}» ({pct(c0 / ne)}% de los textos con encuadre).")
             if co_rol:
                 a0, c0 = co_rol.most_common(1)[0]
                 L.append(f"Cuando se habla de él como candidato, la figura que más aparece al lado es {a0} ({c0} textos).")
-            b = fa.get("balance")
-            if b is not None:
-                L.append(f"En comentarios de hinchas el balance apoyo−crítica es {b:+d} ({'pesa más el apoyo' if b >= 0 else 'pesa más la crítica'}).")
+            if b_all is not None:
+                L.append(f"En comentarios de hinchas el balance apoyo−crítica es {b_all:+d} ({'pesa más el apoyo' if b_all >= 0 else 'pesa más la crítica'}).")
             elif acom:
                 L.append(f"Hay {len(acom)} comentarios que lo nombran: todavía pocos para medir el balance (mínimo 5 con apoyo o crítica).")
         aspirante["lectura"] = L
@@ -574,7 +613,8 @@ def main():
     OUT.parent.mkdir(parents=True, exist_ok=True)
     pub, order = [], []
     seen_ids = set()
-    for r in sorted(recent, key=lambda r: r["created_at"], reverse=True):
+    rid = {r["id"] for r in recent}
+    for r in sorted(recent + [r for r in asp_rows if r["id"] not in rid], key=lambda r: r["created_at"], reverse=True):
         if r["id"] in seen_ids or not (r["pols"] or r["temas"] or r["int"]):
             continue
         seen_ids.add(r["id"])
@@ -588,7 +628,7 @@ def main():
 
     def ids(lst):
         return [pidx[x] for x in lst if x in pidx][:150]
-    for f in figs:
+    for f in figs + ([aspirante] if aspirante else []):
         for c in f.get("cloud", []):
             c["ids"] = ids(c.pop("_rid", []))
     for grp in [voz["pedidos"], voz["deseos"], elecciones["pedidos"]] + [t["pedidos"] for t in tema_out]:
