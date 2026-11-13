@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   # Los workflows de datos hacen commit con el token de Actions, que no dispara "push": se publica al terminar
   workflow_run:
-    workflows: ['Radar social listening', 'San Isidro reclamos', 'General Roca monitor', 'Massa Galmarini monitor', 'Boca monitor']
+    workflows: ['Radar social listening', 'San Isidro reclamos', 'General Roca monitor', 'Massa Galmarini monitor', 'Boca monitor', 'Santa Cruz monitor']
     types: [completed]
 
 permissions:
@@ -50,6 +50,8 @@ jobs:
           cp -R massa/panel.js massa/data _site/massa/
           mkdir -p _site/boca
           cp -R boca/index.html boca/data _site/boca/
+          mkdir -p _site/santacruz
+          cp -R santacruz/index.html santacruz/data _site/santacruz/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
