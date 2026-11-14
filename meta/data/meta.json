@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-13T19:24-03:00",
+ "updated_at": "2026-11-14T01:41-03:00",
  "grupos": [
   "País",
   "Boca",
@@ -7,119 +7,225 @@
   "CABA",
   "San Isidro"
  ],
- "estado": "sin token",
- "faltan": [
-  "META_TOKEN",
-  "META_IG_USER_ID"
- ],
+ "estado": "error",
+ "ads_error": "10: Application does not have permission for this action",
+ "ig_ok": 0,
  "dirigentes": [
   {
    "name": "Sergio Massa",
    "grupo": "País",
    "espacio": "Peronismo",
-   "distrito": null
+   "distrito": null,
+   "ig_error": "@sergiomassa: 10: (#10) Application does not have permission for this action",
+   "historia": [],
+   "ads": {
+    "n": 0,
+    "error": "10: Application does not have permission for this action"
+   }
   },
   {
    "name": "Javier Milei",
    "grupo": "País",
    "espacio": "La Libertad Avanza",
-   "distrito": null
+   "distrito": null,
+   "ig_error": "@javiermilei: 10: (#10) Application does not have permission for this action",
+   "historia": [],
+   "ads": {
+    "n": 0,
+    "error": "10: Application does not have permission for this action"
+   }
   },
   {
    "name": "Cristina Kirchner",
    "grupo": "País",
    "espacio": "Peronismo",
-   "distrito": null
+   "distrito": null,
+   "ig_error": "@cfkargentina: 10: (#10) Application does not have permission for this action",
+   "historia": [],
+   "ads": {
+    "n": 0,
+    "error": "10: Application does not have permission for this action"
+   }
   },
   {
    "name": "Axel Kicillof",
    "grupo": "País",
    "espacio": "Peronismo",
-   "distrito": null
+   "distrito": null,
+   "ig_error": "@kicillofok: 10: (#10) Application does not have permission for this action; @axelkicillof: 10: (#10) Application does not have permission for this action",
+   "historia": [],
+   "ads": {
+    "n": 0,
+    "error": "10: Application does not have permission for this action"
+   }
   },
   {
    "name": "Patricia Bullrich",
    "grupo": "País",
    "espacio": "La Libertad Avanza",
-   "distrito": null
+   "distrito": null,
+   "ig_error": "@patobullrich: 10: (#10) Application does not have permission for this action; @patriciabullrich: 10: (#10) Application does not have permission for this action",
+   "historia": [],
+   "ads": {
+    "n": 0,
+    "error": "10: Application does not have permission for this action"
+   }
   },
   {
    "name": "Victoria Villarruel",
    "grupo": "País",
    "espacio": "La Libertad Avanza",
-   "distrito": null
+   "distrito": null,
+   "ig_error": "@villarruelvictoria: 10: (#10) Application does not have permission for this action; @vickyvillarruel: 10: (#10) Application does not have permission for this action; @victoriavillarruel: 10: (#10) Application does not have permission for this action",
+   "historia": [],
+   "ads": {
+    "n": 0,
+    "error": "10: Application does not have permission for this action"
+   }
   },
   {
    "name": "Juan Román Riquelme",
    "grupo": "Boca",
    "espacio": "Oficialismo Boca",
-   "distrito": null
+   "distrito": null,
+   "ig_error": "@riquelmejuanroman: 10: (#10) Application does not have permission for this action; @romanriquelme: 10: (#10) Application does not have permission for this action; @jrriquelme10: 10: (#10) Application does not have permission for this action",
+   "historia": [],
+   "ads": {
+    "n": 0,
+    "error": "10: Application does not have permission for this action"
+   }
   },
   {
    "name": "Mauricio Macri",
    "grupo": "Boca",
    "espacio": "PRO",
-   "distrito": null
+   "distrito": null,
+   "ig_error": "@mauriciomacri: 10: (#10) Application does not have permission for this action",
+   "historia": [],
+   "ads": {
+    "n": 0,
+    "error": "10: Application does not have permission for this action"
+   }
   },
   {
    "name": "Andrés Ibarra",
    "grupo": "Boca",
    "espacio": "Oposición Boca",
-   "distrito": null
+   "distrito": null,
+   "ig_error": "@andresibarraok: 10: (#10) Application does not have permission for this action; @andresibarra: 10: (#10) Application does not have permission for this action",
+   "historia": [],
+   "ads": {
+    "n": 0,
+    "error": "10: Application does not have permission for this action"
+   }
   },
   {
    "name": "Diego Santilli",
    "grupo": "Provincia de Buenos Aires",
    "espacio": "La Libertad Avanza",
-   "distrito": null
+   "distrito": null,
+   "ig_error": "@diegosantilli: 10: (#10) Application does not have permission for this action",
+   "historia": [],
+   "ads": {
+    "n": 0,
+    "error": "10: Application does not have permission for this action"
+   }
   },
   {
    "name": "Verónica Magario",
    "grupo": "Provincia de Buenos Aires",
    "espacio": "Peronismo",
-   "distrito": null
+   "distrito": null,
+   "ig_error": "@veronicamagario: 10: (#10) Application does not have permission for this action; @magarioveronica: 10: (#10) Application does not have permission for this action",
+   "historia": [],
+   "ads": {
+    "n": 0,
+    "error": "10: Application does not have permission for this action"
+   }
   },
   {
    "name": "Julio Zamora",
    "grupo": "Provincia de Buenos Aires",
    "espacio": "Peronismo",
-   "distrito": "Tigre"
+   "distrito": "Tigre",
+   "ig_error": "@juliozamoraok: 10: (#10) Application does not have permission for this action; @juliozamora: 10: (#10) Application does not have permission for this action",
+   "historia": [],
+   "ads": {
+    "n": 0,
+    "error": "10: Application does not have permission for this action"
+   }
   },
   {
    "name": "Malena Galmarini",
    "grupo": "Provincia de Buenos Aires",
    "espacio": "Peronismo",
-   "distrito": "Tigre"
+   "distrito": "Tigre",
+   "ig_error": "@malegalmarini: 10: (#10) Application does not have permission for this action; @malenagalmarini: 10: (#10) Application does not have permission for this action",
+   "historia": [],
+   "ads": {
+    "n": 0,
+    "error": "10: Application does not have permission for this action"
+   }
   },
   {
    "name": "Jorge Macri",
    "grupo": "CABA",
    "espacio": "PRO",
-   "distrito": null
+   "distrito": null,
+   "ig_error": "@jorgemacri: 10: (#10) Application does not have permission for this action; @jorgemacriok: 10: (#10) Application does not have permission for this action",
+   "historia": [],
+   "ads": {
+    "n": 0,
+    "error": "10: Application does not have permission for this action"
+   }
   },
   {
    "name": "Leandro Santoro",
    "grupo": "CABA",
    "espacio": "Peronismo",
-   "distrito": null
+   "distrito": null,
+   "ig_error": "@leandrosantoro: 10: (#10) Application does not have permission for this action; @santoroleandro: 10: (#10) Application does not have permission for this action",
+   "historia": [],
+   "ads": {
+    "n": 0,
+    "error": "10: Application does not have permission for this action"
+   }
   },
   {
    "name": "Ramón Lanús",
    "grupo": "San Isidro",
    "espacio": "PRO",
-   "distrito": null
+   "distrito": null,
+   "ig_error": "@ramonlanus: 10: (#10) Application does not have permission for this action; @lanusramon: 10: (#10) Application does not have permission for this action",
+   "historia": [],
+   "ads": {
+    "n": 0,
+    "error": "10: Application does not have permission for this action"
+   }
   },
   {
    "name": "Gustavo Posse",
    "grupo": "San Isidro",
    "espacio": "Acción Vecinal",
-   "distrito": null
+   "distrito": null,
+   "ig_error": "@gustavoposse: 10: (#10) Application does not have permission for this action; @gustavoposseok: 10: (#10) Application does not have permission for this action",
+   "historia": [],
+   "ads": {
+    "n": 0,
+    "error": "10: Application does not have permission for this action"
+   }
   },
   {
    "name": "Federico Meca",
    "grupo": "San Isidro",
    "espacio": "Frente Renovador",
-   "distrito": null
+   "distrito": null,
+   "ig_error": "@federicomeca: 10: (#10) Application does not have permission for this action; @fedemeca: 10: (#10) Application does not have permission for this action",
+   "historia": [],
+   "ads": {
+    "n": 0,
+    "error": "10: Application does not have permission for this action"
+   }
   }
  ]
 }
