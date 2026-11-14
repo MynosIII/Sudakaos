@@ -1,0 +1,538 @@
+{
+ "_nota": "Reporte mensual de Instagram por tablero. Para cada figura, si ya está en meta/config.json (mismo 'name') se usan sus usuarios de ahí (y el que ya resolvió meta/data/meta.json); si no, la lista 'ig' de acá: se usa el primero que exista como cuenta profesional. Solo se leen cuentas profesionales (Business Discovery). Corregí usuarios acá si alguna figura sale 'sin cuenta'.",
+ "api_version": "v21.0",
+ "desde": "2026-01-01",
+ "max_llamadas": 450,
+ "tableros": {
+  "nacional": {
+   "titulo": "Tablero nacional",
+   "figuras": [
+    {
+     "name": "Sergio Massa"
+    },
+    {
+     "name": "Malena Galmarini"
+    },
+    {
+     "name": "Javier Milei"
+    },
+    {
+     "name": "Cristina Kirchner"
+    },
+    {
+     "name": "Axel Kicillof"
+    },
+    {
+     "name": "Patricia Bullrich"
+    },
+    {
+     "name": "Victoria Villarruel"
+    },
+    {
+     "name": "Diego Santilli"
+    },
+    {
+     "name": "Verónica Magario"
+    },
+    {
+     "name": "Myriam Bregman",
+     "ig": [
+      "myriambregman"
+     ]
+    },
+    {
+     "name": "Juan Grabois",
+     "ig": [
+      "juangrabois"
+     ]
+    },
+    {
+     "name": "Leandro Santoro"
+    }
+   ]
+  },
+  "boca": {
+   "titulo": "Monitor Boca",
+   "figuras": [
+    {
+     "name": "Juan Román Riquelme"
+    },
+    {
+     "name": "Mauricio Macri"
+    },
+    {
+     "name": "Andrés Ibarra"
+    },
+    {
+     "name": "Daniel Angelici",
+     "ig": [
+      "danielangelici",
+      "tanoangelici",
+      "angelicidaniel"
+     ]
+    },
+    {
+     "name": "José Beraldi",
+     "ig": [
+      "joseberaldi",
+      "beraldijose",
+      "jberaldi"
+     ]
+    },
+    {
+     "name": "Jorge Amor Ameal",
+     "ig": [
+      "jorgeamorameal",
+      "ameal.jorge",
+      "jorgeameal"
+     ]
+    },
+    {
+     "name": "Mario Pergolini",
+     "ig": [
+      "mariopergolini",
+      "pergolinimario"
+     ]
+    },
+    {
+     "name": "Walter Klix",
+     "ig": [
+      "walterklix",
+      "klixwalter",
+      "walter.klix"
+     ]
+    },
+    {
+     "name": "Leandro Paredes",
+     "ig": [
+      "leoparedes20",
+      "leandroparedes"
+     ]
+    },
+    {
+     "name": "Claudio Tapia",
+     "ig": [
+      "chiquitapia",
+      "claudiotapiaok",
+      "claudio.tapia"
+     ]
+    },
+    {
+     "name": "Boca Juniors (club)",
+     "ig": [
+      "bocajrsoficial"
+     ]
+    }
+   ]
+  },
+  "santacruz": {
+   "titulo": "Santa Cruz 2027",
+   "figuras": [
+    {
+     "name": "Juan Carlos Molina",
+     "ig": [
+      "padrejuancarlosmolina",
+      "juancarlosmolina",
+      "jcmolinasc",
+      "padremolina"
+     ]
+    },
+    {
+     "name": "Pablo Grasso",
+     "ig": [
+      "pablograsso",
+      "pablograssook",
+      "pablo.grasso",
+      "grassopablo"
+     ]
+    },
+    {
+     "name": "Claudio Vidal",
+     "ig": [
+      "claudiovidalsc",
+      "claudiovidal.sc",
+      "claudiovidaloficial",
+      "claudiovidal_"
+     ]
+    },
+    {
+     "name": "Fabián Leguizamón",
+     "ig": [
+      "fabianleguizamon",
+      "leguizamonfabian",
+      "fabian.leguizamon"
+     ]
+    },
+    {
+     "name": "Jairo Guzmán",
+     "ig": [
+      "jairoguzmansc",
+      "jairoguzman",
+      "jairo.guzman"
+     ]
+    },
+    {
+     "name": "José María Carambia",
+     "ig": [
+      "josemariacarambia",
+      "carambiajosemaria",
+      "jmcarambia"
+     ]
+    },
+    {
+     "name": "Roxana Reyes",
+     "ig": [
+      "roxanareyesok",
+      "roxanareyes",
+      "roxana.reyes"
+     ]
+    },
+    {
+     "name": "Javier Belloni",
+     "ig": [
+      "javierbelloni",
+      "belloni.javier",
+      "javierbelloniok"
+     ]
+    },
+    {
+     "name": "Pablo González",
+     "ig": [
+      "pablogonzalezsc",
+      "pablogonzalezok",
+      "pablo.gonzalez.sc"
+     ]
+    },
+    {
+     "name": "Alicia Kirchner",
+     "ig": [
+      "aliciakirchner",
+      "aliciakirchnerok",
+      "alicia.kirchner"
+     ]
+    }
+   ]
+  },
+  "roca": {
+   "titulo": "Monitor General Roca",
+   "figuras": [
+    {
+     "name": "María Emilia Soria",
+     "ig": [
+      "mariaemiliasoria",
+      "mariaemiliasoriaok",
+      "soriamariaemilia",
+      "mariaemilia.soria"
+     ]
+    },
+    {
+     "name": "Martín Soria",
+     "ig": [
+      "martinsoria",
+      "martinsoriaok",
+      "martin.soria",
+      "soriamartin"
+     ]
+    },
+    {
+     "name": "Alberto Weretilneck",
+     "ig": [
+      "albertoweretilneck",
+      "weretilneck",
+      "weretilneckalberto"
+     ]
+    },
+    {
+     "name": "Pedro Pesatti",
+     "ig": [
+      "pedropesatti",
+      "pesattipedro",
+      "pedro.pesatti"
+     ]
+    },
+    {
+     "name": "Aníbal Tortoriello",
+     "ig": [
+      "anibaltortoriello",
+      "tortoriello",
+      "tortorielloanibal"
+     ]
+    },
+    {
+     "name": "Lorena Villaverde",
+     "ig": [
+      "lorenavillaverde",
+      "lorevillaverde",
+      "villaverdelorena"
+     ]
+    },
+    {
+     "name": "Juan Martín",
+     "ig": [
+      "juanmartinrn",
+      "juanmartin.rn",
+      "juanmartinpro"
+     ]
+    },
+    {
+     "name": "Mariano Gaido",
+     "ig": [
+      "marianogaido",
+      "gaidomariano",
+      "mariano.gaido"
+     ]
+    },
+    {
+     "name": "Rodrigo Buteler",
+     "ig": [
+      "rodrigobuteler",
+      "butelerrodrigo",
+      "rodri.buteler"
+     ]
+    },
+    {
+     "name": "Walter Cortés",
+     "ig": [
+      "waltercortesbariloche",
+      "waltercortes",
+      "walter.cortes"
+     ]
+    },
+    {
+     "name": "Marcos Castro",
+     "ig": [
+      "marcoscastroviedma",
+      "marcoscastro",
+      "marcos.castro.viedma"
+     ]
+    }
+   ]
+  },
+  "sanisidro": {
+   "titulo": "Radar vecinal San Isidro",
+   "figuras": [
+    {
+     "name": "Ramón Lanús"
+    },
+    {
+     "name": "Gustavo Posse"
+    },
+    {
+     "name": "Federico Meca"
+    },
+    {
+     "name": "Diego Santilli"
+    },
+    {
+     "name": "Axel Kicillof"
+    },
+    {
+     "name": "José Luis Espert",
+     "ig": [
+      "jlespert",
+      "joseluisespert",
+      "espert"
+     ]
+    },
+    {
+     "name": "Javier Milei"
+    }
+   ]
+  },
+  "dirigentes-pagano": {
+   "titulo": "Marcela Pagano",
+   "figuras": [
+    {
+     "name": "Marcela Pagano",
+     "ig": [
+      "marcelapagano",
+      "marcepagano",
+      "marcela.pagano",
+      "paganomarcela"
+     ]
+    },
+    {
+     "name": "Lilia Lemoine",
+     "ig": [
+      "lilialemoine",
+      "lilia.lemoine",
+      "lemoinelilia"
+     ]
+    },
+    {
+     "name": "Carolina Píparo",
+     "ig": [
+      "carolinapiparo",
+      "caropiparo",
+      "carolina.piparo"
+     ]
+    },
+    {
+     "name": "Manuel Adorni",
+     "ig": [
+      "madorni",
+      "manueladorni",
+      "manuel.adorni"
+     ]
+    },
+    {
+     "name": "Diego Santilli"
+    },
+    {
+     "name": "Axel Kicillof"
+    },
+    {
+     "name": "José Luis Espert",
+     "ig": [
+      "jlespert",
+      "joseluisespert",
+      "espert"
+     ]
+    },
+    {
+     "name": "Karina Milei",
+     "ig": [
+      "karinamilei",
+      "karinamileiok",
+      "karina.milei"
+     ]
+    }
+   ]
+  },
+  "dirigentes-casielles": {
+   "titulo": "Eugenio Casielles",
+   "figuras": [
+    {
+     "name": "Eugenio Casielles",
+     "ig": [
+      "eugeniocasielles",
+      "casielles",
+      "eugecasielles",
+      "eugenio.casielles"
+     ]
+    },
+    {
+     "name": "Dante Gebel",
+     "ig": [
+      "dantegebel",
+      "dantegebeloficial"
+     ]
+    },
+    {
+     "name": "Ramiro Marra",
+     "ig": [
+      "ramiromarra",
+      "ramiro.marra",
+      "marraramiro"
+     ]
+    },
+    {
+     "name": "Pilar Ramírez",
+     "ig": [
+      "pilarramirez",
+      "pilarramirezok",
+      "pilar.ramirez",
+      "pilarramirezlla"
+     ]
+    },
+    {
+     "name": "Jorge Macri"
+    },
+    {
+     "name": "Leandro Santoro"
+    },
+    {
+     "name": "Manuel Adorni",
+     "ig": [
+      "madorni",
+      "manueladorni",
+      "manuel.adorni"
+     ]
+    },
+    {
+     "name": "Martín Lousteau",
+     "ig": [
+      "martinlousteau",
+      "lousteau",
+      "martin.lousteau"
+     ]
+    },
+    {
+     "name": "Horacio Rodríguez Larreta",
+     "ig": [
+      "horaciorlarreta",
+      "horaciorodriguezlarreta",
+      "larreta"
+     ]
+    }
+   ]
+  },
+  "dirigentes-braillard": {
+   "titulo": "Germán Braillard",
+   "figuras": [
+    {
+     "name": "Germán Braillard",
+     "ig": [
+      "germanbraillard",
+      "braillardgerman",
+      "german.braillard",
+      "germanbraillardok"
+     ]
+    },
+    {
+     "name": "Juan Pablo Valdés",
+     "ig": [
+      "juanpablovaldes",
+      "juanpablovaldesok",
+      "jpvaldes",
+      "juanpablovaldes.ok"
+     ]
+    },
+    {
+     "name": "Gustavo Valdés",
+     "ig": [
+      "gustavovaldes",
+      "gustavovaldesok",
+      "gustavo.valdes",
+      "valdesgustavo"
+     ]
+    },
+    {
+     "name": "Claudio Polich",
+     "ig": [
+      "claudiopolich",
+      "polichclaudio",
+      "claudio.polich"
+     ]
+    },
+    {
+     "name": "Martín Ascúa",
+     "ig": [
+      "martinascua",
+      "ascuamartin",
+      "martin.ascua"
+     ]
+    },
+    {
+     "name": "Lisandro Almirón",
+     "ig": [
+      "lisandroalmiron",
+      "almironlisandro",
+      "lisandro.almiron"
+     ]
+    },
+    {
+     "name": "Eduardo Tassano",
+     "ig": [
+      "eduardotassano",
+      "tassanoeduardo",
+      "eduardo.tassano"
+     ]
+    },
+    {
+     "name": "Sergio Massa"
+    }
+   ]
+  }
+ }
+}

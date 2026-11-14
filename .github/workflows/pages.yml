@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   # Los workflows de datos hacen commit con el token de Actions, que no dispara "push": se publica al terminar
   workflow_run:
-    workflows: ['Radar social listening', 'San Isidro reclamos', 'General Roca monitor', 'Massa Galmarini monitor', 'Boca monitor', 'Santa Cruz monitor', 'Meta dirigentes', 'Dirigentes monitor']
+    workflows: ['Radar social listening', 'San Isidro reclamos', 'General Roca monitor', 'Massa Galmarini monitor', 'Boca monitor', 'Santa Cruz monitor', 'Meta dirigentes', 'Dirigentes monitor', 'Instagram tableros']
     types: [completed]
 
 permissions:
@@ -65,6 +65,10 @@ jobs:
           mkdir -p _site/meta
           if [ -d meta/data ]; then cp -R meta/data _site/meta/; fi
           cp resumen.js _site/
+          # Reporte de Instagram por tablero (ig/store queda afuera: es el historial de trabajo del recolector)
+          mkdir -p _site/ig
+          if [ -d ig/data ]; then cp -R ig/data _site/ig/; fi
+          for f in _site/dashboard.html _site/index.html _site/*/index.html; do sed -i "s#assets/ig.js\"#assets/ig.js?v=${GITHUB_SHA::8}\"#" "$f"; done
           sed -i "s#resumen.js\"#resumen.js?v=${GITHUB_SHA::8}\"#" _site/dashboard.html _site/index.html
       # Índice interno (no enlazado desde ningún tablero): se arma solo con cada carpeta publicada que tenga index.html
       - name: Armar índice interno
