@@ -808,6 +808,6 @@ document.addEventListener('click',e=>{
 })();
 </script>
 <script src="../assets/ig.js"></script>
-<script>IGReporte.init({data:'../ig/data/dirigentes-'+(['pagano','casielles','braillard'].find(s=>s===new URLSearchParams(location.search).get('d'))||'pagano')+'.json'})</script>
+<script>IGReporte.init({data:'../ig/data/dirigentes-'+(['pagano','casielles','braillard'].find(s=>s===(document.documentElement.dataset.slug||new URLSearchParams(location.search).get('d')))||'pagano')+'.json'})</script>
 </body>
 </html>
