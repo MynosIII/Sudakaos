@@ -14,7 +14,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: meta-${{ github.ref_name }}
+  group: meta-dirigentes
   cancel-in-progress: false
 
 jobs:
@@ -31,7 +31,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Collect Instagram + Biblioteca de anuncios
-        run: timeout 1500 python meta/collect.py
+        run: timeout 1500 python -u meta/collect.py
       - name: Commit aggregates
         run: |
           git config user.name 'github-actions[bot]'
