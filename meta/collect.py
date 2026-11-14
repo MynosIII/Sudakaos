@@ -49,7 +49,12 @@ def norm(t: str) -> str:
     return "".join(c for c in t if not unicodedata.combining(c))
 
 
+LIMITE = {"hit": False}  # si Meta corta por cupo, no seguir golpeando (evita que el job se cuelgue)
+
+
 def get(path: str, params: dict, tries=3):
+    if LIMITE["hit"]:
+        return None, "4: límite de llamadas de la app (salteado en esta corrida)"
     params = {**params, "access_token": TOKEN}
     url = f"{API}/{path}?{urllib.parse.urlencode(params)}"
     for i in range(tries):
@@ -65,6 +70,8 @@ def get(path: str, params: dict, tries=3):
             if code in (4, 17, 32, 613) and i < tries - 1:  # límite de llamadas
                 time.sleep(30 * (i + 1))
                 continue
+            if code in (4, 17, 32, 613):
+                LIMITE["hit"] = True
             # nunca devolver el token en el mensaje
             return None, re.sub(r"access_token=[^&\s]+", "access_token=***", f"{code}: {err.get('message', '')}")[:240]
         except Exception as e:  # red
@@ -93,6 +100,8 @@ def instagram(handles: list[str], limit: int):
                     media += ((more.get("business_discovery") or {}).get("media") or {}).get("data", [])
             return bd, media, None
         errs.append(f"@{h}: {err}")
+        if LIMITE["hit"]:
+            break
     return None, [], "; ".join(errs) or "no encontrado"
 
 
@@ -270,6 +279,9 @@ def main():
                 ref = [h for h in hist if h["d"] <= (now - timedelta(days=days)).strftime("%Y-%m-%d")]
                 return row["ig"]["followers"] - ref[-1]["f"] if ref else None
             row["ig"]["delta7"], row["ig"]["delta30"] = delta(7), delta(30)
+        elif LIMITE["hit"] and old.get(d["name"], {}).get("ig"):
+            row["ig"] = old[d["name"]]["ig"]  # cupo agotado: mantener el último dato bueno
+            row["ig_viejo"] = True
         else:
             row["ig_error"] = err
         row["historia"] = hist
