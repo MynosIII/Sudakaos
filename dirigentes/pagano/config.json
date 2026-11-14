@@ -1,0 +1,899 @@
+{
+ "nombre": "Monitor Marcela Pagano",
+ "slug": "pagano",
+ "color": "#e2557b",
+ "distrito": "Provincia de Buenos Aires",
+ "perfil": {
+  "nombre": "Marcela Pagano",
+  "corto": "Pagano",
+  "cargo": "Diputada nacional por la provincia de Buenos Aires (mandato 2023-2027)",
+  "resumen": "Periodista (Ámbito, Clarín, TN, A24). Entró al Congreso en la lista de La Libertad Avanza en 2023, presidió la comisión de Juicio Político en medio del choque con Menem, se fue del bloque oficialista (Coherencia en 2025) y terminó en un monobloque en 2026. Hoy su marca es la denuncia: Adorni, $LIBRA, el reparto de fondos a gobernadores.",
+  "objetivo": "Su banca vence en diciembre de 2027: renovar o saltar a otra candidatura bonaerense con sello propio o aliado.",
+  "fuentes": [
+   "https://es.wikipedia.org/wiki/Marcela_Pagano",
+   "https://www.infobae.com/judiciales/2026/04/29/marcela-pagano-se-presento-en-comodoro-py-para-ampliar-la-denuncia-por-enriquecimiento-ilicito-contra-manuel-adorni/"
+  ]
+ },
+ "focos": [
+  "Marcela Pagano"
+ ],
+ "rivales": [
+  "Lilia Lemoine",
+  "Carolina Píparo",
+  "Manuel Adorni",
+  "Diego Santilli",
+  "Axel Kicillof"
+ ],
+ "co_clave": [
+  "Manuel Adorni",
+  "Javier Milei",
+  "Karina Milei",
+  "Lilia Lemoine",
+  "Martín Menem",
+  "Patricia Bullrich"
+ ],
+ "window_days": 365,
+ "conversacion_dias": 365,
+ "eleccion": "2027-10-24",
+ "eleccion_nota": "Fecha de referencia: generales nacionales de octubre de 2027, cuando vence su banca de diputada.",
+ "tema_elecciones": "Elecciones 2027 y candidaturas",
+ "figuras": {
+  "Marcela Pagano": {
+   "alias": [
+    "marcela pagano",
+    "diputada pagano",
+    "pagano",
+    "marcela marina pagano"
+   ],
+   "alias_contexto": [
+    "pagano"
+   ],
+   "bando": "Independiente",
+   "cargo": "Diputada nacional (PBA, 2023-2027), monobloque; ex LLA",
+   "foco": true,
+   "wiki": [
+    "Marcela Pagano"
+   ],
+   "trends": "Marcela Pagano"
+  },
+  "Lilia Lemoine": {
+   "alias": [
+    "lilia lemoine",
+    "lemoine"
+   ],
+   "bando": "La Libertad Avanza",
+   "cargo": "Diputada nacional (LLA)",
+   "wiki": [
+    "Lilia Lemoine"
+   ],
+   "trends": "Lilia Lemoine"
+  },
+  "Carolina Píparo": {
+   "alias": [
+    "carolina píparo",
+    "carolina piparo",
+    "píparo",
+    "piparo"
+   ],
+   "bando": "La Libertad Avanza",
+   "cargo": "Diputada nacional; aspira a La Plata",
+   "wiki": [
+    "Carolina Píparo"
+   ],
+   "trends": "Carolina Píparo"
+  },
+  "Manuel Adorni": {
+   "alias": [
+    "manuel adorni",
+    "adorni"
+   ],
+   "bando": "La Libertad Avanza",
+   "cargo": "Jefe de Gabinete; blanco de sus denuncias",
+   "wiki": [
+    "Manuel Adorni"
+   ],
+   "trends": "Manuel Adorni"
+  },
+  "Diego Santilli": {
+   "alias": [
+    "diego santilli",
+    "santilli"
+   ],
+   "bando": "La Libertad Avanza",
+   "cargo": "Ministro del Interior; candidato LLA a gobernador bonaerense",
+   "wiki": [
+    "Diego Santilli"
+   ],
+   "trends": "Diego Santilli"
+  },
+  "Axel Kicillof": {
+   "alias": [
+    "axel kicillof",
+    "kicillof"
+   ],
+   "bando": "Peronismo",
+   "cargo": "Gobernador de Buenos Aires",
+   "wiki": [
+    "Axel Kicillof"
+   ],
+   "trends": "Axel Kicillof"
+  },
+  "José Luis Espert": {
+   "alias": [
+    "josé luis espert",
+    "jose luis espert",
+    "espert"
+   ],
+   "bando": "La Libertad Avanza",
+   "cargo": "Ex diputado (LLA, PBA)",
+   "wiki": [
+    "José Luis Espert"
+   ]
+  },
+  "Martín Menem": {
+   "alias": [
+    "martín menem",
+    "martin menem"
+   ],
+   "bando": "La Libertad Avanza",
+   "cargo": "Presidente de la Cámara de Diputados",
+   "wiki": [
+    "Martín Menem"
+   ]
+  },
+  "Florencia Arietto": {
+   "alias": [
+    "florencia arietto",
+    "arietto"
+   ],
+   "bando": "La Libertad Avanza",
+   "cargo": "Dirigente bonaerense, posible vice de Santilli",
+   "wiki": [
+    "Florencia Arietto"
+   ]
+  },
+  "Patricia Bullrich": {
+   "alias": [
+    "patricia bullrich",
+    "bullrich"
+   ],
+   "bando": "Nacional",
+   "cargo": "Senadora nacional (LLA)",
+   "wiki": [
+    "Patricia Bullrich"
+   ]
+  },
+  "Karina Milei": {
+   "alias": [
+    "karina milei",
+    "karina"
+   ],
+   "bando": "Nacional",
+   "cargo": "Secretaria General de la Presidencia",
+   "wiki": [
+    "Karina Milei"
+   ]
+  },
+  "Javier Milei": {
+   "alias": [
+    "javier milei",
+    "milei"
+   ],
+   "bando": "Nacional",
+   "cargo": "Presidente",
+   "wiki": [
+    "Javier Milei"
+   ]
+  }
+ },
+ "obj_fig": {
+  "pagano": "Pagano",
+  "marcela": "Pagano",
+  "lemoine": "Lemoine",
+  "lilia": "Lemoine",
+  "adorni": "Adorni",
+  "milei": "Milei",
+  "karina": "Karina",
+  "menem": "Menem",
+  "kicillof": "Kicillof",
+  "axel": "Kicillof",
+  "santilli": "Santilli",
+  "piparo": "Píparo",
+  "espert": "Espert",
+  "bullrich": "Bullrich"
+ },
+ "mapa_poder": {
+  "metodo": "Codificación editorial inicial, a revisar con el cliente. Eje horizontal: 0 = peronismo, 100 = Milei/LLA orgánico (los ex libertarios quedan en el medio-derecha). Eje vertical: peso propio (cargo, aparato, votos). El tamaño de cada punto sale de las menciones medidas.",
+  "eje_x": "← peronismo · · · ex libertarios / independientes · · · LLA orgánico →",
+  "anot": [
+   [
+    6,
+    "PERONISMO",
+    "#5fb3c9"
+   ],
+   [
+    52,
+    "INDEPENDIENTES",
+    "#e2557b"
+   ],
+   [
+    94,
+    "LLA",
+    "#9085e9"
+   ]
+  ],
+  "puntos": {
+   "Marcela Pagano": {
+    "alineamiento": 58,
+    "peso": 34,
+    "nota": "Ex LLA en monobloque: denuncia al Gobierno desde la derecha. Visibilidad mediática alta, aparato chico."
+   },
+   "Lilia Lemoine": {
+    "alineamiento": 92,
+    "peso": 30,
+    "nota": "Diputada del núcleo de Karina; su antagonista directa en el bloque y en redes."
+   },
+   "Carolina Píparo": {
+    "alineamiento": 80,
+    "peso": 32,
+    "nota": "Ocupa un carril parecido (outsider, seguridad, La Plata) pero dentro de LLA."
+   },
+   "Manuel Adorni": {
+    "alineamiento": 95,
+    "peso": 70,
+    "nota": "Jefe de Gabinete. El blanco de sus denuncias por enriquecimiento ilícito."
+   },
+   "Diego Santilli": {
+    "alineamiento": 85,
+    "peso": 72,
+    "nota": "Candidato del oficialismo a la gobernación bonaerense."
+   },
+   "Axel Kicillof": {
+    "alineamiento": 8,
+    "peso": 92,
+    "nota": "Gobernador. El otro polo bonaerense."
+   },
+   "José Luis Espert": {
+    "alineamiento": 88,
+    "peso": 30,
+    "nota": "Ex cabeza de lista LLA en PBA, golpeado por el caso Fred Machado."
+   },
+   "Martín Menem": {
+    "alineamiento": 93,
+    "peso": 62,
+    "nota": "Presidente de la Cámara; el choque por Juicio Político en 2024."
+   },
+   "Florencia Arietto": {
+    "alineamiento": 82,
+    "peso": 22,
+    "nota": "Perfil de seguridad, suena en la fórmula bonaerense de LLA."
+   }
+  }
+ },
+ "intenciones": {
+  "quiere": [
+   "queremos",
+   "quiero",
+   "hay que",
+   "necesitamos",
+   "necesita",
+   "necesitan",
+   "hace falta",
+   "falta de",
+   "que se vaya",
+   "que se vayan",
+   "se tiene que ir",
+   "que renuncie",
+   "fuera",
+   "pedimos",
+   "exigimos",
+   "reclamamos",
+   "que pongan",
+   "que arreglen",
+   "que paguen",
+   "aumento",
+   "trabajo genuino",
+   "que vuelva",
+   "que gobierne",
+   "que se presente",
+   "candidato ya",
+   "que investiguen",
+   "que expliquen",
+   "que devuelvan"
+  ],
+  "espera": [
+   "ojalá",
+   "ojala",
+   "espero",
+   "esperamos",
+   "a ver si",
+   "tengo fe",
+   "fe en",
+   "confío",
+   "confio",
+   "confiamos",
+   "se viene",
+   "se vienen",
+   "en 2027",
+   "el año que viene",
+   "vamos a ganar",
+   "vamos a volver",
+   "volver a gobernar",
+   "recuperar la provincia",
+   "ilusión",
+   "ilusion",
+   "esperanza",
+   "sueño",
+   "próximo gobierno",
+   "proximo gobierno",
+   "que gane",
+   "ojalá sea",
+   "ojala sea"
+  ],
+  "critica": [
+   "vergüenza",
+   "verguenza",
+   "desastre",
+   "fracaso",
+   "horrible",
+   "inútil",
+   "inutil",
+   "no sabe",
+   "no saben",
+   "mediocre",
+   "culpa",
+   "culpable",
+   "pésimo",
+   "pesimo",
+   "un asco",
+   "basta",
+   "lamentable",
+   "patético",
+   "patetico",
+   "ridículo",
+   "ridiculo",
+   "nefasto",
+   "incapaz",
+   "chanta",
+   "mentiroso",
+   "mentira",
+   "se robó",
+   "se robo",
+   "chorro",
+   "chorros",
+   "ladrón",
+   "ladron",
+   "corrupto",
+   "corruptos",
+   "corrupción",
+   "corrupcion",
+   "kukas",
+   "kuka",
+   "caradura",
+   "decepción",
+   "decepcion",
+   "hipócrita",
+   "hipocrita",
+   "traidor",
+   "oportunista",
+   "cínico",
+   "cinico",
+   "peor",
+   "fundieron",
+   "destruyeron",
+   "nunca más",
+   "nunca mas"
+  ],
+  "apoya": [
+   "gracias",
+   "excelente",
+   "bien ahí",
+   "bien ahi",
+   "acierto",
+   "felicitaciones",
+   "bravo",
+   "aplausos",
+   "el mejor",
+   "impecable",
+   "lo banco",
+   "bancamos",
+   "todos con",
+   "gran persona",
+   "gran tipo",
+   "un lujo",
+   "coherente",
+   "honesto",
+   "buena gestión",
+   "buena gestion",
+   "orgullo",
+   "genio",
+   "capo",
+   "querido",
+   "sí se puede",
+   "si se puede",
+   "mi voto",
+   "tiene mi voto",
+   "lo voto",
+   "la voto",
+   "valiente",
+   "la única",
+   "la unica",
+   "el único",
+   "el unico",
+   "gran trabajo",
+   "buen trabajo",
+   "tiene razón",
+   "tiene razon",
+   "dice la verdad"
+  ]
+ },
+ "temas": {
+  "Corrupción y denuncias": [
+   "corrupción",
+   "corrupcion",
+   "coima",
+   "coimas",
+   "enriquecimiento",
+   "denuncia",
+   "denunció",
+   "denuncio",
+   "causa",
+   "juzgado",
+   "fiscal",
+   "comodoro py",
+   "transparencia",
+   "declaración jurada",
+   "declaracion jurada",
+   "libra",
+   "$libra",
+   "andis",
+   "spagnuolo",
+   "chorro",
+   "corrupto",
+   "enriquecimiento ilícito",
+   "enriquecimiento ilicito",
+   "cripto",
+   "criptomoneda"
+  ],
+  "Congreso y bloques": [
+   "congreso",
+   "diputados",
+   "cámara",
+   "camara",
+   "sesión",
+   "sesion",
+   "quórum",
+   "quorum",
+   "bloque",
+   "monobloque",
+   "coherencia",
+   "comisión",
+   "comision",
+   "juicio político",
+   "juicio politico",
+   "interpelación",
+   "interpelacion",
+   "veto"
+  ],
+  "Gobierno de Milei": [
+   "milei",
+   "gobierno nacional",
+   "casa rosada",
+   "motosierra",
+   "ajuste",
+   "libertad avanza",
+   "karina",
+   "gabinete",
+   "jefe de gabinete",
+   "triángulo de hierro",
+   "triangulo de hierro"
+  ],
+  "Economía y bolsillo": [
+   "inflación",
+   "inflacion",
+   "precios",
+   "salario",
+   "salarios",
+   "sueldo",
+   "sueldos",
+   "jubilad",
+   "dólar",
+   "dolar",
+   "economía",
+   "economia",
+   "ajuste",
+   "tarifas",
+   "desempleo",
+   "empleo",
+   "pobreza",
+   "changuit"
+  ],
+  "Discapacidad y jubilados": [
+   "discapacidad",
+   "discapacitad",
+   "andis",
+   "jubilados",
+   "jubilación",
+   "jubilacion",
+   "pensiones",
+   "pami",
+   "medicamentos"
+  ],
+  "Fondos a gobernadores": [
+   "gobernadores",
+   "gobernador",
+   "fondos",
+   "atn",
+   "aportes del tesoro",
+   "paga votos",
+   "compra de votos",
+   "coparticipación",
+   "coparticipacion"
+  ],
+  "Prensa y libertad de expresión": [
+   "periodista",
+   "periodismo",
+   "prensa",
+   "censura",
+   "libertad de expresión",
+   "libertad de expresion",
+   "a24",
+   "tn",
+   "canal"
+  ],
+  "Seguridad": [
+   "seguridad",
+   "inseguridad",
+   "policía",
+   "policia",
+   "delito",
+   "robo",
+   "robos",
+   "narco",
+   "droga",
+   "drogas",
+   "asesinato",
+   "crimen"
+  ],
+  "Provincia de Buenos Aires": [
+   "provincia de buenos aires",
+   "bonaerense",
+   "conurbano",
+   "la plata",
+   "kicillof",
+   "legislatura bonaerense",
+   "intendentes"
+  ],
+  "Violencia política y agresiones": [
+   "amenaza",
+   "amenazas",
+   "agresión",
+   "agresion",
+   "violencia",
+   "hostigamiento",
+   "trolls",
+   "insultos",
+   "misoginia",
+   "machismo"
+  ],
+  "Elecciones 2027 y candidaturas": [
+   "2027",
+   "candidato",
+   "candidata",
+   "candidatura",
+   "elecciones",
+   "encuesta",
+   "fórmula",
+   "formula",
+   "boleta única",
+   "boleta unica",
+   "lista",
+   "listas",
+   "alianza",
+   "frente electoral",
+   "votos",
+   "votar",
+   "gobernación",
+   "gobernacion",
+   "renovar la banca",
+   "reelección",
+   "reeleccion"
+  ]
+ },
+ "narrativas": {
+  "Denunciante / anticorrupción": [
+   "denuncia",
+   "corrupción",
+   "corrupcion",
+   "transparencia",
+   "enriquecimiento",
+   "libra",
+   "adorni"
+  ],
+  "Traidora / ruptura con LLA": [
+   "traidora",
+   "traición",
+   "traicion",
+   "rompió",
+   "rompio",
+   "ruptura",
+   "se fue",
+   "panqueque"
+  ],
+  "Libertaria coherente": [
+   "coherencia",
+   "coherente",
+   "ideas de la libertad",
+   "principios",
+   "verdadera libertaria"
+  ],
+  "Periodista": [
+   "periodista",
+   "periodismo",
+   "a24",
+   "tn",
+   "prensa"
+  ],
+  "Conflicto e internas": [
+   "pelea",
+   "cruce",
+   "interna",
+   "choque",
+   "insultos",
+   "lemoine",
+   "menem"
+  ],
+  "Oposición a Milei": [
+   "milei",
+   "gobierno nacional",
+   "karina",
+   "casa rosada"
+  ],
+  "Gestión legislativa": [
+   "proyecto",
+   "ley",
+   "comisión",
+   "comision",
+   "sesión",
+   "sesion",
+   "pedido de informes"
+  ]
+ },
+ "positivo": [
+  "gracias",
+  "excelente",
+  "bien hecho",
+  "muy bien",
+  "felicit",
+  "impecable",
+  "genial",
+  "bravo",
+  "gran persona",
+  "orgullo",
+  "el mejor",
+  "esperanza",
+  "honesto",
+  "coherente"
+ ],
+ "negativo": [
+  "vergüenza",
+  "verguenza",
+  "desastre",
+  "fracaso",
+  "inútil",
+  "inutil",
+  "mentiroso",
+  "chorro",
+  "corrupto",
+  "mediocre",
+  "basta",
+  "patético",
+  "patetico",
+  "horrible",
+  "peor",
+  "nefasto",
+  "kuka",
+  "traidora",
+  "traidor",
+  "panquequ",
+  "operadora",
+  "operador"
+ ],
+ "contexto": [
+  "marcela pagano",
+  "diputada pagano",
+  "monobloque"
+ ],
+ "excluir_frases": [
+  "mario pagano",
+  "pagano bros",
+  "rito pagano",
+  "dios pagano",
+  "dioses paganos",
+  "fiesta pagana",
+  "ritual pagano",
+  "templo pagano",
+  "pagano y",
+  "mundo pagano",
+  "lucas pagano",
+  "nicolás pagano",
+  "nicolas pagano",
+  "sergio pagano",
+  "carlos pagano",
+  "pablo pagano"
+ ],
+ "medios_locales": [
+  "infocielo",
+  "la tecla",
+  "diputados bonaerenses",
+  "diputadosbsas",
+  "el día",
+  "el dia",
+  "0221",
+  "la noticia 1",
+  "infocielo.com",
+  "letra p"
+ ],
+ "sitios_locales": [
+  "infocielo.com",
+  "latecla.com",
+  "diputadosbsas.com.ar",
+  "eldia.com",
+  "0221.com.ar",
+  "lanoticia1.com"
+ ],
+ "rss": [
+  {
+   "name": "Infocielo",
+   "url": "https://infocielo.com/rss",
+   "local": true
+  },
+  {
+   "name": "La Tecla",
+   "url": "https://www.latecla.com/rss",
+   "local": true
+  },
+  {
+   "name": "Diputados Bonaerenses",
+   "url": "https://www.diputadosbsas.com.ar/feed/",
+   "local": true
+  },
+  {
+   "name": "El Día",
+   "url": "https://www.eldia.com/rss",
+   "local": true
+  },
+  {
+   "name": "Letra P",
+   "url": "https://www.letrap.com.ar/rss/home.xml"
+  },
+  {
+   "name": "Página/12",
+   "url": "https://www.pagina12.com.ar/rss/portada"
+  },
+  {
+   "name": "Perfil",
+   "url": "https://www.perfil.com/feed/politica"
+  },
+  {
+   "name": "Infobae",
+   "url": "https://www.infobae.com/arc/outboundfeeds/rss/"
+  },
+  {
+   "name": "La Nación",
+   "url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/?outputType=xml"
+  },
+  {
+   "name": "Clarín",
+   "url": "https://www.clarin.com/rss/politica/"
+  },
+  {
+   "name": "Parlamentario",
+   "url": "https://www.parlamentario.com/feed/"
+  },
+  {
+   "name": "El Intransigente",
+   "url": "https://elintransigente.com/feed/"
+  }
+ ],
+ "google_news": {
+  "queries": [
+   "\"Marcela Pagano\"",
+   "\"Marcela Pagano\" Adorni",
+   "\"Marcela Pagano\" denuncia",
+   "\"Marcela Pagano\" 2027",
+   "\"Marcela Pagano\" Lemoine",
+   "\"Marcela Pagano\" Milei",
+   "\"Marcela Pagano\" monobloque",
+   "\"Marcela Pagano\" provincia de Buenos Aires",
+   "\"diputada Pagano\"",
+   "\"Lilia Lemoine\"",
+   "\"Carolina Píparo\" 2027",
+   "\"Diego Santilli\" gobernador 2027",
+   "Kicillof 2027 provincia",
+   "Adorni enriquecimiento ilícito",
+   "ex libertarios diputados bloque"
+  ],
+  "sites": [
+   "infocielo.com",
+   "latecla.com",
+   "diputadosbsas.com.ar",
+   "eldia.com",
+   "infobae.com",
+   "lanacion.com.ar",
+   "clarin.com",
+   "pagina12.com.ar",
+   "perfil.com",
+   "letrap.com.ar",
+   "lapoliticaonline.com",
+   "parlamentario.com",
+   "eldestapeweb.com",
+   "ambito.com",
+   "elintransigente.com",
+   "cronista.com"
+  ],
+  "site_terms": [
+   "\"Marcela Pagano\""
+  ]
+ },
+ "youtube": {
+  "region": "AR",
+  "language": "es",
+  "videos_per_query": 8,
+  "comments_per_video": 100,
+  "queries": [
+   "Marcela Pagano",
+   "Marcela Pagano entrevista",
+   "Marcela Pagano Adorni",
+   "Marcela Pagano Lemoine",
+   "Marcela Pagano diputados sesión",
+   "Marcela Pagano Milei",
+   "Marcela Pagano $LIBRA",
+   "Pagano denuncia Comodoro Py",
+   "Marcela Pagano 2027"
+  ],
+  "contexto": [
+   "pagano",
+   "lemoine",
+   "adorni",
+   "diputad",
+   "congreso",
+   "milei",
+   "libertad avanza",
+   "libra"
+  ],
+  "excluir": [
+   "pagano bros",
+   "rito pagano",
+   "dioses paganos",
+   "ritual pagano",
+   "fiesta pagana"
+  ]
+ },
+ "trends": {
+  "terminos": [
+   "Marcela Pagano",
+   "Lilia Lemoine",
+   "Carolina Píparo",
+   "Diego Santilli",
+   "Manuel Adorni"
+  ],
+  "geos": {
+   "AR-B": "Provincia de Buenos Aires",
+   "AR": "Argentina"
+  },
+  "geo_local": "AR-B"
+ },
+ "wiki_provincia": [
+  "Provincia de Buenos Aires"
+ ],
+ "stop_extra": [
+  "buenos",
+  "aires",
+  "diputada",
+  "diputados",
+  "marcela",
+  "pagano"
+ ],
+ "textos_comentarios": "extracto"
+}

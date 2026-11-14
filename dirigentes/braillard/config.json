@@ -1,0 +1,954 @@
+{
+ "nombre": "Monitor Germán Braillard",
+ "slug": "braillard",
+ "color": "#22b8a8",
+ "distrito": "Corrientes",
+ "perfil": {
+  "nombre": "Germán Braillard",
+  "corto": "Braillard",
+  "cargo": "Diputado provincial de Corrientes y líder del Frente Renovador correntino",
+  "resumen": "Licenciado en Relaciones Internacionales (UNR), ex concejal de la capital. Preside el Frente Renovador en Corrientes, aliado del PJ en Unión por la Patria / Limpiar Corrientes. Fue candidato a intendente de la capital en 2025 (ganó Claudio Polich, de Vamos Corrientes) y dijo públicamente que quiere ser gobernador.",
+  "objetivo": "Construir la candidatura a gobernador (2029) desde la Legislatura y la capital, compitiendo con el PJ por el liderazgo opositor al radicalismo de los Valdés.",
+  "fuentes": [
+   "https://www.diarioepoca.com/1343535-german-braillard-quiero-ser-gobernador-de-corrientes",
+   "https://noticiapolitica.com.ar/el-frente-renovador-corrientes-cerro-el-ano-con-sergio-massa/",
+   "https://www.letrap.com.ar/politica/corrientes-german-braillard-sera-la-apuesta-del-peronismo-arrebatarle-la-capital-la-ucr-n5417130"
+  ]
+ },
+ "focos": [
+  "Germán Braillard"
+ ],
+ "rivales": [
+  "Juan Pablo Valdés",
+  "Claudio Polich",
+  "Martín Ascúa",
+  "Lisandro Almirón",
+  "Gustavo Valdés"
+ ],
+ "co_clave": [
+  "Sergio Massa",
+  "Juan Pablo Valdés",
+  "Gustavo Valdés",
+  "Claudio Polich",
+  "Martín Ascúa",
+  "Javier Milei"
+ ],
+ "window_days": 730,
+ "conversacion_dias": 540,
+ "eleccion": "2027-10-24",
+ "eleccion_nota": "Fecha de referencia: generales de octubre de 2027 (legislativas). La gobernación se vuelve a elegir en 2029.",
+ "tema_elecciones": "Elecciones y candidaturas",
+ "figuras": {
+  "Germán Braillard": {
+   "alias": [
+    "germán braillard",
+    "german braillard",
+    "germán braillard poccard",
+    "german braillard poccard",
+    "diputado braillard",
+    "braillard"
+   ],
+   "alias_contexto": [
+    "braillard"
+   ],
+   "excluir_si": [
+    "pedro braillard",
+    "vicegobernador",
+    "vicegobernadora",
+    "vice gobernador",
+    "pedro braillard poccard",
+    "juan enrique",
+    "enrique braillard",
+    "ministro de turismo",
+    "ministerio de turismo"
+   ],
+   "bando": "Frente Renovador",
+   "cargo": "Diputado provincial; presidente del Frente Renovador Corrientes",
+   "foco": true,
+   "wiki": [
+    "Germán Braillard Poccard",
+    "Germán Braillard"
+   ],
+   "trends": "Germán Braillard"
+  },
+  "Juan Pablo Valdés": {
+   "alias": [
+    "juan pablo valdés",
+    "juan pablo valdes",
+    "gobernador valdés",
+    "gobernador valdes"
+   ],
+   "bando": "Vamos Corrientes",
+   "cargo": "Gobernador de Corrientes (UCR, desde dic-2025)",
+   "wiki": [
+    "Juan Pablo Valdés"
+   ],
+   "trends": "Juan Pablo Valdés"
+  },
+  "Gustavo Valdés": {
+   "alias": [
+    "gustavo valdés",
+    "gustavo valdes"
+   ],
+   "bando": "Vamos Corrientes",
+   "cargo": "Ex gobernador (2017-2025), jefe político del radicalismo",
+   "wiki": [
+    "Gustavo Valdés"
+   ],
+   "trends": "Gustavo Valdés"
+  },
+  "Claudio Polich": {
+   "alias": [
+    "claudio polich",
+    "polich",
+    "intendente polich"
+   ],
+   "bando": "Vamos Corrientes",
+   "cargo": "Intendente de la ciudad de Corrientes",
+   "wiki": [
+    "Claudio Polich"
+   ],
+   "trends": "Claudio Polich"
+  },
+  "Martín Ascúa": {
+   "alias": [
+    "martín ascúa",
+    "martin ascua",
+    "tincho ascúa",
+    "tincho ascua",
+    "ascúa",
+    "ascua"
+   ],
+   "bando": "Peronismo",
+   "cargo": "Intendente de Paso de los Libres; candidato a gobernador del PJ en 2025",
+   "wiki": [
+    "Martín Ascúa"
+   ],
+   "trends": "Ascúa"
+  },
+  "Lisandro Almirón": {
+   "alias": [
+    "lisandro almirón",
+    "lisandro almiron",
+    "almirón",
+    "almiron"
+   ],
+   "bando": "La Libertad Avanza",
+   "cargo": "Referente de LLA en Corrientes",
+   "wiki": [
+    "Lisandro Almirón"
+   ],
+   "trends": "Lisandro Almirón"
+  },
+  "Pedro Braillard Poccard": {
+   "alias": [
+    "pedro braillard poccard",
+    "pedro braillard",
+    "vicegobernador braillard"
+   ],
+   "bando": "Vamos Corrientes",
+   "cargo": "Vicegobernador de Corrientes (homónimo, otro espacio)",
+   "wiki": [
+    "Pedro Braillard Poccard"
+   ]
+  },
+  "Ricardo Colombi": {
+   "alias": [
+    "ricardo colombi",
+    "colombi"
+   ],
+   "bando": "Otros",
+   "cargo": "Ex gobernador, radicalismo disidente",
+   "wiki": [
+    "Ricardo Colombi"
+   ]
+  },
+  "Eduardo Tassano": {
+   "alias": [
+    "eduardo tassano",
+    "tassano"
+   ],
+   "bando": "Vamos Corrientes",
+   "cargo": "Ex intendente de la capital",
+   "wiki": [
+    "Eduardo Tassano"
+   ]
+  },
+  "Carlos Espínola": {
+   "alias": [
+    "camau espínola",
+    "camau espinola",
+    "carlos espínola",
+    "carlos espinola",
+    "camau"
+   ],
+   "bando": "Peronismo",
+   "cargo": "Senador nacional, ex intendente",
+   "wiki": [
+    "Carlos Espínola"
+   ]
+  },
+  "Sergio Massa": {
+   "alias": [
+    "sergio massa",
+    "massa"
+   ],
+   "bando": "Nacional",
+   "cargo": "Líder nacional del Frente Renovador",
+   "wiki": [
+    "Sergio Massa"
+   ]
+  },
+  "Javier Milei": {
+   "alias": [
+    "javier milei",
+    "milei"
+   ],
+   "bando": "Nacional",
+   "cargo": "Presidente",
+   "wiki": [
+    "Javier Milei"
+   ]
+  }
+ },
+ "obj_fig": {
+  "braillard": "Braillard",
+  "german": "Braillard",
+  "valdes": "Valdés",
+  "polich": "Polich",
+  "ascua": "Ascúa",
+  "tincho": "Ascúa",
+  "almiron": "Almirón",
+  "colombi": "Colombi",
+  "massa": "Massa",
+  "milei": "Milei",
+  "camau": "Camau"
+ },
+ "mapa_poder": {
+  "metodo": "Codificación editorial inicial, a revisar con el cliente. Eje horizontal: 0 = peronismo y aliados, 100 = alineado con Milei (con el radicalismo de Vamos Corrientes en el medio). Eje vertical: peso territorial (cargo, aparato, votos 2025). El tamaño de cada punto sale de las menciones medidas.",
+  "eje_x": "← peronismo y aliados · · · radicalismo / Vamos Corrientes · · · LLA →",
+  "anot": [
+   [
+    6,
+    "OPOSICIÓN PJ-FR",
+    "#5fb3c9"
+   ],
+   [
+    52,
+    "VAMOS CORRIENTES",
+    "#e66767"
+   ],
+   [
+    94,
+    "LLA",
+    "#9085e9"
+   ]
+  ],
+  "puntos": {
+   "Germán Braillard": {
+    "alineamiento": 24,
+    "peso": 30,
+    "nota": "Lidera el Frente Renovador correntino, socio del PJ. Diputado provincial; ya dijo que quiere ser gobernador."
+   },
+   "Juan Pablo Valdés": {
+    "alineamiento": 55,
+    "peso": 90,
+    "nota": "Gobernador desde diciembre de 2025, sucedió a su hermano."
+   },
+   "Gustavo Valdés": {
+    "alineamiento": 55,
+    "peso": 78,
+    "nota": "Jefe político del oficialismo provincial."
+   },
+   "Claudio Polich": {
+    "alineamiento": 57,
+    "peso": 62,
+    "nota": "Intendente de la capital: le ganó la intendencia en 2025."
+   },
+   "Martín Ascúa": {
+    "alineamiento": 10,
+    "peso": 48,
+    "nota": "Intendente de Paso de los Libres; fue el candidato a gobernador del PJ. Competidor interno por el liderazgo opositor."
+   },
+   "Lisandro Almirón": {
+    "alineamiento": 92,
+    "peso": 28,
+    "nota": "LLA correntina, compite por el voto anti-radical por derecha."
+   },
+   "Ricardo Colombi": {
+    "alineamiento": 50,
+    "peso": 30,
+    "nota": "Radicalismo disidente, enfrentado a los Valdés."
+   },
+   "Carlos Espínola": {
+    "alineamiento": 22,
+    "peso": 38,
+    "nota": "Peronismo; peso propio en la capital."
+   },
+   "Pedro Braillard Poccard": {
+    "alineamiento": 62,
+    "peso": 50,
+    "nota": "Vicegobernador (Vamos Corrientes). Homónimo: el monitor separa sus menciones."
+   }
+  }
+ },
+ "intenciones": {
+  "quiere": [
+   "queremos",
+   "quiero",
+   "hay que",
+   "necesitamos",
+   "necesita",
+   "necesitan",
+   "hace falta",
+   "falta de",
+   "que se vaya",
+   "que se vayan",
+   "se tiene que ir",
+   "que renuncie",
+   "fuera",
+   "pedimos",
+   "exigimos",
+   "reclamamos",
+   "que pongan",
+   "que arreglen",
+   "que paguen",
+   "aumento",
+   "trabajo genuino",
+   "que vuelva",
+   "que gobierne",
+   "que se presente",
+   "candidato ya",
+   "que investiguen",
+   "que expliquen",
+   "que devuelvan"
+  ],
+  "espera": [
+   "ojalá",
+   "ojala",
+   "espero",
+   "esperamos",
+   "a ver si",
+   "tengo fe",
+   "fe en",
+   "confío",
+   "confio",
+   "confiamos",
+   "se viene",
+   "se vienen",
+   "en 2027",
+   "el año que viene",
+   "vamos a ganar",
+   "vamos a volver",
+   "volver a gobernar",
+   "recuperar la provincia",
+   "ilusión",
+   "ilusion",
+   "esperanza",
+   "sueño",
+   "próximo gobierno",
+   "proximo gobierno",
+   "que gane",
+   "ojalá sea",
+   "ojala sea"
+  ],
+  "critica": [
+   "vergüenza",
+   "verguenza",
+   "desastre",
+   "fracaso",
+   "horrible",
+   "inútil",
+   "inutil",
+   "no sabe",
+   "no saben",
+   "mediocre",
+   "culpa",
+   "culpable",
+   "pésimo",
+   "pesimo",
+   "un asco",
+   "basta",
+   "lamentable",
+   "patético",
+   "patetico",
+   "ridículo",
+   "ridiculo",
+   "nefasto",
+   "incapaz",
+   "chanta",
+   "mentiroso",
+   "mentira",
+   "se robó",
+   "se robo",
+   "chorro",
+   "chorros",
+   "ladrón",
+   "ladron",
+   "corrupto",
+   "corruptos",
+   "corrupción",
+   "corrupcion",
+   "kukas",
+   "kuka",
+   "caradura",
+   "decepción",
+   "decepcion",
+   "hipócrita",
+   "hipocrita",
+   "traidor",
+   "oportunista",
+   "cínico",
+   "cinico",
+   "peor",
+   "fundieron",
+   "destruyeron",
+   "nunca más",
+   "nunca mas"
+  ],
+  "apoya": [
+   "gracias",
+   "excelente",
+   "bien ahí",
+   "bien ahi",
+   "acierto",
+   "felicitaciones",
+   "bravo",
+   "aplausos",
+   "el mejor",
+   "impecable",
+   "lo banco",
+   "bancamos",
+   "todos con",
+   "gran persona",
+   "gran tipo",
+   "un lujo",
+   "coherente",
+   "honesto",
+   "buena gestión",
+   "buena gestion",
+   "orgullo",
+   "genio",
+   "capo",
+   "querido",
+   "sí se puede",
+   "si se puede",
+   "mi voto",
+   "tiene mi voto",
+   "lo voto",
+   "la voto",
+   "valiente",
+   "la única",
+   "la unica",
+   "el único",
+   "el unico",
+   "gran trabajo",
+   "buen trabajo",
+   "tiene razón",
+   "tiene razon",
+   "dice la verdad"
+  ]
+ },
+ "temas": {
+  "Empleo y salarios estatales": [
+   "salario",
+   "salarios",
+   "sueldo",
+   "sueldos",
+   "estatales",
+   "paritaria",
+   "aumento",
+   "empleo",
+   "trabajo",
+   "desocupa",
+   "aguinaldo",
+   "docentes",
+   "bono"
+  ],
+  "Luz, agua y servicios": [
+   "dpec",
+   "luz",
+   "cortes de luz",
+   "corte de luz",
+   "energía",
+   "energia",
+   "agua",
+   "aguas de corrientes",
+   "cloacas",
+   "tarifa",
+   "tarifas",
+   "calor"
+  ],
+  "Calles, obras e inundaciones": [
+   "calles",
+   "asfalto",
+   "baches",
+   "obra",
+   "obras",
+   "inundación",
+   "inundacion",
+   "anegamiento",
+   "desagües",
+   "desagues",
+   "lluvia",
+   "ripio",
+   "costanera",
+   "puente"
+  ],
+  "Seguridad y narcotráfico": [
+   "seguridad",
+   "inseguridad",
+   "policía",
+   "policia",
+   "delito",
+   "robo",
+   "robos",
+   "narco",
+   "droga",
+   "drogas",
+   "asesinato",
+   "crimen",
+   "contrabando",
+   "frontera",
+   "paraná",
+   "parana"
+  ],
+  "Salud": [
+   "salud",
+   "hospital",
+   "hospitales",
+   "médicos",
+   "medicos",
+   "ioscor",
+   "obra social",
+   "guardia",
+   "dengue",
+   "turnos"
+  ],
+  "Educación": [
+   "escuela",
+   "escuelas",
+   "educación",
+   "educacion",
+   "docente",
+   "docentes",
+   "unne",
+   "universidad",
+   "clases"
+  ],
+  "Producción y campo": [
+   "arroz",
+   "forestal",
+   "yerba",
+   "ganadería",
+   "ganaderia",
+   "productores",
+   "producción",
+   "produccion",
+   "incendios",
+   "esteros",
+   "turismo",
+   "industria"
+  ],
+  "Gestión en la capital": [
+   "municipio",
+   "municipalidad",
+   "concejo deliberante",
+   "concejal",
+   "capital correntina",
+   "ciudad de corrientes",
+   "polich",
+   "barrio",
+   "barrios",
+   "transporte",
+   "colectivos",
+   "basura"
+  ],
+  "Transparencia y poder radical": [
+   "valdés",
+   "valdes",
+   "hegemonía",
+   "hegemonia",
+   "radicalismo",
+   "nepotismo",
+   "corrupción",
+   "corrupcion",
+   "familia valdés",
+   "dinastía",
+   "dinastia",
+   "alternancia"
+  ],
+  "Peronismo y frente opositor": [
+   "peronismo",
+   "pj",
+   "frente renovador",
+   "renovador",
+   "massa",
+   "unión por la patria",
+   "union por la patria",
+   "limpiar corrientes",
+   "oposición",
+   "oposicion",
+   "unidad",
+   "interna",
+   "frente"
+  ],
+  "Elecciones y candidaturas": [
+   "2027",
+   "candidato",
+   "candidata",
+   "candidatura",
+   "elecciones",
+   "encuesta",
+   "fórmula",
+   "formula",
+   "boleta única",
+   "boleta unica",
+   "lista",
+   "listas",
+   "alianza",
+   "frente electoral",
+   "votos",
+   "votar",
+   "gobernador",
+   "gobernación",
+   "gobernacion",
+   "intendente",
+   "intendencia",
+   "2029",
+   "concejales",
+   "diputados provinciales"
+  ]
+ },
+ "narrativas": {
+  "Alternativa a los Valdés": [
+   "valdés",
+   "valdes",
+   "hegemonía",
+   "hegemonia",
+   "alternancia",
+   "cambio",
+   "radicalismo"
+  ],
+  "Unidad opositora": [
+   "unidad",
+   "frente",
+   "oposición",
+   "oposicion",
+   "pj",
+   "peronismo",
+   "acuerdo",
+   "alianza"
+  ],
+  "Massa y el Frente Renovador": [
+   "massa",
+   "frente renovador",
+   "renovador"
+  ],
+  "Gestión y propuestas": [
+   "proyecto",
+   "propuesta",
+   "ley",
+   "pedido de informes",
+   "obra",
+   "barrios"
+  ],
+  "Trabajo y producción": [
+   "empleo",
+   "trabajo",
+   "producción",
+   "produccion",
+   "pymes",
+   "industria"
+  ],
+  "Conflicto y denuncias": [
+   "denuncia",
+   "causa",
+   "justicia",
+   "polémica",
+   "polemica",
+   "cruce",
+   "acusó",
+   "acuso"
+  ],
+  "Oposición a Milei": [
+   "milei",
+   "ajuste",
+   "motosierra",
+   "gobierno nacional"
+  ]
+ },
+ "positivo": [
+  "gracias",
+  "excelente",
+  "bien hecho",
+  "muy bien",
+  "felicit",
+  "impecable",
+  "genial",
+  "bravo",
+  "gran persona",
+  "orgullo",
+  "el mejor",
+  "esperanza",
+  "honesto",
+  "coherente"
+ ],
+ "negativo": [
+  "vergüenza",
+  "verguenza",
+  "desastre",
+  "fracaso",
+  "inútil",
+  "inutil",
+  "mentiroso",
+  "chorro",
+  "corrupto",
+  "mediocre",
+  "basta",
+  "patético",
+  "patetico",
+  "horrible",
+  "peor",
+  "nefasto",
+  "kuka",
+  "traidora",
+  "traidor",
+  "panquequ",
+  "operadora",
+  "operador"
+ ],
+ "contexto": [
+  "corrientes",
+  "correntin",
+  "correntino",
+  "correntina",
+  "frente renovador corrientes",
+  "legislatura correntina",
+  "capital correntina",
+  "paso de los libres",
+  "goya",
+  "mercedes",
+  "curuzú cuatiá",
+  "curuzu cuatia",
+  "santo tomé",
+  "santo tome",
+  "esquina",
+  "bella vista",
+  "ituzaingó",
+  "ituzaingo"
+ ],
+ "excluir_frases": [
+  "corrientes de aire",
+  "corrientes marinas",
+  "corrientes políticas",
+  "corrientes politicas",
+  "corrientes migratorias",
+  "avenida corrientes",
+  "av. corrientes",
+  "calle corrientes",
+  "corrientes y",
+  "corrientes al 1",
+  "corrientes al 2",
+  "corrientes al 3"
+ ],
+ "medios_locales": [
+  "el litoral",
+  "época",
+  "epoca",
+  "república de corrientes",
+  "republica de corrientes",
+  "radio dos",
+  "corrientes hoy",
+  "norte corrientes",
+  "momarandu",
+  "corrientes al día",
+  "corrientes al dia",
+  "nea hoy",
+  "radio sudamericana",
+  "el libertador",
+  "noticia política",
+  "noticia politica",
+  "diario ya",
+  "diarioya",
+  "fm net"
+ ],
+ "sitios_locales": [
+  "ellitoral.com.ar",
+  "diarioepoca.com",
+  "republicadecorrientes.com",
+  "radiodos.com.ar",
+  "corrienteshoy.com",
+  "nortecorrientes.com",
+  "momarandu.com",
+  "corrientesaldia.info",
+  "neahoy.com",
+  "radiosudamericana.com",
+  "diarioellibertador.com.ar"
+ ],
+ "rss": [
+  {
+   "name": "El Litoral Corrientes",
+   "url": "https://www.ellitoral.com.ar/rss",
+   "local": true
+  },
+  {
+   "name": "Diario Época",
+   "url": "https://www.diarioepoca.com/rss",
+   "local": true
+  },
+  {
+   "name": "República de Corrientes",
+   "url": "https://www.republicadecorrientes.com/feed/",
+   "local": true
+  },
+  {
+   "name": "Radio Dos",
+   "url": "https://www.radiodos.com.ar/rss",
+   "local": true
+  },
+  {
+   "name": "Corrientes Hoy",
+   "url": "https://www.corrienteshoy.com/feed/",
+   "local": true
+  },
+  {
+   "name": "Norte Corrientes",
+   "url": "https://www.nortecorrientes.com/rss",
+   "local": true
+  },
+  {
+   "name": "Momarandu",
+   "url": "https://www.momarandu.com/rss",
+   "local": true
+  },
+  {
+   "name": "Corrientes al Día",
+   "url": "https://corrientesaldia.info/feed/",
+   "local": true
+  },
+  {
+   "name": "NEA Hoy",
+   "url": "https://neahoy.com/feed/",
+   "local": true
+  },
+  {
+   "name": "Radio Sudamericana",
+   "url": "https://www.radiosudamericana.com/rss",
+   "local": true
+  },
+  {
+   "name": "Letra P",
+   "url": "https://www.letrap.com.ar/rss/home.xml"
+  },
+  {
+   "name": "Página/12",
+   "url": "https://www.pagina12.com.ar/rss/portada"
+  },
+  {
+   "name": "Perfil",
+   "url": "https://www.perfil.com/feed/politica"
+  }
+ ],
+ "google_news": {
+  "queries": [
+   "\"Germán Braillard\"",
+   "\"German Braillard\"",
+   "\"Germán Braillard Poccard\"",
+   "Braillard \"Frente Renovador\" Corrientes",
+   "Braillard gobernador Corrientes",
+   "Braillard diputado Corrientes",
+   "\"Juan Pablo Valdés\" gobernador",
+   "\"Claudio Polich\" intendente",
+   "\"Tincho Ascúa\"",
+   "\"Lisandro Almirón\" Corrientes",
+   "\"Gustavo Valdés\" 2027",
+   "Frente Renovador Corrientes Massa",
+   "peronismo Corrientes unidad",
+   "Legislatura Corrientes oposición",
+   "Braillard concejal Corrientes",
+   "Braillard Limpiar Corrientes intendencia",
+   "\"Braillard\" renovadores Corrientes legislatura"
+  ],
+  "sites": [
+   "ellitoral.com.ar",
+   "diarioepoca.com",
+   "republicadecorrientes.com",
+   "radiodos.com.ar",
+   "corrienteshoy.com",
+   "nortecorrientes.com",
+   "momarandu.com",
+   "corrientesaldia.info",
+   "neahoy.com",
+   "radiosudamericana.com",
+   "diarioellibertador.com.ar",
+   "letrap.com.ar",
+   "infobae.com",
+   "pagina12.com.ar"
+  ],
+  "site_terms": [
+   "\"Germán Braillard\"",
+   "Braillard renovador"
+  ]
+ },
+ "youtube": {
+  "region": "AR",
+  "language": "es",
+  "videos_per_query": 8,
+  "comments_per_video": 100,
+  "queries": [
+   "Germán Braillard",
+   "Germán Braillard Corrientes",
+   "Braillard Frente Renovador",
+   "Braillard intendente Corrientes",
+   "Braillard gobernador",
+   "Juan Pablo Valdés gobernador Corrientes",
+   "Claudio Polich intendente",
+   "Tincho Ascúa Corrientes",
+   "Corrientes oposición peronismo 2027"
+  ],
+  "contexto": [
+   "corrientes",
+   "correntin",
+   "braillard",
+   "valdés",
+   "valdes",
+   "polich",
+   "ascúa",
+   "ascua",
+   "renovador"
+  ],
+  "excluir": [
+   "avenida corrientes",
+   "corrientes marinas"
+  ]
+ },
+ "trends": {
+  "terminos": [
+   "Germán Braillard",
+   "Juan Pablo Valdés",
+   "Claudio Polich",
+   "Ascúa",
+   "Lisandro Almirón"
+  ],
+  "geos": {
+   "AR-W": "Corrientes",
+   "AR": "Argentina"
+  },
+  "geo_local": "AR-W"
+ },
+ "wiki_provincia": [
+  "Provincia de Corrientes"
+ ],
+ "stop_extra": [
+  "corrientes",
+  "correntino",
+  "correntina",
+  "german",
+  "braillard",
+  "poccard",
+  "diputado"
+ ],
+ "textos_comentarios": "extracto",
+ "news_when": "2y"
+}
