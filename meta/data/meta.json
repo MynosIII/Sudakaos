@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-14T02:48-03:00",
+ "updated_at": "2026-11-14T02:53-03:00",
  "grupos": [
   "País",
   "Boca",
@@ -3336,7 +3336,7 @@
    "grupo": "San Isidro",
    "espacio": "Frente Renovador",
    "distrito": null,
-   "ig_error": "@fedemecaok: 4: límite de llamadas de la app (salteado en esta corrida)",
+   "ig_error": "@federico.meca: 4: límite de llamadas de la app (salteado en esta corrida)",
    "historia": [
     {
      "d": "2026-11-14",
