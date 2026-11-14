@@ -62,7 +62,7 @@ jobs:
           mkdir -p _site/indice
           {
             echo '<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Índice</title></head><body><h1>Índice</h1><ul>'
-            echo '<li><a href="../">Tablero nacional</a></li>'
+            echo '<li><a href="../">Tablero nacional (Massa)</a></li>'
             for f in _site/*/index.html; do
               d=$(basename "$(dirname "$f")")
               [ "$d" = indice ] && continue
