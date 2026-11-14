@@ -1,0 +1,856 @@
+{
+ "nombre": "Monitor Eugenio Casielles",
+ "slug": "casielles",
+ "color": "#f2b705",
+ "distrito": "Ciudad de Buenos Aires",
+ "perfil": {
+  "nombre": "Eugenio Casielles",
+  "corto": "Casielles",
+  "cargo": "Legislador porteño (mandato 2023-2027), fundador de Transformación",
+  "resumen": "Encabezó la lista de legisladores de La Libertad Avanza en la Ciudad en 2023 y rompió con Milei en noviembre de 2024. Fundó Transformación, con pie en CABA, provincia, Mendoza y Jujuy, e integra la mesa que impulsa a Dante Gebel para 2027. Conserva influencia sobre comuneros libertarios electos en 2023.",
+  "objetivo": "Su banca vence en diciembre de 2027: hacer crecer Transformación en la Ciudad y posicionarse dentro del armado de Gebel.",
+  "fuentes": [
+   "https://laroscadigital.com.ar/gebel-sumo-dos-concejales-en-el-interior-y-casielles-es-la-llave-que-puede-darle-7-comuneros-en-caba/",
+   "https://www.elesquiu.com/politica/2026/9/1/eugenio-casielles-impulsa-a-dante-gebel-como-candidato-y-cuestiona-al-gobierno-la-realidad-de-las-pe-594924.html"
+  ]
+ },
+ "focos": [
+  "Eugenio Casielles"
+ ],
+ "rivales": [
+  "Ramiro Marra",
+  "Pilar Ramírez",
+  "Jorge Macri",
+  "Leandro Santoro",
+  "Manuel Adorni"
+ ],
+ "co_clave": [
+  "Dante Gebel",
+  "Javier Milei",
+  "Karina Milei",
+  "Ramiro Marra",
+  "Jorge Macri",
+  "Pilar Ramírez"
+ ],
+ "window_days": 365,
+ "conversacion_dias": 365,
+ "eleccion": "2027-10-24",
+ "eleccion_nota": "Fecha de referencia: generales de octubre de 2027, cuando vence su banca en la Legislatura y se elige jefe de Gobierno porteño.",
+ "tema_elecciones": "Elecciones 2027 y candidaturas",
+ "figuras": {
+  "Eugenio Casielles": {
+   "alias": [
+    "eugenio casielles",
+    "casielles",
+    "legislador casielles"
+   ],
+   "bando": "Transformación",
+   "cargo": "Legislador porteño (2023-2027); Transformación, ex LLA",
+   "foco": true,
+   "wiki": [
+    "Eugenio Casielles"
+   ],
+   "trends": "Eugenio Casielles"
+  },
+  "Dante Gebel": {
+   "alias": [
+    "dante gebel",
+    "gebel"
+   ],
+   "bando": "Transformación",
+   "cargo": "Pastor y comunicador; posible candidato presidencial 2027",
+   "wiki": [
+    "Dante Gebel"
+   ],
+   "trends": "Dante Gebel"
+  },
+  "Ramiro Marra": {
+   "alias": [
+    "ramiro marra",
+    "marra"
+   ],
+   "bando": "Ex LLA",
+   "cargo": "Legislador porteño, ex LLA (UCeDé)",
+   "wiki": [
+    "Ramiro Marra"
+   ],
+   "trends": "Ramiro Marra"
+  },
+  "Pilar Ramírez": {
+   "alias": [
+    "pilar ramírez",
+    "pilar ramirez"
+   ],
+   "bando": "La Libertad Avanza",
+   "cargo": "Conductora de LLA en la Ciudad; legisladora",
+   "wiki": [
+    "Pilar Ramírez"
+   ],
+   "trends": "Pilar Ramírez"
+  },
+  "Jorge Macri": {
+   "alias": [
+    "jorge macri"
+   ],
+   "bando": "PRO",
+   "cargo": "Jefe de Gobierno porteño",
+   "wiki": [
+    "Jorge Macri"
+   ],
+   "trends": "Jorge Macri"
+  },
+  "Leandro Santoro": {
+   "alias": [
+    "leandro santoro",
+    "santoro"
+   ],
+   "bando": "Peronismo",
+   "cargo": "Referente peronista porteño",
+   "wiki": [
+    "Leandro Santoro"
+   ],
+   "trends": "Leandro Santoro"
+  },
+  "Manuel Adorni": {
+   "alias": [
+    "manuel adorni",
+    "adorni"
+   ],
+   "bando": "La Libertad Avanza",
+   "cargo": "Jefe de Gabinete; figura de LLA en la Ciudad",
+   "wiki": [
+    "Manuel Adorni"
+   ],
+   "trends": "Manuel Adorni"
+  },
+  "Horacio Rodríguez Larreta": {
+   "alias": [
+    "rodríguez larreta",
+    "rodriguez larreta",
+    "larreta"
+   ],
+   "bando": "Otros",
+   "cargo": "Ex jefe de Gobierno",
+   "wiki": [
+    "Horacio Rodríguez Larreta"
+   ]
+  },
+  "Martín Lousteau": {
+   "alias": [
+    "martín lousteau",
+    "martin lousteau",
+    "lousteau"
+   ],
+   "bando": "Otros",
+   "cargo": "UCR porteña",
+   "wiki": [
+    "Martín Lousteau"
+   ]
+  },
+  "Javier Milei": {
+   "alias": [
+    "javier milei",
+    "milei"
+   ],
+   "bando": "Nacional",
+   "cargo": "Presidente",
+   "wiki": [
+    "Javier Milei"
+   ]
+  },
+  "Karina Milei": {
+   "alias": [
+    "karina milei",
+    "karina"
+   ],
+   "bando": "Nacional",
+   "cargo": "Secretaria General de la Presidencia",
+   "wiki": [
+    "Karina Milei"
+   ]
+  }
+ },
+ "obj_fig": {
+  "casielles": "Casielles",
+  "eugenio": "Casielles",
+  "gebel": "Gebel",
+  "dante": "Gebel",
+  "marra": "Marra",
+  "ramiro": "Marra",
+  "macri": "Macri",
+  "jorge": "Macri",
+  "santoro": "Santoro",
+  "adorni": "Adorni",
+  "milei": "Milei",
+  "karina": "Karina",
+  "larreta": "Larreta",
+  "lousteau": "Lousteau"
+ },
+ "mapa_poder": {
+  "metodo": "Codificación editorial inicial, a revisar con el cliente. Eje horizontal: 0 = peronismo, 100 = Milei/LLA orgánico. Eje vertical: peso propio en la Ciudad (cargo, aparato, votos). El tamaño de cada punto sale de las menciones medidas.",
+  "eje_x": "← peronismo · · · centro / PRO · · · ex libertarios · · · LLA orgánico →",
+  "anot": [
+   [
+    6,
+    "PERONISMO",
+    "#5fb3c9"
+   ],
+   [
+    45,
+    "PRO / CENTRO",
+    "#f2b705"
+   ],
+   [
+    94,
+    "LLA",
+    "#9085e9"
+   ]
+  ],
+  "puntos": {
+   "Eugenio Casielles": {
+    "alineamiento": 55,
+    "peso": 26,
+    "nota": "Fundador de Transformación, armador de Gebel. Ex cabeza de lista de LLA: conserva comuneros y estructura chica pero federal."
+   },
+   "Dante Gebel": {
+    "alineamiento": 50,
+    "peso": 45,
+    "nota": "Sin cargo pero con audiencia propia enorme; el proyecto presidencial que empuja Casielles."
+   },
+   "Ramiro Marra": {
+    "alineamiento": 72,
+    "peso": 28,
+    "nota": "Otro ex libertario porteño: compite por el mismo votante desencantado de LLA."
+   },
+   "Pilar Ramírez": {
+    "alineamiento": 92,
+    "peso": 50,
+    "nota": "Maneja LLA en la Ciudad, alfil de Karina."
+   },
+   "Jorge Macri": {
+    "alineamiento": 62,
+    "peso": 85,
+    "nota": "Jefe de Gobierno; aliado inestable de LLA."
+   },
+   "Leandro Santoro": {
+    "alineamiento": 10,
+    "peso": 62,
+    "nota": "Principal figura peronista de la Ciudad."
+   },
+   "Manuel Adorni": {
+    "alineamiento": 95,
+    "peso": 70,
+    "nota": "Jefe de Gabinete; ganó la Ciudad para LLA en 2025."
+   },
+   "Horacio Rodríguez Larreta": {
+    "alineamiento": 45,
+    "peso": 30,
+    "nota": "Ex jefe de Gobierno, juega por afuera del PRO."
+   },
+   "Martín Lousteau": {
+    "alineamiento": 35,
+    "peso": 32,
+    "nota": "UCR porteña."
+   }
+  }
+ },
+ "intenciones": {
+  "quiere": [
+   "queremos",
+   "quiero",
+   "hay que",
+   "necesitamos",
+   "necesita",
+   "necesitan",
+   "hace falta",
+   "falta de",
+   "que se vaya",
+   "que se vayan",
+   "se tiene que ir",
+   "que renuncie",
+   "fuera",
+   "pedimos",
+   "exigimos",
+   "reclamamos",
+   "que pongan",
+   "que arreglen",
+   "que paguen",
+   "aumento",
+   "trabajo genuino",
+   "que vuelva",
+   "que gobierne",
+   "que se presente",
+   "candidato ya",
+   "que investiguen",
+   "que expliquen",
+   "que devuelvan"
+  ],
+  "espera": [
+   "ojalá",
+   "ojala",
+   "espero",
+   "esperamos",
+   "a ver si",
+   "tengo fe",
+   "fe en",
+   "confío",
+   "confio",
+   "confiamos",
+   "se viene",
+   "se vienen",
+   "en 2027",
+   "el año que viene",
+   "vamos a ganar",
+   "vamos a volver",
+   "volver a gobernar",
+   "recuperar la provincia",
+   "ilusión",
+   "ilusion",
+   "esperanza",
+   "sueño",
+   "próximo gobierno",
+   "proximo gobierno",
+   "que gane",
+   "ojalá sea",
+   "ojala sea"
+  ],
+  "critica": [
+   "vergüenza",
+   "verguenza",
+   "desastre",
+   "fracaso",
+   "horrible",
+   "inútil",
+   "inutil",
+   "no sabe",
+   "no saben",
+   "mediocre",
+   "culpa",
+   "culpable",
+   "pésimo",
+   "pesimo",
+   "un asco",
+   "basta",
+   "lamentable",
+   "patético",
+   "patetico",
+   "ridículo",
+   "ridiculo",
+   "nefasto",
+   "incapaz",
+   "chanta",
+   "mentiroso",
+   "mentira",
+   "se robó",
+   "se robo",
+   "chorro",
+   "chorros",
+   "ladrón",
+   "ladron",
+   "corrupto",
+   "corruptos",
+   "corrupción",
+   "corrupcion",
+   "kukas",
+   "kuka",
+   "caradura",
+   "decepción",
+   "decepcion",
+   "hipócrita",
+   "hipocrita",
+   "traidor",
+   "oportunista",
+   "cínico",
+   "cinico",
+   "peor",
+   "fundieron",
+   "destruyeron",
+   "nunca más",
+   "nunca mas"
+  ],
+  "apoya": [
+   "gracias",
+   "excelente",
+   "bien ahí",
+   "bien ahi",
+   "acierto",
+   "felicitaciones",
+   "bravo",
+   "aplausos",
+   "el mejor",
+   "impecable",
+   "lo banco",
+   "bancamos",
+   "todos con",
+   "gran persona",
+   "gran tipo",
+   "un lujo",
+   "coherente",
+   "honesto",
+   "buena gestión",
+   "buena gestion",
+   "orgullo",
+   "genio",
+   "capo",
+   "querido",
+   "sí se puede",
+   "si se puede",
+   "mi voto",
+   "tiene mi voto",
+   "lo voto",
+   "la voto",
+   "valiente",
+   "la única",
+   "la unica",
+   "el único",
+   "el unico",
+   "gran trabajo",
+   "buen trabajo",
+   "tiene razón",
+   "tiene razon",
+   "dice la verdad"
+  ]
+ },
+ "temas": {
+  "Transporte y subte": [
+   "subte",
+   "colectivo",
+   "colectivos",
+   "boleto",
+   "tarifa",
+   "transporte",
+   "tránsito",
+   "transito",
+   "autopista",
+   "bicisenda"
+  ],
+  "Seguridad": [
+   "seguridad",
+   "inseguridad",
+   "policía",
+   "policia",
+   "delito",
+   "robo",
+   "robos",
+   "narco",
+   "droga",
+   "drogas",
+   "asesinato",
+   "crimen",
+   "motochorro",
+   "trapitos",
+   "cuidacoches"
+  ],
+  "Vivienda y alquileres": [
+   "alquiler",
+   "alquileres",
+   "vivienda",
+   "inquilino",
+   "inquilinos",
+   "hipotecario",
+   "villa",
+   "villas",
+   "barrio popular",
+   "situación de calle",
+   "situacion de calle",
+   "personas en situación de calle"
+  ],
+  "Limpieza y espacio público": [
+   "basura",
+   "limpieza",
+   "contenedores",
+   "veredas",
+   "baches",
+   "plazas",
+   "espacio público",
+   "espacio publico",
+   "árboles",
+   "arboles",
+   "ratas"
+  ],
+  "Salud y educación": [
+   "hospital",
+   "hospitales",
+   "salud",
+   "guardia",
+   "escuela",
+   "escuelas",
+   "docentes",
+   "educación",
+   "educacion",
+   "clases"
+  ],
+  "Economía y bolsillo": [
+   "inflación",
+   "inflacion",
+   "precios",
+   "salario",
+   "salarios",
+   "sueldo",
+   "sueldos",
+   "jubilad",
+   "dólar",
+   "dolar",
+   "economía",
+   "economia",
+   "ajuste",
+   "tarifas",
+   "desempleo",
+   "empleo",
+   "pobreza",
+   "changuit",
+   "comercio",
+   "comercios",
+   "locales cerrados",
+   "pymes",
+   "pyme",
+   "ingresos brutos",
+   "abl"
+  ],
+  "Comunas y Legislatura": [
+   "comuna",
+   "comunas",
+   "comunero",
+   "comuneros",
+   "legislatura",
+   "legislador",
+   "legisladores",
+   "sesión",
+   "sesion",
+   "ley de comunas"
+  ],
+  "Gobierno de Milei": [
+   "milei",
+   "gobierno nacional",
+   "casa rosada",
+   "motosierra",
+   "ajuste",
+   "libertad avanza",
+   "karina"
+  ],
+  "Corrupción y transparencia": [
+   "corrupción",
+   "corrupcion",
+   "coima",
+   "coimas",
+   "enriquecimiento",
+   "denuncia",
+   "denunció",
+   "denuncio",
+   "causa",
+   "juzgado",
+   "fiscal",
+   "comodoro py",
+   "transparencia",
+   "declaración jurada",
+   "declaracion jurada",
+   "libra",
+   "$libra",
+   "andis",
+   "spagnuolo",
+   "chorro",
+   "corrupto"
+  ],
+  "Fe, valores y comunidad": [
+   "fe",
+   "dios",
+   "iglesia",
+   "evangélic",
+   "evangelic",
+   "pastor",
+   "valores",
+   "familia",
+   "esperanza",
+   "jóvenes",
+   "jovenes"
+  ],
+  "Elecciones 2027 y candidaturas": [
+   "2027",
+   "candidato",
+   "candidata",
+   "candidatura",
+   "elecciones",
+   "encuesta",
+   "fórmula",
+   "formula",
+   "boleta única",
+   "boleta unica",
+   "lista",
+   "listas",
+   "alianza",
+   "frente electoral",
+   "votos",
+   "votar",
+   "jefe de gobierno",
+   "jefatura de gobierno",
+   "presidente",
+   "presidencial",
+   "gebel 2027",
+   "candidato presidencial"
+  ]
+ },
+ "narrativas": {
+  "Armado de Gebel": [
+   "gebel",
+   "consolidación argentina",
+   "consolidacion argentina",
+   "candidatura presidencial",
+   "armado"
+  ],
+  "Ruptura con Milei": [
+   "rompió",
+   "rompio",
+   "ex libertario",
+   "fundador de la libertad",
+   "se fue",
+   "traición",
+   "traicion",
+   "decepción",
+   "decepcion"
+  ],
+  "Crítica al ajuste": [
+   "ajuste",
+   "excel",
+   "motosierra",
+   "la gente no llega",
+   "bolsillo",
+   "changuito",
+   "guillotina"
+  ],
+  "Gestión de la Ciudad": [
+   "subte",
+   "basura",
+   "seguridad",
+   "comuna",
+   "jorge macri",
+   "ciudad"
+  ],
+  "Federal / interior": [
+   "mendoza",
+   "jujuy",
+   "misiones",
+   "córdoba",
+   "cordoba",
+   "provincia",
+   "interior",
+   "gira"
+  ],
+  "Conflicto e internas": [
+   "interna",
+   "pelea",
+   "cruce",
+   "ruptura",
+   "denuncia"
+  ],
+  "Fe y valores": [
+   "fe",
+   "dios",
+   "valores",
+   "familia",
+   "esperanza",
+   "evangél",
+   "evangel"
+  ]
+ },
+ "positivo": [
+  "gracias",
+  "excelente",
+  "bien hecho",
+  "muy bien",
+  "felicit",
+  "impecable",
+  "genial",
+  "bravo",
+  "gran persona",
+  "orgullo",
+  "el mejor",
+  "esperanza",
+  "honesto",
+  "coherente"
+ ],
+ "negativo": [
+  "vergüenza",
+  "verguenza",
+  "desastre",
+  "fracaso",
+  "inútil",
+  "inutil",
+  "mentiroso",
+  "chorro",
+  "corrupto",
+  "mediocre",
+  "basta",
+  "patético",
+  "patetico",
+  "horrible",
+  "peor",
+  "nefasto",
+  "kuka",
+  "traidora",
+  "traidor",
+  "panquequ",
+  "operadora",
+  "operador"
+ ],
+ "contexto": [
+  "eugenio casielles",
+  "casielles",
+  "legislatura porteña",
+  "legislatura portena",
+  "dante gebel",
+  "comuneros"
+ ],
+ "excluir_frases": [],
+ "medios_locales": [
+  "noticias urbanas",
+  "la rosca",
+  "parlamentario",
+  "nuevo milenio",
+  "diario z",
+  "la nueva ciudad",
+  "en el subte",
+  "data clave",
+  "perfil"
+ ],
+ "sitios_locales": [
+  "noticiasurbanas.com.ar",
+  "laroscadigital.com.ar",
+  "parlamentario.com",
+  "dataclave.com.ar"
+ ],
+ "rss": [
+  {
+   "name": "Noticias Urbanas",
+   "url": "https://www.noticiasurbanas.com.ar/feed",
+   "local": true
+  },
+  {
+   "name": "La Rosca Digital",
+   "url": "https://laroscadigital.com.ar/feed/",
+   "local": true
+  },
+  {
+   "name": "Letra P",
+   "url": "https://www.letrap.com.ar/rss/home.xml"
+  },
+  {
+   "name": "Página/12",
+   "url": "https://www.pagina12.com.ar/rss/portada"
+  },
+  {
+   "name": "Perfil",
+   "url": "https://www.perfil.com/feed/politica"
+  },
+  {
+   "name": "Infobae",
+   "url": "https://www.infobae.com/arc/outboundfeeds/rss/"
+  },
+  {
+   "name": "La Nación",
+   "url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/?outputType=xml"
+  },
+  {
+   "name": "Clarín",
+   "url": "https://www.clarin.com/rss/politica/"
+  },
+  {
+   "name": "Parlamentario",
+   "url": "https://www.parlamentario.com/feed/"
+  },
+  {
+   "name": "El Intransigente",
+   "url": "https://elintransigente.com/feed/"
+  }
+ ],
+ "google_news": {
+  "queries": [
+   "\"Eugenio Casielles\"",
+   "\"Casielles\" Gebel",
+   "\"Casielles\" legislador",
+   "\"Casielles\" Milei",
+   "\"Casielles\" Transformación",
+   "\"Dante Gebel\" candidato 2027",
+   "\"Dante Gebel\" presidente",
+   "\"Ramiro Marra\" 2027",
+   "\"Pilar Ramírez\" Legislatura",
+   "\"Jorge Macri\" 2027",
+   "\"Leandro Santoro\" 2027",
+   "Legislatura porteña ex libertarios",
+   "comuneros Libertad Avanza Ciudad"
+  ],
+  "sites": [
+   "noticiasurbanas.com.ar",
+   "laroscadigital.com.ar",
+   "parlamentario.com",
+   "infobae.com",
+   "lanacion.com.ar",
+   "clarin.com",
+   "pagina12.com.ar",
+   "perfil.com",
+   "letrap.com.ar",
+   "lapoliticaonline.com",
+   "parlamentario.com",
+   "eldestapeweb.com",
+   "ambito.com",
+   "elintransigente.com",
+   "cronista.com"
+  ],
+  "site_terms": [
+   "Casielles"
+  ]
+ },
+ "youtube": {
+  "region": "AR",
+  "language": "es",
+  "videos_per_query": 8,
+  "comments_per_video": 100,
+  "queries": [
+   "Eugenio Casielles",
+   "Eugenio Casielles entrevista",
+   "Casielles Dante Gebel",
+   "Casielles Milei",
+   "Dante Gebel candidato presidente 2027",
+   "Dante Gebel política",
+   "Casielles legislatura porteña",
+   "Ramiro Marra Ciudad 2027"
+  ],
+  "contexto": [
+   "casielles",
+   "gebel",
+   "legislatura",
+   "ciudad",
+   "porteñ",
+   "milei",
+   "marra",
+   "2027"
+  ],
+  "excluir": []
+ },
+ "trends": {
+  "terminos": [
+   "Eugenio Casielles",
+   "Dante Gebel",
+   "Ramiro Marra",
+   "Pilar Ramírez",
+   "Jorge Macri"
+  ],
+  "geos": {
+   "AR-C": "Ciudad de Buenos Aires",
+   "AR": "Argentina"
+  },
+  "geo_local": "AR-C"
+ },
+ "wiki_provincia": [
+  "Ciudad Autónoma de Buenos Aires"
+ ],
+ "stop_extra": [
+  "ciudad",
+  "legislador",
+  "eugenio",
+  "casielles",
+  "porteño",
+  "portenos",
+  "porteno"
+ ],
+ "textos_comentarios": "extracto"
+}

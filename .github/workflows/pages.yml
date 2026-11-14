@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   # Los workflows de datos hacen commit con el token de Actions, que no dispara "push": se publica al terminar
   workflow_run:
-    workflows: ['Radar social listening', 'San Isidro reclamos', 'General Roca monitor', 'Massa Galmarini monitor', 'Boca monitor', 'Santa Cruz monitor', 'Meta dirigentes']
+    workflows: ['Radar social listening', 'San Isidro reclamos', 'General Roca monitor', 'Massa Galmarini monitor', 'Boca monitor', 'Santa Cruz monitor', 'Meta dirigentes', 'Dirigentes monitor']
     types: [completed]
 
 permissions:
@@ -52,6 +52,11 @@ jobs:
           cp -R boca/index.html boca/data _site/boca/
           mkdir -p _site/santacruz
           cp -R santacruz/index.html santacruz/data _site/santacruz/
+          for d in pagano casielles braillard; do
+            mkdir -p _site/dirigentes/$d
+            if [ -d dirigentes/$d/data ]; then cp -R dirigentes/$d/data _site/dirigentes/$d/; fi
+          done
+          cp dirigentes/index.html _site/dirigentes/
           mkdir -p _site/meta
           if [ -d meta/data ]; then cp -R meta/data _site/meta/; fi
           cp resumen.js _site/
