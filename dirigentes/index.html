@@ -476,7 +476,7 @@ const lista=a=>a.length<=1?(a[0]||''):a.slice(0,-1).join(', ')+' y '+a[a.length-
 function diagnostico(){const A=FA,la=last(A.name),dA=CD(A.name),VS=D.duelo.versus||{},V=D.voz,P=D.perfil||{};
   // temas que le convienen: dueño frente a la mayoría de los rivales y sin balance negativo
   const own={};RIV.forEach(r=>((VS[r.name]||{}).temas||[]).forEach(t=>{const o=own[t.tema]=own[t.tema]||{tema:t.tema,gana:0,n:t.a,pct:t.pct_a,bal:t.bal_a,neg:t.neg_a};if(t.duenio===A.name)o.gana++}));
-  const propios=Object.values(own).filter(t=>t.n>=3&&t.gana>=Math.max(1,Math.ceil(RIV.length/2))&&(t.bal==null||t.bal>=0)).sort((x,y)=>y.gana-x.gana||y.n-x.n).slice(0,3);
+  const propios=Object.values(own).filter(t=>t.n>=3&&t.pct>=4&&t.gana>=Math.max(1,Math.ceil(RIV.length/2))&&(t.bal==null||t.bal>=0)).sort((x,y)=>y.gana-x.gana||y.pct-x.pct).slice(0,3);
   const flojos=Object.values(own).filter(t=>t.n>=3&&t.bal!=null&&t.bal<0).sort((x,y)=>x.bal-y.bal).slice(0,3);
   // agenda vacante: temas con demanda de la gente donde el dirigente casi no aparece
   const vac=(V.temas||[]).map(t=>{const fo=((t.figuras||[]).find(f=>f[0]===A.name)||[0,0])[1],dem=Math.round((t.comentarios||0)*((t.intenciones||{}).quiere||0)/100);
