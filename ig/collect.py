@@ -226,7 +226,8 @@ def main():
         return
     cand, res = candidatos()
     cuentas, errores, memo = {}, {}, {}
-    names = list(cand)
+    # primero las figuras sin cuenta resuelta: si Meta corta por cupo, que no queden siempre al final
+    names = sorted(cand, key=lambda n: n in res)
     # 1) refresco: resolver usuario y traer lo reciente de cada cuenta (una sola vez por cuenta)
     for name in names:
         if S["corte"]:
