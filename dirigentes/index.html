@@ -335,7 +335,10 @@ const IN={quiere:'Quiere',espera:'Espera',critica:'Critica',apoya:'Apoya'};
 const IQ={quiere:'pide',espera:'espera',critica:'critica',apoya:'apoya'};
 const BC={'Peronismo':'#5fb3c9','La Libertad Avanza':'#9085e9','Nacional':'#a6adbb','PRO':'#f2d14b','Ex LLA':'#d9a05b','Vamos Corrientes':'#e66767','Frente Renovador':'#22b8a8','Transformación':'#f2b705','Independiente':'#e2557b','Otros':'#8aa1c1'};
 const WHO=[{s:'pagano',n:'Marcela Pagano',c:'#e2557b'},{s:'casielles',n:'Eugenio Casielles',c:'#f2b705'},{s:'braillard',n:'Germán Braillard',c:'#22b8a8'}];
-const SLUG=(()=>{const q=new URLSearchParams(location.search).get('d')||location.hash.slice(1);return WHO.some(w=>w.s===q)?q:WHO[0].s})();
+// Publicado como tablero independiente: <html data-slug="..."> fija el dirigente, sin selector, y los datos están en ./data/
+const FIX=document.documentElement.dataset.slug;
+const SLUG=FIX||(()=>{const q=new URLSearchParams(location.search).get('d')||location.hash.slice(1);return WHO.some(w=>w.s===q)?q:WHO[0].s})();
+const BASE=FIX?'':SLUG+'/';
 const PAL=['#e66767','#9085e9','#d9a05b','#d55181','#5fb3c9','#3987e5','#8aa1c1','#b38f3e','#5c9e5c','#c47fb0','#6f7fd6','#d9a05b','#a6adbb','#2c5fd6'];
 const EMO={ira:'Ira',miedo:'Miedo',tristeza:'Tristeza',alegria:'Alegría',asco:'Asco',sorpresa:'Sorpresa'};
 const CFG={displayModeBar:false,responsive:true};
@@ -350,7 +353,7 @@ const balHTML=v=>v==null?'<span style="color:var(--dim)">–</span>':`<span clas
 let CLOUDS=[],D,F,FO,FA,FB,RIV=[],colorOf={},drawn=new Set(),cmp=null,gI='quiere',tmSel=null,pfI=0,PROMPT='';
 (function(){const w=WHO.find(x=>x.s===SLUG);document.documentElement.style.setProperty('--foco',w.c);C.foco=w.c;C.ma=w.c;
   document.documentElement.style.setProperty('--fbg',w.c+'26');
-  $('#who').innerHTML=WHO.map(x=>`<a href="?d=${x.s}" class="${x.s===SLUG?'on':''}" style="--c:${x.c}"><i>${ini(x.n)}</i>${esc(x.n)}</a>`).join('');
+  if(FIX)$('#who').remove();else $('#who').innerHTML=WHO.map(x=>`<a href="?d=${x.s}" class="${x.s===SLUG?'on':''}" style="--c:${x.c}"><i>${ini(x.n)}</i>${esc(x.n)}</a>`).join('');
   $('#lg').textContent=ini(w.n);$('#lg-n').textContent='Monitor '+w.n.split(' ').pop();document.title='Monitor '+w.n})();
 const last=n=>n.split(' ').pop();
 
@@ -358,7 +361,7 @@ $$('#tabs button').forEach(b=>b.onclick=()=>{$$('#tabs button').forEach(x=>x.cla
   if(b.dataset.f!=null){pfI=+b.dataset.f;drawn.delete('perfil')}
   $$('.tab').forEach(t=>t.classList.toggle('on',t.id==='t-'+b.dataset.t));drawTab(b.dataset.t);setTimeout(()=>window.dispatchEvent(new Event('resize')),60)});
 
-fetch(SLUG+'/data/monitor.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{D=d;init()}).catch(e=>{$('#warn').innerHTML='<div class="warnbox">No se pudieron cargar los datos.</div>';console.error(e)});
+fetch(BASE+'data/monitor.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{D=d;init()}).catch(e=>{$('#warn').innerHTML='<div class="warnbox">No se pudieron cargar los datos.</div>';console.error(e)});
 
 function init(){
   F=D.figuras;FA=F.find(p=>p.name===D.focos[0]);RIV=(D.duelo.rivales||[]).map(n=>F.find(p=>p.name===n)).filter(Boolean);FO=FA;
@@ -769,7 +772,7 @@ function metodo(){const S=D.status||{},nm={youtube:'YouTube (comentarios)',googl
 // ---------------------------------------------------------------- textos de origen (drawer)
 let TX=null;
 const foldJS=s=>String(s||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
-function loadTx(){if(!TX)TX=fetch(SLUG+'/data/textos.json',{cache:'no-store'}).then(r=>r.ok?r.json():{items:[]}).then(d=>d.items||[]).catch(()=>[]);return TX}
+function loadTx(){if(!TX)TX=fetch(BASE+'data/textos.json',{cache:'no-store'}).then(r=>r.ok?r.json():{items:[]}).then(d=>d.items||[]).catch(()=>[]);return TX}
 function hl(text,terms){let h=esc(text);if(!terms||!terms.length)return h;
   const f=foldJS(text);const marks=[];terms.forEach(t=>{const re=new RegExp('(^|[^a-z0-9])('+foldJS(t).replace(/[.*+?^${}()|[\]\\]/g,'\\$&').replace(/ +/g,'[^a-z0-9]+')+')(?=[^a-z0-9]|$)','g');let m;while((m=re.exec(f))){marks.push([m.index+m[1].length,m.index+m[1].length+m[2].length])}});
   if(!marks.length)return h;marks.sort((a,b)=>a[0]-b[0]);let out='',i=0;marks.forEach(([a,b])=>{if(a<i)return;out+=esc(text.slice(i,a))+'<mark>'+esc(text.slice(a,b))+'</mark>';i=b});return out+esc(text.slice(i))}
