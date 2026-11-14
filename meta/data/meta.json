@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-14T02:07-03:00",
+ "updated_at": "2026-11-14T02:09-03:00",
  "grupos": [
   "País",
   "Boca",
@@ -9,7 +9,7 @@
  ],
  "estado": "ok",
  "ads_error": "10: Application does not have permission for this action",
- "ig_ok": 9,
+ "ig_ok": 15,
  "ig_error": null,
  "diagnostico": {
   "permisos": [
@@ -32,8 +32,412 @@
    "grupo": "País",
    "espacio": "Peronismo",
    "distrito": null,
-   "ig_error": "@sergiomassa: 110: Invalid user id",
-   "historia": [],
+   "ig": {
+    "usuario": "sergiomassaok",
+    "nombre": "Sergio Massa",
+    "followers": 462409,
+    "follows": 1121,
+    "media_count": 954,
+    "posts_30d": 3,
+    "posts_semana": 0.4,
+    "inter_med": 11044,
+    "likes_med": 10372,
+    "com_med": 512,
+    "er": 2.388,
+    "formatos": {
+     "Carrusel": {
+      "n": 28,
+      "inter_med": 12349,
+      "er": 2.671
+     },
+     "Foto": {
+      "n": 11,
+      "inter_med": 7853,
+      "er": 1.698
+     },
+     "Reel": {
+      "n": 21,
+      "inter_med": 16768,
+      "er": 3.626
+     }
+    },
+    "mejor_formato": "Reel",
+    "mejor_dia": "sáb",
+    "mejor_franja": 21,
+    "franjas": {
+     "00-03": 17171,
+     "06-09": 24859,
+     "09-12": 6009,
+     "12-15": 14386,
+     "15-18": 9738,
+     "18-21": 8615,
+     "21-24": 42173
+    },
+    "dias": {
+     "lun": 21360,
+     "mar": 9334,
+     "mié": 6421,
+     "jue": 26492,
+     "vie": 11189,
+     "sáb": 45735,
+     "dom": 10768
+    },
+    "temas": [
+     "feliz",
+     "siempre",
+     "argentina",
+     "anos",
+     "unidad",
+     "vida",
+     "fuerza",
+     "mejor",
+     "cumple",
+     "hijos",
+     "amor",
+     "pais"
+    ],
+    "hashtags": [
+     "marchafederaluniversitaria",
+     "universidadpublicasiempre",
+     "marchauniversitaria",
+     "universidadpúblicasiempre",
+     "educaciónpública",
+     "yovoy"
+    ],
+    "top": [
+     {
+      "t": "Hace 27 años que MalenaGalmarini y yo decidimos empezar este proyecto de vida, nuestro mayor compromiso, nuestra mayor r",
+      "u": "https://www.instagram.com/p/Czywa9cLQjc/",
+      "f": "Foto",
+      "i": 152951,
+      "d": "2023-11-18"
+     },
+     {
+      "t": "🇦🇷Voté acompañado de mi familia, con mucho amor por la Argentina y con el orgullo que da fortalecer la democracia. Les p",
+      "u": "https://www.instagram.com/p/Cz1Wwq_r3eK/",
+      "f": "Carrusel",
+      "i": 147365,
+      "d": "2023-11-19"
+     },
+     {
+      "t": "El amor y la esperanza siempre le ganan al odio, a la bronca y a la violencia❤️🇦🇷. Gracias!",
+      "u": "https://www.instagram.com/reel/CzubVnwMHwl/",
+      "f": "Reel",
+      "i": 129134,
+      "d": "2023-11-16"
+     }
+    ],
+    "serie": [
+     {
+      "d": "2023-11-15",
+      "i": 55917,
+      "f": "Reel"
+     },
+     {
+      "d": "2023-11-16",
+      "i": 58490,
+      "f": "Reel"
+     },
+     {
+      "d": "2023-11-16",
+      "i": 129134,
+      "f": "Reel"
+     },
+     {
+      "d": "2023-11-18",
+      "i": 152951,
+      "f": "Foto"
+     },
+     {
+      "d": "2023-11-19",
+      "i": 147365,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2023-11-19",
+      "i": 118839,
+      "f": "Foto"
+     },
+     {
+      "d": "2024-04-23",
+      "i": 73939,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-05-05",
+      "i": 29034,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-06-06",
+      "i": 14787,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-09-11",
+      "i": 32199,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2024-10-02",
+      "i": 27082,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-10-20",
+      "i": 28430,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-02-28",
+      "i": 39763,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-03-15",
+      "i": 60282,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-04-21",
+      "i": 24859,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-04-30",
+      "i": 6009,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-05-05",
+      "i": 21360,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-05-13",
+      "i": 9738,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-06-18",
+      "i": 20482,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-06-20",
+      "i": 6375,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-07-09",
+      "i": 4182,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-07-11",
+      "i": 10226,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-07-27",
+      "i": 7853,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-07-27",
+      "i": 4224,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-07-29",
+      "i": 29197,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-08-31",
+      "i": 4328,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-09-07",
+      "i": 13377,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-09-11",
+      "i": 26492,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-10-14",
+      "i": 22196,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-10-17",
+      "i": 16768,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-10-19",
+      "i": 10768,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-10-19",
+      "i": 15396,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-10-20",
+      "i": 23324,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-10-26",
+      "i": 11321,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-12-08",
+      "i": 9304,
+      "f": "Reel"
+     },
+     {
+      "d": "2026-03-24",
+      "i": 3710,
+      "f": "Foto"
+     },
+     {
+      "d": "2026-03-24",
+      "i": 6509,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2026-05-05",
+      "i": 17171,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2026-05-12",
+      "i": 8301,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2026-05-28",
+      "i": 9693,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2026-06-05",
+      "i": 12152,
+      "f": "Foto"
+     },
+     {
+      "d": "2026-06-06",
+      "i": 6926,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2026-06-07",
+      "i": 16473,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2026-06-07",
+      "i": 5812,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2026-06-14",
+      "i": 3717,
+      "f": "Foto"
+     },
+     {
+      "d": "2026-06-17",
+      "i": 3553,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2026-07-04",
+      "i": 7559,
+      "f": "Reel"
+     },
+     {
+      "d": "2026-07-07",
+      "i": 4143,
+      "f": "Foto"
+     },
+     {
+      "d": "2026-07-12",
+      "i": 5535,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2026-07-15",
+      "i": 6834,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2026-07-18",
+      "i": 45735,
+      "f": "Reel"
+     },
+     {
+      "d": "2026-07-19",
+      "i": 8178,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2026-08-18",
+      "i": 15342,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2026-08-31",
+      "i": 1955,
+      "f": "Reel"
+     },
+     {
+      "d": "2026-09-09",
+      "i": 4728,
+      "f": "Foto"
+     },
+     {
+      "d": "2026-09-11",
+      "i": 4245,
+      "f": "Foto"
+     },
+     {
+      "d": "2026-10-06",
+      "i": 1776,
+      "f": "Reel"
+     },
+     {
+      "d": "2026-10-18",
+      "i": 7313,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2026-10-27",
+      "i": 8930,
+      "f": "Foto"
+     },
+     {
+      "d": "2026-11-11",
+      "i": 4907,
+      "f": "Carrusel"
+     }
+    ],
+    "delta7": null,
+    "delta30": null
+   },
+   "historia": [
+    {
+     "d": "2026-11-14",
+     "f": 462409
+    }
+   ],
    "ads": {
     "n": 0,
     "error": "10: Application does not have permission for this action"
@@ -53,7 +457,7 @@
     "posts_30d": 57,
     "posts_semana": 13.3,
     "inter_med": 48761,
-    "likes_med": 46536,
+    "likes_med": 46537,
     "com_med": 3757,
     "er": 0.755,
     "formatos": {
@@ -80,11 +484,11 @@
      "21-24": 86564
     },
     "dias": {
-     "lun": 135243,
+     "lun": 135244,
      "mar": 40599,
      "mié": 39272,
      "jue": 50398,
-     "vie": 44599,
+     "vie": 44600,
      "sáb": 85501,
      "dom": 47476
     },
@@ -122,7 +526,7 @@
       "t": "",
       "u": "https://www.instagram.com/reel/DfnDa5ETXxB/",
       "f": "Reel",
-      "i": 198924,
+      "i": 198926,
       "d": "2026-11-11"
      }
     ],
@@ -224,7 +628,7 @@
      },
      {
       "d": "2026-10-23",
-      "i": 44599,
+      "i": 44600,
       "f": "Reel"
      },
      {
@@ -254,7 +658,7 @@
      },
      {
       "d": "2026-10-30",
-      "i": 160020,
+      "i": 160022,
       "f": "Foto"
      },
      {
@@ -264,7 +668,7 @@
      },
      {
       "d": "2026-10-30",
-      "i": 144379,
+      "i": 144380,
       "f": "Foto"
      },
      {
@@ -279,7 +683,7 @@
      },
      {
       "d": "2026-11-02",
-      "i": 150972,
+      "i": 150974,
       "f": "Foto"
      },
      {
@@ -289,12 +693,12 @@
      },
      {
       "d": "2026-11-03",
-      "i": 130198,
+      "i": 130200,
       "f": "Foto"
      },
      {
       "d": "2026-11-04",
-      "i": 74856,
+      "i": 74857,
       "f": "Foto"
      },
      {
@@ -304,12 +708,12 @@
      },
      {
       "d": "2026-11-05",
-      "i": 110471,
+      "i": 110475,
       "f": "Foto"
      },
      {
       "d": "2026-11-06",
-      "i": 7157,
+      "i": 7158,
       "f": "Foto"
      },
      {
@@ -319,7 +723,7 @@
      },
      {
       "d": "2026-11-07",
-      "i": 109628,
+      "i": 109629,
       "f": "Foto"
      },
      {
@@ -334,17 +738,17 @@
      },
      {
       "d": "2026-11-08",
-      "i": 47682,
+      "i": 47683,
       "f": "Foto"
      },
      {
       "d": "2026-11-08",
-      "i": 11243,
+      "i": 11244,
       "f": "Foto"
      },
      {
       "d": "2026-11-08",
-      "i": 15184,
+      "i": 15185,
       "f": "Foto"
      },
      {
@@ -379,7 +783,7 @@
      },
      {
       "d": "2026-11-11",
-      "i": 148431,
+      "i": 148433,
       "f": "Foto"
      },
      {
@@ -389,12 +793,12 @@
      },
      {
       "d": "2026-11-11",
-      "i": 138743,
+      "i": 138745,
       "f": "Foto"
      },
      {
       "d": "2026-11-11",
-      "i": 198924,
+      "i": 198926,
       "f": "Reel"
      },
      {
@@ -404,12 +808,12 @@
      },
      {
       "d": "2026-11-11",
-      "i": 78684,
+      "i": 78685,
       "f": "Reel"
      },
      {
       "d": "2026-11-12",
-      "i": 106009,
+      "i": 106012,
       "f": "Foto"
      }
     ],
@@ -432,8 +836,406 @@
    "grupo": "País",
    "espacio": "Peronismo",
    "distrito": null,
-   "ig_error": "@cfkargentina: 110: Invalid user id",
-   "historia": [],
+   "ig": {
+    "usuario": "cristinafkirchner",
+    "nombre": "Cristina Kirchner",
+    "followers": 1728525,
+    "follows": 67,
+    "media_count": 1382,
+    "posts_30d": 0,
+    "posts_semana": 0.7,
+    "inter_med": 69094,
+    "likes_med": 65286,
+    "com_med": 2533,
+    "er": 3.997,
+    "formatos": {
+     "Foto": {
+      "n": 21,
+      "inter_med": 35364,
+      "er": 2.046
+     },
+     "Carrusel": {
+      "n": 24,
+      "inter_med": 85153,
+      "er": 4.926
+     },
+     "Reel": {
+      "n": 15,
+      "inter_med": 62977,
+      "er": 3.643
+     }
+    },
+    "mejor_formato": "Carrusel",
+    "mejor_dia": "mié",
+    "mejor_franja": 6,
+    "franjas": {
+     "06-09": 104445,
+     "09-12": 47655,
+     "12-15": 35364,
+     "15-18": 74465,
+     "18-21": 55668,
+     "21-24": 91231
+    },
+    "dias": {
+     "lun": 74465,
+     "mar": 98962,
+     "mié": 104445,
+     "jue": 34412,
+     "vie": 76252,
+     "sáb": 66634,
+     "dom": 66786
+    },
+    "temas": [
+     "jose",
+     "pais",
+     "cuando",
+     "argentina",
+     "anos",
+     "historia",
+     "ayer",
+     "tambien",
+     "patria",
+     "nacional",
+     "siempre",
+     "poder"
+    ],
+    "hashtags": [
+     "nestorvive"
+    ],
+    "top": [
+     {
+      "t": "Vivir solo cuesta vida.",
+      "u": "https://www.instagram.com/p/DZNwV1BttEO/",
+      "f": "Foto",
+      "i": 313666,
+      "d": "2026-06-05"
+     },
+     {
+      "t": "HOY RECIBIMOS AL COMPAÑERO lulaoficial en mi casa, donde estoy bajo detención domiciliaria por decisión de un Poder Judi",
+      "u": "https://www.instagram.com/p/DLp294wMEqs/",
+      "f": "Carrusel",
+      "i": 270411,
+      "d": "2025-07-03"
+     },
+     {
+      "t": "Ahora, bastó que hace una semana anunciáramos la candidatura para que se desataran los demonios. Porque este modelo tien",
+      "u": "https://www.instagram.com/p/DKs4AAasblj/",
+      "f": "Carrusel",
+      "i": 215426,
+      "d": "2025-06-09"
+     }
+    ],
+    "serie": [
+     {
+      "d": "2025-02-21",
+      "i": 44406,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-02-25",
+      "i": 98962,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-02-27",
+      "i": 28581,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-03-19",
+      "i": 31316,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-03-20",
+      "i": 30066,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-03-20",
+      "i": 28579,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-03-20",
+      "i": 23946,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-03-22",
+      "i": 77426,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-03-22",
+      "i": 69899,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-03-24",
+      "i": 75188,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-03-25",
+      "i": 28279,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-04-02",
+      "i": 45172,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-04-21",
+      "i": 164944,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-04-28",
+      "i": 28290,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-05-01",
+      "i": 36229,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-05-08",
+      "i": 141830,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-05-13",
+      "i": 105566,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-05-22",
+      "i": 32596,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-05-25",
+      "i": 60254,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-05-25",
+      "i": 155494,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-05-25",
+      "i": 62977,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-05-30",
+      "i": 51130,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-06-07",
+      "i": 32471,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-06-07",
+      "i": 81075,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-06-07",
+      "i": 89232,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-06-07",
+      "i": 200456,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-06-07",
+      "i": 68290,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-06-08",
+      "i": 47833,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-06-09",
+      "i": 93231,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-06-09",
+      "i": 215426,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-06-19",
+      "i": 83378,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-07-03",
+      "i": 270411,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-08-02",
+      "i": 64979,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-08-25",
+      "i": 73743,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-09-04",
+      "i": 149625,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-09-16",
+      "i": 138029,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-09-17",
+      "i": 119859,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-09-17",
+      "i": 142833,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-09-20",
+      "i": 60207,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-09-21",
+      "i": 70595,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-09-26",
+      "i": 58458,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-10-03",
+      "i": 50139,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-10-04",
+      "i": 55304,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-10-10",
+      "i": 114560,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-10-14",
+      "i": 29699,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-10-17",
+      "i": 126623,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-10-17",
+      "i": 94046,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-10-17",
+      "i": 159837,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-10-22",
+      "i": 117070,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-10-23",
+      "i": 107918,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-11-05",
+      "i": 49300,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-11-13",
+      "i": 26623,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-11-14",
+      "i": 30848,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-11-15",
+      "i": 18780,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-11-17",
+      "i": 28087,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-12-13",
+      "i": 30779,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2026-06-05",
+      "i": 313666,
+      "f": "Foto"
+     },
+     {
+      "d": "2026-06-14",
+      "i": 122817,
+      "f": "Foto"
+     },
+     {
+      "d": "2026-07-29",
+      "i": 104445,
+      "f": "Foto"
+     },
+     {
+      "d": "2026-09-07",
+      "i": 35364,
+      "f": "Foto"
+     }
+    ],
+    "delta7": null,
+    "delta30": null
+   },
+   "historia": [
+    {
+     "d": "2026-11-14",
+     "f": 1728525
+    }
+   ],
    "ads": {
     "n": 0,
     "error": "10: Application does not have permission for this action"
@@ -525,7 +1327,7 @@
       "t": "Como dijo el Papa León, el progreso de una Nación también se mide por su acompañamiento a las personas con discapacidad.",
       "u": "https://www.instagram.com/p/DfhpzM3kQXf/",
       "f": "Carrusel",
-      "i": 75580,
+      "i": 75581,
       "d": "2026-11-09"
      }
     ],
@@ -617,12 +1419,12 @@
      },
      {
       "d": "2026-11-09",
-      "i": 75580,
+      "i": 75581,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-10",
-      "i": 14660,
+      "i": 14661,
       "f": "Reel"
      },
      {
@@ -707,7 +1509,7 @@
      "jue": 5191,
      "vie": 5961,
      "sáb": 12190,
-     "dom": 12648
+     "dom": 12649
     },
     "temas": [
      "argentina",
@@ -743,7 +1545,7 @@
       "t": "Hoy vivimos el inicio de un recorrido histórico y emocionante para la Argentina. Recibimos al Papa León XIV junto al Pre",
       "u": "https://www.instagram.com/p/DfgKdRTMvSf/",
       "f": "Foto",
-      "i": 12648,
+      "i": 12649,
       "d": "2026-11-08"
      }
     ],
@@ -865,7 +1667,7 @@
      },
      {
       "d": "2026-11-08",
-      "i": 12648,
+      "i": 12649,
       "f": "Foto"
      },
      {
@@ -875,7 +1677,7 @@
      },
      {
       "d": "2026-11-10",
-      "i": 8903,
+      "i": 8904,
       "f": "Reel"
      }
     ],
@@ -898,8 +1700,123 @@
    "grupo": "País",
    "espacio": "La Libertad Avanza",
    "distrito": null,
-   "ig_error": "@villarruelvictoria: 110: Invalid user id; @vickyvillarruel: 110: Invalid user id; @victoriavillarruel: 110: Invalid user id",
-   "historia": [],
+   "ig": {
+    "usuario": "victoria.villarruel",
+    "nombre": "Victoria Villarruel | Vicepresidente de Argentina",
+    "followers": 1304148,
+    "follows": 94,
+    "media_count": 664,
+    "posts_30d": 6,
+    "posts_semana": 1.4,
+    "inter_med": 8454,
+    "likes_med": 8211,
+    "com_med": 387,
+    "er": 0.648,
+    "formatos": {
+     "Carrusel": {
+      "n": 5,
+      "inter_med": 8776,
+      "er": 0.673
+     },
+     "Foto": {
+      "n": 1,
+      "inter_med": 2236,
+      "er": 0.171
+     }
+    },
+    "mejor_formato": "Carrusel",
+    "mejor_dia": "vie",
+    "mejor_franja": 21,
+    "franjas": {
+     "15-18": 2834,
+     "18-21": 8776,
+     "21-24": 19057
+    },
+    "dias": {
+     "mié": 8776,
+     "jue": 8133,
+     "vie": 2834,
+     "dom": 29982
+    },
+    "temas": [
+     "anos",
+     "argentina",
+     "trabajo",
+     "colegio",
+     "empresa",
+     "esfuerzo",
+     "montserrat",
+     "bienvenido",
+     "santidad",
+     "leon",
+     "realidad",
+     "dios"
+    ],
+    "hashtags": [],
+    "top": [
+     {
+      "t": "Visité Reciclar, una empresa argentina con 32 años de trayectoria y 400 empleados, que recupera y procesa 30.000 tonelad",
+      "u": "https://www.instagram.com/p/DfIgyvpmgb7/",
+      "f": "Carrusel",
+      "i": 31444,
+      "d": "2026-10-30"
+     },
+     {
+      "t": "Bienvenido Su Santidad León XIV a la República Argentina. Que sus palabras se hagan carne y realidad para todos los arge",
+      "u": "https://www.instagram.com/p/DfgJ8MnjfiQ/",
+      "f": "Carrusel",
+      "i": 29982,
+      "d": "2026-11-08"
+     },
+     {
+      "t": "Hoy volví al Instituto Nuestra Señora de Montserrat, el colegio donde cursé mis últimos años de primaria. Mi colegio fue",
+      "u": "https://www.instagram.com/p/DexjsOXjest/",
+      "f": "Carrusel",
+      "i": 8776,
+      "d": "2026-10-21"
+     }
+    ],
+    "serie": [
+     {
+      "d": "2026-10-16",
+      "i": 2834,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2026-10-21",
+      "i": 8776,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2026-10-29",
+      "i": 8133,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2026-10-30",
+      "i": 31444,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2026-10-30",
+      "i": 2236,
+      "f": "Foto"
+     },
+     {
+      "d": "2026-11-08",
+      "i": 29982,
+      "f": "Carrusel"
+     }
+    ],
+    "delta7": null,
+    "delta30": null
+   },
+   "historia": [
+    {
+     "d": "2026-11-14",
+     "f": 1304148
+    }
+   ],
    "ads": {
     "n": 0,
     "error": "10: Application does not have permission for this action"
@@ -910,7 +1827,7 @@
    "grupo": "Boca",
    "espacio": "Oficialismo Boca",
    "distrito": null,
-   "ig_error": "@riquelmejuanroman: 110: Invalid user id; @romanriquelme: 110: Invalid user id; @jrriquelme10: 110: Invalid user id",
+   "ig_error": "@romanriquelme10: 110: Invalid user id; @riquelmeoficial: 110: Invalid user id; @juanromanriquelme: 110: Invalid user id; @jromanriquelme: 110: Invalid user id; @riquelmejuanroman: 110: Invalid user id; @romanriquelme: 110: Invalid user id; @jrriquelme10: 110: Invalid user id",
    "historia": [],
    "ads": {
     "n": 0,
@@ -958,7 +1875,7 @@
      "00-03": 116317,
      "09-12": 11804,
      "12-15": 26711,
-     "15-18": 17435,
+     "15-18": 17449,
      "18-21": 17938,
      "21-24": 43037
     },
@@ -967,7 +1884,7 @@
      "mar": 13654,
      "mié": 38459,
      "jue": 16320,
-     "vie": 17435,
+     "vie": 17449,
      "sáb": 15474,
      "dom": 26733
     },
@@ -1307,7 +2224,7 @@
      },
      {
       "d": "2026-11-13",
-      "i": 17435,
+      "i": 17449,
       "f": "Foto"
      }
     ],
@@ -1751,8 +2668,407 @@
    "grupo": "Provincia de Buenos Aires",
    "espacio": "La Libertad Avanza",
    "distrito": null,
-   "ig_error": "@diegosantilli: 110: Invalid user id",
-   "historia": [],
+   "ig": {
+    "usuario": "diegosantilliok",
+    "nombre": "Diego Santilli",
+    "followers": 230973,
+    "follows": 68,
+    "media_count": 2771,
+    "posts_30d": 0,
+    "posts_semana": 0.6,
+    "inter_med": 4631,
+    "likes_med": 4320,
+    "com_med": 401,
+    "er": 2.005,
+    "formatos": {
+     "Reel": {
+      "n": 26,
+      "inter_med": 4148,
+      "er": 1.796
+     },
+     "Foto": {
+      "n": 31,
+      "inter_med": 4723,
+      "er": 2.045
+     },
+     "Carrusel": {
+      "n": 3,
+      "inter_med": 11516,
+      "er": 4.986
+     }
+    },
+    "mejor_formato": "Carrusel",
+    "mejor_dia": "dom",
+    "mejor_franja": 0,
+    "franjas": {
+     "00-03": 53022,
+     "06-09": 2862,
+     "09-12": 3854,
+     "12-15": 5918,
+     "15-18": 3506,
+     "18-21": 3780,
+     "21-24": 7257
+    },
+    "dias": {
+     "lun": 9715,
+     "mar": 4681,
+     "mié": 2112,
+     "jue": 2360,
+     "vie": 3385,
+     "sáb": 7020,
+     "dom": 11810
+    },
+    "temas": [
+     "presidente",
+     "argentina",
+     "votar",
+     "libertad",
+     "octubre",
+     "milei",
+     "provincia",
+     "queremos",
+     "domingo",
+     "reformas",
+     "pena",
+     "anos"
+    ],
+    "hashtags": [
+     "losjubiladostruchos"
+    ],
+    "top": [
+     {
+      "t": "¡GANAMOS LA PROVINCIA DE BUENOS AIRES! VAMOS CARAJO QUE OTRA PROVINCIA ES POSIBLE.",
+      "u": "https://www.instagram.com/reel/DQTCkpsEQKm/",
+      "f": "Reel",
+      "i": 97583,
+      "d": "2025-10-27"
+     },
+     {
+      "t": "¡HICIMOS HISTORIA EN LA PROVINCIA! Gracias a todos los bonaerenses que defendieron las ideas de la libertad. Tremendo ap",
+      "u": "https://www.instagram.com/p/DQSxOKmERQA/",
+      "f": "Foto",
+      "i": 53105,
+      "d": "2025-10-26"
+     },
+     {
+      "t": "Con mi amor, mis hijos y mi familia, los que siempre están bancando. Hoy, en un nuevo desafío y una responsabilidad que ",
+      "u": "https://www.instagram.com/p/DQ8EPgwkVO9/",
+      "f": "Carrusel",
+      "i": 42246,
+      "d": "2025-11-11"
+     }
+    ],
+    "serie": [
+     {
+      "d": "2024-12-05",
+      "i": 1489,
+      "f": "Foto"
+     },
+     {
+      "d": "2024-12-06",
+      "i": 1217,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-01-31",
+      "i": 3377,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-03-12",
+      "i": 1343,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-06-10",
+      "i": 3689,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-08-27",
+      "i": 1144,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-09-03",
+      "i": 1870,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-09-04",
+      "i": 1298,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-09-07",
+      "i": 1413,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-10-07",
+      "i": 3323,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-10-07",
+      "i": 5033,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-10-08",
+      "i": 7623,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-10-11",
+      "i": 7927,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-10-11",
+      "i": 7078,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-10-14",
+      "i": 11180,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-10-15",
+      "i": 2795,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-10-16",
+      "i": 4539,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-10-16",
+      "i": 10561,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-10-17",
+      "i": 11516,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-10-17",
+      "i": 6706,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-10-18",
+      "i": 4394,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-10-18",
+      "i": 9855,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-10-19",
+      "i": 3593,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-10-20",
+      "i": 7085,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-10-21",
+      "i": 1893,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-10-21",
+      "i": 4329,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-10-21",
+      "i": 2076,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-10-22",
+      "i": 3169,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-10-22",
+      "i": 1801,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-10-22",
+      "i": 1639,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-10-22",
+      "i": 3968,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-10-23",
+      "i": 4874,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-10-23",
+      "i": 1949,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-10-23",
+      "i": 1115,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-10-24",
+      "i": 2331,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-10-24",
+      "i": 3394,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-10-26",
+      "i": 26382,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-10-26",
+      "i": 53105,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-10-26",
+      "i": 13737,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-10-27",
+      "i": 8462,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-10-27",
+      "i": 97583,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-10-27",
+      "i": 8085,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-10-27",
+      "i": 10969,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-10-27",
+      "i": 23736,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-11-02",
+      "i": 11810,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-11-11",
+      "i": 7179,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-11-11",
+      "i": 42246,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-12-06",
+      "i": 6962,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-12-27",
+      "i": 1827,
+      "f": "Foto"
+     },
+     {
+      "d": "2026-01-03",
+      "i": 13816,
+      "f": "Foto"
+     },
+     {
+      "d": "2026-01-03",
+      "i": 4723,
+      "f": "Foto"
+     },
+     {
+      "d": "2026-01-03",
+      "i": 10443,
+      "f": "Reel"
+     },
+     {
+      "d": "2026-01-03",
+      "i": 4457,
+      "f": "Foto"
+     },
+     {
+      "d": "2026-02-04",
+      "i": 2112,
+      "f": "Foto"
+     },
+     {
+      "d": "2026-02-11",
+      "i": 4804,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2026-02-12",
+      "i": 2772,
+      "f": "Foto"
+     },
+     {
+      "d": "2026-02-20",
+      "i": 5736,
+      "f": "Foto"
+     },
+     {
+      "d": "2026-02-27",
+      "i": 2720,
+      "f": "Foto"
+     },
+     {
+      "d": "2026-06-28",
+      "i": 7429,
+      "f": "Foto"
+     },
+     {
+      "d": "2026-06-30",
+      "i": 5818,
+      "f": "Reel"
+     }
+    ],
+    "delta7": null,
+    "delta30": null
+   },
+   "historia": [
+    {
+     "d": "2026-11-14",
+     "f": 230973
+    }
+   ],
    "ads": {
     "n": 0,
     "error": "10: Application does not have permission for this action"
@@ -1766,7 +3082,7 @@
    "ig": {
     "usuario": "veronicamagario",
     "nombre": "Verónica Magario",
-    "followers": 216667,
+    "followers": 216668,
     "follows": 168,
     "media_count": 3761,
     "posts_30d": 13,
@@ -1799,7 +3115,7 @@
      "mar": 896,
      "mié": 1242,
      "jue": 432,
-     "vie": 290,
+     "vie": 291,
      "sáb": 1033
     },
     "temas": [
@@ -1907,7 +3223,7 @@
      },
      {
       "d": "2026-11-13",
-      "i": 290,
+      "i": 291,
       "f": "Carrusel"
      }
     ],
@@ -1917,7 +3233,7 @@
    "historia": [
     {
      "d": "2026-11-14",
-     "f": 216667
+     "f": 216668
     }
    ],
    "ads": {
@@ -1930,7 +3246,7 @@
    "grupo": "Provincia de Buenos Aires",
    "espacio": "Peronismo",
    "distrito": "Tigre",
-   "ig_error": "@juliozamoraok: 110: Invalid user id; @juliozamora: 110: Invalid user id",
+   "ig_error": "@juliozamoratigre: 110: Invalid user id; @juliozamora_ok: 110: Invalid user id; @zamorajulio: 110: Invalid user id; @juliozamoraok: 110: Invalid user id; @juliozamora: 110: Invalid user id",
    "historia": [],
    "ads": {
     "n": 0,
@@ -1949,71 +3265,71 @@
     "follows": 1546,
     "media_count": 2042,
     "posts_30d": 2,
-    "posts_semana": 0.5,
-    "inter_med": 1554,
-    "likes_med": 1512,
-    "com_med": 69,
-    "er": 1.367,
+    "posts_semana": 0.6,
+    "inter_med": 1683,
+    "likes_med": 1595,
+    "com_med": 66,
+    "er": 1.481,
     "formatos": {
      "Carrusel": {
-      "n": 7,
-      "inter_med": 1731,
-      "er": 1.523
+      "n": 12,
+      "inter_med": 2119,
+      "er": 1.864
      },
      "Reel": {
-      "n": 51,
-      "inter_med": 1504,
-      "er": 1.323
+      "n": 42,
+      "inter_med": 1513,
+      "er": 1.331
      },
      "Foto": {
-      "n": 2,
-      "inter_med": 2830,
-      "er": 2.49
+      "n": 6,
+      "inter_med": 1711,
+      "er": 1.505
      }
     },
-    "mejor_formato": "Foto",
-    "mejor_dia": "lun",
+    "mejor_formato": "Carrusel",
+    "mejor_dia": "jue",
     "mejor_franja": 0,
     "franjas": {
-     "00-03": 3732,
+     "00-03": 2515,
      "09-12": 1696,
-     "12-15": 1179,
-     "15-18": 1973,
-     "18-21": 1523,
-     "21-24": 1297
+     "12-15": 1454,
+     "15-18": 2344,
+     "18-21": 1671,
+     "21-24": 1142
     },
     "dias": {
-     "lun": 2493,
-     "mar": 1865,
+     "lun": 1766,
+     "mar": 2048,
      "mié": 1701,
-     "jue": 1583,
-     "vie": 2369,
-     "sáb": 827,
-     "dom": 1586
+     "jue": 2231,
+     "vie": 2027,
+     "sáb": 821,
+     "dom": 1323
     },
     "temas": [
      "anos",
+     "feliz",
+     "tigre",
      "amor",
      "siempre",
-     "tigre",
-     "feliz",
-     "espalda",
+     "mundo",
+     "familia",
      "politica",
-     "construir",
-     "hace",
      "pueblo",
      "provincia",
-     "sergiomassaok"
+     "nunca",
+     "espalda"
     ],
     "hashtags": [
      "mifamiliamitesoro",
+     "nuncamas",
      "amorinfinito",
      "espaldaconespalda",
      "maleyserporyparasiempre",
      "son30mil",
-     "nuncamas",
      "siempreespaldaconespalda",
-     "marchadelorgullo"
+     "díademibandera"
     ],
     "top": [
      {
@@ -2024,70 +3340,30 @@
       "d": "2026-04-28"
      },
      {
-      "t": "No fue amor a primera vista. No hubo flechazo. No fue sin querer. Lo construimos. Debatimos, discutimos, repuntuamos, no",
-      "u": "https://www.instagram.com/reel/C-y32kGRDWy/",
-      "f": "Reel",
-      "i": 8859,
-      "d": "2024-08-18"
-     },
-     {
       "t": "Sí, juro! Hoy juré como senadora de la Provincia de Buenos Aires. Arranca una nueva etapa. Con el mismo compromiso milit",
       "u": "https://www.instagram.com/reel/DSBHmCCEpvq/",
       "f": "Reel",
       "i": 7335,
       "d": "2025-12-08"
+     },
+     {
+      "t": "¡MUY FELIZ CUMPLE, PA! 82 años de experiencia, de recuerdos, de batallas, de resiliencia. Te amo con el alma….❤️ Por muc",
+      "u": "https://www.instagram.com/p/DDz4L2MSsEa/",
+      "f": "Carrusel",
+      "i": 5385,
+      "d": "2024-12-20"
      }
     ],
     "serie": [
      {
-      "d": "2024-07-16",
-      "i": 620,
-      "f": "Reel"
-     },
-     {
-      "d": "2024-07-26",
-      "i": 2369,
-      "f": "Reel"
-     },
-     {
-      "d": "2024-08-18",
-      "i": 8859,
-      "f": "Reel"
-     },
-     {
-      "d": "2024-09-19",
-      "i": 1470,
-      "f": "Reel"
-     },
-     {
-      "d": "2024-10-25",
-      "i": 3203,
-      "f": "Reel"
-     },
-     {
-      "d": "2024-11-02",
-      "i": 1036,
-      "f": "Reel"
-     },
-     {
-      "d": "2024-11-14",
-      "i": 2509,
-      "f": "Reel"
-     },
-     {
-      "d": "2024-12-04",
-      "i": 599,
-      "f": "Reel"
-     },
-     {
-      "d": "2024-12-05",
-      "i": 701,
-      "f": "Reel"
-     },
-     {
       "d": "2024-12-06",
       "i": 363,
       "f": "Reel"
+     },
+     {
+      "d": "2024-12-20",
+      "i": 5385,
+      "f": "Carrusel"
      },
      {
       "d": "2024-12-27",
@@ -2125,6 +3401,11 @@
       "f": "Reel"
      },
      {
+      "d": "2025-03-04",
+      "i": 2254,
+      "f": "Foto"
+     },
+     {
       "d": "2025-03-10",
       "i": 644,
       "f": "Reel"
@@ -2140,9 +3421,19 @@
       "f": "Reel"
      },
      {
+      "d": "2025-03-24",
+      "i": 1766,
+      "f": "Carrusel"
+     },
+     {
       "d": "2025-03-27",
       "i": 1154,
       "f": "Reel"
+     },
+     {
+      "d": "2025-04-02",
+      "i": 1640,
+      "f": "Carrusel"
      },
      {
       "d": "2025-04-04",
@@ -2165,6 +3456,16 @@
       "f": "Reel"
      },
      {
+      "d": "2025-06-20",
+      "i": 1540,
+      "f": "Foto"
+     },
+     {
+      "d": "2025-07-11",
+      "i": 3425,
+      "f": "Carrusel"
+     },
+     {
       "d": "2025-07-26",
       "i": 676,
       "f": "Reel"
@@ -2183,6 +3484,16 @@
       "d": "2025-09-04",
       "i": 1470,
       "f": "Reel"
+     },
+     {
+      "d": "2025-09-11",
+      "i": 3581,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2025-10-07",
+      "i": 1837,
+      "f": "Foto"
      },
      {
       "d": "2025-10-19",
@@ -2208,6 +3519,11 @@
       "d": "2025-12-16",
       "i": 1001,
       "f": "Reel"
+     },
+     {
+      "d": "2026-02-08",
+      "i": 579,
+      "f": "Foto"
      },
      {
       "d": "2026-02-26",
@@ -2574,7 +3890,7 @@
      },
      {
       "d": "2026-11-03",
-      "i": 12044,
+      "i": 12045,
       "f": "Carrusel"
      },
      {
@@ -2687,8 +4003,162 @@
    "grupo": "CABA",
    "espacio": "Peronismo",
    "distrito": null,
-   "ig_error": "@leandrosantoro: 110: Invalid user id; @santoroleandro: 110: Invalid user id",
-   "historia": [],
+   "ig": {
+    "usuario": "leandrosantorook",
+    "nombre": "Leandro Santoro",
+    "followers": 647724,
+    "follows": 699,
+    "media_count": 927,
+    "posts_30d": 13,
+    "posts_semana": 3.0,
+    "inter_med": 23432,
+    "likes_med": 22087,
+    "com_med": 833,
+    "er": 3.618,
+    "formatos": {
+     "Reel": {
+      "n": 10,
+      "inter_med": 23645,
+      "er": 3.65
+     },
+     "Foto": {
+      "n": 3,
+      "inter_med": 21474,
+      "er": 3.315
+     }
+    },
+    "mejor_formato": "Reel",
+    "mejor_dia": "jue",
+    "mejor_franja": 12,
+    "franjas": {
+     "09-12": 17796,
+     "12-15": 24397,
+     "15-18": 22453,
+     "18-21": 167456,
+     "21-24": 22036
+    },
+    "dias": {
+     "lun": 41605,
+     "mar": 18163,
+     "mié": 15311,
+     "jue": 45298,
+     "sáb": 20150,
+     "dom": 29220
+    },
+    "temas": [
+     "frente",
+     "orgullo",
+     "lula",
+     "milei",
+     "farmea",
+     "misa",
+     "papa",
+     "clima",
+     "epoca",
+     "carpa",
+     "fascismo",
+     "basta"
+    ],
+    "hashtags": [],
+    "top": [
+     {
+      "t": "Basta de VIOLENCIA y DISCRIMINACIÓN.",
+      "u": "https://www.instagram.com/reel/DfX8P-SR6G5/",
+      "f": "Reel",
+      "i": 167456,
+      "d": "2026-11-05"
+     },
+     {
+      "t": "Es ley!! Se acaba el acoso a los endeudados!",
+      "u": "https://www.instagram.com/reel/DfF1JQ1xE2n/",
+      "f": "Reel",
+      "i": 45298,
+      "d": "2026-10-29"
+     },
+     {
+      "t": "Bora Lula !! Chau Milei !!",
+      "u": "https://www.instagram.com/reel/De9m7oqREQN/",
+      "f": "Reel",
+      "i": 41605,
+      "d": "2026-10-26"
+     }
+    ],
+    "serie": [
+     {
+      "d": "2026-10-15",
+      "i": 19902,
+      "f": "Reel"
+     },
+     {
+      "d": "2026-10-20",
+      "i": 11734,
+      "f": "Foto"
+     },
+     {
+      "d": "2026-10-21",
+      "i": 7190,
+      "f": "Reel"
+     },
+     {
+      "d": "2026-10-24",
+      "i": 23858,
+      "f": "Reel"
+     },
+     {
+      "d": "2026-10-25",
+      "i": 29220,
+      "f": "Foto"
+     },
+     {
+      "d": "2026-10-26",
+      "i": 41605,
+      "f": "Reel"
+     },
+     {
+      "d": "2026-10-27",
+      "i": 21474,
+      "f": "Foto"
+     },
+     {
+      "d": "2026-10-29",
+      "i": 45298,
+      "f": "Reel"
+     },
+     {
+      "d": "2026-11-03",
+      "i": 14853,
+      "f": "Reel"
+     },
+     {
+      "d": "2026-11-04",
+      "i": 23432,
+      "f": "Reel"
+     },
+     {
+      "d": "2026-11-05",
+      "i": 167456,
+      "f": "Reel"
+     },
+     {
+      "d": "2026-11-07",
+      "i": 16442,
+      "f": "Reel"
+     },
+     {
+      "d": "2026-11-10",
+      "i": 30517,
+      "f": "Reel"
+     }
+    ],
+    "delta7": null,
+    "delta30": null
+   },
+   "historia": [
+    {
+     "d": "2026-11-14",
+     "f": 647724
+    }
+   ],
    "ads": {
     "n": 0,
     "error": "10: Application does not have permission for this action"
@@ -3051,7 +4521,7 @@
    "grupo": "San Isidro",
    "espacio": "Acción Vecinal",
    "distrito": null,
-   "ig_error": "@gustavoposse: 110: Invalid user id; @gustavoposseok: 110: Invalid user id",
+   "ig_error": "@gustavoposse_ok: 110: Invalid user id; @posse.gustavo: 110: Invalid user id; @gposse: 110: Invalid user id; @gustavoposse: 110: Invalid user id; @gustavoposseok: 110: Invalid user id",
    "historia": [],
    "ads": {
     "n": 0,
@@ -3063,8 +4533,116 @@
    "grupo": "San Isidro",
    "espacio": "Frente Renovador",
    "distrito": null,
-   "ig_error": "@federicomeca: 110: Invalid user id; @fedemeca: 110: Invalid user id",
-   "historia": [],
+   "ig": {
+    "usuario": "federico.meca",
+    "nombre": "Fede Meca",
+    "followers": 13997,
+    "follows": 7853,
+    "media_count": 384,
+    "posts_30d": 5,
+    "posts_semana": 1.2,
+    "inter_med": 53,
+    "likes_med": 0,
+    "com_med": 13,
+    "er": 0.379,
+    "formatos": {
+     "Carrusel": {
+      "n": 2,
+      "inter_med": 88,
+      "er": 0.629
+     },
+     "Reel": {
+      "n": 3,
+      "inter_med": 53,
+      "er": 0.379
+     }
+    },
+    "mejor_formato": "Carrusel",
+    "mejor_dia": "mié",
+    "mejor_franja": 12,
+    "franjas": {
+     "09-12": 31,
+     "12-15": 88,
+     "21-24": 699
+    },
+    "dias": {
+     "mié": 173,
+     "vie": 28
+    },
+    "temas": [
+     "isidro",
+     "desarrollo",
+     "puede",
+     "vecinos",
+     "noche",
+     "beneficio",
+     "siempre",
+     "publica",
+     "calidad",
+     "porque",
+     "defender",
+     "sociedad"
+    ],
+    "hashtags": [],
+    "top": [
+     {
+      "t": "San isidro tiene que crecer, pero de forma ordenada. 🤝 Presentamos un pedido de informes sobre la ampliación de Unicente",
+      "u": "https://www.instagram.com/reel/DexpKQ_tIXx/",
+      "f": "Reel",
+      "i": 699,
+      "d": "2026-10-21"
+     },
+     {
+      "t": "Una Iglesia que abraza, acompaña y no descarta. “Sus vidas no son un peso para la sociedad; son una bendición.” — León X",
+      "u": "https://www.instagram.com/p/DfnBx0Im1_0/",
+      "f": "Carrusel",
+      "i": 173,
+      "d": "2026-11-11"
+     },
+     {
+      "t": "Desarrollo sí, pero con coherencia y pensando en los vecinos. 🏛️ ​En San Isidro vemos cómo día a día se autorizan empren",
+      "u": "https://www.instagram.com/reel/DfHnoTSikno/",
+      "f": "Reel",
+      "i": 53,
+      "d": "2026-10-30"
+     }
+    ],
+    "serie": [
+     {
+      "d": "2026-10-21",
+      "i": 699,
+      "f": "Reel"
+     },
+     {
+      "d": "2026-10-30",
+      "i": 53,
+      "f": "Reel"
+     },
+     {
+      "d": "2026-11-04",
+      "i": 9,
+      "f": "Reel"
+     },
+     {
+      "d": "2026-11-11",
+      "i": 173,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2026-11-13",
+      "i": 3,
+      "f": "Carrusel"
+     }
+    ],
+    "delta7": null,
+    "delta30": null
+   },
+   "historia": [
+    {
+     "d": "2026-11-14",
+     "f": 13997
+    }
+   ],
    "ads": {
     "n": 0,
     "error": "10: Application does not have permission for this action"
