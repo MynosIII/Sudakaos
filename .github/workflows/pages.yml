@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   # Los workflows de datos hacen commit con el token de Actions, que no dispara "push": se publica al terminar
   workflow_run:
-    workflows: ['Radar social listening', 'San Isidro reclamos', 'General Roca monitor', 'Massa Galmarini monitor', 'Boca monitor', 'Santa Cruz monitor', 'Meta dirigentes', 'Dirigentes monitor']
+    workflows: ['Radar social listening', 'San Isidro reclamos', 'General Roca monitor', 'Massa Galmarini monitor', 'Boca monitor', 'Santa Cruz monitor', 'Meta dirigentes', 'Dirigentes monitor', 'Instagram tableros']
     types: [completed]
 
 permissions:
@@ -52,14 +52,23 @@ jobs:
           cp -R boca/index.html boca/data _site/boca/
           mkdir -p _site/santacruz
           cp -R santacruz/index.html santacruz/data _site/santacruz/
+          # Tres tableros independientes: /pagano/, /casielles/, /braillard/ (mismo código, dirigente fijo)
           for d in pagano casielles braillard; do
-            mkdir -p _site/dirigentes/$d
-            if [ -d dirigentes/$d/data ]; then cp -R dirigentes/$d/data _site/dirigentes/$d/; fi
+            mkdir -p _site/$d
+            if [ -d dirigentes/$d/data ]; then cp -R dirigentes/$d/data _site/$d/; fi
+            n=$(python3 -c "import json,sys;print(json.load(open('dirigentes/$d/config.json'))['perfil']['nombre'])")
+            sed -e "s#<html lang=\"es\">#<html lang=\"es\" data-slug=\"$d\">#" -e "s#<title>Monitor de dirigentes</title>#<title>Monitor $n</title>#" dirigentes/index.html > _site/$d/index.html
           done
-          cp dirigentes/index.html _site/dirigentes/
+          # Redirección para los links viejos /dirigentes/?d=... (no aparece en el índice)
+          mkdir -p _site/dirigentes
+          echo '<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><script>var d=new URLSearchParams(location.search).get("d");location.replace("../"+(["pagano","casielles","braillard"].indexOf(d)>=0?d:"pagano")+"/")</script>' > _site/dirigentes/index.html
           mkdir -p _site/meta
           if [ -d meta/data ]; then cp -R meta/data _site/meta/; fi
           cp resumen.js _site/
+          # Reporte de Instagram por tablero (ig/store queda afuera: es el historial de trabajo del recolector)
+          mkdir -p _site/ig
+          if [ -d ig/data ]; then cp -R ig/data _site/ig/; fi
+          for f in _site/dashboard.html _site/index.html _site/*/index.html; do sed -i "s#assets/ig.js\"#assets/ig.js?v=${GITHUB_SHA::8}\"#" "$f"; done
           sed -i "s#resumen.js\"#resumen.js?v=${GITHUB_SHA::8}\"#" _site/dashboard.html _site/index.html
       # Índice interno (no enlazado desde ningún tablero): se arma solo con cada carpeta publicada que tenga index.html
       - name: Armar índice interno
@@ -70,12 +79,9 @@ jobs:
             echo '<li><a href="../">Tablero nacional (Massa)</a></li>'
             for f in _site/*/index.html; do
               d=$(basename "$(dirname "$f")")
-              [ "$d" = indice ] && continue
+              case "$d" in indice|dirigentes) continue;; esac
               t=$(grep -o '<title>[^<]*' "$f" | head -1 | sed 's/<title>//')
               echo "<li><a href=\"../$d/\">${t:-$d}</a> <small>($d/)</small></li>"
-              if [ "$d" = dirigentes ]; then
-                echo '<ul><li><a href="../dirigentes/?d=pagano">Marcela Pagano</a></li><li><a href="../dirigentes/?d=casielles">Eugenio Casielles</a></li><li><a href="../dirigentes/?d=braillard">Germán Braillard</a></li></ul>'
-              fi
             done
             echo '</ul></body></html>'
           } > _site/indice/index.html
