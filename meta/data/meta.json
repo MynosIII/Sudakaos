@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-14T02:11-03:00",
+ "updated_at": "2026-11-14T02:48-03:00",
  "grupos": [
   "País",
   "Boca",
@@ -8,22 +8,14 @@
   "San Isidro"
  ],
  "estado": "ok",
- "ads_error": "10: Application does not have permission for this action",
+ "ads_error": "4: límite de llamadas de la app (salteado en esta corrida)",
  "ig_ok": 10,
  "ig_error": null,
  "diagnostico": {
-  "permisos": [
-   "ads_read",
-   "business_management",
-   "instagram_basic",
-   "instagram_manage_insights",
-   "pages_read_engagement",
-   "pages_show_list",
-   "public_profile"
-  ],
-  "permisos_error": null,
-  "cuenta_ig_ok": true,
-  "cuenta_ig_error": null,
+  "permisos": null,
+  "permisos_error": "4: (#4) Application request limit reached",
+  "cuenta_ig_ok": false,
+  "cuenta_ig_error": "4: límite de llamadas de la app (salteado en esta corrida)",
   "faltan_permisos": []
  },
  "dirigentes": [
@@ -432,6 +424,7 @@
     "delta7": null,
     "delta30": null
    },
+   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -440,7 +433,7 @@
    ],
    "ads": {
     "n": 0,
-    "error": "10: Application does not have permission for this action"
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -820,6 +813,7 @@
     "delta7": null,
     "delta30": null
    },
+   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -828,7 +822,7 @@
    ],
    "ads": {
     "n": 0,
-    "error": "10: Application does not have permission for this action"
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -1230,6 +1224,7 @@
     "delta7": null,
     "delta30": null
    },
+   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -1238,7 +1233,7 @@
    ],
    "ads": {
     "n": 0,
-    "error": "10: Application does not have permission for this action"
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -1446,6 +1441,7 @@
     "delta7": null,
     "delta30": null
    },
+   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -1454,7 +1450,7 @@
    ],
    "ads": {
     "n": 0,
-    "error": "10: Application does not have permission for this action"
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -1684,6 +1680,7 @@
     "delta7": null,
     "delta30": null
    },
+   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -1692,7 +1689,7 @@
    ],
    "ads": {
     "n": 0,
-    "error": "10: Application does not have permission for this action"
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -1811,6 +1808,7 @@
     "delta7": null,
     "delta30": null
    },
+   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -1819,7 +1817,7 @@
    ],
    "ads": {
     "n": 0,
-    "error": "10: Application does not have permission for this action"
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -1827,11 +1825,11 @@
    "grupo": "Boca",
    "espacio": "Oficialismo Boca",
    "distrito": null,
-   "ig_error": "@romanriquelme10: 110: Invalid user id; @riquelmeoficial: 110: Invalid user id; @juanromanriquelme: 110: Invalid user id; @jromanriquelme: 110: Invalid user id; @riquelmejuanroman: 110: Invalid user id; @romanriquelme: 110: Invalid user id; @jrriquelme10: 110: Invalid user id",
+   "ig_error": "@todosobreroman10: 4: límite de llamadas de la app (salteado en esta corrida)",
    "historia": [],
    "ads": {
     "n": 0,
-    "error": "10: Application does not have permission for this action"
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -2231,6 +2229,7 @@
     "delta7": null,
     "delta30": null
    },
+   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -2239,7 +2238,7 @@
    ],
    "ads": {
     "n": 0,
-    "error": "10: Application does not have permission for this action"
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -2247,7 +2246,7 @@
    "grupo": "Boca",
    "espacio": "Oposición Boca",
    "distrito": null,
-   "ig_error": "@andresibarraok: 110: Invalid user id",
+   "ig_error": "@andreshibarra: 4: límite de llamadas de la app (salteado en esta corrida)",
    "historia": [
     {
      "d": "2026-11-14",
@@ -2256,7 +2255,7 @@
    ],
    "ads": {
     "n": 0,
-    "error": "10: Application does not have permission for this action"
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -2659,6 +2658,7 @@
     "delta7": null,
     "delta30": null
    },
+   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -2667,7 +2667,7 @@
    ],
    "ads": {
     "n": 0,
-    "error": "10: Application does not have permission for this action"
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -2826,6 +2826,7 @@
     "delta7": null,
     "delta30": null
    },
+   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -2834,7 +2835,7 @@
    ],
    "ads": {
     "n": 0,
-    "error": "10: Application does not have permission for this action"
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -2842,11 +2843,11 @@
    "grupo": "Provincia de Buenos Aires",
    "espacio": "Peronismo",
    "distrito": "Tigre",
-   "ig_error": "@juliozamoratigre: 110: Invalid user id; @juliozamora_ok: 110: Invalid user id; @zamorajulio: 110: Invalid user id; @juliozamoraok: 110: Invalid user id; @juliozamora: 110: Invalid user id",
+   "ig_error": "@zamora.julio: 4: límite de llamadas de la app (salteado en esta corrida)",
    "historia": [],
    "ads": {
     "n": 0,
-    "error": "10: Application does not have permission for this action"
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -3255,6 +3256,7 @@
     "delta7": null,
     "delta30": null
    },
+   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -3263,7 +3265,7 @@
    ],
    "ads": {
     "n": 0,
-    "error": "10: Application does not have permission for this action"
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -3271,7 +3273,7 @@
    "grupo": "CABA",
    "espacio": "PRO",
    "distrito": null,
-   "ig_error": "@jorgemacri: 4: (#4) Application request limit reached; @jorgemacriok: 110: Invalid user id",
+   "ig_error": "@jorgemacri: 4: límite de llamadas de la app (salteado en esta corrida)",
    "historia": [
     {
      "d": "2026-11-14",
@@ -3280,7 +3282,7 @@
    ],
    "ads": {
     "n": 0,
-    "error": "10: Application does not have permission for this action"
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -3288,7 +3290,7 @@
    "grupo": "CABA",
    "espacio": "Peronismo",
    "distrito": null,
-   "ig_error": "@leandrosantorook: 4: (#4) Application request limit reached; @leandrosantoro: 110: Invalid user id; @santoroleandro: 110: Invalid user id",
+   "ig_error": "@leandrosantorook: 4: límite de llamadas de la app (salteado en esta corrida)",
    "historia": [
     {
      "d": "2026-11-14",
@@ -3297,7 +3299,7 @@
    ],
    "ads": {
     "n": 0,
-    "error": "10: Application does not have permission for this action"
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -3305,7 +3307,7 @@
    "grupo": "San Isidro",
    "espacio": "PRO",
    "distrito": null,
-   "ig_error": "@ramonlanus: 4: (#4) Application request limit reached; @lanusramon: 110: Invalid user id",
+   "ig_error": "@ramonlanus: 4: límite de llamadas de la app (salteado en esta corrida)",
    "historia": [
     {
      "d": "2026-11-14",
@@ -3314,7 +3316,7 @@
    ],
    "ads": {
     "n": 0,
-    "error": "10: Application does not have permission for this action"
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -3322,11 +3324,11 @@
    "grupo": "San Isidro",
    "espacio": "Acción Vecinal",
    "distrito": null,
-   "ig_error": "@gustavoposse_ok: 110: Invalid user id; @posse.gustavo: 110: Invalid user id; @gposse: 110: Invalid user id; @gustavoposse: 110: Invalid user id; @gustavoposseok: 110: Invalid user id",
+   "ig_error": "@gustavo_posse: 4: límite de llamadas de la app (salteado en esta corrida)",
    "historia": [],
    "ads": {
     "n": 0,
-    "error": "10: Application does not have permission for this action"
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -3334,7 +3336,7 @@
    "grupo": "San Isidro",
    "espacio": "Frente Renovador",
    "distrito": null,
-   "ig_error": "@fedemecaok: 110: Invalid user id; @federico.meca: 4: (#4) Application request limit reached; @mecafederico: 110: Invalid user id; @federicomecaok: 110: Invalid user id; @federicomeca: 110: Invalid user id; @fedemeca: 110: Invalid user id",
+   "ig_error": "@fedemecaok: 4: límite de llamadas de la app (salteado en esta corrida)",
    "historia": [
     {
      "d": "2026-11-14",
@@ -3343,7 +3345,7 @@
    ],
    "ads": {
     "n": 0,
-    "error": "10: Application does not have permission for this action"
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   }
  ]
