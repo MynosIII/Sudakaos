@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-14T01:41-03:00",
+ "updated_at": "2026-11-14T01:43-03:00",
  "grupos": [
   "País",
   "Boca",
@@ -10,6 +10,23 @@
  "estado": "error",
  "ads_error": "10: Application does not have permission for this action",
  "ig_ok": 0,
+ "ig_error": "@sergiomassa: 10: (#10) Application does not have permission for this action",
+ "diagnostico": {
+  "permisos": [
+   "ads_read",
+   "instagram_basic",
+   "pages_read_engagement",
+   "pages_show_list",
+   "public_profile"
+  ],
+  "permisos_error": null,
+  "cuenta_ig_ok": true,
+  "cuenta_ig_error": null,
+  "faltan_permisos": [
+   "instagram_manage_insights",
+   "business_management"
+  ]
+ },
  "dirigentes": [
   {
    "name": "Sergio Massa",
