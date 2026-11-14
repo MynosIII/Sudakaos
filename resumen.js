@@ -47,7 +47,8 @@
     $('#meta-upd').textContent = M.updated_at ? 'ACT ' + new Date(M.updated_at).toLocaleString('es-AR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }) : '';
     const R = rows.filter(r => !D.grupo || r.grupo === D.grupo);
     if (!metaOK()) {
-      host.innerHTML = `<div class="mg-warn">Falta conectar la cuenta de Meta: el tablero ya sabe a quién medir, pero necesita un token gratuito para leer Instagram y la Biblioteca de Anuncios.</div>
+      const dg = M.diagnostico || {};
+      host.innerHTML = `<div class="mg-warn">${M.estado === 'error' ? `El token de Meta está cargado pero Meta todavía no habilita los datos (${esc((M.ig_error || M.ads_error || '').replace(/^@\S+: /, ''))}).${dg.faltan_permisos && dg.faltan_permisos.length ? ` Faltan permisos en el token: ${esc(dg.faltan_permisos.join(', '))}.` : ''}${M.ads_error ? ' Para la pauta falta habilitar el acceso a la Biblioteca de Anuncios.' : ''}` : 'Falta conectar la cuenta de Meta: el tablero ya sabe a quién medir, pero necesita un token gratuito para leer Instagram y la Biblioteca de Anuncios.'}</div>
       <div class="g"><div class="card c7"><h3>A quién se mide <span class="tag">${rows.length} dirigentes</span></h3>${grupoTabla(R)}</div>
       <div class="card c5"><h3>Qué se va a ver acá</h3><ul class="mg-ol">
         <li><b>Instagram:</b> seguidores y su evolución, publicaciones por semana, interacción mediana, tasa de interacción, qué formato rinde más (Reel, carrusel, foto) y en qué día y franja horaria.</li>

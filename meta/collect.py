@@ -220,6 +220,20 @@ def ads(terms: list[str], name: str, days: int):
     }
 
 
+
+def diagnostico():
+    """Qué permisos tiene el token y si META_IG_USER_ID es una cuenta de Instagram profesional. Sin datos sensibles."""
+    out = {}
+    perms, err = get("me/permissions", {})
+    out["permisos"] = sorted(p["permission"] for p in (perms or {}).get("data", []) if p.get("status") == "granted") if perms else None
+    out["permisos_error"] = err
+    acc, err = get(IG_USER, {"fields": "id,username"})
+    out["cuenta_ig_ok"] = bool(acc and acc.get("id"))
+    out["cuenta_ig_error"] = err
+    need = ["instagram_basic", "pages_show_list", "pages_read_engagement", "instagram_manage_insights", "business_management"]
+    out["faltan_permisos"] = [p for p in need if out["permisos"] is not None and p not in out["permisos"]]
+    return out
+
 # ---------------------------------------------------------------- principal
 def main():
     now = datetime.now(ART)
@@ -241,6 +255,8 @@ def main():
                                   ensure_ascii=False, indent=1), encoding="utf8")
         print("Faltan secrets:", ", ".join(falta))
         return
+    diag = diagnostico()
+    print("Diagnóstico:", json.dumps(diag, ensure_ascii=False))
     out, ads_err = [], None
     for d in CFG["dirigentes"]:
         row = {k: d.get(k) for k in ("name", "grupo", "espacio", "distrito")}
@@ -265,6 +281,7 @@ def main():
         time.sleep(1)
     ok = sum(1 for r in out if r.get("ig"))
     OUT.write_text(json.dumps({**base, "estado": "ok" if ok else "error", "ads_error": ads_err, "ig_ok": ok,
+                               "ig_error": None if ok else next((r.get("ig_error") for r in out if r.get("ig_error")), None), "diagnostico": diag,
                                "dirigentes": out}, ensure_ascii=False, indent=1), encoding="utf8")
     print(f"Instagram ok: {ok}/{len(out)}")
 
