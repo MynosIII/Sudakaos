@@ -560,5 +560,26 @@ function vFichaTx(n){loadTx().then(T=>{if(vSel!==n)return;const el=$('#v-ftx');i
   const b=$('#v-ftx-all');if(b)b.onclick=()=>showTexts(n,'notas y comentarios que nombran el barrio',r=>r.loc===n,[])})}
 })();
 </script>
+<script src="../assets/informe.js"></script>
+<script>
+// Resumen accionable de General Roca: la intendenta y sus competidores
+(function(){let D=null;const {pct,fmt}=Informe;
+const ready=fetch('data/roca.json',{cache:'no-cache'}).then(r=>r.json()).then(d=>{D=d}).catch(()=>{});
+Informe.init({titulo:'General Roca',def:'María Emilia Soria',ready,
+  fuentes:['notas de Google News y medios de Río Negro','comentarios públicos de YouTube','reclamos vecinales en medios y redes'],
+  opciones:()=>D?D.politicos.filter(p=>p.foco||p.n>=5).map(p=>({name:p.name,grupo:p.foco?'Foco':'Competidores'})):[],
+  build:name=>{const P=D.politicos,a=P.find(p=>p.name===name)||{},V=D.vecinal||{},extra=[],sec=[],ctx=[];
+    const pares=P.filter(p=>p.name!==name&&p.name!=='Javier Milei');
+    const rivales=P.filter(p=>p.name!==name&&!p.foco&&p.name!=='Javier Milei').map(p=>p.name);
+    const T=(V.temas||[]).slice().sort((x,y)=>(y.reclamos+y.vecinos)-(x.reclamos+x.vecinos)),t=T[0];
+    const L=(V.localidades||[]).filter(l=>l.reclamos>=3).sort((x,y)=>y.reclamos-x.reclamos)[0];
+    if(t){sec.push(['Lo que reclaman los vecinos',`<p>Reclamos más repetidos: ${T.slice(0,4).map(x=>`${x.tema} (${fmt(x.reclamos)})`).join(', ')}.${L?` El barrio con más reclamos es ${L.nombre} (${fmt(L.reclamos)}, sobre todo ${((L.tema_top||[])[0]||[''])[0]}).`:''}</p>`]);ctx.push(`Reclamo vecinal n.º 1: ${t.tema} (${t.reclamos} reclamos).`);
+      if(a.foco){extra.push({k:'reclamo',score:62,titulo:`dar una respuesta visible sobre «${t.tema}»`,porque:`es el reclamo vecinal más repetido: ${fmt(t.reclamos)} reclamos, ${fmt(t.agenda_medios)} notas en medios y ${fmt(t.apoyo)} apoyos en comentarios`,kpi:'menos reclamos del tema en las próximas 4 semanas',video:`qué se está haciendo con ${t.tema.toLowerCase()}, con un caso concreto`});
+        if(L)extra.push({k:'reclamo',score:48,titulo:`recorrer el barrio ${L.nombre}`,porque:`es el barrio con más reclamos (${fmt(L.reclamos)})${L.tono_neg!=null?` y ${pct(L.tono_neg)} de lo que se dice de ese barrio es negativo`:''}`,kpi:`bajar los reclamos de ${L.nombre}`,video:`recorrida por ${L.nombre}`})}
+      else extra.push({k:'tema',score:45,titulo:`proponer una salida para «${t.tema}»`,porque:`es lo que más reclaman los vecinos de Roca (${fmt(t.reclamos)} reclamos) y es la principal deuda de la gestión`,kpi:'aparecer en notas sobre el tema',video:`propuesta concreta sobre ${t.tema.toLowerCase()}`})}
+    const al=(D.alertas||[]).filter(x=>x.texto.includes(name));if(al.length)sec.push(['Alertas',`<ul>${al.map(x=>`<li>${x.texto.replace(/[<>&]/g,'')}</li>`).join('')}</ul>`]);
+    return {a,pares,rivales,extra,secciones:sec,contexto:ctx,sub:[a.cargo,a.espacio].filter(Boolean).join(' · '),rol:a.cargo,ventana:`los últimos ${D.conversacion_dias} días`,publico:'vecinos de General Roca y votantes de Río Negro'}}});
+})();
+</script>
 </body>
 </html>

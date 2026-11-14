@@ -620,5 +620,29 @@ document.addEventListener('click',e=>{
 });
 })();
 </script>
+<script src="../assets/informe.js"></script>
+<script>
+// Resumen accionable de Santa Cruz: Molina y Grasso (y el resto de la oferta)
+(function(){let D=null;const {pct,fmt}=Informe;
+const ready=fetch('data/santacruz.json',{cache:'no-cache'}).then(r=>r.json()).then(d=>{D=d}).catch(()=>{});
+Informe.init({titulo:'Santa Cruz 2027',def:'Juan Carlos Molina',ready,
+  fuentes:['notas de Google News y medios santacruceños','Google Trends','Wikipedia'],
+  opciones:()=>D?[...D.focos.map(n=>({name:n,grupo:'Candidatos medidos'})),...D.figuras.filter(f=>!D.focos.includes(f.name)&&f.bando!=='Nacional'&&f.n>=5).map(f=>({name:f.name,grupo:'Resto de la oferta'}))]:[],
+  build:name=>{const F=D.figuras,a=F.find(f=>f.name===name)||{},DU=D.duelo||{},C=(DU.candidatos||{})[name],extra=[],sec=[],ctx=[];
+    const pares=F.filter(f=>f.name!==name&&f.bando!=='Nacional');
+    const otro=D.focos.find(n=>n!==name),rivales=[...D.focos.filter(n=>n!==name),'Claudio Vidal'];
+    if(C){sec.push(['Cara a cara',`<p>${fmt(C.n)} menciones (${pct(C.share,1)} de la conversación). ${pct(C.pct_local)} viene de medios de Santa Cruz y el resto de medios nacionales; tono negativo ${pct(C.tono_local&&C.tono_local.NEG)} en lo local y ${pct(C.tono_nacional&&C.tono_nacional.NEG)} en lo nacional. Visitas en Wikipedia (90 días): ${fmt(C.wiki_90)}. Interés en Google en Santa Cruz: ${C.trends_sc}.</p>`]);
+      ctx.push(`${pct(C.pct_local)} de sus menciones vienen de medios santacruceños.`);
+      if(C.pct_local<50&&C.n>=5)extra.push({k:'vis',score:58+Math.min(25,(50-C.pct_local)/2),titulo:'anclarse en la agenda santacruceña',porque:`solo ${pct(C.pct_local)} de sus menciones vienen de medios de Santa Cruz (${fmt(C.locales)} de ${fmt(C.n)}); el resto es prensa nacional`,kpi:'más de la mitad de sus menciones en medios locales',video:'recorrida y propuesta sobre un problema concreto de la provincia'});
+      if(otro&&DU.candidatos[otro]){const o=DU.candidatos[otro];if(o.n>C.n*2)extra.push({k:'vis',score:55+Math.min(30,10*Math.log2(o.n/Math.max(C.n,1))),titulo:`achicar la distancia con ${otro}`,porque:`${otro} tiene ${fmt(o.n)} menciones contra ${fmt(C.n)}`,kpi:`llegar a la mitad del volumen de ${otro}`,video:'diferencia de perfil en una sola idea'})}}
+    // temas del duelo que lidera el otro
+    const T=(DU.temas||[]).filter(t=>otro&&t.duenio===otro&&(t[otro]||0)>=8).sort((x,y)=>y[otro]-x[otro]);
+    if(T[0]){const t=T[0];extra.push({k:'tema',score:48+Math.min(25,t[otro]),titulo:`disputar «${t.tema}»`,porque:`es el tema donde más pesa ${otro}: ${fmt(t[otro])} textos contra ${fmt(t[name]||0)}`,kpi:'aparecer en notas del tema en 4 semanas',video:`propuesta propia sobre ${t.tema.toLowerCase()}`})}
+    const M=(DU.temas||[]).filter(t=>t.duenio===name&&(t[name]||0)>=3).map(t=>t.tema);
+    if(M.length)sec.push(['Temas que ya le pertenecen',`<p>${M.join(', ')}.</p>`]);
+    const al=(D.alertas||[]).filter(x=>x.texto.includes(name.split(' ').slice(-1)[0]));if(al.length)sec.push(['Alertas',`<ul>${al.map(x=>`<li>${x.texto.replace(/[<>&]/g,'')}</li>`).join('')}</ul>`]);
+    return {a,pares,rivales,extra,secciones:sec,contexto:ctx,sub:[a.cargo,a.bando].filter(Boolean).join(' · '),rol:'posible candidato a gobernador de Santa Cruz',ventana:'los últimos 12 meses',publico:'votantes de Santa Cruz (Río Gallegos, Caleta Olivia y el interior)'}}});
+})();
+</script>
 </body>
 </html>
