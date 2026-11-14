@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-14T04:08-03:00",
+ "updated_at": "2026-11-14T09:59-03:00",
  "grupos": [
   "País",
   "Boca",
@@ -8,22 +8,14 @@
   "San Isidro"
  ],
  "estado": "ok",
- "ads_error": null,
+ "ads_error": "4: límite de llamadas de la app (salteado en esta corrida)",
  "ig_ok": 18,
  "ig_error": null,
  "diagnostico": {
-  "permisos": [
-   "ads_read",
-   "business_management",
-   "instagram_basic",
-   "instagram_manage_insights",
-   "pages_read_engagement",
-   "pages_show_list",
-   "public_profile"
-  ],
-  "permisos_error": null,
-  "cuenta_ig_ok": true,
-  "cuenta_ig_error": null,
+  "permisos": null,
+  "permisos_error": "4: (#4) Application request limit reached",
+  "cuenta_ig_ok": false,
+  "cuenta_ig_error": "4: límite de llamadas de la app (salteado en esta corrida)",
   "faltan_permisos": []
  },
  "dirigentes": [
@@ -432,6 +424,7 @@
     "delta7": null,
     "delta30": null
    },
+   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -439,7 +432,8 @@
     }
    ],
    "ads": {
-    "n": 0
+    "n": 0,
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -819,6 +813,7 @@
     "delta7": null,
     "delta30": null
    },
+   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -826,66 +821,8 @@
     }
    ],
    "ads": {
-    "n": 18,
-    "activos": 0,
-    "gasto": [
-     150000,
-     191482
-    ],
-    "impresiones": [
-     109000,
-     138982
-    ],
-    "moneda": "ARS",
-    "regiones": {
-     "Misiones": 70.8,
-     "Río Negro": 10.9,
-     "Buenos Aires": 3.9,
-     "Santa Fe": 1.7,
-     "Chaco": 1.6,
-     "Córdoba": 1.2,
-     "Tucuman": 1.2,
-     "Entre Rios": 1.1
-    },
-    "edades": {
-     "18-24": 23.7,
-     "25-34": 19.2,
-     "65+": 16.9,
-     "55-64": 15.1,
-     "45-54": 12.8,
-     "35-44": 12.3,
-     "Unknown": 0.0
-    },
-    "genero": {
-     "male": 56.6,
-     "female": 43.1,
-     "unknown": 0.3
-    },
-    "plataformas": {
-     "facebook": 15,
-     "instagram": 14
-    },
-    "paginas": {
-     "Yo estoy con Milei": 17,
-     "Yo banco a Milei": 1
-    },
-    "avisos": [
-     {
-      "t": "🇦🇷 Misiones salió a recibir a Javier Milei. Una multitud acompañó la llegada del Presidente y volvió a mostrar que las ideas de la libertad ",
-      "d": "2026-09-10",
-      "u": "https://www.facebook.com/ads/library/?id=4766321360266511"
-     },
-     {
-      "t": "🗳️ Adrián Núñez se reunió con el embajador argentino ante la OEA, Carlos Cherniak, y con Carmen Lucía de la Pava Abad, jefa de gabinete del ",
-      "d": "2026-11-06",
-      "u": "https://www.facebook.com/ads/library/?id=1772636561537901"
-     },
-     {
-      "t": "🦁 Las ideas de la libertad siguen creciendo en cada rincón de Misiones. En Oberá, más de 700 misioneros participaron de una nueva jornada de",
-      "d": "2026-10-08",
-      "u": "https://www.facebook.com/ads/library/?id=1634447598468110"
-     }
-    ]
+    "n": 0,
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -1283,6 +1220,7 @@
     "delta7": null,
     "delta30": null
    },
+   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -1290,7 +1228,8 @@
     }
    ],
    "ads": {
-    "n": 0
+    "n": 0,
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -1498,6 +1437,7 @@
     "delta7": null,
     "delta30": null
    },
+   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -1505,7 +1445,8 @@
     }
    ],
    "ads": {
-    "n": 0
+    "n": 0,
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -1735,6 +1676,7 @@
     "delta7": null,
     "delta30": null
    },
+   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -1742,7 +1684,8 @@
     }
    ],
    "ads": {
-    "n": 0
+    "n": 0,
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -1861,6 +1804,7 @@
     "delta7": null,
     "delta30": null
    },
+   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -1868,7 +1812,8 @@
     }
    ],
    "ads": {
-    "n": 0
+    "n": 0,
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -2273,6 +2218,7 @@
     "delta7": null,
     "delta30": null
    },
+   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -2280,7 +2226,8 @@
     }
    ],
    "ads": {
-    "n": 0
+    "n": 0,
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -2680,6 +2627,7 @@
     "delta7": null,
     "delta30": null
    },
+   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -2687,7 +2635,8 @@
     }
    ],
    "ads": {
-    "n": 0
+    "n": 0,
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -2811,6 +2760,7 @@
     "delta7": null,
     "delta30": null
    },
+   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -2818,7 +2768,8 @@
     }
    ],
    "ads": {
-    "n": 0
+    "n": 0,
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -3221,6 +3172,7 @@
     "delta7": null,
     "delta30": null
    },
+   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -3228,7 +3180,8 @@
     }
    ],
    "ads": {
-    "n": 0
+    "n": 0,
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -3387,6 +3340,7 @@
     "delta7": null,
     "delta30": null
    },
+   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -3394,7 +3348,8 @@
     }
    ],
    "ads": {
-    "n": 0
+    "n": 0,
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -3642,6 +3597,7 @@
     "delta7": null,
     "delta30": null
    },
+   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -3649,58 +3605,8 @@
     }
    ],
    "ads": {
-    "n": 7,
-    "activos": 0,
-    "gasto": [
-     102500,
-     128493
-    ],
-    "impresiones": [
-     185000,
-     221993
-    ],
-    "moneda": "ARS",
-    "regiones": {
-     "Buenos Aires": 100.0
-    },
-    "edades": {
-     "25-34": 33.4,
-     "18-24": 29.2,
-     "35-44": 13.9,
-     "45-54": 10.0,
-     "55-64": 7.8,
-     "65+": 5.6,
-     "Unknown": 0.0
-    },
-    "genero": {
-     "male": 50.6,
-     "female": 48.9,
-     "unknown": 0.4
-    },
-    "plataformas": {
-     "facebook": 4,
-     "instagram": 3
-    },
-    "paginas": {
-     "Julio Zamora": 7
-    },
-    "avisos": [
-     {
-      "t": "This ad ran without a required disclaimer.",
-      "d": "2026-09-14",
-      "u": "https://www.facebook.com/ads/library/?id=1786466802385593"
-     },
-     {
-      "t": "This ad ran without a required disclaimer.",
-      "d": "2026-08-18",
-      "u": "https://www.facebook.com/ads/library/?id=1731513121275269"
-     },
-     {
-      "t": "This ad ran without a required disclaimer.",
-      "d": "2026-09-14",
-      "u": "https://www.facebook.com/ads/library/?id=2129770151278764"
-     }
-    ]
+    "n": 0,
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -4109,6 +4015,7 @@
     "delta7": null,
     "delta30": null
    },
+   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -4116,7 +4023,8 @@
     }
    ],
    "ads": {
-    "n": 0
+    "n": 0,
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -4436,6 +4344,7 @@
     "delta7": null,
     "delta30": null
    },
+   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -4443,34 +4352,8 @@
     }
    ],
    "ads": {
-    "n": 1,
-    "activos": 0,
-    "gasto": [
-     200,
-     299
-    ],
-    "impresiones": [
-     0,
-     99
-    ],
-    "moneda": "ARS",
-    "regiones": {},
-    "edades": {},
-    "genero": {},
-    "plataformas": {
-     "facebook": 1,
-     "instagram": 1
-    },
-    "paginas": {
-     "Jorge Macri FANS": 1
-    },
-    "avisos": [
-     {
-      "t": "This ad ran without a required disclaimer.",
-      "d": "2026-08-27",
-      "u": "https://www.facebook.com/ads/library/?id=1075401625033145"
-     }
-    ]
+    "n": 0,
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -4628,6 +4511,7 @@
     "delta7": null,
     "delta30": null
    },
+   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -4635,7 +4519,8 @@
     }
    ],
    "ads": {
-    "n": 0
+    "n": 0,
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -4979,6 +4864,7 @@
     "delta7": null,
     "delta30": null
    },
+   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -4986,66 +4872,8 @@
     }
    ],
    "ads": {
-    "n": 53,
-    "activos": 8,
-    "gasto": [
-     3324400,
-     3864947
-    ],
-    "impresiones": [
-     4213100,
-     4944947
-    ],
-    "moneda": "ARS",
-    "regiones": {
-     "Buenos Aires": 99.9,
-     "Ciudad Autónoma de Buenos Aires": 0.1,
-     "Córdoba": 0.0,
-     "Entre Rios": 0.0,
-     "Santa Fe": 0.0,
-     "Misiones": 0.0,
-     "Río Negro": 0.0,
-     "San Juan": 0.0
-    },
-    "edades": {
-     "25-34": 26.7,
-     "35-44": 18.3,
-     "45-54": 16.7,
-     "18-24": 15.5,
-     "55-64": 11.9,
-     "65+": 10.9,
-     "Unknown": 0.0
-    },
-    "genero": {
-     "male": 52.9,
-     "female": 46.5,
-     "unknown": 0.6
-    },
-    "plataformas": {
-     "facebook": 53,
-     "instagram": 52
-    },
-    "paginas": {
-     "Ramón Lanús": 52,
-     "Lanús Post": 1
-    },
-    "avisos": [
-     {
-      "t": "La encargada de un comercio alertó a través de Ojos en Alerta sobre un hombre que pedía dinero y amenazaba a quienes estaban en el lugar. De",
-      "d": "2026-08-20",
-      "u": "https://www.facebook.com/ads/library/?id=2826760501032865"
-     },
-     {
-      "t": "El patrullaje preventivo nos permite estar siempre cerca para protegerte. Lo que comenzó como un patrullaje preventivo de rutina durante la ",
-      "d": "2026-08-04",
-      "u": "https://www.facebook.com/ads/library/?id=1075301381731955"
-     },
-     {
-      "t": "Durante la madrugada, las cámaras de seguridad detectaron a un hombre que escondía una escalera. Desde el Centro de Monitoreo lo seguimos a ",
-      "d": "2026-09-29",
-      "u": "https://www.facebook.com/ads/library/?id=4423471327786030"
-     }
-    ]
+    "n": 0,
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -5217,6 +5045,7 @@
     "delta7": null,
     "delta30": null
    },
+   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -5224,47 +5053,8 @@
     }
    ],
    "ads": {
-    "n": 1,
-    "activos": 0,
-    "gasto": [
-     20000,
-     24999
-    ],
-    "impresiones": [
-     30000,
-     34999
-    ],
-    "moneda": "ARS",
-    "regiones": {
-     "Buenos Aires": 100.0
-    },
-    "edades": {
-     "25-34": 38.7,
-     "18-24": 37.4,
-     "35-44": 12.1,
-     "45-54": 6.6,
-     "55-64": 2.9,
-     "65+": 2.3,
-     "Unknown": 0.0
-    },
-    "genero": {
-     "male": 47.0,
-     "female": 43.4,
-     "unknown": 9.6
-    },
-    "plataformas": {
-     "instagram": 1
-    },
-    "paginas": {
-     "Gustavo Posse": 1
-    },
-    "avisos": [
-     {
-      "t": "Hay decisiones que, con el paso del tiempo, demuestran que mirar hacia adelante siempre fue el camino. En San Isidro hubo una forma de enten",
-      "d": "2026-09-23",
-      "u": "https://www.facebook.com/ads/library/?id=1737398145057397"
-     }
-    ]
+    "n": 0,
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -5376,6 +5166,7 @@
     "delta7": null,
     "delta30": null
    },
+   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -5383,7 +5174,8 @@
     }
    ],
    "ads": {
-    "n": 0
+    "n": 0,
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   }
  ]
