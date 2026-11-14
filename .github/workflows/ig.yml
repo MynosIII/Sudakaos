@@ -16,7 +16,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: ig-${{ github.ref_name }}
+  # mismo grupo que meta.yml: comparten token y cupo de la app de Meta, nunca en paralelo
+  group: meta-dirigentes
   cancel-in-progress: false
 
 jobs:
