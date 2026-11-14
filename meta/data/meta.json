@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-14T02:09-03:00",
+ "updated_at": "2026-11-14T02:11-03:00",
  "grupos": [
   "País",
   "Boca",
@@ -9,7 +9,7 @@
  ],
  "estado": "ok",
  "ads_error": "10: Application does not have permission for this action",
- "ig_ok": 15,
+ "ig_ok": 7,
  "ig_error": null,
  "diagnostico": {
   "permisos": [
@@ -451,13 +451,13 @@
    "ig": {
     "usuario": "javiermilei",
     "nombre": "Javier Milei",
-    "followers": 6456252,
+    "followers": 6456251,
     "follows": 1807,
     "media_count": 12607,
     "posts_30d": 57,
     "posts_semana": 13.3,
     "inter_med": 48761,
-    "likes_med": 46537,
+    "likes_med": 46538,
     "com_med": 3757,
     "er": 0.755,
     "formatos": {
@@ -468,7 +468,7 @@
      },
      "Reel": {
       "n": 12,
-      "inter_med": 53670,
+      "inter_med": 53671,
       "er": 0.831
      }
     },
@@ -478,18 +478,18 @@
     "franjas": {
      "06-09": 38683,
      "09-12": 76719,
-     "12-15": 119515,
-     "15-18": 47579,
+     "12-15": 119516,
+     "15-18": 47580,
      "18-21": 47097,
-     "21-24": 86564
+     "21-24": 86565
     },
     "dias": {
-     "lun": 135244,
+     "lun": 135246,
      "mar": 40599,
      "mié": 39272,
      "jue": 50398,
      "vie": 44600,
-     "sáb": 85501,
+     "sáb": 85503,
      "dom": 47476
     },
     "temas": [
@@ -526,7 +526,7 @@
       "t": "",
       "u": "https://www.instagram.com/reel/DfnDa5ETXxB/",
       "f": "Reel",
-      "i": 198926,
+      "i": 198928,
       "d": "2026-11-11"
      }
     ],
@@ -678,12 +678,12 @@
      },
      {
       "d": "2026-10-31",
-      "i": 60074,
+      "i": 60077,
       "f": "Reel"
      },
      {
       "d": "2026-11-02",
-      "i": 150974,
+      "i": 150976,
       "f": "Foto"
      },
      {
@@ -693,12 +693,12 @@
      },
      {
       "d": "2026-11-03",
-      "i": 130200,
+      "i": 130201,
       "f": "Foto"
      },
      {
       "d": "2026-11-04",
-      "i": 74857,
+      "i": 74858,
       "f": "Foto"
      },
      {
@@ -708,7 +708,7 @@
      },
      {
       "d": "2026-11-05",
-      "i": 110475,
+      "i": 110476,
       "f": "Foto"
      },
      {
@@ -723,7 +723,7 @@
      },
      {
       "d": "2026-11-07",
-      "i": 109629,
+      "i": 109632,
       "f": "Foto"
      },
      {
@@ -738,7 +738,7 @@
      },
      {
       "d": "2026-11-08",
-      "i": 47683,
+      "i": 47684,
       "f": "Foto"
      },
      {
@@ -768,12 +768,12 @@
      },
      {
       "d": "2026-11-08",
-      "i": 86564,
+      "i": 86565,
       "f": "Foto"
      },
      {
       "d": "2026-11-09",
-      "i": 119515,
+      "i": 119516,
       "f": "Reel"
      },
      {
@@ -783,22 +783,22 @@
      },
      {
       "d": "2026-11-11",
-      "i": 148433,
+      "i": 148435,
       "f": "Foto"
      },
      {
       "d": "2026-11-11",
-      "i": 29543,
+      "i": 29544,
       "f": "Foto"
      },
      {
       "d": "2026-11-11",
-      "i": 138745,
+      "i": 138746,
       "f": "Foto"
      },
      {
       "d": "2026-11-11",
-      "i": 198926,
+      "i": 198928,
       "f": "Reel"
      },
      {
@@ -808,12 +808,12 @@
      },
      {
       "d": "2026-11-11",
-      "i": 78685,
+      "i": 78688,
       "f": "Reel"
      },
      {
       "d": "2026-11-12",
-      "i": 106012,
+      "i": 106015,
       "f": "Foto"
      }
     ],
@@ -823,7 +823,7 @@
    "historia": [
     {
      "d": "2026-11-14",
-     "f": 6456252
+     "f": 6456251
     }
    ],
    "ads": {
@@ -861,7 +861,7 @@
      },
      "Reel": {
       "n": 15,
-      "inter_med": 62977,
+      "inter_med": 62976,
       "er": 3.643
      }
     },
@@ -883,7 +883,7 @@
      "jue": 34412,
      "vie": 76252,
      "sáb": 66634,
-     "dom": 66786
+     "dom": 66785
     },
     "temas": [
      "jose",
@@ -1013,12 +1013,12 @@
      },
      {
       "d": "2025-05-22",
-      "i": 32596,
+      "i": 32595,
       "f": "Foto"
      },
      {
       "d": "2025-05-25",
-      "i": 60254,
+      "i": 60253,
       "f": "Carrusel"
      },
      {
@@ -1028,7 +1028,7 @@
      },
      {
       "d": "2025-05-25",
-      "i": 62977,
+      "i": 62976,
       "f": "Reel"
      },
      {
@@ -1249,7 +1249,7 @@
    "ig": {
     "usuario": "kicillofok",
     "nombre": "Axel Kicillof",
-    "followers": 1202602,
+    "followers": 1202603,
     "follows": 323,
     "media_count": 2818,
     "posts_30d": 22,
@@ -1274,7 +1274,7 @@
     "mejor_dia": "jue",
     "mejor_franja": 12,
     "franjas": {
-     "12-15": 18101,
+     "12-15": 18102,
      "15-18": 11235,
      "18-21": 7569,
      "21-24": 11342
@@ -1320,14 +1320,14 @@
       "t": "León, los bonaerenses y los argentinos guardaremos para siempre en nuestros corazones su visita. Gracias por hablarle a ",
       "u": "https://www.instagram.com/p/Dfm6UqSkfw-/",
       "f": "Carrusel",
-      "i": 87329,
+      "i": 87330,
       "d": "2026-11-11"
      },
      {
       "t": "Como dijo el Papa León, el progreso de una Nación también se mide por su acompañamiento a las personas con discapacidad.",
       "u": "https://www.instagram.com/p/DfhpzM3kQXf/",
       "f": "Carrusel",
-      "i": 75581,
+      "i": 75583,
       "d": "2026-11-09"
      }
     ],
@@ -1399,12 +1399,12 @@
      },
      {
       "d": "2026-11-04",
-      "i": 10643,
+      "i": 10644,
       "f": "Reel"
      },
      {
       "d": "2026-11-05",
-      "i": 18101,
+      "i": 18102,
       "f": "Carrusel"
      },
      {
@@ -1419,7 +1419,7 @@
      },
      {
       "d": "2026-11-09",
-      "i": 75581,
+      "i": 75583,
       "f": "Carrusel"
      },
      {
@@ -1434,7 +1434,7 @@
      },
      {
       "d": "2026-11-11",
-      "i": 87329,
+      "i": 87330,
       "f": "Carrusel"
      },
      {
@@ -1449,7 +1449,7 @@
    "historia": [
     {
      "d": "2026-11-14",
-     "f": 1202602
+     "f": 1202603
     }
    ],
    "ads": {
@@ -1647,7 +1647,7 @@
      },
      {
       "d": "2026-11-04",
-      "i": 6212,
+      "i": 6214,
       "f": "Carrusel"
      },
      {
@@ -1846,19 +1846,19 @@
     "follows": 138,
     "media_count": 2689,
     "posts_30d": 3,
-    "posts_semana": 1.1,
-    "inter_med": 18541,
-    "likes_med": 17243,
+    "posts_semana": 1.0,
+    "inter_med": 19212,
+    "likes_med": 17644,
     "com_med": 784,
-    "er": 1.528,
+    "er": 1.583,
     "formatos": {
      "Foto": {
-      "n": 33,
-      "inter_med": 17938,
-      "er": 1.478
+      "n": 25,
+      "inter_med": 20319,
+      "er": 1.674
      },
      "Carrusel": {
-      "n": 15,
+      "n": 13,
       "inter_med": 25306,
       "er": 2.085
      },
@@ -1873,34 +1873,34 @@
     "mejor_franja": 21,
     "franjas": {
      "00-03": 116317,
-     "09-12": 11804,
+     "09-12": 13050,
      "12-15": 26711,
-     "15-18": 17449,
+     "15-18": 17454,
      "18-21": 17938,
-     "21-24": 43037
+     "21-24": 40247
     },
     "dias": {
-     "lun": 27139,
-     "mar": 13654,
-     "mié": 38459,
-     "jue": 16320,
-     "vie": 17449,
-     "sáb": 15474,
-     "dom": 26733
+     "lun": 30121,
+     "mar": 10291,
+     "mié": 39353,
+     "jue": 20813,
+     "vie": 14475,
+     "sáb": 19145,
+     "dom": 23526
     },
     "temas": [
      "franco",
-     "libro",
      "entrevista",
-     "fragmento",
-     "vida",
+     "libro",
      "diego",
      "sehinkman",
-     "mundo",
-     "argentina",
      "lanzamiento",
+     "mundo",
      "cuando",
-     "historia"
+     "fragmento",
+     "mucho",
+     "argentina",
+     "messi"
     ],
     "hashtags": [],
     "top": [
@@ -1927,56 +1927,6 @@
      }
     ],
     "serie": [
-     {
-      "d": "2025-10-10",
-      "i": 111741,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2025-10-21",
-      "i": 14586,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-10-22",
-      "i": 31465,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-10-26",
-      "i": 39817,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-10-26",
-      "i": 60957,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-11-02",
-      "i": 11178,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-11-13",
-      "i": 12541,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2025-11-15",
-      "i": 11804,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-11-17",
-      "i": 9878,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-11-18",
-      "i": 13654,
-      "f": "Foto"
-     },
      {
       "d": "2025-11-27",
       "i": 42459,
@@ -2224,7 +2174,7 @@
      },
      {
       "d": "2026-11-13",
-      "i": 17449,
+      "i": 17454,
       "f": "Foto"
      }
     ],
@@ -2247,411 +2197,7 @@
    "grupo": "Boca",
    "espacio": "Oposición Boca",
    "distrito": null,
-   "ig": {
-    "usuario": "andresibarra",
-    "nombre": "andrés ibarra",
-    "followers": 2119,
-    "follows": 1042,
-    "media_count": 94,
-    "posts_30d": 0,
-    "posts_semana": 0.1,
-    "inter_med": 195,
-    "likes_med": 190,
-    "com_med": 8,
-    "er": 9.226,
-    "formatos": {
-     "Carrusel": {
-      "n": 26,
-      "inter_med": 206,
-      "er": 9.745
-     },
-     "Reel": {
-      "n": 2,
-      "inter_med": 184,
-      "er": 8.707
-     },
-     "Foto": {
-      "n": 31,
-      "inter_med": 186,
-      "er": 8.778
-     },
-     "Video": {
-      "n": 1,
-      "inter_med": 227,
-      "er": 10.713
-     }
-    },
-    "mejor_formato": "Video",
-    "mejor_dia": "dom",
-    "mejor_franja": 15,
-    "franjas": {
-     "00-03": 156,
-     "12-15": 343,
-     "15-18": 240,
-     "18-21": 197,
-     "21-24": 196
-    },
-    "dias": {
-     "lun": 183,
-     "mar": 220,
-     "mié": 198,
-     "jue": 191,
-     "vie": 190,
-     "sáb": 138,
-     "dom": 227
-    },
-    "temas": [
-     "styling",
-     "gaboescalona",
-     "doitgab",
-     "model",
-     "makeup",
-     "hair",
-     "artist",
-     "director",
-     "gabypinomakeup",
-     "alejo",
-     "cabezas",
-     "gretallobet"
-    ],
-    "hashtags": [
-     "miami",
-     "tribaldesign",
-     "tribalart",
-     "grainisgood",
-     "orangehair",
-     "ginger",
-     "hairart",
-     "hairstyling"
-    ],
-    "top": [
-     {
-      "t": "~ Past Dreams · Model · federicagarciac Makeup Artist · darlydarling Stylist & Art Director · doitgab",
-      "u": "https://www.instagram.com/p/BtKJOjuj8Sl/",
-      "f": "Foto",
-      "i": 502,
-      "d": "2019-01-27"
-     },
-     {
-      "t": "shoot para el cover del nuevo single de samanthasancheez “No Quiero Na” Photography · andresibarra Art Direction & Styli",
-      "u": "https://www.instagram.com/p/CN_XK8PHoum/",
-      "f": "Carrusel",
-      "i": 484,
-      "d": "2021-04-22"
-     },
-     {
-      "t": "\\>{_\\\\||\\ladynarcissse · · · gaboescalona",
-      "u": "https://www.instagram.com/p/C9JWK2iu3G1/",
-      "f": "Carrusel",
-      "i": 446,
-      "d": "2024-07-08"
-     }
-    ],
-    "serie": [
-     {
-      "d": "2019-01-27",
-      "i": 502,
-      "f": "Foto"
-     },
-     {
-      "d": "2019-01-28",
-      "i": 191,
-      "f": "Foto"
-     },
-     {
-      "d": "2019-02-03",
-      "i": 318,
-      "f": "Foto"
-     },
-     {
-      "d": "2019-02-04",
-      "i": 245,
-      "f": "Foto"
-     },
-     {
-      "d": "2019-02-04",
-      "i": 136,
-      "f": "Foto"
-     },
-     {
-      "d": "2019-03-03",
-      "i": 171,
-      "f": "Foto"
-     },
-     {
-      "d": "2019-03-05",
-      "i": 172,
-      "f": "Foto"
-     },
-     {
-      "d": "2019-03-14",
-      "i": 298,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2019-03-17",
-      "i": 211,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2019-03-18",
-      "i": 149,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2019-03-24",
-      "i": 283,
-      "f": "Foto"
-     },
-     {
-      "d": "2019-03-25",
-      "i": 153,
-      "f": "Foto"
-     },
-     {
-      "d": "2019-03-28",
-      "i": 179,
-      "f": "Foto"
-     },
-     {
-      "d": "2019-04-04",
-      "i": 179,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2019-04-10",
-      "i": 108,
-      "f": "Foto"
-     },
-     {
-      "d": "2019-04-14",
-      "i": 207,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2019-04-16",
-      "i": 173,
-      "f": "Foto"
-     },
-     {
-      "d": "2019-04-22",
-      "i": 232,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2019-04-23",
-      "i": 220,
-      "f": "Foto"
-     },
-     {
-      "d": "2019-04-24",
-      "i": 163,
-      "f": "Foto"
-     },
-     {
-      "d": "2019-04-28",
-      "i": 302,
-      "f": "Foto"
-     },
-     {
-      "d": "2019-05-01",
-      "i": 407,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2019-05-09",
-      "i": 158,
-      "f": "Foto"
-     },
-     {
-      "d": "2019-05-12",
-      "i": 102,
-      "f": "Foto"
-     },
-     {
-      "d": "2019-05-13",
-      "i": 405,
-      "f": "Foto"
-     },
-     {
-      "d": "2019-05-14",
-      "i": 257,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2019-05-16",
-      "i": 180,
-      "f": "Foto"
-     },
-     {
-      "d": "2019-05-22",
-      "i": 259,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2019-06-02",
-      "i": 360,
-      "f": "Foto"
-     },
-     {
-      "d": "2019-06-03",
-      "i": 120,
-      "f": "Foto"
-     },
-     {
-      "d": "2019-06-10",
-      "i": 181,
-      "f": "Foto"
-     },
-     {
-      "d": "2019-06-24",
-      "i": 186,
-      "f": "Foto"
-     },
-     {
-      "d": "2019-07-01",
-      "i": 127,
-      "f": "Foto"
-     },
-     {
-      "d": "2019-07-04",
-      "i": 319,
-      "f": "Foto"
-     },
-     {
-      "d": "2019-07-04",
-      "i": 259,
-      "f": "Foto"
-     },
-     {
-      "d": "2019-07-24",
-      "i": 198,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2019-07-28",
-      "i": 230,
-      "f": "Foto"
-     },
-     {
-      "d": "2019-07-29",
-      "i": 305,
-      "f": "Foto"
-     },
-     {
-      "d": "2019-07-30",
-      "i": 169,
-      "f": "Foto"
-     },
-     {
-      "d": "2019-08-11",
-      "i": 191,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2019-09-08",
-      "i": 227,
-      "f": "Video"
-     },
-     {
-      "d": "2019-11-10",
-      "i": 121,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2019-12-08",
-      "i": 190,
-      "f": "Foto"
-     },
-     {
-      "d": "2019-12-09",
-      "i": 197,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2019-12-10",
-      "i": 223,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2019-12-12",
-      "i": 188,
-      "f": "Foto"
-     },
-     {
-      "d": "2020-03-26",
-      "i": 263,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2020-03-29",
-      "i": 239,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2021-02-20",
-      "i": 138,
-      "f": "Reel"
-     },
-     {
-      "d": "2021-03-09",
-      "i": 343,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2021-04-22",
-      "i": 484,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2022-04-11",
-      "i": 162,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2022-04-14",
-      "i": 194,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2023-02-10",
-      "i": 174,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2023-02-15",
-      "i": 140,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2023-02-16",
-      "i": 98,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2023-02-24",
-      "i": 206,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2024-07-03",
-      "i": 231,
-      "f": "Reel"
-     },
-     {
-      "d": "2024-07-08",
-      "i": 446,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2026-02-16",
-      "i": 131,
-      "f": "Carrusel"
-     }
-    ],
-    "delta7": null,
-    "delta30": null
-   },
+   "ig_error": "@andresibarraok: 110: Invalid user id",
    "historia": [
     {
      "d": "2026-11-14",
@@ -2668,401 +2214,7 @@
    "grupo": "Provincia de Buenos Aires",
    "espacio": "La Libertad Avanza",
    "distrito": null,
-   "ig": {
-    "usuario": "diegosantilliok",
-    "nombre": "Diego Santilli",
-    "followers": 230973,
-    "follows": 68,
-    "media_count": 2771,
-    "posts_30d": 0,
-    "posts_semana": 0.6,
-    "inter_med": 4631,
-    "likes_med": 4320,
-    "com_med": 401,
-    "er": 2.005,
-    "formatos": {
-     "Reel": {
-      "n": 26,
-      "inter_med": 4148,
-      "er": 1.796
-     },
-     "Foto": {
-      "n": 31,
-      "inter_med": 4723,
-      "er": 2.045
-     },
-     "Carrusel": {
-      "n": 3,
-      "inter_med": 11516,
-      "er": 4.986
-     }
-    },
-    "mejor_formato": "Carrusel",
-    "mejor_dia": "dom",
-    "mejor_franja": 0,
-    "franjas": {
-     "00-03": 53022,
-     "06-09": 2862,
-     "09-12": 3854,
-     "12-15": 5918,
-     "15-18": 3506,
-     "18-21": 3780,
-     "21-24": 7257
-    },
-    "dias": {
-     "lun": 9715,
-     "mar": 4681,
-     "mié": 2112,
-     "jue": 2360,
-     "vie": 3385,
-     "sáb": 7020,
-     "dom": 11810
-    },
-    "temas": [
-     "presidente",
-     "argentina",
-     "votar",
-     "libertad",
-     "octubre",
-     "milei",
-     "provincia",
-     "queremos",
-     "domingo",
-     "reformas",
-     "pena",
-     "anos"
-    ],
-    "hashtags": [
-     "losjubiladostruchos"
-    ],
-    "top": [
-     {
-      "t": "¡GANAMOS LA PROVINCIA DE BUENOS AIRES! VAMOS CARAJO QUE OTRA PROVINCIA ES POSIBLE.",
-      "u": "https://www.instagram.com/reel/DQTCkpsEQKm/",
-      "f": "Reel",
-      "i": 97583,
-      "d": "2025-10-27"
-     },
-     {
-      "t": "¡HICIMOS HISTORIA EN LA PROVINCIA! Gracias a todos los bonaerenses que defendieron las ideas de la libertad. Tremendo ap",
-      "u": "https://www.instagram.com/p/DQSxOKmERQA/",
-      "f": "Foto",
-      "i": 53105,
-      "d": "2025-10-26"
-     },
-     {
-      "t": "Con mi amor, mis hijos y mi familia, los que siempre están bancando. Hoy, en un nuevo desafío y una responsabilidad que ",
-      "u": "https://www.instagram.com/p/DQ8EPgwkVO9/",
-      "f": "Carrusel",
-      "i": 42246,
-      "d": "2025-11-11"
-     }
-    ],
-    "serie": [
-     {
-      "d": "2024-12-05",
-      "i": 1489,
-      "f": "Foto"
-     },
-     {
-      "d": "2024-12-06",
-      "i": 1217,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-01-31",
-      "i": 3377,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-03-12",
-      "i": 1343,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-06-10",
-      "i": 3689,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-08-27",
-      "i": 1144,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-09-03",
-      "i": 1870,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-09-04",
-      "i": 1298,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-09-07",
-      "i": 1413,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-10-07",
-      "i": 3323,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-10-07",
-      "i": 5033,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-10-08",
-      "i": 7623,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-10-11",
-      "i": 7927,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-10-11",
-      "i": 7078,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-10-14",
-      "i": 11180,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-10-15",
-      "i": 2795,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-10-16",
-      "i": 4539,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-10-16",
-      "i": 10561,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-10-17",
-      "i": 11516,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2025-10-17",
-      "i": 6706,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-10-18",
-      "i": 4394,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-10-18",
-      "i": 9855,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-10-19",
-      "i": 3593,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-10-20",
-      "i": 7085,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-10-21",
-      "i": 1893,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-10-21",
-      "i": 4329,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-10-21",
-      "i": 2076,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-10-22",
-      "i": 3169,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-10-22",
-      "i": 1801,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-10-22",
-      "i": 1639,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-10-22",
-      "i": 3968,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-10-23",
-      "i": 4874,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-10-23",
-      "i": 1949,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-10-23",
-      "i": 1115,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-10-24",
-      "i": 2331,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-10-24",
-      "i": 3394,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-10-26",
-      "i": 26382,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-10-26",
-      "i": 53105,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-10-26",
-      "i": 13737,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-10-27",
-      "i": 8462,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-10-27",
-      "i": 97583,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-10-27",
-      "i": 8085,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-10-27",
-      "i": 10969,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-10-27",
-      "i": 23736,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-11-02",
-      "i": 11810,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-11-11",
-      "i": 7179,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-11-11",
-      "i": 42246,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2025-12-06",
-      "i": 6962,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-12-27",
-      "i": 1827,
-      "f": "Foto"
-     },
-     {
-      "d": "2026-01-03",
-      "i": 13816,
-      "f": "Foto"
-     },
-     {
-      "d": "2026-01-03",
-      "i": 4723,
-      "f": "Foto"
-     },
-     {
-      "d": "2026-01-03",
-      "i": 10443,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-01-03",
-      "i": 4457,
-      "f": "Foto"
-     },
-     {
-      "d": "2026-02-04",
-      "i": 2112,
-      "f": "Foto"
-     },
-     {
-      "d": "2026-02-11",
-      "i": 4804,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2026-02-12",
-      "i": 2772,
-      "f": "Foto"
-     },
-     {
-      "d": "2026-02-20",
-      "i": 5736,
-      "f": "Foto"
-     },
-     {
-      "d": "2026-02-27",
-      "i": 2720,
-      "f": "Foto"
-     },
-     {
-      "d": "2026-06-28",
-      "i": 7429,
-      "f": "Foto"
-     },
-     {
-      "d": "2026-06-30",
-      "i": 5818,
-      "f": "Reel"
-     }
-    ],
-    "delta7": null,
-    "delta30": null
-   },
+   "ig_error": "@diegosantilliok: 4: (#4) Application request limit reached; @diegosantilli: 110: Invalid user id",
    "historia": [
     {
      "d": "2026-11-14",
@@ -3079,157 +2231,7 @@
    "grupo": "Provincia de Buenos Aires",
    "espacio": "Peronismo",
    "distrito": null,
-   "ig": {
-    "usuario": "veronicamagario",
-    "nombre": "Verónica Magario",
-    "followers": 216668,
-    "follows": 168,
-    "media_count": 3761,
-    "posts_30d": 13,
-    "posts_semana": 3.0,
-    "inter_med": 896,
-    "likes_med": 723,
-    "com_med": 42,
-    "er": 0.414,
-    "formatos": {
-     "Carrusel": {
-      "n": 9,
-      "inter_med": 565,
-      "er": 0.261
-     },
-     "Reel": {
-      "n": 4,
-      "inter_med": 995,
-      "er": 0.459
-     }
-    },
-    "mejor_formato": "Reel",
-    "mejor_dia": "sáb",
-    "mejor_franja": 9,
-    "franjas": {
-     "09-12": 1693,
-     "15-18": 896,
-     "18-21": 571
-    },
-    "dias": {
-     "mar": 896,
-     "mié": 1242,
-     "jue": 432,
-     "vie": 291,
-     "sáb": 1033
-    },
-    "temas": [
-     "nacional",
-     "pueblo",
-     "argentina",
-     "trabajando",
-     "pais",
-     "trabajo",
-     "desarrollo",
-     "gobierno",
-     "milei",
-     "presente",
-     "social",
-     "provincia"
-    ],
-    "hashtags": [
-     "lamatanza",
-     "díadelalealtad",
-     "néstorvive"
-    ],
-    "top": [
-     {
-      "t": "Es posible soñar por un país más justo. Néstor nos lo demostró trabajando con coraje, compromiso y decisión política, ll",
-      "u": "https://www.instagram.com/reel/De_7FVrS-za/",
-      "f": "Reel",
-      "i": 2354,
-      "d": "2026-10-27"
-     },
-     {
-      "t": "¡Milei, cumplí la ley! En una nueva marcha federal universitaria miles de argentinos nos movilizamos en respaldo de la e",
-      "u": "https://www.instagram.com/p/Deh_PMNn876/",
-      "f": "Carrusel",
-      "i": 2058,
-      "d": "2026-10-15"
-     },
-     {
-      "t": "Gracias Papa León XIV por llenar nuestros corazones de fe y esperanza, por escuchar a los excluidos, por reconocer la so",
-      "u": "https://www.instagram.com/p/DfnMwypnylT/",
-      "f": "Carrusel",
-      "i": 1242,
-      "d": "2026-11-11"
-     }
-    ],
-    "serie": [
-     {
-      "d": "2026-10-15",
-      "i": 2058,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2026-10-17",
-      "i": 1033,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-17",
-      "i": 1114,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2026-10-17",
-      "i": 710,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-20",
-      "i": 896,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2026-10-22",
-      "i": 368,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2026-10-27",
-      "i": 2354,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-29",
-      "i": 958,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-03",
-      "i": 565,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2026-11-05",
-      "i": 391,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2026-11-05",
-      "i": 432,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2026-11-11",
-      "i": 1242,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2026-11-13",
-      "i": 291,
-      "f": "Carrusel"
-     }
-    ],
-    "delta7": null,
-    "delta30": null
-   },
+   "ig_error": "@veronicamagario: 4: (#4) Application request limit reached; @magarioveronica: 110: Invalid user id",
    "historia": [
     {
      "d": "2026-11-14",
@@ -3258,407 +2260,7 @@
    "grupo": "Provincia de Buenos Aires",
    "espacio": "Peronismo",
    "distrito": "Tigre",
-   "ig": {
-    "usuario": "malenagalmarini",
-    "nombre": "Malena Galmarini",
-    "followers": 113693,
-    "follows": 1546,
-    "media_count": 2042,
-    "posts_30d": 2,
-    "posts_semana": 0.6,
-    "inter_med": 1683,
-    "likes_med": 1595,
-    "com_med": 66,
-    "er": 1.481,
-    "formatos": {
-     "Carrusel": {
-      "n": 12,
-      "inter_med": 2119,
-      "er": 1.864
-     },
-     "Reel": {
-      "n": 42,
-      "inter_med": 1513,
-      "er": 1.331
-     },
-     "Foto": {
-      "n": 6,
-      "inter_med": 1711,
-      "er": 1.505
-     }
-    },
-    "mejor_formato": "Carrusel",
-    "mejor_dia": "jue",
-    "mejor_franja": 0,
-    "franjas": {
-     "00-03": 2515,
-     "09-12": 1696,
-     "12-15": 1454,
-     "15-18": 2344,
-     "18-21": 1671,
-     "21-24": 1142
-    },
-    "dias": {
-     "lun": 1766,
-     "mar": 2048,
-     "mié": 1701,
-     "jue": 2231,
-     "vie": 2027,
-     "sáb": 821,
-     "dom": 1323
-    },
-    "temas": [
-     "anos",
-     "feliz",
-     "tigre",
-     "amor",
-     "siempre",
-     "mundo",
-     "familia",
-     "politica",
-     "pueblo",
-     "provincia",
-     "nunca",
-     "espalda"
-    ],
-    "hashtags": [
-     "mifamiliamitesoro",
-     "nuncamas",
-     "amorinfinito",
-     "espaldaconespalda",
-     "maleyserporyparasiempre",
-     "son30mil",
-     "siempreespaldaconespalda",
-     "díademibandera"
-    ],
-    "top": [
-     {
-      "t": "No llevo la cuenta de cuántas veces te dije que te amo… No podría medir cuánto te amé aquella vez hace 30 años aunque es",
-      "u": "https://www.instagram.com/p/DXsO7eajTG2/",
-      "f": "Carrusel",
-      "i": 11141,
-      "d": "2026-04-28"
-     },
-     {
-      "t": "Sí, juro! Hoy juré como senadora de la Provincia de Buenos Aires. Arranca una nueva etapa. Con el mismo compromiso milit",
-      "u": "https://www.instagram.com/reel/DSBHmCCEpvq/",
-      "f": "Reel",
-      "i": 7335,
-      "d": "2025-12-08"
-     },
-     {
-      "t": "¡MUY FELIZ CUMPLE, PA! 82 años de experiencia, de recuerdos, de batallas, de resiliencia. Te amo con el alma….❤️ Por muc",
-      "u": "https://www.instagram.com/p/DDz4L2MSsEa/",
-      "f": "Carrusel",
-      "i": 5385,
-      "d": "2024-12-20"
-     }
-    ],
-    "serie": [
-     {
-      "d": "2024-12-06",
-      "i": 363,
-      "f": "Reel"
-     },
-     {
-      "d": "2024-12-20",
-      "i": 5385,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2024-12-27",
-      "i": 2515,
-      "f": "Reel"
-     },
-     {
-      "d": "2024-12-28",
-      "i": 744,
-      "f": "Reel"
-     },
-     {
-      "d": "2024-12-31",
-      "i": 427,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-01-27",
-      "i": 1504,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-02-02",
-      "i": 994,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-02-08",
-      "i": 816,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-02-13",
-      "i": 1004,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-03-04",
-      "i": 2254,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-03-10",
-      "i": 644,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-03-17",
-      "i": 3483,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-03-21",
-      "i": 3235,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-03-24",
-      "i": 1766,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2025-03-27",
-      "i": 1154,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-04-02",
-      "i": 1640,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2025-04-04",
-      "i": 795,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-04-15",
-      "i": 3188,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-04-16",
-      "i": 2215,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-04-28",
-      "i": 3810,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-06-20",
-      "i": 1540,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-07-11",
-      "i": 3425,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2025-07-26",
-      "i": 676,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-08-05",
-      "i": 1865,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-08-18",
-      "i": 4950,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-09-04",
-      "i": 1470,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-09-11",
-      "i": 3581,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2025-10-07",
-      "i": 1837,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-10-19",
-      "i": 1323,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-10-19",
-      "i": 2560,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-10-20",
-      "i": 4763,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-12-08",
-      "i": 7335,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-12-16",
-      "i": 1001,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-02-08",
-      "i": 579,
-      "f": "Foto"
-     },
-     {
-      "d": "2026-02-26",
-      "i": 2766,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-03-01",
-      "i": 431,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-03-23",
-      "i": 1142,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-03-24",
-      "i": 2232,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-04-02",
-      "i": 1696,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-04-28",
-      "i": 11141,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2026-05-12",
-      "i": 3539,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-05-19",
-      "i": 1493,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-05-25",
-      "i": 840,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-05-28",
-      "i": 5277,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2026-06-06",
-      "i": 1453,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-06-07",
-      "i": 4075,
-      "f": "Foto"
-     },
-     {
-      "d": "2026-06-16",
-      "i": 1020,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2026-06-17",
-      "i": 1830,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-06-29",
-      "i": 1322,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-07-26",
-      "i": 1586,
-      "f": "Foto"
-     },
-     {
-      "d": "2026-08-04",
-      "i": 2473,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2026-08-05",
-      "i": 1731,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2026-08-06",
-      "i": 2946,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-08-08",
-      "i": 2878,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-08-18",
-      "i": 3935,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-09-22",
-      "i": 1523,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-07",
-      "i": 1278,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2026-10-07",
-      "i": 1671,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-17",
-      "i": 827,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-13",
-      "i": 382,
-      "f": "Carrusel"
-     }
-    ],
-    "delta7": null,
-    "delta30": null
-   },
+   "ig_error": "@malegalmarini: 110: Invalid user id; @malenagalmarini: 4: (#4) Application request limit reached",
    "historia": [
     {
      "d": "2026-11-14",
@@ -3675,318 +2277,7 @@
    "grupo": "CABA",
    "espacio": "PRO",
    "distrito": null,
-   "ig": {
-    "usuario": "jorgemacri",
-    "nombre": "Jorge Macri",
-    "followers": 272197,
-    "follows": 678,
-    "media_count": 4333,
-    "posts_30d": 44,
-    "posts_semana": 10.3,
-    "inter_med": 4642,
-    "likes_med": 3808,
-    "com_med": 401,
-    "er": 1.706,
-    "formatos": {
-     "Reel": {
-      "n": 25,
-      "inter_med": 4623,
-      "er": 1.698
-     },
-     "Carrusel": {
-      "n": 12,
-      "inter_med": 4291,
-      "er": 1.577
-     },
-     "Foto": {
-      "n": 7,
-      "inter_med": 4662,
-      "er": 1.713
-     }
-    },
-    "mejor_formato": "Foto",
-    "mejor_dia": "lun",
-    "mejor_franja": 21,
-    "franjas": {
-     "06-09": 7475,
-     "09-12": 7545,
-     "12-15": 2213,
-     "15-18": 4692,
-     "18-21": 4010,
-     "21-24": 8738
-    },
-    "dias": {
-     "lun": 11814,
-     "mar": 5114,
-     "mié": 2254,
-     "jue": 2231,
-     "vie": 2307,
-     "sáb": 2443,
-     "dom": 9424
-    },
-    "temas": [
-     "ciudad",
-     "leon",
-     "papa",
-     "buenos",
-     "aires",
-     "historico",
-     "orden",
-     "portenos",
-     "formula",
-     "mundo",
-     "vito",
-     "salud"
-    ],
-    "hashtags": [],
-    "top": [
-     {
-      "t": "Qué honor que me putee un trapito. Un gran indicio de que vamos por el buen camino. Ley y orden.",
-      "u": "https://www.instagram.com/reel/DfUwwtExAtW/",
-      "f": "Reel",
-      "i": 43586,
-      "d": "2026-11-04"
-     },
-     {
-      "t": "EMOCIONANTE!! Más de 2 millones de personas en la Ciudad recibiendo al Papa León XIV.",
-      "u": "https://www.instagram.com/reel/Dfhvv-1xDw0/",
-      "f": "Reel",
-      "i": 43318,
-      "d": "2026-11-09"
-     },
-     {
-      "t": "Vito en la Santa Misa ❤️❤️❤️",
-      "u": "https://www.instagram.com/reel/DfhzucUxIA9/",
-      "f": "Reel",
-      "i": 28262,
-      "d": "2026-11-09"
-     }
-    ],
-    "serie": [
-     {
-      "d": "2026-10-15",
-      "i": 2390,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2026-10-15",
-      "i": 3062,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-16",
-      "i": 3275,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-17",
-      "i": 2443,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2026-10-18",
-      "i": 4662,
-      "f": "Foto"
-     },
-     {
-      "d": "2026-10-19",
-      "i": 4692,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2026-10-20",
-      "i": 5114,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-21",
-      "i": 1245,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2026-10-22",
-      "i": 1717,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-25",
-      "i": 18520,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-25",
-      "i": 6704,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-25",
-      "i": 6490,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2026-10-28",
-      "i": 1751,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-28",
-      "i": 2232,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-28",
-      "i": 697,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2026-10-28",
-      "i": 8394,
-      "f": "Foto"
-     },
-     {
-      "d": "2026-10-28",
-      "i": 2436,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-29",
-      "i": 2072,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-29",
-      "i": 6236,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2026-10-30",
-      "i": 1324,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-30",
-      "i": 2792,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2026-10-30",
-      "i": 1607,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-02",
-      "i": 10428,
-      "f": "Foto"
-     },
-     {
-      "d": "2026-11-02",
-      "i": 5917,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-03",
-      "i": 4623,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-03",
-      "i": 12045,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2026-11-04",
-      "i": 43586,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-06",
-      "i": 1823,
-      "f": "Foto"
-     },
-     {
-      "d": "2026-11-06",
-      "i": 3891,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2026-11-08",
-      "i": 2194,
-      "f": "Foto"
-     },
-     {
-      "d": "2026-11-08",
-      "i": 14590,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-08",
-      "i": 15562,
-      "f": "Foto"
-     },
-     {
-      "d": "2026-11-08",
-      "i": 16617,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2026-11-08",
-      "i": 5332,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-08",
-      "i": 12144,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-09",
-      "i": 13200,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-09",
-      "i": 43318,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-09",
-      "i": 18481,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-09",
-      "i": 28262,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-09",
-      "i": 1440,
-      "f": "Foto"
-     },
-     {
-      "d": "2026-11-09",
-      "i": 24559,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2026-11-09",
-      "i": 4010,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-11",
-      "i": 2277,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-12",
-      "i": 1400,
-      "f": "Reel"
-     }
-    ],
-    "delta7": null,
-    "delta30": null
-   },
+   "ig_error": "@jorgemacri: 4: (#4) Application request limit reached; @jorgemacriok: 110: Invalid user id",
    "historia": [
     {
      "d": "2026-11-14",
@@ -4003,156 +2294,7 @@
    "grupo": "CABA",
    "espacio": "Peronismo",
    "distrito": null,
-   "ig": {
-    "usuario": "leandrosantorook",
-    "nombre": "Leandro Santoro",
-    "followers": 647724,
-    "follows": 699,
-    "media_count": 927,
-    "posts_30d": 13,
-    "posts_semana": 3.0,
-    "inter_med": 23432,
-    "likes_med": 22087,
-    "com_med": 833,
-    "er": 3.618,
-    "formatos": {
-     "Reel": {
-      "n": 10,
-      "inter_med": 23645,
-      "er": 3.65
-     },
-     "Foto": {
-      "n": 3,
-      "inter_med": 21474,
-      "er": 3.315
-     }
-    },
-    "mejor_formato": "Reel",
-    "mejor_dia": "jue",
-    "mejor_franja": 12,
-    "franjas": {
-     "09-12": 17796,
-     "12-15": 24397,
-     "15-18": 22453,
-     "18-21": 167456,
-     "21-24": 22036
-    },
-    "dias": {
-     "lun": 41605,
-     "mar": 18163,
-     "mié": 15311,
-     "jue": 45298,
-     "sáb": 20150,
-     "dom": 29220
-    },
-    "temas": [
-     "frente",
-     "orgullo",
-     "lula",
-     "milei",
-     "farmea",
-     "misa",
-     "papa",
-     "clima",
-     "epoca",
-     "carpa",
-     "fascismo",
-     "basta"
-    ],
-    "hashtags": [],
-    "top": [
-     {
-      "t": "Basta de VIOLENCIA y DISCRIMINACIÓN.",
-      "u": "https://www.instagram.com/reel/DfX8P-SR6G5/",
-      "f": "Reel",
-      "i": 167456,
-      "d": "2026-11-05"
-     },
-     {
-      "t": "Es ley!! Se acaba el acoso a los endeudados!",
-      "u": "https://www.instagram.com/reel/DfF1JQ1xE2n/",
-      "f": "Reel",
-      "i": 45298,
-      "d": "2026-10-29"
-     },
-     {
-      "t": "Bora Lula !! Chau Milei !!",
-      "u": "https://www.instagram.com/reel/De9m7oqREQN/",
-      "f": "Reel",
-      "i": 41605,
-      "d": "2026-10-26"
-     }
-    ],
-    "serie": [
-     {
-      "d": "2026-10-15",
-      "i": 19902,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-20",
-      "i": 11734,
-      "f": "Foto"
-     },
-     {
-      "d": "2026-10-21",
-      "i": 7190,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-24",
-      "i": 23858,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-25",
-      "i": 29220,
-      "f": "Foto"
-     },
-     {
-      "d": "2026-10-26",
-      "i": 41605,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-27",
-      "i": 21474,
-      "f": "Foto"
-     },
-     {
-      "d": "2026-10-29",
-      "i": 45298,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-03",
-      "i": 14853,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-04",
-      "i": 23432,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-05",
-      "i": 167456,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-07",
-      "i": 16442,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-10",
-      "i": 30517,
-      "f": "Reel"
-     }
-    ],
-    "delta7": null,
-    "delta30": null
-   },
+   "ig_error": "@leandrosantorook: 4: (#4) Application request limit reached; @leandrosantoro: 110: Invalid user id; @santoroleandro: 110: Invalid user id",
    "historia": [
     {
      "d": "2026-11-14",
@@ -4169,342 +2311,7 @@
    "grupo": "San Isidro",
    "espacio": "PRO",
    "distrito": null,
-   "ig": {
-    "usuario": "ramonlanus",
-    "nombre": "Ramón Lanús",
-    "followers": 36966,
-    "follows": 1955,
-    "media_count": 2466,
-    "posts_30d": 49,
-    "posts_semana": 11.4,
-    "inter_med": 270,
-    "likes_med": 234,
-    "com_med": 36,
-    "er": 0.73,
-    "formatos": {
-     "Reel": {
-      "n": 43,
-      "inter_med": 241,
-      "er": 0.652
-     },
-     "Foto": {
-      "n": 5,
-      "inter_med": 740,
-      "er": 2.002
-     },
-     "Carrusel": {
-      "n": 1,
-      "inter_med": 397,
-      "er": 1.074
-     }
-    },
-    "mejor_formato": "Foto",
-    "mejor_dia": "dom",
-    "mejor_franja": 6,
-    "franjas": {
-     "06-09": 500,
-     "09-12": 486,
-     "12-15": 309,
-     "15-18": 144,
-     "18-21": 227
-    },
-    "dias": {
-     "lun": 216,
-     "mar": 228,
-     "mié": 321,
-     "jue": 286,
-     "vie": 281,
-     "sáb": 379,
-     "dom": 397
-    },
-    "temas": [
-     "isidro",
-     "vecinos",
-     "gusta",
-     "nuevo",
-     "bien",
-     "boulogne",
-     "estamos",
-     "barrio",
-     "queremos",
-     "disfrutar",
-     "chicos",
-     "cuidar"
-    ],
-    "hashtags": [],
-    "top": [
-     {
-      "t": "Gracias al aviso de una vecina por Ojos en Alerta, detuvimos a 6 delincuentes y recuperamos 38 millones de pesos. Les cu",
-      "u": "https://www.instagram.com/reel/DesWYY2uLB2/",
-      "f": "Reel",
-      "i": 1525,
-      "d": "2026-10-19"
-     },
-     {
-      "t": "Recuperamos el Golf de Boulogne para los vecinos de San Isidro. Revocamos el permiso del club por graves incumplimientos",
-      "u": "https://www.instagram.com/reel/DfpQRt0O8gS/",
-      "f": "Reel",
-      "i": 1510,
-      "d": "2026-11-12"
-     },
-     {
-      "t": "¡En familia a ver al papa León! Qué alegría poder compartir este momento de Fe todos juntos.",
-      "u": "https://www.instagram.com/p/DfhBi8cO4jl/",
-      "f": "Foto",
-      "i": 1279,
-      "d": "2026-11-09"
-     }
-    ],
-    "serie": [
-     {
-      "d": "2026-10-15",
-      "i": 241,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-16",
-      "i": 123,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-17",
-      "i": 291,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-18",
-      "i": 397,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2026-10-19",
-      "i": 110,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-19",
-      "i": 1525,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-20",
-      "i": 155,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-20",
-      "i": 213,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-22",
-      "i": 870,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-23",
-      "i": 144,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-23",
-      "i": 353,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-25",
-      "i": 650,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-26",
-      "i": 111,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-26",
-      "i": 205,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-28",
-      "i": 168,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-28",
-      "i": 108,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-28",
-      "i": 740,
-      "f": "Foto"
-     },
-     {
-      "d": "2026-10-29",
-      "i": 564,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-29",
-      "i": 112,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-30",
-      "i": 486,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-30",
-      "i": 407,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-30",
-      "i": 281,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-31",
-      "i": 467,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-02",
-      "i": 234,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-02",
-      "i": 144,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-02",
-      "i": 227,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-03",
-      "i": 940,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-03",
-      "i": 824,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-03",
-      "i": 728,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-03",
-      "i": 327,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-03",
-      "i": 228,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-03",
-      "i": 196,
-      "f": "Foto"
-     },
-     {
-      "d": "2026-11-04",
-      "i": 128,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-04",
-      "i": 241,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-04",
-      "i": 402,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-04",
-      "i": 629,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-05",
-      "i": 228,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-05",
-      "i": 107,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-05",
-      "i": 158,
-      "f": "Foto"
-     },
-     {
-      "d": "2026-11-06",
-      "i": 270,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-06",
-      "i": 136,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-08",
-      "i": 236,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-09",
-      "i": 1279,
-      "f": "Foto"
-     },
-     {
-      "d": "2026-11-10",
-      "i": 206,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-11",
-      "i": 766,
-      "f": "Foto"
-     },
-     {
-      "d": "2026-11-12",
-      "i": 1510,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-12",
-      "i": 440,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-12",
-      "i": 331,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-13",
-      "i": 856,
-      "f": "Reel"
-     }
-    ],
-    "delta7": null,
-    "delta30": null
-   },
+   "ig_error": "@ramonlanus: 4: (#4) Application request limit reached; @lanusramon: 110: Invalid user id",
    "historia": [
     {
      "d": "2026-11-14",
@@ -4533,110 +2340,7 @@
    "grupo": "San Isidro",
    "espacio": "Frente Renovador",
    "distrito": null,
-   "ig": {
-    "usuario": "federico.meca",
-    "nombre": "Fede Meca",
-    "followers": 13997,
-    "follows": 7853,
-    "media_count": 384,
-    "posts_30d": 5,
-    "posts_semana": 1.2,
-    "inter_med": 53,
-    "likes_med": 0,
-    "com_med": 13,
-    "er": 0.379,
-    "formatos": {
-     "Carrusel": {
-      "n": 2,
-      "inter_med": 88,
-      "er": 0.629
-     },
-     "Reel": {
-      "n": 3,
-      "inter_med": 53,
-      "er": 0.379
-     }
-    },
-    "mejor_formato": "Carrusel",
-    "mejor_dia": "mié",
-    "mejor_franja": 12,
-    "franjas": {
-     "09-12": 31,
-     "12-15": 88,
-     "21-24": 699
-    },
-    "dias": {
-     "mié": 173,
-     "vie": 28
-    },
-    "temas": [
-     "isidro",
-     "desarrollo",
-     "puede",
-     "vecinos",
-     "noche",
-     "beneficio",
-     "siempre",
-     "publica",
-     "calidad",
-     "porque",
-     "defender",
-     "sociedad"
-    ],
-    "hashtags": [],
-    "top": [
-     {
-      "t": "San isidro tiene que crecer, pero de forma ordenada. 🤝 Presentamos un pedido de informes sobre la ampliación de Unicente",
-      "u": "https://www.instagram.com/reel/DexpKQ_tIXx/",
-      "f": "Reel",
-      "i": 699,
-      "d": "2026-10-21"
-     },
-     {
-      "t": "Una Iglesia que abraza, acompaña y no descarta. “Sus vidas no son un peso para la sociedad; son una bendición.” — León X",
-      "u": "https://www.instagram.com/p/DfnBx0Im1_0/",
-      "f": "Carrusel",
-      "i": 173,
-      "d": "2026-11-11"
-     },
-     {
-      "t": "Desarrollo sí, pero con coherencia y pensando en los vecinos. 🏛️ ​En San Isidro vemos cómo día a día se autorizan empren",
-      "u": "https://www.instagram.com/reel/DfHnoTSikno/",
-      "f": "Reel",
-      "i": 53,
-      "d": "2026-10-30"
-     }
-    ],
-    "serie": [
-     {
-      "d": "2026-10-21",
-      "i": 699,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-10-30",
-      "i": 53,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-04",
-      "i": 9,
-      "f": "Reel"
-     },
-     {
-      "d": "2026-11-11",
-      "i": 173,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2026-11-13",
-      "i": 3,
-      "f": "Carrusel"
-     }
-    ],
-    "delta7": null,
-    "delta30": null
-   },
+   "ig_error": "@fedemecaok: 110: Invalid user id; @federico.meca: 4: (#4) Application request limit reached; @mecafederico: 110: Invalid user id; @federicomecaok: 110: Invalid user id; @federicomeca: 110: Invalid user id; @fedemeca: 110: Invalid user id",
    "historia": [
     {
      "d": "2026-11-14",
