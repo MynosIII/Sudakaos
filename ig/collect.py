@@ -205,7 +205,7 @@ def write_tableros(now, cuentas, errores):
                             "completo": bool(st.get("completo")), "actualizado": st.get("actualizado"),
                             "posts": sorted(st["posts"].values(), key=lambda p: p[0], reverse=True)})
             else:
-                row["error"] = errores.get(f["name"], "sin cuenta profesional encontrada")
+                row["error"] = errores.get(f["name"], "pendiente" if S["corte"] else "sin cuenta profesional encontrada")
             figs.append(row)
         ok = sum(1 for r in figs if r.get("usuario"))
         resumen[slug] = f"{ok}/{len(figs)}"
@@ -245,7 +245,9 @@ def main():
                 res[name] = st["usuario"]
                 break
             errs.append(f"@{h}: {str(err)[:70]}")
-        if name not in cuentas:
+        if name not in cuentas and S["corte"] and len(errs) < len(cand[name]):
+            errores[name] = "pendiente: Meta cortó por límite de llamadas, se reintenta en la próxima corrida"
+        elif name not in cuentas:
             errores[name] = "sin cuenta profesional encontrada" + (f" ({'; '.join(errs)[:200]})" if errs else "")
         print(f"{name}: {'@' + cuentas[name]['usuario'] + ' · ' + str(len(cuentas[name]['posts'])) + ' posts' if name in cuentas else errores[name]}")
     # 2) historial pendiente, de la cuenta con menos posts a la de más
@@ -268,7 +270,7 @@ def main():
     falt = sum(1 for st in cuentas.values() if not st.get("completo"))
     print(f"Llamadas: {S['llamadas']} · corte: {S['corte'] or 'no'} · cuentas con historial pendiente: {falt}")
     print("Por tablero:", json.dumps(resumen, ensure_ascii=False))
-    sin = sorted(set(errores))
+    sin = sorted(n for n, e in errores.items() if e.startswith("sin cuenta"))
     if sin:
         print("Sin cuenta profesional:", ", ".join(sin))
 

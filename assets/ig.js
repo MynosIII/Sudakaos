@@ -179,7 +179,7 @@
       ${F.filter(f => f.mes[k].posts).sort((a, b) => b.mes[k].likes - a.mes[k].likes).map(f => `<details${open ? ' open' : ''}><summary><b style="color:${f.color}">@${esc(f.usuario)}</b> ${esc(f.name)}<small>${f.mes[k].posts} posts · ${big(f.mes[k].likes)} likes · ${pc(f.mes[k].er)}</small></summary>${postTable([...f.mes[k].ps].sort((a, b) => b.lk - a.lk), false)}</details>`).join('')}`;
   }
   function missing(D) {
-    const no = D.figuras.filter(f => !f.usuario), pend = S.F.filter(f => !f.completo);
+    const no = D.figuras.filter(f => !f.usuario && !/^pendiente/.test(f.error || '')), pend = S.F.filter(f => !f.completo);
     let h = '';
     if (no.length) h += `<p class="igr-note"><b>Sin cuenta profesional encontrada:</b> ${no.map(f => esc(f.name)).join(', ')}. Instagram solo deja leer cuentas profesionales (empresa o creador); si alguna tiene usuario, se corrige en ig/config.json.</p>`;
     if (pend.length) h += `<p class="igr-note"><b>Historial todavía cargándose:</b> ${pend.map(f => esc(f.name)).join(', ')}. Se completa solo en las próximas corridas diarias.</p>`;
