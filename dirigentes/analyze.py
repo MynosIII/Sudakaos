@@ -78,7 +78,7 @@ POLS = {k: rx_exact([a for a in v["alias"] if a not in v.get("alias_contexto", [
 POLS_CTX = {k: rx_exact(v["alias_contexto"]) for k, v in FIG.items() if v.get("alias_contexto")}
 # Homónimos: el apellido solo no cuenta si el texto nombra a otro con el mismo apellido (Pedro vs. Germán Braillard)
 POLS_NO = {k: rx_exact(v["excluir_si"]) for k, v in FIG.items() if v.get("excluir_si")}
-EXCL = rx_exact(CONFIG.get("excluir_frases", ["zzzz"]))
+EXCL = rx_exact(CONFIG.get("excluir_frases") or ["zzzzqqzz"])  # lista vacía rompería los alias de dos palabras
 SITIOS_LOC = CONFIG.get("sitios_locales", [])
 RSS_LOC = {f["name"] for f in CONFIG["rss"] if f.get("local")}
 TEMAS = {k: rx(v) for k, v in CONFIG["temas"].items()}

@@ -99,7 +99,10 @@ def youtube():
                 break
         if items is None:
             fails += 1
-            if fails >= 3:  # cuota agotada (403) o límite persistente: seguir mañana
+            # cuota agotada (403) o límite persistente (429 dos veces): no gastar más tiempo, seguir mañana
+            if fails >= 2 or not out:
+                if not out:
+                    raise RuntimeError("YouTube sin cupo o con límite de pedidos: se reintenta en la próxima corrida")
                 break
             continue
         fails = 0
@@ -152,7 +155,7 @@ def google_news():
     atom_out = []
     for q in news_queries():
         url = "https://news.google.com/rss/search?" + urllib.parse.urlencode(
-            {"q": q + " when:1y", "hl": "es-419", "gl": "AR", "ceid": "AR:es-419"})
+            {"q": q + " when:" + CONFIG.get("news_when", "1y"), "hl": "es-419", "gl": "AR", "ceid": "AR:es-419"})
         try:
             root = ET.fromstring(get(url))
         except Exception as e:

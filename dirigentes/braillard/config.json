@@ -33,8 +33,8 @@
   "Martín Ascúa",
   "Javier Milei"
  ],
- "window_days": 365,
- "conversacion_dias": 365,
+ "window_days": 730,
+ "conversacion_dias": 540,
  "eleccion": "2027-10-24",
  "eleccion_nota": "Fecha de referencia: generales de octubre de 2027 (legislativas). La gobernación se vuelve a elegir en 2029.",
  "tema_elecciones": "Elecciones y candidaturas",
@@ -56,7 +56,11 @@
     "vicegobernador",
     "vicegobernadora",
     "vice gobernador",
-    "pedro braillard poccard"
+    "pedro braillard poccard",
+    "juan enrique",
+    "enrique braillard",
+    "ministro de turismo",
+    "ministerio de turismo"
    ],
    "bando": "Frente Renovador",
    "cargo": "Diputado provincial; presidente del Frente Renovador Corrientes",
@@ -861,7 +865,10 @@
    "\"Gustavo Valdés\" 2027",
    "Frente Renovador Corrientes Massa",
    "peronismo Corrientes unidad",
-   "Legislatura Corrientes oposición"
+   "Legislatura Corrientes oposición",
+   "Braillard concejal Corrientes",
+   "Braillard Limpiar Corrientes intendencia",
+   "\"Braillard\" renovadores Corrientes legislatura"
   ],
   "sites": [
    "ellitoral.com.ar",
@@ -942,5 +949,6 @@
   "poccard",
   "diputado"
  ],
- "textos_comentarios": "extracto"
+ "textos_comentarios": "extracto",
+ "news_when": "2y"
 }
