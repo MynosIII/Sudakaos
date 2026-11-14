@@ -73,6 +73,9 @@ jobs:
               [ "$d" = indice ] && continue
               t=$(grep -o '<title>[^<]*' "$f" | head -1 | sed 's/<title>//')
               echo "<li><a href=\"../$d/\">${t:-$d}</a> <small>($d/)</small></li>"
+              if [ "$d" = dirigentes ]; then
+                echo '<ul><li><a href="../dirigentes/?d=pagano">Marcela Pagano</a></li><li><a href="../dirigentes/?d=casielles">Eugenio Casielles</a></li><li><a href="../dirigentes/?d=braillard">Germán Braillard</a></li></ul>'
+              fi
             done
             echo '</ul></body></html>'
           } > _site/indice/index.html
