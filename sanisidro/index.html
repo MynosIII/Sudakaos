@@ -293,5 +293,36 @@ function fuentes(){
 }
 })();
 </script>
+<script src="../assets/informe.js"></script>
+<script>
+// Resumen accionable de San Isidro: el intendente y quienes le disputan el distrito
+(function(){let D=null;const {pct,fmt}=Informe;const LOCAL=['Ramón Lanús','Gustavo Posse'];
+const ready=fetch('data/sanisidro.json',{cache:'no-cache'}).then(r=>r.json()).then(d=>{D=d}).catch(()=>{});
+const fig=(name)=>{const P=D.politicos,p=P[name]||{},tot=Object.values(P).reduce((s,x)=>s+(x.menciones||0),0)||1,n=p.menciones||0;
+  const neg=n?100*(p.negativas||0)/n:null,pos=n?100*(p.positivas||0)/n:null;
+  const ap=name.split(' ').slice(-1)[0].toLowerCase();
+  return {name,n,share:100*n/tot,tone:n?{NEG:+neg.toFixed(1),POS:+pos.toFixed(1),NEU:+(100-neg-pos).toFixed(1)}:null,tone_base:'textos',temas:p.temas||[],
+    headlines:(D.titulares||[]).filter(t=>t.titulo.toLowerCase().includes(ap)).slice(0,3).map(t=>({t:t.titulo,o:t.medio,u:t.url})),_p:p}};
+Informe.init({titulo:'San Isidro',def:'Ramón Lanús',ready,
+  fuentes:['notas de Google News y medios de zona norte','comentarios públicos de YouTube','reclamos vecinales por localidad'],
+  opciones:()=>D?Object.keys(D.politicos).map(n=>({name:n,grupo:LOCAL.includes(n)?'San Isidro':'Dirigentes nacionales'})):[],
+  build:name=>{const a=fig(name),p=a._p,extra=[],sec=[],ctx=[];
+    const pares=Object.keys(D.politicos).filter(n=>n!==name).map(fig);
+    const T=(D.temas||[]).slice().sort((x,y)=>(y.reclamos+y.vecinos)-(x.reclamos+x.vecinos)),t=T[0];
+    const L=(D.localidades||[]).filter(l=>l.reclamos>=2).sort((x,y)=>y.reclamos-x.reclamos)[0];
+    const brecha=(D.temas||[]).filter(x=>x.reclamos>=10&&x.agenda_medios<x.reclamos*0.5).sort((x,y)=>y.reclamos-x.reclamos)[0];
+    sec.push(['Lo que reclaman los vecinos',`<p>Reclamos más repetidos: ${T.slice(0,4).map(x=>`${x.tema} (${fmt(x.reclamos)})`).join(', ')}.${L?` La localidad con más reclamos ubicados es ${L.nombre} (${fmt(L.reclamos)}).`:''}</p>`]);
+    if(p.en_reclamos)sec.push(['Cuando lo nombran en un reclamo',`<p>Aparece en ${fmt(p.en_reclamos)} reclamos vecinales${(p.temas||[]).length?`, sobre todo por ${p.temas.slice(0,3).map(x=>`${x[0]} (${x[1]})`).join(', ')}`:''}.</p>`]);
+    if(t)ctx.push(`Reclamo vecinal n.º 1 en San Isidro: ${t.tema} (${t.reclamos} reclamos, ${t.apoyo} apoyos en comentarios).`);
+    if(name==='Ramón Lanús'&&t){extra.push({k:'reclamo',score:64,titulo:`dar una respuesta visible sobre «${t.tema}»`,porque:`es el reclamo vecinal más repetido: ${fmt(t.reclamos)} reclamos, ${fmt(t.agenda_medios)} notas y ${fmt(t.apoyo)} apoyos en comentarios`,kpi:'menos reclamos del tema en las próximas 4 semanas',video:`qué hace el municipio con ${t.tema.toLowerCase()}, con un dato concreto`});
+      if(L)extra.push({k:'reclamo',score:46,titulo:`poner el foco en ${L.nombre}`,porque:`es la localidad con más reclamos ubicados (${fmt(L.reclamos)})`,kpi:`menos reclamos en ${L.nombre}`,video:`recorrida por ${L.nombre}`});
+      if(brecha&&brecha!==t)extra.push({k:'reclamo',score:44,titulo:`atender «${brecha.tema}» antes de que llegue a los medios`,porque:`tiene ${fmt(brecha.reclamos)} reclamos de vecinos pero apenas ${fmt(brecha.agenda_medios)} notas: todavía no es noticia`,kpi:'resolver o comunicar antes de que crezca en medios',video:'aviso de obra o solución puntual'})}
+    else if(LOCAL.includes(name)&&t){extra.push({k:'tema',score:60,titulo:`proponer una salida para «${t.tema}»`,porque:`es lo que más reclaman los vecinos (${fmt(t.reclamos)} reclamos y ${fmt(t.apoyo)} apoyos) y la gestión actual no lo resolvió`,kpi:'aparecer en notas sobre el tema',video:`propuesta concreta sobre ${t.tema.toLowerCase()}`});
+      if(L)extra.push({k:'tema',score:45,titulo:`caminar ${L.nombre}`,porque:`es la localidad con más reclamos ubicados (${fmt(L.reclamos)})`,kpi:`presencia en ${L.nombre}`,video:`recorrida por ${L.nombre}`})}
+    return {a,pares,rivales:LOCAL.filter(n=>n!==name),extra,secciones:sec,contexto:ctx,unidad:'menciones',ventana:`los últimos ${D.window_days} días`,
+      objetivo:name==='Gustavo Posse'?{y:'instalarse como la alternativa en San Isidro',why:'los reclamos vecinales están sin respuesta y él tiene poca presencia en la conversación'}:null,
+      sub:name==='Ramón Lanús'?'Intendente de San Isidro':name==='Gustavo Posse'?'Exintendente · Acción Vecinal':'Dirigente nacional en la conversación de San Isidro',rol:name==='Ramón Lanús'?'intendente de San Isidro':null,publico:'vecinos de San Isidro'}}});
+})();
+</script>
 </body>
 </html>

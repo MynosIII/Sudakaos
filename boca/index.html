@@ -592,5 +592,37 @@ document.addEventListener('click',e=>{
 });
 })();
 </script>
+<script src="../assets/informe.js"></script>
+<script>
+// Resumen accionable de Boca: cada figura dirigencial es una "X"
+(function(){let D=null;const {pct,fmt,list}=Informe;
+const ready=fetch('data/boca.json',{cache:'no-cache'}).then(r=>r.json()).then(d=>{D=d}).catch(()=>{});
+const POL=['Oficialismo','Oposición','Distanciado'],ap=n=>n.split(' ').slice(-1)[0].toLowerCase();
+Informe.init({titulo:'Boca Juniors',def:'Juan Román Riquelme',ready,
+  fuentes:['notas de Google News y medios deportivos','comentarios públicos de YouTube','Wikipedia'],
+  opciones:()=>D?D.figuras.filter(f=>POL.includes(f.bando)&&(f.n>=5||f.foco||(D.aspirante&&f.name===D.aspirante.name))).map(f=>({name:f.name,grupo:f.bando})):[],
+  build:name=>{const F=D.figuras,a=F.find(f=>f.name===name)||{},V=D.voz||{},E=D.elecciones||{},extra=[],sec=[],ctx=[];
+    const pares=F.filter(f=>POL.includes(f.bando)&&f.name!==name);
+    const rivales=F.filter(f=>POL.includes(f.bando)&&f.bando!==a.bando).map(f=>f.name);
+    // pedidos de los hinchas que lo nombran
+    const ped=(V.pedidos||[]).filter(p=>p.p.toLowerCase().includes(ap(name)));
+    ped.slice(0,1).forEach(p=>{const vaya=/vaya|renuncie|afuera/i.test(p.p);
+      extra.push({k:vaya?'tono':'bal+',score:vaya?50+Math.min(30,p.n*2):40+Math.min(30,p.n),titulo:vaya?'responder a quienes piden su salida':'capitalizar el pedido de los hinchas',
+        porque:`el pedido «${p.p}» se repite ${fmt(p.n)} veces en los comentarios`,kpi:vaya?'que el pedido baje a la mitad en 4 semanas':'convertir el pedido en apoyo explícito a una propuesta',video:vaya?'mostrar resultados concretos de gestión, sin confrontar':'convocatoria directa a los socios'})});
+    if(a.foco&&!ped.length&&(V.pedidos||[])[0]){const p=V.pedidos[0];extra.push({k:'tema',score:40+Math.min(25,p.n),titulo:'responder al pedido más repetido',porque:`lo que más piden los hinchas es «${p.p}» (${fmt(p.n)} veces)`,kpi:'que el pedido baje en las próximas 4 semanas',video:'respuesta directa al pedido'})}
+    // temas que crecen y en los que aparece
+    const T=(V.temas||[]).filter(t=>t.last28>=30&&t.last28>=1.5*Math.max(t.prev28,1)&&(a.foco||(t.figuras||[]).some(x=>x[0]===name)));
+    T.sort((x,y)=>y.last28-x.last28).slice(0,1).forEach(t=>extra.push({k:'tema',score:40+Math.min(30,t.last28/20),titulo:`ponerse al frente de «${t.tema}»`,
+      porque:`es el tema que más crece: ${fmt(t.last28)} textos en 4 semanas contra ${fmt(t.prev28)} antes, con un balance de ${t.balance>0?'+':''}${t.balance} entre apoyo y crítica`,kpi:'balance del tema en positivo',video:`postura clara sobre ${t.tema.toLowerCase()}`}));
+    // elecciones 2027
+    const ef=(E.figuras||[]).find(x=>x.name===name);
+    if(ef){sec.push(['Hacia las elecciones del club',`<p>Faltan ${fmt(E.dias)} días para las elecciones. En la conversación electoral aparece en ${fmt(ef.n)} textos, con ${pct(ef.tono&&ef.tono.NEG)} de tono negativo${ef.balance!=null?` y un balance apoyo−crítica de ${ef.balance}`:''}.</p>`]);ctx.push(`Elecciones del club en ${E.dias} días; en la conversación electoral: ${ef.n} textos, balance ${ef.balance}.`);
+      if(ef.balance!=null&&ef.balance<=-40&&ef.n>=10)extra.push({k:'bal',score:45+Math.min(25,-ef.balance/4),titulo:'mejorar su imagen de cara a 2027',porque:`cuando se habla de las elecciones, la crítica le gana al apoyo por ${-ef.balance} puntos (${fmt(ef.n)} textos)`,kpi:'balance electoral por encima de −20',video:'qué Boca propone para después de 2027'})}
+    // aspirante a vice
+    const A=D.aspirante;if(A&&A.name===name){sec.push(['Como posible '+A.rol,`<p>${(A.lectura||[]).map(x=>x.replace(/[.]$/,'')).join('. ')}.</p>`]);ctx.push(`Se lo mide como posible ${A.rol}: ${pct(A.rol_pct,1)} de sus textos lo vinculan con candidaturas.`);
+      if(A.rol_pct<15)extra.push({k:'vis',score:62,titulo:`instalarse como candidato a ${A.rol}`,porque:`solo ${pct(A.rol_pct,1)} de sus ${fmt(A.n)} textos lo vinculan con una candidatura o una fórmula`,kpi:`más de 15% de sus menciones ligadas a la candidatura`,video:'presentación de su proyecto y de su rol en la fórmula'})}
+    return {a,pares,rivales,extra,secciones:sec,contexto:ctx,sub:[a.cargo,a.bando].filter(Boolean).join(' · '),rol:a.cargo,ventana:`los últimos ${D.conversacion_dias} días`,publico:'hinchas y socios de Boca'}}});
+})();
+</script>
 </body>
 </html>
