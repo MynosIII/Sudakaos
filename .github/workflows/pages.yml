@@ -65,6 +65,9 @@ jobs:
           mkdir -p _site/meta
           if [ -d meta/data ]; then cp -R meta/data _site/meta/; fi
           cp resumen.js _site/
+          # Landing institucional 3D (Sudakaos LATAM)
+          mkdir -p _site/web
+          cp web/index.html _site/web/
           # Reporte de Instagram por tablero (ig/store queda afuera: es el historial de trabajo del recolector)
           mkdir -p _site/ig
           if [ -d ig/data ]; then cp -R ig/data _site/ig/; fi
