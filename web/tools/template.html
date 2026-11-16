@@ -4,163 +4,186 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f5f4ef">
 <meta name="description" content="Sudakaos LATAM: inteligencia, comunicación y tecnología para equipos políticos, gobiernos y organizaciones de América Latina.">
 <title>Sudakaos LATAM — Inteligencia y respuesta estratégica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=Schibsted+Grotesk:wght@400..700&display=swap">
 <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js"}}</script>
 <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js" crossorigin>
 <style>
-:root{--paper:#f5f4ef;--ink:#171715;--muted:#66665f;--red:#c51e35;--line:#d8d7d0;--card:#eeede7;--dark:#171715;--white:#fff;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:86px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}a{color:inherit;text-decoration:none}button,a{-webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible{outline:3px solid var(--red);outline-offset:4px}
-.wrap{max-width:1240px;padding:0 36px;margin:auto}.mono,.eyebrow{font-family:var(--mono);text-transform:uppercase;letter-spacing:1.4px;font-size:10px;line-height:1.6}.red{color:var(--red)}
-header{position:sticky;top:0;background:rgba(245,244,239,.96);border-bottom:1px solid var(--line);z-index:20}
-.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-weight:800;font-size:22px;letter-spacing:-1px;display:inline-flex;align-items:center;gap:1px}.brand span{color:var(--red)}
-@keyframes beat{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(.72);opacity:.55}}
-nav{display:flex;align-items:center;gap:27px;font-size:12px;color:#45453f}nav a:not(.nav-cta){position:relative}nav a:not(.nav-cta):after{content:"";position:absolute;left:0;right:100%;bottom:-6px;height:1px;background:var(--red);transition:right .25s}nav a:not(.nav-cta):hover:after{right:0}
-.nav-cta,.button{display:inline-flex;align-items:center;justify-content:center;background:var(--red);color:#fff;border-radius:99px;padding:14px 22px;font:700 10px var(--mono);letter-spacing:1px;text-transform:uppercase;transition:.2s}.nav-cta:hover,.button:hover{background:#99182a;transform:translateY(-1px)}
-.menu{display:none;background:none;border:1px solid var(--line);border-radius:20px;padding:9px 14px;font:10px var(--mono);letter-spacing:1px;color:var(--ink)}
-/* ---------- HERO ---------- */
-.hero{padding:28px 0 52px;position:relative}
-.hero-grid{display:grid;grid-template-columns:.86fr 1.14fr;gap:0;align-items:center}.hero-grid>div:first-child{position:relative;z-index:2;padding:40px 0}
-.hero .eyebrow{margin:0 0 24px}
-.hero h1{font-size:clamp(44px,4.4vw,68px);line-height:.94;letter-spacing:-4px;font-weight:650;margin:0 0 25px;max-width:760px}
-.hero h1 em{font-style:normal;color:var(--red)}
-.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em;margin-bottom:-.06em}
-.hero h1 .ln>span{display:inline-block;transform:translateY(105%);animation:rise .9s cubic-bezier(.2,.8,.2,1) forwards}
-.hero h1 .ln:nth-child(2)>span{animation-delay:.12s}.hero h1 .ln:nth-child(3)>span{animation-delay:.24s}
-@keyframes rise{to{transform:none}}
-.fade-in{opacity:0;animation:fin .9s .45s ease forwards}@keyframes fin{to{opacity:1}}
-.lead{font-size:18px;line-height:1.6;color:#55564f;max-width:590px;margin:0 0 27px}
-.actions{display:flex;gap:11px;align-items:center;flex-wrap:wrap}.button.secondary{background:transparent;border:1px solid #aaa9a1;color:var(--ink)}.button.secondary:hover{background:#e9e8e1}
-.hero-note{margin-top:22px;color:var(--muted);font-size:11px;line-height:1.6;max-width:430px}
+/* Tipografía: Newsreader (titulares) + Schibsted Grotesk (texto). Monoespaciada solo para datos: códigos, coordenadas, horas. */
+:root{--paper:#f5f4ef;--paper-2:#ecebe4;--ink:#1b1a17;--ink-2:#45443f;--muted:#6b6a63;--red:#c51e35;--red-dk:#9e1729;--line:#d6d5cc;--dark:#1b1a17;
+--serif:"Newsreader",Georgia,"Times New Roman",serif;--sans:"Schibsted Grotesk",Arial,Helvetica,sans-serif;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.wrap{max-width:1240px;padding:0 36px;margin:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;margin:0}
+/* Cabecera */
+header{position:sticky;top:0;background:var(--paper);border-bottom:1px solid var(--line);z-index:20}
+.nav{height:68px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{font:700 21px/1 var(--sans);letter-spacing:-.04em}.brand span{color:var(--red)}
+nav{display:flex;align-items:center;gap:28px;font-size:14px;color:var(--ink-2)}nav a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px}
+.nav-cta{color:var(--red)!important;font-weight:600}
+.menu{display:none;background:none;border:0;font:600 14px var(--sans);color:var(--ink);padding:8px 0}
+/* Botones: uno principal, el resto como enlace */
+.button{display:inline-block;background:var(--red);color:#fff;border-radius:2px;padding:13px 20px;font:600 15px/1 var(--sans);transition:background .15s}.button:hover{background:var(--red-dk)}
+.textlink{font-weight:600;border-bottom:1px solid currentColor;padding-bottom:2px}.textlink:hover{color:var(--red)}
+/* Hero */
+.hero{padding:8px 0 0}
+.hero-grid{display:grid;grid-template-columns:.84fr 1.16fr;align-items:center}
+.hero-copy{position:relative;z-index:2;padding:48px 0}
+.tagline{font-size:14px;color:var(--muted);margin:0 0 22px}.tagline b{color:var(--red);font-weight:600}
+.hero h1{font-size:clamp(46px,5vw,78px);line-height:1;letter-spacing:-.025em;margin:0 0 26px;max-width:640px}
+.hero h1 em{font-style:italic;color:var(--red)}
+.lead{font-size:19px;line-height:1.55;color:var(--ink-2);max-width:540px;margin:0 0 30px}
+.actions{display:flex;gap:26px;align-items:center;flex-wrap:wrap}
+.hero-note{margin:30px 0 0;color:var(--muted);font-size:14px;line-height:1.6;max-width:440px}
 /* Escenario del globo */
-.stage{position:relative;height:clamp(600px,calc(100vh - 110px),900px);margin-right:calc((min(100vw,1240px) - 100vw)/2 - 36px);margin-left:-40px;isolation:isolate}
+.stage{position:relative;height:clamp(600px,calc(100vh - 90px),900px);margin-right:calc((min(100vw,1240px) - 100vw)/2 - 36px);margin-left:-40px;isolation:isolate}
 .slot{position:absolute;inset:0;z-index:1}
 .globe-host{position:absolute;inset:0}.globe-host canvas{display:block;width:100%;height:100%;touch-action:pan-y;cursor:grab}.globe-host canvas:active{cursor:grabbing}
 .labels{position:absolute;inset:0;pointer-events:none;overflow:hidden}
-.lbl{position:absolute;left:0;top:0;font:9px/1 var(--mono);letter-spacing:.8px;color:var(--ink);white-space:nowrap;transform:translate(-50%,-50%);will-change:transform,opacity;transition:opacity .25s}
-.lbl b{display:inline-block;background:var(--paper);border:1px solid #c9c8c0;padding:4px 6px;margin-left:12px;font-weight:700}
-.lbl i{font-style:normal;color:var(--red);margin-left:6px;opacity:0;transition:opacity .3s}.lbl.hot i{opacity:1}
-.lbl.hot b{background:var(--red);border-color:var(--red);color:#fff}
-.dark .lbl{color:#efeee8}.dark .lbl b{background:#22221f;border-color:#3a3a35}.dark .lbl i{color:#ef3b52}
-.hud{position:absolute;z-index:3;font:9px/1.5 var(--mono);letter-spacing:1px;text-transform:uppercase;color:#55554f;pointer-events:none}
-.hud.tl{top:18px;left:56px}.hud.tr{top:18px;right:36px;text-align:right}.hud.bl{bottom:18px;left:56px}.hud.br{bottom:18px;right:36px;text-align:right}
-.hud .live{color:var(--red)}
-@keyframes blink{50%{opacity:.15}}
-.corner{position:absolute;width:18px;height:18px;border:1.5px solid var(--ink);z-index:3;pointer-events:none}.corner.a{top:8px;left:8px;border-right:0;border-bottom:0}.corner.b{top:8px;right:8px;border-left:0;border-bottom:0}.corner.c{bottom:8px;left:8px;border-right:0;border-top:0}.corner.d{bottom:8px;right:8px;border-left:0;border-top:0}
-.chip{position:absolute;z-index:3;font:10px var(--mono);letter-spacing:.8px;background:var(--paper);padding:8px 10px;border:1px solid var(--line);pointer-events:none;opacity:0;animation:fin .6s ease forwards}
-.chip:before{content:"";display:inline-block;width:6px;height:6px;background:var(--red);margin-right:7px;vertical-align:1px}
-.chip.one{top:58px;left:22px;animation-delay:2.1s}.chip.two{right:22px;top:30%;animation-delay:2.3s}.chip.three{bottom:22%;left:22px;animation-delay:2.5s}.chip.four{bottom:58px;right:22px;animation-delay:2.7s}
-.core-tag{position:absolute;left:50%;bottom:44px;transform:translateX(-50%);z-index:3;background:var(--red);color:#fff;font:700 10px var(--mono);letter-spacing:1px;padding:9px 14px;border-radius:99px;white-space:nowrap;box-shadow:0 0 0 8px #c51e3518;pointer-events:none;opacity:0;animation:fin .6s 2.9s ease forwards}
-.boot{position:absolute;z-index:4;left:22px;top:52px;font:10px/1.9 var(--mono);letter-spacing:.8px;color:var(--ink);pointer-events:none;transition:opacity .6s}
-.boot .ok{color:var(--red)}
-.boot.gone{opacity:0}
-.drag-hint{opacity:0;animation:fin .6s 3.2s ease forwards;transition:opacity .4s}
-.fallback-note{display:none}
-.proof-strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr);margin-top:52px}.proof-strip div{padding:20px 18px 20px 0;position:relative}.proof-strip div+div{padding-left:20px;border-left:1px solid var(--line)}.proof-strip strong{display:block;font-size:15px;margin-bottom:5px}.proof-strip span{font:9px/1.5 var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
-.proof-strip div:before{content:"";position:absolute;top:-1px;left:0;height:2px;width:0;background:var(--red);transition:width .9s cubic-bezier(.2,.8,.2,1)}.proof-strip div+div:before{left:20px}.proof-strip.seen div:before{width:40px}
-/* ---------- SECCIONES ---------- */
-.section{padding:92px 0}.section-head{display:grid;grid-template-columns:1fr .55fr;gap:40px;align-items:end;margin-bottom:39px}.section-head h2{font-weight:550;font-size:clamp(35px,4.8vw,58px);line-height:1.02;letter-spacing:-2.5px;margin:11px 0 0;max-width:780px}.section-head p{color:var(--muted);font-size:14px;line-height:1.7;margin:0}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;perspective:1200px}
-.card{background:var(--card);padding:25px;min-height:250px;border:1px solid #e5e4dd;position:relative;transform-style:preserve-3d;transition:transform .5s cubic-bezier(.2,.8,.2,1),border-color .3s,box-shadow .5s}
-.card:after{content:"";position:absolute;left:-1px;top:-1px;height:2px;width:0;background:var(--red);transition:width .45s}
-.card:hover:after{width:calc(100% + 2px)}a.card{display:flex;flex-direction:column;color:inherit}a.card:hover{border-color:#cfcec6}a.card ul{flex:1}.more{display:flex;justify-content:space-between;margin-top:20px;padding-top:14px;border-top:1px solid var(--line);font:10px var(--mono);letter-spacing:1px;text-transform:uppercase;color:var(--ink)}.more i{font-style:normal;color:var(--red);transition:transform .25s}a.card:hover .more{color:var(--red)}a.card:hover .more i{transform:translateX(4px)}
-.card.tilting{transition:transform .08s linear,border-color .3s,box-shadow .5s;box-shadow:0 26px 40px -24px #17171540}
-.card-num{font:10px var(--mono);color:var(--red)}.card h3{font-size:24px;letter-spacing:-.7px;font-weight:550;margin:32px 0 11px}.card p{font-size:13px;line-height:1.7;color:#5a5a54;margin:0}.card ul{list-style:none;padding:15px 0 0;margin:17px 0 0;border-top:1px solid var(--line);font-size:11px;line-height:1.8;color:#41413c}.card li:before{content:'↗';color:var(--red);padding-right:8px}
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}.reveal.in{opacity:1;transform:none}
+.lbl{position:absolute;left:0;top:0;font:600 11px/1 var(--sans);color:var(--ink);white-space:nowrap;will-change:transform,opacity;transition:opacity .25s}
+.lbl b{display:inline-block;background:var(--paper);padding:3px 5px;margin-left:10px;font-weight:600}
+.lbl i{font:400 10px var(--mono);font-style:normal;color:var(--red);margin-left:6px;opacity:0;transition:opacity .3s}.lbl.hot i{opacity:1}
+.lbl.hot b{background:var(--red);color:#fff}
+.dark .lbl{color:#efeee8}.dark .lbl b{background:var(--dark)}.dark .lbl i{color:#ef3b52}
+.hud{position:absolute;z-index:3;font-size:12px;color:var(--muted);pointer-events:none}
+.hud.tl{top:20px;left:56px}.hud.tr{top:20px;right:36px;font-family:var(--mono);font-size:11px}.hud.bl{bottom:20px;left:56px;font-family:var(--mono);font-size:11px}.hud.br{bottom:20px;right:36px}
+.hud .fig{font-style:italic;font-family:var(--serif);font-size:14px;color:var(--ink)}
+.boot{display:none}
+/* Franja de capacidades */
+.proof{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink);margin-top:8px}
+.proof div{padding:18px 20px 22px 0}.proof div+div{padding-left:20px;border-left:1px solid var(--line)}
+.proof strong{display:block;font:500 21px/1.2 var(--serif);margin-bottom:4px}.proof span{font-size:14px;color:var(--muted)}
+/* Secciones */
+.section{padding:110px 0}
+.head{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:end;margin-bottom:48px}
+.head h2{font-size:clamp(36px,4.4vw,60px);line-height:1.02;letter-spacing:-.02em}
+.head p{font-size:16px;line-height:1.65;color:var(--ink-2);margin:0;max-width:520px}
+/* Índice de capacidades (filas, no tarjetas) */
+.caps{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.caps a{display:grid;grid-template-columns:56px 150px minmax(0,1fr) minmax(0,1.15fr) 110px;gap:24px;align-items:baseline;padding:26px 0 28px;border-bottom:1px solid var(--line);transition:background .2s}
+.caps a:hover{background:var(--paper-2)}
+.caps .n{font:italic 400 18px var(--serif);color:var(--red)}
+.caps .k{font-size:14px;color:var(--muted)}
+.caps h3{font-size:30px;line-height:1.1;transition:color .2s}
+.caps p{font-size:15px;line-height:1.6;color:var(--ink-2);margin:0}
+.caps .go{font-size:14px;font-weight:600;text-align:right;color:var(--ink)}
+.caps a:hover h3,.caps a:hover .go{color:var(--red)}
 /* Banda oscura con globo de fondo */
 .band-wrap{position:relative;background:var(--dark);color:var(--paper)}
 .band-bg{position:absolute;inset:0;pointer-events:none}
 .band-sticky{position:sticky;top:0;height:100vh;height:100lvh;overflow:hidden}
-.band-sticky .slot{opacity:.62}
-.band-sticky:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#171715 0%,#171715d9 30%,#17171500 62%);pointer-events:none}
-.band-grid{position:absolute;inset:0;background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);background-size:64px 64px;pointer-events:none}
-.band{position:relative;background:transparent;color:var(--paper)}
-.band .section-head p{color:#bcbcb5}.band .card{background:#22221f;border-color:#353530}.band .card p,.band .card li{color:#c4c4bc}.band .card h3{color:#fff}.band .card ul{border-color:#3a3a35}
-.band .card.tilting{box-shadow:0 26px 40px -22px #000}
-.method{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #3a3a35;position:relative}
-.method:before{content:"";position:absolute;top:-1px;left:0;height:2px;width:var(--prog,0%);background:var(--red);transition:width .2s linear}
-.step{padding:22px 20px 5px 0;transition:opacity .5s}.step+.step{padding-left:20px;border-left:1px solid #3a3a35}.step b{font:11px var(--mono);color:var(--red)}.step h3{font-size:18px;font-weight:550;margin:20px 0 8px;color:#fff}.step p{font-size:12px;line-height:1.7;color:#a9a9a1;margin:0}
-.step .big{display:block;font:650 64px/1 Arial,Helvetica,sans-serif;letter-spacing:-3px;color:transparent;-webkit-text-stroke:1px #4a4a44;margin-top:14px;transition:color .6s,-webkit-text-stroke-color .6s}
-.step.on .big{color:var(--red);-webkit-text-stroke-color:var(--red)}
-/* Sala de situación: consola */
-.console{display:grid;grid-template-columns:1.25fr .75fr;gap:12px;margin-bottom:12px}
-.feed,.status{background:#1d1d1a;border:1px solid #353530;padding:18px 20px;font:10px/1.6 var(--mono);letter-spacing:.6px;text-transform:uppercase;color:#c4c4bc}
-.feed-head,.status-head{display:flex;justify-content:space-between;gap:12px;color:#8c8c84;border-bottom:1px solid #353530;padding-bottom:10px;margin-bottom:8px}
-.feed-head .live{color:#ed334b}.feed-head .live:before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:#ed334b;margin-right:6px;vertical-align:1px;animation:blink 1.2s steps(2) infinite}
-.feed ol{list-style:none;margin:0;padding:0;height:180px;overflow:hidden;position:relative}
-.feed ol:after{content:"";position:absolute;left:0;right:0;bottom:0;height:40px;background:linear-gradient(#1d1d1a00,#1d1d1a)}
-.feed li{display:grid;grid-template-columns:62px 46px 1fr;gap:10px;padding:6px 0;border-bottom:1px dashed #2f2f2b;animation:feedin .5s cubic-bezier(.2,.8,.2,1)}
-.feed li .t{color:#77776f}.feed li .c{color:#fff;font-weight:700}.feed li .k{color:#ed334b}.feed li .s{color:#8c8c84;text-transform:none;letter-spacing:.2px}
-@keyframes feedin{from{opacity:0;transform:translateY(-12px)}}
-.status dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:9px 14px}.status dt{color:#77776f}.status dd{margin:0;color:#efeee8;text-align:right}
-.meter{height:3px;background:#2f2f2b;margin-top:14px;position:relative;overflow:hidden}.meter i{position:absolute;inset:0 auto 0 0;width:30%;background:#ed334b;animation:scan 2.8s ease-in-out infinite}
-@keyframes scan{0%{left:-30%}100%{left:100%}}
-.sim{margin-top:12px;color:#77776f;font-size:9px;text-transform:uppercase;letter-spacing:.8px}
-/* Resto */
-.editorial{background:#e9e8e1;position:relative}.editorial-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:68px}.editorial h2{font-size:clamp(38px,5vw,58px);line-height:1.02;letter-spacing:-2.4px;font-weight:550;margin:12px 0}.editorial-intro{font-size:14px;line-height:1.7;color:#575850}.pillars{display:grid;grid-template-columns:1fr 1fr;gap:10px;perspective:1200px}.pillar{background:#f7f6f1;border:1px solid #d8d7d0;padding:21px;position:relative;transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s}.pillar.tilting{transition:transform .08s linear;box-shadow:0 26px 40px -24px #17171540}.pillar b{font:9px var(--mono);color:var(--red)}.pillar h3{font-size:18px;margin:18px 0 8px;font-weight:550}.pillar p{font-size:12px;line-height:1.65;color:#5c5c56;margin:0}.values{padding:28px 0 0;color:#565750;font:10px/1.8 var(--mono);text-transform:uppercase;letter-spacing:.6px}
-.contact{background:var(--red);color:#fff;padding:75px 0;position:relative;overflow:hidden}
-.contact canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.5;pointer-events:none}
-.contact-grid{display:grid;grid-template-columns:1fr .7fr;gap:50px;align-items:end;position:relative}.contact .eyebrow{color:#f7c9ce}.contact h2{font-size:clamp(42px,6vw,72px);line-height:.98;letter-spacing:-3px;font-weight:550;margin:17px 0 16px}.contact p{font-size:14px;line-height:1.7;color:#ffe4e7;max-width:490px}.contact .button{background:#fff;color:var(--red)}.contact .button:hover{background:#f4e8e9}
-footer{background:var(--dark);color:#eee;padding:28px 0}.foot{display:flex;justify-content:space-between;align-items:center;gap:20px;font:9px var(--mono);color:#babbb4}.foot strong{font:700 17px Arial;letter-spacing:-.8px;color:#fff}.foot strong span{color:#ed334b}.foot a:hover{color:#fff}
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-@media(max-width:980px){.hero-grid{grid-template-columns:1fr;gap:0}.hero-grid>div:first-child{padding:24px 0 0}.stage{height:600px;margin:0 -36px}}
-@media(max-width:850px){.wrap{padding:0 23px}.nav{height:68px}nav{gap:14px}.nav-cta{padding:12px 16px}.hero{padding-top:46px}.proof-strip{grid-template-columns:1fr 1fr}.proof-strip div:nth-child(3){border-left:0;padding-left:0;border-top:1px solid var(--line)}.proof-strip div:nth-child(3):before{left:0}.proof-strip div:nth-child(4){border-top:1px solid var(--line)}.section-head{grid-template-columns:1fr;gap:14px}.cards{grid-template-columns:1fr 1fr}.editorial-grid{grid-template-columns:1fr;gap:32px}.method{grid-template-columns:1fr 1fr}.step:nth-child(3){border-left:0;padding-left:0;border-top:1px solid #3a3a35}.step:nth-child(4){border-top:1px solid #3a3a35}.console{grid-template-columns:1fr}.band-sticky .slot{opacity:.42}.contact-grid{grid-template-columns:1fr;gap:15px}.band-sticky:after{background:linear-gradient(180deg,#171715cc 0%,#17171599 50%,#171715cc 100%)}}
-@media(max-width:560px){.wrap{padding:0 16px}.brand{font-size:19px}.menu{display:block}nav{display:none;position:absolute;left:0;right:0;top:68px;background:var(--paper);padding:18px 20px 22px;border-bottom:1px solid var(--line);align-items:stretch;flex-direction:column}nav.open{display:flex}nav a{padding:8px 0}.nav-cta{align-self:flex-start}.hero{padding:36px 0 34px}.hero h1{font-size:50px;letter-spacing:-3.4px}.lead{font-size:16px}.stage{height:440px;margin:0 -16px}.hud.tl{left:16px}.hud.tr{display:none}.chip{font-size:8px;padding:6px 7px}.chip.one{top:44px;left:12px}.chip.two{right:12px;top:26%}.chip.three{left:12px;bottom:76px}.chip.four{right:12px;bottom:110px}.hud{font-size:8px}.hud.tl{left:14px;top:14px}.hud.tr{right:14px;top:14px}.hud.bl,.hud.br,.drag-hint{display:none}.boot{left:14px;top:42px;font-size:9px}.core-tag{font-size:9px;bottom:16px}.proof-strip{margin-top:34px}.proof-strip div{padding:15px 10px 15px 0}.proof-strip div+div{padding-left:12px}.proof-strip strong{font-size:13px}.proof-strip span{font-size:8px}.section{padding:65px 0}.section-head h2{font-size:40px}.cards{grid-template-columns:1fr}.card{min-height:0}.card h3{margin-top:22px}.method{grid-template-columns:1fr}.step,.step+.step{padding:18px 0;border-left:0;border-top:1px solid #3a3a35}.step:first-child{border-top:0}.step .big{font-size:48px}.feed li{grid-template-columns:54px 40px 1fr;gap:8px}.pillars{grid-template-columns:1fr}.contact{padding:58px 0}.contact h2{font-size:48px}.foot{align-items:flex-start;flex-wrap:wrap}.foot span:last-child{width:100%}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.001s!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.001s!important}.reveal{opacity:1;transform:none}.hero h1 .ln>span{transform:none}.boot{display:none}}
+.band-sticky .slot{opacity:.48}
+.band-sticky:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#1b1a17 0%,#1b1a17eb 45%,#1b1a1700 85%);pointer-events:none}
+.band{position:relative;color:var(--paper)}
+.band .head p{color:#bdbcb4}
+.method{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #4a4943}
+.step{padding:22px 24px 0 0}.step+.step{padding-left:24px;border-left:1px solid #3a3934}
+.step b{font:italic 400 26px var(--serif);color:#ef3b52}.step h3{font-size:23px;margin:16px 0 8px;color:#fff}.step p{font-size:14px;line-height:1.65;color:#b3b2aa;margin:0}
+.console{display:grid;grid-template-columns:1.3fr .7fr;gap:0;border-top:1px solid #4a4943;border-bottom:1px solid #4a4943;margin-bottom:56px}
+.feed{padding:20px 32px 22px 0;border-right:1px solid #3a3934}.status{padding:20px 0 22px 32px}
+.c-head{display:flex;justify-content:space-between;gap:12px;font-size:13px;color:#9d9c94;margin-bottom:10px}.c-head strong{color:#fff;font-weight:600}
+.c-head .t{font-family:var(--mono);font-size:11px}
+.feed ol{list-style:none;margin:0;padding:0;height:196px;overflow:hidden;position:relative}
+.feed ol:after{content:"";position:absolute;left:0;right:0;bottom:0;height:46px;background:linear-gradient(#1b1a1700,#1b1a17)}
+.feed li{display:grid;grid-template-columns:70px 50px 1fr;gap:12px;padding:8px 0;border-bottom:1px solid #2c2b27;font-size:14px;animation:feedin .5s ease}
+.feed li .t{font:11px/1.9 var(--mono);color:#86857d}.feed li .c{font:11px/1.9 var(--mono);color:#fff}.feed li .k{color:#fff}.feed li .s{color:#9d9c94;font-size:13px}
+@keyframes feedin{from{opacity:0}}
+.status dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:10px 14px;font-size:14px}.status dt{color:#9d9c94}.status dd{margin:0;color:#efeee8;text-align:right}
+.sim{margin:12px 0 0;color:#86857d;font-size:12px;font-style:italic;font-family:var(--serif)}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid #4a4943}
+.trio article{padding:24px 28px 0 0}.trio article+article{padding-left:28px;border-left:1px solid #3a3934}
+.trio .n{font:italic 400 18px var(--serif);color:#ef3b52}.trio h3{font-size:27px;color:#fff;margin:12px 0 10px}.trio p{font-size:15px;line-height:1.65;color:#c4c3bb;margin:0 0 16px}
+.trio ul{list-style:none;margin:0;padding:0;font-size:14px;color:#b3b2aa}.trio li{padding:7px 0;border-top:1px solid #34332e}
+.note{font-size:13px;line-height:1.7;color:#9d9c94;margin:36px 0 0;max-width:760px}
+/* Canal */
+.editorial{background:var(--paper-2)}
+.ed-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px}
+.ed-grid h2{font-size:clamp(36px,4.4vw,58px);line-height:1.02;letter-spacing:-.02em;margin:0 0 18px}
+.ed-intro{font-size:16px;line-height:1.7;color:var(--ink-2);margin:0}
+.pillars{display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+.pillar{padding:20px 0 24px;border-top:1px solid var(--ink)}.pillar:nth-child(n+3){border-top-color:var(--line)}
+.pillar span{font-size:13px;color:var(--red);font-weight:600}.pillar h3{font-size:24px;margin:8px 0 8px}.pillar p{font-size:15px;line-height:1.6;color:var(--ink-2);margin:0}
+.values{margin:28px 0 0;font:italic 400 17px/1.6 var(--serif);color:var(--ink-2)}
+/* Contacto */
+.contact{background:var(--red);color:#fff;padding:96px 0 90px}
+.contact-grid{display:grid;grid-template-columns:1fr .65fr;gap:56px;align-items:end}
+.contact h2{font-size:clamp(44px,6vw,84px);line-height:.98;letter-spacing:-.025em;margin:0 0 20px}
+.contact p{font-size:16px;line-height:1.65;color:#ffe2e6;max-width:500px;margin:0}
+.contact .button{background:var(--paper);color:var(--ink)}.contact .button:hover{background:#fff}
+.contact small{display:block;font-size:13px;color:#ffd0d6;margin-top:16px;line-height:1.6}
+footer{background:var(--dark);color:#c9c8c0;padding:28px 0;font-size:13px}.foot{display:flex;justify-content:space-between;align-items:center;gap:20px}.foot strong{font:700 18px var(--sans);letter-spacing:-.04em;color:#fff}.foot strong span{color:#ef3b52}.foot a:hover{color:#fff}
+@media(max-width:1060px){.caps a{grid-template-columns:44px minmax(0,1fr) minmax(0,1.2fr) 90px}.caps .k{display:none}}
+@media(max-width:980px){.hero-grid{grid-template-columns:1fr}.hero-copy{padding:28px 0 0}.stage{height:600px;margin:0 -36px}}
+@media(max-width:850px){.wrap{padding:0 23px}nav{gap:16px}.proof{grid-template-columns:1fr 1fr}.proof div:nth-child(3){border-left:0;padding-left:0}.proof div:nth-child(n+3){border-top:1px solid var(--line)}.head,.ed-grid,.contact-grid{grid-template-columns:1fr;gap:18px}.caps a{grid-template-columns:36px minmax(0,1fr);gap:6px 14px}.caps p{grid-column:2}.caps .go{grid-column:2;text-align:left}.method{grid-template-columns:1fr 1fr}.step:nth-child(3){border-left:0;padding-left:0}.step:nth-child(n+3){margin-top:24px}.console{grid-template-columns:1fr}.feed{border-right:0;padding-right:0;border-bottom:1px solid #3a3934}.status{padding-left:0}.trio{grid-template-columns:1fr}.trio article+article{padding-left:0;border-left:0;border-top:1px solid #3a3934;margin-top:24px}.band-sticky .slot{opacity:.38}.band-sticky:after{background:#1b1a1799}}
+@media(max-width:560px){.wrap{padding:0 16px}.menu{display:block}nav{display:none;position:absolute;left:0;right:0;top:68px;background:var(--paper);padding:14px 16px 20px;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:4px}nav.open{display:flex}nav a{padding:8px 0}.hero h1{font-size:46px}.lead{font-size:17px}.stage{height:440px;margin:0 -16px}.hud.tl{left:16px}.hud.tr,.hud.bl,.hud.br{display:none}.section{padding:76px 0}.caps h3{font-size:25px}.method{grid-template-columns:1fr}.step,.step+.step{padding:20px 0 0;border-left:0;margin-top:0}.step+.step{border-top:1px solid #3a3934;margin-top:20px}.pillars{grid-template-columns:1fr}.pillar:nth-child(2){border-top-color:var(--line)}.feed li{grid-template-columns:62px 42px 1fr;gap:8px}.foot{flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.feed li{animation:none}}
 </style>
 </head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="#inicio" aria-label="Sudakaos LATAM inicio">Sudakaos<span>●</span>&nbsp;LATAM</a><button class="menu" aria-expanded="false" aria-controls="nav">MENÚ</button><nav id="nav"><a href="#soluciones">Soluciones</a><a href="#metodo">Cómo trabajamos</a><a href="#respuesta">Sala de situación</a><a href="#canal">Canal digital</a><a class="nav-cta" href="#contacto">Hablemos ↗</a></nav></div></header>
+<header><div class="wrap nav"><a class="brand" href="#inicio" aria-label="Sudakaos LATAM inicio">Sudakaos<span>●</span> LATAM</a><button class="menu" aria-expanded="false" aria-controls="nav">Menú</button><nav id="nav"><a href="#soluciones">Soluciones</a><a href="#metodo">Cómo trabajamos</a><a href="#respuesta">Sala de situación</a><a href="#canal">Canal digital</a><a class="nav-cta" href="#contacto">Hablemos</a></nav></div></header>
 <main id="inicio">
-<section class="hero"><div class="wrap hero-grid"><div>
-<p class="eyebrow fade-in" style="animation-delay:.05s"><span class="red">SUDAKAOS LATAM</span> · INTELIGENCIA · COMUNICACIÓN · HIGH TECH</p>
-<h1><span class="ln"><span>Cuando el escenario</span></span><span class="ln"><span>se tensa, <em>tu equipo</em></span></span><span class="ln"><span>está preparado.</span></span></h1>
-<p class="lead fade-in">Somos un equipo multidisciplinario para anticipar escenarios, coordinar comunicación estratégica y responder con criterio ante crisis digitales, filtraciones y asuntos de interés público.</p>
-<div class="actions fade-in"><a class="button" href="#contacto">Explorar una solución ↗</a><a class="button secondary" href="#soluciones">Conocer capacidades</a></div>
-<p class="hero-note fade-in">Un equipo multidisciplinario con grupos de acción y comunicación en distintos países de América Latina, articulados con perspectiva local y coordinación regional.</p>
+<section class="hero"><div class="wrap hero-grid"><div class="hero-copy">
+<p class="tagline"><b>Sudakaos LATAM</b> · Inteligencia, comunicación y high tech</p>
+<h1>Cuando el escenario se tensa, <em>tu equipo</em> está preparado.</h1>
+<p class="lead">Somos un equipo multidisciplinario para anticipar escenarios, coordinar comunicación estratégica y responder con criterio ante crisis digitales, filtraciones y asuntos de interés público.</p>
+<div class="actions"><a class="button" href="#contacto">Explorar una solución</a><a class="textlink" href="#soluciones">Conocer capacidades</a></div>
+<p class="hero-note">Un equipo multidisciplinario con grupos de acción y comunicación en distintos países de América Latina, articulados con perspectiva local y coordinación regional.</p>
 </div>
 <div class="stage" id="stage" role="img" aria-label="Globo interactivo de América Latina con señales que conectan ciudades de la región: capacidades integradas de datos e inteligencia, comunicación, tecnología y territorio, al servicio de decisiones con evidencia.">
   <div class="slot" id="slotHero"></div>
-  <div class="hud tl"><span class="live">FIG. 01</span> — Red regional · decisiones con evidencia</div>
+  <div class="hud tl"><span class="fig">Fig. 1</span> &nbsp;Red regional, decisiones con evidencia</div>
   <div class="hud tr" id="clock">UTC --:--:--</div>
-  <div class="hud bl" id="coords">CENTRO 12.0°S · 62.0°O</div>
-  <div class="hud br drag-hint" id="dragHint">↔ Arrastrá para girar</div>
+  <div class="hud bl" id="coords">12.0°S 62.0°O</div>
+  <div class="hud br" id="dragHint">Arrastrá para girar el globo</div>
   <div class="boot" id="boot" aria-hidden="true"></div>
 </div>
 </div>
-<div class="wrap"><div class="proof-strip" id="proof"><div><strong>Comunicación</strong><span>Estrategia, narrativa y producción</span></div><div><strong>Inteligencia</strong><span>Señales convertidas en contexto</span></div><div><strong>Tecnología</strong><span>Automatización y protección</span></div><div><strong>Personas</strong><span>Equipos y comunidades reales</span></div></div></div></section>
+<div class="wrap"><div class="proof"><div><strong>Comunicación</strong><span>Estrategia, narrativa y producción</span></div><div><strong>Inteligencia</strong><span>Señales convertidas en contexto</span></div><div><strong>Tecnología</strong><span>Automatización y protección</span></div><div><strong>Personas</strong><span>Equipos y comunidades reales</span></div></div></div></section>
 
-<section class="section" id="soluciones"><div class="wrap"><div class="section-head reveal"><div><p class="eyebrow red">01 / QUÉ RESOLVEMOS</p><h2>Capacidades diversas.<br>Una respuesta coordinada.</h2></div><p>Diseñamos el alcance a partir de la pregunta, las fuentes disponibles y los estándares de seguridad. Cada proyecto define responsables, entregables, métricas y límites.</p></div><div class="cards"><a class="card link reveal" href="inteligencia/"><span class="card-num">01 / INTELIGENCIA</span><h3>Datos para decidir</h3><p>Recolección y análisis de información pública o autorizada, con trazabilidad y lectura humana.</p><ul><li>Monitoreo de medios y conversación pública</li><li>Scraping de comentarios públicos bajo reglas de plataforma</li><li>Validación de métricas, deduplicación y tableros</li><li>Informes ejecutivos con fuentes y limitaciones</li></ul><span class="more">Ver capacidad <i>→</i></span></a><a class="card link reveal" href="prospectiva/"><span class="card-num">02 / PROSPECTIVA</span><h3>Preparación para escenarios</h3><p>Exploramos cambios posibles, señales tempranas y decisiones que cada escenario podría exigir.</p><ul><li>Mapas de actores, temas y riesgos</li><li>Escenarios con supuestos explícitos</li><li>Alertas tempranas y criterios de revisión</li><li>Simulaciones de respuesta y ejercicios</li></ul><span class="more">Ver capacidad <i>→</i></span></a><a class="card link reveal" href="comunicacion/"><span class="card-num">03 / COMUNICACIÓN</span><h3>Mensajes con sustento</h3><p>Ordenamos identidad, estrategia y producción para que el trabajo sea claro, consistente y evaluable.</p><ul><li>Estrategia editorial y posicionamiento</li><li>Vocería, media training y crisis</li><li>Redes sociales y producción audiovisual</li><li>Medición de piezas y aprendizaje continuo</li></ul><span class="more">Ver capacidad <i>→</i></span></a><a class="card link reveal" href="sistemas/"><span class="card-num">04 / SISTEMAS</span><h3>Equipos conectados</h3><p>Herramientas y automatizaciones para coordinar procesos, equipos y bases de contacto.</p><ul><li>Sistemas de gestión de equipos y tareas</li><li>Bases humanas con consentimiento y controles</li><li>Automatización de flujos y reportes</li><li>Capacitación y documentación operativa</li></ul><span class="more">Ver capacidad <i>→</i></span></a><a class="card link reveal" href="ciberseguridad/"><span class="card-num">05 / CIBERSEGURIDAD</span><h3>Prevención y respuesta</h3><p>Protección de activos digitales y preparación ante incidentes mediante trabajo autorizado.</p><ul><li>Evaluación de exposición y controles</li><li>Protocolos de resguardo y acceso</li><li>Monitoreo de fuentes autorizadas</li><li>Coordinación de respuesta a incidentes</li></ul><span class="more">Ver capacidad <i>→</i></span></a><a class="card link reveal" href="comunidad/"><span class="card-num">06 / COMUNIDAD</span><h3>Participación organizada</h3><p>Capacitamos y acompañamos redes humanas para escuchar, informar y participar de manera transparente.</p><ul><li>Formación para equipos territoriales y digitales</li><li>Guías, escucha y escalamiento de consultas</li><li>Distribución identificable y no engañosa</li><li>Indicadores de actividad y calidad</li></ul><span class="more">Ver capacidad <i>→</i></span></a></div></div></section>
+<section class="section" id="soluciones"><div class="wrap">
+<div class="head"><h2>Capacidades diversas. Una respuesta coordinada.</h2><p>Diseñamos el alcance a partir de la pregunta, las fuentes disponibles y los estándares de seguridad. Cada proyecto define responsables, entregables, métricas y límites.</p></div>
+<ol class="caps">
+<li><a href="inteligencia/"><span class="n">1</span><span class="k">Inteligencia</span><h3>Datos para decidir</h3><p>Recolección y análisis de información pública o autorizada, con trazabilidad y lectura humana.</p><span class="go">Ver detalle</span></a></li>
+<li><a href="prospectiva/"><span class="n">2</span><span class="k">Prospectiva</span><h3>Preparación para escenarios</h3><p>Exploramos cambios posibles, señales tempranas y decisiones que cada escenario podría exigir.</p><span class="go">Ver detalle</span></a></li>
+<li><a href="comunicacion/"><span class="n">3</span><span class="k">Comunicación</span><h3>Mensajes con sustento</h3><p>Ordenamos identidad, estrategia y producción para que el trabajo sea claro, consistente y evaluable.</p><span class="go">Ver detalle</span></a></li>
+<li><a href="sistemas/"><span class="n">4</span><span class="k">Sistemas</span><h3>Equipos conectados</h3><p>Herramientas y automatizaciones para coordinar procesos, equipos y bases de contacto.</p><span class="go">Ver detalle</span></a></li>
+<li><a href="ciberseguridad/"><span class="n">5</span><span class="k">Ciberseguridad</span><h3>Prevención y respuesta</h3><p>Protección de activos digitales y preparación ante incidentes mediante trabajo autorizado.</p><span class="go">Ver detalle</span></a></li>
+<li><a href="comunidad/"><span class="n">6</span><span class="k">Comunidad</span><h3>Participación organizada</h3><p>Capacitamos y acompañamos redes humanas para escuchar, informar y participar de manera transparente.</p><span class="go">Ver detalle</span></a></li>
+</ol>
+</div></section>
 
 <div class="band-wrap dark" id="bandWrap">
-<div class="band-bg" aria-hidden="true"><div class="band-sticky"><div class="band-grid"></div><div class="slot" id="slotBand"></div></div></div>
-<section class="section band" id="metodo"><div class="wrap"><div class="section-head reveal"><div><p class="eyebrow red">02 / CÓMO TRABAJAMOS</p><h2>Del problema a una decisión accionable.</h2></div><p>Trabajo modular: sumamos perfiles de comunicación, análisis, tecnología, seguridad y territorio en función del caso. La composición del equipo se confirma para cada proyecto.</p></div><div class="method" id="method"><article class="step"><b>01</b><span class="big" aria-hidden="true">01</span><h3>Definir la pregunta</h3><p>Objetivo, territorio, horizonte temporal, decisión asociada y responsables.</p></article><article class="step"><b>02</b><span class="big" aria-hidden="true">02</span><h3>Validar las fuentes</h3><p>Accesos, permisos, cobertura, calidad de datos y restricciones aplicables.</p></article><article class="step"><b>03</b><span class="big" aria-hidden="true">03</span><h3>Integrar capacidades</h3><p>Equipo, herramientas, entregables, protocolo de seguridad y calendario.</p></article><article class="step"><b>04</b><span class="big" aria-hidden="true">04</span><h3>Medir y aprender</h3><p>Reporte con evidencia, métricas verificables, limitaciones y próximos pasos.</p></article></div></div></section>
-<section class="section band" id="respuesta"><div class="wrap"><div class="section-head reveal"><div><p class="eyebrow red">03 / SALA DE SITUACIÓN</p><h2>Claridad y coordinación cuando cada minuto cuenta.</h2></div><p>Activamos equipos multidisciplinarios para ordenar señales, verificar información y coordinar respuestas ante escenarios de alta exposición. El alcance se define según el incidente, las fuentes autorizadas y las personas responsables.</p></div>
-<div class="console reveal" aria-label="Demostración de consola de monitoreo con datos simulados">
-  <div class="feed"><div class="feed-head"><span class="live">Flujo de señales</span><span id="feedClock">--:--:-- UTC</span></div><ol id="feed" aria-live="off"></ol><p class="sim">Simulación ilustrativa · no son datos reales</p></div>
-  <div class="status"><div class="status-head"><span>Estado de la sala</span><span>v.2026</span></div><dl><dt>Modo</dt><dd>Escucha activa</dd><dt>Fuentes</dt><dd>Medios · video · búsquedas</dd><dt>Verificación</dt><dd>Lectura humana</dd><dt>Decisión</dt><dd>En manos del cliente</dd><dt>Señales en pantalla</dt><dd id="sigCount">0</dd></dl><div class="meter"><i></i></div></div>
+<div class="band-bg" aria-hidden="true"><div class="band-sticky"><div class="slot" id="slotBand"></div></div></div>
+<section class="section band" id="metodo"><div class="wrap">
+<div class="head"><h2>Del problema a una decisión accionable.</h2><p>Trabajo modular: sumamos perfiles de comunicación, análisis, tecnología, seguridad y territorio en función del caso. La composición del equipo se confirma para cada proyecto.</p></div>
+<div class="method"><article class="step"><b>1</b><h3>Definir la pregunta</h3><p>Objetivo, territorio, horizonte temporal, decisión asociada y responsables.</p></article><article class="step"><b>2</b><h3>Validar las fuentes</h3><p>Accesos, permisos, cobertura, calidad de datos y restricciones aplicables.</p></article><article class="step"><b>3</b><h3>Integrar capacidades</h3><p>Equipo, herramientas, entregables, protocolo de seguridad y calendario.</p></article><article class="step"><b>4</b><h3>Medir y aprender</h3><p>Reporte con evidencia, métricas verificables, limitaciones y próximos pasos.</p></article></div>
+</div></section>
+<section class="section band" id="respuesta" style="padding-top:20px"><div class="wrap">
+<div class="head"><h2>Claridad y coordinación cuando cada minuto cuenta.</h2><p>Activamos equipos multidisciplinarios para ordenar señales, verificar información y coordinar respuestas ante escenarios de alta exposición. El alcance se define según el incidente, las fuentes autorizadas y las personas responsables.</p></div>
+<div class="console" aria-label="Demostración de una consola de monitoreo con datos simulados">
+  <div class="feed"><div class="c-head"><strong>Flujo de señales</strong><span class="t" id="feedClock">--:--:-- UTC</span></div><ol id="feed" aria-live="off"></ol><p class="sim">Simulación ilustrativa: no son datos reales.</p></div>
+  <div class="status"><div class="c-head"><strong>Estado de la sala</strong></div><dl><dt>Modo</dt><dd>Escucha activa</dd><dt>Fuentes</dt><dd>Medios, video y búsquedas</dd><dt>Verificación</dt><dd>Lectura humana</dd><dt>Decisión</dt><dd>En manos del cliente</dd><dt>Señales en pantalla</dt><dd id="sigCount">0</dd></dl></div>
 </div>
-<div class="cards"><article class="card reveal"><span class="card-num">01 / DETECTAR</span><h3>Entender qué ocurre</h3><p>Reunimos señales públicas y reportes autorizados para construir una cronología y separar hechos confirmados de versiones.</p><ul><li>Monitoreo de agenda y conversación pública</li><li>Verificación inicial de contenidos y fuentes</li><li>Mapa de actores, canales y riesgos</li></ul></article><article class="card reveal"><span class="card-num">02 / COORDINAR</span><h3>Una respuesta, un equipo</h3><p>Conectamos vocería, comunicación, asesoría y referentes operativos con roles y circuitos de aprobación definidos.</p><ul><li>Centro de coordinación y registro de decisiones</li><li>Mensajes clave y preguntas difíciles</li><li>Preparación de voceros y equipos</li></ul></article><article class="card reveal"><span class="card-num">03 / RESPONDER</span><h3>Actuar con criterio</h3><p>Preparamos opciones de respuesta proporcionales, con evidencia y seguimiento. La decisión final siempre queda en manos del cliente.</p><ul><li>Protocolos de crisis y escalamiento</li><li>Contención comunicacional y actualización</li><li>Evaluación posterior y aprendizajes</li></ul></article></div><p style="font-size:11px;line-height:1.7;color:#c4c4bc;margin:22px 0 0">En incidentes de seguridad, el análisis técnico se realiza con autorización y especialistas asignados al proyecto. No se garantiza evitar incidentes ni controlar la conversación pública.</p></div></section>
+<div class="trio">
+<article><span class="n">Detectar</span><h3>Entender qué ocurre</h3><p>Reunimos señales públicas y reportes autorizados para construir una cronología y separar hechos confirmados de versiones.</p><ul><li>Monitoreo de agenda y conversación pública</li><li>Verificación inicial de contenidos y fuentes</li><li>Mapa de actores, canales y riesgos</li></ul></article>
+<article><span class="n">Coordinar</span><h3>Una respuesta, un equipo</h3><p>Conectamos vocería, comunicación, asesoría y referentes operativos con roles y circuitos de aprobación definidos.</p><ul><li>Centro de coordinación y registro de decisiones</li><li>Mensajes clave y preguntas difíciles</li><li>Preparación de voceros y equipos</li></ul></article>
+<article><span class="n">Responder</span><h3>Actuar con criterio</h3><p>Preparamos opciones de respuesta proporcionales, con evidencia y seguimiento. La decisión final siempre queda en manos del cliente.</p><ul><li>Protocolos de crisis y escalamiento</li><li>Contención comunicacional y actualización</li><li>Evaluación posterior y aprendizajes</li></ul></article>
+</div>
+<p class="note">En incidentes de seguridad, el análisis técnico se realiza con autorización y especialistas asignados al proyecto. No se garantiza evitar incidentes ni controlar la conversación pública.</p>
+</div></section>
 </div>
 
-<section class="section editorial" id="canal"><div class="wrap editorial-grid"><div class="reveal"><p class="eyebrow red">04 / SUDAKAOS COMO CANAL</p><h2>Una voz propia.<br>Seria, rápida y confiable.</h2><p class="editorial-intro">El canal digital de Sudakaos debe proyectar solvencia, preparación y criterio. Explicamos asuntos complejos, mostramos cómo trabajamos y compartimos información útil para quienes toman decisiones en América Latina.</p></div><div><div class="pillars"><article class="pillar reveal"><b>01 / CONTEXTO</b><h3>Señales que importan</h3><p>Lecturas de temas de interés público, riesgos emergentes y cambios de agenda, siempre con fecha y fuentes.</p></article><article class="pillar reveal"><b>02 / MÉTODO</b><h3>Cómo lo sabemos</h3><p>Explicar métricas, límites, herramientas y criterios de validación sin vender certezas.</p></article><article class="pillar reveal"><b>03 / HERRAMIENTAS</b><h3>Qué se puede hacer</h3><p>Casos, guías y demostraciones de datos, automatización, seguridad y comunicación.</p></article><article class="pillar reveal"><b>04 / PERSONAS</b><h3>Una red regional</h3><p>Equipos de acción y comunicación en distintos países, con coordinación local y perspectiva latinoamericana.</p></article></div><p class="values reveal">Tono: profesional · sereno · directo · regional · preparado<br>Regla editorial: cada cifra con fuente, período, alcance y limitaciones.</p></div></div></section>
-<section class="contact" id="contacto"><div class="wrap contact-grid"><div class="reveal"><p class="eyebrow">SUDAKAOS LATAM / PRÓXIMO PASO</p><h2>¿Qué necesitás<br>entender mejor?</h2><p>Conversemos sobre el desafío, el contexto y la evidencia disponible. El primer intercambio sirve para delimitar una evaluación, no implica una promesa de resultado.</p></div><div class="reveal"><a class="button" href="mailto:lab@sudakaos.com?subject=Consulta%20Sudakaos%20LATAM">Escribir al equipo ↗</a><p class="mono" style="font-size:9px;color:#ffe4e7;margin-top:19px">Alcance, fuentes, entregables y condiciones se acuerdan antes de iniciar cada proyecto.</p></div></div></section>
-</main><footer><div class="wrap foot"><a href="#inicio"><strong>Sudakaos<span>●</span> LATAM</strong></a><span>INTELIGENCIA · COMUNICACIÓN · TECNOLOGÍA</span><a href="#inicio">VOLVER ARRIBA ↑</a></div></footer>
+<section class="section editorial" id="canal"><div class="wrap ed-grid"><div><h2>Una voz propia. Seria, rápida y confiable.</h2><p class="ed-intro">El canal digital de Sudakaos debe proyectar solvencia, preparación y criterio. Explicamos asuntos complejos, mostramos cómo trabajamos y compartimos información útil para quienes toman decisiones en América Latina.</p></div><div><div class="pillars"><article class="pillar"><span>Contexto</span><h3>Señales que importan</h3><p>Lecturas de temas de interés público, riesgos emergentes y cambios de agenda, siempre con fecha y fuentes.</p></article><article class="pillar"><span>Método</span><h3>Cómo lo sabemos</h3><p>Explicar métricas, límites, herramientas y criterios de validación sin vender certezas.</p></article><article class="pillar"><span>Herramientas</span><h3>Qué se puede hacer</h3><p>Casos, guías y demostraciones de datos, automatización, seguridad y comunicación.</p></article><article class="pillar"><span>Personas</span><h3>Una red regional</h3><p>Equipos de acción y comunicación en distintos países, con coordinación local y perspectiva latinoamericana.</p></article></div><p class="values">Tono profesional, sereno, directo, regional y preparado. Regla editorial: cada cifra con fuente, período, alcance y limitaciones.</p></div></div></section>
+<section class="contact" id="contacto"><div class="wrap contact-grid"><div><h2>¿Qué necesitás entender mejor?</h2><p>Conversemos sobre el desafío, el contexto y la evidencia disponible. El primer intercambio sirve para delimitar una evaluación, no implica una promesa de resultado.</p></div><div><a class="button" href="mailto:lab@sudakaos.com?subject=Consulta%20Sudakaos%20LATAM">Escribir al equipo</a><small>Alcance, fuentes, entregables y condiciones se acuerdan antes de iniciar cada proyecto.</small></div></div></section>
+</main><footer><div class="wrap foot"><a href="#inicio"><strong>Sudakaos<span>●</span> LATAM</strong></a><span>Inteligencia, comunicación y tecnología</span><a href="#inicio">Volver arriba</a></div></footer>
 
 <script>
-/* ===== Interfaz general (sin dependencias) ===== */
 (function(){
 var menu=document.querySelector('.menu'),nav=document.querySelector('#nav');
 menu.addEventListener('click',function(){var open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));nav.classList.toggle('open',open)});
 nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');menu.setAttribute('aria-expanded','false')})});
-var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
-// Aparición al hacer scroll
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var el=e.target,sib=el.parentNode?Array.prototype.indexOf.call(el.parentNode.children,el):0;el.style.transitionDelay=(el.classList.contains('card')||el.classList.contains('pillar')?Math.min(sib,5)*70:0)+'ms';el.classList.add('in');io.unobserve(el)}})},{rootMargin:'0px 0px -8% 0px'});
-document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
-var proof=document.getElementById('proof');new IntersectionObserver(function(es,o){if(es[0].isIntersecting){proof.classList.add('seen');o.disconnect()}}).observe(proof);
-// Método: progreso por scroll
-var method=document.getElementById('method'),steps=method.querySelectorAll('.step');
-function onScroll(){var r=method.getBoundingClientRect(),vh=innerHeight,p=Math.min(1,Math.max(0,(vh*.85-r.top)/(r.height+vh*.35)));method.style.setProperty('--prog',(p*100).toFixed(1)+'%');var n=Math.ceil(p*steps.length+.001);steps.forEach(function(s,i){s.classList.toggle('on',i<n&&p>0)})}
-addEventListener('scroll',onScroll,{passive:true});onScroll();
-// Relojes UTC
 function pad(n){return(n<10?'0':'')+n}
 function clock(){var d=new Date(),s=pad(d.getUTCHours())+':'+pad(d.getUTCMinutes())+':'+pad(d.getUTCSeconds());document.getElementById('clock').textContent='UTC '+s;document.getElementById('feedClock').textContent=s+' UTC'}
 clock();setInterval(clock,1000);
@@ -187,9 +210,9 @@ const CITIES = [
 ].map(([c,la,lo])=>({c,la,lo,lat:la*D2R,lon:lo*D2R}));
 const LABELED = ['CDMX','BOG','LIM','SAO','SCL','BUE','CCS','RGL'];
 const SIGNALS = [
- ['PICO DE CONVERSACIÓN','conversación pública en redes'],['NUEVA COBERTURA','medios digitales regionales'],['TENDENCIA DE BÚSQUEDA','interés de búsqueda en alza'],
- ['CONTENIDO A VERIFICAR','pieza viral sin fuente clara'],['MENCIÓN EN VIDEO','comentarios en video público'],['ALERTA TEMPRANA','cambio de agenda detectado'],
- ['ACTOR NUEVO','cuenta con alcance creciente'],['RECLAMO VECINAL','tema local escala a medios']
+ ['Pico de conversación','conversación pública en redes'],['Nueva cobertura','medios digitales regionales'],['Tendencia de búsqueda','interés de búsqueda en alza'],
+ ['Contenido a verificar','pieza viral sin fuente clara'],['Mención en video','comentarios en video público'],['Alerta temprana','cambio de agenda detectado'],
+ ['Actor nuevo','cuenta con alcance creciente'],['Reclamo vecinal','tema local escala a medios']
 ];
 
 const stage = document.getElementById('stage');
@@ -478,7 +501,7 @@ function startGL(){
       if(h>1.6){a.active=false;a.line.visible=false}}
     hGeo.attributes.position.needsUpdate=true;hGeo.attributes.aA.needsUpdate=true;
 
-    if((coordT+=dt)>.15){coordT=0;const la=lat0/D2R,lo=((lon0/D2R+540)%360)-180;coordsEl.textContent='CENTRO '+Math.abs(la).toFixed(1)+'°'+(la<0?'S':'N')+' · '+Math.abs(lo).toFixed(1)+'°'+(lo<0?'O':'E')}
+    if((coordT+=dt)>.15){coordT=0;const la=lat0/D2R,lo=((lon0/D2R+540)%360)-180;coordsEl.textContent=''+Math.abs(la).toFixed(1)+'°'+(la<0?'S':'N')+' '+Math.abs(lo).toFixed(1)+'°'+(lo<0?'O':'E')}
     globe.updateMatrixWorld();
     renderer.render(scene,camera);updateLabels();
   }
