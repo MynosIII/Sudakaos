@@ -3,9 +3,9 @@
 
 CAPS = [
  {
-  'slug': 'inteligencia', 'num': '01', 'tag': 'Inteligencia', 'title': 'Ver primero',
-  'lead': 'Escuchamos todo lo público: medios, redes, video, búsquedas. Los modelos separan el ruido de la señal; el analista dice qué importa.',
-  'intro': 'Mientras los demás leen los diarios de mañana, nosotros ya vimos la conversación de esta noche. Recolectamos a escala, limpiamos, cruzamos y entrenamos modelos que marcan lo que se está moviendo. Cada dato conserva su origen, porque una ventaja construida sobre humo no sirve.',
+  'slug': 'inteligencia', 'num': '01', 'tag': 'Inteligencia', 'title': 'Datos para decidir',
+  'lead': 'Recolección y análisis de información pública o autorizada, con trazabilidad y lectura humana.',
+  'intro': 'Convertimos el ruido de medios, redes y búsquedas en una lectura ordenada: qué se dice, dónde, con qué intensidad y qué cambió respecto de ayer. Cada dato conserva su origen, su fecha y sus limitaciones, para que la decisión se apoye en evidencia y no en impresiones.',
   'fig1': ('stream', 'Flujo de menciones por fuente en las últimas 24 horas. El tablero marca automáticamente los picos para que un analista los revise.'),
   'fig2': ('funnel', 'De lo recolectado a lo que llega al informe: deduplicación, validación y lectura humana reducen el volumen y suben la calidad.'),
   'items': [
@@ -18,9 +18,9 @@ CAPS = [
   'limits': 'Trabajamos solo con información pública o autorizada. Las métricas de conversación describen lo observable en las fuentes cubiertas; no representan a toda la población.',
  },
  {
-  'slug': 'prospectiva', 'num': '02', 'tag': 'Prospectiva', 'title': 'Jugar con ventaja',
-  'lead': 'Simulamos los escenarios antes de que pasen y marcamos las señales que avisan cuál se está volviendo real.',
-  'intro': 'El que llega preparado no improvisa. Corremos cientos de trayectorias posibles, definimos qué señal confirma cada una y ensayamos la respuesta con el equipo. Cuando el escenario aparece, la decisión ya está tomada.',
+  'slug': 'prospectiva', 'num': '02', 'tag': 'Prospectiva', 'title': 'Preparación para escenarios',
+  'lead': 'Exploramos cambios posibles, señales tempranas y decisiones que cada escenario podría exigir.',
+  'intro': 'No pronosticamos el futuro: lo ordenamos. Definimos supuestos explícitos, imaginamos trayectorias plausibles y acordamos qué señales indicarían que un escenario se está volviendo más probable. Así el equipo llega preparado a la decisión, en lugar de improvisarla.',
   'fig1': ('fan', 'Abanico de trayectorias posibles a 90 días a partir de la situación actual. Las líneas rojas cruzan el umbral que activa una revisión.'),
   'fig2': ('matrix', 'Matriz de escenarios: las señales se mueven entre cuadrantes y su rastro muestra hacia dónde se desplaza la agenda.'),
   'items': [
@@ -33,9 +33,9 @@ CAPS = [
   'limits': 'Los escenarios son herramientas de preparación, no predicciones. Su valor depende de revisarlos cuando cambian los supuestos.',
  },
  {
-  'slug': 'comunicacion', 'num': '03', 'tag': 'Comunicación', 'title': 'Mover la conversación',
-  'lead': 'Narrativa, vocería y producción pensadas desde los datos: qué decir, quién lo dice y por dónde entra.',
-  'intro': 'La conversación pública tiene arquitectura: temas, nodos, puentes. La mapeamos para saber dónde una idea prende y dónde muere. Después producimos, medimos y ajustamos sin apego a la pieza, solo al resultado.',
+  'slug': 'comunicacion', 'num': '03', 'tag': 'Comunicación', 'title': 'Mensajes con sustento',
+  'lead': 'Ordenamos identidad, estrategia y producción para que el trabajo sea claro, consistente y evaluable.',
+  'intro': 'Partimos de cómo se conectan los temas y los actores en la conversación real para decidir qué decir, quién lo dice y por dónde. Después medimos cada pieza con criterios definidos de antemano y ajustamos sobre lo aprendido.',
   'fig1': ('network', 'Red de narrativas y actores: los nodos grandes son temas, los pequeños son cuentas o medios que los movilizan.'),
   'fig2': ('decay', 'Curvas de atención de piezas publicadas. La mediana marca el comportamiento típico; los desvíos señalan qué replicar.'),
   'items': [
@@ -48,9 +48,9 @@ CAPS = [
   'limits': 'Ninguna estrategia garantiza un resultado en la conversación pública. Medimos para aprender y decidir mejor, no para prometer alcance.',
  },
  {
-  'slug': 'sistemas', 'num': '04', 'tag': 'Sistemas', 'title': 'Máquinas que no duermen',
-  'lead': 'Automatización y machine learning para procesar en horas lo que a otros les lleva semanas.',
-  'intro': 'Clasificación automática, asignación, seguimiento y reportes que se arman solos. Construimos la infraestructura para que un equipo chico rinda como uno grande y no dependa de nadie en particular.',
+  'slug': 'sistemas', 'num': '04', 'tag': 'Sistemas', 'title': 'Equipos conectados',
+  'lead': 'Herramientas y automatizaciones para coordinar procesos, equipos y bases de contacto.',
+  'intro': 'Ordenamos cómo entra, se reparte y se resuelve el trabajo. Diseñamos circuitos simples, automatizamos lo repetitivo y dejamos todo documentado para que el equipo no dependa de una persona ni de una planilla perdida.',
   'fig1': ('sankey', 'Recorrido de los pedidos: desde el canal por el que llegan hasta el equipo, el reporte o el archivo donde terminan.'),
   'fig2': ('cfd', 'Flujo acumulado de tareas por estado. La distancia entre curvas muestra el trabajo abierto en cada momento.'),
   'items': [
@@ -63,9 +63,9 @@ CAPS = [
   'limits': 'Usamos herramientas acordes al tamaño del equipo y a sus políticas de datos. Toda base de contacto requiere consentimiento y controles de acceso.',
  },
  {
-  'slug': 'ciberseguridad', 'num': '05', 'tag': 'Ciberseguridad', 'title': 'Cerrar las puertas',
-  'lead': 'Blindamos cuentas, accesos y comunicaciones. Si algo se filtra, el plan ya está escrito.',
-  'intro': 'En política, la puerta que quedó abierta es la que alguien va a usar. Relevamos qué está expuesto, cerramos lo urgente y dejamos escrito qué hacer en la primera hora de un incidente, que es la que define todo.',
+  'slug': 'ciberseguridad', 'num': '05', 'tag': 'Ciberseguridad', 'title': 'Prevención y respuesta',
+  'lead': 'Protección de activos digitales y preparación ante incidentes mediante trabajo autorizado.',
+  'intro': 'Empezamos por saber qué está expuesto: cuentas, accesos, dominios, dispositivos y proveedores. Priorizamos controles realistas para el equipo y dejamos preparado un protocolo para actuar rápido y ordenado si ocurre un incidente.',
   'fig1': ('radar', 'Perfil de exposición por dimensión: el diagnóstico inicial frente al estado después de aplicar controles prioritarios.'),
   'fig2': ('gantt', 'Cronograma típico de respuesta: detección, contención, análisis, comunicación y recuperación avanzan en paralelo.'),
   'items': [
@@ -78,9 +78,9 @@ CAPS = [
   'limits': 'Todo análisis técnico se hace con autorización y especialistas asignados. No se garantiza evitar incidentes; sí llegar mejor preparados.',
  },
  {
-  'slug': 'comunidad', 'num': '06', 'tag': 'Comunidad', 'title': 'Redes que responden',
-  'lead': 'Personas reales, organizadas y entrenadas para escuchar y moverse cuando hace falta.',
-  'intro': 'Los algoritmos no tocan timbres. Formamos y organizamos redes de gente real que escucha en su territorio, informa hacia arriba y se mueve cuando la estrategia lo pide. Con nombre y apellido, que es lo que la vuelve creíble.',
+  'slug': 'comunidad', 'num': '06', 'tag': 'Comunidad', 'title': 'Participación organizada',
+  'lead': 'Capacitamos y acompañamos redes humanas para escuchar, informar y participar de manera transparente.',
+  'intro': 'Las redes de personas funcionan cuando tienen formación, guías claras y un circuito para escalar lo que escuchan. Acompañamos a equipos territoriales y digitales para que participen de forma identificable, ordenada y medible.',
   'fig1': ('hexmap', 'Crecimiento de la cobertura territorial a medida que se suman referentes formados en cada zona.'),
   'fig2': ('bars', 'Consultas recibidas por semana según cómo se resolvieron: en territorio, escaladas al equipo o en seguimiento.'),
   'items': [
