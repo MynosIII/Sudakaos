@@ -4,7 +4,7 @@
   'use strict';
   var RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var INK = '#171715', RED = '#c51e35', MUTED = '#8a8981', LINE = '#d8d7d0', SOFT = '#e9e8e1', PAPER = '#f5f4ef';
-  var MONO = 'ui-monospace,SFMono-Regular,Menlo,Consolas,monospace';
+  var SANS = '"Schibsted Grotesk",Arial,Helvetica,sans-serif';
   var TAU = Math.PI * 2;
 
   function rng(seed) { var s = seed >>> 0; return function () { s = (s * 1664525 + 1013904223) >>> 0; return s / 4294967296; }; }
@@ -15,7 +15,7 @@
   function ease(x) { x = Math.max(0, Math.min(1, x)); return 1 - Math.pow(1 - x, 3); }
   function lerp(a, b, t) { return a + (b - a) * t; }
   function alpha(hex, a) { var n = parseInt(hex.slice(1), 16); return 'rgba(' + (n >> 16) + ',' + (n >> 8 & 255) + ',' + (n & 255) + ',' + a + ')'; }
-  function txt(g, s, x, y, o) { o = o || {}; g.font = (o.w || 400) + ' ' + (o.s || 10) + 'px ' + (o.f || MONO); g.fillStyle = o.c || MUTED; g.textAlign = o.a || 'left'; g.textBaseline = o.b || 'alphabetic'; g.fillText(o.up === false ? s : String(s).toUpperCase(), x, y); }
+  function txt(g, s, x, y, o) { o = o || {}; g.font = (o.w || 400) + ' ' + ((o.s || 10) + 1) + 'px ' + (o.f || SANS); g.fillStyle = o.c || MUTED; g.textAlign = o.a || 'left'; g.textBaseline = o.b || 'alphabetic'; g.fillText(o.up ? String(s).toUpperCase() : s, x, y); }
 
   // Montaje común: tamaño con DPR, animación solo en pantalla, cuadro final si se reduce el movimiento
   function mount(cv, draw) {
@@ -27,6 +27,7 @@
     addEventListener('resize', function () { size(); kick(); });
     new IntersectionObserver(function (es) { vis = es[0].isIntersecting; if (vis) kick(); }, { rootMargin: '80px' }).observe(cv);
     document.addEventListener('visibilitychange', kick);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(kick);
   }
 
   function axes(g, x0, y0, x1, y1, ticks, label) {
