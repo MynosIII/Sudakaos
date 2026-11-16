@@ -19,9 +19,9 @@ open(os.path.join(WEB, 'index.html'), 'w', encoding='utf-8').write(tpl.replace('
 HEAD = '''<!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f5f4ef">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0c0c0b">
 <meta name="description" content="{desc}">
-<title>{title} — Sudakaos LATAM</title>
+<title>{title} — Sudakaos</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=Schibsted+Grotesk:wght@400..700&display=swap">
 <link rel="stylesheet" href="../assets/site.css">
@@ -60,8 +60,8 @@ for i, c in enumerate(CAPS):
 </div>
 <div class="wrap"><nav class="pager" aria-label="Otras capacidades"><a href="../{prev["slug"]}/"><span>Anterior</span><strong>{e(prev["title"])}</strong></a><a href="../{nxt["slug"]}/"><span>Siguiente</span><strong>{e(nxt["title"])}</strong></a></nav></div>
 </section>
-<section class="contact" id="contacto"><div class="wrap contact-grid"><div><h2>¿Qué necesitás entender mejor?</h2><p>Conversemos sobre el desafío, el contexto y la evidencia disponible. El primer intercambio sirve para delimitar una evaluación, no implica una promesa de resultado.</p></div><div><a class="button" href="mailto:lab@sudakaos.com?subject=Consulta%20{e(c["tag"])}%20-%20Sudakaos%20LATAM">Escribir al equipo</a><small>Alcance, fuentes, entregables y condiciones se acuerdan antes de iniciar cada proyecto.</small></div></div></section>
-</main><footer><div class="wrap foot"><a href="../"><strong>Sudakaos<span>●</span> LATAM</strong></a><span>Inteligencia, comunicación y tecnología</span><a href="#">Volver arriba</a></div></footer>
+<section class="contact" id="contacto"><div class="wrap contact-grid"><div><h2>Si llegaste hasta acá, ya sabés por qué.</h2><p>Escribinos. La primera conversación es confidencial y no compromete a nada.</p></div><div><a class="button" href="mailto:lab@sudakaos.com?subject=Consulta%20{e(c["tag"])}%20-%20Sudakaos%20LATAM">Escribir al equipo</a><small>Sin formularios, sin newsletter, sin seguimiento comercial.</small></div></div></section>
+</main><footer><div class="wrap foot"><a href="../"><strong>Sudakaos<span>●</span> LATAM</strong></a><span>Desde el lado B de América Latina</span><a href="#">Volver arriba</a></div></footer>
 <script>
 (function(){{var m=document.querySelector('.menu'),n=document.querySelector('#nav');m.addEventListener('click',function(){{var o=m.getAttribute('aria-expanded')!=='true';m.setAttribute('aria-expanded',String(o));n.classList.toggle('open',o)}});}})();
 </script>

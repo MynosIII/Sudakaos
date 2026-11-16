@@ -3,7 +3,8 @@
 (function () {
   'use strict';
   var RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var INK = '#171715', RED = '#c51e35', MUTED = '#8a8981', LINE = '#d8d7d0', SOFT = '#e9e8e1', PAPER = '#f5f4ef';
+  // Paleta nocturna: "INK" es el trazo principal (claro sobre negro)
+  var INK = '#e8e6de', RED = '#e0263f', MUTED = '#8b8981', LINE = '#2b2a26', SOFT = '#1a1917', PAPER = '#0c0c0b', G1 = '#8f8d85', G2 = '#5c5a54', G3 = '#3b3a36';
   var SANS = '"Schibsted Grotesk",Arial,Helvetica,sans-serif';
   var TAU = Math.PI * 2;
 
@@ -41,7 +42,7 @@
 
   /* 01 · Inteligencia: flujo de menciones por fuente (streamgraph que avanza en el tiempo) */
   C.stream = function (g, W, H, t) {
-    var src = ['Medios', 'Video', 'Búsquedas', 'Foros', 'Comentarios'], cols = [INK, RED, '#6d6c64', '#a9a8a0', '#d0cfc7'];
+    var src = ['Medios', 'Video', 'Búsquedas', 'Foros', 'Comentarios'], cols = [INK, RED, G1, G2, G3];
     var ns = src.map(function (_, i) { return noise(11 + i * 7); });
     var L = 46, R = W - (W < 600 ? 16 : 150), T = 34, B = H - 34, n = 90, sp = t * .9;
     var reveal = ease(t / 2.4);
@@ -119,7 +120,7 @@
       for (var i = 0; i < m; i++) g.lineTo(lerp(nowX, R, i / 55), Y(p[i]));
       g.strokeStyle = p[Math.min(m - 1, 55)] > thr ? alpha(RED, .5) : alpha(INK, .12); g.stroke();
     });
-    var named = [[N - 3, 'Tensión', RED], [Math.floor(N / 2), 'Base', INK], [2, 'Distensión', '#6d6c64']];
+    var named = [[N - 3, 'Tensión', RED], [Math.floor(N / 2), 'Base', INK], [2, 'Distensión', G1]];
     named.forEach(function (nm) { var p = st.paths[nm[0]]; g.beginPath(); g.moveTo(nowX, Y(st.hist[39])); for (var i = 0; i < m; i++) g.lineTo(lerp(nowX, R, i / 55), Y(p[i])); g.strokeStyle = nm[2]; g.lineWidth = 2; g.stroke(); g.lineWidth = 1; if (rv > .98 && W >= 600) txt(g, nm[1], R + 8, Y(p[55]) + 3, { c: nm[2], s: 10 }); });
     g.strokeStyle = RED; g.setLineDash([5, 4]); g.beginPath(); g.moveTo(L, Y(thr) + .5); g.lineTo(R, Y(thr) + .5); g.stroke(); g.setLineDash([]);
     txt(g, 'Umbral de alerta', L + 4, Y(thr) - 6, { c: RED, s: 9 });
@@ -167,7 +168,7 @@
     }
     g.lineWidth = 1; E.forEach(function (e) { var a = N[e[0]], b = N[e[1]]; g.strokeStyle = a.hub && b.hub ? alpha(INK, .35) : alpha(a.c === RED ? RED : INK, .14); g.beginPath(); g.moveTo(a.x, a.y); g.lineTo(b.x, b.y); g.stroke(); });
     st.p.forEach(function (p) { var e = E[p.e], a = N[e[0]], b = N[e[1]], f = (t * .5 + p.o) % 1; g.fillStyle = a.c === RED ? RED : INK; g.beginPath(); g.arc(lerp(b.x, a.x, f), lerp(b.y, a.y, f), 1.8, 0, TAU); g.fill(); });
-    N.forEach(function (n) { if (n.hub) return; g.fillStyle = n.c === RED ? RED : '#55554f'; g.beginPath(); g.arc(n.x, n.y, 2.6, 0, TAU); g.fill(); });
+    N.forEach(function (n) { if (n.hub) return; g.fillStyle = n.c === RED ? RED : G1; g.beginPath(); g.arc(n.x, n.y, 2.6, 0, TAU); g.fill(); });
     N.forEach(function (n) { if (!n.hub) return; g.fillStyle = PAPER; g.strokeStyle = n.c; g.lineWidth = 1.5; g.beginPath(); g.arc(n.x, n.y, 9, 0, TAU); g.fill(); g.stroke(); g.lineWidth = 1; g.fillStyle = n.c; g.beginPath(); g.arc(n.x, n.y, 3.5, 0, TAU); g.fill(); txt(g, n.label, n.x + 14, n.y + 4, { c: n.c, s: 10, w: 700 }); });
   };
 
@@ -223,9 +224,9 @@
     var nz = noise(91), done = [], doing = [], todo = [], a = 0, b = 0, c = 0;
     for (var i = 0; i <= n; i++) { a += 2 + nz(i * .4) * 2.4; b = Math.min(a, b + 1.8 + nz(i * .3 + 5) * 2.2); c = Math.min(b, c + (i > 6 ? 1.9 + nz(i * .5 + 9) * 1.9 : .3)); todo.push(a); doing.push(b); done.push(c); }
     var max = todo[n] * 1.05, X = function (i) { return L + (R - L) * i / n; }, Y = function (v) { return B - (B - T) * v / max; };
-    [[todo, '#d0cfc7', 'Pendiente'], [doing, '#8a8981', 'En curso'], [done, INK, 'Resuelto']].forEach(function (s, k) {
+    [[todo, G3, 'Pendiente'], [doing, G2, 'En curso'], [done, INK, 'Resuelto']].forEach(function (s, k) {
       g.beginPath(); g.moveTo(X(0), B); for (var i = 0; i <= m; i++) g.lineTo(X(i), Y(s[0][i])); g.lineTo(X(m), B); g.closePath(); g.fillStyle = s[1]; g.fill();
-      if (W >= 600 && rv > .98) txt(g, s[2], R + 10, Y(k === 0 ? (todo[n] + doing[n]) / 2 : k === 1 ? (doing[n] + done[n]) / 2 : done[n] / 2) + 3, { c: k === 2 ? INK : '#55554f' });
+      if (W >= 600 && rv > .98) txt(g, s[2], R + 10, Y(k === 0 ? (todo[n] + doing[n]) / 2 : k === 1 ? (doing[n] + done[n]) / 2 : done[n] / 2) + 3, { c: k === 2 ? INK : G1 });
     });
     var x = X(m); g.strokeStyle = RED; g.beginPath(); g.moveTo(x + .5, T); g.lineTo(x + .5, B); g.stroke();
     var wip = Math.round(todo[m] - done[m]); txt(g, 'Trabajo abierto: ' + wip, x - 6, T + 10, { c: RED, a: 'right' });
@@ -294,7 +295,7 @@
   C.bars = function (g, W, H, t) {
     var L = 46, R = W - (W < 600 ? 16 : 140), T = 30, B = H - 34, n = 12, nz = noise(71);
     axes(g, L, T, R, B, 4, 'Consultas por semana · resolución');
-    var bw = (R - L) / n, keys = [['Resueltas en territorio', INK], ['Escaladas al equipo', RED], ['En seguimiento', '#c3c2ba']];
+    var bw = (R - L) / n, keys = [['Resueltas en territorio', INK], ['Escaladas al equipo', RED], ['En seguimiento', G3]];
     for (var i = 0; i < n; i++) {
       var tot = 30 + i * 4 + nz(i * .7) * 18, sh = [.55 + i * .015, .22 - i * .006, .23 - i * .009], k = ease((t - i * .12) / .8), y = B;
       for (var j = 0; j < 3; j++) { var hh = (B - T) * (tot * sh[j]) / 100 * k; g.fillStyle = keys[j][1]; g.fillRect(L + i * bw + bw * .18, y - hh, bw * .64, hh); y -= hh + (hh > 0 ? 1 : 0); }
