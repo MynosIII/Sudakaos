@@ -67,7 +67,8 @@ jobs:
           cp resumen.js _site/
           # Landing institucional 3D (Sudakaos LATAM)
           mkdir -p _site/web
-          cp web/index.html _site/web/
+          cp -R web/. _site/web/
+          rm -rf _site/web/tools
           # Reporte de Instagram por tablero (ig/store queda afuera: es el historial de trabajo del recolector)
           mkdir -p _site/ig
           if [ -d ig/data ]; then cp -R ig/data _site/ig/; fi
