@@ -52,19 +52,17 @@ jobs:
           cp -R boca/index.html boca/data _site/boca/
           mkdir -p _site/santacruz
           cp -R santacruz/index.html santacruz/data _site/santacruz/
-          # Tres tableros independientes: /pagano/, /casielles/, /braillard/ (mismo código, dirigente fijo)
-          for d in pagano casielles braillard; do
-            mkdir -p _site/$d
-            if [ -d dirigentes/$d/data ]; then cp -R dirigentes/$d/data _site/$d/; fi
-            n=$(python3 -c "import json,sys;print(json.load(open('dirigentes/$d/config.json'))['perfil']['nombre'])")
-            sed -e "s#<html lang=\"es\">#<html lang=\"es\" data-slug=\"$d\">#" -e "s#<title>Monitor de dirigentes</title>#<title>Monitor $n</title>#" dirigentes/index.html > _site/$d/index.html
-          done
-          # Redirección para los links viejos /dirigentes/?d=... (no aparece en el índice)
-          mkdir -p _site/dirigentes
-          echo '<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><script>var d=new URLSearchParams(location.search).get("d");location.replace("../"+(["pagano","casielles","braillard"].indexOf(d)>=0?d:"pagano")+"/")</script>' > _site/dirigentes/index.html
+          # Tres tableros independientes: /pagano/, /casielles/, /braillard/. Cada página nombra solo a su dirigente
+          # (título, vista previa del link y código); build_page.py corta la publicación si aparece otro.
+          for d in pagano casielles braillard; do python3 dirigentes/build_page.py $d _site/$d; done
           mkdir -p _site/meta
           if [ -d meta/data ]; then cp -R meta/data _site/meta/; fi
           cp resumen.js _site/
+          # Que los buscadores no indexen ningún tablero (la landing institucional web/ sí se indexa)
+          for f in _site/index.html _site/dashboard.html _site/*/index.html; do
+            [ "$f" = _site/web/index.html ] && continue
+            grep -q 'name="robots"' "$f" || sed -i '0,/<head>/s#<head>#<head>\n<meta name="robots" content="noindex,nofollow">#' "$f"
+          done
           # Landing institucional 3D (Sudakaos LATAM)
           mkdir -p _site/web
           cp -R web/. _site/web/
@@ -72,24 +70,32 @@ jobs:
           # Reporte de Instagram por tablero (ig/store queda afuera: es el historial de trabajo del recolector)
           mkdir -p _site/ig
           if [ -d ig/data ]; then cp -R ig/data _site/ig/; fi
+          # Los reportes de Instagram de los dirigentes viajan dentro de su propio tablero (ig.json), no en una carpeta común
+          rm -f _site/ig/data/dirigentes-*.json
           for f in _site/dashboard.html _site/index.html _site/*/index.html; do sed -i "s#assets/ig.js\"#assets/ig.js?v=${GITHUB_SHA::8}\"#" "$f"; done
           sed -i "s#resumen.js\"#resumen.js?v=${GITHUB_SHA::8}\"#" _site/dashboard.html _site/index.html
       # Índice interno (no enlazado desde ningún tablero): se arma solo con cada carpeta publicada que tenga index.html
+      # Índice interno: solo existe si está cargado el secret INDICE_RUTA, y se publica en esa carpeta
+      # (no en /indice/). La ruta nunca se escribe en el repo ni en el log, que son públicos.
       - name: Armar índice interno
+        env:
+          INDICE_RUTA: ${{ secrets.INDICE_RUTA }}
         run: |
-          mkdir -p _site/indice
+          if [ -z "$INDICE_RUTA" ]; then echo "Sin secret INDICE_RUTA: no se publica índice"; exit 0; fi
+          R=$(printf '%s' "$INDICE_RUTA" | tr -cd 'A-Za-z0-9_-')
+          mkdir -p "_site/$R"
           {
-            echo '<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Índice</title></head><body><h1>Índice</h1><ul>'
+            echo '<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="referrer" content="no-referrer"><title>Índice</title></head><body><h1>Índice</h1><ul>'
             echo '<li><a href="../">Tablero nacional (Massa)</a></li>'
             for f in _site/*/index.html; do
               d=$(basename "$(dirname "$f")")
-              case "$d" in indice|dirigentes) continue;; esac
+              [ "$d" = "$R" ] && continue
               t=$(grep -o '<title>[^<]*' "$f" | head -1 | sed 's/<title>//')
               echo "<li><a href=\"../$d/\">${t:-$d}</a> <small>($d/)</small></li>"
             done
             echo '</ul></body></html>'
-          } > _site/indice/index.html
-          cat _site/indice/index.html
+          } > "_site/$R/index.html"
+          echo "Índice publicado"
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
