@@ -28,6 +28,15 @@ if not SECRET:
 INDICE = re.sub(r"[^A-Za-z0-9_-]", "", SECRET)
 
 
+# Nombre visible en la URL: /<nombre>/<clave>/. El nombre solo no muestra nada (no hay index.html ahí).
+PUB = {"nacional": "nacional", "boca": "boca", "roca": "soria", "santacruz": "santacruz", "sanisidro": "sanisidro",
+       "pagano": "pagano", "casielles": "casielles", "braillard": "braillard"}
+
+
+def carpeta(nombre):
+    return SITE / PUB[nombre] / ruta(nombre)
+
+
 def ruta(nombre):
     h = hashlib.sha256(f"{SECRET}:{nombre}".encode()).digest()
     return "t" + base64.b32encode(h).decode().lower().rstrip("=")[:19]
@@ -65,7 +74,7 @@ shutil.rmtree(SITE / "web" / "tools", ignore_errors=True)
 tableros = {}  # nombre -> carpeta publicada
 
 # Tablero nacional: lleva adentro todo lo que usa (radar, Massa, Meta, Instagram, resumen)
-n = SITE / ruta("nacional")
+n = carpeta("nacional")
 tableros["nacional"] = n
 cp("dashboard.html", n / "index.html")
 cp("assets", n / "assets")
@@ -83,7 +92,7 @@ editar(n / "index.html", ('massa/panel.js"', f'massa/panel.js?v={SHA}"'), ('resu
 
 # Tableros de cliente: cada uno con sus datos y su reporte de Instagram adentro
 for b in ("boca", "roca", "santacruz", "sanisidro"):
-    d = SITE / ruta(b)
+    d = carpeta(b)
     tableros[b] = d
     cp(f"{b}/index.html", d / "index.html")
     cp(f"{b}/data", d / "data")
@@ -95,7 +104,7 @@ editar(tableros["roca"] / "index.html", ("'../radar/data/positions.json'", "'pos
 
 # Pagano, Casielles y Braillard: build_page.py arma cada uno nombrando solo a su dirigente
 for slug in ("pagano", "casielles", "braillard"):
-    d = SITE / ruta(slug)
+    d = carpeta(slug)
     tableros[slug] = d
     subprocess.run([sys.executable, str(REPO / "dirigentes" / "build_page.py"), slug, str(d)], check=True,
                    stdout=subprocess.DEVNULL)
@@ -106,6 +115,18 @@ for nombre, d in tableros.items():
     for page in d.rglob("index.html"):
         s = page.read_text(encoding="utf8")
         s = s.replace('assets/ig.js"', f'assets/ig.js?v={SHA}"')
+        if nombre != "nacional":
+            s = s.replace('"../assets/', '"../../assets/')  # un nivel más: /<nombre>/<clave>/
+        # Vista previa de WhatsApp y redes: título y descripción del propio tablero
+        if 'property="og:title"' not in s:
+            t = re.search(r"<title>([^<]*)</title>", s)
+            dsc = re.search(r'<meta name="description" content="([^"]*)">', s)
+            og = ""
+            if t:
+                og += f'\n<meta property="og:title" content="{t.group(1)}">'
+            if dsc:
+                og += f'\n<meta property="og:description" content="{dsc.group(1)}">'
+            s = s.replace("<head>", "<head>" + og, 1)
         if 'name="robots"' not in s:
             s = s.replace("<head>", '<head>\n<meta name="robots" content="noindex,nofollow">\n<meta name="referrer" content="no-referrer">', 1)
         for b in ("boca", "roca", "santacruz", "sanisidro", "pagano", "casielles", "braillard", "dirigentes", "radar", "web"):
@@ -125,7 +146,7 @@ for nombre, d in tableros.items():
     titulo = t.group(1) if t else nombre
     if nombre == "nacional":
         titulo += " (nacional)"
-    items.append(f'<li><a href="../{d.name}/">{html.escape(titulo)}</a></li>')
+    items.append(f'<li><a href="../{d.parent.name}/{d.name}/">{html.escape(titulo)}</a></li>')
 (SITE / INDICE).mkdir()
 (SITE / INDICE / "index.html").write_text(
     '<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
