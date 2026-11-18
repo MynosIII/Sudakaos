@@ -32,70 +32,12 @@ jobs:
       - uses: actions/configure-pages@v5
         with:
           enablement: true
-      - name: Copiar solo archivos públicos
-        run: |
-          mkdir -p _site/radar/data _site/sanisidro
-          cp dashboard.html .nojekyll _site/
-          cp dashboard.html _site/index.html
-          # Versión en la URL del script: así el navegador no usa un panel.js viejo de caché tras publicar
-          sed -i "s#massa/panel.js\"#massa/panel.js?v=${GITHUB_SHA::8}\"#" _site/dashboard.html _site/index.html
-          cp -R assets _site/
-          cp radar/index.html _site/radar/
-          cp radar/data/*.json _site/radar/data/
-          if [ -d radar/data/fuentes ]; then cp -R radar/data/fuentes _site/radar/data/; fi
-          cp -R sanisidro/index.html sanisidro/data _site/sanisidro/
-          mkdir -p _site/roca
-          cp -R roca/index.html roca/data _site/roca/
-          mkdir -p _site/massa
-          cp -R massa/panel.js massa/data _site/massa/
-          mkdir -p _site/boca
-          cp -R boca/index.html boca/data _site/boca/
-          mkdir -p _site/santacruz
-          cp -R santacruz/index.html santacruz/data _site/santacruz/
-          # Tres tableros independientes: /pagano/, /casielles/, /braillard/. Cada página nombra solo a su dirigente
-          # (título, vista previa del link y código); build_page.py corta la publicación si aparece otro.
-          for d in pagano casielles braillard; do python3 dirigentes/build_page.py $d _site/$d; done
-          mkdir -p _site/meta
-          if [ -d meta/data ]; then cp -R meta/data _site/meta/; fi
-          cp resumen.js _site/
-          # Que los buscadores no indexen ningún tablero (la landing institucional web/ sí se indexa)
-          for f in _site/index.html _site/dashboard.html _site/*/index.html; do
-            [ "$f" = _site/web/index.html ] && continue
-            grep -q 'name="robots"' "$f" || sed -i '0,/<head>/s#<head>#<head>\n<meta name="robots" content="noindex,nofollow">#' "$f"
-          done
-          # Landing institucional 3D (Sudakaos LATAM)
-          mkdir -p _site/web
-          cp -R web/. _site/web/
-          rm -rf _site/web/tools
-          # Reporte de Instagram por tablero (ig/store queda afuera: es el historial de trabajo del recolector)
-          mkdir -p _site/ig
-          if [ -d ig/data ]; then cp -R ig/data _site/ig/; fi
-          # Los reportes de Instagram de los dirigentes viajan dentro de su propio tablero (ig.json), no en una carpeta común
-          rm -f _site/ig/data/dirigentes-*.json
-          for f in _site/dashboard.html _site/index.html _site/*/index.html; do sed -i "s#assets/ig.js\"#assets/ig.js?v=${GITHUB_SHA::8}\"#" "$f"; done
-          sed -i "s#resumen.js\"#resumen.js?v=${GITHUB_SHA::8}\"#" _site/dashboard.html _site/index.html
-      # Índice interno (no enlazado desde ningún tablero): se arma solo con cada carpeta publicada que tenga index.html
-      # Índice interno: solo existe si está cargado el secret INDICE_RUTA, y se publica en esa carpeta
-      # (no en /indice/). La ruta nunca se escribe en el repo ni en el log, que son públicos.
-      - name: Armar índice interno
+      # Cada tablero en una ruta secreta derivada del secret INDICE_RUTA (ver publicar_sitio.py).
+      # Las rutas nunca se escriben en el repo ni en el log, que son públicos.
+      - name: Armar sitio con rutas secretas
         env:
           INDICE_RUTA: ${{ secrets.INDICE_RUTA }}
-        run: |
-          if [ -z "$INDICE_RUTA" ]; then echo "Sin secret INDICE_RUTA: no se publica índice"; exit 0; fi
-          R=$(printf '%s' "$INDICE_RUTA" | tr -cd 'A-Za-z0-9_-')
-          mkdir -p "_site/$R"
-          {
-            echo '<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="referrer" content="no-referrer"><title>Índice</title></head><body><h1>Índice</h1><ul>'
-            echo '<li><a href="../">Tablero nacional (Massa)</a></li>'
-            for f in _site/*/index.html; do
-              d=$(basename "$(dirname "$f")")
-              [ "$d" = "$R" ] && continue
-              t=$(grep -o '<title>[^<]*' "$f" | head -1 | sed 's/<title>//')
-              echo "<li><a href=\"../$d/\">${t:-$d}</a> <small>($d/)</small></li>"
-            done
-            echo '</ul></body></html>'
-          } > "_site/$R/index.html"
-          echo "Índice publicado"
+        run: python3 publicar_sitio.py "$GITHUB_SHA"
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
