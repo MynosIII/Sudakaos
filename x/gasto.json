@@ -1,0 +1,20 @@
+{
+ "total_posts": 9,
+ "total_usd": 0.045,
+ "tableros": {
+  "clark": {
+   "posts": 9,
+   "usd": 0.045,
+   "since_id": "2122444733566071057",
+   "ultima": "2026-11-19T03:29:39Z"
+  }
+ },
+ "corridas": [
+  {
+   "fecha": "2026-11-19T03:29:39Z",
+   "tablero": "clark",
+   "posts": 9,
+   "usd": 0.045
+  }
+ ]
+}
