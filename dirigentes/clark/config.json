@@ -1,0 +1,1003 @@
+{
+ "nombre": "Monitor Víctor Clark",
+ "slug": "clark",
+ "color": "#e0463c",
+ "distrito": "Falcón",
+ "pais": {
+  "codigo": "VE",
+  "nombre": "Venezuela",
+  "zona": "America/Caracas",
+  "reloj": "VEN",
+  "hl": "es-419",
+  "tz_trends": 240,
+  "hito": "2027"
+ },
+ "titulo_elecciones": "Titulares sobre elecciones y candidaturas",
+ "perfil": {
+  "nombre": "Víctor Clark",
+  "corto": "Clark",
+  "cargo": "Gobernador del estado Falcón (Venezuela), PSUV",
+  "resumen": "Víctor José Clark Boscán gobierna Falcón desde octubre de 2017; fue reelecto en 2021 y en mayo de 2025 (83% de los votos, elección con la oposición mayoritaria abstenida). Antes fue ministro de la Juventud y Deportes (2014-2015), diputado a la Asamblea Nacional por Falcón (2016-2017) y constituyente en 2017. En 2026 gobierna en el marco del gobierno interino de Delcy Rodríguez, con crisis de luz y agua, protestas laborales y la reconstrucción tras los terremotos de junio en la costa falconiana.",
+  "objetivo": "Sostener la gestión y su imagen en Falcón (servicios, reconstrucción, obras) de cara a la transición y a un posible calendario electoral 2027-2028.",
+  "fuentes": [
+   "https://es.wikipedia.org/wiki/V%C3%ADctor_Clark",
+   "https://en.wikipedia.org/wiki/List_of_governors_of_Falc%C3%B3n",
+   "https://eldiario.com/2026/08/18/crisis-agua-falcon/",
+   "https://estrategia.la/2026/10/14/venezuela-preanuncian-elecciones-en-junio-de-2027-y-se-suman-interrogantes/"
+  ]
+ },
+ "focos": [
+  "Víctor Clark"
+ ],
+ "rivales": [
+  "Delcy Rodríguez",
+  "Diosdado Cabello",
+  "María Corina Machado",
+  "Andrés Velásquez",
+  "Edmundo González"
+ ],
+ "co_clave": [
+  "Delcy Rodríguez",
+  "Diosdado Cabello",
+  "María Corina Machado",
+  "Andrés Velásquez",
+  "Nicolás Maduro"
+ ],
+ "window_days": 730,
+ "conversacion_dias": 540,
+ "eleccion": "2027-07-01",
+ "eleccion_nota": "Fecha de referencia: mediados de 2027, cuando la oposición pide las presidenciales (todavía sin fecha oficial; EE. UU. habla de 2027 o 2028). La gobernación de Falcón vence en 2029.",
+ "tema_elecciones": "Elecciones y transición",
+ "figuras": {
+  "Víctor Clark": {
+   "alias": [
+    "víctor clark",
+    "victor clark",
+    "víctor josé clark",
+    "victor jose clark",
+    "clark boscán",
+    "clark boscan",
+    "gobernador clark",
+    "gobernador víctor clark",
+    "gobernador victor clark",
+    "clark"
+   ],
+   "bando": "PSUV",
+   "cargo": "Gobernador de Falcón desde 2017 (reelecto 2021 y 2025)",
+   "wiki": [
+    "Víctor Clark"
+   ],
+   "trends": "Víctor Clark",
+   "alias_contexto": [
+    "clark"
+   ],
+   "foco": true,
+   "excluir_si": [
+    "tijuana",
+    "clark alfaro",
+    "baja california",
+    "wesley clark",
+    "petula clark",
+    "kenny clark",
+    "jim clark",
+    "clark kent"
+   ]
+  },
+  "Delcy Rodríguez": {
+   "alias": [
+    "delcy rodríguez",
+    "delcy rodriguez",
+    "delcy",
+    "presidenta encargada",
+    "presidenta interina"
+   ],
+   "bando": "Gobierno nacional",
+   "cargo": "Presidenta encargada (gobierno interino, 2026)",
+   "wiki": [
+    "Delcy Rodríguez"
+   ],
+   "trends": "Delcy Rodríguez"
+  },
+  "Diosdado Cabello": {
+   "alias": [
+    "diosdado cabello",
+    "diosdado"
+   ],
+   "bando": "Gobierno nacional",
+   "cargo": "Dirigente máximo del PSUV",
+   "wiki": [
+    "Diosdado Cabello"
+   ],
+   "trends": "Diosdado Cabello"
+  },
+  "María Corina Machado": {
+   "alias": [
+    "maría corina machado",
+    "maria corina machado",
+    "maría corina",
+    "maria corina",
+    "mcm"
+   ],
+   "bando": "Oposición",
+   "cargo": "Líder opositora, Vente Venezuela",
+   "wiki": [
+    "María Corina Machado"
+   ],
+   "trends": "María Corina Machado"
+  },
+  "Andrés Velásquez": {
+   "alias": [
+    "andrés velásquez",
+    "andres velasquez"
+   ],
+   "bando": "Oposición",
+   "cargo": "Dirigente de La Causa R, recorre Falcón",
+   "wiki": [
+    "Andrés Velásquez"
+   ],
+   "trends": "Andrés Velásquez"
+  },
+  "Edmundo González": {
+   "alias": [
+    "edmundo gonzález",
+    "edmundo gonzalez",
+    "edmundo gonzález urrutia",
+    "edmundo gonzalez urrutia"
+   ],
+   "bando": "Oposición",
+   "cargo": "Candidato opositor de 2024",
+   "wiki": [
+    "Edmundo González Urrutia"
+   ],
+   "trends": "Edmundo González"
+  },
+  "Nicolás Maduro": {
+   "alias": [
+    "nicolás maduro",
+    "nicolas maduro",
+    "maduro"
+   ],
+   "bando": "Nacional",
+   "cargo": "Expresidente, capturado en enero de 2026",
+   "wiki": [
+    "Nicolás Maduro"
+   ]
+  },
+  "Stella Lugo": {
+   "alias": [
+    "stella lugo"
+   ],
+   "bando": "PSUV",
+   "cargo": "Exgobernadora de Falcón (2008-2017)",
+   "wiki": [
+    "Stella Lugo"
+   ]
+  },
+  "Luis Manuel Piña": {
+   "alias": [
+    "luis manuel piña",
+    "luis manuel pina"
+   ],
+   "bando": "PSUV",
+   "cargo": "Exsecretario de gobierno de Falcón, alcalde encargado de Carirubana (2024)",
+   "wiki": [
+    "Luis Manuel Piña"
+   ]
+  },
+  "Héctor Rodríguez": {
+   "alias": [
+    "héctor rodríguez",
+    "hector rodriguez"
+   ],
+   "bando": "PSUV",
+   "cargo": "Gobernador de Miranda, figura del PSUV",
+   "wiki": [
+    "Héctor Rodríguez Castro"
+   ]
+  },
+  "Marco Rubio": {
+   "alias": [
+    "marco rubio"
+   ],
+   "bando": "Nacional",
+   "cargo": "Secretario de Estado de EE. UU.",
+   "wiki": [
+    "Marco Rubio"
+   ]
+  },
+  "Donald Trump": {
+   "alias": [
+    "donald trump",
+    "trump"
+   ],
+   "bando": "Nacional",
+   "cargo": "Presidente de EE. UU.",
+   "wiki": [
+    "Donald Trump"
+   ]
+  }
+ },
+ "obj_fig": {
+  "clark": "Clark",
+  "victor": "Clark",
+  "delcy": "Delcy",
+  "diosdado": "Diosdado",
+  "cabello": "Diosdado",
+  "corina": "María Corina",
+  "machado": "María Corina",
+  "maduro": "Maduro",
+  "edmundo": "Edmundo",
+  "velasquez": "Velásquez",
+  "trump": "Trump"
+ },
+ "mapa_poder": {
+  "metodo": "Codificación editorial inicial, a revisar con el cliente. Eje horizontal: 0 = chavismo / gobierno interino, 100 = oposición. Eje vertical: peso propio en Falcón y en la transición (cargo, aparato, votos). El tamaño de cada punto sale de las menciones medidas.",
+  "eje_x": "← chavismo / gobierno interino · · · transición · · · oposición →",
+  "anot": [
+   [
+    8,
+    "PSUV",
+    "#e0463c"
+   ],
+   [
+    50,
+    "TRANSICIÓN",
+    "#a6adbb"
+   ],
+   [
+    92,
+    "OPOSICIÓN",
+    "#3987e5"
+   ]
+  ],
+  "puntos": {
+   "Víctor Clark": {
+    "alineamiento": 14,
+    "peso": 62,
+    "nota": "Gobernador desde 2017; maneja la gobernación y el aparato del PSUV en Falcón."
+   },
+   "Delcy Rodríguez": {
+    "alineamiento": 22,
+    "peso": 95,
+    "nota": "Encabeza el gobierno interino; de ella dependen recursos y servicios."
+   },
+   "Diosdado Cabello": {
+    "alineamiento": 6,
+    "peso": 80,
+    "nota": "Jefe del partido; presión de Washington para su salida."
+   },
+   "María Corina Machado": {
+    "alineamiento": 95,
+    "peso": 78,
+    "nota": "Principal liderazgo opositor; pide presidenciales en 2027."
+   },
+   "Edmundo González": {
+    "alineamiento": 88,
+    "peso": 45,
+    "nota": "Candidato opositor de 2024."
+   },
+   "Andrés Velásquez": {
+    "alineamiento": 82,
+    "peso": 28,
+    "nota": "La Causa R; hizo actividades en Falcón en 2026."
+   },
+   "Stella Lugo": {
+    "alineamiento": 12,
+    "peso": 25,
+    "nota": "Exgobernadora, referencia previa del chavismo falconiano."
+   },
+   "Héctor Rodríguez": {
+    "alineamiento": 24,
+    "peso": 55,
+    "nota": "Gobernador de Miranda, posible figura del chavismo en la transición."
+   }
+  }
+ },
+ "intenciones": {
+  "quiere": [
+   "queremos",
+   "quiero",
+   "hay que",
+   "necesitamos",
+   "necesita",
+   "necesitan",
+   "hace falta",
+   "falta de",
+   "que se vaya",
+   "que se vayan",
+   "se tiene que ir",
+   "que renuncie",
+   "fuera",
+   "pedimos",
+   "exigimos",
+   "reclamamos",
+   "que pongan",
+   "que arreglen",
+   "que paguen",
+   "aumento",
+   "que vuelva",
+   "que gobierne",
+   "que se presente",
+   "candidato ya",
+   "que investiguen",
+   "que expliquen",
+   "que devuelvan",
+   "que llegue el agua",
+   "que pongan la luz",
+   "elecciones libres",
+   "que liberen"
+  ],
+  "espera": [
+   "ojalá",
+   "ojala",
+   "espero",
+   "esperamos",
+   "a ver si",
+   "tengo fe",
+   "fe en",
+   "confío",
+   "confio",
+   "confiamos",
+   "se viene",
+   "se vienen",
+   "en 2027",
+   "el año que viene",
+   "vamos a ganar",
+   "vamos a volver",
+   "volver a gobernar",
+   "ilusión",
+   "ilusion",
+   "esperanza",
+   "sueño",
+   "próximo gobierno",
+   "proximo gobierno",
+   "que gane",
+   "ojalá sea",
+   "ojala sea",
+   "libertad",
+   "transición",
+   "transicion",
+   "elecciones ya",
+   "se va a acabar"
+  ],
+  "critica": [
+   "vergüenza",
+   "verguenza",
+   "desastre",
+   "fracaso",
+   "horrible",
+   "inútil",
+   "inutil",
+   "no sabe",
+   "no saben",
+   "mediocre",
+   "culpa",
+   "culpable",
+   "pésimo",
+   "pesimo",
+   "un asco",
+   "basta",
+   "lamentable",
+   "patético",
+   "patetico",
+   "ridículo",
+   "ridiculo",
+   "nefasto",
+   "incapaz",
+   "chanta",
+   "mentiroso",
+   "mentira",
+   "se robó",
+   "se robo",
+   "chorro",
+   "chorros",
+   "ladrón",
+   "ladron",
+   "corrupto",
+   "corruptos",
+   "corrupción",
+   "corrupcion",
+   "caradura",
+   "decepción",
+   "decepcion",
+   "hipócrita",
+   "hipocrita",
+   "traidor",
+   "oportunista",
+   "cínico",
+   "cinico",
+   "peor",
+   "fundieron",
+   "destruyeron",
+   "nunca más",
+   "nunca mas",
+   "enchufado",
+   "enchufados",
+   "chavista",
+   "régimen",
+   "regimen",
+   "dictadura",
+   "escuálido",
+   "escualido",
+   "malandro",
+   "malandros",
+   "sinvergüenza",
+   "sinverguenza",
+   "sin luz",
+   "sin agua"
+  ],
+  "apoya": [
+   "gracias",
+   "excelente",
+   "bien ahí",
+   "bien ahi",
+   "acierto",
+   "felicitaciones",
+   "bravo",
+   "aplausos",
+   "el mejor",
+   "impecable",
+   "lo banco",
+   "bancamos",
+   "todos con",
+   "gran persona",
+   "gran tipo",
+   "un lujo",
+   "coherente",
+   "honesto",
+   "buena gestión",
+   "buena gestion",
+   "orgullo",
+   "genio",
+   "capo",
+   "querido",
+   "sí se puede",
+   "si se puede",
+   "mi voto",
+   "tiene mi voto",
+   "lo voto",
+   "la voto",
+   "valiente",
+   "la única",
+   "la unica",
+   "el único",
+   "el unico",
+   "gran trabajo",
+   "buen trabajo",
+   "tiene razón",
+   "tiene razon",
+   "dice la verdad",
+   "patria",
+   "pa' lante",
+   "palante",
+   "rodilla en tierra",
+   "leales siempre",
+   "gracias gobernador",
+   "chévere",
+   "chevere"
+  ]
+ },
+ "temas": {
+  "Luz y apagones": [
+   "luz",
+   "apagón",
+   "apagon",
+   "apagones",
+   "corpoelec",
+   "electricidad",
+   "eléctrico",
+   "electrico",
+   "racionamiento",
+   "planta eléctrica",
+   "sin luz",
+   "corte eléctrico",
+   "termoeléctrica"
+  ],
+  "Agua": [
+   "agua",
+   "hidrofalcón",
+   "hidrofalcon",
+   "sequía",
+   "sequia",
+   "cisterna",
+   "cisternas",
+   "bombeo",
+   "tuberías",
+   "tuberia",
+   "embalse",
+   "sin agua"
+  ],
+  "Gasolina, gas y transporte": [
+   "gasolina",
+   "combustible",
+   "colas",
+   "bombas",
+   "gas",
+   "bombona",
+   "bombonas",
+   "transporte",
+   "transfalcón",
+   "transfalcon",
+   "pasaje",
+   "autobuses"
+  ],
+  "Salarios y protestas laborales": [
+   "salario",
+   "salarios",
+   "sueldo",
+   "sueldos",
+   "bono",
+   "bonos",
+   "pensionados",
+   "jubilados",
+   "docentes",
+   "protesta",
+   "protestas",
+   "trabajadores",
+   "dólares",
+   "dolares",
+   "bolívares",
+   "bolivares"
+  ],
+  "Terremotos y reconstrucción": [
+   "terremoto",
+   "terremotos",
+   "sismo",
+   "sismos",
+   "tucacas",
+   "chichiriviche",
+   "damnificados",
+   "afectados",
+   "colapso",
+   "edificio",
+   "viviendas",
+   "reconstrucción",
+   "reconstruccion",
+   "gran misión vivienda"
+  ],
+  "Petróleo y refinerías": [
+   "refinería",
+   "refineria",
+   "amuay",
+   "cardón",
+   "cardon",
+   "crp",
+   "pdvsa",
+   "petróleo",
+   "petroleo",
+   "chevron",
+   "paraguaná",
+   "paraguana"
+  ],
+  "Turismo y costa": [
+   "turismo",
+   "turistas",
+   "morrocoy",
+   "playa",
+   "playas",
+   "carnaval",
+   "carnavales",
+   "temporada",
+   "médanos",
+   "medanos",
+   "posada"
+  ],
+  "Salud": [
+   "salud",
+   "hospital",
+   "hospitales",
+   "médicos",
+   "medicos",
+   "medicinas",
+   "insumos",
+   "ambulatorio",
+   "dengue",
+   "cdi"
+  ],
+  "Seguridad y frontera": [
+   "seguridad",
+   "inseguridad",
+   "policía",
+   "policia",
+   "delito",
+   "robo",
+   "contrabando",
+   "narco",
+   "droga",
+   "drogas",
+   "curazao",
+   "aruba",
+   "migración",
+   "migracion",
+   "costa"
+  ],
+  "Comunas y poder popular": [
+   "comuna",
+   "comunas",
+   "consulta",
+   "consulta popular",
+   "proyectos comunales",
+   "consejo comunal",
+   "consejos comunales",
+   "poder popular",
+   "clap",
+   "ubch"
+  ],
+  "Transición, presos y libertades": [
+   "transición",
+   "transicion",
+   "presos políticos",
+   "presos politicos",
+   "amnistía",
+   "amnistia",
+   "liberación",
+   "liberacion",
+   "sanciones",
+   "estados unidos",
+   "negociación",
+   "negociacion",
+   "diálogo",
+   "dialogo"
+  ],
+  "Elecciones y transición": [
+   "elecciones",
+   "elección",
+   "eleccion",
+   "cne",
+   "candidato",
+   "candidata",
+   "candidatura",
+   "votar",
+   "votos",
+   "presidenciales",
+   "regionales",
+   "gobernador",
+   "gobernación",
+   "gobernacion",
+   "alcalde",
+   "alcaldía",
+   "alcaldia",
+   "2027",
+   "2028",
+   "calendario electoral",
+   "registro electoral"
+  ]
+ },
+ "narrativas": {
+  "Gestión de servicios": [
+   "luz",
+   "agua",
+   "gas",
+   "gasolina",
+   "servicios",
+   "bombeo",
+   "planta"
+  ],
+  "Obras e inauguraciones": [
+   "inaugur",
+   "obra",
+   "rehabilit",
+   "asfalt",
+   "entrega",
+   "viviendas"
+  ],
+  "Emergencia y reconstrucción": [
+   "terremoto",
+   "sismo",
+   "damnificados",
+   "reconstrucción",
+   "reconstruccion",
+   "emergencia"
+  ],
+  "Lealtad al proceso": [
+   "revolución",
+   "revolucion",
+   "chávez",
+   "chavez",
+   "patria",
+   "psuv",
+   "socialismo",
+   "comandante"
+  ],
+  "Comunas y consulta popular": [
+   "comuna",
+   "consulta",
+   "poder popular",
+   "comunal"
+  ],
+  "Crisis y abandono": [
+   "crisis",
+   "abandono",
+   "colapso",
+   "apagón",
+   "apagon",
+   "sin agua",
+   "protesta",
+   "denuncia"
+  ],
+  "Transición y elecciones": [
+   "transición",
+   "transicion",
+   "elecciones",
+   "negociación",
+   "negociacion",
+   "estados unidos",
+   "rubio"
+  ]
+ },
+ "positivo": [
+  "gracias",
+  "excelente",
+  "bien hecho",
+  "muy bien",
+  "felicit",
+  "impecable",
+  "genial",
+  "bravo",
+  "gran persona",
+  "orgullo",
+  "el mejor",
+  "esperanza",
+  "honesto",
+  "coherente",
+  "chévere",
+  "chevere",
+  "bendiciones",
+  "dios lo bendiga"
+ ],
+ "negativo": [
+  "vergüenza",
+  "verguenza",
+  "desastre",
+  "fracaso",
+  "inútil",
+  "inutil",
+  "mentiroso",
+  "chorro",
+  "corrupto",
+  "mediocre",
+  "basta",
+  "patético",
+  "patetico",
+  "horrible",
+  "peor",
+  "nefasto",
+  "traidora",
+  "traidor",
+  "panquequ",
+  "operadora",
+  "operador",
+  "enchufado",
+  "dictadura",
+  "régimen",
+  "regimen",
+  "malandro",
+  "sinvergüenza",
+  "sinverguenza",
+  "ladrones",
+  "abandono"
+ ],
+ "contexto": [
+  "falcón",
+  "falcon",
+  "falconiano",
+  "falconiana",
+  "falconianos",
+  "coro",
+  "punto fijo",
+  "paraguaná",
+  "paraguana",
+  "tucacas",
+  "chichiriviche",
+  "carirubana",
+  "los taques",
+  "amuay",
+  "cardón",
+  "churuguara",
+  "dabajuro",
+  "tocópero",
+  "sierra de san luis",
+  "morrocoy",
+  "la vela",
+  "mene mauroa",
+  "tucupido",
+  "píritu de falcón",
+  "urumaco",
+  "hidrofalcón",
+  "hidrofalcon",
+  "estado falcón",
+  "edo. falcón"
+ ],
+ "excluir_frases": [
+  "henri falcón",
+  "henri falcon",
+  "halcón milenario",
+  "falcon 9",
+  "spacex",
+  "ford falcon",
+  "falcon heavy",
+  "atlanta falcons",
+  "un coro",
+  "coro polifónico",
+  "coro polifonico"
+ ],
+ "medios_locales": [
+  "nuevo día",
+  "nuevo dia",
+  "notifalcón",
+  "notifalcon",
+  "mazo 4f",
+  "mazo4f",
+  "la mañana",
+  "diario la mañana",
+  "médano",
+  "medano",
+  "la iguana",
+  "falcón noticias",
+  "falcon noticias",
+  "el falconiano",
+  "gobernación de falcón",
+  "gobernacion de falcon"
+ ],
+ "sitios_locales": [
+  "nuevodia.com.ve",
+  "notifalcon.com",
+  "mazo4f.com",
+  "diariolamanana.com.ve",
+  "gobernacion.falcon.gob.ve"
+ ],
+ "rss": [
+  {
+   "name": "Nuevo Día",
+   "url": "https://nuevodia.com.ve/feed/",
+   "local": true
+  },
+  {
+   "name": "Notifalcón",
+   "url": "https://notifalcon.com/feed/",
+   "local": true
+  },
+  {
+   "name": "Mazo 4F",
+   "url": "https://mazo4f.com/feed/",
+   "local": true
+  },
+  {
+   "name": "La Patilla",
+   "url": "https://lapatilla.com/feed/"
+  },
+  {
+   "name": "El Pitazo",
+   "url": "https://elpitazo.net/feed/"
+  },
+  {
+   "name": "Efecto Cocuyo",
+   "url": "https://efectococuyo.com/feed/"
+  },
+  {
+   "name": "El Diario",
+   "url": "https://eldiario.com/feed/"
+  },
+  {
+   "name": "Tal Cual",
+   "url": "https://talcualdigital.com/feed/"
+  },
+  {
+   "name": "Crónica Uno",
+   "url": "https://cronica.uno/feed/"
+  },
+  {
+   "name": "Últimas Noticias",
+   "url": "https://ultimasnoticias.com.ve/feed/"
+  },
+  {
+   "name": "La Iguana",
+   "url": "https://www.laiguana.tv/rss/"
+  }
+ ],
+ "google_news": {
+  "queries": [
+   "\"Víctor Clark\"",
+   "\"Victor Clark\" Falcón",
+   "\"gobernador Clark\"",
+   "\"Clark Boscán\"",
+   "\"Víctor Clark\" gobernador",
+   "gobernador de Falcón",
+   "Falcón luz apagones",
+   "Falcón agua Hidrofalcón",
+   "Falcón terremoto reconstrucción",
+   "Paraguaná refinería Amuay",
+   "Punto Fijo protesta",
+   "Coro Falcón gobernación",
+   "Falcón oposición elecciones",
+   "\"Delcy Rodríguez\" Falcón",
+   "\"María Corina Machado\" Falcón",
+   "Tucacas Chichiriviche"
+  ],
+  "sites": [
+   "nuevodia.com.ve",
+   "notifalcon.com",
+   "mazo4f.com",
+   "lapatilla.com",
+   "elpitazo.net",
+   "efectococuyo.com",
+   "eldiario.com",
+   "talcualdigital.com",
+   "ultimasnoticias.com.ve",
+   "laiguana.tv"
+  ],
+  "site_terms": [
+   "\"Víctor Clark\"",
+   "gobernador Clark"
+  ]
+ },
+ "youtube": {
+  "region": "VE",
+  "language": "es",
+  "videos_per_query": 8,
+  "comments_per_video": 100,
+  "queries": [
+   "Víctor Clark gobernador",
+   "Víctor Clark Falcón",
+   "gobernador de Falcón",
+   "Falcón apagones",
+   "Falcón agua protesta",
+   "Tucacas terremoto",
+   "Punto Fijo Paraguaná",
+   "Coro Falcón noticias",
+   "Falcón elecciones oposición"
+  ],
+  "contexto": [
+   "falcón",
+   "falcon",
+   "falconian",
+   "coro",
+   "punto fijo",
+   "paraguan",
+   "tucacas",
+   "chichiriviche",
+   "clark",
+   "amuay",
+   "morrocoy"
+  ],
+  "excluir": [
+   "henri falcón",
+   "henri falcon",
+   "spacex",
+   "falcon 9",
+   "ford falcon",
+   "coro polifónico"
+  ]
+ },
+ "trends": {
+  "terminos": [
+   "Víctor Clark",
+   "Delcy Rodríguez",
+   "Diosdado Cabello",
+   "María Corina Machado",
+   "Andrés Velásquez"
+  ],
+  "geos": {
+   "VE-I": "Falcón",
+   "VE": "Venezuela"
+  },
+  "geo_local": "VE-I"
+ },
+ "wiki_provincia": [
+  "Estado Falcón"
+ ],
+ "stop_extra": [
+  "falcón",
+  "falcon",
+  "victor",
+  "víctor",
+  "clark",
+  "gobernador",
+  "venezuela",
+  "estado",
+  "jose",
+  "boscan"
+ ],
+ "textos_comentarios": "extracto",
+ "news_when": "2y"
+}

@@ -142,6 +142,11 @@ def youtube():
 
 
 # ---------------------------------------------------------------- Google News
+# País del dirigente (por defecto Argentina): región de Google News y huso de Google Trends
+PAIS = {"codigo": "AR", "nombre": "Argentina", "hl": "es-419", "tz_trends": 180} | CONFIG.get("pais", {})
+TZ = PAIS["tz_trends"]
+
+
 def news_queries():
     g = CONFIG["google_news"]
     qs = list(g["queries"])
@@ -155,7 +160,8 @@ def google_news():
     atom_out = []
     for q in news_queries():
         url = "https://news.google.com/rss/search?" + urllib.parse.urlencode(
-            {"q": q + " when:" + CONFIG.get("news_when", "1y"), "hl": "es-419", "gl": "AR", "ceid": "AR:es-419"})
+            {"q": q + " when:" + CONFIG.get("news_when", "1y"), "hl": PAIS.get("hl", "es-419"), "gl": PAIS["codigo"],
+             "ceid": f"{PAIS['codigo']}:{PAIS.get('hl', 'es-419')}"})
         try:
             root = ET.fromstring(get(url))
         except Exception as e:
@@ -288,18 +294,18 @@ def trends():
                 raise
 
     try:  # la primera visita devuelve 429 con la cookie NID; la siguiente pasa
-        op.open("https://trends.google.com/trends/explore?geo=AR", timeout=30).read()
+        op.open("https://trends.google.com/trends/explore?geo=" + PAIS["codigo"], timeout=30).read()
     except urllib.error.HTTPError:
         time.sleep(5)
     js = lambda t: json.loads(t[t.index("{"):])
     out = {"fetched_at": iso(datetime.now(timezone.utc)), "terminos": terms, "series": {}, "errores": {}}
-    for geo in cfg.get("geos", {"AR": "Argentina"}):
+    for geo in cfg.get("geos", {PAIS["codigo"]: PAIS.get("nombre", "")}):
         try:
             req = {"comparisonItem": [{"keyword": t, "geo": geo, "time": "today 12-m"} for t in terms], "category": 0, "property": ""}
-            ex = js(call("https://trends.google.com/trends/api/explore?" + urllib.parse.urlencode({"hl": "es-AR", "tz": 180, "req": json.dumps(req)})))
+            ex = js(call("https://trends.google.com/trends/api/explore?" + urllib.parse.urlencode({"hl": "es-AR", "tz": TZ, "req": json.dumps(req)})))
             w = next(w for w in ex["widgets"] if w.get("id") == "TIMESERIES")
             d = js(call("https://trends.google.com/trends/api/widgetdata/multiline?" + urllib.parse.urlencode(
-                {"hl": "es-AR", "tz": 180, "req": json.dumps(w["request"]), "token": w["token"]})))
+                {"hl": "es-AR", "tz": TZ, "req": json.dumps(w["request"]), "token": w["token"]})))
             serie = {t: {} for t in terms}
             for pt in d["default"]["timelineData"]:
                 day = datetime.fromtimestamp(int(pt["time"]), timezone.utc).strftime("%Y-%m-%d")

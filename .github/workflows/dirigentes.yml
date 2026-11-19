@@ -54,11 +54,12 @@ jobs:
             dirigentes/pagano/.store
             dirigentes/casielles/.store
             dirigentes/braillard/.store
+            dirigentes/clark/.store
           key: dirigentes-store-${{ github.run_id }}
           restore-keys: dirigentes-store-
       - name: Collect and analyze
         run: |
-          for d in pagano casielles braillard; do
+          for d in pagano casielles braillard clark; do
             echo "::group::$d"
             timeout 1500 python dirigentes/collect.py "$d" || echo "recolección de $d cortada por tiempo"
             python dirigentes/analyze.py "$d"
@@ -73,6 +74,7 @@ jobs:
             dirigentes/pagano/.store
             dirigentes/casielles/.store
             dirigentes/braillard/.store
+            dirigentes/clark/.store
           key: dirigentes-store-${{ github.run_id }}
       - name: Commit aggregates
         run: |

@@ -482,6 +482,52 @@
      "name": "Sergio Massa"
     }
    ]
+  },
+  "dirigentes-clark": {
+   "titulo": "Víctor Clark",
+   "figuras": [
+    {
+     "name": "Víctor Clark",
+     "ig": [
+      "vclarkb"
+     ]
+    },
+    {
+     "name": "Delcy Rodríguez",
+     "ig": [
+      "delcyrodriguezv",
+      "delcyrodriguez"
+     ]
+    },
+    {
+     "name": "Diosdado Cabello",
+     "ig": [
+      "dcabellor",
+      "diosdadocabellor"
+     ]
+    },
+    {
+     "name": "María Corina Machado",
+     "ig": [
+      "mariacorinamachado",
+      "mariacorinaya"
+     ]
+    },
+    {
+     "name": "Andrés Velásquez",
+     "ig": [
+      "andresvelasquezve",
+      "andresvelasquez"
+     ]
+    },
+    {
+     "name": "Edmundo González",
+     "ig": [
+      "edmundogu",
+      "edmundogonzalezurrutia"
+     ]
+    }
+   ]
   }
  }
 }

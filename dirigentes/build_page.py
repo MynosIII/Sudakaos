@@ -49,6 +49,8 @@ s = sub1(r'<span id="lg-n">[^<]*</span>', f'<span id="lg-n">{html.escape("Monito
 who = json.dumps([{"s": slug, "n": nombre, "c": color}], ensure_ascii=False)
 s = sub1(r"const WHO=\[.*?\];", f"const WHO={who};", s)
 s = sub1(r"IGReporte\.init\(\{data:.*?\}\)", "IGReporte.init({data:'ig.json'})", s)
+if cfg.get("pais", {}).get("nombre"):
+    s = sub1(r'<span id="d-pais">[^<]*</span>', f'<span id="d-pais">{html.escape(cfg["pais"]["nombre"])}</span>', s)
 
 # Ningún otro dirigente del módulo puede quedar nombrado en la página
 otros = [p for p in sorted(x.name for x in ROOT.iterdir() if (x / "config.json").exists()) if p != slug]

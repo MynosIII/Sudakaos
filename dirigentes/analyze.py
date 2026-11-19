@@ -41,7 +41,8 @@ FOCO = FOCOS[0]
 RIVALES = [r for r in CONFIG.get("rivales", []) if r not in FOCOS]
 SEGUIDOS = FOCOS + RIVALES
 EL = CONFIG.get("tema_elecciones", "Elecciones 2027 y candidaturas")
-GEO_LOCAL = CONFIG.get("trends", {}).get("geo_local", "AR")
+PAIS = {"codigo": "AR", "nombre": "Argentina", "zona": "America/Argentina/Buenos_Aires", "reloj": "ARG", "hito": "2027"} | CONFIG.get("pais", {})
+GEO_LOCAL = CONFIG.get("trends", {}).get("geo_local", PAIS["codigo"])
 INTS = ["quiere", "espera", "critica", "apoya"]
 STOP = set(CONFIG.get("stop_extra", []))
 STOP |= set("""que los las del por con una para como mas pero sus les este esta esto eso esa son hay fue ser muy todo todos
@@ -634,7 +635,8 @@ def main():
                     "metodo_nlp": Counter(r["metodo_nlp"] for r in texts).most_common(1)[0][0] if texts else "lexico"},
         "semanas": semanas, "figuras": figs,
         "foco_semanal": foco_semanal, "duelo": duelo, "trends": trends_out, "slug": SLUG, "perfil": CONFIG.get("perfil", {}),
-        "distrito": CONFIG.get("distrito", ""), "tema_elecciones": EL, "geo_local": GEO_LOCAL, "color": CONFIG.get("color"),
+        "distrito": CONFIG.get("distrito", ""), "tema_elecciones": EL, "geo_local": GEO_LOCAL, "color": CONFIG.get("color"), "pais": PAIS,
+        "titulo_elecciones": CONFIG.get("titulo_elecciones", "Titulares sobre la gobernación " + PAIS["hito"]),
         "voz": voz, "elecciones": elecciones, "mapa_poder": mapa, "hitos": hitos, "alertas": alertas,
         "medios_tono": medios_tono, "medios_matriz": medios_matriz, "videos": videos, "wiki": wiki_out,
         "metodo": {
