@@ -32,6 +32,8 @@ from email.utils import parsedate_to_datetime
 from pathlib import Path
 
 SLUG = sys.argv[1] if len(sys.argv) > 1 else "pagano"
+# --solo x: corre solo la búsqueda en X (workflow "X tableros"), sin tocar el resto de las fuentes
+SOLO_X = "--solo" in sys.argv and "x" in sys.argv[sys.argv.index("--solo") + 1:]
 HERE = Path(__file__).resolve().parent / SLUG
 CONFIG = json.loads((HERE / "config.json").read_text(encoding="utf8"))
 STORE = HERE / ".store" / "items.jsonl"
@@ -326,11 +328,17 @@ def trends():
 X_ESTADO = {}
 
 
+def x_config():
+    """Bloque "x" del tablero: en su config.json o en x/tableros.json."""
+    xt = HERE.parent.parent / "x" / "tableros.json"
+    return CONFIG.get("x") or (json.loads(xt.read_text(encoding="utf8")).get(SLUG) if xt.exists() else None)
+
+
 def x_posts():
     """Posts recientes de X con tope de gasto (ver x/x_api.py)."""
     sys.path.insert(0, str(HERE.parent.parent / "x"))
     from x_api import buscar
-    rows, estado = buscar(SLUG, CONFIG["x"])
+    rows, estado = buscar(SLUG, x_config())
     if not estado.get("ok"):
         raise RuntimeError(estado.get("error", "X falló"))
     X_ESTADO["x"] = {k: v for k, v in estado.items() if k not in ("ok", "items")}
@@ -353,9 +361,12 @@ def main():
                 known[r["id"]] = r
             except (ValueError, KeyError):
                 pass
+    status_path = HERE / ".store" / "status.json"
     status = {}
-    fuentes = [("youtube", youtube), ("google_news", google_news), ("rss", rss)]
-    if CONFIG.get("x"):  # primero y guardado enseguida: lo que se paga no se pierde si la corrida se corta
+    if SOLO_X and status_path.exists():  # conservar el estado de las otras fuentes
+        status = json.loads(status_path.read_text(encoding="utf8"))
+    fuentes = [] if SOLO_X else [("youtube", youtube), ("google_news", google_news), ("rss", rss)]
+    if x_config():  # primero y guardado enseguida: lo que se paga no se pierde si la corrida se corta
         fuentes.insert(0, ("x", x_posts))
     for name, fn in fuentes:
         try:
@@ -370,8 +381,9 @@ def main():
         if name == "x":
             save(known)
     save(known)
-    status_path = HERE / ".store" / "status.json"
     status_path.write_text(json.dumps(status, ensure_ascii=False), encoding="utf8")
+    if SOLO_X:
+        return
     try:
         npers, has_m = wiki()
         status["wikipedia"] = {"ok": npers > 0, "items": npers, "provincia": has_m}
