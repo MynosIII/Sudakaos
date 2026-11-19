@@ -608,7 +608,7 @@ def main():
         order.append(r["id"])
         com = r["kind"] == "comment"
         txt = (excerpt(r.get("text", ""), 600) if SHOW_COMMENTS else "") if com else (r.get("title") or r.get("text", ""))
-        pub.append({"k": "c" if com else "n", "t": txt, "o": (r.get("video_title") or "YouTube") if com else r.get("outlet", ""),
+        pub.append({"k": "c" if com else "n", "t": txt, "o": (r.get("video_title") or "YouTube") if com else r.get("outlet", ""), "pl": r.get("platform", ""),
                     "d": r["created_at"][:10], "u": r.get("url", ""), "tono": r.get("tono"), "temas": r.get("temas", []),
                     "pols": r.get("pols", []), "int": r.get("int", []), "lk": int(r.get("engagement") or 0) if com else 0})
     pidx = {x: i for i, x in enumerate(order)}
