@@ -1057,7 +1057,7 @@
  "textos_comentarios": "extracto",
  "news_when": "2y",
  "x": {
-  "query": "(@vclarkb OR \"Víctor Clark\" OR \"Victor Clark\" OR \"gobernador Clark\" OR \"Clark Boscán\" OR \"Clark Boscan\") -is:retweet -tijuana",
+  "query": "(@vclarkb OR \"Víctor Clark\" OR \"Victor Clark\" OR \"gobernador Clark\" OR \"Clark Boscán\" OR \"Clark Boscan\" OR \"gobernador de Falcón\" OR \"gobernación de Falcón\" OR \"gobernacion de Falcon\" OR Hidrofalcón OR Hidrofalcon) -is:retweet -tijuana",
   "max_posts": 100,
   "cada_dias": 3
  }

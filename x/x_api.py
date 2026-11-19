@@ -45,9 +45,14 @@ def guardar_gasto(g):
     LEDGER.write_text(json.dumps(g, ensure_ascii=False, indent=1) + "\n", encoding="utf8")
 
 
+def gastado(g):
+    """Gasto registrado más lo leído fuera de main (corridas de prueba en ramas)."""
+    return g["total_usd"] + CFG.get("gasto_fuera_de_registro_usd", 0)
+
+
 def disponible(g):
     """Posts que todavía se pueden leer sin pasar el presupuesto total."""
-    return max(0, int((CFG["presupuesto_usd"] - g["total_usd"]) / CFG["costo_por_post_usd"]))
+    return max(0, int((CFG["presupuesto_usd"] - gastado(g)) / CFG["costo_por_post_usd"]))
 
 
 def buscar(tablero: str, cx: dict):
@@ -60,10 +65,10 @@ def buscar(tablero: str, cx: dict):
     ult = t.get("ultima")
     if ult and _now() - datetime.fromisoformat(ult.replace("Z", "+00:00")) < timedelta(days=cx.get("cada_dias", 3)) - timedelta(hours=2):
         return [], {"ok": True, "items": 0, "nota": f"próxima consulta a X después de {cx.get('cada_dias', 3)} días de {ult[:10]}",
-                    "gasto_usd": round(g["total_usd"], 3)}
+                    "gasto_usd": round(gastado(g), 3)}
     tope = min(int(cx.get("max_posts", 100)), int(CFG.get("max_posts_por_corrida", 100)), disponible(g))
     if tope < 10:
-        return [], {"ok": False, "items": 0, "error": f"presupuesto de X agotado (USD {g['total_usd']:.2f} de {CFG['presupuesto_usd']})"}
+        return [], {"ok": False, "items": 0, "error": f"presupuesto de X agotado (USD {gastado(g):.2f} de {CFG['presupuesto_usd']})"}
     params = {"query": cx["query"], "max_results": min(100, tope), "sort_order": "recency",
               "tweet.fields": "created_at,public_metrics,lang,conversation_id"}
     if t.get("since_id"):
@@ -110,7 +115,7 @@ def buscar(tablero: str, cx: dict):
     g["total_usd"] = round(g["total_usd"] + usd, 4)
     g["corridas"].append({"fecha": _iso(_now()), "tablero": tablero, "posts": leidos, "usd": round(usd, 4), **({"error": error} if error else {})})
     guardar_gasto(g)
-    estado = {"ok": not error, "items": len(rows), "gasto_usd": round(g["total_usd"], 3), "presupuesto_usd": CFG["presupuesto_usd"]}
+    estado = {"ok": not error, "items": len(rows), "gasto_usd": round(gastado(g), 3), "presupuesto_usd": CFG["presupuesto_usd"]}
     if error:
         estado["error"] = error
     return rows, estado
