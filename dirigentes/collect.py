@@ -331,7 +331,7 @@ X_ESTADO = {}
 def x_config():
     """Bloque "x" del tablero: en su config.json o en x/tableros.json."""
     xt = HERE.parent.parent / "x" / "tableros.json"
-    return CONFIG.get("x") or (json.loads(xt.read_text(encoding="utf8")).get(SLUG) if xt.exists() else None)
+    return (json.loads(xt.read_text(encoding="utf8")).get(SLUG) if xt.exists() else None)
 
 
 def x_posts():
@@ -366,7 +366,7 @@ def main():
     if SOLO_X and status_path.exists():  # conservar el estado de las otras fuentes
         status = json.loads(status_path.read_text(encoding="utf8"))
     fuentes = [] if SOLO_X else [("youtube", youtube), ("google_news", google_news), ("rss", rss)]
-    if x_config():  # primero y guardado enseguida: lo que se paga no se pierde si la corrida se corta
+    if SOLO_X and x_config():  # X es pago: solo a mano (workflow "X tableros"), nunca en la corrida diaria
         fuentes.insert(0, ("x", x_posts))
     for name, fn in fuentes:
         try:
