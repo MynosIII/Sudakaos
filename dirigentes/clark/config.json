@@ -30,17 +30,20 @@
   "Víctor Clark"
  ],
  "rivales": [
-  "Delcy Rodríguez",
-  "Diosdado Cabello",
   "María Corina Machado",
+  "Delcy Rodríguez",
+  "Yanira León",
+  "Henry Hernández",
+  "Diosdado Cabello",
   "Andrés Velásquez",
   "Edmundo González"
  ],
  "co_clave": [
   "Delcy Rodríguez",
-  "Diosdado Cabello",
   "María Corina Machado",
-  "Andrés Velásquez",
+  "Yanira León",
+  "Henry Hernández",
+  "Diosdado Cabello",
   "Nicolás Maduro"
  ],
  "window_days": 730,
@@ -182,6 +185,10 @@
    "cargo": "Exsecretario de gobierno de Falcón, alcalde encargado de Carirubana (2024)",
    "wiki": [
     "Luis Manuel Piña"
+   ],
+   "alias_contexto": [
+    "luis manuel piña",
+    "luis manuel pina"
    ]
   },
   "Héctor Rodríguez": {
@@ -214,6 +221,34 @@
    "cargo": "Presidente de EE. UU.",
    "wiki": [
     "Donald Trump"
+   ]
+  },
+  "Henry Hernández": {
+   "alias": [
+    "alcalde henry hernández",
+    "alcalde henry hernandez",
+    "henry hernández",
+    "henry hernandez"
+   ],
+   "alias_contexto": [
+    "henry hernández",
+    "henry hernandez"
+   ],
+   "bando": "PSUV",
+   "cargo": "Alcalde de Miranda (Coro), electo en 2025",
+   "wiki": [
+    "Henry Hernández"
+   ]
+  },
+  "Yanira León": {
+   "alias": [
+    "yanira león",
+    "yanira leon"
+   ],
+   "bando": "Oposición",
+   "cargo": "Coordinadora de Vente Venezuela en Falcón",
+   "wiki": [
+    "Yanira León"
    ]
   }
  },
@@ -290,6 +325,21 @@
     "alineamiento": 24,
     "peso": 55,
     "nota": "Gobernador de Miranda, posible figura del chavismo en la transición."
+   },
+   "Henry Hernández": {
+    "alineamiento": 14,
+    "peso": 40,
+    "nota": "Alcalde de Coro (capital), del mismo espacio; socio territorial y posible relevo."
+   },
+   "Yanira León": {
+    "alineamiento": 94,
+    "peso": 22,
+    "nota": "Coordinadora de Vente Venezuela en Falcón: la cara local de María Corina."
+   },
+   "Luis Manuel Piña": {
+    "alineamiento": 15,
+    "peso": 20,
+    "nota": "Exsecretario de gobierno de Clark; quedó a cargo de la alcaldía de Carirubana en 2024."
    }
   }
  },
@@ -912,7 +962,11 @@
    "Falcón oposición elecciones",
    "\"Delcy Rodríguez\" Falcón",
    "\"María Corina Machado\" Falcón",
-   "Tucacas Chichiriviche"
+   "Tucacas Chichiriviche",
+   "\"Henry Hernández\" alcalde Coro",
+   "\"Yanira León\" Vente Falcón",
+   "Vente Venezuela Falcón",
+   "alcaldía de Carirubana Punto Fijo"
   ],
   "sites": [
    "nuevodia.com.ve",
@@ -945,7 +999,9 @@
    "Tucacas terremoto",
    "Punto Fijo Paraguaná",
    "Coro Falcón noticias",
-   "Falcón elecciones oposición"
+   "Falcón elecciones oposición",
+   "alcalde Henry Hernández Coro",
+   "Vente Venezuela Falcón"
   ],
   "contexto": [
    "falcón",
@@ -999,5 +1055,10 @@
   "boscan"
  ],
  "textos_comentarios": "extracto",
- "news_when": "2y"
+ "news_when": "2y",
+ "x": {
+  "query": "(@vclarkb OR \"Víctor Clark\" OR \"Victor Clark\" OR \"gobernador Clark\" OR \"Clark Boscán\" OR \"Clark Boscan\") -is:retweet -tijuana",
+  "max_posts": 100,
+  "cada_dias": 3
+ }
 }

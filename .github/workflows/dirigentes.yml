@@ -10,6 +10,8 @@ on:
     paths:
       - 'dirigentes/*/config.json'
       - 'dirigentes/*.py'
+      - 'x/*.py'
+      - 'x/config.json'
       - '.github/workflows/dirigentes.yml'
 
 permissions:
@@ -27,6 +29,8 @@ jobs:
       # Clave propia si se carga YOUTUBE_API_KEY_DIRIGENTES; si no, la de Roca (la del tablero nacional queda afuera)
       YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY_DIRIGENTES || secrets.YOUTUBE_API_KEY_ROCA }}
       RADAR_NLP_SECONDS: '420'
+      # API de X (pay-per-use): solo para tableros con bloque "x" en su config; tope de gasto en x/config.json
+      X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -80,7 +84,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add dirigentes/*/data/monitor.json dirigentes/*/data/textos.json
+          git add dirigentes/*/data/monitor.json dirigentes/*/data/textos.json x/gasto.json 2>/dev/null || git add dirigentes/*/data/monitor.json dirigentes/*/data/textos.json
           if ! git diff --cached --quiet; then
             git commit -m 'Dirigentes: actualizar agregados'
             for i in 1 2 3; do

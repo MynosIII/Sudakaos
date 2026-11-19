@@ -8,7 +8,9 @@ Fuentes (cada una falla por separado sin frenar a las demás):
   - Google Trends: interés de búsqueda en la provincia del distrito y en el país, sin clave. Google suele cortar
     pedidos desde servidores: si falla, el tablero lo dice y sigue con el resto.
   - Wikipedia / Wikimedia: visitas diarias a los artículos de cada figura (sin clave) y ficha de la provincia.
-Facebook, Instagram y X no tienen API abierta y gratuita para buscar publicaciones.
+  - X (opcional, pago): si la config trae un bloque "x" y existe X_BEARER_TOKEN, posts recientes con tope de gasto
+    compartido (x/x_api.py, x/config.json, x/gasto.json).
+Facebook e Instagram no tienen API abierta para buscar publicaciones.
 
 Uso: python dirigentes/collect.py <slug>   (pagano | casielles | braillard)
 El almacén con textos (.store/) no se sube al repositorio; en Actions vive en la caché del workflow.
@@ -321,6 +323,20 @@ def trends():
     return sum(len(v) for v in out["series"].values())
 
 
+X_ESTADO = {}
+
+
+def x_posts():
+    """Posts recientes de X con tope de gasto (ver x/x_api.py)."""
+    sys.path.insert(0, str(HERE.parent.parent / "x"))
+    from x_api import buscar
+    rows, estado = buscar(SLUG, CONFIG["x"])
+    if not estado.get("ok"):
+        raise RuntimeError(estado.get("error", "X falló"))
+    X_ESTADO["x"] = {k: v for k, v in estado.items() if k not in ("ok", "items")}
+    return rows
+
+
 def save(known):
     cutoff = iso(datetime.now(timezone.utc) - timedelta(days=CONFIG["window_days"] + 30))
     keep = [r for r in known.values() if r.get("created_at", "") >= cutoff]
@@ -338,16 +354,21 @@ def main():
             except (ValueError, KeyError):
                 pass
     status = {}
-    for name, fn in (("youtube", youtube), ("google_news", google_news), ("rss", rss)):
+    fuentes = [("youtube", youtube), ("google_news", google_news), ("rss", rss)]
+    if CONFIG.get("x"):  # primero y guardado enseguida: lo que se paga no se pierde si la corrida se corta
+        fuentes.insert(0, ("x", x_posts))
+    for name, fn in fuentes:
         try:
             rows = fn()
             new = sum(1 for r in rows if r["id"] not in known)
             for r in rows:
                 known[r["id"]] = r | {"collected_at": iso(datetime.now(timezone.utc))}
-            status[name] = {"ok": True, "items": len(rows), "new": new}
+            status[name] = {"ok": True, "items": len(rows), "new": new} | X_ESTADO.pop(name, {})
         except Exception as e:
             status[name] = {"ok": False, "error": str(e)[:200]}
         log(source=name, **status[name])
+        if name == "x":
+            save(known)
     save(known)
     status_path = HERE / ".store" / "status.json"
     status_path.write_text(json.dumps(status, ensure_ascii=False), encoding="utf8")
