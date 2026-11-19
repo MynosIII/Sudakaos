@@ -29,9 +29,7 @@ jobs:
       # Clave propia si se carga YOUTUBE_API_KEY_DIRIGENTES; si no, la de Roca (la del tablero nacional queda afuera)
       YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY_DIRIGENTES || secrets.YOUTUBE_API_KEY_ROCA }}
       RADAR_NLP_SECONDS: '420'
-      # API de X (pay-per-use): solo para tableros con bloque "x" en su config; tope de gasto en x/config.json
-      # Solo en main: las corridas de prueba en ramas no gastan ni dejan el registro de gasto afuera
-      X_BEARER_TOKEN: ${{ github.ref_name == 'main' && secrets.X_BEARER_TOKEN || '' }}
+      # Sin X_BEARER_TOKEN a propósito: X es pago y solo se corre a mano (workflow "X tableros")
     steps:
       - uses: actions/checkout@v4
       # Corridas en cola: partir del último main (registro de gasto de X incluido), no del commit que las disparó

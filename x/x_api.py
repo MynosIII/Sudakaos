@@ -7,8 +7,8 @@
 - X cobra por post devuelto (~USD 0,005 en 2026; un post repetido en el mismo día UTC se cobra una vez).
   Cada corrida anota en x/gasto.json cuántos posts leyó cada tablero y el gasto estimado acumulado.
 - Antes de cada pedido se calcula cuánto queda del presupuesto total (x/config.json); si no alcanza, no se pide.
-- Cada tablero define en su config un bloque "x": {"query": ..., "max_posts": 100, "cada_dias": 3}.
-  Solo se piden posts nuevos (since_id) y como mucho una vez cada "cada_dias".
+- Cada tablero se configura en x/tableros.json: {"query": ..., "max_posts": 100}.
+  Solo se piden posts nuevos (since_id). Nunca corre automático: solo a mano con el workflow "X tableros".
 """
 from __future__ import annotations
 
@@ -63,7 +63,7 @@ def buscar(tablero: str, cx: dict):
     g = leer_gasto()
     t = g["tableros"].setdefault(tablero, {"posts": 0, "usd": 0.0})
     ult = t.get("ultima")
-    if ult and _now() - datetime.fromisoformat(ult.replace("Z", "+00:00")) < timedelta(days=cx.get("cada_dias", 3)) - timedelta(hours=2):
+    if cx.get("cada_dias") and ult and _now() - datetime.fromisoformat(ult.replace("Z", "+00:00")) < timedelta(days=cx.get("cada_dias", 3)) - timedelta(hours=2):
         return [], {"ok": True, "items": 0, "nota": f"próxima consulta a X después de {cx.get('cada_dias', 3)} días de {ult[:10]}",
                     "gasto_usd": round(gastado(g), 3)}
     tope = min(int(cx.get("max_posts", 100)), int(CFG.get("max_posts_por_corrida", 100)), disponible(g))
