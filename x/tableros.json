@@ -1,0 +1,8 @@
+{
+ "_nota": "Tableros con X configurado acá (además de los que traen el bloque \"x\" en su propio config). Este archivo no dispara la recolección diaria; para leer X ya, correr a mano el workflow \"X tableros\" con el tablero. El tope de gasto compartido está en x/config.json.",
+ "pagano": {
+  "query": "(@marcelapagano OR \"Marcela Pagano\" OR \"diputada Pagano\") -is:retweet",
+  "max_posts": 100,
+  "cada_dias": 3
+ }
+}
