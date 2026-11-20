@@ -382,7 +382,7 @@ def gdelt():
 
 # ---------------------------------------------------------------- YouTube
 def youtube(rows):
-    com = [r for r in rows if r["kind"] == "comment" and r["created_at"] >= ago(30)]
+    com = [r for r in rows if r["kind"] == "comment" and r.get("platform") != "X" and r["created_at"] >= ago(30)]
     vids = [r for r in rows if r["kind"] == "video" and r["created_at"] >= ago(30)]
     n = len(com)
     emo = Counter(r["emo"] for r in com if r["emo"])
@@ -651,6 +651,130 @@ def alerts(m):
     return sorted(out, key=lambda a: rank[a["lvl"]])[:14]
 
 
+# ---------------------------------------------------------------- X (manual paid runs) and Instagram
+def xposts(rows):
+    ps = [r for r in rows if r.get("platform") == "X" and r["created_at"] >= ago(30)]
+    if not ps:
+        return None
+    n = len(ps)
+    emo = Counter(r["emo"] for r in ps if r["emo"])
+    daily = defaultdict(Counter)
+    for r in ps:
+        c = daily[day(r["created_at"])]
+        c["n"] += 1
+        c[r["tono"]] += 1
+    tp = []
+    for k in TOPICS:
+        rs = [r for r in ps if k in r["_top"]]
+        if len(rs) >= 3:
+            tp.append({"k": k, "n": len(rs), "pos": pct(sum(r["tono"] == "POS" for r in rs), len(rs)), "neg": pct(sum(r["tono"] == "NEG" for r in rs), len(rs))})
+    tp.sort(key=lambda x: -x["n"])
+    top = sorted(ps, key=lambda r: -r.get("engagement", 0))[:12]
+    return {"n": n, "last": max(r["created_at"] for r in ps)[:16], "tone": {k: pct(sum(r["tono"] == k for r in ps), n) for k in ("POS", "NEU", "NEG")},
+            "emo": {k: pct(v, n) for k, v in emo.most_common()}, "tox": pct(sum(r["tox"] for r in ps), n),
+            "daily": [{"d": d, **dict(c)} for d, c in sorted(daily.items())], "topics": tp, "cloud": cloud(ps, 80),
+            "cloud_pos": cloud([r for r in ps if r["tono"] == "POS"], 30), "cloud_neg": cloud([r for r in ps if r["tono"] == "NEG"], 30),
+            "top": [{"t": excerpt(r["text"], 280), "u": r["url"], "d": r["created_at"][:16], "e": r.get("engagement", 0), "s": r["tono"]} for r in top],
+            "spend": (load_x_spend() or {})}
+
+
+def load_x_spend():
+    p = HERE.parent / "x" / "gasto.json"
+    if not p.exists():
+        return None
+    t = json.loads(p.read_text(encoding="utf8")).get("tableros", {}).get("trump") or {}
+    return {"posts": t.get("posts", 0), "usd": t.get("usd", 0), "last": t.get("ultima")}
+
+
+def instagram():
+    d = load("instagram.json")
+    if not d:
+        return None
+    accs = []
+    for a in d.get("accounts", []):
+        ms = [m for m in a["media"] if m["d"] >= ago(30)] or a["media"][:12]
+        inter = [m["l"] + m["c"] for m in ms]
+        kinds = Counter(m["k"] for m in ms)
+        accs.append({"h": a["h"], "n": a["n"], "f": a["f"], "mc": a["mc"], "p30": sum(1 for m in a["media"] if m["d"] >= ago(30)),
+                     "avg": round(sum(inter) / len(inter)) if inter else 0, "er": round(100 * sum(inter) / len(inter) / a["f"], 3) if inter and a["f"] else None,
+                     "kinds": dict(kinds.most_common()),
+                     "top": [{"t": m["t"][:200], "u": m["u"], "d": m["d"][:10], "l": m["l"], "c": m["c"], "k": m["k"]}
+                             for m in sorted(a["media"], key=lambda m: -(m["l"] + m["c"]))[:6]]})
+    return {"at": d.get("at"), "accounts": accs}
+
+
+# ---------------------------------------------------------------- states: approval estimate and correlations
+FEATURES = {"ba": "Con título universitario", "black": "Población afroamericana", "hisp": "Población hispana", "foreign": "Nacidos en el extranjero",
+            "income": "Ingreso mediano del hogar", "gdp_pc": "PIB per cápita", "rural": "Población rural", "age": "Edad mediana",
+            "pov": "Pobreza", "home": "Valor mediano de la vivienda", "vet": "Veteranos", "asian": "Población asiática",
+            "white": "Población blanca", "trends": "Interés en Google por “Trump”", "ads": "Alcance de avisos políticos por habitante"}
+
+
+def pearson(xs, ys):
+    n = len(xs)
+    if n < 8:
+        return None
+    mx, my = sum(xs) / n, sum(ys) / n
+    sx = sum((x - mx) ** 2 for x in xs) ** 0.5
+    sy = sum((y - my) ** 2 for y in ys) ** 0.5
+    return round(sum((x - mx) * (y - my) for x, y in zip(xs, ys)) / (sx * sy), 2) if sx and sy else None
+
+
+def states(m):
+    el = json.loads((HERE / "static" / "elections.json").read_text(encoding="utf8"))
+    ce = load("census.json") or {}
+    acs, rural, gdp = ce.get("acs") or {}, ce.get("rural") or {}, ce.get("gdp") or {}
+    trends = ((m.get("attention") or {}).get("states")) or {}
+    ads_reg = {x["k"]: x["v"] for x in ((m.get("ads") or {}).get("regions") or [])}
+    ap = ((m.get("approval") or {}).get("avg") or {}).get("a")
+    nat = el["meta"]["national"]
+    lg = lambda p: math.log(p / (100 - p))
+    shift = lg(ap) - lg(nat["r24"]) if ap else None
+    tot_pop = sum((a.get("pop") or 0) for k, a in acs.items() if k in el["states"]) or None
+    rows = []
+    for st, e in el["states"].items():
+        r = {"s": st, "r24": e["r24"], "d24": e["d24"], "m24": round(e["r24"] - e["d24"], 1),
+             "sw": round((e["r24"] - e["d24"]) - (e["r20"] - e["d20"]), 1)}
+        if shift is not None:
+            r["app"] = round(100 / (1 + math.exp(-(lg(e["r24"]) + shift))), 1)
+        a = acs.get(st) or {}
+        pop = a.get("pop")
+        if pop:
+            r["pop"] = int(pop)
+            for k in ("black", "hisp", "foreign", "asian", "white"):
+                if a.get(k) is not None:
+                    r[k] = round(100 * a[k] / pop, 1)
+            if a.get("ed_tot"):
+                r["ba"] = round(100 * sum(a.get(k) or 0 for k in ("ba", "ma", "prof", "phd")) / a["ed_tot"], 1)
+            if a.get("pov_tot"):
+                r["pov"] = round(100 * a["pov"] / a["pov_tot"], 1)
+            if a.get("vet_tot"):
+                r["vet"] = round(100 * a["vet"] / a["vet_tot"], 1)
+            for k in ("income", "age", "home"):
+                if a.get(k) and a[k] > 0:
+                    r[k] = a[k]
+            g = gdp.get(st)
+            if g:
+                r["gdp_pc"] = round(g["v"] * 1e6 / pop)
+            if st in ads_reg and tot_pop:
+                r["ads"] = round(ads_reg[st] / (100 * pop / tot_pop), 2)
+        if st in rural:
+            r["rural"] = rural[st]
+        if st in trends:
+            r["trends"] = trends[st]
+        rows.append(r)
+    corr = []
+    for tgt in ("r24", "sw"):
+        for f, label in FEATURES.items():
+            pts = [(r[f], r[tgt]) for r in rows if r["s"] != "District of Columbia" and r.get(f) is not None]
+            c = pearson([p[0] for p in pts], [p[1] for p in pts])
+            if c is not None:
+                corr.append({"t": tgt, "f": f, "r": c, "n": len(pts)})
+    corr.sort(key=lambda c: -abs(c["r"]))
+    return {"rows": rows, "corr": corr, "features": FEATURES, "national": nat, "approval": ap, "counties": el["meta"]["counties"],
+            "acs_year": ce.get("acs_year"), "gdp_year": next(iter(gdp.values()), {}).get("y"), "census_errors": ce.get("errors", [])}
+
+
 # ---------------------------------------------------------------- main
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
@@ -666,12 +790,19 @@ def main():
     m["media"], heads = media(news) if news else (None, [])
     m["gdelt"] = gdelt()
     m["youtube"] = youtube(rows)
+    m["x"] = xposts(rows)
+    m["instagram"] = instagram()
     m["truth"] = truth(rows)
     m["orders"] = orders()
     m["markets"] = load("markets.json")
     m["econ"] = econ()
     m["attention"] = attention()
     m["ads"] = ads()
+    try:
+        m["states"] = states(m)
+    except Exception as e:
+        print("states:", type(e).__name__, e)
+        m["states"] = None
     m["alerts"] = alerts(m)
     m["totals"] = {"news": len(news), "comments": sum(r["kind"] == "comment" for r in rows), "truth": sum(r["kind"] == "truth" for r in rows),
                    "videos": sum(r["kind"] == "video" for r in rows), "polls": (m["approval"] or {}).get("counts", {}).get("polls", 0)}

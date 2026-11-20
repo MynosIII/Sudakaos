@@ -66,44 +66,57 @@ def buscar(tablero: str, cx: dict):
     if cx.get("cada_dias") and ult and _now() - datetime.fromisoformat(ult.replace("Z", "+00:00")) < timedelta(days=cx.get("cada_dias", 3)) - timedelta(hours=2):
         return [], {"ok": True, "items": 0, "nota": f"próxima consulta a X después de {cx.get('cada_dias', 3)} días de {ult[:10]}",
                     "gasto_usd": round(gastado(g), 3)}
-    tope = min(int(cx.get("max_posts", 100)), int(CFG.get("max_posts_por_corrida", 100)), disponible(g))
+    tope = min(int(cx.get("max_posts", 100)), int(cx.get("max_posts_por_corrida", CFG.get("max_posts_por_corrida", 100))), disponible(g))
     if tope < 10:
         return [], {"ok": False, "items": 0, "error": f"presupuesto de X agotado (USD {gastado(g):.2f} de {CFG['presupuesto_usd']})"}
-    params = {"query": cx["query"], "max_results": min(100, tope), "sort_order": "recency",
-              "tweet.fields": "created_at,public_metrics,lang,conversation_id"}
-    if t.get("since_id"):
-        params["since_id"] = t["since_id"]
+    base = {"query": cx["query"], "sort_order": "recency", "tweet.fields": "created_at,public_metrics,lang,conversation_id"}
+    tramos = int(cx.get("tramos_dias", 0))
+    if tramos:
+        # temas de altísimo volumen: muestra repartida en los últimos N días (un tramo por día), sin since_id
+        fin = _now() - timedelta(minutes=1)
+        cuota = max(10, tope // tramos)
+        pedidos = [(dict(base, start_time=_iso(fin - timedelta(days=i + 1) + timedelta(minutes=10 if i == tramos - 1 else 0)),
+                         end_time=_iso(fin - timedelta(days=i))), cuota) for i in range(tramos)]
     else:
-        params["start_time"] = _iso(_now() - timedelta(days=6, hours=20))
-    rows, leidos, token_pag, max_id, error = [], 0, None, t.get("since_id"), None
-    while leidos < tope:
-        p = dict(params, max_results=max(10, min(100, tope - leidos)))
-        if token_pag:
-            p["next_token"] = token_pag
-        req = urllib.request.Request(API + urllib.parse.urlencode(p), headers={"Authorization": f"Bearer {token}"})
-        try:
-            with urllib.request.urlopen(req, timeout=40) as r:
-                d = json.loads(r.read().decode("utf8"))
-        except urllib.error.HTTPError as e:
-            error = f"HTTP {e.code}: {e.read().decode('utf8', 'ignore')[:160]}"
+        p0 = dict(base)
+        if t.get("since_id"):
+            p0["since_id"] = t["since_id"]
+        else:
+            p0["start_time"] = _iso(_now() - timedelta(days=6, hours=20))
+        pedidos = [(p0, tope)]
+    rows, leidos, max_id, error = [], 0, t.get("since_id"), None
+    for params, cuota in pedidos:
+        if error or leidos >= tope:
             break
-        except Exception as e:  # red
-            error = f"{type(e).__name__}: {str(e)[:160]}"
-            break
-        data = d.get("data") or []
-        leidos += len(data)
-        for tw in data:
-            m = tw.get("public_metrics") or {}
-            rows.append({"id": f"X:{tw['id']}", "platform": "X", "kind": "comment", "video_id": "x", "video_title": "X",
-                         "channel": "X", "text": tw.get("text", ""), "created_at": tw["created_at"][:19] + "Z",
-                         "url": f"https://x.com/i/status/{tw['id']}",  # sin autor, como el resto de los extractos
-                         "query": "x", "engagement": int(m.get("like_count", 0)) + int(m.get("retweet_count", 0)),
-                         "likes": int(m.get("like_count", 0))})
-            if not max_id or int(tw["id"]) > int(max_id):
-                max_id = tw["id"]
-        token_pag = (d.get("meta") or {}).get("next_token")
-        if not token_pag or not data:
-            break
+        hasta, token_pag = min(tope, leidos + cuota), None
+        while leidos < hasta:
+            p = dict(params, max_results=max(10, min(100, hasta - leidos)))
+            if token_pag:
+                p["next_token"] = token_pag
+            req = urllib.request.Request(API + urllib.parse.urlencode(p), headers={"Authorization": f"Bearer {token}"})
+            try:
+                with urllib.request.urlopen(req, timeout=40) as r:
+                    d = json.loads(r.read().decode("utf8"))
+            except urllib.error.HTTPError as e:
+                error = f"HTTP {e.code}: {e.read().decode('utf8', 'ignore')[:160]}"
+                break
+            except Exception as e:  # red
+                error = f"{type(e).__name__}: {str(e)[:160]}"
+                break
+            data = d.get("data") or []
+            leidos += len(data)
+            for tw in data:
+                m = tw.get("public_metrics") or {}
+                rows.append({"id": f"X:{tw['id']}", "platform": "X", "kind": "comment", "video_id": "x", "video_title": "X",
+                             "channel": "X", "text": tw.get("text", ""), "created_at": tw["created_at"][:19] + "Z",
+                             "url": f"https://x.com/i/status/{tw['id']}",  # sin autor, como el resto de los extractos
+                             "query": "x", "engagement": int(m.get("like_count", 0)) + int(m.get("retweet_count", 0)),
+                             "likes": int(m.get("like_count", 0))})
+                if not max_id or int(tw["id"]) > int(max_id):
+                    max_id = tw["id"]
+            token_pag = (d.get("meta") or {}).get("next_token")
+            if not token_pag or not data:
+                break
     usd = leidos * CFG["costo_por_post_usd"]
     t["posts"] += leidos
     t["usd"] = round(t["usd"] + usd, 4)

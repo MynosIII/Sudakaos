@@ -82,6 +82,8 @@ tbody tr:hover td{background:var(--s2)}
 .bars .r span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .bars .r i{display:block;height:9px;border-radius:2px;background:var(--red)}.bars .r b{font:600 12px var(--mono);color:var(--txt);text-align:right}
 .tone{display:flex;height:12px;border-radius:3px;overflow:hidden;background:var(--s3)}.tone i{display:block;height:100%}
+.sel{background:var(--s2);color:var(--txt);border:1px solid var(--line);border-radius:6px;padding:6px 8px;font:13px Inter,system-ui,sans-serif;margin-right:8px}
+.ins{list-style:none;margin:0;padding:0}.ins li{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.5px;line-height:1.45}.ins li b{color:var(--gold)}.ins li .r{float:right;font:600 12px var(--mono);margin-left:10px}
 .legend{display:flex;gap:12px;font-size:11.5px;color:var(--dim);margin-top:6px;flex-wrap:wrap}.legend span::before{content:"";display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px;background:var(--c)}
 .cloud{width:100%;height:auto;display:block}.cloud text{font-family:Inter,system-ui,sans-serif;font-weight:600;cursor:pointer}.cloud text:hover{text-decoration:underline}
 .alerts{display:flex;flex-direction:column;gap:8px}
@@ -141,9 +143,11 @@ footer{color:var(--dim);font-size:12px;max-width:1600px;margin:0 auto;padding:0 
 <nav><div class="in" id="tabs">
   <button data-t="overview" class="on">Resumen</button>
   <button data-t="approval">Aprobación</button>
+  <button data-t="states">Estados</button>
   <button data-t="media">Medios</button>
   <button data-t="voice">Voz pública</button>
   <button data-t="truth">Truth Social</button>
+  <button data-t="social">X e Instagram</button>
   <button data-t="search">Búsquedas y atención</button>
   <button data-t="policy">Gobierno y mercados</button>
   <button data-t="ads">Avisos pagos</button>
@@ -178,6 +182,19 @@ footer{color:var(--dim);font-size:12px;max-width:1600px;margin:0 auto;padding:0 
     <div class="card c4"><h3>Sesgo de cada encuestadora<span class="tag">Neto vs. promedio</span></h3><div class="bars" id="a-house"></div><p class="note">Cuánto más favorable (+) o desfavorable (−) le da a Trump cada encuestadora frente a nuestro promedio en las mismas fechas, últimos 180 días.</p></div>
     <div class="card c12"><h3>Última encuesta de cada encuestadora<span class="tag" id="a-cnt"></span></h3><div class="scroll"><table id="a-table"></table></div>
       <p class="note">Comparar con otros promedios públicos: <span class="src"><a href="https://www.realclearpolling.com/polls/approval/donald-trump/approval-rating" target="_blank" rel="noopener">RealClearPolling</a> · <a href="https://www.natesilver.net/p/trump-approval-rating" target="_blank" rel="noopener">Silver Bulletin</a> · <a href="https://www.nytimes.com/interactive/polls/donald-trump-approval-rating-polls.html" target="_blank" rel="noopener">NYT</a> · <a href="https://www.strengthinnumbers.com/" target="_blank" rel="noopener">Strength In Numbers</a> · <a href="https://votehub.com/polls/" target="_blank" rel="noopener">VoteHub</a></span></p></div>
+  </div>
+</section>
+
+<section class="tab" id="t-states">
+  <div class="kpis" id="e-kpis"></div>
+  <div class="g">
+    <div class="card c6"><h3>Aprobación estimada por estado<span class="tag">Estimación propia</span></h3><div class="tiles" id="e-app"></div><div class="legend" id="e-appl"></div></div>
+    <div class="card c6"><h3>Cuánto giró cada estado de 2020 a 2024<span class="tag">Margen, en puntos</span></h3><div class="tiles" id="e-sw"></div><div class="legend" id="e-swl"></div></div>
+    <div class="card c5"><h3>Lo que más se asocia con el voto a Trump<span class="tag">50 estados</span></h3><ul class="ins" id="e-ins"></ul></div>
+    <div class="card c7"><h3>Explorá las correlaciones</h3><div><select class="sel" id="e-x"></select><select class="sel" id="e-y"></select><span id="e-r" style="font:600 13px var(--mono);color:var(--gold)"></span></div><div id="e-sc" style="height:400px"></div></div>
+    <div class="card c6"><h3>Correlación de cada variable con el voto 2024 y con el giro</h3><div id="e-cb" style="height:420px"></div></div>
+    <div class="card c6"><h3>Condados: cuánto se movieron de 2020 a 2024<span class="tag">3.100 condados</span></h3><div id="e-hist" style="height:200px"></div><div class="scroll" style="max-height:200px"><table id="e-cty"></table></div></div>
+    <div class="card c12"><h3>Todos los estados</h3><div class="scroll" style="max-height:420px"><table id="e-tab"></table></div></div>
   </div>
 </section>
 
@@ -219,6 +236,22 @@ footer{color:var(--dim);font-size:12px;max-width:1600px;margin:0 auto;padding:0 
     <div class="card c4"><h3>Sus palabras<span class="tag">Tocá una palabra</span></h3><div id="s-cloud"></div></div>
     <div class="card c6"><h3>Posts con más interacción · 30 días</h3><div class="posts" id="s-best"></div></div>
     <div class="card c6"><h3>Últimos posts</h3><div class="posts" id="s-last"></div></div>
+  </div>
+</section>
+
+<section class="tab" id="t-social">
+  <div class="kpis" id="x-kpis"></div>
+  <div class="g">
+    <div class="card c6"><h3>Qué se dice en X<span class="tag">Tocá una palabra</span></h3><div id="x-cloud"></div></div>
+    <div class="card c3"><h3>Emociones en X</h3><div class="bars" id="x-emo"></div></div>
+    <div class="card c3"><h3>Temas en X</h3><div class="bars" id="x-top"></div></div>
+    <div class="card c6"><h3>Palabras en posts positivos</h3><div id="x-cpos"></div></div>
+    <div class="card c6"><h3>Palabras en posts negativos</h3><div id="x-cneg"></div></div>
+    <div class="card c12"><h3>Posts en X con más interacción<span class="tag">Sin autor</span></h3><div class="posts" id="x-best"></div></div>
+    <div class="card c12"><h3>Instagram · Trump frente a otras cuentas<span class="tag">Últimos 30 días</span></h3><div class="scroll"><table id="ig-tab"></table></div></div>
+    <div class="card c6"><h3>Interacción promedio por post</h3><div class="bars" id="ig-avg"></div></div>
+    <div class="card c6"><h3>Seguidores</h3><div class="bars" id="ig-fol"></div></div>
+    <div class="card c12"><h3>Posts de @realdonaldtrump con más interacción</h3><div class="posts" id="ig-best"></div></div>
   </div>
 </section>
 
@@ -264,6 +297,7 @@ footer{color:var(--dim);font-size:12px;max-width:1600px;margin:0 auto;padding:0 
     <div class="card c6"><h3>Estado de las fuentes · última corrida</h3><div id="x-st"></div></div>
     <div class="card c6"><h3>Método</h3><div class="note" style="font-size:13px;color:var(--muted);line-height:1.6" id="x-met">
       <p><b>Promedio de aprobación.</b> Todas las encuestas públicas de aprobación desde el 20 de enero de 2025 (datos abiertos de VoteHub). Para cada día promediamos las encuestas que cerraron en los 21 días anteriores, ponderando por antigüedad (vida media de 7 días) y tamaño de muestra (raíz cuadrada, tope 3.000), y dividimos el peso de cada encuestadora por su cantidad de encuestas en la ventana para que las diarias no dominen.</p>
+      <p><b>Estados.</b> La aprobación por estado es una estimación propia: tomamos el voto a Trump de 2024 en cada estado y le aplicamos, en escala logística, la misma caída que muestra hoy el promedio nacional respecto de su 49,9% de 2024. Resultados 2020 y 2024 por condado (compilación pública de resultados oficiales). Demografía: Censo de EE.UU. (encuesta ACS de 1 año y Censo 2020 para la población rural). PIB por estado: BEA. Las correlaciones son de Pearson sobre los 50 estados, sin DC. Una correlación no implica causa.</p>
       <p><b>Medios.</b> 24 medios de EE.UU. por RSS, clasificados en izquierda, centro o derecha según calificaciones de sesgo de uso extendido, más búsquedas en Google News. Una nota cuenta como cobertura de Trump si el título o el resumen lo nombran. Los temas son familias de palabras clave y el tono se calcula por titular.</p>
       <p><b>Voz pública.</b> Comentarios más relevantes en los videos de YouTube sobre Trump de las últimas dos semanas. Sentimiento y emoción con un modelo transformer en inglés (BERTweet vía pysentimiento) o VADER como respaldo. Solo se muestran extractos breves y anónimos con link al original.</p>
       <p><b>Truth Social.</b> Sus posts públicos y la interacción que generan. Los horarios están en hora de Washington.</p>
@@ -299,7 +333,7 @@ let D,TX,drawn=new Set(),CL=[];
 $$('#tabs button').forEach(b=>b.onclick=()=>{$$('#tabs button').forEach(x=>x.classList.toggle('on',x===b));
   $$('.tab').forEach(t=>t.classList.toggle('on',t.id==='t-'+b.dataset.t));draw(b.dataset.t);setTimeout(()=>window.dispatchEvent(new Event('resize')),60)});
 fetch('data/monitor.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{D=d;init()}).catch(e=>{$('#warn').innerHTML='<div class="warnbox">No se pudieron cargar los datos.</div>';console.error(e)});
-function draw(id){if(!D||drawn.has(id))return;drawn.add(id);try{({overview,approval,media,voice,truth,search,policy,ads,method}[id]||(()=>{}))()}catch(e){console.error(id,e)}}
+function draw(id){if(!D||drawn.has(id))return;drawn.add(id);try{({overview,approval,states,media,voice,truth,social,search,policy,ads,method}[id]||(()=>{}))()}catch(e){console.error(id,e)}}
 
 // ---------------------------------------------------------------- helpers
 function spark(arr,col){arr=(arr||[]).filter(v=>v!=null);if(arr.length<2)return'';const mx=Math.max(...arr),mn=Math.min(...arr),w=84,h=30,r=mx-mn||1;
@@ -326,7 +360,7 @@ document.addEventListener('click',e=>{const t=e.target.closest('text[data-c]');i
 
 // ---------------------------------------------------------------- drill-down
 function loadTx(){if(!TX)TX=fetch('data/textos.json',{cache:'no-store'}).then(r=>r.ok?r.json():{}).catch(()=>({}));return TX}
-function showTexts(word,src){const names={news:'titulares',comments:'comentarios de YouTube',truth:'posts de Truth Social'};
+function showTexts(word,src){const names={news:'titulares',comments:'comentarios de YouTube y posts de X',truth:'posts de Truth Social'};
   $('#dw-t').textContent='“'+word+'”';$('#dw-s').textContent='';$('#dw-l').innerHTML='<div class="empty">Cargando…</div>';$('#dw-c').innerHTML='';
   $('#dw').classList.add('on');$('#dw').setAttribute('aria-hidden','false');
   loadTx().then(T=>{const rx=new RegExp('\\b'+word.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'i');
@@ -431,6 +465,72 @@ function voice(){const Y=D.youtube;if(!Y||!Y.n){$('#v-cloud').innerHTML=E;return
   $('#v-cpos').innerHTML=cloudSVG(Y.cloud_pos,600,240,32,'comments');$('#v-cneg').innerHTML=cloudSVG(Y.cloud_neg,600,240,32,'comments');
   $('#v-vids').innerHTML=`<thead><tr><th>Video</th><th>Canal</th><th>Fecha</th><th class="n">Vistas</th><th class="n">Comentarios leídos</th><th style="width:120px">Tono de los comentarios</th></tr></thead><tbody>${Y.list.map(v=>`<tr><td><a href="${esc(v.u)}" target="_blank" rel="noopener">${esc(v.t)}</a></td><td>${esc(v.ch)}</td><td>${v.d}</td><td class="n">${kfmt(v.views)}</td><td class="n">${fmt(v.c)}</td><td>${v.c?toneBar({NEG:v.neg,POS:v.pos,NEU:Math.max(0,100-v.neg-v.pos)}):''}</td></tr>`).join('')}</tbody>`}
 
+// ---------------------------------------------------------------- states
+function divTiles(el,vals,mid,fmtv,lo,hi){const ab={};Object.entries(vals).forEach(([k,v])=>{if(ST[k]&&v!=null)ab[ST[k]]=v});const vs=Object.values(ab);if(!vs.length){$(el).innerHTML=E;return}
+  const span=Math.max(...vs.map(v=>Math.abs(v-mid)),1e-9),cells=[];
+  for(let r=0;r<8;r++)for(let c=0;c<12;c++){const s=Object.keys(GRID).find(k=>GRID[k][0]===r&&GRID[k][1]===c);
+    if(!s){cells.push('<div style="background:none"></div>');continue}const v=ab[s];const t=v==null?0:(v-mid)/span,a=(.18+.82*Math.abs(t)).toFixed(2);
+    cells.push(`<div title="${s} · ${v==null?'sin datos':fmtv(v)}" style="background:${v==null?'var(--s2)':t>=0?`rgba(224,70,60,${a})`:`rgba(63,127,224,${a})`}">${s}<small>${v==null?'':fmtv(v)}</small></div>`)}
+  $(el).innerHTML=cells.join('');$(el+'l').innerHTML=`<span style="--c:rgba(63,127,224,.9)">${lo}</span><span style="--c:rgba(224,70,60,.9)">${hi}</span>`}
+const YV={r24:'Voto a Trump 2024 (%)',sw:'Giro hacia Trump 2020→2024 (pts)',app:'Aprobación estimada hoy (%)'};
+function corrText(c,F){const f=F[c.f],pos=c.r>0,str=Math.abs(c.r)>=.6?'fuerte':Math.abs(c.r)>=.4?'clara':'moderada';
+  if(c.t==='r24')return `Cuanto más <b>${f.toLowerCase()}</b> tiene un estado, ${pos?'más':'menos'} votó a Trump en 2024 <span style="color:var(--muted)">(relación ${str})</span>`;
+  return `Donde hay más <b>${f.toLowerCase()}</b>, ${pos?'más':'menos'} creció Trump entre 2020 y 2024 <span style="color:var(--muted)">(relación ${str})</span>`}
+function states(){const S=D.states;if(!S){$('#e-app').innerHTML=E;return}
+  const R=S.rows,F=S.features,by=k=>Object.fromEntries(R.map(r=>[r.s,r[k]])),pc=v=>v.toFixed(0)+'%';
+  const ap=R.filter(r=>r.app!=null),win=ap.filter(r=>r.r24>r.d24),avgw=win.length?win.reduce((a,r)=>a+r.app,0)/win.length:null;
+  const top=[...ap].sort((a,b)=>b.app-a.app)[0],bot=[...ap].sort((a,b)=>a.app-b.app)[0],above=ap.filter(r=>r.app>=50).length;
+  const swR=R.filter(r=>r.sw>0).length,best=S.corr[0];
+  $('#e-kpis').innerHTML=[kpi('Estados con aprobación ≥ 50%',fmt(above),'de 51, según la estimación'),avgw!=null?kpi('Aprobación en estados que ganó',avgw.toFixed(1)+'%','promedio de los '+win.length+' estados',avgw<50?'hot':''):'',
+    top?kpi('Dónde más lo aprueban',ST[top.s]+' '+top.app+'%',top.s):'',bot?kpi('Dónde menos',ST[bot.s]+' '+bot.app+'%',bot.s):'',
+    kpi('Estados que giraron hacia Trump',fmt(swR)+' de 51','entre 2020 y 2024'),kpi('Condados que giraron',S.counties.pct_right+'%','de '+fmt(S.counties.n)+' condados'),
+    best?kpi('Correlación más fuerte',(best.r>0?'+':'')+best.r.toFixed(2),F[best.f]+' vs. '+(best.t==='r24'?'voto 2024':'giro 20→24')):''].join('');
+  divTiles('#e-app',by('app'),50,pc,'desaprueba','aprueba');
+  divTiles('#e-sw',by('sw'),0,v=>(v>0?'+':'')+v.toFixed(0),'hacia los demócratas','hacia Trump');
+  $('#e-ins').innerHTML=S.corr.filter(c=>Math.abs(c.r)>=.3).slice(0,9).map(c=>`<li><span class="r" style="color:${c.r>0?C.red:C.navy}">r ${c.r>0?'+':''}${c.r.toFixed(2)}</span>${corrText(c,F)}.</li>`).join('')||'<li>Todavía sin datos del Censo.</li>';
+  const xs=Object.keys(F).filter(f=>R.some(r=>r[f]!=null));
+  $('#e-x').innerHTML=xs.map(f=>`<option value="${f}">${esc(F[f])}</option>`).join('');$('#e-y').innerHTML=Object.entries(YV).map(([k,v])=>`<option value="${k}">${v}</option>`).join('');
+  const b0=S.corr.find(c=>xs.includes(c.f));if(b0){$('#e-x').value=b0.f;$('#e-y').value=b0.t}
+  const sc=()=>{const fx=$('#e-x').value,fy=$('#e-y').value,P=R.filter(r=>r[fx]!=null&&r[fy]!=null&&r.s!=='District of Columbia');if(!P.length){$('#e-sc').innerHTML=E;return}
+    const X=P.map(r=>r[fx]),Y=P.map(r=>r[fy]),n=X.length,mx=X.reduce((a,b)=>a+b)/n,my=Y.reduce((a,b)=>a+b)/n;
+    const sxy=X.reduce((a,x,i)=>a+(x-mx)*(Y[i]-my),0),sxx=X.reduce((a,x)=>a+(x-mx)**2,0),syy=Y.reduce((a,y)=>a+(y-my)**2,0),b=sxy/sxx,r=sxy/Math.sqrt(sxx*syy);
+    const x0=Math.min(...X),x1=Math.max(...X);$('#e-r').textContent='r = '+(r>0?'+':'')+r.toFixed(2)+' · '+n+' estados';
+    Plotly.react($('#e-sc'),[{x:X,y:Y,text:P.map(r=>ST[r.s]),customdata:P.map(r=>r.s),mode:'markers+text',textposition:'top center',textfont:{size:9,color:C.muted},
+      marker:{size:P.map(r=>6+Math.sqrt((r.pop||1e6)/1e6)*2.2),color:P.map(r=>r.m24),colorscale:[[0,'#3f7fe0'],[.5,'#8a8f99'],[1,'#e0463c']],cmin:-40,cmax:40,line:{width:0}},
+      hovertemplate:'%{customdata}<br>'+F[fx]+': %{x:,}<br>'+YV[fy]+': %{y}<extra></extra>'},
+      {x:[x0,x1],y:[my+b*(x0-mx),my+b*(x1-mx)],mode:'lines',line:{color:C.gold,width:1.5,dash:'dot'},hoverinfo:'skip'}],
+      base({showlegend:false,xaxis:{gridcolor:C.grid,title:{text:F[fx],font:{size:11}}},yaxis:{gridcolor:C.grid,title:{text:YV[fy],font:{size:11}}},margin:{l:56,r:12,t:8,b:44}}),CFG)};
+  $('#e-x').onchange=sc;$('#e-y').onchange=sc;sc();
+  const fs=xs.slice().sort((a,b)=>{const g=f=>(S.corr.find(c=>c.f===f&&c.t==='r24')||{r:0}).r;return g(a)-g(b)}),cr=(f,t)=>(S.corr.find(c=>c.f===f&&c.t===t)||{r:0}).r;
+  Plotly.newPlot($('#e-cb'),[{y:fs.map(f=>F[f]),x:fs.map(f=>cr(f,'r24')),name:'Voto a Trump 2024',type:'bar',orientation:'h',marker:{color:C.red}},
+    {y:fs.map(f=>F[f]),x:fs.map(f=>cr(f,'sw')),name:'Giro 2020→2024',type:'bar',orientation:'h',marker:{color:C.gold}}],
+    base({barmode:'group',showlegend:true,legend:{orientation:'h',y:1.08},xaxis:{range:[-1,1],gridcolor:C.grid,zerolinecolor:C.muted},yaxis:{automargin:true},margin:{l:8,r:10,t:24,b:30}}),CFG);
+  const H=S.counties.hist;Plotly.newPlot($('#e-hist'),[{x:H.map((_,i)=>-20+i*2+1),y:H,type:'bar',marker:{color:H.map((_,i)=>-20+i*2+1>0?C.red:C.navy)},hovertemplate:'%{x} pts: %{y} condados<extra></extra>'}],
+    base({xaxis:{gridcolor:C.grid,title:{text:'cambio de margen, pts (+ = hacia Trump)',font:{size:10}}},yaxis:{gridcolor:C.grid},margin:{l:40,r:8,t:6,b:38}}),CFG);
+  $('#e-cty').innerHTML=`<thead><tr><th>Condados que más giraron hacia Trump</th><th>Estado</th><th class="n">Giro</th><th class="n">Trump 2024</th></tr></thead><tbody>${S.counties.most_right.map(c=>`<tr><td>${esc(c.n)}</td><td>${ST[c.s]||esc(c.s)}</td><td class="n" style="color:${C.red}">+${c.m}</td><td class="n">${c.r}%</td></tr>`).join('')}</tbody>`;
+  const cols=[['app','Aprob. est.',v=>v+'%'],['r24','Trump 24',v=>v+'%'],['sw','Giro',v=>(v>0?'+':'')+v],['ba','Universit.',v=>v+'%'],['black','Afroam.',v=>v+'%'],['hisp','Hispanos',v=>v+'%'],['income','Ingreso',v=>'$'+kfmt(v)],['gdp_pc','PIB p/c',v=>'$'+kfmt(v)],['rural','Rural',v=>v+'%'],['trends','Google',v=>v]];
+  $('#e-tab').innerHTML=`<thead><tr><th>Estado</th>${cols.map(c=>`<th class="n">${c[1]}</th>`).join('')}</tr></thead><tbody>${[...R].sort((a,b)=>(b.app||0)-(a.app||0)).map(r=>`<tr><td>${esc(r.s)}</td>${cols.map(c=>`<td class="n">${r[c[0]]==null?'–':c[2](r[c[0]])}</td>`).join('')}</tr>`).join('')}</tbody>`}
+
+// ---------------------------------------------------------------- X + Instagram
+function social(){const X=D.x,I=D.instagram,EC={anger:C.neg,joy:C.app,sadness:C.pos,fear:C.gold,disgust:'#a08bd6',surprise:'#5fb3c9'};
+  const K=[];
+  if(X&&X.n){K.push(kpi('Posts de X analizados',fmt(X.n),'muestra repartida en 7 días'),kpi('Positivos',X.tone.POS+'%',''),kpi('Negativos',X.tone.NEG+'%','',X.tone.NEG>X.tone.POS?'hot':''),
+    kpi('Sentimiento neto en X',sgn(X.tone.POS-X.tone.NEG),'positivos menos negativos',X.tone.NEG>X.tone.POS?'hot':''),kpi('Insultos / hostilidad',X.tox+'%','de los posts'));
+    $('#x-cloud').innerHTML=cloudSVG(X.cloud,720,320,40,'comments');
+    $('#x-emo').innerHTML=bars(Object.entries(X.emo).map(([k,v])=>[EN[k]||k,v,EC[k],v+'%']));
+    $('#x-top').innerHTML=bars(X.topics.slice(0,9).map(t=>[t.k,t.n,t.neg>t.pos?C.neg:C.pos]));
+    $('#x-cpos').innerHTML=cloudSVG(X.cloud_pos,600,240,32,'comments');$('#x-cneg').innerHTML=cloudSVG(X.cloud_neg,600,240,32,'comments');
+    $('#x-best').innerHTML=X.top.map(p=>`<div class="post"><div class="t">${esc(p.t)}</div><div class="m"><span>${p.d.replace('T',' ')} UTC</span><span>♥⟲ ${kfmt(p.e)}</span><span>${{POS:'positivo',NEG:'negativo',NEU:'neutro'}[p.s]||''}</span><a href="${esc(p.u)}" target="_blank" rel="noopener">abrir ↗</a></div></div>`).join('')||E;
+  }else['#x-cloud','#x-emo','#x-top','#x-cpos','#x-cneg','#x-best'].forEach(q=>$(q).innerHTML=E);
+  if(I&&I.accounts&&I.accounts.length){const A=I.accounts,me=A.find(a=>a.h==='realdonaldtrump')||A[0];
+    K.push(kpi('Seguidores en Instagram',kfmt(me.f),'@'+me.h),kpi('Interacción promedio IG',kfmt(me.avg),'likes + comentarios por post'));
+    $('#ig-tab').innerHTML=`<thead><tr><th>Cuenta</th><th class="n">Seguidores</th><th class="n">Posts · 30 días</th><th class="n">Interacción promedio</th><th class="n">Tasa de interacción</th><th>Formatos</th></tr></thead><tbody>${A.map(a=>`<tr${a===me?' style="color:var(--gold)"':''}><td><a href="https://www.instagram.com/${esc(a.h)}/" target="_blank" rel="noopener">${esc(a.n)}</a> <span style="color:var(--muted)">@${esc(a.h)}</span></td><td class="n">${kfmt(a.f)}</td><td class="n">${fmt(a.p30)}</td><td class="n">${kfmt(a.avg)}</td><td class="n">${a.er==null?'–':a.er.toFixed(2)+'%'}</td><td>${Object.entries(a.kinds).map(([k,v])=>`<span class="pill">${{REELS:'Reels',IMAGE:'Foto',VIDEO:'Video',CAROUSEL_ALBUM:'Carrusel'}[k]||k} ${v}</span>`).join(' ')}</td></tr>`).join('')}</tbody>`;
+    $('#ig-avg').innerHTML=bars([...A].sort((a,b)=>b.avg-a.avg).map(a=>[a.n,a.avg,a===me?C.red:C.gold,kfmt(a.avg)]));
+    $('#ig-fol').innerHTML=bars([...A].sort((a,b)=>b.f-a.f).map(a=>[a.n,a.f,a===me?C.red:C.gold,kfmt(a.f)]));
+    $('#ig-best').innerHTML=me.top.map(p=>`<div class="post"><div class="t">${esc(p.t||'[sin texto]')}</div><div class="m"><span>${p.d}</span><span>♥ ${kfmt(p.l)}</span><span>💬 ${kfmt(p.c)}</span><a href="${esc(p.u)}" target="_blank" rel="noopener">abrir ↗</a></div></div>`).join('')||E;
+  }else['#ig-tab','#ig-avg','#ig-fol','#ig-best'].forEach(q=>$(q).innerHTML=E);
+  $('#x-kpis').innerHTML=K.join('')}
+
 // ---------------------------------------------------------------- truth
 function truth(){const T=D.truth;if(!T){$('#s-daily').innerHTML=E;return}
   $('#s-kpis').innerHTML=[kpi('Posts · 7 días',fmt(T.n7),'semana anterior '+fmt(T.n7prev)),kpi('Posts · 30 días',fmt(T.n30),'90 días: '+fmt(T.n90)),kpi('Día con más posts',T.max_day?fmt(T.max_day[1]):'–',T.max_day?T.max_day[0]:''),
@@ -493,7 +593,7 @@ function ads(){const A=D.ads;if(!A||!A.n){$('#d-pages').innerHTML=`<tr><td>${E}<
   $('#d-samp').innerHTML=A.samples.map(s=>`<a class="it" href="${esc(s.u)}" target="_blank" rel="noopener">${esc(s.t)}<div class="m">${gt(GRP[s.c]?s.c:'other')}<span>${esc(s.p)}</span><span>${esc(s.d)}</span></div></a>`).join('')||E}
 
 // ---------------------------------------------------------------- method
-function method(){const S=D.status||{},nm={rss:'Medios de EE.UU. (RSS)',google_news:'Google News',youtube:'Comentarios de YouTube',truth_social:'Truth Social',polls:'Encuestas (VoteHub)',gdelt:'GDELT, noticias del mundo',federal_register:'Federal Register',polymarket:'Mercados de predicción',fred:'Economía (BLS, UMich, Freddie Mac)',wikipedia:'Visitas a Wikipedia',google_trends:'Google Trends',meta_ads:'Biblioteca de anuncios de Meta'};
+function method(){const S=D.status||{},nm={rss:'Medios de EE.UU. (RSS)',google_news:'Google News',youtube:'Comentarios de YouTube',truth_social:'Truth Social',polls:'Encuestas (VoteHub)',gdelt:'GDELT, noticias del mundo',federal_register:'Federal Register',polymarket:'Mercados de predicción',fred:'Economía (BLS, UMich, Freddie Mac)',wikipedia:'Visitas a Wikipedia',google_trends:'Google Trends',meta_ads:'Biblioteca de anuncios de Meta',instagram:'Instagram (cuentas públicas)',census:'Censo de EE.UU. y BEA (estados)',x:'X (corrida manual)'};
   $('#x-st').innerHTML=Object.keys(nm).map(k=>{const s=S[k];return `<div style="display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid var(--line);padding:7px 0"><span class="chip ${s&&s.ok?'ok':'no'}" style="cursor:default">${nm[k]}</span><span style="font:12px var(--mono);color:var(--dim);text-align:right">${!s?'todavía no corrió':s.ok?fmt(s.items)+' registros'+(s.new!=null?' · '+fmt(s.new)+' nuevos':''):'no respondió en esta corrida'}</span></div>`}).join('')}
 </script>
 </body>

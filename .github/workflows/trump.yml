@@ -28,6 +28,7 @@ jobs:
       # Fallback key if the first one is rate-limited
       YOUTUBE_API_KEY_ALT: ${{ secrets.YOUTUBE_API_KEY_ROCA }}
       META_TOKEN: ${{ secrets.META_TOKEN }}
+      META_IG_USER_ID: ${{ secrets.META_IG_USER_ID }}
       TRUMP_NLP_SECONDS: '600'
       # No X_BEARER_TOKEN on purpose: X is paid and only runs by hand
     steps:
