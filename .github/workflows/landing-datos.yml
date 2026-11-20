@@ -6,9 +6,6 @@ on:
   schedule:
     - cron: '23 */3 * * *'
   workflow_dispatch:
-  push:
-    branches: [claude/project-thread-pje0u9]
-    paths: ['web/tools/datos.py', '.github/workflows/landing-datos.yml']
 
 permissions:
   contents: write
