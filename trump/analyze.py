@@ -211,15 +211,17 @@ def approval():
         while j0 < len(ps) and ps[j0]["end"] < lo:
             j0 += 1
         win = [p for p in ps[j0:] if p["end"] <= ds]
-        if len(win) < 3:
-            win = [p for p in ps if p["end"] <= ds][-8:]
+        hl = 7
+        if len(win) < 6:
+            # sparse stretch: last 10 polls with a slow decay, so one outlier can't take over the line
+            win, hl = [p for p in ps if p["end"] <= ds][-10:], 30
         if len(win) < 3:
             continue
         per = Counter(p["_k"] for p in win)
         wa = wd = sa = sd = 0.0
         for p in win:
             age = (dd - datetime.fromisoformat(p["end"]).date()).days
-            w = 0.5 ** (age / 7) * math.sqrt(min(p["n"] or 800, 3000) / 600) / per[p["_k"]]
+            w = 0.5 ** (age / hl) * math.sqrt(min(p["n"] or 800, 3000) / 600) / per[p["_k"]]
             wa += w
             sa += w * p["app"]
             if p["dis"] is not None:
@@ -443,7 +445,7 @@ def truth(rows):
         names.update(seen)
     tp = Counter(k for r in p30 for k in r["_top"])
     top = sorted(p30, key=lambda r: -r.get("engagement", 0))[:12]
-    fmt = lambda r: {"t": excerpt(r["text"], 320) or "[media post]", "u": r["url"], "d": r["created_at"][:16], "l": r.get("likes", 0),
+    fmt = lambda r: {"t": excerpt(r["text"], 320) or "[publicación con imagen o video]", "u": r["url"], "d": r["created_at"][:16], "l": r.get("likes", 0),
                      "r": r.get("reblogs", 0), "c": r.get("replies", 0), "s": r["tono"], "m": r.get("media", 0)}
     nights = sum(1 for r in p30 if datetime.fromisoformat(r["created_at"].replace("Z", "+00:00")).astimezone(ET_TZ).hour < 6)
     return {"n90": len(ps), "n30": len(p30), "n7": sum(r["created_at"] >= ago(7) for r in ps), "n7prev": sum(ago(14) <= r["created_at"] < ago(7) for r in ps),
@@ -461,13 +463,13 @@ def truth(rows):
 
 
 # ---------------------------------------------------------------- Federal Register
-EO_TOPICS = {"Trade & tariffs": ["tariff", "trade", "import", "duties", "reciprocal"], "Immigration & border": ["border", "immigra", "alien", "asylum", "invasion", "visa", "citizenship"],
-             "Energy": ["energy", "oil", "coal", "nuclear", "drilling", "mineral"], "Government reform": ["federal workforce", "efficiency", "agency", "accountability", "regulat", "bureaucra", "employ"],
-             "Defense & security": ["defense", "military", "armed forces", "security", "cartel", "terror", "national guard"],
-             "Economy & finance": ["econom", "tax", "financ", "crypto", "digital asset", "bank", "price", "cost"], "Health": ["health", "drug", "medic", "pharma"],
-             "Education & culture": ["education", "school", "college", "universit", "culture", "history", "monument", "gender", "dei", "discrimination"],
-             "Foreign affairs": ["foreign", "international", "sanction", "israel", "iran", "ukraine", "china", "canada", "mexico", "venezuela"],
-             "Tech & AI": ["artificial intelligence", "technology", "ai ", "cyber", "semiconductor"]}
+EO_TOPICS = {"Comercio y aranceles": ["tariff", "trade", "import", "duties", "reciprocal"], "Inmigración y frontera": ["border", "immigra", "alien", "asylum", "invasion", "visa", "citizenship"],
+             "Energía": ["energy", "oil", "coal", "nuclear", "drilling", "mineral"], "Reforma del Estado": ["federal workforce", "efficiency", "agency", "accountability", "regulat", "bureaucra", "employ"],
+             "Defensa y seguridad": ["defense", "military", "armed forces", "security", "cartel", "terror", "national guard"],
+             "Economía y finanzas": ["econom", "tax", "financ", "crypto", "digital asset", "bank", "price", "cost"], "Salud": ["health", "drug", "medic", "pharma"],
+             "Educación y cultura": ["education", "school", "college", "universit", "culture", "history", "monument", "gender", "dei", "discrimination"],
+             "Relaciones exteriores": ["foreign", "international", "sanction", "israel", "iran", "ukraine", "china", "canada", "mexico", "venezuela"],
+             "Tecnología e IA": ["artificial intelligence", "technology", "ai ", "cyber", "semiconductor"]}
 
 
 def orders():
@@ -508,7 +510,7 @@ def econ():
         pts = [[v[0], v[1]] for _, v in sorted(dd.items())]
         yoy = next((v for dt, v in reversed(data) if dt <= (datetime.fromisoformat(last[0]) - timedelta(days=365)).strftime("%Y-%m-%d")), None)
         inaug = next((v for dt, v in data if dt >= INAUG), None)
-        out[sid] = {"name": s["name"], "d": last[0], "v": last[1], "yoy": round(100 * (last[1] / yoy - 1), 1) if yoy else None,
+        out[sid] = {"name": CONFIG["fred"].get(sid, s["name"]), "d": last[0], "v": last[1], "yoy": round(100 * (last[1] / yoy - 1), 1) if yoy else None,
                     "inaug": inaug, "pts": pts[-30:]}
     return out
 
@@ -603,11 +605,11 @@ def alerts(m):
         a = ap["avg"]
         if abs(a["d7"]) >= 1:
             out.append({"lvl": "high" if abs(a["d7"]) >= 2 else "med", "i": "▲" if a["d7"] > 0 else "▼",
-                        "t": f"Approval {'up' if a['d7'] > 0 else 'down'} {abs(a['d7']):.1f} pts in 7 days (now {a['a']:.1f}%)", "k": "Polls"})
+                        "t": f"La aprobación {'sube' if a['d7'] > 0 else 'baja'} {abs(a['d7']):.1f} pts en 7 días (hoy {a['a']:.1f}%)", "k": "Encuestas"})
         if ap["lo"]["d"] >= ago(10):
-            out.append({"lvl": "high", "i": "▼", "t": f"Approval average at its lowest of the term: {ap['lo']['a']:.1f}%", "k": "Polls"})
+            out.append({"lvl": "high", "i": "▼", "t": f"Promedio de aprobación en su mínimo del mandato: {ap['lo']['a']:.1f}%", "k": "Encuestas"})
         if ap["hi"]["d"] >= ago(10) and ap["hi"]["d"] > INAUG:
-            out.append({"lvl": "med", "i": "▲", "t": f"Approval average at its highest since {ap['avg']['first_d'][:4]}: {ap['hi']['a']:.1f}%", "k": "Polls"})
+            out.append({"lvl": "med", "i": "▲", "t": f"Promedio de aprobación en su máximo desde {ap['avg']['first_d'][:4]}: {ap['hi']['a']:.1f}%", "k": "Encuestas"})
     md = m.get("media")
     if md:
         dl = md["daily"]
@@ -617,34 +619,34 @@ def alerts(m):
             sd = (sum((x - mu) ** 2 for x in base) / len(base)) ** 0.5 or 1
             for x in dl[-3:]:
                 if (x["n"] - mu) / sd >= 2:
-                    out.append({"lvl": "med", "i": "◆", "t": f"Coverage spike on {x['d']}: {x['n']} Trump stories vs. {mu:.0f}/day average", "k": "Media"})
+                    out.append({"lvl": "med", "i": "◆", "t": f"Pico de cobertura el {x['d']}: {x['n']} notas sobre Trump vs. {mu:.0f} por día de promedio", "k": "Medios"})
         old = sum(1 for x in dl if x["d"] < ago(7))
         for t in md["topics"][:10]:
             if old >= 150 and t["s21"] is not None and t["s7"] >= 4 and t["s7"] >= 1.7 * max(t["s21"], 1):
-                out.append({"lvl": "med", "i": "↑", "t": f"“{t['k']}” surging: {t['s7']:.0f}% of Trump coverage this week vs. {t['s21']:.0f}% before", "k": "Topics"})
+                out.append({"lvl": "med", "i": "↑", "t": f"“{t['k']}” en alza: {t['s7']:.0f}% de la cobertura de Trump esta semana vs. {t['s21']:.0f}% antes", "k": "Temas"})
             if t["n"] >= 25 and t["neg"] >= 45:
-                out.append({"lvl": "low", "i": "!", "t": f"Negative framing on “{t['k']}”: {t['neg']:.0f}% of headlines", "k": "Tone"})
+                out.append({"lvl": "low", "i": "!", "t": f"Encuadre negativo en “{t['k']}”: {t['neg']:.0f}% de los titulares", "k": "Tono"})
     tr = m.get("truth")
     if tr and tr["n7prev"]:
         ch = tr["n7"] / tr["n7prev"] - 1
         if abs(ch) >= 0.35:
-            out.append({"lvl": "low", "i": "✎", "t": f"Truth Social output {'up' if ch > 0 else 'down'} {abs(ch) * 100:.0f}% week over week ({tr['n7']} posts)", "k": "Truth Social"})
+            out.append({"lvl": "low", "i": "✎", "t": f"Publicaciones en Truth Social {'suben' if ch > 0 else 'bajan'} {abs(ch) * 100:.0f}% contra la semana anterior ({tr['n7']} posts)", "k": "Truth Social"})
     yt = m.get("youtube")
     if yt and yt["n"] >= 200 and yt["tone"]["NEG"] >= 45:
-        out.append({"lvl": "med", "i": "!", "t": f"YouTube comments lean negative: {yt['tone']['NEG']:.0f}% negative vs. {yt['tone']['POS']:.0f}% positive", "k": "Public voice"})
+        out.append({"lvl": "med", "i": "!", "t": f"Comentarios de YouTube con sesgo negativo: {yt['tone']['NEG']:.0f}% negativos vs. {yt['tone']['POS']:.0f}% positivos", "k": "Voz pública"})
     for e in (m.get("markets") or {}).get("events", [])[:10]:
         for mk in e["m"][:2]:
             if abs(mk["ch"]) >= 6:
-                out.append({"lvl": "med", "i": "▲" if mk["ch"] > 0 else "▼", "t": f"Market move: “{e['t']}” {('— ' + mk['q']) if mk['q'] and mk['q'] != e['t'] else ''} {mk['ch']:+.0f} pts in 24h (now {mk['p']:.0f}%)", "k": "Markets"})
+                out.append({"lvl": "med", "i": "▲" if mk["ch"] > 0 else "▼", "t": f"Movimiento de mercado: “{e['t']}” {('— ' + mk['q']) if mk['q'] and mk['q'] != e['t'] else ''} {mk['ch']:+.0f} pts en 24 h (hoy {mk['p']:.0f}%)", "k": "Mercados"})
     at = m.get("attention") or {}
     t7 = (at.get("trump7d") or {}).get("Trump") or []
     if len(t7) > 30:
         vals = [v for _, v in t7]
         if vals[-1] >= 80 and sum(vals[:-24]) / max(1, len(vals) - 24) < 50:
-            out.append({"lvl": "med", "i": "◆", "t": "Google searches for “Trump” at a 7-day peak right now", "k": "Search"})
+            out.append({"lvl": "med", "i": "◆", "t": "Búsquedas de “Trump” en Google en su pico de 7 días", "k": "Búsquedas"})
     od = m.get("orders")
     if od and od["d7"] >= 5:
-        out.append({"lvl": "low", "i": "§", "t": f"{od['d7']} presidential documents signed in the last 7 days", "k": "Executive"})
+        out.append({"lvl": "low", "i": "§", "t": f"{od['d7']} documentos presidenciales firmados en los últimos 7 días", "k": "Ejecutivo"})
     rank = {"high": 0, "med": 1, "low": 2}
     return sorted(out, key=lambda a: rank[a["lvl"]])[:14]
 

@@ -200,12 +200,12 @@
   "Elon Musk": "Elon_Musk"
  },
  "fred": {
-  "UMCSENT": "Consumer sentiment (UMich)",
-  "CPIAUCSL": "CPI (all items)",
-  "UNRATE": "Unemployment rate",
-  "GASREGW": "Regular gas, $/gal",
+  "UMCSENT": "Confianza del consumidor (UMich)",
+  "CPIAUCSL": "Inflación (IPC)",
+  "UNRATE": "Desempleo",
+  "GASREGW": "Nafta común, US$/galón",
   "SP500": "S&P 500",
-  "MORTGAGE30US": "30-yr mortgage rate"
+  "MORTGAGE30US": "Hipoteca a 30 años"
  },
  "polymarket": {
   "tag": "trump",
@@ -272,7 +272,7 @@
   ]
  },
  "temas": {
-  "Economy & prices": [
+  "Economía y precios": [
    "economy",
    "economic",
    "inflation",
@@ -293,7 +293,7 @@
    "dow ",
    "s&p"
   ],
-  "Tariffs & trade": [
+  "Aranceles y comercio": [
    "tariff",
    "trade war",
    "trade deal",
@@ -302,7 +302,7 @@
    "customs",
    "duties"
   ],
-  "Immigration & border": [
+  "Inmigración y frontera": [
    "immigration",
    "immigrant",
    "migrant",
@@ -315,7 +315,7 @@
    "visa",
    "citizenship"
   ],
-  "Crime & National Guard": [
+  "Seguridad y Guardia Nacional": [
    "crime",
    "national guard",
    "police",
@@ -325,7 +325,7 @@
    "troops in",
    "insurrection act"
   ],
-  "Courts & legal": [
+  "Justicia y tribunales": [
    "court",
    "judge",
    "supreme court",
@@ -339,11 +339,11 @@
    "bondi",
    "pardon"
   ],
-  "Epstein files": [
+  "Archivos Epstein": [
    "epstein",
    "maxwell"
   ],
-  "Foreign policy": [
+  "Política exterior": [
    "ukraine",
    "russia",
    "putin",
@@ -362,7 +362,7 @@
    "canada",
    "mexico"
   ],
-  "Health care": [
+  "Salud": [
    "health care",
    "healthcare",
    "obamacare",
@@ -374,7 +374,7 @@
    "kennedy",
    "insurance premiums"
   ],
-  "Government & DOGE": [
+  "Gobierno y DOGE": [
    "doge",
    "federal workers",
    "layoffs",
@@ -386,7 +386,7 @@
    "agency",
    "funding"
   ],
-  "Elections & 2028": [
+  "Elecciones y 2028": [
    "election",
    "midterm",
    "2028",
@@ -398,7 +398,7 @@
    "campaign",
    "primary"
   ],
-  "Congress": [
+  "Congreso": [
    "congress",
    "senate",
    "house speaker",
@@ -409,7 +409,7 @@
    "republicans in congress",
    "democrats"
   ],
-  "Energy & climate": [
+  "Energía y clima": [
    "energy",
    "oil",
    "drilling",
@@ -420,7 +420,7 @@
    "coal",
    "lng"
   ],
-  "Media & free speech": [
+  "Medios y libertad de expresión": [
    "media",
    "press",
    "fake news",
@@ -431,7 +431,7 @@
    "fcc",
    "first amendment"
   ],
-  "Tech & AI": [
+  "Tecnología e IA": [
    "artificial intelligence",
    " ai ",
    "tech",

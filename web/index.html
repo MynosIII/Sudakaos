@@ -133,6 +133,19 @@ header nav{display:flex;align-items:center;gap:28px;font-size:14px;color:var(--i
 .contact .button{background:var(--red);color:#fff}.contact .button:hover{background:var(--red-dk)}
 .contact small{display:block;font-size:13px;color:#9d9c94;margin-top:16px;line-height:1.6}
 footer{background:var(--paper);border-top:1px solid var(--line);color:var(--muted);padding:28px 0;font-size:13px}.foot{display:flex;justify-content:space-between;align-items:center;gap:20px}.foot strong{font:700 18px var(--sans);letter-spacing:-.04em;color:var(--ink)}.foot strong span{color:var(--red)}.foot a:hover{color:var(--ink)}
+.demo{background:var(--dark);color:#efeee8;padding:56px 0}
+.demo-grid{display:grid;grid-template-columns:150px minmax(0,1fr) auto;gap:36px;align-items:center}
+.demo-ph{position:relative;width:150px;height:150px;border-radius:50%;overflow:hidden;background:#262522;box-shadow:0 0 0 3px var(--dark),0 0 0 4px var(--red)}
+.demo-ph img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;display:block}
+.demo-ph:before{content:"DJT";position:absolute;inset:0;display:grid;place-items:center;font:600 34px var(--serif);color:#75736c}.demo-ph img{position:relative}.demo-ph .live{white-space:nowrap;position:absolute;left:50%;bottom:10px;transform:translateX(-50%);background:var(--red);color:#fff;font:700 10px/1 var(--sans);letter-spacing:.08em;padding:5px 7px}
+.demo .eyebrow{font:600 12px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:#ef3b52;margin:0 0 12px}
+.demo h2{font-size:40px;line-height:1.05;color:#fff;margin:0 0 12px}
+.demo p.d{margin:0;max-width:560px;color:#c9c7bf;font-size:16px}
+.demo-kpi{display:flex;gap:28px;margin-top:20px;font-family:var(--mono);font-size:12px;color:#9a988f}
+.demo-kpi b{display:block;font:500 30px/1.1 var(--serif);color:#fff;letter-spacing:-.01em}
+.demo-kpi b.r{color:#ef3b52}
+@media(max-width:850px){.demo-grid{grid-template-columns:110px minmax(0,1fr);gap:22px}.demo-ph{width:110px;height:110px}.demo .go{grid-column:1/-1}.demo h2{font-size:32px}}
+@media(max-width:560px){.demo-grid{grid-template-columns:1fr}.demo-kpi{gap:18px;flex-wrap:wrap}}
 @media(max-width:1060px){.caps a{grid-template-columns:44px minmax(0,1fr) minmax(0,1.2fr) 90px}.caps .k{display:none}}
 @media(max-width:980px){.cpanel{position:static;width:auto;max-height:none;margin:4px 0 8px}.hero-grid{grid-template-columns:1fr}.hero-copy{padding:28px 0 0}.stage{height:600px;margin:0 -36px}}
 @media(max-width:850px){.wrap{padding:0 23px}header nav{gap:16px}.proof{grid-template-columns:1fr 1fr}.proof div:nth-child(3){border-left:0;padding-left:0}.proof div:nth-child(n+3){border-top:1px solid var(--line)}.head,.ed-grid,.contact-grid{grid-template-columns:1fr;gap:18px}.caps a{grid-template-columns:36px minmax(0,1fr);gap:6px 14px}.caps p{grid-column:2}.caps .go{grid-column:2;text-align:left}.method{grid-template-columns:1fr 1fr}.step:nth-child(3){border-left:0;padding-left:0}.step:nth-child(n+3){margin-top:24px}.console{grid-template-columns:1fr}.feed{border-right:0;padding-right:0;border-bottom:1px solid #3a3934}.status{padding-left:0}.trio{grid-template-columns:1fr}.trio article+article{padding-left:0;border-left:0;border-top:1px solid #3a3934;margin-top:24px}.band-sticky .slot{opacity:.38}.band-sticky:after{background:#0c0c0b99}}
@@ -162,6 +175,13 @@ footer{background:var(--paper);border-top:1px solid var(--line);color:var(--mute
 </div>
 <div class="wrap"><nav class="clist" id="clist" aria-label="Tableros por país"><span>Tableros por país</span></nav><div class="proof"><div><strong>Comunicación</strong><span>Estrategia, narrativa y producción</span></div><div><strong>Inteligencia</strong><span>Señales convertidas en contexto</span></div><div><strong>Tecnología</strong><span>Automatización y protección</span></div><div><strong>Personas</strong><span>Equipos y comunidades reales</span></div></div></div></section>
 
+<section class="demo" id="demo" aria-label="Demo en vivo"><div class="wrap demo-grid">
+<a class="demo-ph" href="demo/trump/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Official_Presidential_Portrait_of_President_Donald_J._Trump_%282025%29.jpg/330px-Official_Presidential_Portrait_of_President_Donald_J._Trump_%282025%29.jpg" alt="Donald J. Trump" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"><span class="live">● EN VIVO</span></a>
+<div><p class="eyebrow">Demo en vivo · actualizado a diario</p><h2>Monitor Donald J. Trump</h2><p class="d">Aprobación, cobertura por sesgo de medio, Truth Social, búsquedas, decretos, mercados de predicción y avisos pagos en un solo tablero. Así se ve un monitor Sudakaos.</p>
+<div class="demo-kpi" id="demo-kpi"></div></div>
+<a class="button go" href="demo/trump/">Ver demo en vivo →</a>
+</div></section>
+<script>fetch('demo/trump/data/monitor.json').then(r=>r.json()).then(d=>{const a=(d.approval||{}).avg||{},t=d.totals||{},f=n=>Number(n||0).toLocaleString('es-AR'),k=[];if(a.a!=null)k.push(`<div><b class="r">${a.a.toFixed(1)}%</b>aprobación</div>`);if(t.polls)k.push(`<div><b>${f(t.polls)}</b>encuestas</div>`);if(t.news)k.push(`<div><b>${f(t.news)}</b>notas analizadas</div>`);if(t.truth)k.push(`<div><b>${f(t.truth)}</b>posts en Truth Social</div>`);document.getElementById('demo-kpi').innerHTML=k.join('')}).catch(()=>{})</script>
 <section class="section" id="soluciones"><div class="wrap">
 <div class="head"><h2>Capacidades diversas. Una respuesta coordinada.</h2></div>
 <ol class="caps">
