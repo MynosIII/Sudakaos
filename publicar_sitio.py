@@ -30,7 +30,7 @@ INDICE = re.sub(r"[^A-Za-z0-9_-]", "", SECRET)
 
 # Nombre visible en la URL: /<nombre>/<clave>/. El nombre solo no muestra nada (no hay index.html ahí).
 PUB = {"nacional": "nacional", "boca": "boca", "roca": "soria", "santacruz": "santacruz", "sanisidro": "sanisidro",
-       "pagano": "pagano", "casielles": "casielles", "braillard": "braillard", "clark": "clark", "trump": "trump"}
+       "pagano": "pagano", "casielles": "casielles", "braillard": "braillard", "clark": "clark"}
 
 
 def carpeta(nombre):
@@ -109,11 +109,9 @@ for slug in ("pagano", "casielles", "braillard", "clark"):
     subprocess.run([sys.executable, str(REPO / "dirigentes" / "build_page.py"), slug, str(d)], check=True,
                    stdout=subprocess.DEVNULL)
 
-# Trump (demo en inglés): página y agregados propios
-d = carpeta("trump")
-tableros["trump"] = d
-cp("trump/index.html", d / "index.html")
-cp("trump/data", d / "data")
+# Demo pública de Trump (free trial): ruta abierta web/demo/trump/, fuera del índice secreto
+subprocess.run([sys.executable, str(REPO / "trump" / "build_demo.py"), str(SITE / "web" / "demo" / "trump")], check=True,
+               stdout=subprocess.DEVNULL)
 
 # Cache del navegador, noindex y control: ningún tablero enlaza a otro ni a la raíz
 otros_nombres = {"dashboard.html", "indice/", "../ig/data/", "../radar/"}

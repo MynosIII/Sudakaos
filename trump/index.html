@@ -30,6 +30,7 @@ a{color:#86b6f2;text-decoration:none}a:hover{text-decoration:underline}button{fo
 .live b{width:7px;height:7px;border-radius:50%;background:#2ecc40;animation:pulse 1.6s infinite}
 .live.old{background:#2a230f;color:#fab219;border-color:#4a3d1d}.live.old b{background:#fab219}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(46,204,64,.7)}70%{box-shadow:0 0 0 7px rgba(46,204,64,0)}100%{box-shadow:0 0 0 0 rgba(46,204,64,0)}}
+.cta{background:var(--red);color:#fff;font-weight:600;font-size:13px;padding:6px 12px;border-radius:5px;white-space:nowrap}.cta:hover{text-decoration:none;filter:brightness(1.1)}
 .clock{font:500 12px var(--mono);color:var(--muted);margin-left:auto;display:flex;gap:16px;flex-wrap:wrap}.clock b{color:var(--txt);font-weight:600}
 .ticker{background:#0e1117;border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;height:32px;display:flex;align-items:center}
 .ticker .lab{flex:none;height:100%;display:flex;align-items:center;padding:0 12px;background:var(--red);color:#fff;font:600 11px var(--mono);letter-spacing:1px}
@@ -133,6 +134,7 @@ footer{color:var(--dim);font-size:12px;max-width:1600px;margin:0 auto;padding:0 
   <div class="logo"><i id="lg">DJT</i><span>Trump Monitor</span><small>SOCIAL LISTENING · OSINT</small></div>
   <span class="live" id="live"><b></b>LIVE DATA</span>
   <div class="clock" id="clock"></div>
+  <a class="cta" href="../../#contacto">Get your own monitor →</a>
 </div></div>
 <div class="ticker"><div class="lab">HEADLINES</div><div class="run" id="ticker"></div></div>
 <nav><div class="in" id="tabs">
@@ -342,7 +344,7 @@ function init(){
   const H=(D.media||{}).headlines||[];
   $('#ticker').innerHTML=H.slice(0,22).map(h=>`<span><em style="color:${LEAN_C[h.l]||C.muted}">${esc(h.o.toUpperCase())}</em>${esc(h.t)}</span>`).join('')||'<span>No headlines yet</span>';
   if(!D.totals.news&&!D.totals.polls)$('#warn').innerHTML='<div class="warnbox">The first collection run is still filling this board.</div>';
-  $('#foot').innerHTML=`Public, free sources only · aggregates updated daily · last update ${new Date(D.updated_at).toUTCString()}`;
+  $('#foot').innerHTML=`Live demo by <a href="../../">Sudakaos LATAM</a> · public, free sources only · updated daily · last update ${new Date(D.updated_at).toUTCString()} · <a href="../../#contacto">Request a monitor for your candidate or organization</a>`;
   draw('overview');
 }
 
