@@ -211,9 +211,9 @@ def approval():
         while j0 < len(ps) and ps[j0]["end"] < lo:
             j0 += 1
         win = [p for p in ps[j0:] if p["end"] <= ds]
-        if len(win) < 3 and i > 10:
+        if len(win) < 3:
             win = [p for p in ps if p["end"] <= ds][-8:]
-        if not win:
+        if len(win) < 3:
             continue
         per = Counter(p["_k"] for p in win)
         wa = wd = sa = sd = 0.0
@@ -337,6 +337,7 @@ def media(news):
 def gdelt():
     g = load("gdelt.json") or {}
     out = {"errors": g.get("errors", {}), "fetched_at": g.get("fetched_at")}
+    print("gdelt blocks:", {k: (list(v)[:4] if isinstance(v, dict) else type(v).__name__) for k, v in g.items()}, flush=True)
 
     def tl(block):
         try:
@@ -549,22 +550,34 @@ def ads():
     if not d:
         return None
     camp = [w.lower() for w in CONFIG["meta_ads"]["campo_trump"]]
+    opp = [w.lower() for w in CONFIG["meta_ads"].get("oposicion", [])]
+    com = [w.lower() for w in CONFIG["meta_ads"].get("comercial", [])]
+
+    def group(by):
+        if any(c in by for c in camp):
+            return "trump"
+        if any(c in by for c in opp):
+            return "opp"
+        if any(re.search(r"\b" + re.escape(c), by) for c in com):
+            return "merch"
+        return "other"
     rows = d["ads"]
-    pages = defaultdict(lambda: {"n": 0, "lo": 0, "hi": 0, "camp": False})
-    tot = {"trump": [0, 0, 0], "other": [0, 0, 0]}
+    pages = defaultdict(lambda: {"n": 0, "lo": 0, "hi": 0, "g": "other"})
+    tot = {k: [0, 0, 0] for k in ("trump", "opp", "merch", "other")}
     reg, age, gen, plat = Counter(), Counter(), Counter(), Counter()
     samples = []
     for a in rows:
         nm = a.get("page_name") or "?"
         by = f"{nm} {a.get('bylines') or ''}".lower()
-        is_c = any(c in by for c in camp)
+        gr = group(by)
+        is_c = gr == "trump"
         s, i = rng(a.get("spend")), rng(a.get("impressions"))
         p = pages[nm]
         p["n"] += 1
         p["lo"] += s[0]
         p["hi"] += s[1]
-        p["camp"] = is_c
-        g = tot["trump" if is_c else "other"]
+        p["g"] = gr
+        g = tot[gr]
         g[0] += 1
         g[1] += s[0]
         g[2] += s[1]
@@ -576,7 +589,7 @@ def ads():
             gen[x.get("gender", "?")] += float(x.get("percentage") or 0) * mid
         plat.update(a.get("publisher_platforms") or [])
         if a.get("ad_creative_bodies"):
-            samples.append((i[1], is_c, nm, (a.get("ad_delivery_start_time") or "")[:10], a["ad_creative_bodies"][0], a["id"]))
+            samples.append((i[1], gr, nm, (a.get("ad_delivery_start_time") or "")[:10], a["ad_creative_bodies"][0], a["id"]))
     share = lambda c, n=12: [{"k": k, "v": round(100 * v / sum(c.values()), 1)} for k, v in c.most_common(n)] if sum(c.values()) else []
     samples.sort(reverse=True)
     return {"n": len(rows), "since": d.get("since"), "camps": tot,
@@ -609,8 +622,9 @@ def alerts(m):
             for x in dl[-3:]:
                 if (x["n"] - mu) / sd >= 2:
                     out.append({"lvl": "med", "i": "◆", "t": f"Coverage spike on {x['d']}: {x['n']} Trump stories vs. {mu:.0f}/day average", "k": "Media"})
+        old = sum(1 for x in dl if x["d"] < ago(7))
         for t in md["topics"][:10]:
-            if t["s7"] >= 4 and t["s7"] >= 1.7 * max(t["s21"], 1):
+            if old >= 150 and t["s7"] >= 4 and t["s7"] >= 1.7 * max(t["s21"], 1):
                 out.append({"lvl": "med", "i": "↑", "t": f"“{t['k']}” surging: {t['s7']:.0f}% of Trump coverage this week vs. {t['s21']:.0f}% before", "k": "Topics"})
             if t["n"] >= 25 and t["neg"] >= 45:
                 out.append({"lvl": "low", "i": "!", "t": f"Negative framing on “{t['k']}”: {t['neg']:.0f}% of headlines", "k": "Tone"})

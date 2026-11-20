@@ -21,10 +21,12 @@ concurrency:
 jobs:
   collect-and-analyze:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 80
     env:
       # Own key if YOUTUBE_API_KEY_TRUMP is loaded; otherwise the national board's key (small use: ~650 units/day)
       YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY_TRUMP || secrets.YOUTUBE_API_KEY }}
+      # Fallback key if the first one is rate-limited
+      YOUTUBE_API_KEY_ALT: ${{ secrets.YOUTUBE_API_KEY_ROCA }}
       META_TOKEN: ${{ secrets.META_TOKEN }}
       TRUMP_NLP_SECONDS: '600'
       # No X_BEARER_TOKEN on purpose: X is paid and only runs by hand
@@ -57,7 +59,7 @@ jobs:
           key: trump-store-${{ github.run_id }}
           restore-keys: trump-store-
       - name: Collect
-        run: timeout 1800 python -u trump/collect.py || echo "collection cut by time"
+        run: timeout 2700 python -u trump/collect.py || echo "collection cut by time"
       - name: Analyze
         run: python -u trump/analyze.py
       - name: Save store

@@ -376,6 +376,7 @@ def gdelt():
         try:
             raw = get(base + urllib.parse.urlencode(params), retries=3, wait=15, timeout=90).decode("utf8", "replace")
             out[k] = json.loads(raw)
+            log(gdelt=k, keys=list(out[k])[:5], sample=raw[:200])
         except Exception as e:
             errs[k] = f"{type(e).__name__}: {str(e)[:100]}"
             log(gdelt=k, error=errs[k])
@@ -396,9 +397,10 @@ def gdelt():
 
 # ---------------------------------------------------------------- YouTube
 def youtube():
-    key = os.environ.get("YOUTUBE_API_KEY")
-    if not key:
+    keys = [k for k in (os.environ.get("YOUTUBE_API_KEY"), os.environ.get("YOUTUBE_API_KEY_ALT")) if k]
+    if not keys:
         raise RuntimeError("missing YOUTUBE_API_KEY")
+    key = keys[0]
     cfg = CONFIG["youtube"]
     api = "https://www.googleapis.com/youtube/v3/"
     since = iso(NOW - timedelta(days=cfg.get("days", 14)))
@@ -406,12 +408,22 @@ def youtube():
     for q in cfg["queries"]:
         params = {"part": "snippet", "type": "video", "q": q, "regionCode": cfg["region"], "relevanceLanguage": cfg["language"],
                   "publishedAfter": since, "maxResults": cfg["videos_per_query"], "order": "relevance", "key": key}
-        try:
-            items = get_json(api + "search?" + urllib.parse.urlencode(params), retries=0).get("items", [])
-        except urllib.error.HTTPError as e:
-            log(youtube_query=q, error=e.code)
+        items = None
+        for attempt in range(3):
+            try:
+                items = get_json(api + "search?" + urllib.parse.urlencode(params | {"key": key}), retries=0).get("items", [])
+                break
+            except urllib.error.HTTPError as e:
+                log(youtube_query=q, error=e.code, attempt=attempt, reason=e.read()[:160].decode("utf8", "replace"))
+                if attempt == 0 and e.code == 429:
+                    time.sleep(60)
+                elif len(keys) > 1 and key == keys[0]:
+                    key = keys[1]
+                else:
+                    break
+        if items is None:
             if not out:
-                raise RuntimeError(f"YouTube quota/limit ({e.code}); retry next run")
+                raise RuntimeError("YouTube quota/limit; retry next run")
             break
         for v in items:
             vid = v["id"].get("videoId")
@@ -518,7 +530,7 @@ def polymarket():
     cfg = CONFIG["polymarket"]
     evs = get_json("https://gamma-api.polymarket.com/events?" + urllib.parse.urlencode(
         {"tag_slug": cfg["tag"], "closed": "false", "active": "true", "order": "volume24hr", "ascending": "false", "limit": 60}),
-        headers={"User-Agent": BROWSER, "Accept": "application/json"})
+        headers={"User-Agent": "Mozilla/5.0", "Accept": "*/*"})
     out = []
     for e in evs:
         mk = []
@@ -555,10 +567,32 @@ def fred():
             rows = [(r[0], float(r[1])) for r in csv.reader(io.StringIO(raw)) if len(r) == 2 and re.match(r"\d{4}-", r[0]) and r[1] not in (".", "")]
             out["series"][sid] = {"name": name, "data": rows}
         except Exception as e:
-            log(fred=sid, error=str(e)[:100])
+            log(fred=sid, error=f"{type(e).__name__}: {str(e)[:100]}")
         time.sleep(0.5)
+    if len(out["series"]) < 3:  # FRED blocked: BLS public API (no key) + University of Michigan CSV
+        try:
+            body = json.dumps({"seriesid": ["CUUR0000SA0", "LNS14000000"], "startyear": "2024", "endyear": str(NOW.year)}).encode()
+            d = get_json("https://api.bls.gov/publicAPI/v1/timeseries/data/", data=body, headers={"Content-Type": "application/json"})
+            for se in d.get("Results", {}).get("series", []):
+                sid = {"CUUR0000SA0": "CPIAUCSL", "LNS14000000": "UNRATE"}[se["seriesID"]]
+                rows = sorted((f"{x['year']}-{x['period'][1:]}-01", float(x["value"])) for x in se["data"] if x["period"].startswith("M") and x["period"] != "M13")
+                if rows:
+                    out["series"][sid] = {"name": CONFIG["fred"][sid], "data": rows}
+        except Exception as e:
+            log(bls=str(e)[:120])
+        try:
+            raw = get("https://www.sca.isr.umich.edu/files/tbmics.csv", headers={"User-Agent": BROWSER}).decode("utf8", "replace")
+            mon = {m: i + 1 for i, m in enumerate("january february march april may june july august september october november december".split())}
+            rows = []
+            for r in csv.reader(io.StringIO(raw)):
+                if len(r) >= 3 and r[0].strip().lower() in mon and r[1].strip().isdigit() and int(r[1]) >= 2024:
+                    rows.append((f"{int(r[1])}-{mon[r[0].strip().lower()]:02d}-01", float(r[2])))
+            if rows:
+                out["series"]["UMCSENT"] = {"name": CONFIG["fred"]["UMCSENT"], "data": sorted(rows)}
+        except Exception as e:
+            log(umich=str(e)[:120])
     if not out["series"]:
-        raise RuntimeError("FRED returned nothing")
+        raise RuntimeError("FRED/BLS returned nothing")
     save_json("fred.json", out)
     return len(out["series"])
 
@@ -731,11 +765,12 @@ def main():
     for name, fn in side:
         if only and name not in only:
             continue
+        t0 = time.time()
         try:
             status[name] = {"ok": True, "items": fn(), "at": iso(NOW)}
         except Exception as e:
             status[name] = {"ok": False, "error": f"{type(e).__name__}: {str(e)[:200]}", "at": iso(NOW)}
-        log(source=name, **status[name])
+        log(source=name, seconds=round(time.time() - t0), **status[name])
     (ST / "status.json").write_text(json.dumps(status, ensure_ascii=False, indent=1), encoding="utf8")
 
 

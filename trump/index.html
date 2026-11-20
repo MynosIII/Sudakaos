@@ -247,7 +247,7 @@ footer{color:var(--dim);font-size:12px;max-width:1600px;margin:0 auto;padding:0 
 <section class="tab" id="t-ads">
   <div class="kpis" id="d-kpis"></div>
   <div class="g">
-    <div class="card c6"><h3>Top sponsors of ads mentioning Trump<span class="tag">Meta · US · 30 days</span></h3><div class="scroll"><table id="d-pages"></table></div></div>
+    <div class="card c6"><h3>Who pays for ads that mention Trump<span class="tag">Meta · US · 30 days</span></h3><div class="scroll"><table id="d-pages"></table></div></div>
     <div class="card c6"><h3>Where the ads ran<span class="tag">Share of impressions</span></h3><div class="tiles" id="d-map"></div><div class="legend" id="d-mapl"></div></div>
     <div class="card c4"><h3>Audience age</h3><div class="bars" id="d-age"></div></div>
     <div class="card c4"><h3>Audience gender</h3><div class="bars" id="d-gen"></div></div>
@@ -475,17 +475,18 @@ function policy(){const O=D.orders,TY={executive_order:'Executive orders',memora
     return `<div>${spark(s.pts.map(p=>p[1]),C.gold)}<span>${esc(s.name)}</span><b>${k==='CPIAUCSL'?(s.yoy!=null?s.yoy+'% YoY':'–'):v}</b><span>${sinceI}${s.yoy!=null&&k!=='CPIAUCSL'?' · '+sgn(s.yoy)+'% YoY':''} · ${s.d}</span></div>`}).join(''):E}
 
 // ---------------------------------------------------------------- ads
+const GRP={trump:['Trump & GOP','#e0463c'],opp:['Democrats & opposition','#3f7fe0'],merch:['Trump merchandise & deals','#d9a441'],other:['Other sponsors','#8aa1c1']};
 function ads(){const A=D.ads;if(!A||!A.n){$('#d-pages').innerHTML=`<tr><td>${E}</td></tr>`;return}
-  const t=A.camps.trump,o=A.camps.other;
-  $('#d-kpis').innerHTML=[kpi('Ads mentioning Trump',fmt(A.n),'Meta · US · since '+A.since),kpi('Total spend',usd(t[1]+o[1])+'–'+usd(t[2]+o[2]),'range reported by Meta'),
-    kpi('Trump & GOP pages',fmt(t[0])+' ads',usd(t[1])+'–'+usd(t[2])),kpi('Other sponsors',fmt(o[0])+' ads',usd(o[1])+'–'+usd(o[2]),o[2]>t[2]?'hot':''),
-    kpi('Facebook',fmt(A.platforms.facebook||0),'ads'),kpi('Instagram',fmt(A.platforms.instagram||0),'ads')].join('');
-  $('#d-pages').innerHTML=`<thead><tr><th>Page</th><th class="n">Ads</th><th class="n">Spend</th></tr></thead><tbody>${A.pages.map(p=>`<tr><td>${p.camp?'<span class="lean Right">TRUMP/GOP</span> ':''}${esc(p.p)}</td><td class="n">${fmt(p.n)}</td><td class="n">${usd(p.lo)}–${usd(p.hi)}</td></tr>`).join('')}</tbody>`;
+  const c=A.camps,all=Object.values(c).reduce((a,b)=>[a[0]+b[0],a[1]+b[1],a[2]+b[2]],[0,0,0]);
+  $('#d-kpis').innerHTML=kpi('Ads mentioning Trump',fmt(A.n),'Meta · US · since '+A.since)+kpi('Total spend',usd(all[1])+'–'+usd(all[2]),'range reported by Meta')+
+    Object.entries(GRP).map(([k,[l]])=>kpi(l,fmt((c[k]||[0])[0])+' ads',usd((c[k]||[0,0,0])[1])+'–'+usd((c[k]||[0,0,0])[2]),k==='opp'&&c.opp&&c.trump&&c.opp[2]>c.trump[2]?'hot':'')).join('');
+  const gt=g=>`<span class="lean" style="background:${GRP[g][1]}">${GRP[g][0].split(' ')[0].toUpperCase()}</span> `;
+  $('#d-pages').innerHTML=`<thead><tr><th>Page</th><th class="n">Ads</th><th class="n">Spend</th></tr></thead><tbody>${A.pages.map(p=>`<tr><td>${gt(p.g||'other')}${esc(p.p)}</td><td class="n">${fmt(p.n)}</td><td class="n">${usd(p.lo)}–${usd(p.hi)}</td></tr>`).join('')}</tbody>`;
   const reg={};A.regions.forEach(r=>reg[r.k]=r.v);tiles('#d-map',reg,'217,164,65','Top',v=>v+'%');
   $('#d-age').innerHTML=bars(A.age.sort((a,b)=>a.k.localeCompare(b.k)).map(x=>[x.k,x.v,C.navy,x.v+'%']));
   $('#d-gen').innerHTML=bars(A.gender.map(x=>[x.k,x.v,x.k==='female'?C.red:C.navy,x.v+'%']));
   $('#d-plat').innerHTML=bars(Object.entries(A.platforms).map(([k,v])=>[k,v,C.gold]));
-  $('#d-samp').innerHTML=A.samples.map(s=>`<a class="it" href="${esc(s.u)}" target="_blank" rel="noopener">${esc(s.t)}<div class="m">${s.c?'<span class="lean Right">TRUMP/GOP</span>':''}<span>${esc(s.p)}</span><span>${esc(s.d)}</span></div></a>`).join('')||E}
+  $('#d-samp').innerHTML=A.samples.map(s=>`<a class="it" href="${esc(s.u)}" target="_blank" rel="noopener">${esc(s.t)}<div class="m">${gt(GRP[s.c]?s.c:'other')}<span>${esc(s.p)}</span><span>${esc(s.d)}</span></div></a>`).join('')||E}
 
 // ---------------------------------------------------------------- method
 function method(){const S=D.status||{},nm={rss:'US outlets (RSS)',google_news:'Google News',youtube:'YouTube comments',truth_social:'Truth Social',polls:'Polls (VoteHub + Wikipedia)',gdelt:'GDELT global news',federal_register:'Federal Register',polymarket:'Polymarket',fred:'FRED economy',wikipedia:'Wikipedia page views',google_trends:'Google Trends',meta_ads:'Meta Ad Library'};
