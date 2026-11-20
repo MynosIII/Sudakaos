@@ -1,12 +1,13 @@
 """Datos reales para la landing: tablero por país y sala de situación.
 
 Escribe web/data/paises.json y web/data/situacion.json. Solo fuentes gratuitas y sin clave:
-  - Banco Mundial (indicadores macro, último dato disponible por país)
+  - OCDE (inflación interanual mensual) y Banco Mundial (último año, donde la OCDE no llega)
+  - Yahoo Finance (índice bursátil principal, cierre diario del último mes)
   - currency-api de fawazahmed0 (tipo de cambio diario, vía jsDelivr / Cloudflare)
   - Google News RSS (titulares y alertas por país)
   - GDELT DOC 2.0 (tono de la cobertura internacional, 7 días)
   - USGS (sismos M4.5+) y GDACS (alertas de desastres)
-Nada de esto toca tableros de clientes. Uso: python3 web/tools/datos.py
+Regla: el dato más fresco disponible, siempre con su fecha. Nada de esto toca tableros de clientes. Uso: python3 web/tools/datos.py
 """
 import json, re, sys, time, urllib.parse, urllib.request, urllib.error
 import xml.etree.ElementTree as ET
@@ -41,15 +42,6 @@ PAISES = [
 ]
 BY = {p[0]: p for p in PAISES}
 
-INDICADORES = {
-    'pib_crec': 'NY.GDP.MKTP.KD.ZG',   # crecimiento real del PIB, % anual
-    'inflacion': 'FP.CPI.TOTL.ZG',     # inflación, precios al consumidor, % anual
-    'desempleo': 'SL.UEM.TOTL.ZS',     # desempleo, % de la población activa (OIT)
-    'pib_pc': 'NY.GDP.PCAP.CD',        # PIB per cápita, US$ corrientes
-    'pib': 'NY.GDP.MKTP.CD',           # PIB, US$ corrientes
-    'poblacion': 'SP.POP.TOTL',
-    'internet': 'IT.NET.USER.ZS',      # usuarios de internet, % de la población
-}
 
 # Palabras que convierten un titular en alerta: (categoría, severidad 1-3, términos por idioma).
 # Un término terminado en "*" es prefijo; el resto se busca como palabra o frase completa.
@@ -76,6 +68,7 @@ REGLAS = [
 ]
 # Titulares de servicio (cotización del día, pronóstico, horóscopo…) no son alertas
 RUIDO = re.compile(r'(precio del d[oó]lar|cotizaci[oó]n|tipo de cambio hoy|d[oó]lar hoy|cu[aá]nto est[aá] el d[oó]lar|pron[oó]stico|forecast|hor[oó]scopo|loter[ií]a|quiniela|resultados del sorteo|en vivo|minuto a minuto|live updates|recipe|receta)', re.I)
+FINANZAS = re.compile(r'(riesgo pa[ií]s|bonos|activos|acciones|bolsa|mercados|merval|wall street|d[oó]lar|stocks|bonds|markets|a[cç][oõ]es|ibovespa)', re.I)
 _L = 'a-záéíóúâêôãõçñü'
 _RX = {}
 
@@ -120,54 +113,6 @@ def log(*a):
     print(f'[{time.time() - T0:5.0f}s]', *a, file=sys.stderr, flush=True)
 
 
-# ---------- Banco Mundial ----------
-def banco_mundial():
-    codes = ';'.join(p[2] for p in PAISES)
-    out = {p[0]: {} for p in PAISES}
-    iso3 = {p[2]: p[0] for p in PAISES}
-    for key, ind in INDICADORES.items():
-        url = f'https://api.worldbank.org/v2/country/{codes}/indicator/{ind}?format=json&date=2000:{NOW.year}&per_page=5000'
-        try:
-            d = get_json(url, timeout=45, retries=1)
-            rows = d[1] if len(d) > 1 and d[1] else []
-        except Exception as e:
-            log('WB', ind, e); continue
-        for r in rows:
-            c = iso3.get(r.get('countryiso3code'))
-            if not c or r.get('value') is None:
-                continue
-            out[c].setdefault(key, []).append([int(r['date']), round(float(r['value']), 3)])
-        time.sleep(1)
-    for c in out:
-        for k in out[c]:
-            out[c][k].sort()
-    return out
-
-
-# FMI (World Economic Outlook, DataMapper): respaldo si el Banco Mundial no responde o le falta el dato
-FMI = {'pib_crec': 'NGDP_RPCH', 'inflacion': 'PCPIPCH', 'desempleo': 'LUR', 'pib_pc': 'NGDPDPC', 'poblacion': 'LP'}
-
-
-def fmi():
-    codes = '/'.join('EU' if p[0] == 'EU' else p[2] for p in PAISES)
-    iso = {('EU' if p[0] == 'EU' else p[2]): p[0] for p in PAISES}
-    years = ','.join(str(y) for y in range(2000, NOW.year))
-    out = {p[0]: {} for p in PAISES}
-    for key, ind in FMI.items():
-        try:
-            d = get_json(f'https://www.imf.org/external/datamapper/api/v1/{ind}/{codes}?periods={years}', timeout=45, retries=1)
-        except Exception as e:
-            log('FMI', ind, e); continue
-        for code, ser in (d.get('values', {}).get(ind) or {}).items():
-            c = iso.get(code)
-            if not c or not isinstance(ser, dict):
-                continue
-            mult = 1e6 if key == 'poblacion' else 1
-            out[c][key] = sorted([int(y), round(float(v) * mult, 3)] for y, v in ser.items() if v is not None)
-        time.sleep(1)
-    return out
-
-
 # ---------- Tipo de cambio (unidades de moneda local por 1 US$; para US, euros por dólar) ----------
 def fx_dia(fecha):
     tag = 'latest' if fecha is None else fecha.strftime('%Y-%m-%d')
@@ -187,16 +132,18 @@ def tipo_cambio(prev):
         hist[c] = {r[0]: r[1] for r in (prev.get('paises', {}).get(c, {}).get('fx', {}).get('serie') or [])}
     monedas = {c: ('eur' if c == 'US' else p[3]) for c, p in BY.items()}
     fechas = [None]
-    if not any(len(h) > 20 for h in hist.values()):  # primera vez: completa ~6 meses, un punto por semana
-        fechas += [NOW - timedelta(days=7 * k) for k in range(1, 27)]
-    else:  # completa días faltantes de la última semana
-        fechas += [NOW - timedelta(days=k) for k in range(1, 8)]
+    corte = (NOW - timedelta(days=31)).strftime('%Y-%m-%d')
+    for h in hist.values():  # nada con más de un mes
+        for k in [k for k in h if k < corte]:
+            del h[k]
+    tienen = set().union(*[set(h) for h in hist.values()]) if hist else set()
+    fechas += [NOW - timedelta(days=k) for k in range(1, 31) if (NOW - timedelta(days=k)).strftime('%Y-%m-%d') not in tienen]
     fallas = 0
     for f in fechas:
         fecha, rates = fx_dia(f)
         if not fecha or not rates:
             fallas += 1
-            if fallas >= 4:
+            if fallas >= 6:
                 log('FX: demasiadas fallas, se corta'); break
             continue
         for c, m in monedas.items():
@@ -204,7 +151,6 @@ def tipo_cambio(prev):
                 hist[c][fecha] = round(float(rates[m]), 6)
         time.sleep(.3)
     out = {}
-    corte = (NOW - timedelta(days=200)).strftime('%Y-%m-%d')
     for c, h in hist.items():
         serie = sorted([k, v] for k, v in h.items() if k >= corte)
         out[c] = {'moneda': monedas[c].upper(), 'serie': serie}
@@ -219,7 +165,7 @@ def lang_of(hl):
 def gnews(q, loc, when='1d'):
     hl, gl, ceid = loc
     url = 'https://news.google.com/rss/search?' + urllib.parse.urlencode({'q': f'{q} when:{when}', 'hl': hl, 'gl': gl, 'ceid': ceid})
-    root = ET.fromstring(get(url))
+    root = ET.fromstring(get(url, retries=1, timeout=20))
     items = []
     for it in root.iter('item'):
         title = (it.findtext('title') or '').strip()
@@ -240,7 +186,10 @@ def clasificar(titulo, lang):
     low = titulo.lower()
     if RUIDO.search(low):
         return None, 0
+    fin = FINANZAS.search(low)
     for cat, sev, terms in REGLAS:
+        if fin and cat in ('Desastre', 'Sismo'):  # "derrumbe de bonos", "terremoto financiero": metáforas de mercado
+            continue
         for w in terms[lang]:
             if _rx(w).search(low):
                 return cat, sev
@@ -252,16 +201,20 @@ def norm(s):
 
 
 def noticias():
-    titulares, alertas = {}, []
+    titulares, alertas, fallas = {}, [], 0
     for c, nombre, _, _, lat, lon, loc, q, _ in PAISES:
         lang = lang_of(loc[0])
+        if fallas >= 3:  # Google News limita por IP: si falla seguido, se usa lo de la corrida anterior
+            continue
         log('GNews', c)
         try:
             items = gnews(q, loc, '1d')
             if len(items) < 8:
                 items = gnews(q, loc, '3d')
+            fallas = 0
         except Exception as e:
-            log('GNews', c, e); items = []
+            log('GNews', c, e); fallas += 1
+            continue
         vistos, top = set(), []
         for it in items:
             k = norm(it['titulo'])
@@ -329,7 +282,7 @@ def pais_de(texto):
 def sismos():
     out = []
     try:
-        d = get_json('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson')
+        d = get_json('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_month.geojson')
     except Exception as e:
         log('USGS', e); return out
     for f in d.get('features', []):
@@ -373,6 +326,114 @@ def gdacs():
     return out
 
 
+# Índices bursátiles (Yahoo Finance, cierre diario, 1 mes). Si no responde, el país queda sin índice.
+INDICES = {'AR': ('^MERV', 'S&P Merval'), 'BR': ('^BVSP', 'Ibovespa'), 'CL': ('^IPSA', 'S&P IPSA'), 'MX': ('^MXX', 'S&P/BMV IPC'),
+           'PE': ('^SPBLPGPT', 'S&P/BVL Perú General'), 'CO': ('^767679-USD-STRD', 'MSCI Colombia'), 'US': ('^GSPC', 'S&P 500'),
+           'ES': ('^IBEX', 'IBEX 35'), 'GB': ('^FTSE', 'FTSE 100'), 'EU': ('^STOXX50E', 'Euro Stoxx 50')}
+
+
+def indices():
+    out = {}
+    for c, (sym, nombre) in INDICES.items():
+        for host in ('query1', 'query2'):
+            try:
+                d = get_json(f'https://{host}.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(sym)}?range=1mo&interval=1d', retries=0, timeout=20)
+                r = d['chart']['result'][0]
+                ts, cl = r.get('timestamp') or [], r['indicators']['quote'][0].get('close') or []
+                serie = [[datetime.fromtimestamp(t, timezone.utc).strftime('%Y-%m-%d'), round(v, 2)] for t, v in zip(ts, cl) if v is not None]
+                if serie and serie[-1][0] >= (NOW - timedelta(days=7)).strftime('%Y-%m-%d'):
+                    out[c] = {'nombre': nombre, 'serie': serie}
+                break
+            except Exception as e:
+                log('Índice', c, host, e)
+        time.sleep(.5)
+    return out
+
+
+OCDE = {'AR': 'ARG', 'BR': 'BRA', 'CL': 'CHL', 'CO': 'COL', 'MX': 'MEX', 'US': 'USA', 'ES': 'ESP', 'GB': 'GBR', 'EU': 'EU27_2020'}
+
+
+def inflacion(prev):
+    """Inflación interanual: mensual de la OCDE donde la hay; si no, el último año del Banco Mundial (con su fecha)."""
+    out = {}
+    try:
+        desde = (NOW - timedelta(days=420)).strftime('%Y-%m')
+        url = ('https://sdmx.oecd.org/public/rest/data/OECD.SDD.TPS,DSD_PRICES@DF_PRICES_ALL,1.0/'
+               + '+'.join(OCDE.values()) + f'.M..CPI.PA._T.N.GY?startPeriod={desde}&format=csvfile')
+        import csv, io
+        filas = list(csv.DictReader(io.StringIO(get(url, retries=1, timeout=60).decode('utf8', 'replace'))))
+        inv = {v: k for k, v in OCDE.items()}
+        series = {}
+        for f in filas:
+            c = inv.get(f.get('REF_AREA'))
+            try:
+                v = round(float(f.get('OBS_VALUE')), 1)
+            except (TypeError, ValueError):
+                continue
+            if c:
+                series.setdefault(c, {}).setdefault(f.get('METHODOLOGY') or 'N', []).append([f.get('TIME_PERIOD'), v])
+        for c, por_met in series.items():  # IPC nacional o armonizado: el que tenga el dato más reciente
+            sr = max(por_met.values(), key=lambda x: (max(r[0] for r in x), len(x)))
+            sr.sort()
+            if sr[-1][0] >= (NOW - timedelta(days=150)).strftime('%Y-%m'):
+                out[c] = {'valor': sr[-1][1], 'periodo': sr[-1][0], 'frecuencia': 'mensual', 'fuente': 'OCDE', 'serie': sr[-13:]}
+        log('Inflación OCDE', len(out), 'países')
+    except Exception as e:
+        log('Inflación OCDE', e)
+    try:  # Eurostat (IPC armonizado) para España y la UE, suele estar un mes adelante de la OCDE
+        d = get_json('https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_manr?format=JSON&lang=en&geo=ES&geo=EU27_2020&coicop=CP00&lastTimePeriod=13', retries=1, timeout=40)
+        geo, tiempo = d['dimension']['geo']['category']['index'], d['dimension']['time']['category']['index']
+        nt = len(tiempo)
+        for g, c in (('ES', 'ES'), ('EU27_2020', 'EU')):
+            sr = sorted([[t, round(float(d['value'][str(geo[g] * nt + i)]), 1)] for t, i in tiempo.items() if str(geo[g] * nt + i) in d['value']])
+            if sr and (c not in out or sr[-1][0] >= out[c]['periodo']):
+                out[c] = {'valor': sr[-1][1], 'periodo': sr[-1][0], 'frecuencia': 'mensual', 'fuente': 'Eurostat', 'serie': sr}
+        log('Inflación Eurostat ok')
+    except Exception as e:
+        log('Inflación Eurostat', e)
+    for c, nombre, iso3, *_ in PAISES:
+        if c in out:
+            continue
+        old = prev.get('paises', {}).get(c, {}).get('inflacion')
+        if old and old.get('frecuencia') == 'mensual' and old.get('periodo', '') >= (NOW - timedelta(days=120)).strftime('%Y-%m'):
+            out[c] = old; continue
+        try:
+            d = get_json(f'https://api.worldbank.org/v2/country/{iso3}/indicator/FP.CPI.TOTL.ZG?format=json&mrnev=1', retries=1, timeout=30)
+            r = d[1][0]
+            if r.get('value') is not None and int(r['date']) >= NOW.year - 2:
+                out[c] = {'valor': round(r['value'], 1), 'periodo': r['date'], 'frecuencia': 'anual', 'fuente': 'Banco Mundial'}
+        except Exception as e:
+            log('Inflación BM', c, e)
+            if old:
+                out[c] = old
+        time.sleep(.3)
+    return out
+
+
+def archivo_alertas(nuevas):
+    """Guarda las alertas de los últimos 30 días (sin repetir) para contar alertas por día."""
+    f = OUT / 'archivo.json'
+    try:
+        arch = json.loads(f.read_text(encoding='utf8'))
+    except Exception:
+        arch = []
+    corte = iso(NOW - timedelta(days=30))
+    vistos = {a['k'] for a in arch}
+    for a in nuevas:
+        k = a.get('url') or a['titulo']
+        if k not in vistos:
+            vistos.add(k); arch.append({'k': k, 't': a['t'], 'p': a['pais'], 'c': a['cat'], 's': a['sev']})
+    arch = [a for a in arch if a['t'] >= corte]
+    f.write_text(json.dumps(arch, ensure_ascii=False, separators=(',', ':')), encoding='utf8')
+    dias = [(NOW - timedelta(days=k)).strftime('%Y-%m-%d') for k in range(29, -1, -1)]
+    serie = {c: {d: 0 for d in dias} for c in BY}
+    for a in arch:
+        d = a['t'][:10]
+        if a['p'] in serie and d in serie[a['p']]:
+            serie[a['p']][d] += 1
+    return {c: [[d, n] for d, n in v.items()] for c, v in serie.items()}
+
+
 def main():
     OUT.mkdir(exist_ok=True)
     prev = {}
@@ -380,35 +441,40 @@ def main():
         prev = json.loads((OUT / 'paises.json').read_text(encoding='utf8'))
     except Exception:
         pass
-    log('Banco Mundial…'); wb = banco_mundial()
-    log('FMI…'); imf = fmi()
-    fuente = {}
-    for c in wb:
-        fuente[c] = {}
-        for k in set(wb[c]) | set(imf.get(c, {})):
-            a, b = wb[c].get(k), imf.get(c, {}).get(k)
-            if b and (not a or b[-1][0] > a[-1][0]):  # el FMI suele tener el año más reciente
-                wb[c][k] = b; fuente[c][k] = 'FMI'
-            elif a:
-                fuente[c][k] = 'Banco Mundial'
-    prevp = prev.get('paises', {})
-    for c in wb:  # si ambas fuentes fallan, se conserva lo último publicado
-        if not wb[c] and prevp.get(c, {}).get('wb'):
-            wb[c] = prevp[c]['wb']; fuente[c] = prevp[c].get('fuente', {})
     log('Tipo de cambio…'); fx = tipo_cambio(prev)
+    log('Índices…'); idx = indices()
+    for c, v in prev.get('paises', {}).items():  # si Yahoo no respondió, se conserva lo último si tiene menos de una semana
+        if c not in idx and v.get('indice') and v['indice']['serie'][-1][0] >= (NOW - timedelta(days=7)).strftime('%Y-%m-%d'):
+            idx[c] = v['indice']
+    log('Inflación…'); infl = inflacion(prev)
     log('Noticias…'); tit, al_medios = noticias()
+    prev_sit = {}
+    try:
+        prev_sit = json.loads((OUT / 'situacion.json').read_text(encoding='utf8'))
+    except Exception:
+        pass
+    corte30 = iso(NOW - timedelta(days=30))
+    for c in BY:  # países sin respuesta de Google News: titulares y alertas de medios de la corrida anterior
+        if c in tit:
+            continue
+        v = prev.get('paises', {}).get(c, {})
+        tit[c] = {'items': [x for x in v.get('titulares', []) if x['t'] >= corte30], 'n24': v.get('notas24', 0)}
+        al_medios += [a for a in prev_sit.get('alertas', []) if a.get('pais') == c and a.get('tipo') == 'medios' and a['t'] >= iso(NOW - timedelta(hours=48))]
     log('GDELT…'); tono = gdelt_tono()
     for c, v in prev.get('paises', {}).items():  # GDELT limita fuerte: lo que no respondió se toma de la corrida anterior
         if not tono.get(c) and v.get('tono'):
             tono[c] = v['tono']
-    log('Sismos y desastres…'); al_geo = sismos() + gdacs()
+    corte7 = (NOW - timedelta(days=7)).strftime('%Y%m%d')
+    tono = {c: [r for r in v if r[0] >= corte7] for c, v in tono.items()}
+    log('Sismos y desastres…'); sis = sismos(); al_geo = [a for a in sis if a['t'] >= iso(NOW - timedelta(days=7))] + gdacs()
 
     alertas = sorted(al_medios + al_geo, key=lambda a: a['t'], reverse=True)
+    serie_al = archivo_alertas(alertas)
     corte24 = iso(NOW - timedelta(hours=24))
     nivel = {}
     for c in BY:
         a24 = [a for a in alertas if a['pais'] == c and a['t'] >= corte24]
-        nivel[c] = {'n24': len(a24), 'peso': sum(a['sev'] for a in a24)}
+        nivel[c] = {'n24': len(a24), 'peso': sum(a['sev'] for a in a24), 'n7': sum(n for _, n in serie_al[c][-7:]), 'n30': sum(n for _, n in serie_al[c])}
     mx = max([v['peso'] for v in nivel.values()] + [1])
     for v in nivel.values():
         v['indice'] = round(v['peso'] / mx, 3)
@@ -416,14 +482,14 @@ def main():
     paises = {}
     for c, nombre, iso3, *_ in PAISES:
         p = BY[c]
-        paises[c] = {'nombre': nombre, 'iso3': iso3, 'lat': p[4], 'lon': p[5], 'wb': wb.get(c, {}), 'fuente': fuente.get(c, {}), 'fx': fx.get(c, {}),
+        paises[c] = {'nombre': nombre, 'iso3': iso3, 'lat': p[4], 'lon': p[5], 'fx': fx.get(c, {}), 'indice': idx.get(c), 'inflacion': infl.get(c),
                      'tono': tono.get(c) or [], 'titulares': tit.get(c, {}).get('items', []), 'notas24': tit.get(c, {}).get('n24', 0),
-                     'alertas': nivel[c]}
-    meta = {'actualizado': iso(NOW), 'fuentes': ['Banco Mundial', 'FMI', 'currency-api (fawazahmed0)', 'Google News', 'GDELT', 'USGS', 'GDACS']}
+                     'alertas': nivel[c], 'serie_alertas': serie_al[c], 'sismos30': sum(1 for a in sis if a['pais'] == c)}
+    meta = {'actualizado': iso(NOW), 'fuentes': ['currency-api (fawazahmed0)', 'OCDE', 'Banco Mundial', 'Yahoo Finance', 'Google News', 'GDELT', 'USGS', 'GDACS']}
     (OUT / 'paises.json').write_text(json.dumps({'meta': meta, 'paises': paises}, ensure_ascii=False, separators=(',', ':')), encoding='utf8')
     sit = {'meta': meta, 'nivel': nivel, 'alertas': alertas[:160]}
     (OUT / 'situacion.json').write_text(json.dumps(sit, ensure_ascii=False, separators=(',', ':')), encoding='utf8')
-    log('ok', len(alertas), 'alertas;', sum(len(v['titulares']) for v in paises.values()), 'titulares')
+    log('ok', len(alertas), 'alertas;', sum(len(v['titulares']) for v in paises.values()), 'titulares;', len(idx), 'índices')
 
 
 if __name__ == '__main__':

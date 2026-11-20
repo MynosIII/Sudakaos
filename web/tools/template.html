@@ -62,6 +62,8 @@ header nav{display:flex;align-items:center;gap:28px;font-size:14px;color:var(--i
 .cpanel dt,.cpanel dd{padding:8px 0;border-bottom:1px solid var(--line);font-size:14px;margin:0}.cpanel dt{color:var(--ink-2)}.cpanel dt small{color:var(--muted);font-size:12px}
 .cpanel dd{text-align:right;font-family:var(--mono);font-size:13px}.cpanel dd i{font-style:normal;color:var(--muted);font-size:11px;display:block}
 .cpanel h4{font:600 13px var(--sans);margin:0 0 6px}
+.cgob{border-top:1px solid var(--rule);padding:12px 0 14px}.cgob>span{display:block;font-size:12px;color:var(--muted)}.cgob strong{display:block;font-size:19px;line-height:1.2;margin:2px 0 0}.cgob small{font-size:12px;color:var(--ink-2)}
+.cimg{display:flex;gap:12px;align-items:center;margin-top:10px}.cimg b{font:500 40px/1 var(--serif);letter-spacing:-.02em;color:var(--red)}.cimg span{font-size:12px;line-height:1.35;color:var(--ink-2)}
 .cpanel ul{list-style:none;margin:0 0 18px;padding:0}.cpanel li{padding:7px 0;border-bottom:1px solid var(--line);font-size:13px;line-height:1.4}.cpanel li span{display:block;font-size:11px;color:var(--muted);margin-bottom:2px}.cpanel li a:hover{color:var(--red)}
 .cpanel .button{padding:11px 16px;font-size:14px}
 .clist{display:flex;flex-wrap:wrap;gap:4px 16px;align-items:baseline;padding:12px 0 14px;font-size:14px;color:var(--ink-2)}
@@ -242,14 +244,22 @@ function showPanel(code,onClose){
   const P=DATA&&DATA.paises&&DATA.paises[code],nv=SIT&&SIT.nivel&&SIT.nivel[code];
   let h='<button class="x" type="button" aria-label="Cerrar">×</button><h3>'+esc(CNAME[code])+'</h3>';
   h+='<p class="lvl">'+(nv?'<b>'+nv.n24+' alerta'+(nv.n24===1?'':'s')+'</b> en las últimas 24 h':'Datos en actualización')+(P&&P.notas24?' · '+P.notas24+(P.notas24>=100?'+':'')+' notas en medios':'')+'</p>';
-  if(P){const w=P.wb||{},row=(lab,k,suf)=>{const v=lastOf(w[k]);return '<dt>'+lab+(v?' <small>'+v[0]+'</small>':'')+'</dt><dd>'+(v?num(v[1])+suf:'—')+'</dd>'};
-    h+='<dl>'+row('Inflación anual','inflacion',' %')+row('Crecimiento del PIB','pib_crec',' %')+row('Desempleo','desempleo',' %');
+  const G=POL&&POL.paises&&POL.paises[code];
+  if(G){const pr=polProm(G);h+='<div class="cgob"><span>'+esc(G.gob.cargo)+'</span><strong>'+esc(G.gob.n)+'</strong><small>'+esc(G.gob.p)+'</small>';
+    if(pr)h+='<div class="cimg"><b>'+num(pr.a)+'%</b><span>'+esc(G.medida||'Aprobación')+'<br>promedio de '+pr.n+' encuesta'+(pr.n>1?'s':'')+(pr.d!=null?' · desaprueba '+num(pr.d)+'%':'')+'</span></div>';
+    else if(G.intencion){const i=G.intencion.items;h+='<div class="cimg"><b>'+num(i[0][1])+'%</b><span>'+esc(i[0][0])+' lidera la intención de voto<br>'+esc(i[1][0])+' '+num(i[1][1])+'% · '+esc(G.eleccion.n.toLowerCase())+'</span></div>'}
+    h+='</div>'}
+  if(P){h+='<dl>';
     const fx=P.fx||{},fl=lastOf(fx.serie);
     if(code==='EC')h+='<dt>Moneda</dt><dd>US$</dd>';
     else if(fl){const v=fxVar(fx.serie,30);h+='<dt>'+(code==='US'?'Euros por US$':esc(fx.moneda)+' por US$')+'</dt><dd>'+num(fl[1],fl[1]<10?3:1)+(v!=null?'<i>'+(v>=0?'+':'')+num(v)+' % en 30 días</i>':'')+'</dd>'}
+    const ix=P.indice,il=ix&&lastOf(ix.serie);
+    if(il){const v=(il[1]/ix.serie[0][1]-1)*100;h+='<dt>'+esc(ix.nombre)+'</dt><dd>'+num(il[1],0)+'<i>'+(v>=0?'+':'')+num(v)+' % en 30 días</i></dd>'}
+    if(P.inflacion){const f=P.inflacion;h+='<dt>Inflación <small>'+(f.frecuencia==='mensual'?'interanual':'año '+f.periodo)+'</small></dt><dd>'+num(f.valor)+'%</dd>'}
+    const nv7=P.alertas||{};h+='<dt>Alertas <small>7 días</small></dt><dd>'+(nv7.n7!=null?nv7.n7:'—')+'</dd>';
     h+='</dl>';}
-  const al=SIT&&SIT.alertas?SIT.alertas.filter(a=>a.pais===code).slice(0,3):[];
-  const list=al.length?al:(P&&P.titulares||[]).slice(0,3);
+  const mes=Date.now()-30*864e5,al=SIT&&SIT.alertas?SIT.alertas.filter(a=>a.pais===code&&Date.parse(a.t)>mes).slice(0,3):[];
+  const list=al.length?al:(P&&P.titulares||[]).filter(a=>Date.parse(a.t)>mes).slice(0,3);
   if(list.length){h+='<h4>'+(al.length?'Últimas alertas':'Titulares')+'</h4><ul>'+list.map(a=>'<li><span>'+esc(a.cat||a.fuente)+' · '+ago(a.t)+'</span><a href="'+esc(a.url)+'" target="_blank" rel="noopener">'+esc(a.titulo)+'</a></li>').join('')+'</ul>'}
   h+='<a class="button" href="paises/#'+code+'">Abrir tablero completo</a>';
   cpanel.innerHTML=h;cpanel.hidden=false;if(matchMedia('(max-width:980px)').matches)cpanel.scrollIntoView({behavior:'smooth',block:'nearest'});cpanel.querySelector('.x').onclick=()=>{cpanel.hidden=true;onClose&&onClose()};
@@ -257,14 +267,16 @@ function showPanel(code,onClose){
 function fillFeed(){
   if(!SIT||!SIT.alertas||!SIT.alertas.length)return;
   REALFEED=true;const feed=document.getElementById('feed');feed.innerHTML='';
-  SIT.alertas.slice(0,7).forEach(a=>{const li=document.createElement('li');li.innerHTML='<span class="t">'+hhmm(a.t)+'</span><span class="c">'+esc(a.pais)+'</span><a href="'+esc(a.url)+'" target="_blank" rel="noopener"><span class="k">'+esc(a.cat)+'</span><br><span class="s">'+esc(a.titulo)+'</span></a>';feed.appendChild(li)});
+  SIT.alertas.filter(a=>Date.parse(a.t)>Date.now()-30*864e5).slice(0,7).forEach(a=>{const li=document.createElement('li');li.innerHTML='<span class="t">'+hhmm(a.t)+'</span><span class="c">'+esc(a.pais)+'</span><a href="'+esc(a.url)+'" target="_blank" rel="noopener"><span class="k">'+esc(a.cat)+'</span><br><span class="s">'+esc(a.titulo)+'</span></a>';feed.appendChild(li)});
   const n=Object.values(SIT.nivel||{}).reduce((s,v)=>s+v.n24,0);
   document.getElementById('sigCount').textContent=n;
   document.getElementById('sitUpd').textContent=SIT.meta?ago(SIT.meta.actualizado):'—';
   document.getElementById('feedNote').textContent='Alertas reales: titulares de medios clasificados automáticamente, más sismos (USGS) y desastres (GDACS). Cada una enlaza a su fuente.';
   const cut=Date.now()-36*36e5;REALPTS=SIT.alertas.filter(a=>Date.parse(a.t)>cut).map(a=>({c:a.pais,la:a.lat,lo:a.lon,lat:a.lat*D2R,lon:a.lon*D2R}));
 }
-const dataP=Promise.all(['data/paises.json','data/situacion.json'].map(u=>fetch(u).then(r=>r.ok?r.json():null).catch(()=>null))).then(([a,b])=>{DATA=a;SIT=b;fillFeed();return [a,b]});
+let POL=null;
+function polProm(G){const cut=Date.now()-45*864e5,seen={},u=[];(G.enc||[]).slice().sort((a,b)=>a.fecha<b.fecha?1:-1).forEach(e=>{if(seen[e.f]||Date.parse(e.fecha)<cut||e.a==null)return;seen[e.f]=1;u.push(e)});if(!u.length)return null;const dd=u.filter(e=>e.d!=null);return{a:u.reduce((s,e)=>s+e.a,0)/u.length,d:dd.length?dd.reduce((s,e)=>s+e.d,0)/dd.length:null,n:u.length}}
+const dataP=Promise.all(['data/paises.json','data/situacion.json','data/politica.json'].map(u=>fetch(u).then(r=>r.ok?r.json():null).catch(()=>null))).then(([a,b,c])=>{DATA=a;SIT=b;POL=c;fillFeed();return [a,b]});
 
 const CITIES = [
  ['CDMX',19.43,-99.13],['GDL',20.67,-103.35],['MTY',25.67,-100.31],['GUA',14.63,-90.51],['SJO',9.93,-84.08],['PTY',8.98,-79.52],['HAV',23.11,-82.37],['SDQ',18.49,-69.93],
