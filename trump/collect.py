@@ -852,7 +852,9 @@ def census():
         errs.append("no CENSUS_API_KEY: ACS (education, poverty, veterans...) and rural share skipped")
     # keyless fallbacks: Census population estimates (race, Hispanic origin, age) and BEA population + per-capita income
     if not out.get("acs"):
-        for f in ("2020-2024/state/asrh/sc-est2024-sr11h.csv", "2020-2023/state/asrh/sc-est2023-sr11h.csv"):
+        cands = [f"{d}/state/asrh/{n}" for d in ("2020-2024", "2020-2023") for v in (d[-4:],)
+                 for n in (f"sc-est{v}-alldata6.csv", f"SC-EST{v}-ALLDATA6.csv", f"sc-est{v}-sr11h.csv", f"SC-EST{v}-SR11H.csv")]
+        for f in cands:
             try:
                 txt = get("https://www2.census.gov/programs-surveys/popest/datasets/" + f, headers={"User-Agent": BROWSER}, retries=1, timeout=120).decode("latin-1")
                 rd = csv.DictReader(io.StringIO(txt))
@@ -881,7 +883,7 @@ def census():
                     out["popest"] = {"year": col[-4:], "states": pe}
                     break
             except Exception as e:
-                errs.append(f"popest {f[:9]}: {type(e).__name__}: {str(e)[:80]}")
+                errs.append(f"popest {f.split('/')[-1]}: {type(e).__name__}: {str(e)[:60]}")
     try:
         import zipfile
         z = zipfile.ZipFile(io.BytesIO(get("https://apps.bea.gov/regional/zip/SAINC.zip", retries=1, timeout=120)))
