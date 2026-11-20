@@ -96,3 +96,30 @@ body.dark header{background:#0c0c0b}
 .sfeed .t{font:11px/1.9 var(--mono);color:var(--muted)}.sfeed .c{font:11px/1.9 var(--mono);color:var(--ink)}.sfeed a:hover{color:var(--red)}.sfeed small{display:block;font-size:12px;color:var(--muted);margin-top:3px}
 .side-h{font:600 14px var(--sans);margin:22px 0 8px}
 @media(max-width:850px){.kpis{grid-template-columns:1fr 1fr}.kpi:nth-child(2n+1){border-left:0;padding-left:0}.kpi:nth-child(4n+1){padding-left:0}.grid2,.sit-grid{grid-template-columns:1fr}.sfeed li{grid-template-columns:70px 30px 1fr;gap:8px}}
+/* ===== Tablero por país: bloque político ===== */
+.polgrid{display:grid;grid-template-columns:1.25fr 1fr;gap:28px 56px;margin-top:44px}
+.panel canvas.tall{height:240px}.panel canvas.sq{height:auto;aspect-ratio:1/1;max-height:460px;border-top:0}
+.big{display:flex;gap:20px;align-items:flex-end;border-top:1px solid var(--rule);padding:16px 0 14px}
+.big strong{font:500 clamp(56px,6vw,84px)/.9 var(--serif);letter-spacing:-.03em}.big strong small{font-size:.45em;margin-left:2px}
+.big div{display:flex;flex-direction:column;gap:3px;font-size:13px;color:var(--ink-2);padding-bottom:6px}.big b{font-weight:600;color:var(--ink)}.big b.neg{color:var(--red)}
+.pnote{font-size:12px;color:var(--muted);line-height:1.5;margin:10px 0 0}.pnote a{text-decoration:underline}
+.leg{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:12px;color:var(--ink-2);margin:8px 0 0}.leg i{display:inline-block;width:10px;height:10px;margin-right:6px;vertical-align:-1px}.leg .n{color:var(--muted)}
+table.polls{width:100%;border-collapse:collapse;margin-top:18px;font-size:13px}
+.polls th{font:600 11px var(--sans);color:var(--muted);text-align:right;padding:6px 0;border-bottom:1px solid var(--rule)}.polls th:first-child,.polls td:first-child{text-align:left}
+.polls td{text-align:right;padding:7px 0;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:12px}.polls td:first-child{font:500 13px var(--sans)}
+.polls td a:hover{color:var(--red)}.polls small{font:11px var(--sans);color:var(--muted)}.polls tr.dim td{color:var(--muted)}
+.actors,.parties{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.actors li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}.actors li.gob strong{color:var(--red)}
+.actors .pty{font:600 11px var(--sans);color:var(--ink-2);margin-left:8px;padding:2px 6px;border:1px solid var(--line)}.actors small,.parties small{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+.parties{display:grid;grid-template-columns:1fr 1fr;gap:0 24px}.parties li{padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.h3s{font:600 13px var(--sans);margin:26px 0 8px}
+.elec{margin:18px 0 0;padding:14px 16px;background:var(--paper-2)}.elec span{display:block;font-size:12px;color:var(--muted)}.elec strong{display:block;font-size:17px;margin:2px 0}.elec small{font-size:12px;color:var(--ink-2)}
+#pExtra h3{font-size:22px;line-height:1.1;margin:0 0 4px}#pExtra h3:not(:first-child){margin-top:30px}#pExtra .sub a{text-decoration:underline}
+.hbars{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.hbars li{display:grid;grid-template-columns:150px 1fr 92px;gap:12px;align-items:center;padding:7px 0;border-bottom:1px solid var(--line);font-size:14px}
+.hb-t{position:relative;height:12px;background:var(--paper-2)}.hb-t i{position:absolute;left:0;top:0;bottom:0;background:var(--ink)}.hb-t b{position:absolute;right:0;top:0;bottom:0;background:var(--red);opacity:.35}
+.hb-v{text-align:right;font:12px var(--mono)}.hb-v em{font-style:normal;color:var(--red)}
+.news li{grid-template-columns:1fr;gap:2px}.news .meta{font:11px var(--mono);color:var(--muted)}
+.cmp td.gobc{font-family:var(--sans);font-size:13px;text-align:left;color:var(--ink-2)}.cmp th[data-k=gob]{text-align:left}.cmp td.neg{color:var(--red)}.cmp td small{color:var(--muted);font-size:10px}
+@media(max-width:850px){.polgrid{grid-template-columns:1fr}.hbars li{grid-template-columns:110px 1fr 84px}}
+@media(max-width:560px){.parties{grid-template-columns:1fr}.big strong{font-size:58px}}

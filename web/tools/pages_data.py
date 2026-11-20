@@ -11,24 +11,38 @@ FOOT = ('</main><footer><div class="wrap foot"><a href="../"><strong>Sudakaos<sp
 
 PAISES = """
 <div class="wrap crumb"><a href="../">Inicio</a> / Países</div>
-<section class="cap-hero" style="padding-bottom:28px"><div class="wrap">
-<p class="kicker">Tablero por país · datos públicos reales</p>
+<section class="cap-hero" style="padding-bottom:24px"><div class="wrap">
+<p class="kicker">Tablero por país · política, encuestas y coyuntura</p>
 <h1 id="pName">Países</h1>
-<div class="cols"><p class="lead" id="pLead">Cargando datos…</p><p class="intro">Solo datos de los últimos 30 días: tipo de cambio diario, índice bursátil, alertas detectadas en medios, sismos y desastres, y el tono de la cobertura internacional según GDELT. <span class="upd" id="pUpd"></span></p></div>
+<div class="cols"><p class="lead" id="pLead">Cargando datos…</p><p class="intro"><span id="pCtx"></span> <span class="upd" id="pUpd"></span></p></div>
 </div></section>
 <div class="wrap"><nav class="tabs" id="pTabs" aria-label="Países"></nav>
+<div id="polSec">
+<div class="polgrid">
+<section class="panel"><h2 id="imgH">Imagen del presidente</h2><div id="pImg"></div>
+<div id="cImgWrap"><canvas id="cImg" class="tall" role="img" aria-label="Evolución de la aprobación por encuestadora"></canvas><p class="leg" id="imgLeg"></p></div>
+<div id="pPolls"></div></section>
+<section class="panel"><h2>Compás político</h2><p class="sub">Eje horizontal: economía (izquierda a derecha). Eje vertical: autoridad (libertario a autoritario). En rojo, quien gobierna.</p>
+<canvas id="cComp" class="sq" role="img" aria-label="Ubicación de los principales actores en un compás político"></canvas>
+<p class="pnote">Ubicación estimada por el equipo de Sudakaos a partir de programas, votaciones y discurso público. No es una medición.</p></section>
+</div>
+<div class="grid2">
+<section class="panel"><h2>Actores y candidatos</h2><ul class="actors" id="pActors"></ul><div class="elec" id="pElec"></div>
+<h3 class="h3s">Partidos</h3><ul class="parties" id="pParties"></ul></section>
+<section class="panel" id="pExtraP"><div id="pExtra"></div></section>
+</div>
+</div>
+<section style="padding:72px 0 0"><h2 style="font-size:clamp(28px,3vw,40px);line-height:1.05">Economía y coyuntura</h2><p style="color:var(--muted);font-size:14px;margin:8px 0 0">El dato más fresco disponible de cada fuente, siempre con su fecha.</p></section>
 <div class="kpis" id="pKpis"></div>
 <div class="grid2">
-<section class="panel"><h2>Alertas por día</h2><p class="sub">Últimos 30 días · titulares clasificados, USGS y GDACS (se completa con cada actualización)</p><canvas id="cAl" role="img" aria-label="Alertas por día en los últimos 30 días"></canvas></section>
-<section class="panel"><h2>Índice bursátil</h2><p class="sub" id="ixSub">Cierre diario, últimos 30 días · Yahoo Finance</p><canvas id="cIx" role="img" aria-label="Índice bursátil, últimos 30 días"></canvas></section>
 <section class="panel"><h2>Tipo de cambio</h2><p class="sub" id="fxSub"></p><canvas id="cFx" role="img" aria-label="Serie de tipo de cambio"></canvas></section>
-<section class="panel"><h2>Tono de la cobertura</h2><p class="sub">Promedio diario, 7 días · GDELT (negativo = cobertura desfavorable)</p><canvas id="cTone" role="img" aria-label="Tono diario de la cobertura"></canvas></section>
-<section class="panel"><h2>Alertas</h2><p class="sub">Últimas 48 horas · titulares clasificados, USGS y GDACS</p><ul class="news" id="pAlerts"></ul></section>
+<section class="panel"><h2>Inflación</h2><p class="sub" id="infSub"></p><canvas id="cInf" role="img" aria-label="Serie de inflación interanual"></canvas></section>
+<section class="panel"><h2>Alertas</h2><p class="sub">Últimos 30 días · titulares clasificados, USGS y GDACS</p><ul class="news" id="pAlerts"></ul></section>
 <section class="panel"><h2>Titulares</h2><p class="sub">Últimas 24 horas · Google News</p><ul class="news" id="pNews"></ul></section>
 </div>
-<section style="padding:84px 0 0"><h2 style="font-size:clamp(32px,3.6vw,48px);line-height:1.05">Comparación regional</h2><p style="color:var(--muted);font-size:14px;margin:8px 0 0">Tocá una columna para ordenar y una fila para abrir el país.</p>
+<section style="padding:84px 0 0"><h2 style="font-size:clamp(32px,3.6vw,48px);line-height:1.05">Comparación regional</h2><p style="color:var(--muted);font-size:14px;margin:8px 0 0">Aprobación: promedio de las encuestas de los últimos 45 días. Tocá una columna para ordenar y una fila para abrir el país.</p>
 <div class="tbl-wrap"><table class="cmp"><thead id="pHead"></thead><tbody id="pRows"></tbody></table></div></section>
-<p class="srcs">Regla: nada con más de un mes de antigüedad. Fuentes: currency-api de código abierto (tipo de cambio de referencia), Yahoo Finance (índices), GDELT Project (tono de noticias), Google News, USGS y GDACS. Las alertas se clasifican automáticamente por palabras clave y enlazan a la fuente original: requieren lectura humana antes de cualquier decisión. Se actualiza cada 3 horas.</p>
+<p class="srcs">Política: encuestas publicadas por cada encuestadora (CB Consultora, AtlasIntel, Cadem, Ipsos, YouGov, Equipos, Zentrix y otras), con enlace a la nota de origen; se revisan a mano y el promedio es la media simple de la última medición de cada una. Economía: currency-api (tipo de cambio diario), OCDE (inflación mensual) y Banco Mundial (último año, donde no hay dato mensual). Alertas y titulares: Google News, USGS y GDACS, clasificados automáticamente y actualizados cada 3 horas.</p>
 </div>
 """
 
@@ -51,7 +65,7 @@ SITUACION = """
 
 def build_data_pages(HEAD, WEB, e):
     for slug, title, desc, body, js, theme, cls in [
-        ('paises', 'Tablero por país', 'Indicadores, tipo de cambio, tono de medios y alertas reales por país.', PAISES, 'paises.js', '#ffffff', ''),
+        ('paises', 'Tablero por país', 'Quién gobierna, imagen del presidente, candidatos, compás político y coyuntura de cada país.', PAISES, 'paises.js', '#ffffff', ''),
         ('situacion', 'Sala de situación', 'Alertas reales de medios, sismos y desastres en las Américas y Europa.', SITUACION, 'situacion.js', '#0c0c0b', ' class="dark"'),
     ]:
         extra = '<script src="../assets/geo.js"></script>\n' if slug == 'situacion' else ''

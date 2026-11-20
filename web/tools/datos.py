@@ -1,12 +1,13 @@
 """Datos reales para la landing: tablero por país y sala de situación.
 
 Escribe web/data/paises.json y web/data/situacion.json. Solo fuentes gratuitas y sin clave:
+  - OCDE (inflación interanual mensual) y Banco Mundial (último año, donde la OCDE no llega)
   - Yahoo Finance (índice bursátil principal, cierre diario del último mes)
   - currency-api de fawazahmed0 (tipo de cambio diario, vía jsDelivr / Cloudflare)
   - Google News RSS (titulares y alertas por país)
   - GDELT DOC 2.0 (tono de la cobertura internacional, 7 días)
   - USGS (sismos M4.5+) y GDACS (alertas de desastres)
-Regla: nada con más de un mes de antigüedad. Nada de esto toca tableros de clientes. Uso: python3 web/tools/datos.py
+Regla: el dato más fresco disponible, siempre con su fecha. Nada de esto toca tableros de clientes. Uso: python3 web/tools/datos.py
 """
 import json, re, sys, time, urllib.parse, urllib.request, urllib.error
 import xml.etree.ElementTree as ET
@@ -67,6 +68,7 @@ REGLAS = [
 ]
 # Titulares de servicio (cotización del día, pronóstico, horóscopo…) no son alertas
 RUIDO = re.compile(r'(precio del d[oó]lar|cotizaci[oó]n|tipo de cambio hoy|d[oó]lar hoy|cu[aá]nto est[aá] el d[oó]lar|pron[oó]stico|forecast|hor[oó]scopo|loter[ií]a|quiniela|resultados del sorteo|en vivo|minuto a minuto|live updates|recipe|receta)', re.I)
+FINANZAS = re.compile(r'(riesgo pa[ií]s|bonos|activos|acciones|bolsa|mercados|merval|wall street|d[oó]lar|stocks|bonds|markets|a[cç][oõ]es|ibovespa)', re.I)
 _L = 'a-záéíóúâêôãõçñü'
 _RX = {}
 
@@ -184,7 +186,10 @@ def clasificar(titulo, lang):
     low = titulo.lower()
     if RUIDO.search(low):
         return None, 0
+    fin = FINANZAS.search(low)
     for cat, sev, terms in REGLAS:
+        if fin and cat in ('Desastre', 'Sismo'):  # "derrumbe de bonos", "terremoto financiero": metáforas de mercado
+            continue
         for w in terms[lang]:
             if _rx(w).search(low):
                 return cat, sev
@@ -341,6 +346,53 @@ def indices():
     return out
 
 
+OCDE = {'AR': 'ARG', 'BR': 'BRA', 'CL': 'CHL', 'CO': 'COL', 'MX': 'MEX', 'US': 'USA', 'ES': 'ESP', 'GB': 'GBR', 'EU': 'EU27_2020'}
+
+
+def inflacion(prev):
+    """Inflación interanual: mensual de la OCDE donde la hay; si no, el último año del Banco Mundial (con su fecha)."""
+    out = {}
+    try:
+        desde = (NOW - timedelta(days=420)).strftime('%Y-%m')
+        url = ('https://sdmx.oecd.org/public/rest/data/OECD.SDD.TPS,DSD_PRICES@DF_PRICES_ALL,1.0/'
+               + '+'.join(OCDE.values()) + f'.M.N.CPI.PA._T.N.GY?startPeriod={desde}&format=csvfile')
+        import csv, io
+        filas = list(csv.DictReader(io.StringIO(get(url, retries=1, timeout=60).decode('utf8', 'replace'))))
+        inv = {v: k for k, v in OCDE.items()}
+        series = {}
+        for f in filas:
+            c = inv.get(f.get('REF_AREA'))
+            try:
+                v = round(float(f.get('OBS_VALUE')), 1)
+            except (TypeError, ValueError):
+                continue
+            if c:
+                series.setdefault(c, []).append([f.get('TIME_PERIOD'), v])
+        for c, sr in series.items():
+            sr.sort()
+            out[c] = {'valor': sr[-1][1], 'periodo': sr[-1][0], 'frecuencia': 'mensual', 'fuente': 'OCDE', 'serie': sr[-13:]}
+        log('Inflación OCDE', len(out), 'países')
+    except Exception as e:
+        log('Inflación OCDE', e)
+    for c, nombre, iso3, *_ in PAISES:
+        if c in out:
+            continue
+        old = prev.get('paises', {}).get(c, {}).get('inflacion')
+        if old and old.get('frecuencia') == 'mensual' and old.get('periodo', '') >= (NOW - timedelta(days=120)).strftime('%Y-%m'):
+            out[c] = old; continue
+        try:
+            d = get_json(f'https://api.worldbank.org/v2/country/{iso3}/indicator/FP.CPI.TOTL.ZG?format=json&mrnev=1', retries=1, timeout=30)
+            r = d[1][0]
+            if r.get('value') is not None:
+                out[c] = {'valor': round(r['value'], 1), 'periodo': r['date'], 'frecuencia': 'anual', 'fuente': 'Banco Mundial'}
+        except Exception as e:
+            log('Inflación BM', c, e)
+            if old:
+                out[c] = old
+        time.sleep(.3)
+    return out
+
+
 def archivo_alertas(nuevas):
     """Guarda las alertas de los últimos 30 días (sin repetir) para contar alertas por día."""
     f = OUT / 'archivo.json'
@@ -377,6 +429,7 @@ def main():
     for c, v in prev.get('paises', {}).items():  # si Yahoo no respondió, se conserva lo último si tiene menos de una semana
         if c not in idx and v.get('indice') and v['indice']['serie'][-1][0] >= (NOW - timedelta(days=7)).strftime('%Y-%m-%d'):
             idx[c] = v['indice']
+    log('Inflación…'); infl = inflacion(prev)
     log('Noticias…'); tit, al_medios = noticias()
     log('GDELT…'); tono = gdelt_tono()
     for c, v in prev.get('paises', {}).items():  # GDELT limita fuerte: lo que no respondió se toma de la corrida anterior
@@ -400,10 +453,10 @@ def main():
     paises = {}
     for c, nombre, iso3, *_ in PAISES:
         p = BY[c]
-        paises[c] = {'nombre': nombre, 'iso3': iso3, 'lat': p[4], 'lon': p[5], 'fx': fx.get(c, {}), 'indice': idx.get(c),
+        paises[c] = {'nombre': nombre, 'iso3': iso3, 'lat': p[4], 'lon': p[5], 'fx': fx.get(c, {}), 'indice': idx.get(c), 'inflacion': infl.get(c),
                      'tono': tono.get(c) or [], 'titulares': tit.get(c, {}).get('items', []), 'notas24': tit.get(c, {}).get('n24', 0),
                      'alertas': nivel[c], 'serie_alertas': serie_al[c], 'sismos30': sum(1 for a in sis if a['pais'] == c)}
-    meta = {'actualizado': iso(NOW), 'fuentes': ['currency-api (fawazahmed0)', 'Yahoo Finance', 'Google News', 'GDELT', 'USGS', 'GDACS']}
+    meta = {'actualizado': iso(NOW), 'fuentes': ['currency-api (fawazahmed0)', 'OCDE', 'Banco Mundial', 'Yahoo Finance', 'Google News', 'GDELT', 'USGS', 'GDACS']}
     (OUT / 'paises.json').write_text(json.dumps({'meta': meta, 'paises': paises}, ensure_ascii=False, separators=(',', ':')), encoding='utf8')
     sit = {'meta': meta, 'nivel': nivel, 'alertas': alertas[:160]}
     (OUT / 'situacion.json').write_text(json.dumps(sit, ensure_ascii=False, separators=(',', ':')), encoding='utf8')
