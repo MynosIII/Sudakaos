@@ -545,5 +545,12 @@
   "americans",
   "u",
   "s"
- ]
+ ],
+ "instagram": {
+  "realdonaldtrump": "Donald J. Trump",
+  "whitehouse": "The White House",
+  "jdvance": "JD Vance",
+  "gavinnewsom": "Gavin Newsom",
+  "aoc": "Alexandria Ocasio-Cortez"
+ }
 }

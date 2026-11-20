@@ -144,6 +144,7 @@ footer{color:var(--dim);font-size:12px;max-width:1600px;margin:0 auto;padding:0 
   <button data-t="media">Medios</button>
   <button data-t="voice">Voz pública</button>
   <button data-t="truth">Truth Social</button>
+  <button data-t="social">X e Instagram</button>
   <button data-t="search">Búsquedas y atención</button>
   <button data-t="policy">Gobierno y mercados</button>
   <button data-t="ads">Avisos pagos</button>
@@ -219,6 +220,22 @@ footer{color:var(--dim);font-size:12px;max-width:1600px;margin:0 auto;padding:0 
     <div class="card c4"><h3>Sus palabras<span class="tag">Tocá una palabra</span></h3><div id="s-cloud"></div></div>
     <div class="card c6"><h3>Posts con más interacción · 30 días</h3><div class="posts" id="s-best"></div></div>
     <div class="card c6"><h3>Últimos posts</h3><div class="posts" id="s-last"></div></div>
+  </div>
+</section>
+
+<section class="tab" id="t-social">
+  <div class="kpis" id="x-kpis"></div>
+  <div class="g">
+    <div class="card c6"><h3>Qué se dice en X<span class="tag">Tocá una palabra</span></h3><div id="x-cloud"></div></div>
+    <div class="card c3"><h3>Emociones en X</h3><div class="bars" id="x-emo"></div></div>
+    <div class="card c3"><h3>Temas en X</h3><div class="bars" id="x-top"></div></div>
+    <div class="card c6"><h3>Palabras en posts positivos</h3><div id="x-cpos"></div></div>
+    <div class="card c6"><h3>Palabras en posts negativos</h3><div id="x-cneg"></div></div>
+    <div class="card c12"><h3>Posts en X con más interacción<span class="tag">Sin autor</span></h3><div class="posts" id="x-best"></div></div>
+    <div class="card c12"><h3>Instagram · Trump frente a otras cuentas<span class="tag">Últimos 30 días</span></h3><div class="scroll"><table id="ig-tab"></table></div></div>
+    <div class="card c6"><h3>Interacción promedio por post</h3><div class="bars" id="ig-avg"></div></div>
+    <div class="card c6"><h3>Seguidores</h3><div class="bars" id="ig-fol"></div></div>
+    <div class="card c12"><h3>Posts de @realdonaldtrump con más interacción</h3><div class="posts" id="ig-best"></div></div>
   </div>
 </section>
 
@@ -299,7 +316,7 @@ let D,TX,drawn=new Set(),CL=[];
 $$('#tabs button').forEach(b=>b.onclick=()=>{$$('#tabs button').forEach(x=>x.classList.toggle('on',x===b));
   $$('.tab').forEach(t=>t.classList.toggle('on',t.id==='t-'+b.dataset.t));draw(b.dataset.t);setTimeout(()=>window.dispatchEvent(new Event('resize')),60)});
 fetch('data/monitor.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{D=d;init()}).catch(e=>{$('#warn').innerHTML='<div class="warnbox">No se pudieron cargar los datos.</div>';console.error(e)});
-function draw(id){if(!D||drawn.has(id))return;drawn.add(id);try{({overview,approval,media,voice,truth,search,policy,ads,method}[id]||(()=>{}))()}catch(e){console.error(id,e)}}
+function draw(id){if(!D||drawn.has(id))return;drawn.add(id);try{({overview,approval,media,voice,truth,social,search,policy,ads,method}[id]||(()=>{}))()}catch(e){console.error(id,e)}}
 
 // ---------------------------------------------------------------- helpers
 function spark(arr,col){arr=(arr||[]).filter(v=>v!=null);if(arr.length<2)return'';const mx=Math.max(...arr),mn=Math.min(...arr),w=84,h=30,r=mx-mn||1;
@@ -326,7 +343,7 @@ document.addEventListener('click',e=>{const t=e.target.closest('text[data-c]');i
 
 // ---------------------------------------------------------------- drill-down
 function loadTx(){if(!TX)TX=fetch('data/textos.json',{cache:'no-store'}).then(r=>r.ok?r.json():{}).catch(()=>({}));return TX}
-function showTexts(word,src){const names={news:'titulares',comments:'comentarios de YouTube',truth:'posts de Truth Social'};
+function showTexts(word,src){const names={news:'titulares',comments:'comentarios de YouTube y posts de X',truth:'posts de Truth Social'};
   $('#dw-t').textContent='“'+word+'”';$('#dw-s').textContent='';$('#dw-l').innerHTML='<div class="empty">Cargando…</div>';$('#dw-c').innerHTML='';
   $('#dw').classList.add('on');$('#dw').setAttribute('aria-hidden','false');
   loadTx().then(T=>{const rx=new RegExp('\\b'+word.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'i');
@@ -431,6 +448,26 @@ function voice(){const Y=D.youtube;if(!Y||!Y.n){$('#v-cloud').innerHTML=E;return
   $('#v-cpos').innerHTML=cloudSVG(Y.cloud_pos,600,240,32,'comments');$('#v-cneg').innerHTML=cloudSVG(Y.cloud_neg,600,240,32,'comments');
   $('#v-vids').innerHTML=`<thead><tr><th>Video</th><th>Canal</th><th>Fecha</th><th class="n">Vistas</th><th class="n">Comentarios leídos</th><th style="width:120px">Tono de los comentarios</th></tr></thead><tbody>${Y.list.map(v=>`<tr><td><a href="${esc(v.u)}" target="_blank" rel="noopener">${esc(v.t)}</a></td><td>${esc(v.ch)}</td><td>${v.d}</td><td class="n">${kfmt(v.views)}</td><td class="n">${fmt(v.c)}</td><td>${v.c?toneBar({NEG:v.neg,POS:v.pos,NEU:Math.max(0,100-v.neg-v.pos)}):''}</td></tr>`).join('')}</tbody>`}
 
+// ---------------------------------------------------------------- X + Instagram
+function social(){const X=D.x,I=D.instagram,EC={anger:C.neg,joy:C.app,sadness:C.pos,fear:C.gold,disgust:'#a08bd6',surprise:'#5fb3c9'};
+  const K=[];
+  if(X&&X.n){K.push(kpi('Posts de X analizados',fmt(X.n),'muestra repartida en 7 días'),kpi('Positivos',X.tone.POS+'%',''),kpi('Negativos',X.tone.NEG+'%','',X.tone.NEG>X.tone.POS?'hot':''),
+    kpi('Sentimiento neto en X',sgn(X.tone.POS-X.tone.NEG),'positivos menos negativos',X.tone.NEG>X.tone.POS?'hot':''),kpi('Insultos / hostilidad',X.tox+'%','de los posts'));
+    $('#x-cloud').innerHTML=cloudSVG(X.cloud,720,320,40,'comments');
+    $('#x-emo').innerHTML=bars(Object.entries(X.emo).map(([k,v])=>[EN[k]||k,v,EC[k],v+'%']));
+    $('#x-top').innerHTML=bars(X.topics.slice(0,9).map(t=>[t.k,t.n,t.neg>t.pos?C.neg:C.pos]));
+    $('#x-cpos').innerHTML=cloudSVG(X.cloud_pos,600,240,32,'comments');$('#x-cneg').innerHTML=cloudSVG(X.cloud_neg,600,240,32,'comments');
+    $('#x-best').innerHTML=X.top.map(p=>`<div class="post"><div class="t">${esc(p.t)}</div><div class="m"><span>${p.d.replace('T',' ')} UTC</span><span>♥⟲ ${kfmt(p.e)}</span><span>${{POS:'positivo',NEG:'negativo',NEU:'neutro'}[p.s]||''}</span><a href="${esc(p.u)}" target="_blank" rel="noopener">abrir ↗</a></div></div>`).join('')||E;
+  }else['#x-cloud','#x-emo','#x-top','#x-cpos','#x-cneg','#x-best'].forEach(q=>$(q).innerHTML=E);
+  if(I&&I.accounts&&I.accounts.length){const A=I.accounts,me=A.find(a=>a.h==='realdonaldtrump')||A[0];
+    K.push(kpi('Seguidores en Instagram',kfmt(me.f),'@'+me.h),kpi('Interacción promedio IG',kfmt(me.avg),'likes + comentarios por post'));
+    $('#ig-tab').innerHTML=`<thead><tr><th>Cuenta</th><th class="n">Seguidores</th><th class="n">Posts · 30 días</th><th class="n">Interacción promedio</th><th class="n">Tasa de interacción</th><th>Formatos</th></tr></thead><tbody>${A.map(a=>`<tr${a===me?' style="color:var(--gold)"':''}><td><a href="https://www.instagram.com/${esc(a.h)}/" target="_blank" rel="noopener">${esc(a.n)}</a> <span style="color:var(--muted)">@${esc(a.h)}</span></td><td class="n">${kfmt(a.f)}</td><td class="n">${fmt(a.p30)}</td><td class="n">${kfmt(a.avg)}</td><td class="n">${a.er==null?'–':a.er.toFixed(2)+'%'}</td><td>${Object.entries(a.kinds).map(([k,v])=>`<span class="pill">${{REELS:'Reels',IMAGE:'Foto',VIDEO:'Video',CAROUSEL_ALBUM:'Carrusel'}[k]||k} ${v}</span>`).join(' ')}</td></tr>`).join('')}</tbody>`;
+    $('#ig-avg').innerHTML=bars([...A].sort((a,b)=>b.avg-a.avg).map(a=>[a.n,a.avg,a===me?C.red:C.gold,kfmt(a.avg)]));
+    $('#ig-fol').innerHTML=bars([...A].sort((a,b)=>b.f-a.f).map(a=>[a.n,a.f,a===me?C.red:C.gold,kfmt(a.f)]));
+    $('#ig-best').innerHTML=me.top.map(p=>`<div class="post"><div class="t">${esc(p.t||'[sin texto]')}</div><div class="m"><span>${p.d}</span><span>♥ ${kfmt(p.l)}</span><span>💬 ${kfmt(p.c)}</span><a href="${esc(p.u)}" target="_blank" rel="noopener">abrir ↗</a></div></div>`).join('')||E;
+  }else['#ig-tab','#ig-avg','#ig-fol','#ig-best'].forEach(q=>$(q).innerHTML=E);
+  $('#x-kpis').innerHTML=K.join('')}
+
 // ---------------------------------------------------------------- truth
 function truth(){const T=D.truth;if(!T){$('#s-daily').innerHTML=E;return}
   $('#s-kpis').innerHTML=[kpi('Posts · 7 días',fmt(T.n7),'semana anterior '+fmt(T.n7prev)),kpi('Posts · 30 días',fmt(T.n30),'90 días: '+fmt(T.n90)),kpi('Día con más posts',T.max_day?fmt(T.max_day[1]):'–',T.max_day?T.max_day[0]:''),
@@ -493,7 +530,7 @@ function ads(){const A=D.ads;if(!A||!A.n){$('#d-pages').innerHTML=`<tr><td>${E}<
   $('#d-samp').innerHTML=A.samples.map(s=>`<a class="it" href="${esc(s.u)}" target="_blank" rel="noopener">${esc(s.t)}<div class="m">${gt(GRP[s.c]?s.c:'other')}<span>${esc(s.p)}</span><span>${esc(s.d)}</span></div></a>`).join('')||E}
 
 // ---------------------------------------------------------------- method
-function method(){const S=D.status||{},nm={rss:'Medios de EE.UU. (RSS)',google_news:'Google News',youtube:'Comentarios de YouTube',truth_social:'Truth Social',polls:'Encuestas (VoteHub)',gdelt:'GDELT, noticias del mundo',federal_register:'Federal Register',polymarket:'Mercados de predicción',fred:'Economía (BLS, UMich, Freddie Mac)',wikipedia:'Visitas a Wikipedia',google_trends:'Google Trends',meta_ads:'Biblioteca de anuncios de Meta'};
+function method(){const S=D.status||{},nm={rss:'Medios de EE.UU. (RSS)',google_news:'Google News',youtube:'Comentarios de YouTube',truth_social:'Truth Social',polls:'Encuestas (VoteHub)',gdelt:'GDELT, noticias del mundo',federal_register:'Federal Register',polymarket:'Mercados de predicción',fred:'Economía (BLS, UMich, Freddie Mac)',wikipedia:'Visitas a Wikipedia',google_trends:'Google Trends',meta_ads:'Biblioteca de anuncios de Meta',instagram:'Instagram (cuentas públicas)',x:'X (corrida manual)'};
   $('#x-st').innerHTML=Object.keys(nm).map(k=>{const s=S[k];return `<div style="display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid var(--line);padding:7px 0"><span class="chip ${s&&s.ok?'ok':'no'}" style="cursor:default">${nm[k]}</span><span style="font:12px var(--mono);color:var(--dim);text-align:right">${!s?'todavía no corrió':s.ok?fmt(s.items)+' registros'+(s.new!=null?' · '+fmt(s.new)+' nuevos':''):'no respondió en esta corrida'}</span></div>`}).join('')}
 </script>
 </body>

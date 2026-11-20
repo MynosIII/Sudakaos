@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       tablero:
-        description: 'Slug del tablero (p. ej. pagano)'
+        description: 'Slug del tablero (p. ej. pagano, o trump para el demo)'
         required: true
 
 permissions:
@@ -19,7 +19,7 @@ concurrency:
 
 jobs:
   x:
-    if: github.ref_name == 'main'
+    if: github.ref_name == 'main' && inputs.tablero != 'trump'
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
@@ -82,6 +82,68 @@ jobs:
           git add "dirigentes/$TABLERO/data/monitor.json" "dirigentes/$TABLERO/data/textos.json" x/gasto.json
           if ! git diff --cached --quiet; then
             git commit -m "X: actualizar $TABLERO"
+            for i in 1 2 3; do
+              git pull --rebase -X theirs origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+              sleep $((i * 5))
+            done
+            exit 1
+          fi
+
+  # Demo Trump: mismo tope de gasto (x/config.json + x/tableros.json), su propia caché y el mismo grupo que "Trump monitor"
+  x-trump:
+    if: github.ref_name == 'main' && inputs.tablero == 'trump'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    concurrency:
+      group: trump-${{ github.ref_name }}
+      cancel-in-progress: false
+    env:
+      X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+      TRUMP_NLP_SECONDS: '600'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update to latest
+        run: git fetch --depth=50 origin "${GITHUB_REF_NAME}" && git merge --ff-only FETCH_HEAD || true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install dependencies
+        run: python -m pip install vaderSentiment
+      - name: Install NLP models
+        continue-on-error: true
+        run: |
+          python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install pysentimiento
+      - name: Cache NLP models
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-pysentimiento-en-v1
+      - name: Restore store
+        uses: actions/cache/restore@v4
+        with:
+          path: trump/.store
+          key: trump-store-${{ github.run_id }}
+          restore-keys: trump-store-
+      - name: Collect X and analyze
+        run: |
+          python -u trump/collect.py x
+          python -u trump/analyze.py
+          cat x/gasto.json
+      - name: Save store
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: trump/.store
+          key: trump-store-${{ github.run_id }}
+      - name: Commit
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add trump/data/*.json x/gasto.json
+          if ! git diff --cached --quiet; then
+            git commit -m "X: actualizar trump"
             for i in 1 2 3; do
               git pull --rebase -X theirs origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
               sleep $((i * 5))

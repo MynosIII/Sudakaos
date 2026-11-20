@@ -11,7 +11,9 @@ Sources (all free, no paid APIs):
   - FRED (public CSV): economic indicators.
   - Google Trends (no key) and Wikipedia pageviews.
   - Meta Ad Library (META_TOKEN, free): US political ads that mention Trump.
-X/Twitter is never collected here (paid API, manual runs only).
+  - Instagram (Graph API business discovery, META_TOKEN + META_IG_USER_ID, free): Trump and comparison accounts.
+  - X/Twitter: paid API, NEVER automatic. Only `python trump/collect.py x` from the manual "X tableros" workflow
+    (query and spending cap in x/tableros.json and x/config.json).
 
 Usage: python trump/collect.py [source ...]   (no args = all)
 Raw texts live in trump/.store/ (workflow cache, never committed).
@@ -775,6 +777,49 @@ def meta_ads():
     return len(ads)
 
 
+# ---------------------------------------------------------------- Instagram (free) and X (paid, manual only)
+def instagram():
+    tok = os.environ.get("META_TOKEN", "").strip()
+    ig = os.environ.get("META_IG_USER_ID", "").strip()
+    if not tok or not ig:
+        raise RuntimeError("no META_TOKEN / META_IG_USER_ID")
+    fields = ("username,name,followers_count,media_count,"
+              "media.limit(50){caption,like_count,comments_count,timestamp,media_type,media_product_type,permalink}")
+    accounts, errs = [], []
+    for h, label in CONFIG["instagram"].items():
+        url = f"https://graph.facebook.com/v21.0/{ig}?" + urllib.parse.urlencode(
+            {"fields": f"business_discovery.username({h}){{{fields}}}", "access_token": tok})
+        try:
+            bd = get_json(url, retries=1, timeout=60).get("business_discovery") or {}
+        except urllib.error.HTTPError as e:
+            errs.append(f"{h}: HTTP {e.code}")
+            continue
+        except Exception as e:
+            errs.append(f"{h}: {type(e).__name__}")
+            continue
+        media = [{"t": clean(m.get("caption") or "")[:280], "d": (m.get("timestamp") or "")[:19] + "Z", "l": m.get("like_count") or 0,
+                  "c": m.get("comments_count") or 0, "k": m.get("media_product_type") if m.get("media_product_type") == "REELS" else m.get("media_type"),
+                  "u": m.get("permalink")} for m in (bd.get("media") or {}).get("data", [])]
+        accounts.append({"h": h, "n": label, "f": bd.get("followers_count"), "mc": bd.get("media_count"), "media": media})
+        time.sleep(2)
+    if not accounts:
+        raise RuntimeError("; ".join(errs)[:200] or "no accounts")
+    save_json("instagram.json", {"at": iso(NOW), "accounts": accounts, "errors": errs})
+    return len(accounts)
+
+
+def x_posts():
+    """Paid X API. Called only when 'x' is passed explicitly (manual workflow); never part of the daily run."""
+    sys.path.insert(0, str(HERE.parent / "x"))
+    from x_api import buscar
+    cx = json.loads((HERE.parent / "x" / "tableros.json").read_text(encoding="utf8"))["trump"]
+    rows, estado = buscar("trump", cx)
+    log(x=estado)
+    if not estado.get("ok") and not rows:
+        raise RuntimeError(estado.get("error") or estado.get("nota") or "X error")
+    return rows
+
+
 # ---------------------------------------------------------------- main
 def save(known):
     cutoff = iso(NOW - timedelta(days=CONFIG["window_days"] + 10))
@@ -794,11 +839,11 @@ def main():
             except (ValueError, KeyError):
                 pass
     status = json.loads((ST / "status.json").read_text(encoding="utf8")) if (ST / "status.json").exists() else {}
-    streams = [("rss", media_rss), ("google_news", google_news), ("youtube", youtube), ("truth_social", truth)]
+    streams = [("rss", media_rss), ("google_news", google_news), ("youtube", youtube), ("truth_social", truth), ("x", x_posts)]
     side = [("polls", polls), ("gdelt", gdelt), ("federal_register", federal_register), ("polymarket", polymarket),
-            ("fred", fred), ("wikipedia", wiki), ("google_trends", trends), ("meta_ads", meta_ads)]
+            ("fred", fred), ("wikipedia", wiki), ("google_trends", trends), ("meta_ads", meta_ads), ("instagram", instagram)]
     for name, fn in streams:
-        if only and name not in only:
+        if (only and name not in only) or (name == "x" and "x" not in only):  # X is paid: only on explicit request
             continue
         try:
             rows = fn()

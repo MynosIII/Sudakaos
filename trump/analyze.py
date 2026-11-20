@@ -382,7 +382,7 @@ def gdelt():
 
 # ---------------------------------------------------------------- YouTube
 def youtube(rows):
-    com = [r for r in rows if r["kind"] == "comment" and r["created_at"] >= ago(30)]
+    com = [r for r in rows if r["kind"] == "comment" and r.get("platform") != "X" and r["created_at"] >= ago(30)]
     vids = [r for r in rows if r["kind"] == "video" and r["created_at"] >= ago(30)]
     n = len(com)
     emo = Counter(r["emo"] for r in com if r["emo"])
@@ -651,6 +651,58 @@ def alerts(m):
     return sorted(out, key=lambda a: rank[a["lvl"]])[:14]
 
 
+# ---------------------------------------------------------------- X (manual paid runs) and Instagram
+def xposts(rows):
+    ps = [r for r in rows if r.get("platform") == "X" and r["created_at"] >= ago(30)]
+    if not ps:
+        return None
+    n = len(ps)
+    emo = Counter(r["emo"] for r in ps if r["emo"])
+    daily = defaultdict(Counter)
+    for r in ps:
+        c = daily[day(r["created_at"])]
+        c["n"] += 1
+        c[r["tono"]] += 1
+    tp = []
+    for k in TOPICS:
+        rs = [r for r in ps if k in r["_top"]]
+        if len(rs) >= 3:
+            tp.append({"k": k, "n": len(rs), "pos": pct(sum(r["tono"] == "POS" for r in rs), len(rs)), "neg": pct(sum(r["tono"] == "NEG" for r in rs), len(rs))})
+    tp.sort(key=lambda x: -x["n"])
+    top = sorted(ps, key=lambda r: -r.get("engagement", 0))[:12]
+    return {"n": n, "last": max(r["created_at"] for r in ps)[:16], "tone": {k: pct(sum(r["tono"] == k for r in ps), n) for k in ("POS", "NEU", "NEG")},
+            "emo": {k: pct(v, n) for k, v in emo.most_common()}, "tox": pct(sum(r["tox"] for r in ps), n),
+            "daily": [{"d": d, **dict(c)} for d, c in sorted(daily.items())], "topics": tp, "cloud": cloud(ps, 80),
+            "cloud_pos": cloud([r for r in ps if r["tono"] == "POS"], 30), "cloud_neg": cloud([r for r in ps if r["tono"] == "NEG"], 30),
+            "top": [{"t": excerpt(r["text"], 280), "u": r["url"], "d": r["created_at"][:16], "e": r.get("engagement", 0), "s": r["tono"]} for r in top],
+            "spend": (load_x_spend() or {})}
+
+
+def load_x_spend():
+    p = HERE.parent / "x" / "gasto.json"
+    if not p.exists():
+        return None
+    t = json.loads(p.read_text(encoding="utf8")).get("tableros", {}).get("trump") or {}
+    return {"posts": t.get("posts", 0), "usd": t.get("usd", 0), "last": t.get("ultima")}
+
+
+def instagram():
+    d = load("instagram.json")
+    if not d:
+        return None
+    accs = []
+    for a in d.get("accounts", []):
+        ms = [m for m in a["media"] if m["d"] >= ago(30)] or a["media"][:12]
+        inter = [m["l"] + m["c"] for m in ms]
+        kinds = Counter(m["k"] for m in ms)
+        accs.append({"h": a["h"], "n": a["n"], "f": a["f"], "mc": a["mc"], "p30": sum(1 for m in a["media"] if m["d"] >= ago(30)),
+                     "avg": round(sum(inter) / len(inter)) if inter else 0, "er": round(100 * sum(inter) / len(inter) / a["f"], 3) if inter and a["f"] else None,
+                     "kinds": dict(kinds.most_common()),
+                     "top": [{"t": m["t"][:200], "u": m["u"], "d": m["d"][:10], "l": m["l"], "c": m["c"], "k": m["k"]}
+                             for m in sorted(a["media"], key=lambda m: -(m["l"] + m["c"]))[:6]]})
+    return {"at": d.get("at"), "accounts": accs}
+
+
 # ---------------------------------------------------------------- main
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
@@ -666,6 +718,8 @@ def main():
     m["media"], heads = media(news) if news else (None, [])
     m["gdelt"] = gdelt()
     m["youtube"] = youtube(rows)
+    m["x"] = xposts(rows)
+    m["instagram"] = instagram()
     m["truth"] = truth(rows)
     m["orders"] = orders()
     m["markets"] = load("markets.json")
