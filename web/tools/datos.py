@@ -380,6 +380,17 @@ def inflacion(prev):
         log('Inflación OCDE', len(out), 'países')
     except Exception as e:
         log('Inflación OCDE', e)
+    try:  # Eurostat (IPC armonizado) para España y la UE, suele estar un mes adelante de la OCDE
+        d = get_json('https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_manr?format=JSON&lang=en&geo=ES&geo=EU27_2020&coicop=CP00&lastTimePeriod=13', retries=1, timeout=40)
+        geo, tiempo = d['dimension']['geo']['category']['index'], d['dimension']['time']['category']['index']
+        nt = len(tiempo)
+        for g, c in (('ES', 'ES'), ('EU27_2020', 'EU')):
+            sr = sorted([[t, round(float(d['value'][str(geo[g] * nt + i)]), 1)] for t, i in tiempo.items() if str(geo[g] * nt + i) in d['value']])
+            if sr and (c not in out or sr[-1][0] >= out[c]['periodo']):
+                out[c] = {'valor': sr[-1][1], 'periodo': sr[-1][0], 'frecuencia': 'mensual', 'fuente': 'Eurostat', 'serie': sr}
+        log('Inflación Eurostat ok')
+    except Exception as e:
+        log('Inflación Eurostat', e)
     for c, nombre, iso3, *_ in PAISES:
         if c in out:
             continue
