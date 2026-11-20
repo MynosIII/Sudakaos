@@ -410,6 +410,47 @@ def inflacion(prev):
     return out
 
 
+POLITICO = re.compile(r'(pol[ií]tic|president|senador|diputad|gobernador|alcalde|ministr|abogad|economista|politician|governor|senator|congress|secretary|l[ií]der|dirigente|sindical|activist|vicepresident|premier|commission|parlament|empresari|businessman)', re.I)
+
+
+def fotos():
+    """Foto de cada dirigente de politica.json desde Wikipedia (miniatura de Wikimedia Commons + enlace para el crédito)."""
+    try:
+        pol = json.loads((OUT / 'politica.json').read_text(encoding='utf8'))
+    except Exception as e:
+        log('Fotos: sin politica.json', e); return
+    f = OUT / 'fotos.json'
+    try:
+        prev = json.loads(f.read_text(encoding='utf8'))
+    except Exception:
+        prev = {}
+    out, nuevas = {}, 0
+    for P in pol['paises'].values():
+        for a in P.get('actores', []):
+            n = a['n']
+            if n in out:
+                continue
+            if prev.get(n):
+                out[n] = prev[n]; continue
+            for lang in ('es', 'en'):
+                hit = None
+                for t in dict.fromkeys([a.get('wiki') or n, n]):
+                    try:
+                        d = get_json(f'https://{lang}.wikipedia.org/api/rest_v1/page/summary/' + urllib.parse.quote(t.replace(' ', '_')), retries=0, timeout=15)
+                    except Exception:
+                        continue
+                    th = (d.get('thumbnail') or {}).get('source')
+                    if d.get('type') == 'standard' and th and POLITICO.search((d.get('description') or '') + ' ' + (d.get('extract') or '')[:300]):
+                        hit = {'img': th, 'url': d.get('content_urls', {}).get('desktop', {}).get('page', '')}
+                        break
+                    time.sleep(.2)
+                if hit:
+                    out[n] = hit; nuevas += 1; break
+            time.sleep(.2)
+    f.write_text(json.dumps(out, ensure_ascii=False, indent=0), encoding='utf8')
+    log('Fotos:', len(out), 'con foto,', nuevas, 'nuevas')
+
+
 def archivo_alertas(nuevas):
     """Guarda las alertas de los últimos 30 días (sin repetir) para contar alertas por día."""
     f = OUT / 'archivo.json'
@@ -447,6 +488,7 @@ def main():
         if c not in idx and v.get('indice') and v['indice']['serie'][-1][0] >= (NOW - timedelta(days=7)).strftime('%Y-%m-%d'):
             idx[c] = v['indice']
     log('Inflación…'); infl = inflacion(prev)
+    log('Fotos…'); fotos()
     log('Noticias…'); tit, al_medios = noticias()
     prev_sit = {}
     try:

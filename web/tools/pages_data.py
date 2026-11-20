@@ -14,7 +14,7 @@ PAISES = """
 <section class="cap-hero" style="padding-bottom:24px"><div class="wrap">
 <p class="kicker">Tablero por país · política, encuestas y coyuntura</p>
 <h1 id="pName">Países</h1>
-<div class="cols"><p class="lead" id="pLead">Cargando datos…</p><p class="intro"><span id="pCtx"></span> <span class="upd" id="pUpd"></span></p></div>
+<div class="cols"><div class="gobrow"><div id="pGob"></div><p class="lead" id="pLead">Cargando datos…</p></div><p class="intro"><span id="pCtx"></span> <span class="upd" id="pUpd"></span></p></div>
 </div></section>
 <div class="wrap"><nav class="tabs" id="pTabs" aria-label="Países"></nav>
 <div id="polSec">
@@ -42,7 +42,7 @@ PAISES = """
 </div>
 <section style="padding:84px 0 0"><h2 style="font-size:clamp(32px,3.6vw,48px);line-height:1.05">Comparación regional</h2><p style="color:var(--muted);font-size:14px;margin:8px 0 0">Aprobación: promedio de las encuestas de los últimos 45 días. Tocá una columna para ordenar y una fila para abrir el país.</p>
 <div class="tbl-wrap"><table class="cmp"><thead id="pHead"></thead><tbody id="pRows"></tbody></table></div></section>
-<p class="srcs">Política: encuestas publicadas por cada encuestadora (CB Consultora, AtlasIntel, Cadem, Ipsos, YouGov, Equipos, Zentrix y otras), con enlace a la nota de origen; se revisan a mano y el promedio es la media simple de la última medición de cada una. Economía: currency-api (tipo de cambio diario), OCDE (inflación mensual) y Banco Mundial (último año, donde no hay dato mensual). Alertas y titulares: Google News, USGS y GDACS, clasificados automáticamente y actualizados cada 3 horas.</p>
+<p class="srcs">Política: encuestas publicadas por cada encuestadora (CB Consultora, AtlasIntel, Cadem, Ipsos, YouGov, Equipos, Zentrix y otras), con enlace a la nota de origen; se revisan a mano y el promedio es la media simple de la última medición de cada una. Economía: currency-api (tipo de cambio diario), OCDE (inflación mensual) y Banco Mundial (último año, donde no hay dato mensual). Alertas y titulares: Google News, USGS y GDACS, clasificados automáticamente y actualizados cada 3 horas. Fotos: Wikipedia y Wikimedia Commons. Banderas: flagcdn.</p>
 </div>
 """
 

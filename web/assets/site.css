@@ -123,3 +123,14 @@ table.polls{width:100%;border-collapse:collapse;margin-top:18px;font-size:13px}
 .cmp td.gobc{font-family:var(--sans);font-size:13px;text-align:left;color:var(--ink-2)}.cmp th[data-k=gob]{text-align:left}.cmp td.neg{color:var(--red)}.cmp td small{color:var(--muted);font-size:10px}
 @media(max-width:850px){.polgrid{grid-template-columns:1fr}.hbars li{grid-template-columns:110px 1fr 84px}}
 @media(max-width:560px){.parties{grid-template-columns:1fr}.big strong{font-size:58px}}
+/* Banderas y fotos */
+img.flag{display:inline-block;width:20px;height:auto;margin-right:8px;vertical-align:-1px;box-shadow:0 0 0 1px var(--line)}
+#pName{display:flex;align-items:center;gap:22px}#pName img.flag{width:clamp(56px,7vw,96px);margin:0;box-shadow:0 0 0 1px var(--line)}
+.tabs a img.flag{width:18px;margin-right:6px}.cmp td img.flag{width:18px}
+.gobrow{display:flex;gap:18px;align-items:flex-start}
+.gobph{width:96px;height:96px;border-radius:50%;object-fit:cover;object-position:50% 20%;flex:none;border:3px solid var(--red);background:var(--paper-2)}
+.ph{display:inline-flex;align-items:center;justify-content:center;font:600 14px var(--sans);color:var(--muted);background:var(--paper-2)}
+.actors li{display:flex;gap:12px;align-items:center}.actors li>div{flex:1}
+.aph{width:44px;height:44px;border-radius:50%;object-fit:cover;object-position:50% 20%;flex:none;background:var(--paper-2)}.actors li.gob .aph{box-shadow:0 0 0 2px var(--red)}
+.actors li.cred{display:block;font-size:11px;color:var(--muted);border-bottom:0}
+@media(max-width:560px){.gobph{width:72px;height:72px}#pName{gap:14px}}
