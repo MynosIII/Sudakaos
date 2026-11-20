@@ -1,26 +1,26 @@
 # Contenido de las páginas de capacidades (web/<slug>/). Desarrolla el copy de la landing original
-# sin agregar clientes, cifras ni promesas: cada gráfico se rotula como ilustrativo.
+# sin nombrar clientes. Tono comercial, corto, sin disclaimers (pedido de Matías 2026-11-20).
 
 CAPS = [
  {
   'slug': 'inteligencia', 'num': '01', 'tag': 'Inteligencia', 'title': 'Datos para decidir',
-  'lead': 'Recolección y análisis de información pública o autorizada, con trazabilidad y lectura humana.',
-  'intro': 'Convertimos el ruido de medios, redes y búsquedas en una lectura ordenada: qué se dice, dónde, con qué intensidad y qué cambió respecto de ayer. Cada dato conserva su origen, su fecha y sus limitaciones, para que la decisión se apoye en evidencia y no en impresiones.',
+  'lead': 'Escucha social, datos y análisis que convierten ruido en decisiones.',
+  'intro': 'Medios, redes y búsquedas en una sola lectura: qué se dice, dónde, con qué fuerza y qué cambió desde ayer. Decidís con evidencia, no con intuiciones.',
   'fig1': ('stream', 'Flujo de menciones por fuente en las últimas 24 horas. El tablero marca automáticamente los picos para que un analista los revise.'),
   'fig2': ('funnel', 'De lo recolectado a lo que llega al informe: deduplicación, validación y lectura humana reducen el volumen y suben la calidad.'),
   'items': [
-    ('Monitoreo de medios y conversación pública', 'Seguimiento continuo de medios digitales, video y conversación abierta sobre los temas, actores y territorios definidos con el cliente.'),
-    ('Scraping de comentarios públicos bajo reglas de plataforma', 'Recolección de comentarios públicos respetando términos de uso, límites de acceso y criterios de privacidad acordados.'),
-    ('Validación de métricas, deduplicación y tableros', 'Eliminamos repeticiones, marcamos fuentes dudosas y publicamos tableros con definiciones claras de cada indicador.'),
-    ('Informes ejecutivos con fuentes y limitaciones', 'Síntesis breve para quien decide, con enlaces a las fuentes, período cubierto y lo que el dato no permite afirmar.'),
+    ('Monitoreo de medios y conversación pública', 'Medios, video y redes seguidos 24/7 sobre tus temas, actores y territorios.'),
+    ('Escucha de comentarios a escala', 'Miles de comentarios de redes y video leídos y clasificados para saber qué piensa la gente de verdad.'),
+    ('Validación de métricas, deduplicación y tableros', 'Datos limpios, fuentes dudosas marcadas y tableros que se entienden de un vistazo.'),
+    ('Informes ejecutivos', 'Una página para quien decide: qué pasa, por qué importa y qué hacer.'),
   ],
   'deliver': ['Tablero de monitoreo con actualización periódica', 'Alertas por umbral sobre temas o actores', 'Informe ejecutivo semanal o por evento', 'Glosario de métricas y fuentes'],
   'limits': 'Trabajamos solo con información pública o autorizada. Las métricas de conversación describen lo observable en las fuentes cubiertas; no representan a toda la población.',
  },
  {
   'slug': 'prospectiva', 'num': '02', 'tag': 'Prospectiva', 'title': 'Preparación para escenarios',
-  'lead': 'Exploramos cambios posibles, señales tempranas y decisiones que cada escenario podría exigir.',
-  'intro': 'No pronosticamos el futuro: lo ordenamos. Definimos supuestos explícitos, imaginamos trayectorias plausibles y acordamos qué señales indicarían que un escenario se está volviendo más probable. Así el equipo llega preparado a la decisión, en lugar de improvisarla.',
+  'lead': 'Anticipamos escenarios y señales tempranas antes de que estallen.',
+  'intro': 'Mapeamos los caminos posibles y las señales que avisan cuál se está activando. Tu equipo llega a la decisión preparado, mientras el resto improvisa.',
   'fig1': ('fan', 'Abanico de trayectorias posibles a 90 días a partir de la situación actual. Las líneas rojas cruzan el umbral que activa una revisión.'),
   'fig2': ('matrix', 'Matriz de escenarios: las señales se mueven entre cuadrantes y su rastro muestra hacia dónde se desplaza la agenda.'),
   'items': [
@@ -34,8 +34,8 @@ CAPS = [
  },
  {
   'slug': 'comunicacion', 'num': '03', 'tag': 'Comunicación', 'title': 'Mensajes con sustento',
-  'lead': 'Ordenamos identidad, estrategia y producción para que el trabajo sea claro, consistente y evaluable.',
-  'intro': 'Partimos de cómo se conectan los temas y los actores en la conversación real para decidir qué decir, quién lo dice y por dónde. Después medimos cada pieza con criterios definidos de antemano y ajustamos sobre lo aprendido.',
+  'lead': 'Estrategia, narrativa y producción que instalan agenda.',
+  'intro': 'Leemos la conversación real para decidir qué decir, quién lo dice y por dónde. Medimos cada pieza y duplicamos lo que funciona.',
   'fig1': ('network', 'Red de narrativas y actores: los nodos grandes son temas, los pequeños son cuentas o medios que los movilizan.'),
   'fig2': ('decay', 'Curvas de atención de piezas publicadas. La mediana marca el comportamiento típico; los desvíos señalan qué replicar.'),
   'items': [
@@ -49,13 +49,13 @@ CAPS = [
  },
  {
   'slug': 'sistemas', 'num': '04', 'tag': 'Sistemas', 'title': 'Equipos conectados',
-  'lead': 'Herramientas y automatizaciones para coordinar procesos, equipos y bases de contacto.',
-  'intro': 'Ordenamos cómo entra, se reparte y se resuelve el trabajo. Diseñamos circuitos simples, automatizamos lo repetitivo y dejamos todo documentado para que el equipo no dependa de una persona ni de una planilla perdida.',
+  'lead': 'Herramientas y automatizaciones para mover equipos y bases de contacto.',
+  'intro': 'Ordenamos cómo entra, se reparte y se resuelve el trabajo. Automatizamos lo repetitivo para que el equipo se dedique a ganar.',
   'fig1': ('sankey', 'Recorrido de los pedidos: desde el canal por el que llegan hasta el equipo, el reporte o el archivo donde terminan.'),
   'fig2': ('cfd', 'Flujo acumulado de tareas por estado. La distancia entre curvas muestra el trabajo abierto en cada momento.'),
   'items': [
     ('Sistemas de gestión de equipos y tareas', 'Tableros y circuitos de asignación con responsables, plazos y estados visibles para todo el equipo.'),
-    ('Bases humanas con consentimiento y controles', 'Bases de contacto con consentimiento registrado, permisos por rol y registro de cambios.'),
+    ('Bases de contacto ordenadas', 'Tus contactos en un solo lugar, segmentados y listos para activar.'),
     ('Automatización de flujos y reportes', 'Integraciones que eliminan tareas manuales repetidas y generan reportes sin intervención.'),
     ('Capacitación y documentación operativa', 'Manuales breves y capacitaciones para que el sistema siga funcionando cuando cambian las personas.'),
   ],
@@ -64,14 +64,14 @@ CAPS = [
  },
  {
   'slug': 'ciberseguridad', 'num': '05', 'tag': 'Ciberseguridad', 'title': 'Prevención y respuesta',
-  'lead': 'Protección de activos digitales y preparación ante incidentes mediante trabajo autorizado.',
-  'intro': 'Empezamos por saber qué está expuesto: cuentas, accesos, dominios, dispositivos y proveedores. Priorizamos controles realistas para el equipo y dejamos preparado un protocolo para actuar rápido y ordenado si ocurre un incidente.',
+  'lead': 'Blindamos cuentas, datos y reputación digital.',
+  'intro': 'Detectamos qué está expuesto (cuentas, accesos, dominios, dispositivos) y lo cerramos. Si hay un ataque, el protocolo ya está listo.',
   'fig1': ('radar', 'Perfil de exposición por dimensión: el diagnóstico inicial frente al estado después de aplicar controles prioritarios.'),
   'fig2': ('gantt', 'Cronograma típico de respuesta: detección, contención, análisis, comunicación y recuperación avanzan en paralelo.'),
   'items': [
     ('Evaluación de exposición y controles', 'Relevamiento de cuentas, accesos y activos digitales, con una lista priorizada de controles.'),
     ('Protocolos de resguardo y acceso', 'Reglas claras de contraseñas, doble factor, respaldos y permisos, adaptadas al equipo.'),
-    ('Monitoreo de fuentes autorizadas', 'Seguimiento de filtraciones y menciones en fuentes autorizadas para detectar riesgos temprano.'),
+    ('Monitoreo de filtraciones', 'Detectamos filtraciones y menciones de riesgo antes de que escalen.'),
     ('Coordinación de respuesta a incidentes', 'Roles, contactos y pasos definidos para contener, analizar, comunicar y recuperar.'),
   ],
   'deliver': ['Informe de exposición con prioridades', 'Protocolo de resguardo y accesos', 'Plan de respuesta a incidentes', 'Ejercicio de simulación con el equipo'],
@@ -79,17 +79,17 @@ CAPS = [
  },
  {
   'slug': 'comunidad', 'num': '06', 'tag': 'Comunidad', 'title': 'Participación organizada',
-  'lead': 'Capacitamos y acompañamos redes humanas para escuchar, informar y participar de manera transparente.',
-  'intro': 'Las redes de personas funcionan cuando tienen formación, guías claras y un circuito para escalar lo que escuchan. Acompañamos a equipos territoriales y digitales para que participen de forma identificable, ordenada y medible.',
+  'lead': 'Redes humanas que escuchan, informan y movilizan en territorio.',
+  'intro': 'Formamos y coordinamos equipos territoriales y digitales para que escuchen, respondan y movilicen con un mismo mensaje.',
   'fig1': ('hexmap', 'Crecimiento de la cobertura territorial a medida que se suman referentes formados en cada zona.'),
   'fig2': ('bars', 'Consultas recibidas por semana según cómo se resolvieron: en territorio, escaladas al equipo o en seguimiento.'),
   'items': [
-    ('Formación para equipos territoriales y digitales', 'Programas prácticos sobre escucha, comunicación y uso responsable de canales.'),
+    ('Formación para equipos territoriales y digitales', 'Programas prácticos de escucha, comunicación y redes.'),
     ('Guías, escucha y escalamiento de consultas', 'Guías de respuesta y un circuito claro para derivar lo que necesita al equipo central.'),
-    ('Distribución identificable y no engañosa', 'Participación con identidad visible y reglas explícitas: sin cuentas falsas ni automatismos engañosos.'),
+    ('Despliegue en territorio y redes', 'Referentes reales llevando el mensaje puerta a puerta y en cada red.'),
     ('Indicadores de actividad y calidad', 'Seguimiento de actividad, tiempos de respuesta y calidad de las interacciones.'),
   ],
-  'deliver': ['Programa de formación por etapas', 'Guía de escucha y escalamiento', 'Código de participación transparente', 'Tablero de actividad y calidad'],
+  'deliver': ['Programa de formación por etapas', 'Guía de escucha y escalamiento', 'Manual de participación', 'Tablero de actividad y calidad'],
   'limits': 'La participación es siempre identificable y voluntaria. No trabajamos con cuentas falsas, redes automatizadas ni distribución engañosa.',
  },
 ]
