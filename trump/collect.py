@@ -11,6 +11,7 @@ Sources (all free, no paid APIs):
   - FRED (public CSV): economic indicators.
   - Google Trends (no key) and Wikipedia pageviews.
   - Meta Ad Library (META_TOKEN, free): US political ads that mention Trump.
+  - States: Census ACS 1-year + 2020 Census (urban/rural) + BEA GDP by state (free, no key).
   - Instagram (Graph API business discovery, META_TOKEN + META_IG_USER_ID, free): Trump and comparison accounts.
   - X/Twitter: paid API, NEVER automatic. Only `python trump/collect.py x` from the manual "X tableros" workflow
     (query and spending cap in x/tableros.json and x/config.json).
@@ -820,6 +821,56 @@ def x_posts():
     return rows
 
 
+# ---------------------------------------------------------------- states: Census ACS, 2020 Census and BEA (free, no key)
+ACS_VARS = {"pop": "B01003_001E", "black": "B02001_003E", "hisp": "B03003_003E", "foreign": "B05002_013E", "income": "B19013_001E",
+            "age": "B01002_001E", "ed_tot": "B15003_001E", "ba": "B15003_022E", "ma": "B15003_023E", "prof": "B15003_024E", "phd": "B15003_025E",
+            "pov_tot": "B17001_001E", "pov": "B17001_002E", "home": "B25077_001E", "vet_tot": "B21001_001E", "vet": "B21001_002E",
+            "white": "B02001_002E", "asian": "B02001_005E"}
+
+
+def census():
+    out, errs = {"at": iso(NOW)}, []
+    vals = ",".join(ACS_VARS.values())
+    for year in (2024, 2023, 2022):
+        try:
+            rows = get_json(f"https://api.census.gov/data/{year}/acs/acs1?get=NAME,{vals}&for=state:*", retries=1, timeout=60)
+            hdr = rows[0]
+            out["acs_year"] = year
+            out["acs"] = {r[0]: {k: (float(r[hdr.index(v)]) if r[hdr.index(v)] not in (None, "", "null") else None) for k, v in ACS_VARS.items()} for r in rows[1:]}
+            break
+        except Exception as e:
+            errs.append(f"acs {year}: {type(e).__name__}: {str(e)[:80]}")
+    try:
+        rows = get_json("https://api.census.gov/data/2020/dec/dhc?get=NAME,P2_001N,P2_003N&for=state:*", retries=1, timeout=60)
+        out["rural"] = {r[0]: round(100 * float(r[2]) / float(r[1]), 1) for r in rows[1:]}
+    except Exception as e:
+        errs.append(f"dhc: {type(e).__name__}: {str(e)[:80]}")
+    # GDP by state (current dollars, all industries) from BEA's public bulk file
+    try:
+        import zipfile
+        z = zipfile.ZipFile(io.BytesIO(get("https://apps.bea.gov/regional/zip/SAGDP.zip", retries=1, timeout=120)))
+        name = next(n for n in z.namelist() if n.startswith("SAGDP2") and "ALL_AREAS" in n and n.endswith(".csv"))
+        rd = csv.reader(io.TextIOWrapper(z.open(name), encoding="latin-1"))
+        hdr = next(rd)
+        yrs = [i for i, h in enumerate(hdr) if h.strip().isdigit()]
+        gdp = {}
+        for r in rd:
+            if len(r) > max(yrs) and r[hdr.index("LineCode")].strip() == "1":
+                vals_y = [(hdr[i].strip(), r[i].strip()) for i in yrs if re.match(r"^[\d.]+$", r[i].strip())]
+                if vals_y:
+                    gdp[r[hdr.index("GeoName")].strip().strip("*").strip()] = {"y": vals_y[-1][0], "v": float(vals_y[-1][1])}
+        out["gdp"] = gdp
+    except Exception as e:
+        errs.append(f"bea: {type(e).__name__}: {str(e)[:80]}")
+    out["errors"] = errs
+    if errs:
+        log(census_errors=errs)
+    if not out.get("acs"):
+        raise RuntimeError("; ".join(errs)[:200])
+    save_json("census.json", out)
+    return len(out["acs"])
+
+
 # ---------------------------------------------------------------- main
 def save(known):
     cutoff = iso(NOW - timedelta(days=CONFIG["window_days"] + 10))
@@ -841,7 +892,7 @@ def main():
     status = json.loads((ST / "status.json").read_text(encoding="utf8")) if (ST / "status.json").exists() else {}
     streams = [("rss", media_rss), ("google_news", google_news), ("youtube", youtube), ("truth_social", truth), ("x", x_posts)]
     side = [("polls", polls), ("gdelt", gdelt), ("federal_register", federal_register), ("polymarket", polymarket),
-            ("fred", fred), ("wikipedia", wiki), ("google_trends", trends), ("meta_ads", meta_ads), ("instagram", instagram)]
+            ("fred", fred), ("wikipedia", wiki), ("google_trends", trends), ("meta_ads", meta_ads), ("instagram", instagram), ("census", census)]
     for name, fn in streams:
         if (only and name not in only) or (name == "x" and "x" not in only):  # X is paid: only on explicit request
             continue
