@@ -74,4 +74,20 @@ for i, c in enumerate(CAPS):
     open(os.path.join(d, 'index.html'), 'w', encoding='utf-8').write(out)
 from pages_data import build_data_pages
 build_data_pages(HEAD, WEB, e)
+
+# 3) Versión en la URL de cada asset: el navegador y la CDN siempre bajan el archivo nuevo tras un cambio
+import hashlib, re
+def _ver(m):
+    f = os.path.join(WEB, 'assets', m.group(2))
+    return m.group(1) + m.group(2) + '?v=' + hashlib.md5(open(f, 'rb').read()).hexdigest()[:8] if os.path.exists(f) else m.group(0)
+for root, _, files in os.walk(WEB):
+    if os.path.basename(root) == 'tools':
+        continue
+    for fn in files:
+        if fn == 'index.html':
+            fp = os.path.join(root, fn)
+            h = open(fp, encoding='utf-8').read()
+            h2 = re.sub(r'((?:\.\./)?assets/)([\w.-]+\.(?:js|css))(?:\?v=\w+)?', _ver, h)
+            if h2 != h:
+                open(fp, 'w', encoding='utf-8').write(h2)
 print('ok', len(CAPS), 'páginas + países + situación')

@@ -1,377 +1,2181 @@
 {
-  "meta": {
-    "revisado": "2026-11-20",
-    "nota": "Datos curados a mano por Sudakaos a partir de encuestas publicadas. El promedio es la media simple de la última medición de cada encuestadora de los últimos 45 días. La ubicación en el compás es una estimación editorial de Sudakaos, no una medición.",
-    "cb": {"ago": "https://politica.expansion.mx/mexico/2026/09/15/sheinbaum-aprobacion-ranking-latinoamerica", "sep": "https://caretas.pe/politica/keiko-fujimori-en-el-top-5-de-los-presidentes-de-america-latina-con-mayor-aprobacion-mira-el-ranking-completo-cb-global-data/", "oct": "https://prensamercosur.org/2026/10/12/ranking-de-presidentes-latinoamericanos-octubre-2026/", "nov": "https://www.emol.com/noticias/Internacional/2026/11/12/1216871/presidentes-latinoamerica-derrumbe-kast-ranking.html"}
-  },
-  "paises": {
-    "AR": {
-      "gob": {"n": "Javier Milei", "cargo": "Presidente", "p": "La Libertad Avanza", "desde": "2023-12-10"},
-      "medida": "Aprobación de la gestión",
-      "enc": [
-        {"f": "AtlasIntel", "fecha": "2026-11-09", "a": 36.2, "d": 60.6, "u": "https://perfil.com/politica/encuesta-javier-milei-cae-en-aprobacion-pero-ningun-dirigente-opositor-logra-una-imagen-mayoritariamente-positiva-aW60R8o7bUON"},
-        {"f": "CB Consultora", "fecha": "2026-11-09", "a": 37.4, "d": 57.7, "u": "https://www.emol.com/noticias/Internacional/2026/11/12/1216871/presidentes-latinoamerica-derrumbe-kast-ranking.html"},
-        {"f": "Giacobbe", "fecha": "2026-11-02", "a": 34.9, "d": 56.8, "nota": "imagen", "u": "https://perfil.com/reperfilar/una-encuesta-midio-la-imagen-de-milei-y-otros-dirigentes-el-presidente-tiene-un-568-de-opinion-negativa-ah5hI4S6fvMC"},
-        {"f": "Zentrix", "fecha": "2026-10-25", "a": 36.2, "d": 55.5, "u": "https://eleconomista.com.ar/politica/en-sectores-bajos-733-asegura-jamas-votaria-milei-n99373"}
-      ],
-      "series": {
-        "Zentrix": [["2026-07-25", 31.4], ["2026-08-25", 32.2], ["2026-09-25", 35.2], ["2026-10-25", 36.2]],
-        "AtlasIntel": [["2026-08-03", 37.1], ["2026-10-09", 39], ["2026-11-09", 36.2]],
-        "CB Consultora": [["2026-09-11", 35.5], ["2026-11-09", 37.4]]
-      },
-      "eleccion": {"n": "Presidenciales", "fecha": "2027-10", "nota": "Primera vuelta prevista para octubre de 2027."},
-      "dirigentes": {"fuente": "AtlasIntel", "fecha": "2026-11-09", "medida": "Imagen positiva / negativa", "u": "https://perfil.com/politica/encuesta-javier-milei-cae-en-aprobacion-pero-ningun-dirigente-opositor-logra-una-imagen-mayoritariamente-positiva-aW60R8o7bUON",
-        "items": [["Cristina Kirchner", 41, 53], ["Axel Kicillof", 39, 54], ["Myriam Bregman", 39, 51], ["Patricia Bullrich", 37, 57], ["Javier Milei", 36, 62], ["Sergio Massa", 26, 63], ["Mauricio Macri", 24, 66], ["Victoria Villarruel", 18, 59]]},
-      "actores": [
-        {"n": "Javier Milei", "p": "LLA", "rol": "Presidente, busca la reelección", "x": 8.5, "y": 1.5, "gob": true},
-        {"n": "Patricia Bullrich", "p": "LLA", "rol": "Senadora", "x": 6.5, "y": 6.5},
-        {"n": "Axel Kicillof", "p": "PJ · Fuerza Patria", "rol": "Gobernador de Buenos Aires", "x": -6.5, "y": 1.5},
-        {"n": "Cristina Kirchner", "p": "PJ", "rol": "Presidenta del PJ, con prisión domiciliaria", "x": -5, "y": 3},
-        {"n": "Myriam Bregman", "p": "FIT-U", "rol": "Diputada", "x": -9, "y": -3.5},
-        {"n": "Mauricio Macri", "p": "PRO", "rol": "Expresidente", "x": 5.5, "y": 2},
-        {"n": "Juan Schiaretti", "p": "Provincias Unidas", "rol": "Exgobernador de Córdoba", "x": 1, "y": 1},
-        {"n": "Sergio Massa", "p": "Frente Renovador", "rol": "Exministro de Economía", "x": -1, "y": 2}
-      ],
-      "partidos": [["La Libertad Avanza", "Oficialismo"], ["PJ · Fuerza Patria", "Principal oposición"], ["PRO", "Aliado parlamentario"], ["UCR", "Oposición dialoguista"], ["Provincias Unidas", "Gobernadores"], ["FIT-U", "Izquierda"]],
-      "contexto": "LLA ganó las legislativas de octubre de 2025. Un año después, la aprobación de Milei ronda el 36 % y ningún opositor logra imagen mayoritariamente positiva."
-    },
-    "BO": {
-      "gob": {"n": "Rodrigo Paz", "cargo": "Presidente", "p": "Partido Demócrata Cristiano", "desde": "2025-11-08"},
-      "medida": "Aprobación de la gestión",
-      "enc": [
-        {"f": "CB Consultora", "fecha": "2026-11-09", "a": 40.2, "d": 55.6, "u": "https://www.emol.com/noticias/Internacional/2026/11/12/1216871/presidentes-latinoamerica-derrumbe-kast-ranking.html"},
-        {"f": "Ipsos Ciesmori", "fecha": "2026-11-05", "a": 25, "d": 59, "nota": "cuatro ciudades", "u": "https://www.cadena3.com/noticia/mundo/caida-del-apoyo-a-rodrigo-paz-pereira-un-ano-de-mandato-marcado-por-el-rechazo-en-bolivia_611087"}
-      ],
-      "series": {
-        "Ipsos Ciesmori": [["2025-11-15", 65], ["2026-04-15", 52], ["2026-08-15", 21], ["2026-11-05", 25]],
-        "CB Consultora": [["2026-08-10", 50.5], ["2026-09-11", 41.6], ["2026-11-09", 40.2]]
-      },
-      "eleccion": {"n": "Generales", "fecha": "2030", "nota": "Mandato hasta noviembre de 2030."},
-      "actores": [
-        {"n": "Rodrigo Paz", "p": "PDC", "rol": "Presidente", "x": 3, "y": 1.5, "gob": true},
-        {"n": "Edmand Lara", "p": "PDC", "rol": "Vicepresidente, enfrentado con Paz", "x": -1, "y": 4.5},
-        {"n": "Jorge Quiroga", "p": "Libre", "rol": "Perdió el balotaje de 2025", "x": 7, "y": 3},
-        {"n": "Andrónico Rodríguez", "p": "Alianza Popular", "rol": "Expresidente del Senado", "x": -5, "y": 2},
-        {"n": "Evo Morales", "p": "Evismo", "rol": "Expresidente, prófugo de la justicia", "x": -7, "y": 5}
-      ],
-      "partidos": [["PDC", "Oficialismo"], ["Libre", "Oposición de derecha"], ["Unidad", "Centro derecha"], ["Alianza Popular", "Izquierda"], ["MAS", "Izquierda, en crisis"]],
-      "contexto": "Paz pasó del 65 % de aprobación al asumir a cerca del 25 % en las ciudades grandes, según Ipsos Ciesmori. El 76 % no lo volvería a votar."
-    },
-    "BR": {
-      "gob": {"n": "Luiz Inácio Lula da Silva", "cargo": "Presidente", "p": "PT", "desde": "2023-01-01"},
-      "medida": "Aprobación de la gestión",
-      "enc": [
-        {"f": "CB Consultora", "fecha": "2026-11-09", "a": 50.4, "d": 46.9, "u": "https://www.emol.com/noticias/Internacional/2026/11/12/1216871/presidentes-latinoamerica-derrumbe-kast-ranking.html"},
-        {"f": "AtlasIntel", "fecha": "2026-11-09", "a": 48, "d": 50, "u": "https://lagentepide.substack.com/p/monitor-de-aprobacion-presidencial-142"}
-      ],
-      "series": {"CB Consultora": [["2026-09-11", 48.5], ["2026-11-09", 50.4]]},
-      "eleccion": {"n": "Asunción del cuarto mandato", "fecha": "2027-01-01", "nota": "Próximas: municipales de octubre de 2028."},
-      "ultima": {"n": "Balotaje presidencial", "fecha": "2026-10-25", "u": "https://www.bloomberglinea.com.br/brasil/lula-e-reeleito-com-5174-no-segundo-turno-e-chega-ao-quarto-mandato-na-presidencia/", "items": [["Lula (PT)", 51.79], ["Flávio Bolsonaro (PL)", 48.21]]},
-      "actores": [
-        {"n": "Lula da Silva", "p": "PT", "rol": "Presidente reelecto (2027-2030)", "x": -4, "y": 1, "gob": true},
-        {"n": "Flávio Bolsonaro", "p": "PL", "rol": "Senador, perdió el balotaje", "x": 6.5, "y": 6.5},
-        {"n": "Tarcísio de Freitas", "p": "Republicanos", "rol": "Gobernador de São Paulo", "x": 6.5, "y": 4},
-        {"n": "Geraldo Alckmin", "p": "PSB", "rol": "Vicepresidente", "x": 1, "y": 2}
-      ],
-      "partidos": [["PT", "Oficialismo"], ["PL", "Principal oposición, primera bancada desde 2027 (121 diputados)"], ["Republicanos", "Oposición"], ["Novo", "Oposición liberal"], ["PSD · MDB · União Brasil", "Centrão"]],
-      "contexto": "Lula ganó su cuarto mandato por 3,6 puntos tras salir segundo en primera vuelta. El Congreso que asume en febrero de 2027 es más opositor: PL, Novo y Republicanos suman 172 diputados."
-    },
-    "CL": {
-      "gob": {"n": "José Antonio Kast", "cargo": "Presidente", "p": "Partido Republicano", "desde": "2026-03-11"},
-      "medida": "Aprobación de la gestión",
-      "enc": [
-        {"f": "Cadem", "fecha": "2026-11-15", "a": 27, "d": 69, "u": "https://www.emol.com/noticias/Nacional/2026/11/15/1217176/cadem-aprobacion-kast-cae.html"},
-        {"f": "Criteria", "fecha": "2026-11-14", "a": 18, "d": 72, "u": "https://lagentepide.substack.com/p/monitor-de-aprobacion-presidencial-142"},
-        {"f": "CB Consultora", "fecha": "2026-11-09", "a": 33.5, "d": 62.7, "u": "https://www.emol.com/noticias/Internacional/2026/11/12/1216871/presidentes-latinoamerica-derrumbe-kast-ranking.html"}
-      ],
-      "series": {
-        "Cadem": [["2026-10-25", 29], ["2026-11-01", 26], ["2026-11-08", 29], ["2026-11-15", 27]],
-        "CB Consultora": [["2026-09-11", 42.9], ["2026-11-09", 33.5]]
-      },
-      "eleccion": {"n": "Municipales y regionales", "fecha": "2028-10", "nota": "Presidenciales en noviembre de 2029."},
-      "dirigentes": {"fuente": "Cadem", "fecha": "2026-11-15", "medida": "Imagen positiva", "u": "https://www.emol.com/noticias/Nacional/2026/11/15/1217176/cadem-aprobacion-kast-cae.html",
-        "items": [["Tomás Vodanovic", 64], ["Sebastián Sichel", 58], ["Macarena Ripamonti", 58], ["Matías Toledo", 56], ["Max Luksic", 55], ["Michelle Bachelet", 51], ["Gabriel Boric", 46]]},
-      "actores": [
-        {"n": "José Antonio Kast", "p": "Republicano", "rol": "Presidente", "x": 8, "y": 6.5, "gob": true},
-        {"n": "Johannes Kaiser", "p": "Libertario", "rol": "Diputado", "x": 9, "y": 4},
-        {"n": "Evelyn Matthei", "p": "UDI", "rol": "Excandidata presidencial", "x": 6, "y": 3},
-        {"n": "Jeannette Jara", "p": "PC", "rol": "Perdió el balotaje de 2025", "x": -7, "y": 2},
-        {"n": "Tomás Vodanovic", "p": "Frente Amplio", "rol": "Alcalde de Maipú, mejor imagen", "x": -5, "y": -2},
-        {"n": "Michelle Bachelet", "p": "PS", "rol": "Expresidenta", "x": -4, "y": 0}
-      ],
-      "partidos": [["Republicano", "Oficialismo"], ["UDI · RN · Evópoli", "Derecha tradicional"], ["Libertario", "Derecha"], ["Frente Amplio", "Izquierda"], ["PS · PPD", "Socialdemocracia"], ["PC", "Izquierda"]],
-      "contexto": "En CB Consultora pasó de 42,9 % en septiembre a 33,5 % en noviembre, y en Cadem no supera el 30 % desde la crisis por las rebajas de pena. Pesan también el paro de camioneros por el combustible y el desempleo."
-    },
-    "CO": {
-      "gob": {"n": "Abelardo de la Espriella", "cargo": "Presidente", "p": "Defensores de la Patria", "desde": "2026-08-07"},
-      "medida": "Aprobación de la gestión",
-      "enc": [
-        {"f": "AtlasIntel", "fecha": "2026-11-09", "a": 48.3, "d": 46, "u": "https://www.lasillavacia.com/en-vivo/atlas-intel-la-aprobacion-de-abelardo-se-mantiene-por-debajo-del-50/"},
-        {"f": "CB Consultora", "fecha": "2026-11-09", "a": 46.9, "d": 51.7, "u": "https://www.emol.com/noticias/Internacional/2026/11/12/1216871/presidentes-latinoamerica-derrumbe-kast-ranking.html"}
-      ],
-      "series": {
-        "AtlasIntel": [["2026-09-05", 51.8], ["2026-10-07", 48.7], ["2026-11-09", 48.3]],
-        "CB Consultora": [["2026-09-11", 53.6], ["2026-11-09", 46.9]]
-      },
-      "eleccion": {"n": "Regionales y locales", "fecha": "2027-10", "nota": "Presidenciales en 2030."},
-      "actores": [
-        {"n": "Abelardo de la Espriella", "p": "Defensores de la Patria", "rol": "Presidente", "x": 8, "y": 7, "gob": true},
-        {"n": "Iván Cepeda", "p": "Pacto Histórico", "rol": "Perdió el balotaje por menos de un punto", "x": -7, "y": 0},
-        {"n": "Gustavo Petro", "p": "Pacto Histórico", "rol": "Expresidente", "x": -7, "y": 2.5},
-        {"n": "Álvaro Uribe", "p": "Centro Democrático", "rol": "Expresidente", "x": 7, "y": 6},
-        {"n": "Paloma Valencia", "p": "Centro Democrático", "rol": "Senadora", "x": 7, "y": 5},
-        {"n": "José Manuel Restrepo", "p": "Defensores de la Patria", "rol": "Vicepresidente", "x": 5, "y": 2}
-      ],
-      "partidos": [["Defensores de la Patria", "Oficialismo"], ["Centro Democrático", "Aliado"], ["Pacto Histórico", "Principal oposición"], ["Liberal · Conservador · La U", "Partidos tradicionales"], ["Alianza Verde", "Centro izquierda"]],
-      "contexto": "Ganó el balotaje de junio por menos de un punto, el margen más estrecho de la historia. La desaprobación sube tres meses seguidos según AtlasIntel."
-    },
-    "EC": {
-      "gob": {"n": "Daniel Noboa", "cargo": "Presidente", "p": "ADN", "desde": "2023-11-23"},
-      "medida": "Aprobación de la gestión",
-      "enc": [
-        {"f": "CB Consultora", "fecha": "2026-11-09", "a": 47.8, "d": 48.3, "u": "https://www.emol.com/noticias/Internacional/2026/11/12/1216871/presidentes-latinoamerica-derrumbe-kast-ranking.html"}
-      ],
-      "series": {"CB Consultora": [["2026-09-11", 47.4], ["2026-11-09", 47.8]], "Comunicaliza": [["2026-04-15", 47.7]]},
-      "eleccion": {"n": "Seccionales y CPCCS", "fecha": "2026-11-29", "nota": "Se eligen 23 prefectos y 222 alcaldes. Adelantadas por El Niño."},
-      "actores": [
-        {"n": "Daniel Noboa", "p": "ADN", "rol": "Presidente, en campaña por sus candidatos", "x": 6, "y": 5.5, "gob": true},
-        {"n": "Luisa González", "p": "Revolución Ciudadana", "rol": "Perdió el balotaje de 2025", "x": -6, "y": 2},
-        {"n": "Rafael Correa", "p": "Revolución Ciudadana", "rol": "Expresidente, líder del correísmo", "x": -6, "y": 4.5},
-        {"n": "Leonidas Iza", "p": "Pachakutik", "rol": "Dirigente indígena", "x": -8, "y": -1}
-      ],
-      "partidos": [["ADN", "Oficialismo"], ["Revolución Ciudadana", "Principal oposición, lidera la preferencia local (26 % contra 19 %)"], ["PSC", "Derecha"], ["Pachakutik", "Movimiento indígena"]],
-      "contexto": "El 29 de noviembre hay elecciones locales: es la primera prueba de Noboa desde su reelección. El correísmo encabeza la preferencia partidaria para las alcaldías."
-    },
-    "GY": {
-      "gob": {"n": "Irfaan Ali", "cargo": "Presidente", "p": "PPP/C", "desde": "2020-08-02"},
-      "medida": "Aprobación de la gestión",
-      "enc": [],
-      "nota": "No hay encuestas públicas de aprobación recientes. Ali fue reelecto en septiembre de 2025 con mayoría propia (36 de 65 bancas).",
-      "eleccion": {"n": "Generales", "fecha": "2030", "nota": "Ali no puede volver a presentarse."},
-      "ultima": {"n": "Bancas en la Asamblea (2025)", "fecha": "2025-09-01", "u": "https://www.riotimesonline.com/guyana-politics-key-players-2026/", "items": [["PPP/C", 36], ["WIN", 16], ["APNU", 12], ["FGM", 1]], "unidad": "bancas"},
-      "actores": [
-        {"n": "Irfaan Ali", "p": "PPP/C", "rol": "Presidente, segundo mandato", "x": 2, "y": 3, "gob": true},
-        {"n": "Azruddin Mohamed", "p": "WIN", "rol": "Jefe de la oposición, detenido y con pedido de extradición de EE. UU.", "x": 3.5, "y": 3},
-        {"n": "Aubrey Norton", "p": "APNU", "rol": "Líder de APNU", "x": -1, "y": 3}
-      ],
-      "partidos": [["PPP/C", "Oficialismo"], ["WIN", "Nueva primera oposición"], ["APNU", "Oposición tradicional"]],
-      "contexto": "El boom petrolero sostiene al PPP/C. La oposición la encabeza ahora WIN, un partido nuevo cuyo líder enfrenta un pedido de extradición de Estados Unidos."
-    },
-    "PY": {
-      "gob": {"n": "Pedro Alliana", "cargo": "Presidente interino", "p": "ANR · Partido Colorado", "desde": "2026-11-06"},
-      "medida": "Aprobación de Santiago Peña antes de su destitución",
-      "enc": [
-        {"f": "CB Consultora", "fecha": "2026-11-09", "a": 24.7, "d": 69.8, "nota": "Peña", "u": "https://www.emol.com/noticias/Internacional/2026/11/12/1216871/presidentes-latinoamerica-derrumbe-kast-ranking.html"}
-      ],
-      "series": {"CB Consultora": [["2026-09-11", 45.5], ["2026-11-09", 24.7]]},
-      "nota": "Todavía no hay mediciones de Alliana. La última encuesta corresponde a Peña, destituido por el Senado el 6 de noviembre.",
-      "eleccion": {"n": "Generales", "fecha": "2028-04", "nota": "Alliana completa el mandato hasta agosto de 2028."},
-      "actores": [
-        {"n": "Pedro Alliana", "p": "ANR · Honor Colorado", "rol": "Presidente interino", "x": 6, "y": 4, "gob": true},
-        {"n": "Santiago Peña", "p": "ANR", "rol": "Destituido por juicio político, con arresto domiciliario", "x": 6, "y": 3},
-        {"n": "Horacio Cartes", "p": "Honor Colorado", "rol": "Jefe del partido", "x": 7, "y": 4.5},
-        {"n": "Efraín Alegre", "p": "PLRA", "rol": "Líder liberal", "x": 2, "y": 1},
-        {"n": "Kattya González", "p": "Encuentro Nacional", "rol": "Exsenadora", "x": -1, "y": -2}
-      ],
-      "partidos": [["ANR (Colorado)", "Oficialismo"], ["PLRA", "Principal oposición"], ["Encuentro Nacional", "Oposición"], ["Cruzada Nacional", "Oposición"]],
-      "contexto": "El Senado destituyó a Peña por 44 votos a 1 tras la intervención del Ueno Bank. Asumió su vice, Pedro Alliana, cercano a Horacio Cartes."
-    },
-    "PE": {
-      "gob": {"n": "Keiko Fujimori", "cargo": "Presidenta", "p": "Fuerza Popular", "desde": "2026-07-28"},
-      "medida": "Aprobación de la gestión",
-      "enc": [
-        {"f": "Ipsos", "fecha": "2026-11-10", "a": 37, "d": 53, "u": "https://elbuho.pe/2026/11/desaprobacion-de-keiko-fujimori-alcanza-el-53-y-al-parecer-esta-en-caida-libre/"},
-        {"f": "CB Consultora", "fecha": "2026-11-09", "a": 43.8, "d": 54.4, "u": "https://www.emol.com/noticias/Internacional/2026/11/12/1216871/presidentes-latinoamerica-derrumbe-kast-ranking.html"},
-        {"f": "AtlasIntel", "fecha": "2026-10-09", "a": 28.3, "d": 53.6, "u": "https://www.bloomberglinea.com/latinoamerica/peru/aprobacion-de-keiko-fujimori-cae-a-283-en-peru-por-temores-economicos-y-de-seguridad/"}
-      ],
-      "series": {
-        "Ipsos": [["2026-08-15", 57], ["2026-09-15", 42], ["2026-10-15", 40], ["2026-11-10", 37]],
-        "CB Consultora": [["2026-08-10", 55], ["2026-09-11", 52.4], ["2026-11-09", 43.8]]
-      },
-      "eleccion": {"n": "Generales", "fecha": "2031", "nota": "Mandato hasta julio de 2031."},
-      "actores": [
-        {"n": "Keiko Fujimori", "p": "Fuerza Popular", "rol": "Presidenta", "x": 7, "y": 6, "gob": true},
-        {"n": "Roberto Sánchez", "p": "Juntos por el Perú", "rol": "Perdió el balotaje por décimas", "x": -7, "y": 3},
-        {"n": "Rafael López Aliaga", "p": "Renovación Popular", "rol": "Líder de la derecha dura", "x": 8, "y": 8},
-        {"n": "Luis Galarreta", "p": "Fuerza Popular", "rol": "Presidente del Consejo de Ministros", "x": 6.5, "y": 5}
-      ],
-      "partidos": [["Fuerza Popular", "Oficialismo"], ["Renovación Popular", "Derecha"], ["Juntos por el Perú", "Izquierda, principal oposición"], ["APP", "Centro derecha"]],
-      "contexto": "Ganó el balotaje contra Roberto Sánchez por menos de un punto. En cuatro meses su aprobación cayó de 57 % a 37 % en Ipsos; el sur del país es la zona más crítica."
-    },
-    "SR": {
-      "gob": {"n": "Jennifer Geerlings-Simons", "cargo": "Presidenta", "p": "NDP", "desde": "2025-07-16"},
-      "medida": "Aprobación de la gestión",
-      "enc": [],
-      "nota": "No hay encuestas públicas de aprobación. Gobierna una coalición de seis partidos con 34 de 51 bancas.",
-      "eleccion": {"n": "Generales", "fecha": "2030", "nota": ""},
-      "ultima": {"n": "Bancas en la Asamblea (2025)", "fecha": "2025-05-25", "u": "https://www.riotimesonline.com/suriname-politics-key-players-2026/", "items": [["Coalición NDP+5", 34], ["VHP", 17]], "unidad": "bancas"},
-      "actores": [
-        {"n": "Jennifer Geerlings-Simons", "p": "NDP", "rol": "Presidenta, primera mujer en el cargo", "x": -2, "y": 3, "gob": true},
-        {"n": "Gregory Rusland", "p": "NPS", "rol": "Vicepresidente", "x": 1, "y": 1},
-        {"n": "Asiskumar Gajadien", "p": "VHP", "rol": "Jefe del bloque opositor", "x": 3, "y": 1}
-      ],
-      "partidos": [["NDP", "Oficialismo"], ["ABOP · NPS · PL · BEP · A20", "Socios de coalición"], ["VHP", "Oposición"]],
-      "contexto": "Simons asumió con la llegada del petróleo offshore en el horizonte y promete disciplina fiscal y apertura a la inversión."
-    },
-    "UY": {
-      "gob": {"n": "Yamandú Orsi", "cargo": "Presidente", "p": "Frente Amplio (MPP)", "desde": "2025-03-01"},
-      "medida": "Aprobación de la gestión",
-      "enc": [
-        {"f": "CB Consultora", "fecha": "2026-11-09", "a": 38.6, "d": 57.7, "u": "https://www.emol.com/noticias/Internacional/2026/11/12/1216871/presidentes-latinoamerica-derrumbe-kast-ranking.html"},
-        {"f": "Equipos", "fecha": "2026-08-31", "a": 28, "d": 51, "u": "https://www.montevideo.com.uy/Noticias/Encuesta-Equipos-aprobacion-de-Orsi-es-de-28-y-desaprobacion-del-51--uc974593"}
-      ],
-      "series": {
-        "CB Consultora": [["2026-09-11", 37.7], ["2026-10-09", 35.2], ["2026-11-09", 38.6]],
-        "Cifra": [["2025-09-15", 43], ["2026-02-28", 31]],
-        "Factum": [["2026-02-22", 37]],
-        "Equipos": [["2026-08-31", 28]]
-      },
-      "eleccion": {"n": "Nacionales", "fecha": "2029-10", "nota": ""},
-      "actores": [
-        {"n": "Yamandú Orsi", "p": "Frente Amplio", "rol": "Presidente", "x": -4, "y": -1, "gob": true},
-        {"n": "Carolina Cosse", "p": "Frente Amplio", "rol": "Vicepresidenta", "x": -6, "y": 0},
-        {"n": "Álvaro Delgado", "p": "Partido Nacional", "rol": "Excandidato presidencial", "x": 5, "y": 2},
-        {"n": "Andrés Ojeda", "p": "Partido Colorado", "rol": "Senador", "x": 5, "y": 0.5}
-      ],
-      "partidos": [["Frente Amplio", "Oficialismo"], ["Partido Nacional", "Principal oposición"], ["Partido Colorado", "Oposición"], ["Cabildo Abierto", "Derecha"]],
-      "contexto": "Desde fin de 2025 la desaprobación supera a la aprobación en todas las encuestadoras; la oposición tampoco capitaliza el desgaste (Factum)."
-    },
-    "VE": {
-      "gob": {"n": "Delcy Rodríguez", "cargo": "Presidenta encargada", "p": "PSUV", "desde": "2026-01-03"},
-      "medida": "Aprobación de la gestión",
-      "enc": [
-        {"f": "CB Consultora", "fecha": "2026-11-09", "a": 35.6, "d": 59.3, "u": "https://www.emol.com/noticias/Internacional/2026/11/12/1216871/presidentes-latinoamerica-derrumbe-kast-ranking.html"}
-      ],
-      "series": {"CB Consultora": [["2026-09-11", 28.8], ["2026-10-09", 32.3], ["2026-11-09", 35.6]]},
-      "eleccion": {"n": "Presidenciales", "fecha": "2027", "nota": "Sin fecha: primero se renuevan el TSJ (diciembre) y el CNE, según la hoja de ruta acordada con EE. UU."},
-      "actores": [
-        {"n": "Delcy Rodríguez", "p": "PSUV", "rol": "Presidenta encargada desde la captura de Maduro", "x": -5, "y": 8, "gob": true},
-        {"n": "María Corina Machado", "p": "Vente Venezuela", "rol": "Volvió al país en octubre, busca competir en 2027", "x": 7, "y": 3},
-        {"n": "Edmundo González", "p": "Plataforma Unitaria", "rol": "Reclama el triunfo de 2024", "x": 4, "y": 0},
-        {"n": "Diosdado Cabello", "p": "PSUV", "rol": "Ala dura del chavismo", "x": -6, "y": 9}
-      ],
-      "partidos": [["PSUV", "Gobierno de transición"], ["Vente Venezuela", "Oposición"], ["Plataforma Unitaria", "Oposición"]],
-      "contexto": "Transición tutelada por EE. UU.: Rodríguez promete elecciones con autoridad electoral renovada, previsiblemente en 2027, pero sin fecha."
-    },
-    "MX": {
-      "gob": {"n": "Claudia Sheinbaum", "cargo": "Presidenta", "p": "Morena", "desde": "2024-10-01"},
-      "medida": "Aprobación de la gestión",
-      "enc": [
-        {"f": "CB Consultora", "fecha": "2026-11-09", "a": 69.8, "d": 25.5, "u": "https://www.emol.com/noticias/Internacional/2026/11/12/1216871/presidentes-latinoamerica-derrumbe-kast-ranking.html"},
-        {"f": "Polls.mx", "fecha": "2026-11-11", "a": 67, "d": 32, "u": "https://lagentepide.substack.com/p/monitor-de-aprobacion-presidencial-142"}
-      ],
-      "series": {"CB Consultora": [["2026-08-10", 66.5], ["2026-09-11", 69], ["2026-10-09", 69.3], ["2026-11-09", 69.8]]},
-      "eleccion": {"n": "Intermedias", "fecha": "2027-06-06", "nota": "Se renueva la Cámara de Diputados y 17 gubernaturas."},
-      "actores": [
-        {"n": "Claudia Sheinbaum", "p": "Morena", "rol": "Presidenta", "x": -4, "y": 3, "gob": true},
-        {"n": "Jorge Romero", "p": "PAN", "rol": "Presidente del PAN", "x": 5, "y": 4},
-        {"n": "Alejandro Moreno", "p": "PRI", "rol": "Presidente del PRI", "x": 3, "y": 5},
-        {"n": "Jorge Álvarez Máynez", "p": "Movimiento Ciudadano", "rol": "Excandidato presidencial", "x": -1, "y": -2}
-      ],
-      "partidos": [["Morena", "Oficialismo"], ["PVEM · PT", "Aliados"], ["PAN", "Principal oposición"], ["PRI", "Oposición"], ["Movimiento Ciudadano", "Oposición"]],
-      "contexto": "Es la presidenta mejor evaluada de la región en el ranking mensual de CB Consultora. Llega a las intermedias de 2027 con mayoría calificada en el Congreso."
-    },
-    "US": {
-      "gob": {"n": "Donald Trump", "cargo": "Presidente", "p": "Republicano", "desde": "2025-01-20"},
-      "medida": "Aprobación del presidente",
-      "enc": [
-        {"f": "Economist/YouGov", "fecha": "2026-11-11", "a": 32, "d": 63, "u": "https://newsweek.com/donald-trump-approval-rating-falling-midterm-losses-12709719"},
-        {"f": "Reuters/Ipsos", "fecha": "2026-11-09", "a": 32, "d": 65, "u": "https://newsweek.com/donald-trump-approval-rating-falling-midterm-losses-12709719"},
-        {"f": "CNN/SSRS", "fecha": "2026-10-18", "a": 32, "d": null, "u": "https://newsweek.com/donald-trump-approval-rating-falling-midterm-losses-12709719"}
-      ],
-      "agregadores": [
-        {"f": "Silver Bulletin", "fecha": "2026-11-19", "a": 37, "d": 60, "u": "https://www.natesilver.net/p/trump-approval-ratings-nate-silver-bulletin"},
-        {"f": "New York Times", "fecha": "2026-11-13", "a": 36, "d": 61, "u": "https://newsweek.com/donald-trump-approval-rating-falling-midterm-losses-12709719"},
-        {"f": "RealClearPolitics", "fecha": "2026-11-13", "a": 38.7, "d": null, "u": "https://newsweek.com/donald-trump-approval-rating-falling-midterm-losses-12709719"}
-      ],
-      "series": {
-        "Economist/YouGov": [["2026-08-05", 33], ["2026-11-04", 36], ["2026-11-11", 32]],
-        "Reuters/Ipsos": [["2026-10-19", 31], ["2026-11-02", 32], ["2026-11-09", 32]],
-        "Silver Bulletin": [["2026-11-12", 37.6], ["2026-11-19", 37]]
-      },
-      "eleccion": {"n": "Presidenciales", "fecha": "2028-11-07", "nota": "En las legislativas del 3 de noviembre los demócratas ganaron la Cámara y el Senado."},
-      "actores": [
-        {"n": "Donald Trump", "p": "Republicano", "rol": "Presidente", "x": 6, "y": 7.5, "gob": true},
-        {"n": "JD Vance", "p": "Republicano", "rol": "Vicepresidente, posible candidato 2028", "x": 5, "y": 7},
-        {"n": "Marco Rubio", "p": "Republicano", "rol": "Secretario de Estado", "x": 6, "y": 5},
-        {"n": "Gavin Newsom", "p": "Demócrata", "rol": "Gobernador de California, posible candidato 2028", "x": -3, "y": 1},
-        {"n": "Alexandria Ocasio-Cortez", "p": "Demócrata", "rol": "Representante, ala progresista", "x": -7, "y": -1.5}
-      ],
-      "partidos": [["Republicano", "Gobierno, perdió el Congreso"], ["Demócrata", "Controla el Congreso desde enero"]],
-      "contexto": "La aprobación neta de Trump tocó su piso histórico (-31 en Economist/YouGov) tras perder el Congreso. La inflación y la guerra con Irán pesan en la evaluación."
-    },
-    "ES": {
-      "gob": {"n": "Pedro Sánchez", "cargo": "Presidente del Gobierno", "p": "PSOE", "desde": "2018-06-02"},
-      "medida": "Intención de voto, elecciones del 29 de noviembre",
-      "enc": [],
-      "nota": "No hay una medición reciente de aprobación de Sánchez. Con elecciones el 29 de noviembre, el dato que importa es la intención de voto.",
-      "intencion": {"fuente": "Promedio de encuestas (Demócrata, 19 institutos)", "fecha": "2026-11-20", "u": "https://www.democrata.es/encuestas/elecciones-generales/promedio-encuestas-trackings-29n/",
-        "items": [["PP", 31.0], ["PSOE", 27.8], ["Vox", 19.1], ["Frente Amplio", 6.2], ["ERC", 2.5]], "escanos": "Escaños estimados: PP 128, PSOE 111, Vox 65. PP y Vox sumarían mayoría absoluta (176)."},
-      "sondeos": [
-        {"f": "40dB (El País)", "fecha": "2026-11-17", "v": {"PP": 32.2, "PSOE": 30.7, "Vox": 17.0}, "u": "https://es.ara.cat/politica/dicen-encuestas-elecciones-espanolas-29-n_1_5874092.html"},
-        {"f": "Sigma Dos (El Mundo)", "fecha": "2026-11-16", "v": {"PP": 30.7, "PSOE": 26.4, "Vox": 19.8}, "u": "https://www.democrata.es/en/center-of-surveys-and-electoral-polls/general-elections/feijoo-wins-the-opinion-poll-of-the-29n-and-pp-vox-maintains-majority/"},
-        {"f": "Public First (Politico)", "fecha": "2026-11-17", "v": {"PP": 29.5, "PSOE": 27.2, "Vox": 19.6}, "u": "https://es.ara.cat/politica/dicen-encuestas-elecciones-espanolas-29-n_1_5874092.html"},
-        {"f": "SW Demoscopia", "fecha": "2026-11-17", "v": {"PP": 28.9, "PSOE": 31.9, "Vox": 16.5}, "u": "https://www.democrata.es/en/center-of-surveys-and-electoral-polls/general-elections/feijoo-wins-the-opinion-poll-of-the-29n-and-pp-vox-maintains-majority/"},
-        {"f": "Sondaxe (La Voz de Galicia)", "fecha": "2026-11-16", "v": {"PP": 29.0, "PSOE": 27.0, "Vox": 19.4}, "u": "https://www.democrata.es/en/center-of-surveys-and-electoral-polls/general-elections/feijoo-wins-the-opinion-poll-of-the-29n-and-pp-vox-maintains-majority/"},
-        {"f": "YouGov (Ara)", "fecha": "2026-11-15", "v": {"PP": 29.6, "PSOE": 25.9}, "u": "https://es.ara.cat/politica/dicen-encuestas-elecciones-espanolas-29-n_1_5874092.html"},
-        {"f": "Data10 (OKDiario)", "fecha": "2026-11-12", "v": {"PP": 31.7, "PSOE": 25.5, "Vox": 20.4}, "u": "https://www.democrata.es/en/center-of-surveys-and-electoral-polls/general-elections/feijoo-wins-the-opinion-poll-of-the-29n-and-pp-vox-maintains-majority/"},
-        {"f": "CIS", "fecha": "2026-10-30", "v": {"PP": 25.5, "PSOE": 33.3, "Vox": 18.4}, "u": "https://es.ara.cat/politica/dicen-encuestas-elecciones-espanolas-29-n_1_5874092.html"}
-      ],
-      "series": {
-        "PP": [["2026-11-14", 31.5], ["2026-11-18", 30.8], ["2026-11-20", 31.0]],
-        "PSOE": [["2026-11-14", 26.8], ["2026-11-18", 27.5], ["2026-11-20", 27.8]],
-        "Vox": [["2026-11-14", 19.1], ["2026-11-18", 19.1], ["2026-11-20", 19.1]]
-      },
-      "series_nota": "Promedio de encuestas de Demócrata, intención de voto en %",
-      "eleccion": {"n": "Generales anticipadas", "fecha": "2026-11-29", "nota": "Adelanto convocado por Sánchez."},
-      "actores": [
-        {"n": "Pedro Sánchez", "p": "PSOE", "rol": "Presidente y candidato", "x": -3, "y": 1, "gob": true},
-        {"n": "Alberto Núñez Feijóo", "p": "PP", "rol": "Candidato, primero en las encuestas", "x": 5, "y": 3},
-        {"n": "Santiago Abascal", "p": "Vox", "rol": "Candidato, tercera fuerza en ascenso", "x": 6.5, "y": 8},
-        {"n": "Ada Colau", "p": "Frente Amplio", "rol": "Candidata, sucesor de Sumar", "x": -7, "y": -3},
-        {"n": "Gabriel Rufián", "p": "ERC", "rol": "Candidato", "x": -5, "y": -2}
-      ],
-      "partidos": [["PSOE", "Gobierno"], ["PP", "Principal oposición"], ["Vox", "Derecha radical"], ["Frente Amplio", "Izquierda (ex Sumar)"], ["ERC · Junts · PNV · Bildu", "Nacionalistas"], ["Podemos", "Izquierda"]],
-      "contexto": "A nueve días de votar, el promedio da ganador al PP y mayoría absoluta con Vox. Solo el CIS pone primero al PSOE."
-    },
-    "GB": {
-      "gob": {"n": "Andy Burnham", "cargo": "Primer ministro", "p": "Laborista", "desde": "2026-07"},
-      "medida": "Imagen favorable",
-      "enc": [
-        {"f": "YouGov", "fecha": "2026-11-12", "a": 49, "d": 41, "u": "https://yougov.com/en-gb/articles/55981-political-favourability-ratings-november-2026"}
-      ],
-      "series": {"YouGov": [["2026-10-16", 46], ["2026-11-12", 49]], "Ipsos": [["2026-07-22", 32]]},
-      "eleccion": {"n": "Generales", "fecha": "2029", "nota": "A más tardar en agosto de 2029."},
-      "intencion": {"fuente": "YouGov", "fecha": "2026-11-16", "u": "https://yougov.com/en-gb/articles/55919-who-would-make-the-best-prime-minister-november-2026",
-        "items": [["Laborista", 27], ["Conservador", 23], ["Reform UK", 21], ["Liberal Demócrata", 11], ["Verde", 9]]},
-      "dirigentes": {"fuente": "YouGov", "fecha": "2026-11-12", "medida": "Imagen favorable / desfavorable", "u": "https://yougov.com/en-gb/articles/55981-political-favourability-ratings-november-2026",
-        "items": [["Andy Burnham", 49, 41], ["Kemi Badenoch", 34, 47], ["Ed Davey", 26, 38], ["Nigel Farage", 23, 68], ["Zack Polanski", 18, 55]]},
-      "actores": [
-        {"n": "Andy Burnham", "p": "Laborista", "rol": "Primer ministro desde julio", "x": -4, "y": 1, "gob": true},
-        {"n": "Kemi Badenoch", "p": "Conservador", "rol": "Líder de la oposición", "x": 6, "y": 5},
-        {"n": "Nigel Farage", "p": "Reform UK", "rol": "Líder de Reform", "x": 5, "y": 7.5},
-        {"n": "Ed Davey", "p": "Liberal Demócrata", "rol": "Líder liberal demócrata", "x": 0, "y": -3},
-        {"n": "Zack Polanski", "p": "Verde", "rol": "Líder verde", "x": -8, "y": -5}
-      ],
-      "partidos": [["Laborista", "Gobierno"], ["Conservador", "Oposición oficial"], ["Reform UK", "Derecha populista"], ["Liberal Demócrata", "Centro"], ["Verde", "Izquierda ecologista"]],
-      "contexto": "Burnham reemplazó a Starmer en julio y es el primer ministro con mejor imagen en más de seis años. El laborismo recuperó el primer lugar en intención de voto."
-    },
-    "EU": {
-      "gob": {"n": "Ursula von der Leyen", "cargo": "Presidenta de la Comisión Europea", "p": "PPE", "desde": "2019-12-01"},
-      "medida": "Imagen en la UE",
-      "enc": [],
-      "nota": "No hay medición paneuropea reciente. La última (Euroscope, marzo de 2026) le daba 50 % de opinión negativa y un saldo de -17, el peor entre ocho líderes europeos.",
-      "nota_u": "https://www.eunews.it/en/2026/04/13/polling-europe-euroscope-approval-ratings-for-eu-leaders-plummet-with-the-exception-of-sanchez/",
-      "eleccion": {"n": "Parlamento Europeo", "fecha": "2029-06", "nota": ""},
-      "actores": [
-        {"n": "Ursula von der Leyen", "p": "PPE", "rol": "Presidenta de la Comisión, segundo mandato", "x": 3, "y": 2.5, "gob": true},
-        {"n": "António Costa", "p": "S&D", "rol": "Presidente del Consejo Europeo", "x": -2, "y": 1},
-        {"n": "Kaja Kallas", "p": "Renew", "rol": "Alta representante de Exteriores", "x": 4, "y": 1},
-        {"n": "Roberta Metsola", "p": "PPE", "rol": "Presidenta del Parlamento", "x": 3, "y": 3},
-        {"n": "Jordan Bardella", "p": "Patriotas", "rol": "Presidente del grupo Patriotas", "x": 2, "y": 7.5}
-      ],
-      "partidos": [["PPE", "Primer grupo"], ["S&D", "Socialdemócratas"], ["Patriotas por Europa", "Derecha soberanista"], ["ECR", "Conservadores"], ["Renew", "Liberales"], ["Verdes/ALE", "Ecologistas"], ["La Izquierda", "Izquierda"]],
-      "contexto": "La Comisión se apoya en la mayoría de PPE, socialdemócratas y liberales en el Parlamento Europeo."
-    }
+ "meta": {
+  "revisado": "2026-11-20",
+  "nota": "Datos curados a mano por Sudakaos a partir de encuestas publicadas. El promedio es la media simple de la última medición de cada encuestadora de los últimos 45 días. La ubicación en el compás es una estimación editorial de Sudakaos, no una medición.",
+  "cb": {
+   "ago": "https://politica.expansion.mx/mexico/2026/09/15/sheinbaum-aprobacion-ranking-latinoamerica",
+   "sep": "https://caretas.pe/politica/keiko-fujimori-en-el-top-5-de-los-presidentes-de-america-latina-con-mayor-aprobacion-mira-el-ranking-completo-cb-global-data/",
+   "oct": "https://prensamercosur.org/2026/10/12/ranking-de-presidentes-latinoamericanos-octubre-2026/",
+   "nov": "https://www.emol.com/noticias/Internacional/2026/11/12/1216871/presidentes-latinoamerica-derrumbe-kast-ranking.html"
   }
+ },
+ "paises": {
+  "AR": {
+   "gob": {
+    "n": "Javier Milei",
+    "cargo": "Presidente",
+    "p": "La Libertad Avanza",
+    "desde": "2023-12-10"
+   },
+   "medida": "Aprobación de la gestión",
+   "enc": [
+    {
+     "f": "AtlasIntel",
+     "fecha": "2026-11-09",
+     "a": 36.2,
+     "d": 60.6,
+     "u": "https://perfil.com/politica/encuesta-javier-milei-cae-en-aprobacion-pero-ningun-dirigente-opositor-logra-una-imagen-mayoritariamente-positiva-aW60R8o7bUON"
+    },
+    {
+     "f": "CB Consultora",
+     "fecha": "2026-11-09",
+     "a": 37.4,
+     "d": 57.7,
+     "u": "https://www.emol.com/noticias/Internacional/2026/11/12/1216871/presidentes-latinoamerica-derrumbe-kast-ranking.html"
+    },
+    {
+     "f": "Giacobbe",
+     "fecha": "2026-11-02",
+     "a": 34.9,
+     "d": 56.8,
+     "nota": "imagen",
+     "u": "https://perfil.com/reperfilar/una-encuesta-midio-la-imagen-de-milei-y-otros-dirigentes-el-presidente-tiene-un-568-de-opinion-negativa-ah5hI4S6fvMC"
+    },
+    {
+     "f": "Zentrix",
+     "fecha": "2026-10-25",
+     "a": 36.2,
+     "d": 55.5,
+     "u": "https://eleconomista.com.ar/politica/en-sectores-bajos-733-asegura-jamas-votaria-milei-n99373"
+    }
+   ],
+   "series": {
+    "Zentrix": [
+     [
+      "2026-07-25",
+      31.4
+     ],
+     [
+      "2026-08-25",
+      32.2
+     ],
+     [
+      "2026-09-25",
+      35.2
+     ],
+     [
+      "2026-10-25",
+      36.2
+     ]
+    ],
+    "AtlasIntel": [
+     [
+      "2026-08-03",
+      37.1
+     ],
+     [
+      "2026-10-09",
+      39
+     ],
+     [
+      "2026-11-09",
+      36.2
+     ]
+    ],
+    "CB Consultora": [
+     [
+      "2026-09-11",
+      35.5
+     ],
+     [
+      "2026-11-09",
+      37.4
+     ]
+    ]
+   },
+   "eleccion": {
+    "n": "Presidenciales",
+    "fecha": "2027-10",
+    "nota": "Primera vuelta prevista para octubre de 2027."
+   },
+   "dirigentes": {
+    "fuente": "AtlasIntel",
+    "fecha": "2026-11-09",
+    "medida": "Imagen positiva / negativa",
+    "u": "https://perfil.com/politica/encuesta-javier-milei-cae-en-aprobacion-pero-ningun-dirigente-opositor-logra-una-imagen-mayoritariamente-positiva-aW60R8o7bUON",
+    "items": [
+     [
+      "Cristina Kirchner",
+      41,
+      53
+     ],
+     [
+      "Axel Kicillof",
+      39,
+      54
+     ],
+     [
+      "Myriam Bregman",
+      39,
+      51
+     ],
+     [
+      "Patricia Bullrich",
+      37,
+      57
+     ],
+     [
+      "Javier Milei",
+      36,
+      62
+     ],
+     [
+      "Sergio Massa",
+      26,
+      63
+     ],
+     [
+      "Mauricio Macri",
+      24,
+      66
+     ],
+     [
+      "Victoria Villarruel",
+      18,
+      59
+     ]
+    ]
+   },
+   "actores": [
+    {
+     "n": "Javier Milei",
+     "p": "LLA",
+     "rol": "Presidente, busca la reelección",
+     "x": 8.5,
+     "y": 1.5,
+     "gob": true
+    },
+    {
+     "n": "Patricia Bullrich",
+     "p": "LLA",
+     "rol": "Senadora",
+     "x": 6.5,
+     "y": 6.5
+    },
+    {
+     "n": "Axel Kicillof",
+     "p": "PJ · Fuerza Patria",
+     "rol": "Gobernador de Buenos Aires",
+     "x": -6.5,
+     "y": 1.5
+    },
+    {
+     "n": "Cristina Kirchner",
+     "p": "PJ",
+     "rol": "Presidenta del PJ, con prisión domiciliaria",
+     "x": -5,
+     "y": 3,
+     "wiki": "Cristina Fernández de Kirchner"
+    },
+    {
+     "n": "Myriam Bregman",
+     "p": "FIT-U",
+     "rol": "Diputada",
+     "x": -9,
+     "y": -3.5
+    },
+    {
+     "n": "Mauricio Macri",
+     "p": "PRO",
+     "rol": "Expresidente",
+     "x": 5.5,
+     "y": 2
+    },
+    {
+     "n": "Juan Schiaretti",
+     "p": "Provincias Unidas",
+     "rol": "Exgobernador de Córdoba",
+     "x": 1,
+     "y": 1
+    },
+    {
+     "n": "Sergio Massa",
+     "p": "Frente Renovador",
+     "rol": "Exministro de Economía",
+     "x": -1,
+     "y": 2
+    }
+   ],
+   "partidos": [
+    [
+     "La Libertad Avanza",
+     "Oficialismo"
+    ],
+    [
+     "PJ · Fuerza Patria",
+     "Principal oposición"
+    ],
+    [
+     "PRO",
+     "Aliado parlamentario"
+    ],
+    [
+     "UCR",
+     "Oposición dialoguista"
+    ],
+    [
+     "Provincias Unidas",
+     "Gobernadores"
+    ],
+    [
+     "FIT-U",
+     "Izquierda"
+    ]
+   ],
+   "contexto": "LLA ganó las legislativas de octubre de 2025. Un año después, la aprobación de Milei ronda el 36 % y ningún opositor logra imagen mayoritariamente positiva."
+  },
+  "BO": {
+   "gob": {
+    "n": "Rodrigo Paz",
+    "cargo": "Presidente",
+    "p": "Partido Demócrata Cristiano",
+    "desde": "2025-11-08"
+   },
+   "medida": "Aprobación de la gestión",
+   "enc": [
+    {
+     "f": "CB Consultora",
+     "fecha": "2026-11-09",
+     "a": 40.2,
+     "d": 55.6,
+     "u": "https://www.emol.com/noticias/Internacional/2026/11/12/1216871/presidentes-latinoamerica-derrumbe-kast-ranking.html"
+    },
+    {
+     "f": "Ipsos Ciesmori",
+     "fecha": "2026-11-05",
+     "a": 25,
+     "d": 59,
+     "nota": "cuatro ciudades",
+     "u": "https://www.cadena3.com/noticia/mundo/caida-del-apoyo-a-rodrigo-paz-pereira-un-ano-de-mandato-marcado-por-el-rechazo-en-bolivia_611087"
+    }
+   ],
+   "series": {
+    "Ipsos Ciesmori": [
+     [
+      "2025-11-15",
+      65
+     ],
+     [
+      "2026-04-15",
+      52
+     ],
+     [
+      "2026-08-15",
+      21
+     ],
+     [
+      "2026-11-05",
+      25
+     ]
+    ],
+    "CB Consultora": [
+     [
+      "2026-08-10",
+      50.5
+     ],
+     [
+      "2026-09-11",
+      41.6
+     ],
+     [
+      "2026-11-09",
+      40.2
+     ]
+    ]
+   },
+   "eleccion": {
+    "n": "Generales",
+    "fecha": "2030",
+    "nota": "Mandato hasta noviembre de 2030."
+   },
+   "actores": [
+    {
+     "n": "Rodrigo Paz",
+     "p": "PDC",
+     "rol": "Presidente",
+     "x": 3,
+     "y": 1.5,
+     "gob": true
+    },
+    {
+     "n": "Edmand Lara",
+     "p": "PDC",
+     "rol": "Vicepresidente, enfrentado con Paz",
+     "x": -1,
+     "y": 4.5
+    },
+    {
+     "n": "Jorge Quiroga",
+     "p": "Libre",
+     "rol": "Perdió el balotaje de 2025",
+     "x": 7,
+     "y": 3,
+     "wiki": "Jorge Quiroga Ramírez"
+    },
+    {
+     "n": "Andrónico Rodríguez",
+     "p": "Alianza Popular",
+     "rol": "Expresidente del Senado",
+     "x": -5,
+     "y": 2
+    },
+    {
+     "n": "Evo Morales",
+     "p": "Evismo",
+     "rol": "Expresidente, prófugo de la justicia",
+     "x": -7,
+     "y": 5
+    }
+   ],
+   "partidos": [
+    [
+     "PDC",
+     "Oficialismo"
+    ],
+    [
+     "Libre",
+     "Oposición de derecha"
+    ],
+    [
+     "Unidad",
+     "Centro derecha"
+    ],
+    [
+     "Alianza Popular",
+     "Izquierda"
+    ],
+    [
+     "MAS",
+     "Izquierda, en crisis"
+    ]
+   ],
+   "contexto": "Paz pasó del 65 % de aprobación al asumir a cerca del 25 % en las ciudades grandes, según Ipsos Ciesmori. El 76 % no lo volvería a votar."
+  },
+  "BR": {
+   "gob": {
+    "n": "Luiz Inácio Lula da Silva",
+    "cargo": "Presidente",
+    "p": "PT",
+    "desde": "2023-01-01"
+   },
+   "medida": "Aprobación de la gestión",
+   "enc": [
+    {
+     "f": "CB Consultora",
+     "fecha": "2026-11-09",
+     "a": 50.4,
+     "d": 46.9,
+     "u": "https://www.emol.com/noticias/Internacional/2026/11/12/1216871/presidentes-latinoamerica-derrumbe-kast-ranking.html"
+    },
+    {
+     "f": "AtlasIntel",
+     "fecha": "2026-11-09",
+     "a": 48,
+     "d": 50,
+     "u": "https://lagentepide.substack.com/p/monitor-de-aprobacion-presidencial-142"
+    }
+   ],
+   "series": {
+    "CB Consultora": [
+     [
+      "2026-09-11",
+      48.5
+     ],
+     [
+      "2026-11-09",
+      50.4
+     ]
+    ]
+   },
+   "eleccion": {
+    "n": "Asunción del cuarto mandato",
+    "fecha": "2027-01-01",
+    "nota": "Próximas: municipales de octubre de 2028."
+   },
+   "ultima": {
+    "n": "Balotaje presidencial",
+    "fecha": "2026-10-25",
+    "u": "https://www.bloomberglinea.com.br/brasil/lula-e-reeleito-com-5174-no-segundo-turno-e-chega-ao-quarto-mandato-na-presidencia/",
+    "items": [
+     [
+      "Lula (PT)",
+      51.79
+     ],
+     [
+      "Flávio Bolsonaro (PL)",
+      48.21
+     ]
+    ]
+   },
+   "actores": [
+    {
+     "n": "Lula da Silva",
+     "p": "PT",
+     "rol": "Presidente reelecto (2027-2030)",
+     "x": -4,
+     "y": 1,
+     "gob": true,
+     "wiki": "Luiz Inácio Lula da Silva"
+    },
+    {
+     "n": "Flávio Bolsonaro",
+     "p": "PL",
+     "rol": "Senador, perdió el balotaje",
+     "x": 6.5,
+     "y": 6.5
+    },
+    {
+     "n": "Tarcísio de Freitas",
+     "p": "Republicanos",
+     "rol": "Gobernador de São Paulo",
+     "x": 6.5,
+     "y": 4
+    },
+    {
+     "n": "Geraldo Alckmin",
+     "p": "PSB",
+     "rol": "Vicepresidente",
+     "x": 1,
+     "y": 2
+    }
+   ],
+   "partidos": [
+    [
+     "PT",
+     "Oficialismo"
+    ],
+    [
+     "PL",
+     "Principal oposición, primera bancada desde 2027 (121 diputados)"
+    ],
+    [
+     "Republicanos",
+     "Oposición"
+    ],
+    [
+     "Novo",
+     "Oposición liberal"
+    ],
+    [
+     "PSD · MDB · União Brasil",
+     "Centrão"
+    ]
+   ],
+   "contexto": "Lula ganó su cuarto mandato por 3,6 puntos tras salir segundo en primera vuelta. El Congreso que asume en febrero de 2027 es más opositor: PL, Novo y Republicanos suman 172 diputados."
+  },
+  "CL": {
+   "gob": {
+    "n": "José Antonio Kast",
+    "cargo": "Presidente",
+    "p": "Partido Republicano",
+    "desde": "2026-03-11"
+   },
+   "medida": "Aprobación de la gestión",
+   "enc": [
+    {
+     "f": "Cadem",
+     "fecha": "2026-11-15",
+     "a": 27,
+     "d": 69,
+     "u": "https://www.emol.com/noticias/Nacional/2026/11/15/1217176/cadem-aprobacion-kast-cae.html"
+    },
+    {
+     "f": "Criteria",
+     "fecha": "2026-11-14",
+     "a": 18,
+     "d": 72,
+     "u": "https://lagentepide.substack.com/p/monitor-de-aprobacion-presidencial-142"
+    },
+    {
+     "f": "CB Consultora",
+     "fecha": "2026-11-09",
+     "a": 33.5,
+     "d": 62.7,
+     "u": "https://www.emol.com/noticias/Internacional/2026/11/12/1216871/presidentes-latinoamerica-derrumbe-kast-ranking.html"
+    }
+   ],
+   "series": {
+    "Cadem": [
+     [
+      "2026-10-25",
+      29
+     ],
+     [
+      "2026-11-01",
+      26
+     ],
+     [
+      "2026-11-08",
+      29
+     ],
+     [
+      "2026-11-15",
+      27
+     ]
+    ],
+    "CB Consultora": [
+     [
+      "2026-09-11",
+      42.9
+     ],
+     [
+      "2026-11-09",
+      33.5
+     ]
+    ]
+   },
+   "eleccion": {
+    "n": "Municipales y regionales",
+    "fecha": "2028-10",
+    "nota": "Presidenciales en noviembre de 2029."
+   },
+   "dirigentes": {
+    "fuente": "Cadem",
+    "fecha": "2026-11-15",
+    "medida": "Imagen positiva",
+    "u": "https://www.emol.com/noticias/Nacional/2026/11/15/1217176/cadem-aprobacion-kast-cae.html",
+    "items": [
+     [
+      "Tomás Vodanovic",
+      64
+     ],
+     [
+      "Sebastián Sichel",
+      58
+     ],
+     [
+      "Macarena Ripamonti",
+      58
+     ],
+     [
+      "Matías Toledo",
+      56
+     ],
+     [
+      "Max Luksic",
+      55
+     ],
+     [
+      "Michelle Bachelet",
+      51
+     ],
+     [
+      "Gabriel Boric",
+      46
+     ]
+    ]
+   },
+   "actores": [
+    {
+     "n": "José Antonio Kast",
+     "p": "Republicano",
+     "rol": "Presidente",
+     "x": 8,
+     "y": 6.5,
+     "gob": true
+    },
+    {
+     "n": "Johannes Kaiser",
+     "p": "Libertario",
+     "rol": "Diputado",
+     "x": 9,
+     "y": 4
+    },
+    {
+     "n": "Evelyn Matthei",
+     "p": "UDI",
+     "rol": "Excandidata presidencial",
+     "x": 6,
+     "y": 3
+    },
+    {
+     "n": "Jeannette Jara",
+     "p": "PC",
+     "rol": "Perdió el balotaje de 2025",
+     "x": -7,
+     "y": 2
+    },
+    {
+     "n": "Tomás Vodanovic",
+     "p": "Frente Amplio",
+     "rol": "Alcalde de Maipú, mejor imagen",
+     "x": -5,
+     "y": -2
+    },
+    {
+     "n": "Michelle Bachelet",
+     "p": "PS",
+     "rol": "Expresidenta",
+     "x": -4,
+     "y": 0
+    }
+   ],
+   "partidos": [
+    [
+     "Republicano",
+     "Oficialismo"
+    ],
+    [
+     "UDI · RN · Evópoli",
+     "Derecha tradicional"
+    ],
+    [
+     "Libertario",
+     "Derecha"
+    ],
+    [
+     "Frente Amplio",
+     "Izquierda"
+    ],
+    [
+     "PS · PPD",
+     "Socialdemocracia"
+    ],
+    [
+     "PC",
+     "Izquierda"
+    ]
+   ],
+   "contexto": "En CB Consultora pasó de 42,9 % en septiembre a 33,5 % en noviembre, y en Cadem no supera el 30 % desde la crisis por las rebajas de pena. Pesan también el paro de camioneros por el combustible y el desempleo."
+  },
+  "CO": {
+   "gob": {
+    "n": "Abelardo de la Espriella",
+    "cargo": "Presidente",
+    "p": "Defensores de la Patria",
+    "desde": "2026-08-07"
+   },
+   "medida": "Aprobación de la gestión",
+   "enc": [
+    {
+     "f": "AtlasIntel",
+     "fecha": "2026-11-09",
+     "a": 48.3,
+     "d": 46,
+     "u": "https://www.lasillavacia.com/en-vivo/atlas-intel-la-aprobacion-de-abelardo-se-mantiene-por-debajo-del-50/"
+    },
+    {
+     "f": "CB Consultora",
+     "fecha": "2026-11-09",
+     "a": 46.9,
+     "d": 51.7,
+     "u": "https://www.emol.com/noticias/Internacional/2026/11/12/1216871/presidentes-latinoamerica-derrumbe-kast-ranking.html"
+    }
+   ],
+   "series": {
+    "AtlasIntel": [
+     [
+      "2026-09-05",
+      51.8
+     ],
+     [
+      "2026-10-07",
+      48.7
+     ],
+     [
+      "2026-11-09",
+      48.3
+     ]
+    ],
+    "CB Consultora": [
+     [
+      "2026-09-11",
+      53.6
+     ],
+     [
+      "2026-11-09",
+      46.9
+     ]
+    ]
+   },
+   "eleccion": {
+    "n": "Regionales y locales",
+    "fecha": "2027-10",
+    "nota": "Presidenciales en 2030."
+   },
+   "actores": [
+    {
+     "n": "Abelardo de la Espriella",
+     "p": "Defensores de la Patria",
+     "rol": "Presidente",
+     "x": 8,
+     "y": 7,
+     "gob": true
+    },
+    {
+     "n": "Iván Cepeda",
+     "p": "Pacto Histórico",
+     "rol": "Perdió el balotaje por menos de un punto",
+     "x": -7,
+     "y": 0,
+     "wiki": "Iván Cepeda Castro"
+    },
+    {
+     "n": "Gustavo Petro",
+     "p": "Pacto Histórico",
+     "rol": "Expresidente",
+     "x": -7,
+     "y": 2.5
+    },
+    {
+     "n": "Álvaro Uribe",
+     "p": "Centro Democrático",
+     "rol": "Expresidente",
+     "x": 7,
+     "y": 6,
+     "wiki": "Álvaro Uribe Vélez"
+    },
+    {
+     "n": "Paloma Valencia",
+     "p": "Centro Democrático",
+     "rol": "Senadora",
+     "x": 7,
+     "y": 5
+    },
+    {
+     "n": "José Manuel Restrepo",
+     "p": "Defensores de la Patria",
+     "rol": "Vicepresidente",
+     "x": 5,
+     "y": 2,
+     "wiki": "José Manuel Restrepo Abondano"
+    }
+   ],
+   "partidos": [
+    [
+     "Defensores de la Patria",
+     "Oficialismo"
+    ],
+    [
+     "Centro Democrático",
+     "Aliado"
+    ],
+    [
+     "Pacto Histórico",
+     "Principal oposición"
+    ],
+    [
+     "Liberal · Conservador · La U",
+     "Partidos tradicionales"
+    ],
+    [
+     "Alianza Verde",
+     "Centro izquierda"
+    ]
+   ],
+   "contexto": "Ganó el balotaje de junio por menos de un punto, el margen más estrecho de la historia. La desaprobación sube tres meses seguidos según AtlasIntel."
+  },
+  "EC": {
+   "gob": {
+    "n": "Daniel Noboa",
+    "cargo": "Presidente",
+    "p": "ADN",
+    "desde": "2023-11-23"
+   },
+   "medida": "Aprobación de la gestión",
+   "enc": [
+    {
+     "f": "CB Consultora",
+     "fecha": "2026-11-09",
+     "a": 47.8,
+     "d": 48.3,
+     "u": "https://www.emol.com/noticias/Internacional/2026/11/12/1216871/presidentes-latinoamerica-derrumbe-kast-ranking.html"
+    }
+   ],
+   "series": {
+    "CB Consultora": [
+     [
+      "2026-09-11",
+      47.4
+     ],
+     [
+      "2026-11-09",
+      47.8
+     ]
+    ],
+    "Comunicaliza": [
+     [
+      "2026-04-15",
+      47.7
+     ]
+    ]
+   },
+   "eleccion": {
+    "n": "Seccionales y CPCCS",
+    "fecha": "2026-11-29",
+    "nota": "Se eligen 23 prefectos y 222 alcaldes. Adelantadas por El Niño."
+   },
+   "actores": [
+    {
+     "n": "Daniel Noboa",
+     "p": "ADN",
+     "rol": "Presidente, en campaña por sus candidatos",
+     "x": 6,
+     "y": 5.5,
+     "gob": true
+    },
+    {
+     "n": "Luisa González",
+     "p": "Revolución Ciudadana",
+     "rol": "Perdió el balotaje de 2025",
+     "x": -6,
+     "y": 2,
+     "wiki": "Luisa González (política)"
+    },
+    {
+     "n": "Rafael Correa",
+     "p": "Revolución Ciudadana",
+     "rol": "Expresidente, líder del correísmo",
+     "x": -6,
+     "y": 4.5
+    },
+    {
+     "n": "Leonidas Iza",
+     "p": "Pachakutik",
+     "rol": "Dirigente indígena",
+     "x": -8,
+     "y": -1
+    }
+   ],
+   "partidos": [
+    [
+     "ADN",
+     "Oficialismo"
+    ],
+    [
+     "Revolución Ciudadana",
+     "Principal oposición, lidera la preferencia local (26 % contra 19 %)"
+    ],
+    [
+     "PSC",
+     "Derecha"
+    ],
+    [
+     "Pachakutik",
+     "Movimiento indígena"
+    ]
+   ],
+   "contexto": "El 29 de noviembre hay elecciones locales: es la primera prueba de Noboa desde su reelección. El correísmo encabeza la preferencia partidaria para las alcaldías."
+  },
+  "GY": {
+   "gob": {
+    "n": "Irfaan Ali",
+    "cargo": "Presidente",
+    "p": "PPP/C",
+    "desde": "2020-08-02"
+   },
+   "medida": "Aprobación de la gestión",
+   "enc": [],
+   "nota": "No hay encuestas públicas de aprobación recientes. Ali fue reelecto en septiembre de 2025 con mayoría propia (36 de 65 bancas).",
+   "eleccion": {
+    "n": "Generales",
+    "fecha": "2030",
+    "nota": "Ali no puede volver a presentarse."
+   },
+   "ultima": {
+    "n": "Bancas en la Asamblea (2025)",
+    "fecha": "2025-09-01",
+    "u": "https://www.riotimesonline.com/guyana-politics-key-players-2026/",
+    "items": [
+     [
+      "PPP/C",
+      36
+     ],
+     [
+      "WIN",
+      16
+     ],
+     [
+      "APNU",
+      12
+     ],
+     [
+      "FGM",
+      1
+     ]
+    ],
+    "unidad": "bancas"
+   },
+   "actores": [
+    {
+     "n": "Irfaan Ali",
+     "p": "PPP/C",
+     "rol": "Presidente, segundo mandato",
+     "x": 2,
+     "y": 3,
+     "gob": true
+    },
+    {
+     "n": "Azruddin Mohamed",
+     "p": "WIN",
+     "rol": "Jefe de la oposición, detenido y con pedido de extradición de EE. UU.",
+     "x": 3.5,
+     "y": 3
+    },
+    {
+     "n": "Aubrey Norton",
+     "p": "APNU",
+     "rol": "Líder de APNU",
+     "x": -1,
+     "y": 3
+    }
+   ],
+   "partidos": [
+    [
+     "PPP/C",
+     "Oficialismo"
+    ],
+    [
+     "WIN",
+     "Nueva primera oposición"
+    ],
+    [
+     "APNU",
+     "Oposición tradicional"
+    ]
+   ],
+   "contexto": "El boom petrolero sostiene al PPP/C. La oposición la encabeza ahora WIN, un partido nuevo cuyo líder enfrenta un pedido de extradición de Estados Unidos."
+  },
+  "PY": {
+   "gob": {
+    "n": "Pedro Alliana",
+    "cargo": "Presidente interino",
+    "p": "ANR · Partido Colorado",
+    "desde": "2026-11-06"
+   },
+   "medida": "Aprobación de Santiago Peña antes de su destitución",
+   "enc": [
+    {
+     "f": "CB Consultora",
+     "fecha": "2026-11-09",
+     "a": 24.7,
+     "d": 69.8,
+     "nota": "Peña",
+     "u": "https://www.emol.com/noticias/Internacional/2026/11/12/1216871/presidentes-latinoamerica-derrumbe-kast-ranking.html"
+    }
+   ],
+   "series": {
+    "CB Consultora": [
+     [
+      "2026-09-11",
+      45.5
+     ],
+     [
+      "2026-11-09",
+      24.7
+     ]
+    ]
+   },
+   "nota": "Todavía no hay mediciones de Alliana. La última encuesta corresponde a Peña, destituido por el Senado el 6 de noviembre.",
+   "eleccion": {
+    "n": "Generales",
+    "fecha": "2028-04",
+    "nota": "Alliana completa el mandato hasta agosto de 2028."
+   },
+   "actores": [
+    {
+     "n": "Pedro Alliana",
+     "p": "ANR · Honor Colorado",
+     "rol": "Presidente interino",
+     "x": 6,
+     "y": 4,
+     "gob": true
+    },
+    {
+     "n": "Santiago Peña",
+     "p": "ANR",
+     "rol": "Destituido por juicio político, con arresto domiciliario",
+     "x": 6,
+     "y": 3
+    },
+    {
+     "n": "Horacio Cartes",
+     "p": "Honor Colorado",
+     "rol": "Jefe del partido",
+     "x": 7,
+     "y": 4.5
+    },
+    {
+     "n": "Efraín Alegre",
+     "p": "PLRA",
+     "rol": "Líder liberal",
+     "x": 2,
+     "y": 1
+    },
+    {
+     "n": "Kattya González",
+     "p": "Encuentro Nacional",
+     "rol": "Exsenadora",
+     "x": -1,
+     "y": -2
+    }
+   ],
+   "partidos": [
+    [
+     "ANR (Colorado)",
+     "Oficialismo"
+    ],
+    [
+     "PLRA",
+     "Principal oposición"
+    ],
+    [
+     "Encuentro Nacional",
+     "Oposición"
+    ],
+    [
+     "Cruzada Nacional",
+     "Oposición"
+    ]
+   ],
+   "contexto": "El Senado destituyó a Peña por 44 votos a 1 tras la intervención del Ueno Bank. Asumió su vice, Pedro Alliana, cercano a Horacio Cartes."
+  },
+  "PE": {
+   "gob": {
+    "n": "Keiko Fujimori",
+    "cargo": "Presidenta",
+    "p": "Fuerza Popular",
+    "desde": "2026-07-28"
+   },
+   "medida": "Aprobación de la gestión",
+   "enc": [
+    {
+     "f": "Ipsos",
+     "fecha": "2026-11-10",
+     "a": 37,
+     "d": 53,
+     "u": "https://elbuho.pe/2026/11/desaprobacion-de-keiko-fujimori-alcanza-el-53-y-al-parecer-esta-en-caida-libre/"
+    },
+    {
+     "f": "CB Consultora",
+     "fecha": "2026-11-09",
+     "a": 43.8,
+     "d": 54.4,
+     "u": "https://www.emol.com/noticias/Internacional/2026/11/12/1216871/presidentes-latinoamerica-derrumbe-kast-ranking.html"
+    },
+    {
+     "f": "AtlasIntel",
+     "fecha": "2026-10-09",
+     "a": 28.3,
+     "d": 53.6,
+     "u": "https://www.bloomberglinea.com/latinoamerica/peru/aprobacion-de-keiko-fujimori-cae-a-283-en-peru-por-temores-economicos-y-de-seguridad/"
+    }
+   ],
+   "series": {
+    "Ipsos": [
+     [
+      "2026-08-15",
+      57
+     ],
+     [
+      "2026-09-15",
+      42
+     ],
+     [
+      "2026-10-15",
+      40
+     ],
+     [
+      "2026-11-10",
+      37
+     ]
+    ],
+    "CB Consultora": [
+     [
+      "2026-08-10",
+      55
+     ],
+     [
+      "2026-09-11",
+      52.4
+     ],
+     [
+      "2026-11-09",
+      43.8
+     ]
+    ]
+   },
+   "eleccion": {
+    "n": "Generales",
+    "fecha": "2031",
+    "nota": "Mandato hasta julio de 2031."
+   },
+   "actores": [
+    {
+     "n": "Keiko Fujimori",
+     "p": "Fuerza Popular",
+     "rol": "Presidenta",
+     "x": 7,
+     "y": 6,
+     "gob": true
+    },
+    {
+     "n": "Roberto Sánchez",
+     "p": "Juntos por el Perú",
+     "rol": "Perdió el balotaje por décimas",
+     "x": -7,
+     "y": 3,
+     "wiki": "Roberto Sánchez Palomino"
+    },
+    {
+     "n": "Rafael López Aliaga",
+     "p": "Renovación Popular",
+     "rol": "Líder de la derecha dura",
+     "x": 8,
+     "y": 8
+    },
+    {
+     "n": "Luis Galarreta",
+     "p": "Fuerza Popular",
+     "rol": "Presidente del Consejo de Ministros",
+     "x": 6.5,
+     "y": 5
+    }
+   ],
+   "partidos": [
+    [
+     "Fuerza Popular",
+     "Oficialismo"
+    ],
+    [
+     "Renovación Popular",
+     "Derecha"
+    ],
+    [
+     "Juntos por el Perú",
+     "Izquierda, principal oposición"
+    ],
+    [
+     "APP",
+     "Centro derecha"
+    ]
+   ],
+   "contexto": "Ganó el balotaje contra Roberto Sánchez por menos de un punto. En cuatro meses su aprobación cayó de 57 % a 37 % en Ipsos; el sur del país es la zona más crítica."
+  },
+  "SR": {
+   "gob": {
+    "n": "Jennifer Geerlings-Simons",
+    "cargo": "Presidenta",
+    "p": "NDP",
+    "desde": "2025-07-16"
+   },
+   "medida": "Aprobación de la gestión",
+   "enc": [],
+   "nota": "No hay encuestas públicas de aprobación. Gobierna una coalición de seis partidos con 34 de 51 bancas.",
+   "eleccion": {
+    "n": "Generales",
+    "fecha": "2030",
+    "nota": ""
+   },
+   "ultima": {
+    "n": "Bancas en la Asamblea (2025)",
+    "fecha": "2025-05-25",
+    "u": "https://www.riotimesonline.com/suriname-politics-key-players-2026/",
+    "items": [
+     [
+      "Coalición NDP+5",
+      34
+     ],
+     [
+      "VHP",
+      17
+     ]
+    ],
+    "unidad": "bancas"
+   },
+   "actores": [
+    {
+     "n": "Jennifer Geerlings-Simons",
+     "p": "NDP",
+     "rol": "Presidenta, primera mujer en el cargo",
+     "x": -2,
+     "y": 3,
+     "gob": true
+    },
+    {
+     "n": "Gregory Rusland",
+     "p": "NPS",
+     "rol": "Vicepresidente",
+     "x": 1,
+     "y": 1
+    },
+    {
+     "n": "Asiskumar Gajadien",
+     "p": "VHP",
+     "rol": "Jefe del bloque opositor",
+     "x": 3,
+     "y": 1
+    }
+   ],
+   "partidos": [
+    [
+     "NDP",
+     "Oficialismo"
+    ],
+    [
+     "ABOP · NPS · PL · BEP · A20",
+     "Socios de coalición"
+    ],
+    [
+     "VHP",
+     "Oposición"
+    ]
+   ],
+   "contexto": "Simons asumió con la llegada del petróleo offshore en el horizonte y promete disciplina fiscal y apertura a la inversión."
+  },
+  "UY": {
+   "gob": {
+    "n": "Yamandú Orsi",
+    "cargo": "Presidente",
+    "p": "Frente Amplio (MPP)",
+    "desde": "2025-03-01"
+   },
+   "medida": "Aprobación de la gestión",
+   "enc": [
+    {
+     "f": "CB Consultora",
+     "fecha": "2026-11-09",
+     "a": 38.6,
+     "d": 57.7,
+     "u": "https://www.emol.com/noticias/Internacional/2026/11/12/1216871/presidentes-latinoamerica-derrumbe-kast-ranking.html"
+    },
+    {
+     "f": "Equipos",
+     "fecha": "2026-08-31",
+     "a": 28,
+     "d": 51,
+     "u": "https://www.montevideo.com.uy/Noticias/Encuesta-Equipos-aprobacion-de-Orsi-es-de-28-y-desaprobacion-del-51--uc974593"
+    }
+   ],
+   "series": {
+    "CB Consultora": [
+     [
+      "2026-09-11",
+      37.7
+     ],
+     [
+      "2026-10-09",
+      35.2
+     ],
+     [
+      "2026-11-09",
+      38.6
+     ]
+    ],
+    "Cifra": [
+     [
+      "2025-09-15",
+      43
+     ],
+     [
+      "2026-02-28",
+      31
+     ]
+    ],
+    "Factum": [
+     [
+      "2026-02-22",
+      37
+     ]
+    ],
+    "Equipos": [
+     [
+      "2026-08-31",
+      28
+     ]
+    ]
+   },
+   "eleccion": {
+    "n": "Nacionales",
+    "fecha": "2029-10",
+    "nota": ""
+   },
+   "actores": [
+    {
+     "n": "Yamandú Orsi",
+     "p": "Frente Amplio",
+     "rol": "Presidente",
+     "x": -4,
+     "y": -1,
+     "gob": true
+    },
+    {
+     "n": "Carolina Cosse",
+     "p": "Frente Amplio",
+     "rol": "Vicepresidenta",
+     "x": -6,
+     "y": 0
+    },
+    {
+     "n": "Álvaro Delgado",
+     "p": "Partido Nacional",
+     "rol": "Excandidato presidencial",
+     "x": 5,
+     "y": 2,
+     "wiki": "Álvaro Delgado Ceretta"
+    },
+    {
+     "n": "Andrés Ojeda",
+     "p": "Partido Colorado",
+     "rol": "Senador",
+     "x": 5,
+     "y": 0.5,
+     "wiki": "Andrés Ojeda (político)"
+    }
+   ],
+   "partidos": [
+    [
+     "Frente Amplio",
+     "Oficialismo"
+    ],
+    [
+     "Partido Nacional",
+     "Principal oposición"
+    ],
+    [
+     "Partido Colorado",
+     "Oposición"
+    ],
+    [
+     "Cabildo Abierto",
+     "Derecha"
+    ]
+   ],
+   "contexto": "Desde fin de 2025 la desaprobación supera a la aprobación en todas las encuestadoras; la oposición tampoco capitaliza el desgaste (Factum)."
+  },
+  "VE": {
+   "gob": {
+    "n": "Delcy Rodríguez",
+    "cargo": "Presidenta encargada",
+    "p": "PSUV",
+    "desde": "2026-01-03"
+   },
+   "medida": "Aprobación de la gestión",
+   "enc": [
+    {
+     "f": "CB Consultora",
+     "fecha": "2026-11-09",
+     "a": 35.6,
+     "d": 59.3,
+     "u": "https://www.emol.com/noticias/Internacional/2026/11/12/1216871/presidentes-latinoamerica-derrumbe-kast-ranking.html"
+    }
+   ],
+   "series": {
+    "CB Consultora": [
+     [
+      "2026-09-11",
+      28.8
+     ],
+     [
+      "2026-10-09",
+      32.3
+     ],
+     [
+      "2026-11-09",
+      35.6
+     ]
+    ]
+   },
+   "eleccion": {
+    "n": "Presidenciales",
+    "fecha": "2027",
+    "nota": "Sin fecha: primero se renuevan el TSJ (diciembre) y el CNE, según la hoja de ruta acordada con EE. UU."
+   },
+   "actores": [
+    {
+     "n": "Delcy Rodríguez",
+     "p": "PSUV",
+     "rol": "Presidenta encargada desde la captura de Maduro",
+     "x": -5,
+     "y": 8,
+     "gob": true
+    },
+    {
+     "n": "María Corina Machado",
+     "p": "Vente Venezuela",
+     "rol": "Volvió al país en octubre, busca competir en 2027",
+     "x": 7,
+     "y": 3
+    },
+    {
+     "n": "Edmundo González",
+     "p": "Plataforma Unitaria",
+     "rol": "Reclama el triunfo de 2024",
+     "x": 4,
+     "y": 0,
+     "wiki": "Edmundo González Urrutia"
+    },
+    {
+     "n": "Diosdado Cabello",
+     "p": "PSUV",
+     "rol": "Ala dura del chavismo",
+     "x": -6,
+     "y": 9
+    }
+   ],
+   "partidos": [
+    [
+     "PSUV",
+     "Gobierno de transición"
+    ],
+    [
+     "Vente Venezuela",
+     "Oposición"
+    ],
+    [
+     "Plataforma Unitaria",
+     "Oposición"
+    ]
+   ],
+   "contexto": "Transición tutelada por EE. UU.: Rodríguez promete elecciones con autoridad electoral renovada, previsiblemente en 2027, pero sin fecha."
+  },
+  "MX": {
+   "gob": {
+    "n": "Claudia Sheinbaum",
+    "cargo": "Presidenta",
+    "p": "Morena",
+    "desde": "2024-10-01"
+   },
+   "medida": "Aprobación de la gestión",
+   "enc": [
+    {
+     "f": "CB Consultora",
+     "fecha": "2026-11-09",
+     "a": 69.8,
+     "d": 25.5,
+     "u": "https://www.emol.com/noticias/Internacional/2026/11/12/1216871/presidentes-latinoamerica-derrumbe-kast-ranking.html"
+    },
+    {
+     "f": "Polls.mx",
+     "fecha": "2026-11-11",
+     "a": 67,
+     "d": 32,
+     "u": "https://lagentepide.substack.com/p/monitor-de-aprobacion-presidencial-142"
+    }
+   ],
+   "series": {
+    "CB Consultora": [
+     [
+      "2026-08-10",
+      66.5
+     ],
+     [
+      "2026-09-11",
+      69
+     ],
+     [
+      "2026-10-09",
+      69.3
+     ],
+     [
+      "2026-11-09",
+      69.8
+     ]
+    ]
+   },
+   "eleccion": {
+    "n": "Intermedias",
+    "fecha": "2027-06-06",
+    "nota": "Se renueva la Cámara de Diputados y 17 gubernaturas."
+   },
+   "actores": [
+    {
+     "n": "Claudia Sheinbaum",
+     "p": "Morena",
+     "rol": "Presidenta",
+     "x": -4,
+     "y": 3,
+     "gob": true
+    },
+    {
+     "n": "Jorge Romero",
+     "p": "PAN",
+     "rol": "Presidente del PAN",
+     "x": 5,
+     "y": 4,
+     "wiki": "Jorge Romero Herrera"
+    },
+    {
+     "n": "Alejandro Moreno",
+     "p": "PRI",
+     "rol": "Presidente del PRI",
+     "x": 3,
+     "y": 5,
+     "wiki": "Alejandro Moreno Cárdenas"
+    },
+    {
+     "n": "Jorge Álvarez Máynez",
+     "p": "Movimiento Ciudadano",
+     "rol": "Excandidato presidencial",
+     "x": -1,
+     "y": -2
+    }
+   ],
+   "partidos": [
+    [
+     "Morena",
+     "Oficialismo"
+    ],
+    [
+     "PVEM · PT",
+     "Aliados"
+    ],
+    [
+     "PAN",
+     "Principal oposición"
+    ],
+    [
+     "PRI",
+     "Oposición"
+    ],
+    [
+     "Movimiento Ciudadano",
+     "Oposición"
+    ]
+   ],
+   "contexto": "Es la presidenta mejor evaluada de la región en el ranking mensual de CB Consultora. Llega a las intermedias de 2027 con mayoría calificada en el Congreso."
+  },
+  "US": {
+   "gob": {
+    "n": "Donald Trump",
+    "cargo": "Presidente",
+    "p": "Republicano",
+    "desde": "2025-01-20"
+   },
+   "medida": "Aprobación del presidente",
+   "enc": [
+    {
+     "f": "Economist/YouGov",
+     "fecha": "2026-11-11",
+     "a": 32,
+     "d": 63,
+     "u": "https://newsweek.com/donald-trump-approval-rating-falling-midterm-losses-12709719"
+    },
+    {
+     "f": "Reuters/Ipsos",
+     "fecha": "2026-11-09",
+     "a": 32,
+     "d": 65,
+     "u": "https://newsweek.com/donald-trump-approval-rating-falling-midterm-losses-12709719"
+    },
+    {
+     "f": "CNN/SSRS",
+     "fecha": "2026-10-18",
+     "a": 32,
+     "d": null,
+     "u": "https://newsweek.com/donald-trump-approval-rating-falling-midterm-losses-12709719"
+    }
+   ],
+   "agregadores": [
+    {
+     "f": "Silver Bulletin",
+     "fecha": "2026-11-19",
+     "a": 37,
+     "d": 60,
+     "u": "https://www.natesilver.net/p/trump-approval-ratings-nate-silver-bulletin"
+    },
+    {
+     "f": "New York Times",
+     "fecha": "2026-11-13",
+     "a": 36,
+     "d": 61,
+     "u": "https://newsweek.com/donald-trump-approval-rating-falling-midterm-losses-12709719"
+    },
+    {
+     "f": "RealClearPolitics",
+     "fecha": "2026-11-13",
+     "a": 38.7,
+     "d": null,
+     "u": "https://newsweek.com/donald-trump-approval-rating-falling-midterm-losses-12709719"
+    }
+   ],
+   "series": {
+    "Economist/YouGov": [
+     [
+      "2026-08-05",
+      33
+     ],
+     [
+      "2026-11-04",
+      36
+     ],
+     [
+      "2026-11-11",
+      32
+     ]
+    ],
+    "Reuters/Ipsos": [
+     [
+      "2026-10-19",
+      31
+     ],
+     [
+      "2026-11-02",
+      32
+     ],
+     [
+      "2026-11-09",
+      32
+     ]
+    ],
+    "Silver Bulletin": [
+     [
+      "2026-11-12",
+      37.6
+     ],
+     [
+      "2026-11-19",
+      37
+     ]
+    ]
+   },
+   "eleccion": {
+    "n": "Presidenciales",
+    "fecha": "2028-11-07",
+    "nota": "En las legislativas del 3 de noviembre los demócratas ganaron la Cámara y el Senado."
+   },
+   "actores": [
+    {
+     "n": "Donald Trump",
+     "p": "Republicano",
+     "rol": "Presidente",
+     "x": 6,
+     "y": 7.5,
+     "gob": true
+    },
+    {
+     "n": "JD Vance",
+     "p": "Republicano",
+     "rol": "Vicepresidente, posible candidato 2028",
+     "x": 5,
+     "y": 7
+    },
+    {
+     "n": "Marco Rubio",
+     "p": "Republicano",
+     "rol": "Secretario de Estado",
+     "x": 6,
+     "y": 5
+    },
+    {
+     "n": "Gavin Newsom",
+     "p": "Demócrata",
+     "rol": "Gobernador de California, posible candidato 2028",
+     "x": -3,
+     "y": 1
+    },
+    {
+     "n": "Alexandria Ocasio-Cortez",
+     "p": "Demócrata",
+     "rol": "Representante, ala progresista",
+     "x": -7,
+     "y": -1.5
+    }
+   ],
+   "partidos": [
+    [
+     "Republicano",
+     "Gobierno, perdió el Congreso"
+    ],
+    [
+     "Demócrata",
+     "Controla el Congreso desde enero"
+    ]
+   ],
+   "contexto": "La aprobación neta de Trump tocó su piso histórico (-31 en Economist/YouGov) tras perder el Congreso. La inflación y la guerra con Irán pesan en la evaluación."
+  },
+  "ES": {
+   "gob": {
+    "n": "Pedro Sánchez",
+    "cargo": "Presidente del Gobierno",
+    "p": "PSOE",
+    "desde": "2018-06-02"
+   },
+   "medida": "Intención de voto, elecciones del 29 de noviembre",
+   "enc": [],
+   "nota": "No hay una medición reciente de aprobación de Sánchez. Con elecciones el 29 de noviembre, el dato que importa es la intención de voto.",
+   "intencion": {
+    "fuente": "Promedio de encuestas (Demócrata, 19 institutos)",
+    "fecha": "2026-11-20",
+    "u": "https://www.democrata.es/encuestas/elecciones-generales/promedio-encuestas-trackings-29n/",
+    "items": [
+     [
+      "PP",
+      31.0
+     ],
+     [
+      "PSOE",
+      27.8
+     ],
+     [
+      "Vox",
+      19.1
+     ],
+     [
+      "Frente Amplio",
+      6.2
+     ],
+     [
+      "ERC",
+      2.5
+     ]
+    ],
+    "escanos": "Escaños estimados: PP 128, PSOE 111, Vox 65. PP y Vox sumarían mayoría absoluta (176)."
+   },
+   "sondeos": [
+    {
+     "f": "40dB (El País)",
+     "fecha": "2026-11-17",
+     "v": {
+      "PP": 32.2,
+      "PSOE": 30.7,
+      "Vox": 17.0
+     },
+     "u": "https://es.ara.cat/politica/dicen-encuestas-elecciones-espanolas-29-n_1_5874092.html"
+    },
+    {
+     "f": "Sigma Dos (El Mundo)",
+     "fecha": "2026-11-16",
+     "v": {
+      "PP": 30.7,
+      "PSOE": 26.4,
+      "Vox": 19.8
+     },
+     "u": "https://www.democrata.es/en/center-of-surveys-and-electoral-polls/general-elections/feijoo-wins-the-opinion-poll-of-the-29n-and-pp-vox-maintains-majority/"
+    },
+    {
+     "f": "Public First (Politico)",
+     "fecha": "2026-11-17",
+     "v": {
+      "PP": 29.5,
+      "PSOE": 27.2,
+      "Vox": 19.6
+     },
+     "u": "https://es.ara.cat/politica/dicen-encuestas-elecciones-espanolas-29-n_1_5874092.html"
+    },
+    {
+     "f": "SW Demoscopia",
+     "fecha": "2026-11-17",
+     "v": {
+      "PP": 28.9,
+      "PSOE": 31.9,
+      "Vox": 16.5
+     },
+     "u": "https://www.democrata.es/en/center-of-surveys-and-electoral-polls/general-elections/feijoo-wins-the-opinion-poll-of-the-29n-and-pp-vox-maintains-majority/"
+    },
+    {
+     "f": "Sondaxe (La Voz de Galicia)",
+     "fecha": "2026-11-16",
+     "v": {
+      "PP": 29.0,
+      "PSOE": 27.0,
+      "Vox": 19.4
+     },
+     "u": "https://www.democrata.es/en/center-of-surveys-and-electoral-polls/general-elections/feijoo-wins-the-opinion-poll-of-the-29n-and-pp-vox-maintains-majority/"
+    },
+    {
+     "f": "YouGov (Ara)",
+     "fecha": "2026-11-15",
+     "v": {
+      "PP": 29.6,
+      "PSOE": 25.9
+     },
+     "u": "https://es.ara.cat/politica/dicen-encuestas-elecciones-espanolas-29-n_1_5874092.html"
+    },
+    {
+     "f": "Data10 (OKDiario)",
+     "fecha": "2026-11-12",
+     "v": {
+      "PP": 31.7,
+      "PSOE": 25.5,
+      "Vox": 20.4
+     },
+     "u": "https://www.democrata.es/en/center-of-surveys-and-electoral-polls/general-elections/feijoo-wins-the-opinion-poll-of-the-29n-and-pp-vox-maintains-majority/"
+    },
+    {
+     "f": "CIS",
+     "fecha": "2026-10-30",
+     "v": {
+      "PP": 25.5,
+      "PSOE": 33.3,
+      "Vox": 18.4
+     },
+     "u": "https://es.ara.cat/politica/dicen-encuestas-elecciones-espanolas-29-n_1_5874092.html"
+    }
+   ],
+   "series": {
+    "PP": [
+     [
+      "2026-11-14",
+      31.5
+     ],
+     [
+      "2026-11-18",
+      30.8
+     ],
+     [
+      "2026-11-20",
+      31.0
+     ]
+    ],
+    "PSOE": [
+     [
+      "2026-11-14",
+      26.8
+     ],
+     [
+      "2026-11-18",
+      27.5
+     ],
+     [
+      "2026-11-20",
+      27.8
+     ]
+    ],
+    "Vox": [
+     [
+      "2026-11-14",
+      19.1
+     ],
+     [
+      "2026-11-18",
+      19.1
+     ],
+     [
+      "2026-11-20",
+      19.1
+     ]
+    ]
+   },
+   "series_nota": "Promedio de encuestas de Demócrata, intención de voto en %",
+   "eleccion": {
+    "n": "Generales anticipadas",
+    "fecha": "2026-11-29",
+    "nota": "Adelanto convocado por Sánchez."
+   },
+   "actores": [
+    {
+     "n": "Pedro Sánchez",
+     "p": "PSOE",
+     "rol": "Presidente y candidato",
+     "x": -3,
+     "y": 1,
+     "gob": true
+    },
+    {
+     "n": "Alberto Núñez Feijóo",
+     "p": "PP",
+     "rol": "Candidato, primero en las encuestas",
+     "x": 5,
+     "y": 3
+    },
+    {
+     "n": "Santiago Abascal",
+     "p": "Vox",
+     "rol": "Candidato, tercera fuerza en ascenso",
+     "x": 6.5,
+     "y": 8
+    },
+    {
+     "n": "Ada Colau",
+     "p": "Frente Amplio",
+     "rol": "Candidata, sucesor de Sumar",
+     "x": -7,
+     "y": -3
+    },
+    {
+     "n": "Gabriel Rufián",
+     "p": "ERC",
+     "rol": "Candidato",
+     "x": -5,
+     "y": -2
+    }
+   ],
+   "partidos": [
+    [
+     "PSOE",
+     "Gobierno"
+    ],
+    [
+     "PP",
+     "Principal oposición"
+    ],
+    [
+     "Vox",
+     "Derecha radical"
+    ],
+    [
+     "Frente Amplio",
+     "Izquierda (ex Sumar)"
+    ],
+    [
+     "ERC · Junts · PNV · Bildu",
+     "Nacionalistas"
+    ],
+    [
+     "Podemos",
+     "Izquierda"
+    ]
+   ],
+   "contexto": "A nueve días de votar, el promedio da ganador al PP y mayoría absoluta con Vox. Solo el CIS pone primero al PSOE."
+  },
+  "GB": {
+   "gob": {
+    "n": "Andy Burnham",
+    "cargo": "Primer ministro",
+    "p": "Laborista",
+    "desde": "2026-07"
+   },
+   "medida": "Imagen favorable",
+   "enc": [
+    {
+     "f": "YouGov",
+     "fecha": "2026-11-12",
+     "a": 49,
+     "d": 41,
+     "u": "https://yougov.com/en-gb/articles/55981-political-favourability-ratings-november-2026"
+    }
+   ],
+   "series": {
+    "YouGov": [
+     [
+      "2026-10-16",
+      46
+     ],
+     [
+      "2026-11-12",
+      49
+     ]
+    ],
+    "Ipsos": [
+     [
+      "2026-07-22",
+      32
+     ]
+    ]
+   },
+   "eleccion": {
+    "n": "Generales",
+    "fecha": "2029",
+    "nota": "A más tardar en agosto de 2029."
+   },
+   "intencion": {
+    "fuente": "YouGov",
+    "fecha": "2026-11-16",
+    "u": "https://yougov.com/en-gb/articles/55919-who-would-make-the-best-prime-minister-november-2026",
+    "items": [
+     [
+      "Laborista",
+      27
+     ],
+     [
+      "Conservador",
+      23
+     ],
+     [
+      "Reform UK",
+      21
+     ],
+     [
+      "Liberal Demócrata",
+      11
+     ],
+     [
+      "Verde",
+      9
+     ]
+    ]
+   },
+   "dirigentes": {
+    "fuente": "YouGov",
+    "fecha": "2026-11-12",
+    "medida": "Imagen favorable / desfavorable",
+    "u": "https://yougov.com/en-gb/articles/55981-political-favourability-ratings-november-2026",
+    "items": [
+     [
+      "Andy Burnham",
+      49,
+      41
+     ],
+     [
+      "Kemi Badenoch",
+      34,
+      47
+     ],
+     [
+      "Ed Davey",
+      26,
+      38
+     ],
+     [
+      "Nigel Farage",
+      23,
+      68
+     ],
+     [
+      "Zack Polanski",
+      18,
+      55
+     ]
+    ]
+   },
+   "actores": [
+    {
+     "n": "Andy Burnham",
+     "p": "Laborista",
+     "rol": "Primer ministro desde julio",
+     "x": -4,
+     "y": 1,
+     "gob": true
+    },
+    {
+     "n": "Kemi Badenoch",
+     "p": "Conservador",
+     "rol": "Líder de la oposición",
+     "x": 6,
+     "y": 5
+    },
+    {
+     "n": "Nigel Farage",
+     "p": "Reform UK",
+     "rol": "Líder de Reform",
+     "x": 5,
+     "y": 7.5
+    },
+    {
+     "n": "Ed Davey",
+     "p": "Liberal Demócrata",
+     "rol": "Líder liberal demócrata",
+     "x": 0,
+     "y": -3
+    },
+    {
+     "n": "Zack Polanski",
+     "p": "Verde",
+     "rol": "Líder verde",
+     "x": -8,
+     "y": -5
+    }
+   ],
+   "partidos": [
+    [
+     "Laborista",
+     "Gobierno"
+    ],
+    [
+     "Conservador",
+     "Oposición oficial"
+    ],
+    [
+     "Reform UK",
+     "Derecha populista"
+    ],
+    [
+     "Liberal Demócrata",
+     "Centro"
+    ],
+    [
+     "Verde",
+     "Izquierda ecologista"
+    ]
+   ],
+   "contexto": "Burnham reemplazó a Starmer en julio y es el primer ministro con mejor imagen en más de seis años. El laborismo recuperó el primer lugar en intención de voto."
+  },
+  "EU": {
+   "gob": {
+    "n": "Ursula von der Leyen",
+    "cargo": "Presidenta de la Comisión Europea",
+    "p": "PPE",
+    "desde": "2019-12-01"
+   },
+   "medida": "Imagen en la UE",
+   "enc": [],
+   "nota": "No hay medición paneuropea reciente. La última (Euroscope, marzo de 2026) le daba 50 % de opinión negativa y un saldo de -17, el peor entre ocho líderes europeos.",
+   "nota_u": "https://www.eunews.it/en/2026/04/13/polling-europe-euroscope-approval-ratings-for-eu-leaders-plummet-with-the-exception-of-sanchez/",
+   "eleccion": {
+    "n": "Parlamento Europeo",
+    "fecha": "2029-06",
+    "nota": ""
+   },
+   "actores": [
+    {
+     "n": "Ursula von der Leyen",
+     "p": "PPE",
+     "rol": "Presidenta de la Comisión, segundo mandato",
+     "x": 3,
+     "y": 2.5,
+     "gob": true
+    },
+    {
+     "n": "António Costa",
+     "p": "S&D",
+     "rol": "Presidente del Consejo Europeo",
+     "x": -2,
+     "y": 1
+    },
+    {
+     "n": "Kaja Kallas",
+     "p": "Renew",
+     "rol": "Alta representante de Exteriores",
+     "x": 4,
+     "y": 1
+    },
+    {
+     "n": "Roberta Metsola",
+     "p": "PPE",
+     "rol": "Presidenta del Parlamento",
+     "x": 3,
+     "y": 3
+    },
+    {
+     "n": "Jordan Bardella",
+     "p": "Patriotas",
+     "rol": "Presidente del grupo Patriotas",
+     "x": 2,
+     "y": 7.5
+    }
+   ],
+   "partidos": [
+    [
+     "PPE",
+     "Primer grupo"
+    ],
+    [
+     "S&D",
+     "Socialdemócratas"
+    ],
+    [
+     "Patriotas por Europa",
+     "Derecha soberanista"
+    ],
+    [
+     "ECR",
+     "Conservadores"
+    ],
+    [
+     "Renew",
+     "Liberales"
+    ],
+    [
+     "Verdes/ALE",
+     "Ecologistas"
+    ],
+    [
+     "La Izquierda",
+     "Izquierda"
+    ]
+   ],
+   "contexto": "La Comisión se apoya en la mayoría de PPE, socialdemócratas y liberales en el Parlamento Europeo."
+  }
+ }
 }

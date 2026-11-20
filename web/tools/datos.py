@@ -410,6 +410,69 @@ def inflacion(prev):
     return out
 
 
+POLITICO = re.compile(r'(pol[ií]tic|president|senador|diputad|gobernador|alcalde|ministr|abogad|economista|politician|governor|senator|congress|secretary|l[ií]der|dirigente|sindical|activist|vicepresident|premier|commission|parlament|empresari|businessman)', re.I)
+
+
+def fotos():
+    """Foto de cada dirigente de politica.json desde Wikipedia (miniatura de Wikimedia Commons + enlace para el crédito).
+    Usa la API de consultas de MediaWiki en lote (pocas llamadas, sin 429)."""
+    try:
+        pol = json.loads((OUT / 'politica.json').read_text(encoding='utf8'))
+    except Exception as e:
+        log('Fotos: sin politica.json', e); return
+    f = OUT / 'fotos.json'
+    try:
+        prev = json.loads(f.read_text(encoding='utf8'))
+    except Exception:
+        prev = {}
+    gente, alias = {}, {}
+    for P in pol['paises'].values():
+        g = (P.get('gob') or {}).get('n')
+        for a in P.get('actores', []):
+            gente.setdefault(a['n'], a.get('wiki') or a['n'])
+            if a.get('gob') and g and g != a['n']:
+                alias[g] = a['n']
+        if g and g not in alias:
+            gente.setdefault(g, g)
+    out = {n: prev[n] for n in gente if prev.get(n)}
+    falta = [n for n in gente if n not in out]
+    ua = {'User-Agent': 'SudakaosLanding/1.0 (https://sudakaoslatam.com)'}
+    for lang in ('es', 'en'):
+        if not falta:
+            break
+        for i in range(0, len(falta), 40):
+            lote = falta[i:i + 40]
+            tit = {n: gente[n] for n in lote}
+            q = urllib.parse.urlencode({'action': 'query', 'format': 'json', 'formatversion': 2, 'redirects': 1,
+                                        'prop': 'pageimages|description|info', 'inprop': 'url', 'piprop': 'thumbnail',
+                                        'pithumbsize': 240, 'titles': '|'.join(dict.fromkeys(tit.values()))})
+            try:
+                req = urllib.request.Request(f'https://{lang}.wikipedia.org/w/api.php?' + q, headers=ua)
+                with urllib.request.urlopen(req, timeout=30) as r:
+                    d = json.loads(r.read().decode('utf8'))['query']
+            except Exception as e:
+                log('Fotos', lang, 'falló:', e); continue
+            mapa = {}
+            for k in ('normalized', 'redirects'):
+                for x in d.get(k, []):
+                    mapa[x['from']] = x['to']
+            pags = {pg['title']: pg for pg in d.get('pages', [])}
+            for n, t in tit.items():
+                while t in mapa:
+                    t = mapa[t]
+                pg = pags.get(t) or {}
+                th = (pg.get('thumbnail') or {}).get('source')
+                if th and POLITICO.search(pg.get('description') or 'político'):
+                    out[n] = {'img': th, 'url': pg.get('fullurl', '')}
+            time.sleep(1)
+        falta = [n for n in gente if n not in out]
+    for g, n in alias.items():
+        if n in out:
+            out[g] = out[n]
+    f.write_text(json.dumps(out, ensure_ascii=False, indent=0), encoding='utf8')
+    log('Fotos:', len(out), 'con foto; sin foto:', ', '.join(falta) or 'ninguno')
+
+
 def archivo_alertas(nuevas):
     """Guarda las alertas de los últimos 30 días (sin repetir) para contar alertas por día."""
     f = OUT / 'archivo.json'
@@ -447,6 +510,7 @@ def main():
         if c not in idx and v.get('indice') and v['indice']['serie'][-1][0] >= (NOW - timedelta(days=7)).strftime('%Y-%m-%d'):
             idx[c] = v['indice']
     log('Inflación…'); infl = inflacion(prev)
+    log('Fotos…'); fotos()
     log('Noticias…'); tit, al_medios = noticias()
     prev_sit = {}
     try:
