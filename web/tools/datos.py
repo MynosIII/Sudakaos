@@ -165,7 +165,7 @@ def lang_of(hl):
 def gnews(q, loc, when='1d'):
     hl, gl, ceid = loc
     url = 'https://news.google.com/rss/search?' + urllib.parse.urlencode({'q': f'{q} when:{when}', 'hl': hl, 'gl': gl, 'ceid': ceid})
-    root = ET.fromstring(get(url))
+    root = ET.fromstring(get(url, retries=1, timeout=20))
     items = []
     for it in root.iter('item'):
         title = (it.findtext('title') or '').strip()
@@ -201,16 +201,20 @@ def norm(s):
 
 
 def noticias():
-    titulares, alertas = {}, []
+    titulares, alertas, fallas = {}, [], 0
     for c, nombre, _, _, lat, lon, loc, q, _ in PAISES:
         lang = lang_of(loc[0])
+        if fallas >= 3:  # Google News limita por IP: si falla seguido, se usa lo de la corrida anterior
+            continue
         log('GNews', c)
         try:
             items = gnews(q, loc, '1d')
             if len(items) < 8:
                 items = gnews(q, loc, '3d')
+            fallas = 0
         except Exception as e:
-            log('GNews', c, e); items = []
+            log('GNews', c, e); fallas += 1
+            continue
         vistos, top = set(), []
         for it in items:
             k = norm(it['titulo'])
@@ -355,7 +359,7 @@ def inflacion(prev):
     try:
         desde = (NOW - timedelta(days=420)).strftime('%Y-%m')
         url = ('https://sdmx.oecd.org/public/rest/data/OECD.SDD.TPS,DSD_PRICES@DF_PRICES_ALL,1.0/'
-               + '+'.join(OCDE.values()) + f'.M.N.CPI.PA._T.N.GY?startPeriod={desde}&format=csvfile')
+               + '+'.join(OCDE.values()) + f'.M..CPI.PA._T.N.GY?startPeriod={desde}&format=csvfile')
         import csv, io
         filas = list(csv.DictReader(io.StringIO(get(url, retries=1, timeout=60).decode('utf8', 'replace'))))
         inv = {v: k for k, v in OCDE.items()}
@@ -367,10 +371,12 @@ def inflacion(prev):
             except (TypeError, ValueError):
                 continue
             if c:
-                series.setdefault(c, []).append([f.get('TIME_PERIOD'), v])
-        for c, sr in series.items():
+                series.setdefault(c, {}).setdefault(f.get('METHODOLOGY') or 'N', []).append([f.get('TIME_PERIOD'), v])
+        for c, por_met in series.items():  # IPC nacional o armonizado: el que tenga el dato más reciente
+            sr = max(por_met.values(), key=lambda x: (max(r[0] for r in x), len(x)))
             sr.sort()
-            out[c] = {'valor': sr[-1][1], 'periodo': sr[-1][0], 'frecuencia': 'mensual', 'fuente': 'OCDE', 'serie': sr[-13:]}
+            if sr[-1][0] >= (NOW - timedelta(days=150)).strftime('%Y-%m'):
+                out[c] = {'valor': sr[-1][1], 'periodo': sr[-1][0], 'frecuencia': 'mensual', 'fuente': 'OCDE', 'serie': sr[-13:]}
         log('Inflación OCDE', len(out), 'países')
     except Exception as e:
         log('Inflación OCDE', e)
@@ -383,7 +389,7 @@ def inflacion(prev):
         try:
             d = get_json(f'https://api.worldbank.org/v2/country/{iso3}/indicator/FP.CPI.TOTL.ZG?format=json&mrnev=1', retries=1, timeout=30)
             r = d[1][0]
-            if r.get('value') is not None:
+            if r.get('value') is not None and int(r['date']) >= NOW.year - 2:
                 out[c] = {'valor': round(r['value'], 1), 'periodo': r['date'], 'frecuencia': 'anual', 'fuente': 'Banco Mundial'}
         except Exception as e:
             log('Inflación BM', c, e)
@@ -431,6 +437,18 @@ def main():
             idx[c] = v['indice']
     log('Inflación…'); infl = inflacion(prev)
     log('Noticias…'); tit, al_medios = noticias()
+    prev_sit = {}
+    try:
+        prev_sit = json.loads((OUT / 'situacion.json').read_text(encoding='utf8'))
+    except Exception:
+        pass
+    corte30 = iso(NOW - timedelta(days=30))
+    for c in BY:  # países sin respuesta de Google News: titulares y alertas de medios de la corrida anterior
+        if c in tit:
+            continue
+        v = prev.get('paises', {}).get(c, {})
+        tit[c] = {'items': [x for x in v.get('titulares', []) if x['t'] >= corte30], 'n24': v.get('notas24', 0)}
+        al_medios += [a for a in prev_sit.get('alertas', []) if a.get('pais') == c and a.get('tipo') == 'medios' and a['t'] >= iso(NOW - timedelta(hours=48))]
     log('GDELT…'); tono = gdelt_tono()
     for c, v in prev.get('paises', {}).items():  # GDELT limita fuerte: lo que no respondió se toma de la corrida anterior
         if not tono.get(c) and v.get('tono'):
