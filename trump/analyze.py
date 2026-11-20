@@ -314,7 +314,7 @@ def media(news):
         allt = [r for r in news if is_t(r) and k in r["_top"]]
         for i in range(len(weeks) - 1):
             wk.append(sum(weeks[i] <= day(r["created_at"]) < weeks[i + 1] for r in allt))
-        tp.append({"k": k, "n": len(rs), "share": pct(len(rs), len(tr)), "s7": pct(a7, n7), "s21": pct(b21, n21),
+        tp.append({"k": k, "n": len(rs), "share": pct(len(rs), len(tr)), "s7": pct(a7, n7), "s21": pct(b21, n21) if n21 >= 50 else None,
                    "neg": pct(sum(r["tono"] == "NEG" for r in rs), len(rs)), "pos": pct(sum(r["tono"] == "POS" for r in rs), len(rs)), "wk": wk,
                    "lean": {g: sum(LEAN_GROUP.get(r.get("lean", ""), "") == g for r in rs) for g in ("Left", "Center", "Right")}})
     tp.sort(key=lambda x: -x["n"])
@@ -624,7 +624,7 @@ def alerts(m):
                     out.append({"lvl": "med", "i": "◆", "t": f"Coverage spike on {x['d']}: {x['n']} Trump stories vs. {mu:.0f}/day average", "k": "Media"})
         old = sum(1 for x in dl if x["d"] < ago(7))
         for t in md["topics"][:10]:
-            if old >= 150 and t["s7"] >= 4 and t["s7"] >= 1.7 * max(t["s21"], 1):
+            if old >= 150 and t["s21"] is not None and t["s7"] >= 4 and t["s7"] >= 1.7 * max(t["s21"], 1):
                 out.append({"lvl": "med", "i": "↑", "t": f"“{t['k']}” surging: {t['s7']:.0f}% of Trump coverage this week vs. {t['s21']:.0f}% before", "k": "Topics"})
             if t["n"] >= 25 and t["neg"] >= 45:
                 out.append({"lvl": "low", "i": "!", "t": f"Negative framing on “{t['k']}”: {t['neg']:.0f}% of headlines", "k": "Tone"})

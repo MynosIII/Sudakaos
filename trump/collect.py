@@ -297,7 +297,8 @@ def polls():
         wk, errs = [], errs + [f"wikipedia {type(e).__name__}: {str(e)[:100]}"]
     norm = lambda s: re.sub(r"[^a-z]", "", s.lower())[:12]
     seen = {(norm(p["pollster"]), p["end"]) for p in vh}
-    allp = vh + [p for p in wk if (norm(p["pollster"]), p["end"]) not in seen]
+    # VoteHub is comprehensive and clean; Wikipedia rows (column parsing) only fill in when VoteHub is down
+    allp = vh if len(vh) >= 200 else vh + [p for p in wk if (norm(p["pollster"]), p["end"]) not in seen]
     save_json("polls.json", {"fetched_at": iso(NOW), "polls": allp, "votehub": len(vh), "wikipedia": len(wk), "errors": errs})
     if not allp:
         raise RuntimeError("; ".join(errs) or "no polls parsed")
