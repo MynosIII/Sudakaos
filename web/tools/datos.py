@@ -99,8 +99,11 @@ def iso(dt):
     return dt.astimezone(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
 
 
+T0 = time.time()
+
+
 def log(*a):
-    print(*a, file=sys.stderr, flush=True)
+    print(f'[{time.time() - T0:5.0f}s]', *a, file=sys.stderr, flush=True)
 
 
 # ---------- Banco Mundial ----------
@@ -111,7 +114,7 @@ def banco_mundial():
     for key, ind in INDICADORES.items():
         url = f'https://api.worldbank.org/v2/country/{codes}/indicator/{ind}?format=json&date=2000:{NOW.year}&per_page=5000'
         try:
-            d = get_json(url, timeout=60)
+            d = get_json(url, timeout=45, retries=1)
             rows = d[1] if len(d) > 1 and d[1] else []
         except Exception as e:
             log('WB', ind, e); continue
@@ -133,7 +136,7 @@ def fx_dia(fecha):
     for url in (f'https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@{tag}/v1/currencies/usd.min.json',
                 f'https://{tag}.currency-api.pages.dev/v1/currencies/usd.min.json'):
         try:
-            d = get_json(url, retries=1)
+            d = get_json(url, retries=0, timeout=15)
             return d.get('date'), d.get('usd', {})
         except Exception:
             continue
@@ -150,9 +153,13 @@ def tipo_cambio(prev):
         fechas += [NOW - timedelta(days=7 * k) for k in range(1, 27)]
     else:  # completa días faltantes de la última semana
         fechas += [NOW - timedelta(days=k) for k in range(1, 8)]
+    fallas = 0
     for f in fechas:
         fecha, rates = fx_dia(f)
         if not fecha or not rates:
+            fallas += 1
+            if fallas >= 4:
+                log('FX: demasiadas fallas, se corta'); break
             continue
         for c, m in monedas.items():
             if m in rates:
@@ -208,6 +215,7 @@ def noticias():
     titulares, alertas = {}, []
     for c, nombre, _, _, lat, lon, loc, q, _ in PAISES:
         lang = lang_of(loc[0])
+        log('GNews', c)
         try:
             items = gnews(q, loc, '1d')
             if len(items) < 8:
@@ -233,10 +241,13 @@ def noticias():
 # ---------- GDELT: tono de la cobertura (7 días) ----------
 def gdelt_tono():
     out = {}
+    fallas = 0
     for c, *_, gq in PAISES:
+        if fallas >= 3 or time.time() - T0 > 900:
+            log('GDELT: se corta (fallas o tiempo)'); break
         q = {'query': gq, 'mode': 'timelinetone', 'format': 'json', 'timespan': '7d'}
         try:
-            d = get_json('https://api.gdeltproject.org/api/v2/doc/doc?' + urllib.parse.urlencode(q), retries=1, timeout=40)
+            d = get_json('https://api.gdeltproject.org/api/v2/doc/doc?' + urllib.parse.urlencode(q), retries=0, timeout=25)
             data = (d.get('timeline') or [{}])[0].get('data') or []
             serie = [[x['date'][:8] + 'T' + x['date'][9:13], round(float(x['value']), 2)] for x in data]
             # promedio diario
@@ -244,7 +255,9 @@ def gdelt_tono():
             for t, v in serie:
                 dias.setdefault(t[:8], []).append(v)
             out[c] = [[k, round(sum(v) / len(v), 2)] for k, v in sorted(dias.items())]
+            fallas = 0
         except Exception as e:
+            fallas += 1
             log('GDELT', c, e)
         time.sleep(8)
     return out

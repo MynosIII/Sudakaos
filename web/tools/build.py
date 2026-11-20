@@ -14,20 +14,21 @@ e = html.escape
 tpl = open(os.path.join(HERE, 'template.html'), encoding='utf-8').read()
 geo = open(os.path.join(HERE, 'geo.json'), encoding='utf-8').read()
 open(os.path.join(WEB, 'index.html'), 'w', encoding='utf-8').write(tpl.replace('/*GEO*/', geo))
+open(os.path.join(WEB, 'assets', 'geo.js'), 'w', encoding='utf-8').write('window.SUDAKAOS_GEO=' + geo + ';\n')
 
 # 2) Páginas de capacidades
 HEAD = '''<!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0c0c0b">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="{theme}">
 <meta name="description" content="{desc}">
 <title>{title} — Sudakaos LATAM</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=Schibsted+Grotesk:wght@400..700&display=swap">
 <link rel="stylesheet" href="../assets/site.css">
 </head>
-<body>
-<header><div class="wrap nav"><a class="brand" href="../" aria-label="Sudakaos LATAM inicio">Sudakaos<span>●</span> LATAM</a><button class="menu" aria-expanded="false" aria-controls="nav">Menú</button><nav id="nav"><a href="../#soluciones">Soluciones</a><a href="../#metodo">Cómo trabajamos</a><a href="../#respuesta">Sala de situación</a><a href="../#canal">Canal digital</a><a class="nav-cta" href="#contacto">Hablemos</a></nav></div></header>
+<body{bodycls}>
+<header><div class="wrap nav"><a class="brand" href="../" aria-label="Sudakaos LATAM inicio">Sudakaos<span>●</span> LATAM</a><button class="menu" aria-expanded="false" aria-controls="nav">Menú</button><nav id="nav"><a href="../#soluciones">Soluciones</a><a href="../#metodo">Cómo trabajamos</a><a href="../paises/">Países</a><a href="../situacion/">Situación</a><a href="../#canal">Canal digital</a><a class="nav-cta" href="#contacto">Hablemos</a></nav></div></header>
 <main>'''
 
 def fig(kind, cap, n, cls=''):
@@ -68,7 +69,9 @@ for i, c in enumerate(CAPS):
 <script src="../assets/charts.js" defer></script>
 </body></html>
 '''
-    out = HEAD.format(desc=e(c['lead']), title=e(c['title'])) + body
+    out = HEAD.format(desc=e(c['lead']), title=e(c['title']), theme='#ffffff', bodycls='') + body
     d = os.path.join(WEB, c['slug']); os.makedirs(d, exist_ok=True)
     open(os.path.join(d, 'index.html'), 'w', encoding='utf-8').write(out)
-print('ok', len(CAPS), 'páginas')
+from pages_data import build_data_pages
+build_data_pages(HEAD, WEB, e)
+print('ok', len(CAPS), 'páginas + países + situación')

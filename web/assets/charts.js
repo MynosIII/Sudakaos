@@ -4,7 +4,7 @@
   'use strict';
   var RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
   // Paleta nocturna: "INK" es el trazo principal (claro sobre negro)
-  var INK = '#e8e6de', RED = '#e0263f', MUTED = '#8b8981', LINE = '#2b2a26', SOFT = '#1a1917', PAPER = '#0c0c0b', G1 = '#8f8d85', G2 = '#5c5a54', G3 = '#3b3a36';
+  var INK = '#0c0c0b', RED = '#d0213a', MUTED = '#77756e', LINE = '#e2e1dc', SOFT = '#f1f0ec', PAPER = '#ffffff', G1 = '#6d6b65', G2 = '#a3a19a', G3 = '#cfcdc6';
   var SANS = '"Schibsted Grotesk",Arial,Helvetica,sans-serif';
   var TAU = Math.PI * 2;
 
