@@ -1,0 +1,83 @@
+name: Trump monitor
+
+on:
+  workflow_dispatch:
+  # 08:05 UTC = 05:05 ART: right after the YouTube quota resets, before the other boards use the shared keys
+  schedule:
+    - cron: '5 8 * * *'
+  push:
+    paths:
+      - 'trump/*.py'
+      - 'trump/config.json'
+      - '.github/workflows/trump.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trump-${{ github.ref_name }}
+  cancel-in-progress: false
+
+jobs:
+  collect-and-analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 80
+    env:
+      # Own key if YOUTUBE_API_KEY_TRUMP is loaded; otherwise the national board's key (small use: ~650 units/day)
+      YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY_TRUMP || secrets.YOUTUBE_API_KEY }}
+      # Fallback key if the first one is rate-limited
+      YOUTUBE_API_KEY_ALT: ${{ secrets.YOUTUBE_API_KEY_ROCA }}
+      META_TOKEN: ${{ secrets.META_TOKEN }}
+      TRUMP_NLP_SECONDS: '600'
+      # No X_BEARER_TOKEN on purpose: X is paid and only runs by hand
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update to latest
+        run: git fetch --depth=50 origin "${GITHUB_REF_NAME}" && git merge --ff-only FETCH_HEAD || true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install dependencies
+        run: python -m pip install vaderSentiment
+      # English sentiment/emotion with pysentimiento (free, CPU). If it fails, VADER + lexicon.
+      - name: Install NLP models
+        continue-on-error: true
+        run: |
+          python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install pysentimiento
+      - name: Cache NLP models
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-pysentimiento-en-v1
+      # Full texts are never committed: they live in the workflow cache.
+      - name: Restore store
+        uses: actions/cache/restore@v4
+        with:
+          path: trump/.store
+          key: trump-store-${{ github.run_id }}
+          restore-keys: trump-store-
+      - name: Collect
+        run: timeout 2700 python -u trump/collect.py || echo "collection cut by time"
+      - name: Analyze
+        run: python -u trump/analyze.py
+      - name: Save store
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: trump/.store
+          key: trump-store-${{ github.run_id }}
+      - name: Commit aggregates
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add trump/data/*.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Trump: update aggregates'
+            for i in 1 2 3; do
+              git pull --rebase -X theirs origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+              sleep $((i * 5))
+            done
+            exit 1
+          fi
