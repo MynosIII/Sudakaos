@@ -831,9 +831,15 @@ ACS_VARS = {"pop": "B01003_001E", "black": "B02001_003E", "hisp": "B03003_003E",
 def census():
     out, errs = {"at": iso(NOW)}, []
     vals = ",".join(ACS_VARS.values())
+    def cjson(url):
+        raw = get(url, headers={"User-Agent": BROWSER, "Accept": "application/json"}, retries=1, timeout=60).decode("utf8", "replace")
+        try:
+            return json.loads(raw)
+        except ValueError:
+            raise RuntimeError("not JSON: " + re.sub(r"\s+", " ", raw)[:160])
     for year in (2024, 2023, 2022):
         try:
-            rows = get_json(f"https://api.census.gov/data/{year}/acs/acs1?get=NAME,{vals}&for=state:*", retries=1, timeout=60)
+            rows = cjson(f"https://api.census.gov/data/{year}/acs/acs1?get=NAME,{vals}&for=state:*")
             hdr = rows[0]
             out["acs_year"] = year
             out["acs"] = {r[0]: {k: (float(r[hdr.index(v)]) if r[hdr.index(v)] not in (None, "", "null") else None) for k, v in ACS_VARS.items()} for r in rows[1:]}
@@ -841,7 +847,7 @@ def census():
         except Exception as e:
             errs.append(f"acs {year}: {type(e).__name__}: {str(e)[:80]}")
     try:
-        rows = get_json("https://api.census.gov/data/2020/dec/dhc?get=NAME,P2_001N,P2_003N&for=state:*", retries=1, timeout=60)
+        rows = cjson("https://api.census.gov/data/2020/dec/dhc?get=NAME,P2_001N,P2_003N&for=state:*")
         out["rural"] = {r[0]: round(100 * float(r[2]) / float(r[1]), 1) for r in rows[1:]}
     except Exception as e:
         errs.append(f"dhc: {type(e).__name__}: {str(e)[:80]}")
@@ -865,10 +871,10 @@ def census():
     out["errors"] = errs
     if errs:
         log(census_errors=errs)
-    if not out.get("acs"):
-        raise RuntimeError("; ".join(errs)[:200])
+    if not (out.get("acs") or out.get("rural") or out.get("gdp")):
+        raise RuntimeError("; ".join(errs)[:300])
     save_json("census.json", out)
-    return len(out["acs"])
+    return len(out.get("acs") or out.get("gdp") or {})
 
 
 # ---------------------------------------------------------------- main
