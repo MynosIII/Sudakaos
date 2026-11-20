@@ -101,6 +101,7 @@
   function load() {
     fetch('../data/situacion.json', { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }).then(function (d) {
       if (!d) { if (!SIT) $('sUpd').textContent = 'Los datos todavía no están disponibles.'; return; }
+      var mes = Date.now() - 30 * 864e5; d.alertas = (d.alertas || []).filter(function (a) { return Date.parse(a.t) > mes; });
       SIT = d; $('sUpd').textContent = 'Actualizado ' + hhmm(d.meta.actualizado) + ' (' + ago(d.meta.actualizado) + '). Se actualiza cada 3 horas.';
       drawBase(); render();
     });

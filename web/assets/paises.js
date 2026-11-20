@@ -1,5 +1,5 @@
 /* Sudakaos LATAM · tablero por país con datos públicos reales (web/data/paises.json y situacion.json).
-   Fuentes: Banco Mundial, currency-api, Google News, GDELT, USGS y GDACS. Sin dependencias. */
+   Fuentes: currency-api, Yahoo Finance, Google News, GDELT, USGS y GDACS. Nada con más de un mes. Sin dependencias. */
 (function () {
   'use strict';
   var ORDEN = ['AR', 'BO', 'BR', 'CL', 'CO', 'EC', 'GY', 'PY', 'PE', 'SR', 'UY', 'VE', 'MX', 'US', 'ES', 'GB', 'EU'];
@@ -52,8 +52,6 @@
 
   // ---------- Render ----------
   function kpi(lab, val, foot, cls) { return '<div class="kpi"><span>' + lab + '</span><strong' + (cls ? ' class="' + cls + '"' : '') + '>' + val + '</strong><small>' + (foot || '&nbsp;') + '</small></div>'; }
-  function wbv(p, k) { return last((p.wb || {})[k]); }
-  function src(p, k, y) { return ((p.fuente || {})[k] || 'Banco Mundial') + ' · ' + y; }
 
   function render() {
     var p = DATA.paises[CUR]; if (!p) return;
@@ -62,44 +60,48 @@
     var nv = (SIT && SIT.nivel && SIT.nivel[CUR]) || { n24: 0 };
     $('pLead').textContent = nv.n24 ? nv.n24 + ' alerta' + (nv.n24 === 1 ? '' : 's') + ' en las últimas 24 horas y ' + p.notas24 + (p.notas24 >= 100 ? '+' : '') + ' notas de medios sobre ' + p.nombre + '.' : 'Sin alertas en las últimas 24 horas. ' + p.notas24 + (p.notas24 >= 100 ? '+' : '') + ' notas de medios sobre ' + p.nombre + '.';
     [].forEach.call($('pTabs').children, function (a) { if (a.dataset.c === CUR) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
-    var inf = wbv(p, 'inflacion'), gdp = wbv(p, 'pib_crec'), un = wbv(p, 'desempleo'), pc = wbv(p, 'pib_pc'), pop = wbv(p, 'poblacion'), net = wbv(p, 'internet');
-    var fx = p.fx || {}, fl = last(fx.serie), v30 = fxVar(fx.serie, 30), tono = tonoProm(p);
-    var h = kpi('Inflación anual', inf ? num(inf[1]) + ' %' : '—', inf ? src(p, 'inflacion', inf[0]) : 'Sin dato', inf && inf[1] > 10 ? 'up' : '') +
-      kpi('Crecimiento del PIB', gdp ? num(gdp[1]) + ' %' : '—', gdp ? src(p, 'pib_crec', gdp[0]) : 'Sin dato', gdp && gdp[1] < 0 ? 'up' : '') +
-      kpi('Desempleo', un ? num(un[1]) + ' %' : '—', un ? src(p, 'desempleo', un[0]) : 'Sin dato') +
-      (CUR === 'EC' ? kpi('Moneda', 'US$', 'Dolarizado desde 2000') :
-        kpi(CUR === 'US' ? 'Euros por US$' : (fx.moneda || '') + ' por US$', fl ? num(fl[1], fl[1] < 10 ? 3 : 1) : '—', v30 != null ? (v30 >= 0 ? '+' : '') + num(v30) + ' % en 30 días · ' + fl[0] : (fl ? fl[0] : 'Sin dato'), v30 > 3 ? 'up' : '')) +
-      kpi('PIB per cápita', pc ? 'US$ ' + num(pc[1], 0) : '—', pc ? src(p, 'pib_pc', pc[0]) : 'Sin dato') +
-      kpi('Población', pop ? compact(pop[1]) : '—', pop ? src(p, 'poblacion', pop[0]) : 'Sin dato') +
-      kpi('Usuarios de internet', net ? num(net[1], 0) + ' %' : '—', net ? 'UIT / Banco Mundial · ' + net[0] : 'Sin dato') +
-      kpi('Tono de la cobertura', tono != null ? (tono > 0 ? '+' : '') + num(tono, 2) : '—', tono != null ? 'GDELT · promedio 7 días' : 'Sin dato', tono != null && tono < -2 ? 'up' : '');
+    var fx = p.fx || {}, fl = last(fx.serie), v30 = fxVar(fx.serie, 30), v7 = fxVar(fx.serie, 7), tono = tonoProm(p);
+    var ix = p.indice, il = ix && last(ix.serie), iv = il ? (il[1] / ix.serie[0][1] - 1) * 100 : null;
+    var nvp = p.alertas || {};
+    var h = (CUR === 'EC' ? kpi('Moneda', 'US$', 'Ecuador está dolarizado') :
+        kpi(CUR === 'US' ? 'Euros por US$' : (fx.moneda || '') + ' por US$', fl ? num(fl[1], fl[1] < 10 ? 3 : 1) : '—', fl ? 'currency-api · ' + fl[0] : 'Sin dato', v30 > 3 ? 'up' : '')) +
+      kpi('Tipo de cambio, 30 días', v30 != null ? (v30 >= 0 ? '+' : '') + num(v30) + ' %' : '—', v7 != null ? '7 días: ' + (v7 >= 0 ? '+' : '') + num(v7) + ' %' : (CUR === 'EC' ? 'No aplica' : 'Sin dato'), v30 > 3 ? 'up' : '') +
+      kpi(ix ? esc(ix.nombre) : 'Índice bursátil', il ? num(il[1], 0) : '—', il ? 'Cierre ' + il[0] : 'Sin índice disponible') +
+      kpi('Índice, 30 días', iv != null ? (iv >= 0 ? '+' : '') + num(iv) + ' %' : '—', iv != null ? 'Yahoo Finance' : 'Sin dato', iv != null && iv < -5 ? 'up' : '') +
+      kpi('Alertas en 24 horas', nv.n24 != null ? nv.n24 : '—', 'medios, USGS y GDACS', nv.n24 >= 10 ? 'up' : '') +
+      kpi('Alertas en 7 días', nvp.n7 != null ? nvp.n7 : '—', nvp.n30 != null ? '30 días: ' + nvp.n30 : '') +
+      kpi('Sismos M4.5+', p.sismos30 != null ? p.sismos30 : '—', 'USGS · últimos 30 días', p.sismos30 >= 5 ? 'up' : '') +
+      kpi('Tono de la cobertura', tono != null ? (tono > 0 ? '+' : '') + num(tono, 2) : '—', tono != null ? 'GDELT · promedio 7 días' : 'Sin dato todavía', tono != null && tono < -2 ? 'up' : '');
     $('pKpis').innerHTML = h;
 
-    var yr = function (s) { return (s || []).filter(function (r) { return r[0] >= 2005; }); };
-    var si = yr(p.wb.inflacion), sg = yr(p.wb.pib_crec);
-    chart($('cInf'), si, { zero: true });
-    chart($('cGdp'), sg, { bars: true });
-    var fxs = (fx.serie || []);
-    $('fxSub').textContent = CUR === 'EC' ? 'Ecuador usa el dólar estadounidense.' : (CUR === 'US' ? 'Euros por dólar' : (fx.moneda || '') + ' por dólar') + ' · cierre diario o semanal · currency-api';
-    if (CUR === 'EC') chart($('cFx'), [], {}); else chart($('cFx'), fxs, { x: function (s) { return Date.parse(s); }, color: INK, fmtX: function (s) { return s.slice(8, 10) + '/' + s.slice(5, 7); } });
+    var dX = function (s) { return Date.parse(s); }, dF = function (s) { return s.slice(8, 10) + '/' + s.slice(5, 7); };
+    chart($('cAl'), p.serie_alertas || [], { bars: true, x: dX, fmtX: dF });
+    $('ixSub').textContent = ix ? ix.nombre + ' · cierre diario, últimos 30 días · Yahoo Finance' : 'Este país no tiene un índice bursátil con datos diarios gratuitos.';
+    if (ix) chart($('cIx'), ix.serie, { x: dX, color: INK, fmtX: dF }); else chart($('cIx'), [], {});
+    var fxs = (fx.serie || []).filter(function (r) { return Date.parse(r[0]) > Date.now() - 31 * 864e5; });
+    $('fxSub').textContent = CUR === 'EC' ? 'Ecuador usa el dólar estadounidense.' : (CUR === 'US' ? 'Euros por dólar' : (fx.moneda || '') + ' por dólar') + ' · cierre diario, últimos 30 días · currency-api';
+    if (CUR === 'EC') chart($('cFx'), [], {}); else chart($('cFx'), fxs, { x: dX, color: RED, fmtX: dF });
     chart($('cTone'), (p.tono || []), { bars: true, fmtX: function (s) { return s.slice(6, 8) + '/' + s.slice(4, 6); }, x: function (s) { return Date.parse(s.slice(0, 4) + '-' + s.slice(4, 6) + '-' + s.slice(6, 8)); } });
 
-    var al = SIT && SIT.alertas ? SIT.alertas.filter(function (a) { return a.pais === CUR; }) : [];
+    var mes = Date.now() - 30 * 864e5, al = SIT && SIT.alertas ? SIT.alertas.filter(function (a) { return a.pais === CUR && Date.parse(a.t) > mes; }) : [];
     $('pAlerts').innerHTML = al.length ? al.slice(0, 12).map(function (a) {
       return '<li><span class="t">' + hhmm(a.t) + '</span><span><span class="tag s' + a.sev + '">' + esc(a.cat) + '</span><a href="' + esc(a.url) + '" target="_blank" rel="noopener">' + esc(a.titulo) + '</a><small>' + esc(a.fuente) + ' · ' + ago(a.t) + '</small></span></li>';
     }).join('') : '<li class="empty">Sin alertas en las últimas 48 horas.</li>';
-    $('pNews').innerHTML = (p.titulares || []).length ? p.titulares.slice(0, 10).map(function (a) {
+    var tl = (p.titulares || []).filter(function (a) { return Date.parse(a.t) > mes; });
+    $('pNews').innerHTML = tl.length ? tl.slice(0, 10).map(function (a) {
       return '<li><span class="t">' + hhmm(a.t) + '</span><span><a href="' + esc(a.url) + '" target="_blank" rel="noopener">' + esc(a.titulo) + '</a><small>' + esc(a.fuente) + '</small></span></li>';
     }).join('') : '<li class="empty">Sin titulares en esta actualización.</li>';
     table();
   }
 
   function rowData(c) {
-    var p = DATA.paises[c], nv = (SIT && SIT.nivel && SIT.nivel[c]) || { n24: 0 };
-    var g = function (k) { var v = wbv(p, k); return v ? v[1] : null; };
-    return { c: c, nombre: p.nombre, inflacion: g('inflacion'), pib_crec: g('pib_crec'), desempleo: g('desempleo'), pib_pc: g('pib_pc'), fx30: c === 'EC' ? null : fxVar((p.fx || {}).serie, 30), tono: tonoProm(p), alertas: nv.n24 };
+    var p = DATA.paises[c], nv = (SIT && SIT.nivel && SIT.nivel[c]) || { n24: 0 }, ix = p.indice;
+    return { c: c, nombre: p.nombre, fx30: c === 'EC' ? null : fxVar((p.fx || {}).serie, 30), fx7: c === 'EC' ? null : fxVar((p.fx || {}).serie, 7),
+      ix30: ix && ix.serie.length > 1 ? (ix.serie[ix.serie.length - 1][1] / ix.serie[0][1] - 1) * 100 : null, tono: tonoProm(p),
+      notas: p.notas24, sismos: p.sismos30, a7: (p.alertas || {}).n7, alertas: nv.n24 };
   }
-  var COLS = [['nombre', 'País'], ['inflacion', 'Inflación %'], ['pib_crec', 'PIB %'], ['desempleo', 'Desempleo %'], ['pib_pc', 'PIB p/c US$'], ['fx30', 'Tipo de cambio 30 d'], ['tono', 'Tono medios'], ['alertas', 'Alertas 24 h']];
+  var COLS = [['nombre', 'País'], ['fx7', 'Cambio 7 d'], ['fx30', 'Cambio 30 d'], ['ix30', 'Índice 30 d'], ['tono', 'Tono medios'], ['notas', 'Notas 24 h'], ['sismos', 'Sismos 30 d'], ['a7', 'Alertas 7 d'], ['alertas', 'Alertas 24 h']];
+  function pct(v) { return v == null ? '—' : (v >= 0 ? '+' : '') + num(v) + ' %'; }
   function table() {
     var rows = ORDEN.filter(function (c) { return DATA.paises[c]; }).map(rowData);
     rows.sort(function (a, b) { var x = a[sortK], y = b[sortK]; if (x == null) return 1; if (y == null) return -1; return (typeof x === 'string' ? x.localeCompare(y) : x - y) * sortD; });
@@ -107,7 +109,7 @@
     $('pHead').innerHTML = '<tr>' + COLS.map(function (k) { return '<th data-k="' + k[0] + '"' + (k[0] === sortK ? ' aria-sort="' + (sortD > 0 ? 'ascending' : 'descending') + '"' : '') + '>' + k[1] + '</th>'; }).join('') + '</tr>';
     $('pRows').innerHTML = rows.map(function (r) {
       var f = function (v, d) { return v == null ? '—' : num(v, d); };
-      return '<tr data-c="' + r.c + '"' + (r.c === CUR ? ' class="on"' : '') + '><td>' + esc(r.nombre) + '</td><td>' + f(r.inflacion) + '</td><td>' + f(r.pib_crec) + '</td><td>' + f(r.desempleo) + '</td><td>' + f(r.pib_pc, 0) + '</td><td>' + (r.fx30 == null ? '—' : (r.fx30 >= 0 ? '+' : '') + num(r.fx30) + ' %') + '</td><td>' + f(r.tono, 2) + '</td><td>' + r.alertas + '<span class="bar" style="width:' + Math.round(r.alertas / mx * 40) + 'px"></span></td></tr>';
+      return '<tr data-c="' + r.c + '"' + (r.c === CUR ? ' class="on"' : '') + '><td>' + esc(r.nombre) + '</td><td>' + pct(r.fx7) + '</td><td>' + pct(r.fx30) + '</td><td>' + pct(r.ix30) + '</td><td>' + f(r.tono, 2) + '</td><td>' + (r.notas >= 100 ? '100+' : f(r.notas, 0)) + '</td><td>' + f(r.sismos, 0) + '</td><td>' + f(r.a7, 0) + '</td><td>' + r.alertas + '<span class="bar" style="width:' + Math.round(r.alertas / mx * 40) + 'px"></span></td></tr>';
     }).join('');
   }
 
