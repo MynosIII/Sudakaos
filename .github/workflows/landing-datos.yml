@@ -1,0 +1,42 @@
+name: Landing datos
+
+# Datos reales y públicos de la landing (tablero por país y sala de situación).
+# Escribe web/data/*.json; al terminar, "Landing en sudakaoslatam.com" y Pages publican (workflow_run).
+on:
+  schedule:
+    - cron: '23 */3 * * *'
+  workflow_dispatch:
+  push:
+    branches: [claude/project-thread-pje0u9]
+    paths: ['web/tools/datos.py', '.github/workflows/landing-datos.yml']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: landing-datos
+  cancel-in-progress: false
+
+jobs:
+  datos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Recolectar
+        run: python web/tools/datos.py
+      - name: Guardar
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898469+github-actions[bot]@users.noreply.github.com"
+          git add web/data
+          if git diff --cached --quiet; then echo "Sin cambios"; exit 0; fi
+          git commit -m "Landing: actualizar datos de países y situación [skip ci]"
+          for i in 1 2 3 4; do
+            git pull --rebase -q origin "$GITHUB_REF_NAME" && git push origin "HEAD:$GITHUB_REF_NAME" && exit 0
+            sleep $((i * 5))
+          done
+          exit 1
