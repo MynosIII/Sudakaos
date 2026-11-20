@@ -1,13 +1,13 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Donald J. Trump Monitor</title>
-<meta name="description" content="Donald J. Trump: approval polling average, media coverage by outlet lean, public voice, Truth Social activity, search interest, executive actions, prediction markets and paid media, updated daily.">
+<title>Monitor Donald J. Trump</title>
+<meta name="description" content="Donald J. Trump: promedio de encuestas de aprobación, cobertura por sesgo de medio, voz pública, Truth Social, búsquedas, decretos, mercados de predicción y avisos pagos, actualizado todos los días.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Donald J. Trump Monitor">
-<meta property="og:description" content="Approval polling average, media coverage by outlet lean, public voice, Truth Social, search interest, executive actions, prediction markets and paid media, updated daily.">
+<meta property="og:title" content="Monitor Donald J. Trump · demo en vivo">
+<meta property="og:description" content="Promedio de encuestas, cobertura por sesgo de medio, voz pública, Truth Social, búsquedas, decretos, mercados de predicción y avisos pagos, actualizado todos los días.">
 <meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -60,7 +60,8 @@ main{max-width:1600px;margin:0 auto;padding:18px 20px 40px}
 .kpi.hot{border-color:#5a2420;background:linear-gradient(180deg,#1f1212,var(--s1))}
 .pos-t{color:#4fd1a1}.neg-t{color:#ff8a8a}
 .hero{display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;background:linear-gradient(90deg,#14204a,var(--s1) 55%,#2a1210);border:1px solid #273461;border-radius:8px;padding:16px 18px;margin-bottom:14px}
-.av{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:19px;color:#fff;background:linear-gradient(135deg,var(--navy),var(--red));box-shadow:0 0 0 3px #0a0c11,0 0 0 4px #3a4a7a}
+.av{position:relative;overflow:hidden;width:72px;height:72px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:19px;color:#fff;background:linear-gradient(135deg,var(--navy),var(--red));box-shadow:0 0 0 3px #0a0c11,0 0 0 4px #3a4a7a}
+.av img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 18%}
 .hero h1{margin:0;font-size:22px;letter-spacing:-.3px}.hero .k{color:var(--muted);font-size:13px}
 .gauge{text-align:right}.gauge b{font:800 40px Inter,system-ui,sans-serif;letter-spacing:-1px}.gauge span{display:block;color:var(--dim);font:600 10.5px var(--mono);letter-spacing:1px}
 .find{margin:4px 0 0;padding-left:18px;color:var(--muted)}.find li{margin:5px 0}.find b{color:var(--txt)}
@@ -131,142 +132,142 @@ footer{color:var(--dim);font-size:12px;max-width:1600px;margin:0 auto;padding:0 
 </head>
 <body>
 <div class="top"><div class="bar">
-  <div class="logo"><i id="lg">DJT</i><span>Trump Monitor</span><small>SOCIAL LISTENING · OSINT</small></div>
-  <span class="live" id="live"><b></b>LIVE DATA</span>
+  <div class="logo"><i id="lg">DJT</i><span>Monitor Trump</span><small>SOCIAL LISTENING · OSINT</small></div>
+  <span class="live" id="live"><b></b>DATOS EN VIVO</span>
   <div class="clock" id="clock"></div>
-  <a class="cta" href="../../#contacto">Get your own monitor →</a>
+  <a class="cta" href="../../#contacto">Quiero mi monitor →</a>
 </div></div>
-<div class="ticker"><div class="lab">HEADLINES</div><div class="run" id="ticker"></div></div>
+<div class="ticker"><div class="lab">TITULARES</div><div class="run" id="ticker"></div></div>
 <nav><div class="in" id="tabs">
-  <button data-t="overview" class="on">Overview</button>
-  <button data-t="approval">Approval</button>
-  <button data-t="media">Media coverage</button>
-  <button data-t="voice">Public voice</button>
+  <button data-t="overview" class="on">Resumen</button>
+  <button data-t="approval">Aprobación</button>
+  <button data-t="media">Medios</button>
+  <button data-t="voice">Voz pública</button>
   <button data-t="truth">Truth Social</button>
-  <button data-t="search">Search & attention</button>
-  <button data-t="policy">Executive & markets</button>
-  <button data-t="ads">Paid media</button>
-  <button data-t="method">Sources & method</button>
+  <button data-t="search">Búsquedas y atención</button>
+  <button data-t="policy">Gobierno y mercados</button>
+  <button data-t="ads">Avisos pagos</button>
+  <button data-t="method">Fuentes y método</button>
 </div></nav>
 <main>
 <div id="warn"></div>
 
 <section class="tab on" id="t-overview">
   <div class="hero">
-    <div class="av">DJT</div>
-    <div><h1>Donald J. Trump</h1><div class="k" id="h-k">47th President of the United States</div></div>
-    <div class="gauge"><b id="h-app">–</b><span>APPROVAL AVERAGE</span></div>
+    <div class="av"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Official_Presidential_Portrait_of_President_Donald_J._Trump_%282025%29.jpg/330px-Official_Presidential_Portrait_of_President_Donald_J._Trump_%282025%29.jpg" alt="Donald J. Trump" referrerpolicy="no-referrer" onerror="this.remove()"><span>DJT</span></div>
+    <div><h1>Donald J. Trump</h1><div class="k" id="h-k">47.º presidente de los Estados Unidos</div></div>
+    <div class="gauge"><b id="h-app">–</b><span>APROBACIÓN PROMEDIO</span></div>
   </div>
   <div class="kpis" id="kpis"></div>
   <div class="g">
-    <div class="card c8"><h3>Approval vs. disapproval since inauguration<span class="tag">Polling average</span></h3><div id="o-app" style="height:300px"></div></div>
-    <div class="card c4"><h3>Alerts<span class="tag">Auto-detected</span></h3><div class="alerts" id="o-alerts"></div></div>
-    <div class="card c5"><h3>Key findings<span class="tag">Brief</span></h3><ul class="find" id="o-find"></ul></div>
-    <div class="card c7"><h3>What the news is saying about Trump · last 30 days<span class="tag">Click a word</span></h3><div id="o-cloud"></div></div>
-    <div class="card c6"><h3>Topic agenda in Trump coverage<span class="tag">Share of stories</span></h3><div class="bars" id="o-topics"></div></div>
-    <div class="card c6"><h3>Latest headlines<span class="tag">24 outlets + Google News</span></h3><div class="hl" id="o-heads" style="max-height:330px"></div></div>
+    <div class="card c8"><h3>Aprobación y desaprobación desde la asunción<span class="tag">Promedio de encuestas</span></h3><div id="o-app" style="height:300px"></div></div>
+    <div class="card c4"><h3>Alertas<span class="tag">Automáticas</span></h3><div class="alerts" id="o-alerts"></div></div>
+    <div class="card c5"><h3>Hallazgos clave<span class="tag">Resumen</span></h3><ul class="find" id="o-find"></ul></div>
+    <div class="card c7"><h3>Qué dicen los medios sobre Trump · últimos 30 días<span class="tag">Tocá una palabra</span></h3><div id="o-cloud"></div></div>
+    <div class="card c6"><h3>Agenda de temas en la cobertura<span class="tag">% de notas</span></h3><div class="bars" id="o-topics"></div></div>
+    <div class="card c6"><h3>Últimos titulares<span class="tag">24 medios + Google News</span></h3><div class="hl" id="o-heads" style="max-height:330px"></div></div>
   </div>
 </section>
 
 <section class="tab" id="t-approval">
   <div class="g">
     <div class="card c12"><div class="big" id="a-big"></div><div id="a-chart" style="height:420px"></div>
-      <div class="legend"><span style="--c:var(--app)">Approve (average)</span><span style="--c:var(--dis)">Disapprove (average)</span><span style="--c:#6b7280">Individual polls</span></div></div>
-    <div class="card c4"><h3>Net approval by month</h3><div id="a-month" style="height:300px"></div></div>
-    <div class="card c4"><h3>By population · last 30 days</h3><div id="a-pop"></div><p class="note">A = all adults · RV = registered voters · LV = likely voters.</p></div>
-    <div class="card c4"><h3>House effects<span class="tag">Net vs. average</span></h3><div class="bars" id="a-house"></div><p class="note">How much more favorable (+) or unfavorable (−) each pollster's net approval runs versus our average on the same dates, last 180 days.</p></div>
-    <div class="card c12"><h3>Latest poll by pollster<span class="tag" id="a-cnt"></span></h3><div class="scroll"><table id="a-table"></table></div>
-      <p class="note">Cross-check against other public averages: <span class="src"><a href="https://www.realclearpolling.com/polls/approval/donald-trump/approval-rating" target="_blank" rel="noopener">RealClearPolling</a> · <a href="https://www.natesilver.net/p/trump-approval-rating" target="_blank" rel="noopener">Silver Bulletin</a> · <a href="https://www.nytimes.com/interactive/polls/donald-trump-approval-rating-polls.html" target="_blank" rel="noopener">NYT</a> · <a href="https://www.strengthinnumbers.com/" target="_blank" rel="noopener">Strength In Numbers</a> · <a href="https://votehub.com/polls/" target="_blank" rel="noopener">VoteHub</a></span></p></div>
+      <div class="legend"><span style="--c:var(--app)">Aprueba (promedio)</span><span style="--c:var(--dis)">Desaprueba (promedio)</span><span style="--c:#6b7280">Encuestas individuales</span></div></div>
+    <div class="card c4"><h3>Aprobación neta por mes</h3><div id="a-month" style="height:300px"></div></div>
+    <div class="card c4"><h3>Por población · últimos 30 días</h3><div id="a-pop"></div><p class="note">A = adultos · RV = votantes registrados · LV = votantes probables.</p></div>
+    <div class="card c4"><h3>Sesgo de cada encuestadora<span class="tag">Neto vs. promedio</span></h3><div class="bars" id="a-house"></div><p class="note">Cuánto más favorable (+) o desfavorable (−) le da a Trump cada encuestadora frente a nuestro promedio en las mismas fechas, últimos 180 días.</p></div>
+    <div class="card c12"><h3>Última encuesta de cada encuestadora<span class="tag" id="a-cnt"></span></h3><div class="scroll"><table id="a-table"></table></div>
+      <p class="note">Comparar con otros promedios públicos: <span class="src"><a href="https://www.realclearpolling.com/polls/approval/donald-trump/approval-rating" target="_blank" rel="noopener">RealClearPolling</a> · <a href="https://www.natesilver.net/p/trump-approval-rating" target="_blank" rel="noopener">Silver Bulletin</a> · <a href="https://www.nytimes.com/interactive/polls/donald-trump-approval-rating-polls.html" target="_blank" rel="noopener">NYT</a> · <a href="https://www.strengthinnumbers.com/" target="_blank" rel="noopener">Strength In Numbers</a> · <a href="https://votehub.com/polls/" target="_blank" rel="noopener">VoteHub</a></span></p></div>
   </div>
 </section>
 
 <section class="tab" id="t-media">
   <div class="g">
-    <div class="card c8"><h3>Daily Trump stories by outlet lean · 90 days</h3><div id="m-daily" style="height:300px"></div></div>
-    <div class="card c4"><h3>How each side covers Trump · 30 days</h3><div id="m-lean"></div></div>
-    <div class="card c7"><h3>Topics: share of Trump coverage, this week vs. before</h3><div class="scroll" style="max-height:440px"><table id="m-topics"></table></div></div>
-    <div class="card c5"><h3>Outlets<span class="tag">RSS · 30 days</span></h3><div class="scroll" style="max-height:440px"><table id="m-outlets"></table></div></div>
-    <div class="card c12"><h3>Headline feed<span class="tag">Filter</span></h3><div id="m-f" style="margin-bottom:8px"></div><div class="hl" id="m-heads"></div></div>
+    <div class="card c8"><h3>Notas diarias sobre Trump por sesgo del medio · 90 días</h3><div id="m-daily" style="height:300px"></div></div>
+    <div class="card c4"><h3>Cómo lo cubre cada lado · 30 días</h3><div id="m-lean"></div></div>
+    <div class="card c7"><h3>Temas: peso en la cobertura, esta semana vs. antes</h3><div class="scroll" style="max-height:440px"><table id="m-topics"></table></div></div>
+    <div class="card c5"><h3>Medios<span class="tag">RSS · 30 días</span></h3><div class="scroll" style="max-height:440px"><table id="m-outlets"></table></div></div>
+    <div class="card c12"><h3>Titulares<span class="tag">Filtrar</span></h3><div id="m-f" style="margin-bottom:8px"></div><div class="hl" id="m-heads"></div></div>
   </div>
-  <div class="sect">Global coverage · GDELT</div>
+  <div class="sect">Cobertura mundial · GDELT</div>
   <div class="g">
-    <div class="card c8 osint" data-o="GDELT 2.0 · 65 LANGUAGES"><h3>Worldwide news volume and tone</h3><div id="g-vol" style="height:300px"></div></div>
-    <div class="card c4"><h3>Who is writing about Trump · last 24 hours<span class="tag">by source country</span></h3><div class="bars" id="g-ctry"></div></div>
-    <div class="card c12"><h3>Foreign press right now<span class="tag">Non-English · last 3 days</span></h3><div class="hl" id="g-arts" style="max-height:380px"></div></div>
+    <div class="card c8 osint" data-o="GDELT 2.0 · 65 IDIOMAS"><h3>Volumen y tono de las noticias en el mundo</h3><div id="g-vol" style="height:300px"></div></div>
+    <div class="card c4"><h3>Quién escribe sobre Trump · últimas 24 horas<span class="tag">por país del medio</span></h3><div class="bars" id="g-ctry"></div></div>
+    <div class="card c12"><h3>Prensa extranjera ahora<span class="tag">No inglés · últimos 3 días</span></h3><div class="hl" id="g-arts" style="max-height:380px"></div></div>
   </div>
 </section>
 
 <section class="tab" id="t-voice">
   <div class="kpis" id="v-kpis"></div>
   <div class="g">
-    <div class="card c6"><h3>What commenters say · YouTube<span class="tag">Click a word</span></h3><div id="v-cloud"></div></div>
-    <div class="card c3"><h3>Emotions</h3><div class="bars" id="v-emo"></div></div>
-    <div class="card c3"><h3>Topics in comments</h3><div class="bars" id="v-top"></div></div>
-    <div class="card c6"><h3>Words in positive comments</h3><div id="v-cpos"></div></div>
-    <div class="card c6"><h3>Words in negative comments</h3><div id="v-cneg"></div></div>
-    <div class="card c12"><h3>Most-watched Trump videos · last 30 days</h3><div class="scroll"><table id="v-vids"></table></div></div>
+    <div class="card c6"><h3>Qué dicen los comentarios · YouTube<span class="tag">Tocá una palabra</span></h3><div id="v-cloud"></div></div>
+    <div class="card c3"><h3>Emociones</h3><div class="bars" id="v-emo"></div></div>
+    <div class="card c3"><h3>Temas en los comentarios</h3><div class="bars" id="v-top"></div></div>
+    <div class="card c6"><h3>Palabras en comentarios positivos</h3><div id="v-cpos"></div></div>
+    <div class="card c6"><h3>Palabras en comentarios negativos</h3><div id="v-cneg"></div></div>
+    <div class="card c12"><h3>Videos sobre Trump más vistos · últimos 30 días</h3><div class="scroll"><table id="v-vids"></table></div></div>
   </div>
 </section>
 
 <section class="tab" id="t-truth">
   <div class="kpis" id="s-kpis"></div>
   <div class="g">
-    <div class="card c8"><h3>Posts per day · 90 days</h3><div id="s-daily" style="height:260px"></div></div>
-    <div class="card c4"><h3>When he posts<span class="tag">Eastern Time</span></h3><div id="s-heat"></div></div>
-    <div class="card c4"><h3>Who and what he names most · 30 days</h3><div class="bars" id="s-names"></div></div>
-    <div class="card c4"><h3>His agenda · topics</h3><div class="bars" id="s-top"></div></div>
-    <div class="card c4"><h3>His words<span class="tag">Click a word</span></h3><div id="s-cloud"></div></div>
-    <div class="card c6"><h3>Top posts by engagement · 30 days</h3><div class="posts" id="s-best"></div></div>
-    <div class="card c6"><h3>Latest posts</h3><div class="posts" id="s-last"></div></div>
+    <div class="card c8"><h3>Posts por día · 90 días</h3><div id="s-daily" style="height:260px"></div></div>
+    <div class="card c4"><h3>Cuándo publica<span class="tag">Hora de Washington</span></h3><div id="s-heat"></div></div>
+    <div class="card c4"><h3>A quién y qué nombra más · 30 días</h3><div class="bars" id="s-names"></div></div>
+    <div class="card c4"><h3>Su agenda · temas</h3><div class="bars" id="s-top"></div></div>
+    <div class="card c4"><h3>Sus palabras<span class="tag">Tocá una palabra</span></h3><div id="s-cloud"></div></div>
+    <div class="card c6"><h3>Posts con más interacción · 30 días</h3><div class="posts" id="s-best"></div></div>
+    <div class="card c6"><h3>Últimos posts</h3><div class="posts" id="s-last"></div></div>
   </div>
 </section>
 
 <section class="tab" id="t-search">
   <div class="g">
-    <div class="card c8"><h3>Google search interest · 12 months<span class="tag">US · 0-100</span></h3><div id="r-fig" style="height:300px"></div></div>
-    <div class="card c4"><h3>Where people search “Trump” · past 7 days</h3><div class="tiles" id="r-map"></div><div class="legend" id="r-mapl"></div></div>
-    <div class="card c4"><h3>Rising searches with “Trump”</h3><div class="bars" id="r-rise"></div></div>
-    <div class="card c4"><h3>Top searches with “Trump”</h3><div class="bars" id="r-top"></div></div>
-    <div class="card c4"><h3>Rising topics</h3><div class="bars" id="r-rtop"></div></div>
-    <div class="card c6"><h3>Issues people search · 3 months</h3><div id="r-iss" style="height:280px"></div></div>
-    <div class="card c6"><h3>Wikipedia attention · weekly page views</h3><div id="r-wiki" style="height:280px"></div></div>
+    <div class="card c8"><h3>Interés de búsqueda en Google · 12 meses<span class="tag">EE.UU. · 0-100</span></h3><div id="r-fig" style="height:300px"></div></div>
+    <div class="card c4"><h3>Dónde se busca “Trump” · últimos 7 días</h3><div class="tiles" id="r-map"></div><div class="legend" id="r-mapl"></div></div>
+    <div class="card c4"><h3>Búsquedas en alza con “Trump”</h3><div class="bars" id="r-rise"></div></div>
+    <div class="card c4"><h3>Búsquedas principales con “Trump”</h3><div class="bars" id="r-top"></div></div>
+    <div class="card c4"><h3>Temas en alza</h3><div class="bars" id="r-rtop"></div></div>
+    <div class="card c6"><h3>Temas que busca la gente · 3 meses</h3><div id="r-iss" style="height:280px"></div></div>
+    <div class="card c6"><h3>Atención en Wikipedia · visitas semanales</h3><div id="r-wiki" style="height:280px"></div></div>
   </div>
 </section>
 
 <section class="tab" id="t-policy">
   <div class="kpis" id="p-kpis"></div>
   <div class="g">
-    <div class="card c8"><h3>Presidential documents signed per month</h3><div id="p-month" style="height:300px"></div></div>
-    <div class="card c4"><h3>Executive orders by policy area</h3><div class="bars" id="p-top"></div></div>
-    <div class="card c12"><h3>Latest signed</h3><div class="scroll" style="max-height:380px"><table id="p-latest"></table></div></div>
+    <div class="card c8"><h3>Documentos presidenciales firmados por mes</h3><div id="p-month" style="height:300px"></div></div>
+    <div class="card c4"><h3>Órdenes ejecutivas por área</h3><div class="bars" id="p-top"></div></div>
+    <div class="card c12"><h3>Últimos firmados</h3><div class="scroll" style="max-height:380px"><table id="p-latest"></table></div></div>
   </div>
-  <div class="sect">Prediction markets</div>
+  <div class="sect">Mercados de predicción</div>
   <div class="mk" id="p-mk"></div>
-  <div class="sect">Economic pulse</div>
+  <div class="sect">Pulso económico</div>
   <div class="econ" id="p-econ"></div>
 </section>
 
 <section class="tab" id="t-ads">
   <div class="kpis" id="d-kpis"></div>
   <div class="g">
-    <div class="card c6"><h3>Who pays for ads that mention Trump<span class="tag">Meta · US · 30 days</span></h3><div class="scroll"><table id="d-pages"></table></div></div>
-    <div class="card c6"><h3>Where the ads ran<span class="tag">Share of impressions</span></h3><div class="tiles" id="d-map"></div><div class="legend" id="d-mapl"></div></div>
-    <div class="card c4"><h3>Audience age</h3><div class="bars" id="d-age"></div></div>
-    <div class="card c4"><h3>Audience gender</h3><div class="bars" id="d-gen"></div></div>
-    <div class="card c4"><h3>Platforms</h3><div class="bars" id="d-plat"></div></div>
-    <div class="card c12"><h3>Highest-reach ads</h3><div class="hl" id="d-samp"></div></div>
+    <div class="card c6"><h3>Quién paga avisos que mencionan a Trump<span class="tag">Meta · EE.UU. · 30 días</span></h3><div class="scroll"><table id="d-pages"></table></div></div>
+    <div class="card c6"><h3>Dónde se vieron los avisos<span class="tag">% de impresiones</span></h3><div class="tiles" id="d-map"></div><div class="legend" id="d-mapl"></div></div>
+    <div class="card c4"><h3>Edad de la audiencia</h3><div class="bars" id="d-age"></div></div>
+    <div class="card c4"><h3>Género de la audiencia</h3><div class="bars" id="d-gen"></div></div>
+    <div class="card c4"><h3>Plataformas</h3><div class="bars" id="d-plat"></div></div>
+    <div class="card c12"><h3>Avisos con más alcance</h3><div class="hl" id="d-samp"></div></div>
   </div>
 </section>
 
 <section class="tab" id="t-method">
   <div class="g">
-    <div class="card c6"><h3>Source status · last run</h3><div id="x-st"></div></div>
-    <div class="card c6"><h3>Method</h3><div class="note" style="font-size:13px;color:var(--muted);line-height:1.6" id="x-met">
-      <p><b>Approval average.</b> Every public job-approval poll since January 20, 2025 (VoteHub open polling data and Wikipedia's polling tables). For each day we average the polls that ended in the previous 21 days, weighting by recency (7-day half-life) and sample size (square root, capped at 3,000), and dividing each pollster's weight by its number of polls in the window so daily trackers cannot dominate.</p>
-      <p><b>Media.</b> 24 US outlets by RSS, tagged Left, Center or Right using widely cited media-bias ratings, plus Google News searches. A story counts as Trump coverage when the headline or summary names him. Topics are keyword families; tone is computed per headline.</p>
-      <p><b>Public voice.</b> Top comments on the most relevant YouTube videos about Trump in the last two weeks. Sentiment and emotion use an English transformer model (BERTweet via pysentimiento) when available, otherwise VADER. Only short anonymised excerpts with a link to the original are shown.</p>
-      <p><b>Truth Social.</b> His own public posts and their engagement. Posting hours are shown in Eastern Time.</p>
-      <p><b>Other sources.</b> GDELT 2.0 for worldwide coverage, Google Trends and Wikipedia page views for attention, the Federal Register for signed documents, Polymarket and Kalshi for prediction markets, BLS, University of Michigan, Freddie Mac and Stooq for the economy and the Meta Ad Library for paid political ads.</p>
+    <div class="card c6"><h3>Estado de las fuentes · última corrida</h3><div id="x-st"></div></div>
+    <div class="card c6"><h3>Método</h3><div class="note" style="font-size:13px;color:var(--muted);line-height:1.6" id="x-met">
+      <p><b>Promedio de aprobación.</b> Todas las encuestas públicas de aprobación desde el 20 de enero de 2025 (datos abiertos de VoteHub). Para cada día promediamos las encuestas que cerraron en los 21 días anteriores, ponderando por antigüedad (vida media de 7 días) y tamaño de muestra (raíz cuadrada, tope 3.000), y dividimos el peso de cada encuestadora por su cantidad de encuestas en la ventana para que las diarias no dominen.</p>
+      <p><b>Medios.</b> 24 medios de EE.UU. por RSS, clasificados en izquierda, centro o derecha según calificaciones de sesgo de uso extendido, más búsquedas en Google News. Una nota cuenta como cobertura de Trump si el título o el resumen lo nombran. Los temas son familias de palabras clave y el tono se calcula por titular.</p>
+      <p><b>Voz pública.</b> Comentarios más relevantes en los videos de YouTube sobre Trump de las últimas dos semanas. Sentimiento y emoción con un modelo transformer en inglés (BERTweet vía pysentimiento) o VADER como respaldo. Solo se muestran extractos breves y anónimos con link al original.</p>
+      <p><b>Truth Social.</b> Sus posts públicos y la interacción que generan. Los horarios están en hora de Washington.</p>
+      <p><b>Otras fuentes.</b> GDELT 2.0 para la cobertura mundial, Google Trends y Wikipedia para la atención, el Federal Register para los documentos firmados, Kalshi y Polymarket para los mercados de predicción, BLS, Universidad de Michigan y Freddie Mac para la economía, y la Biblioteca de anuncios de Meta para la publicidad política.</p>
     </div></div>
   </div>
 </section>
@@ -274,7 +275,7 @@ footer{color:var(--dim);font-size:12px;max-width:1600px;margin:0 auto;padding:0 
 <footer id="foot"></footer>
 
 <div class="dw" id="dw" aria-hidden="true"><div class="bg" onclick="closeDw()"></div><div class="pn">
-  <div class="hd"><div><h4 id="dw-t"></h4><div class="s" id="dw-s"></div></div><button class="x" onclick="closeDw()" aria-label="Close">×</button></div>
+  <div class="hd"><div><h4 id="dw-t"></h4><div class="s" id="dw-s"></div></div><button class="x" onclick="closeDw()" aria-label="Cerrar">×</button></div>
   <div class="ctl" id="dw-c"></div><div class="ls" id="dw-l"></div></div></div>
 
 <script src="../assets/plotly.min.js"></script>
@@ -290,25 +291,26 @@ const sgn=(v,d=1)=>v==null?'–':(v>0?'+':v<0?'−':'±')+Math.abs(v).toFixed(d)
 const usd=n=>'$'+kfmt(n);
 const base=x=>Object.assign({paper_bgcolor:'rgba(0,0,0,0)',plot_bgcolor:'rgba(0,0,0,0)',font:{color:C.muted,family:'Inter,system-ui,sans-serif',size:12},
   margin:{l:40,r:12,t:8,b:36},hoverlabel:{bgcolor:'#0a0c11',bordercolor:C.line,font:{color:C.txt}},xaxis:{gridcolor:C.grid,zerolinecolor:C.line},yaxis:{gridcolor:C.grid,zerolinecolor:C.line},legend:{orientation:'h',y:-.18},showlegend:false},x||{});
-const E='<div class="empty">No data yet: the daily collector fills this in.</div>';
+const E='<div class="empty">Todavía sin datos: la corrida diaria completa este bloque.</div>';
 const LEAN_C={Left:C.L,Center:C.Cn,Right:C.R};
+const EN={anger:'Ira',joy:'Alegría',sadness:'Tristeza',fear:'Miedo',disgust:'Asco',surprise:'Sorpresa'};
 let D,TX,drawn=new Set(),CL=[];
 
 $$('#tabs button').forEach(b=>b.onclick=()=>{$$('#tabs button').forEach(x=>x.classList.toggle('on',x===b));
   $$('.tab').forEach(t=>t.classList.toggle('on',t.id==='t-'+b.dataset.t));draw(b.dataset.t);setTimeout(()=>window.dispatchEvent(new Event('resize')),60)});
-fetch('data/monitor.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{D=d;init()}).catch(e=>{$('#warn').innerHTML='<div class="warnbox">Data could not be loaded.</div>';console.error(e)});
+fetch('data/monitor.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{D=d;init()}).catch(e=>{$('#warn').innerHTML='<div class="warnbox">No se pudieron cargar los datos.</div>';console.error(e)});
 function draw(id){if(!D||drawn.has(id))return;drawn.add(id);try{({overview,approval,media,voice,truth,search,policy,ads,method}[id]||(()=>{}))()}catch(e){console.error(id,e)}}
 
 // ---------------------------------------------------------------- helpers
 function spark(arr,col){arr=(arr||[]).filter(v=>v!=null);if(arr.length<2)return'';const mx=Math.max(...arr),mn=Math.min(...arr),w=84,h=30,r=mx-mn||1;
   return `<svg class="spark" viewBox="0 0 ${w} ${h}"><polyline fill="none" stroke="${col}" stroke-width="1.6" points="${arr.map((v,i)=>(i/(arr.length-1)*w).toFixed(1)+','+(h-2-(v-mn)/r*(h-4)).toFixed(1)).join(' ')}"/></svg>`}
-const toneBar=t=>t?`<div class="tone" title="Negative ${t.NEG}% · Neutral ${t.NEU}% · Positive ${t.POS}%"><i style="width:${t.NEG}%;background:var(--neg)"></i><i style="width:${t.NEU}%;background:var(--neu)"></i><i style="width:${t.POS}%;background:var(--pos)"></i></div>`:'';
+const toneBar=t=>t?`<div class="tone" title="Negativo ${t.NEG}% · Neutro ${t.NEU}% · Positivo ${t.POS}%"><i style="width:${t.NEG}%;background:var(--neg)"></i><i style="width:${t.NEU}%;background:var(--neu)"></i><i style="width:${t.POS}%;background:var(--pos)"></i></div>`:'';
 const bars=(arr,col)=>{if(!arr||!arr.length)return E;const m=Math.max(...arr.map(a=>a[1]),1);
   return arr.map(a=>`<div class="r"><span title="${esc(a[0])}">${esc(a[0])}</span><i style="width:${Math.max(2,a[1]/m*100)}%;background:${a[2]||col||'var(--red)'}"></i><b>${a[3]??fmt(a[1])}</b></div>`).join('')};
 const kpi=(l,v,d,cls,sp)=>`<div class="kpi ${cls||''}"><div class="l">${l}</div><div class="v">${v}</div><div class="d">${d||'&nbsp;'}</div>${sp||''}</div>`;
 const dlt=(v,good,unit='')=>v==null?'':`<span class="${(v>0)===good?'pos-t':v===0?'':'neg-t'}">${sgn(v)}${unit}</span>`;
-const leanTag=l=>l?`<span class="lean ${l}">${l.toUpperCase()}</span>`:'';
-const ago=s=>{const h=(Date.now()-new Date(s.length<=16?s+':00Z':s))/36e5;return h<1?Math.max(1,Math.round(h*60))+'m ago':h<48?Math.round(h)+'h ago':Math.round(h/24)+'d ago'};
+const LES={Left:'IZQUIERDA',Center:'CENTRO',Right:'DERECHA'},leanTag=l=>l?`<span class="lean ${l}">${LES[l]||l.toUpperCase()}</span>`:'';
+const ago=s=>{const h=(Date.now()-new Date(s.length<=16?s+':00Z':s))/36e5;return h<1?'hace '+Math.max(1,Math.round(h*60))+' min':h<48?'hace '+Math.round(h)+' h':'hace '+Math.round(h/24)+' días'};
 const headsHTML=h=>h&&h.length?h.map(x=>`<a class="it ${esc(x.s)}" href="${esc(x.u)}" target="_blank" rel="noopener">${esc(x.t)}<div class="m">${leanTag(x.l)}<span>${esc(x.o)}</span><span>${ago(x.d)}</span>${(x.k||[]).map(k=>`<span class="pill">${esc(k)}</span>`).join('')}</div></a>`).join(''):E;
 const mctx=document.createElement('canvas').getContext('2d');
 function cloudSVG(list,W,H,maxF,src){list=(list||[]).slice(0,60);if(list.length<4)return E;const ck=CL.push({src})-1;
@@ -318,128 +320,128 @@ function cloudSVG(list,W,H,maxF,src){list=(list||[]).slice(0,60);if(list.length<
     for(let t=0;t<900;t+=.18){const r=1.6*t,cx=W/2+r*Math.cos(t)*1.4-w/2,cy=H/2+r*Math.sin(t)-h/2;if(r>Math.max(W,H))break;
       if(cx<2||cy<2||cx+w>W-2||cy+h>H-2)continue;if(!placed.some(p=>cx<p.x+p.w&&cx+w>p.x&&cy<p.y+p.h&&cy+h>p.y)){ok={x:cx,y:cy,w,h};break}}
     if(!ok)continue;placed.push(ok);const col=x.s<=-.15?C.neg:x.s>=.15?C.pos:'#c4c9d4';
-    out.push(`<text data-c="${ck}" data-w="${esc(x.w)}" x="${(ok.x+ok.w/2).toFixed(1)}" y="${(ok.y+ok.h*.8).toFixed(1)}" text-anchor="middle" font-size="${f}" fill="${col}"><title>${esc(x.w)} · ${fmt(x.n)} texts</title>${esc(x.w)}</text>`)}
-  return `<svg class="cloud" viewBox="0 0 ${W} ${H}" role="img" aria-label="Word cloud">${out.join('')}</svg><div class="legend"><span style="--c:var(--pos)">mostly positive</span><span style="--c:#c4c9d4">mixed</span><span style="--c:var(--neg)">mostly negative</span></div>`}
+    out.push(`<text data-c="${ck}" data-w="${esc(x.w)}" x="${(ok.x+ok.w/2).toFixed(1)}" y="${(ok.y+ok.h*.8).toFixed(1)}" text-anchor="middle" font-size="${f}" fill="${col}"><title>${esc(x.w)} · ${fmt(x.n)} textos</title>${esc(x.w)}</text>`)}
+  return `<svg class="cloud" viewBox="0 0 ${W} ${H}" role="img" aria-label="Nube de palabras">${out.join('')}</svg><div class="legend"><span style="--c:var(--pos)">más bien positiva</span><span style="--c:#c4c9d4">mixta</span><span style="--c:var(--neg)">más bien negativa</span></div>`}
 document.addEventListener('click',e=>{const t=e.target.closest('text[data-c]');if(!t)return;const c=CL[+t.dataset.c];showTexts(t.dataset.w,c.src)});
 
 // ---------------------------------------------------------------- drill-down
 function loadTx(){if(!TX)TX=fetch('data/textos.json',{cache:'no-store'}).then(r=>r.ok?r.json():{}).catch(()=>({}));return TX}
-function showTexts(word,src){const names={news:'headlines',comments:'YouTube comments',truth:'Truth Social posts'};
-  $('#dw-t').textContent='“'+word+'”';$('#dw-s').textContent='';$('#dw-l').innerHTML='<div class="empty">Loading…</div>';$('#dw-c').innerHTML='';
+function showTexts(word,src){const names={news:'titulares',comments:'comentarios de YouTube',truth:'posts de Truth Social'};
+  $('#dw-t').textContent='“'+word+'”';$('#dw-s').textContent='';$('#dw-l').innerHTML='<div class="empty">Cargando…</div>';$('#dw-c').innerHTML='';
   $('#dw').classList.add('on');$('#dw').setAttribute('aria-hidden','false');
   loadTx().then(T=>{const rx=new RegExp('\\b'+word.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'i');
     const rows=(T[src]||[]).filter(r=>rx.test(r.t)).slice(0,120);
-    $('#dw-s').textContent=`${rows.length} ${names[src]} · source of the word, with link`;
+    $('#dw-s').textContent=`${rows.length} ${names[src]} · de dónde sale la palabra, con link`;
     const hl=t=>esc(t).replace(new RegExp('\\b('+word.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'\\w*)','ig'),'<mark>$1</mark>');
-    $('#dw-l').innerHTML=rows.map(r=>`<div class="tx ${esc(r.s)}"><div class="m">${r.o?leanTag(r.l)+'<span>'+esc(r.o)+'</span>':''}${r.v?'<span>on: '+esc(r.v)+'</span>':''}<span>${esc((r.d||'').replace('T',' '))}</span>${r.e?'<span>♥ '+kfmt(r.e)+'</span>':''}<a href="${esc(r.u)}" target="_blank" rel="noopener">open ↗</a></div><div class="t">${hl(r.t)}</div></div>`).join('')||'<div class="empty">No texts with this word.</div>'})}
+    $('#dw-l').innerHTML=rows.map(r=>`<div class="tx ${esc(r.s)}"><div class="m">${r.o?leanTag(r.l)+'<span>'+esc(r.o)+'</span>':''}${r.v?'<span>en: '+esc(r.v)+'</span>':''}<span>${esc((r.d||'').replace('T',' '))}</span>${r.e?'<span>♥ '+kfmt(r.e)+'</span>':''}<a href="${esc(r.u)}" target="_blank" rel="noopener">abrir ↗</a></div><div class="t">${hl(r.t)}</div></div>`).join('')||'<div class="empty">No hay textos con esta palabra.</div>'})}
 function closeDw(){$('#dw').classList.remove('on');$('#dw').setAttribute('aria-hidden','true')}
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDw()});
 
 // ---------------------------------------------------------------- init
 function init(){
   const age=(Date.now()-new Date(D.updated_at))/36e5;
-  if(age>36){$('#live').classList.add('old');$('#live').innerHTML='<b></b>DATA FROM '+Math.round(age/24)+' DAYS AGO'}
+  if(age>36){$('#live').classList.add('old');$('#live').innerHTML='<b></b>DATOS DE HACE '+Math.round(age/24)+' DÍAS'}
   const term=Math.floor((Date.now()-new Date('2025-01-20T17:00:00Z'))/864e5)+1;
-  const tick=()=>{const t=new Date();$('#clock').innerHTML=`<span>WASHINGTON <b>${t.toLocaleTimeString('en-US',{timeZone:'America/New_York',hour:'2-digit',minute:'2-digit'})}</b></span><span>DAY <b>${fmt(term)}</b> OF TERM</span><span>UPDATED <b>${new Date(D.updated_at).toLocaleString('en-US',{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'})}</b></span>`};tick();setInterval(tick,30000);
+  const tick=()=>{const t=new Date();$('#clock').innerHTML=`<span>WASHINGTON <b>${t.toLocaleTimeString('es-AR',{timeZone:'America/New_York',hour:'2-digit',minute:'2-digit'})}</b></span><span>DÍA <b>${fmt(term)}</b> DEL MANDATO</span><span>ACTUALIZADO <b>${new Date(D.updated_at).toLocaleString('es-AR',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'})}</b></span>`};tick();setInterval(tick,30000);
   const H=(D.media||{}).headlines||[];
-  $('#ticker').innerHTML=H.slice(0,22).map(h=>`<span><em style="color:${LEAN_C[h.l]||C.muted}">${esc(h.o.toUpperCase())}</em>${esc(h.t)}</span>`).join('')||'<span>No headlines yet</span>';
-  if(!D.totals.news&&!D.totals.polls)$('#warn').innerHTML='<div class="warnbox">The first collection run is still filling this board.</div>';
-  $('#foot').innerHTML=`Live demo by <a href="../../">Sudakaos LATAM</a> · public, free sources only · updated daily · last update ${new Date(D.updated_at).toUTCString()} · <a href="../../#contacto">Request a monitor for your candidate or organization</a>`;
+  $('#ticker').innerHTML=H.slice(0,22).map(h=>`<span><em style="color:${LEAN_C[h.l]||C.muted}">${esc(h.o.toUpperCase())}</em>${esc(h.t)}</span>`).join('')||'<span>Todavía sin titulares</span>';
+  if(!D.totals.news&&!D.totals.polls)$('#warn').innerHTML='<div class="warnbox">La primera corrida todavía está completando el tablero.</div>';
+  $('#foot').innerHTML=`Demo en vivo de <a href="../../">Sudakaos LATAM</a> · solo fuentes públicas y gratuitas · se actualiza todos los días · última actualización ${new Date(D.updated_at).toLocaleString('es-AR')} · <a href="../../#contacto">Pedí un monitor para tu candidato u organización</a>`;
   draw('overview');
 }
 
 // ---------------------------------------------------------------- overview
 function overview(){const A=D.approval,M=D.media,T=D.truth,Y=D.youtube,O=D.orders;
   if(A){$('#h-app').textContent=A.avg.a.toFixed(1)+'%';$('#h-app').style.color=A.avg.net>=0?C.app:C.dis}
-  $('#h-k').textContent=`${D.perfil.cargo} · in office since Jan 20, 2025`;
+  $('#h-k').textContent='47.º presidente de los Estados Unidos · en funciones desde el 20 de enero de 2025';
   const K=[];
-  if(A){const s=A.series.slice(-60);K.push(kpi('Approval average',A.avg.a.toFixed(1)+'%',dlt(A.avg.d7,true,' pts')+' 7d · '+dlt(A.avg.d30,true,' pts')+' 30d','',spark(s.map(x=>x[1]),C.app)));
-    K.push(kpi('Net approval',sgn(A.avg.net),dlt(A.avg.net7,true)+' 7d · disapprove '+(A.avg.x??'–')+'%',A.avg.net<0?'hot':'',spark(s.map(x=>x[2]==null?null:x[1]-x[2]),A.avg.net<0?C.dis:C.app)))}
-  if(M){const ch=M.n7prev>=50?Math.round(100*(M.n7/M.n7prev-1)):null;K.push(kpi('Trump stories · 7 days',fmt(M.n7),(ch==null?'':dlt(ch,true,'%')+' vs. prior week'),'',spark((M.daily||[]).slice(-30).map(x=>x.n),C.gold)));
-    K.push(kpi('Negative headlines',M.tone.NEG+'%','positive '+M.tone.POS+'% · 30 days',M.tone.NEG>40?'hot':''))}
-  if(Y&&Y.n)K.push(kpi('Public sentiment',sgn(Math.round(Y.tone.POS-Y.tone.NEG),0),'net, '+fmt(Y.n)+' YouTube comments',Y.tone.NEG>Y.tone.POS?'hot':''));
-  if(T)K.push(kpi('Truth Social posts · 7d',fmt(T.n7),'prior week '+fmt(T.n7prev),'',spark(T.daily.slice(-30).map(x=>x[1]),C.red)));
-  if(O)K.push(kpi('Executive orders',fmt(O.total.executive_order),fmt(O.d30)+' in the last 30 days'));
+  if(A){const s=A.series.slice(-60);K.push(kpi('Aprobación promedio',A.avg.a.toFixed(1)+'%',dlt(A.avg.d7,true,' pts')+' 7d · '+dlt(A.avg.d30,true,' pts')+' 30d','',spark(s.map(x=>x[1]),C.app)));
+    K.push(kpi('Aprobación neta',sgn(A.avg.net),dlt(A.avg.net7,true)+' 7d · desaprueba '+(A.avg.x??'–')+'%',A.avg.net<0?'hot':'',spark(s.map(x=>x[2]==null?null:x[1]-x[2]),A.avg.net<0?C.dis:C.app)))}
+  if(M){const ch=M.n7prev>=50?Math.round(100*(M.n7/M.n7prev-1)):null;K.push(kpi('Notas sobre Trump · 7 días',fmt(M.n7),(ch==null?'':dlt(ch,true,'%')+' vs. semana anterior'),'',spark((M.daily||[]).slice(-30).map(x=>x.n),C.gold)));
+    K.push(kpi('Titulares negativos',M.tone.NEG+'%','positivos '+M.tone.POS+'% · 30 días',M.tone.NEG>40?'hot':''))}
+  if(Y&&Y.n)K.push(kpi('Sentimiento del público',sgn(Math.round(Y.tone.POS-Y.tone.NEG),0),'neto, '+fmt(Y.n)+' comentarios de YouTube',Y.tone.NEG>Y.tone.POS?'hot':''));
+  if(T)K.push(kpi('Posts en Truth Social · 7d',fmt(T.n7),'semana anterior '+fmt(T.n7prev),'',spark(T.daily.slice(-30).map(x=>x[1]),C.red)));
+  if(O)K.push(kpi('Órdenes ejecutivas',fmt(O.total.executive_order),fmt(O.d30)+' en los últimos 30 días'));
   $('#kpis').innerHTML=K.join('');
   if(A)apChart('#o-app',A,0,false);else $('#o-app').innerHTML=E;
-  $('#o-alerts').innerHTML=(D.alerts||[]).length?D.alerts.map(a=>`<div class="a ${a.lvl}"><i>${esc(a.i)}</i><div><small>${esc(a.k)}</small>${esc(a.t)}</div></div>`).join(''):'<div class="empty">No alerts today.</div>';
-  $('#o-find').innerHTML=findings().map(f=>`<li>${f}</li>`).join('')||'<li>Collecting data…</li>';
+  $('#o-alerts').innerHTML=(D.alerts||[]).length?D.alerts.map(a=>`<div class="a ${a.lvl}"><i>${esc(a.i)}</i><div><small>${esc(a.k)}</small>${esc(a.t)}</div></div>`).join(''):'<div class="empty">Sin alertas hoy.</div>';
+  $('#o-find').innerHTML=findings().map(f=>`<li>${f}</li>`).join('')||'<li>Recolectando datos…</li>';
   $('#o-cloud').innerHTML=M?cloudSVG(M.cloud,760,300,40,'news'):E;
   $('#o-topics').innerHTML=M?bars(M.topics.filter(t=>t.n).slice(0,10).map(t=>[t.k,t.share,t.neg>=45?C.neg:C.red,t.share+'%'])):E;
   $('#o-heads').innerHTML=M?headsHTML(M.headlines.slice(0,25)):E;
 }
 function findings(){const A=D.approval,M=D.media,T=D.truth,Y=D.youtube,G=D.gdelt,R=D.attention,F=[];
-  if(A){const a=A.avg;F.push(`<b>Approval stands at ${a.a.toFixed(1)}%</b> (disapproval ${a.x}%, net ${sgn(a.net)}), ${a.d30>=0?'up':'down'} ${Math.abs(a.d30).toFixed(1)} pts in 30 days. Term high ${A.hi.a}% (${A.hi.d}), low ${A.lo.a}% (${A.lo.d}). Average of ${fmt(A.counts.polls)} polls from ${A.counts.pollsters} pollsters.`)}
+  if(A){const a=A.avg;F.push(`<b>La aprobación está en ${a.a.toFixed(1)}%</b> (desaprobación ${a.x}%, neto ${sgn(a.net)}), ${a.d30>=0?'sube':'baja'} ${Math.abs(a.d30).toFixed(1)} pts en 30 días. Máximo del mandato ${A.hi.a}% (${A.hi.d}), mínimo ${A.lo.a}% (${A.lo.d}). Promedio de ${fmt(A.counts.polls)} encuestas de ${A.counts.pollsters} encuestadoras.`)}
   if(M&&M.topics.length){const t=[...M.topics].filter(x=>x.s21!=null).sort((a,b)=>(b.s7-b.s21)-(a.s7-a.s21))[0],top=M.topics[0];
-    F.push(`<b>${esc(top.k)}</b> dominates Trump coverage (${top.share}% of stories)`+(t?`; fastest-rising topic this week: <b>${esc(t.k)}</b> (${t.s7}% vs. ${t.s21}%)`:'')+'.');
-    const L=M.lean;if(L.Left&&L.Right&&L.Left.t&&L.Right.t)F.push(`Left-leaning outlets run ${L.Left.neg}% negative Trump headlines vs. ${L.Right.neg}% on the right; Trump is in ${L.Left.share}% and ${L.Right.share}% of their political stories respectively.`)}
-  if(Y&&Y.n)F.push(`Across ${fmt(Y.n)} YouTube comments, ${Y.tone.POS}% are positive and ${Y.tone.NEG}% negative; dominant emotion: <b>${esc(Object.keys(Y.emo||{})[0]||'–')}</b>.`);
-  if(T)F.push(`He posted <b>${fmt(T.n30)} times on Truth Social</b> in 30 days (${T.night}% between midnight and 6 AM ET), averaging ${kfmt(T.eng)} likes + re-truths per post.`);
-  if(G&&G.countries&&G.countries.length)F.push(`Worldwide, ${G.countries.slice(1,4).map(c=>esc(c.c)).join(', ')} lead foreign coverage after the US (GDELT).`);
-  if(R&&R.rising&&R.rising.length)F.push(`Rising Google searches: ${R.rising.slice(0,3).map(r=>'“'+esc(r.q)+'”').join(', ')}.`);
+    F.push(`<b>${esc(top.k)}</b> domina la cobertura sobre Trump (${top.share}% de las notas)`+(t?`; el tema que más crece esta semana: <b>${esc(t.k)}</b> (${t.s7}% vs. ${t.s21}%)`:'')+'.');
+    const L=M.lean;if(L.Left&&L.Right&&L.Left.t&&L.Right.t)F.push(`Los medios de izquierda publican ${L.Left.neg}% de titulares negativos sobre Trump contra ${L.Right.neg}% en la derecha; Trump aparece en el ${L.Left.share}% y el ${L.Right.share}% de sus notas políticas.`)}
+  if(Y&&Y.n)F.push(`En ${fmt(Y.n)} comentarios de YouTube, ${Y.tone.POS}% son positivos y ${Y.tone.NEG}% negativos; emoción dominante: <b>${esc(EN[Object.keys(Y.emo||{})[0]]||'–')}</b>.`);
+  if(T)F.push(`Publicó <b>${fmt(T.n30)} veces en Truth Social</b> en 30 días (${T.night}% entre la medianoche y las 6 de Washington), con un promedio de ${kfmt(T.eng)} likes + re-truths por post.`);
+  if(G&&G.countries&&G.countries.length)F.push(`En el mundo, ${G.countries.slice(1,4).map(c=>esc(c.c)).join(', ')} encabezan la cobertura extranjera después de EE.UU. (GDELT).`);
+  if(R&&R.rising&&R.rising.length)F.push(`Búsquedas en alza en Google: ${R.rising.slice(0,3).map(r=>'“'+esc(r.q)+'”').join(', ')}.`);
   return F}
 function apChart(el,A,days,dots){const s=days?A.series.slice(-days):A.series,P=A.polls.filter(p=>!days||p.d>=s[0][0]);
-  const tr=[{x:s.map(x=>x[0]),y:s.map(x=>x[2]),name:'Disapprove',mode:'lines',line:{color:C.dis,width:2.6},hovertemplate:'%{y:.1f}%<extra>Disapprove</extra>'},
-    {x:s.map(x=>x[0]),y:s.map(x=>x[1]),name:'Approve',mode:'lines',line:{color:C.app,width:2.6},hovertemplate:'%{y:.1f}%<extra>Approve</extra>'}];
-  if(dots){tr.unshift({x:P.map(p=>p.d),y:P.map(p=>p.x),mode:'markers',marker:{color:'rgba(255,122,107,.22)',size:5},text:P.map(p=>p.p),hovertemplate:'%{text}: %{y}% disapprove<extra></extra>'},
-    {x:P.map(p=>p.d),y:P.map(p=>p.a),mode:'markers',marker:{color:'rgba(79,209,161,.22)',size:5},text:P.map(p=>p.p),hovertemplate:'%{text}: %{y}% approve<extra></extra>'})}
+  const tr=[{x:s.map(x=>x[0]),y:s.map(x=>x[2]),name:'Desaprueba',mode:'lines',line:{color:C.dis,width:2.6},hovertemplate:'%{y:.1f}%<extra>Desaprueba</extra>'},
+    {x:s.map(x=>x[0]),y:s.map(x=>x[1]),name:'Aprueba',mode:'lines',line:{color:C.app,width:2.6},hovertemplate:'%{y:.1f}%<extra>Aprueba</extra>'}];
+  if(dots){tr.unshift({x:P.map(p=>p.d),y:P.map(p=>p.x),mode:'markers',marker:{color:'rgba(255,122,107,.22)',size:5},text:P.map(p=>p.p),hovertemplate:'%{text}: %{y}% desaprueba<extra></extra>'},
+    {x:P.map(p=>p.d),y:P.map(p=>p.a),mode:'markers',marker:{color:'rgba(79,209,161,.22)',size:5},text:P.map(p=>p.p),hovertemplate:'%{text}: %{y}% aprueba<extra></extra>'})}
   Plotly.newPlot($(el),tr,base({hovermode:'x unified',yaxis:{gridcolor:C.grid,ticksuffix:'%'},xaxis:{gridcolor:C.grid}}),CFG)}
 
 // ---------------------------------------------------------------- approval
 function approval(){const A=D.approval;if(!A){$('#a-chart').innerHTML=E;return}const a=A.avg;
-  $('#a-big').innerHTML=`<div><b style="color:var(--app)">${a.a.toFixed(1)}%</b><span>Approve · ${sgn(a.d7)} 7d</span></div><div><b style="color:var(--dis)">${a.x??'–'}%</b><span>Disapprove</span></div><div><b>${sgn(a.net)}</b><span>Net · ${sgn(a.net30)} 30d</span></div><div><b>${fmt(A.counts.last14)}</b><span>Polls in last 14 days</span></div><div><b>${A.lo.a}%</b><span>Term low · ${A.lo.d}</span></div><div><b>${A.hi.a}%</b><span>Term high · ${A.hi.d}</span></div>`;
+  $('#a-big').innerHTML=`<div><b style="color:var(--app)">${a.a.toFixed(1)}%</b><span>Aprueba · ${sgn(a.d7)} 7d</span></div><div><b style="color:var(--dis)">${a.x??'–'}%</b><span>Desaprueba</span></div><div><b>${sgn(a.net)}</b><span>Neto · ${sgn(a.net30)} 30d</span></div><div><b>${fmt(A.counts.last14)}</b><span>Encuestas últimos 14 días</span></div><div><b>${A.lo.a}%</b><span>Mínimo · ${A.lo.d}</span></div><div><b>${A.hi.a}%</b><span>Máximo · ${A.hi.d}</span></div>`;
   apChart('#a-chart',A,0,true);
-  const mo=A.monthly;Plotly.newPlot($('#a-month'),[{x:mo.map(m=>m.m),y:mo.map(m=>+(m.a-m.x).toFixed(1)),type:'bar',marker:{color:mo.map(m=>m.a-m.x>=0?C.app:C.dis)},hovertemplate:'%{x}: net %{y}<extra></extra>'}],base({yaxis:{gridcolor:C.grid,zerolinecolor:C.muted}}),CFG);
-  const P=A.pops;$('#a-pop').innerHTML=Object.keys(P).length?`<table><thead><tr><th>Pop.</th><th class="n">Polls</th><th class="n">Approve</th><th class="n">Disapprove</th><th class="n">Net</th></tr></thead><tbody>${Object.entries(P).map(([k,v])=>`<tr><td>${k}</td><td class="n">${v.n}</td><td class="n">${v.a}%</td><td class="n">${v.x}%</td><td class="n">${sgn(v.a-v.x)}</td></tr>`).join('')}</tbody></table>`:E;
+  const mo=A.monthly;Plotly.newPlot($('#a-month'),[{x:mo.map(m=>m.m),y:mo.map(m=>+(m.a-m.x).toFixed(1)),type:'bar',marker:{color:mo.map(m=>m.a-m.x>=0?C.app:C.dis)},hovertemplate:'%{x}: neto %{y}<extra></extra>'}],base({yaxis:{gridcolor:C.grid,zerolinecolor:C.muted}}),CFG);
+  const P=A.pops;$('#a-pop').innerHTML=Object.keys(P).length?`<table><thead><tr><th>Pobl.</th><th class="n">Encuestas</th><th class="n">Aprueba</th><th class="n">Desaprueba</th><th class="n">Neto</th></tr></thead><tbody>${Object.entries(P).map(([k,v])=>`<tr><td>${k}</td><td class="n">${v.n}</td><td class="n">${v.a}%</td><td class="n">${v.x}%</td><td class="n">${sgn(v.a-v.x)}</td></tr>`).join('')}</tbody></table>`:E;
   const h=A.pollsters.filter(p=>p.h!=null&&p.n>=3).sort((a,b)=>b.h-a.h);
   $('#a-house').innerHTML=h.length?[...h.slice(0,7),...h.slice(-7)].filter((x,i,arr)=>arr.indexOf(x)===i).map(p=>`<div class="r"><span>${esc(p.p)}</span><i style="width:${Math.min(100,Math.abs(p.h)*8)}%;background:${p.h>=0?C.app:C.dis}"></i><b>${sgn(p.h)}</b></div>`).join(''):E;
-  $('#a-cnt').textContent=fmt(A.counts.polls)+' polls · '+A.counts.pollsters+' pollsters';
-  $('#a-table').innerHTML=`<thead><tr><th>Pollster</th><th>Ended</th><th>Pop.</th><th class="n">Sample</th><th class="n">Approve</th><th class="n">Disapprove</th><th class="n">Net</th><th class="n">Polls</th></tr></thead><tbody>${A.pollsters.map(p=>`<tr><td>${p.u?`<a href="${esc(p.u)}" target="_blank" rel="noopener">${esc(p.p)}</a>`:esc(p.p)}</td><td>${p.d}</td><td>${esc(p.pop)}</td><td class="n">${p.s?fmt(p.s):'–'}</td><td class="n">${p.a}%</td><td class="n">${p.x??'–'}%</td><td class="n" style="color:${p.x!=null&&p.a-p.x>=0?C.app:C.dis}">${p.x!=null?sgn(p.a-p.x):'–'}</td><td class="n">${p.n}</td></tr>`).join('')}</tbody>`}
+  $('#a-cnt').textContent=fmt(A.counts.polls)+' encuestas · '+A.counts.pollsters+' encuestadoras';
+  $('#a-table').innerHTML=`<thead><tr><th>Encuestadora</th><th>Cierre</th><th>Pobl.</th><th class="n">Muestra</th><th class="n">Aprueba</th><th class="n">Desaprueba</th><th class="n">Neto</th><th class="n">Encuestas</th></tr></thead><tbody>${A.pollsters.map(p=>`<tr><td>${p.u?`<a href="${esc(p.u)}" target="_blank" rel="noopener">${esc(p.p)}</a>`:esc(p.p)}</td><td>${p.d}</td><td>${esc(p.pop)}</td><td class="n">${p.s?fmt(p.s):'–'}</td><td class="n">${p.a}%</td><td class="n">${p.x??'–'}%</td><td class="n" style="color:${p.x!=null&&p.a-p.x>=0?C.app:C.dis}">${p.x!=null?sgn(p.a-p.x):'–'}</td><td class="n">${p.n}</td></tr>`).join('')}</tbody>`}
 
 // ---------------------------------------------------------------- media
 let mFilt='all';
 function media(){const M=D.media;if(!M){$('#m-daily').innerHTML=E;return}
-  const d=M.daily;Plotly.newPlot($('#m-daily'),['Left','Center','Right'].map(g=>({x:d.map(x=>x.d),y:d.map(x=>x[g]||0),name:g,type:'bar',marker:{color:LEAN_C[g]}}))
-    .concat([{x:d.map(x=>x.d),y:d.map(x=>x.n),name:'All sources incl. Google News',mode:'lines',line:{color:C.gold,width:1.6},yaxis:'y'}]),base({barmode:'stack',showlegend:true,hovermode:'x unified'}),CFG);
-  $('#m-lean').innerHTML=['Left','Center','Right'].map(g=>{const L=M.lean[g]||{};return `<div style="margin:6px 0 14px"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px">${leanTag(g)}<span style="font:11px var(--mono);color:var(--dim)">${fmt(L.t)} stories · Trump in ${L.share}% of politics</span></div>${toneBar({NEG:L.neg,POS:L.pos,NEU:Math.max(0,100-L.neg-L.pos).toFixed(1)})}<div style="font-size:12px;color:var(--muted);margin-top:5px">${(L.top||[]).map(esc).join(' · ')}</div></div>`}).join('')+'<div class="legend"><span style="--c:var(--neg)">negative</span><span style="--c:var(--neu)">neutral</span><span style="--c:var(--pos)">positive</span></div>';
-  $('#m-topics').innerHTML=`<thead><tr><th>Topic</th><th class="n">Stories</th><th class="n">This week</th><th class="n">Before</th><th>12 weeks</th><th>L · C · R</th><th class="n">Neg.</th></tr></thead><tbody>${M.topics.map(t=>{const s=t.lean.Left+t.lean.Center+t.lean.Right||1;
+  const d=M.daily;Plotly.newPlot($('#m-daily'),['Left','Center','Right'].map(g=>({x:d.map(x=>x.d),y:d.map(x=>x[g]||0),name:{Left:'Izquierda',Center:'Centro',Right:'Derecha'}[g],type:'bar',marker:{color:LEAN_C[g]}}))
+    .concat([{x:d.map(x=>x.d),y:d.map(x=>x.n),name:'Todas las fuentes, con Google News',mode:'lines',line:{color:C.gold,width:1.6},yaxis:'y'}]),base({barmode:'stack',showlegend:true,hovermode:'x unified'}),CFG);
+  $('#m-lean').innerHTML=['Left','Center','Right'].map(g=>{const L=M.lean[g]||{};return `<div style="margin:6px 0 14px"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px">${leanTag(g)}<span style="font:11px var(--mono);color:var(--dim)">${fmt(L.t)} notas · Trump en el ${L.share}% de política</span></div>${toneBar({NEG:L.neg,POS:L.pos,NEU:Math.max(0,100-L.neg-L.pos).toFixed(1)})}<div style="font-size:12px;color:var(--muted);margin-top:5px">${(L.top||[]).map(esc).join(' · ')}</div></div>`}).join('')+'<div class="legend"><span style="--c:var(--neg)">negativo</span><span style="--c:var(--neu)">neutro</span><span style="--c:var(--pos)">positivo</span></div>';
+  $('#m-topics').innerHTML=`<thead><tr><th>Tema</th><th class="n">Notas</th><th class="n">Esta semana</th><th class="n">Antes</th><th>12 semanas</th><th>I · C · D</th><th class="n">Neg.</th></tr></thead><tbody>${M.topics.map(t=>{const s=t.lean.Left+t.lean.Center+t.lean.Right||1;
     return `<tr><td>${esc(t.k)}</td><td class="n">${fmt(t.n)}</td><td class="n" style="color:${t.s21!=null&&t.s7>t.s21*1.3?C.gold:C.txt}">${t.s7}%</td><td class="n">${t.s21==null?'–':t.s21+'%'}</td><td style="position:relative;width:90px">${spark(t.wk,C.gold).replace('class="spark"','style="width:84px;height:22px"')}</td><td style="width:110px"><div class="tone"><i style="width:${t.lean.Left/s*100}%;background:var(--L)"></i><i style="width:${t.lean.Center/s*100}%;background:var(--C)"></i><i style="width:${t.lean.Right/s*100}%;background:var(--R)"></i></div></td><td class="n" style="color:${t.neg>=45?C.neg:C.txt}">${t.neg}%</td></tr>`}).join('')}</tbody>`;
-  $('#m-outlets').innerHTML=`<thead><tr><th>Outlet</th><th class="n">Trump</th><th class="n">Share</th><th style="width:110px">Tone</th></tr></thead><tbody>${M.outlets.filter(o=>o.all).map(o=>`<tr><td>${leanTag(LG(o.lean))} ${esc(o.o)}</td><td class="n">${fmt(o.t)}</td><td class="n">${o.share}%</td><td>${toneBar({NEG:o.neg,POS:o.pos,NEU:Math.max(0,100-o.neg-o.pos)})}</td></tr>`).join('')}</tbody>`;
-  const fs=['all','Left','Center','Right','NEG','POS'],fl={all:'All',NEG:'Negative',POS:'Positive'};
+  $('#m-outlets').innerHTML=`<thead><tr><th>Medio</th><th class="n">Trump</th><th class="n">% notas</th><th style="width:110px">Tono</th></tr></thead><tbody>${M.outlets.filter(o=>o.all).map(o=>`<tr><td>${leanTag(LG(o.lean))} ${esc(o.o)}</td><td class="n">${fmt(o.t)}</td><td class="n">${o.share}%</td><td>${toneBar({NEG:o.neg,POS:o.pos,NEU:Math.max(0,100-o.neg-o.pos)})}</td></tr>`).join('')}</tbody>`;
+  const fs=['all','Left','Center','Right','NEG','POS'],fl={all:'Todos',Left:'Izquierda',Center:'Centro',Right:'Derecha',NEG:'Negativos',POS:'Positivos'};
   $('#m-f').innerHTML=fs.map(f=>`<button class="chip ${f===mFilt?'on':''}" data-f="${f}">${fl[f]||f}</button>`).join('');
   $$('#m-f .chip').forEach(b=>b.onclick=()=>{mFilt=b.dataset.f;$$('#m-f .chip').forEach(x=>x.classList.toggle('on',x===b));mHeads()});mHeads();
   gdelt()}
 const LG=l=>({'Lean Left':'Left','Lean Right':'Right'})[l]||l;
 function mHeads(){const H=D.media.headlines.filter(h=>mFilt==='all'||h.l===mFilt||h.s===mFilt);$('#m-heads').innerHTML=headsHTML(H)}
 function gdelt(){const G=D.gdelt||{};
-  if(G.vol&&G.vol.length){const tr=[{x:G.vol.map(v=>v[0]),y:G.vol.map(v=>v[1]),type:'bar',name:'Articles',marker:{color:'rgba(63,127,224,.55)'},hovertemplate:'%{y:,} articles<extra></extra>'}];
-    if(G.tone)tr.push({x:G.tone.map(v=>v[0]),y:G.tone.map(v=>v[1]),name:'Average tone',yaxis:'y2',mode:'lines',line:{color:C.red,width:2},hovertemplate:'tone %{y}<extra></extra>'});
-    Plotly.newPlot($('#g-vol'),tr,base({showlegend:true,hovermode:'x unified',yaxis2:{overlaying:'y',side:'right',gridcolor:'rgba(0,0,0,0)',zerolinecolor:C.dim,title:{text:'tone',font:{size:11}}},margin:{l:50,r:44,t:8,b:36}}),CFG)}else $('#g-vol').innerHTML=E;
+  if(G.vol&&G.vol.length){const tr=[{x:G.vol.map(v=>v[0]),y:G.vol.map(v=>v[1]),type:'bar',name:'Artículos',marker:{color:'rgba(63,127,224,.55)'},hovertemplate:'%{y:,} artículos<extra></extra>'}];
+    if(G.tone)tr.push({x:G.tone.map(v=>v[0]),y:G.tone.map(v=>v[1]),name:'Tono promedio',yaxis:'y2',mode:'lines',line:{color:C.red,width:2},hovertemplate:'tono %{y}<extra></extra>'});
+    Plotly.newPlot($('#g-vol'),tr,base({showlegend:true,hovermode:'x unified',yaxis2:{overlaying:'y',side:'right',gridcolor:'rgba(0,0,0,0)',zerolinecolor:C.dim,title:{text:'tono',font:{size:11}}},margin:{l:50,r:44,t:8,b:36}}),CFG)}else $('#g-vol').innerHTML=E;
   $('#g-ctry').innerHTML=G.countries?bars(G.countries.slice(0,14).map(c=>[c.c,c.v,c.c==='United States'?C.gold:C.navy,c.v+'%'])):E;
   $('#g-arts').innerHTML=(G.arts||[]).length?G.arts.map(a=>`<a class="it" href="${esc(a.u)}" target="_blank" rel="noopener">${esc(a.t)}<div class="m"><span class="pill">${esc(a.c||'?')}</span><span>${esc(a.l)}</span><span>${esc(a.dom)}</span></div></a>`).join(''):E}
 
 // ---------------------------------------------------------------- voice
 function voice(){const Y=D.youtube;if(!Y||!Y.n){$('#v-cloud').innerHTML=E;return}
-  $('#v-kpis').innerHTML=[kpi('Comments analysed',fmt(Y.n),'top comments · 30 days'),kpi('Videos',fmt(Y.videos),kfmt(Y.views)+' views'),kpi('Positive',Y.tone.POS+'%','',''),kpi('Negative',Y.tone.NEG+'%','',Y.tone.NEG>Y.tone.POS?'hot':''),
-    kpi('Net sentiment',sgn(Y.tone.POS-Y.tone.NEG),'positive minus negative'),kpi('Insults / hostility',Y.tox+'%','of comments'),kpi('Model coverage',Y.model+'%','classified by transformer')].join('');
+  $('#v-kpis').innerHTML=[kpi('Comentarios analizados',fmt(Y.n),'más relevantes · 30 días'),kpi('Videos',fmt(Y.videos),kfmt(Y.views)+' vistas'),kpi('Positivos',Y.tone.POS+'%','',''),kpi('Negativos',Y.tone.NEG+'%','',Y.tone.NEG>Y.tone.POS?'hot':''),
+    kpi('Sentimiento neto',sgn(Y.tone.POS-Y.tone.NEG),'positivos menos negativos'),kpi('Insultos / hostilidad',Y.tox+'%','de los comentarios'),kpi('Clasificados con IA',Y.model+'%','modelo transformer')].join('');
   $('#v-cloud').innerHTML=cloudSVG(Y.cloud,720,320,40,'comments');
-  const EN={anger:'Anger',joy:'Joy',sadness:'Sadness',fear:'Fear',disgust:'Disgust',surprise:'Surprise'},EC={anger:C.neg,joy:C.app,sadness:C.pos,fear:C.gold,disgust:'#a08bd6',surprise:'#5fb3c9'};
+  const EC={anger:C.neg,joy:C.app,sadness:C.pos,fear:C.gold,disgust:'#a08bd6',surprise:'#5fb3c9'};
   $('#v-emo').innerHTML=bars(Object.entries(Y.emo).map(([k,v])=>[EN[k]||k,v,EC[k],v+'%']));
   $('#v-top').innerHTML=bars(Y.topics.slice(0,9).map(t=>[t.k,t.n,t.neg>t.pos?C.neg:C.pos]));
   $('#v-cpos').innerHTML=cloudSVG(Y.cloud_pos,600,240,32,'comments');$('#v-cneg').innerHTML=cloudSVG(Y.cloud_neg,600,240,32,'comments');
-  $('#v-vids').innerHTML=`<thead><tr><th>Video</th><th>Channel</th><th>Date</th><th class="n">Views</th><th class="n">Comments read</th><th style="width:120px">Comment tone</th></tr></thead><tbody>${Y.list.map(v=>`<tr><td><a href="${esc(v.u)}" target="_blank" rel="noopener">${esc(v.t)}</a></td><td>${esc(v.ch)}</td><td>${v.d}</td><td class="n">${kfmt(v.views)}</td><td class="n">${fmt(v.c)}</td><td>${v.c?toneBar({NEG:v.neg,POS:v.pos,NEU:Math.max(0,100-v.neg-v.pos)}):''}</td></tr>`).join('')}</tbody>`}
+  $('#v-vids').innerHTML=`<thead><tr><th>Video</th><th>Canal</th><th>Fecha</th><th class="n">Vistas</th><th class="n">Comentarios leídos</th><th style="width:120px">Tono de los comentarios</th></tr></thead><tbody>${Y.list.map(v=>`<tr><td><a href="${esc(v.u)}" target="_blank" rel="noopener">${esc(v.t)}</a></td><td>${esc(v.ch)}</td><td>${v.d}</td><td class="n">${kfmt(v.views)}</td><td class="n">${fmt(v.c)}</td><td>${v.c?toneBar({NEG:v.neg,POS:v.pos,NEU:Math.max(0,100-v.neg-v.pos)}):''}</td></tr>`).join('')}</tbody>`}
 
 // ---------------------------------------------------------------- truth
 function truth(){const T=D.truth;if(!T){$('#s-daily').innerHTML=E;return}
-  $('#s-kpis').innerHTML=[kpi('Posts · 7 days',fmt(T.n7),'prior week '+fmt(T.n7prev)),kpi('Posts · 30 days',fmt(T.n30),'90 days: '+fmt(T.n90)),kpi('Busiest day',T.max_day?fmt(T.max_day[1]):'–',T.max_day?T.max_day[0]:''),
-    kpi('Avg. engagement',kfmt(T.eng),'likes + re-truths per post'),kpi('Late-night posts',T.night+'%','midnight to 6 AM ET'),kpi('With video/image',T.media+'%','of posts'),kpi('Net tone',sgn(T.tone.POS-T.tone.NEG),T.tone.POS+'% positive · '+T.tone.NEG+'% negative')].join('');
+  $('#s-kpis').innerHTML=[kpi('Posts · 7 días',fmt(T.n7),'semana anterior '+fmt(T.n7prev)),kpi('Posts · 30 días',fmt(T.n30),'90 días: '+fmt(T.n90)),kpi('Día con más posts',T.max_day?fmt(T.max_day[1]):'–',T.max_day?T.max_day[0]:''),
+    kpi('Interacción promedio',kfmt(T.eng),'likes + re-truths por post'),kpi('Posts de madrugada',T.night+'%','de 0 a 6 h de Washington'),kpi('Con video o imagen',T.media+'%','de los posts'),kpi('Tono neto',sgn(T.tone.POS-T.tone.NEG),T.tone.POS+'% positivo · '+T.tone.NEG+'% negativo')].join('');
   Plotly.newPlot($('#s-daily'),[{x:T.daily.map(x=>x[0]),y:T.daily.map(x=>x[1]),type:'bar',marker:{color:C.red},hovertemplate:'%{x}: %{y} posts<extra></extra>'}],base(),CFG);
-  const mx=Math.max(1,...T.heat.flat()),days=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+  const mx=Math.max(1,...T.heat.flat()),days=['Lun','Mar','Mié','Jue','Vie','Sáb','Dom'];
   $('#s-heat').innerHTML=`<div class="heat"><span></span>${[...Array(24)].map((_,h)=>`<span style="text-align:center">${h%6===0?h:''}</span>`).join('')}${T.heat.map((r,i)=>`<span>${days[i]}</span>${r.map((v,h)=>`<i title="${days[i]} ${h}:00 · ${v} posts" style="background:${v?`rgba(224,70,60,${(.12+.88*v/mx).toFixed(2)})`:'var(--s2)'}"></i>`).join('')}`).join('')}</div>`;
   $('#s-names').innerHTML=bars(T.names.slice(0,14).map(n=>[n.w,n.n,C.gold]));
   $('#s-top').innerHTML=bars(T.topics.slice(0,10).map(t=>[t.k,t.n,C.red,t.s+'%']));
   $('#s-cloud').innerHTML=cloudSVG(T.cloud,520,300,34,'truth');
-  const ps=a=>a.map(p=>`<div class="post"><div class="t">${esc(p.t)}</div><div class="m"><span>${new Date(p.d+':00Z').toLocaleString('en-US',{timeZone:'America/New_York',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})} ET</span><span>♥ ${kfmt(p.l)}</span><span>⟲ ${kfmt(p.r)}</span><span>💬 ${kfmt(p.c)}</span>${p.m?'<span>▣ media</span>':''}<a href="${esc(p.u)}" target="_blank" rel="noopener">open ↗</a></div></div>`).join('')||E;
+  const ps=a=>a.map(p=>`<div class="post"><div class="t">${esc(p.t)}</div><div class="m"><span>${new Date(p.d+':00Z').toLocaleString('es-AR',{timeZone:'America/New_York',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'})} h Washington</span><span>♥ ${kfmt(p.l)}</span><span>⟲ ${kfmt(p.r)}</span><span>💬 ${kfmt(p.c)}</span>${p.m?'<span>▣ imagen/video</span>':''}<a href="${esc(p.u)}" target="_blank" rel="noopener">abrir ↗</a></div></div>`).join('')||E;
   $('#s-best').innerHTML=ps(T.top);$('#s-last').innerHTML=ps(T.latest)}
 
 // ---------------------------------------------------------------- search
@@ -449,50 +451,50 @@ function tiles(el,vals,rgb,label,fmtv){const ab={};Object.entries(vals||{}).forE
   const mx=Math.max(...vs),mn=Math.min(...vs),cells=[];
   for(let r=0;r<8;r++)for(let c=0;c<12;c++){const s=Object.keys(GRID).find(k=>GRID[k][0]===r&&GRID[k][1]===c);
     if(!s){cells.push('<div style="background:none"></div>');continue}const v=ab[s];const a=v==null?0:.15+.85*(v-mn)/Math.max(mx-mn,1e-9);
-    cells.push(`<div title="${s} · ${v==null?'no data':fmtv(v)}" style="background:${v==null?'var(--s2)':`rgba(${rgb},${a.toFixed(2)})`}">${s}<small>${v==null?'':fmtv(v)}</small></div>`)}
+    cells.push(`<div title="${s} · ${v==null?'sin datos':fmtv(v)}" style="background:${v==null?'var(--s2)':`rgba(${rgb},${a.toFixed(2)})`}">${s}<small>${v==null?'':fmtv(v)}</small></div>`)}
   $(el).innerHTML=cells.join('');const top=Object.entries(ab).sort((a,b)=>b[1]-a[1]).slice(0,5);
-  $(el+'l').innerHTML=`<span style="--c:rgba(${rgb},.2)">low</span><span style="--c:rgba(${rgb},1)">high</span><span style="color:var(--muted)">${label}: ${top.map(([k,v])=>k+' '+fmtv(v)).join(' · ')}</span>`}
+  $(el+'l').innerHTML=`<span style="--c:rgba(${rgb},.2)">bajo</span><span style="--c:rgba(${rgb},1)">alto</span><span style="color:var(--muted)">${label}: ${top.map(([k,v])=>k+' '+fmtv(v)).join(' · ')}</span>`}
 function lines(el,obj,days){const ks=Object.keys(obj||{});if(!ks.length){$(el).innerHTML=E;return}
   Plotly.newPlot($(el),ks.map((k,i)=>({x:obj[k].map(p=>p[0]),y:obj[k].map(p=>p[1]),name:k,mode:'lines',line:{color:PAL[i%PAL.length],width:k.startsWith('Trump')||k.startsWith('Donald')?2.6:1.6}})),base({showlegend:true,hovermode:'x unified'}),CFG)}
 function search(){const R=D.attention||{};
   lines('#r-fig',R.figures);lines('#r-iss',R.issues);
   const wk={};Object.entries(R.wiki||{}).forEach(([k,v])=>wk[k]=v.slice(-52));lines('#r-wiki',wk);
-  tiles('#r-map',R.states,'224,70,60','Top',v=>v);
+  tiles('#r-map',R.states,'224,70,60','Más alto',v=>v);
   $('#r-rise').innerHTML=(R.rising||[]).length?bars(R.rising.map((r,i)=>[r.q,R.rising.length-i,C.gold,esc(String(r.v))])):E;
   $('#r-top').innerHTML=(R.top_queries||[]).length?bars(R.top_queries.map(r=>[r.q,r.v,C.navy])):E;
   $('#r-rtop').innerHTML=(R.rising_topics||[]).length?bars(R.rising_topics.map((r,i)=>[r.q+(r.t?' · '+r.t:''),R.rising_topics.length-i,C.red,esc(String(r.v))])):E}
 
 // ---------------------------------------------------------------- policy & markets
-function policy(){const O=D.orders,TY={executive_order:'Executive orders',memorandum:'Memoranda',proclamation:'Proclamations'},TC={executive_order:C.red,memorandum:C.navy,proclamation:C.gold};
-  if(O){$('#p-kpis').innerHTML=Object.entries(O.total).map(([k,v])=>kpi(TY[k],fmt(v),'since Jan 20, 2025')).join('')+kpi('EOs · last 30 days',fmt(O.d30),'')+kpi('Documents · 7 days',fmt(O.d7),'');
+function policy(){const O=D.orders,TY={executive_order:'Órdenes ejecutivas',memorandum:'Memorandos',proclamation:'Proclamas'},TC={executive_order:C.red,memorandum:C.navy,proclamation:C.gold};
+  if(O){$('#p-kpis').innerHTML=Object.entries(O.total).map(([k,v])=>kpi(TY[k],fmt(v),'desde el 20/01/2025')).join('')+kpi('Órdenes · 30 días',fmt(O.d30),'')+kpi('Documentos · 7 días',fmt(O.d7),'');
     Plotly.newPlot($('#p-month'),Object.keys(TY).map(k=>({x:O.monthly.map(m=>m.m),y:O.monthly.map(m=>m[k]||0),name:TY[k],type:'bar',marker:{color:TC[k]}})),base({barmode:'stack',showlegend:true,hovermode:'x unified'}),CFG);
     $('#p-top').innerHTML=bars(O.topics.map(t=>[t.k,t.n,C.red]));
-    $('#p-latest').innerHTML=`<thead><tr><th>Signed</th><th>Type</th><th>Title</th></tr></thead><tbody>${O.latest.map(x=>`<tr><td style="white-space:nowrap">${x.d}</td><td><span class="pill">${x.eo?'EO '+x.eo:TY[x.type]}</span></td><td><a href="${esc(x.u)}" target="_blank" rel="noopener">${esc(x.t)}</a></td></tr>`).join('')}</tbody>`}
+    $('#p-latest').innerHTML=`<thead><tr><th>Firmado</th><th>Tipo</th><th>Título</th></tr></thead><tbody>${O.latest.map(x=>`<tr><td style="white-space:nowrap">${x.d}</td><td><span class="pill">${x.eo?'Orden '+x.eo:TY[x.type]}</span></td><td><a href="${esc(x.u)}" target="_blank" rel="noopener">${esc(x.t)}</a></td></tr>`).join('')}</tbody>`}
   else $('#p-month').innerHTML=E;
   const K=(D.markets||{}).events||[];
-  $('#p-mk').innerHTML=K.length?K.map(e=>`<div class="e"><h5><a href="${esc(e.u)}" target="_blank" rel="noopener">${esc(e.t)}</a></h5>${e.m.slice(0,4).map(m=>`<div class="o"><span>${esc(m.q&&m.q!==e.t?m.q:m.o)}</span><span class="p">${m.p}%</span><span class="c" style="color:${m.ch>0?C.app:m.ch<0?C.dis:C.dim}">${m.ch?sgn(m.ch,0):''}</span><div class="bb"><i style="width:${m.p}%"></i></div></div>`).join('')}<div class="v">${esc((e.src||'Polymarket').toUpperCase())} · VOL ${e.unit?kfmt(e.v)+' contracts':usd(e.v)} · 24H ${e.unit?kfmt(e.v24):usd(e.v24)}${e.end?' · RESOLVES '+e.end:''}</div></div>`).join(''):E;
+  $('#p-mk').innerHTML=K.length?K.map(e=>`<div class="e"><h5><a href="${esc(e.u)}" target="_blank" rel="noopener">${esc(e.t)}</a></h5>${e.m.slice(0,4).map(m=>`<div class="o"><span>${esc(m.q&&m.q!==e.t?m.q:m.o)}</span><span class="p">${m.p}%</span><span class="c" style="color:${m.ch>0?C.app:m.ch<0?C.dis:C.dim}">${m.ch?sgn(m.ch,0):''}</span><div class="bb"><i style="width:${m.p}%"></i></div></div>`).join('')}<div class="v">${esc((e.src||'Polymarket').toUpperCase())} · VOLUMEN ${e.unit?kfmt(e.v)+' contratos':usd(e.v)} · 24 H ${e.unit?kfmt(e.v24):usd(e.v24)}${e.end?' · CIERRA '+e.end:''}</div></div>`).join(''):E;
   const F=D.econ||{},unit={UNRATE:'%',MORTGAGE30US:'%',GASREGW:'$',SP500:'',UMCSENT:'',CPIAUCSL:''};
   $('#p-econ').innerHTML=Object.keys(F).length?Object.entries(F).map(([k,s])=>{const v=k==='GASREGW'?'$'+s.v.toFixed(2):k==='SP500'?fmt(Math.round(s.v)):s.v+(unit[k]||'');
-    const sinceI=s.inaug!=null?(k==='UNRATE'||k==='MORTGAGE30US'?sgn(s.v-s.inaug,1)+' pts':sgn(100*(s.v/s.inaug-1),1)+'%')+' since inauguration':'';
-    return `<div>${spark(s.pts.map(p=>p[1]),C.gold)}<span>${esc(s.name)}</span><b>${k==='CPIAUCSL'?(s.yoy!=null?s.yoy+'% YoY':'–'):v}</b><span>${sinceI}${s.yoy!=null&&k!=='CPIAUCSL'?' · '+sgn(s.yoy)+'% YoY':''} · ${s.d}</span></div>`}).join(''):E}
+    const sinceI=s.inaug!=null?(k==='UNRATE'||k==='MORTGAGE30US'?sgn(s.v-s.inaug,1)+' pts':sgn(100*(s.v/s.inaug-1),1)+'%')+' desde la asunción':'';
+    return `<div>${spark(s.pts.map(p=>p[1]),C.gold)}<span>${esc(s.name)}</span><b>${k==='CPIAUCSL'?(s.yoy!=null?s.yoy+'% interanual':'–'):v}</b><span>${sinceI}${s.yoy!=null&&k!=='CPIAUCSL'?' · '+sgn(s.yoy)+'% interanual':''} · ${s.d}</span></div>`}).join(''):E}
 
 // ---------------------------------------------------------------- ads
-const GRP={trump:['Trump & GOP','#e0463c'],opp:['Democrats & opposition','#3f7fe0'],merch:['Trump merchandise & deals','#d9a441'],other:['Other sponsors','#8aa1c1']};
+const GRP={trump:['Trump y republicanos','#e0463c'],opp:['Demócratas y oposición','#3f7fe0'],merch:['Merchandising de Trump','#d9a441'],other:['Otros anunciantes','#8aa1c1']};
 function ads(){const A=D.ads;if(!A||!A.n){$('#d-pages').innerHTML=`<tr><td>${E}</td></tr>`;return}
   const c=A.camps,all=Object.values(c).reduce((a,b)=>[a[0]+b[0],a[1]+b[1],a[2]+b[2]],[0,0,0]);
-  $('#d-kpis').innerHTML=kpi('Ads mentioning Trump',fmt(A.n),'Meta · US · since '+A.since)+kpi('Total spend',usd(all[1])+'–'+usd(all[2]),'range reported by Meta')+
-    Object.entries(GRP).map(([k,[l]])=>kpi(l,fmt((c[k]||[0])[0])+' ads',usd((c[k]||[0,0,0])[1])+'–'+usd((c[k]||[0,0,0])[2]),k==='opp'&&c.opp&&c.trump&&c.opp[2]>c.trump[2]?'hot':'')).join('');
-  const SH={trump:'TRUMP/GOP',opp:'DEM/OPP',merch:'MERCH',other:'OTHER'},gt=g=>`<span class="lean" style="background:${GRP[g][1]}">${SH[g]}</span> `;
-  $('#d-pages').innerHTML=`<thead><tr><th>Page</th><th class="n">Ads</th><th class="n">Spend</th></tr></thead><tbody>${A.pages.map(p=>`<tr><td>${gt(p.g||'other')}${esc(p.p)}</td><td class="n">${fmt(p.n)}</td><td class="n">${usd(p.lo)}–${usd(p.hi)}</td></tr>`).join('')}</tbody>`;
-  const reg={};A.regions.forEach(r=>reg[r.k]=r.v);tiles('#d-map',reg,'217,164,65','Top',v=>v+'%');
+  $('#d-kpis').innerHTML=kpi('Avisos que mencionan a Trump',fmt(A.n),'Meta · EE.UU. · desde '+A.since)+kpi('Inversión total',usd(all[1])+'–'+usd(all[2]),'rango informado por Meta')+
+    Object.entries(GRP).map(([k,[l]])=>kpi(l,fmt((c[k]||[0])[0])+' avisos',usd((c[k]||[0,0,0])[1])+'–'+usd((c[k]||[0,0,0])[2]),k==='opp'&&c.opp&&c.trump&&c.opp[2]>c.trump[2]?'hot':'')).join('');
+  const SH={trump:'TRUMP/GOP',opp:'DEM/OPOS.',merch:'MERCH',other:'OTROS'},gt=g=>`<span class="lean" style="background:${GRP[g][1]}">${SH[g]}</span> `;
+  $('#d-pages').innerHTML=`<thead><tr><th>Página</th><th class="n">Avisos</th><th class="n">Inversión</th></tr></thead><tbody>${A.pages.map(p=>`<tr><td>${gt(p.g||'other')}${esc(p.p)}</td><td class="n">${fmt(p.n)}</td><td class="n">${usd(p.lo)}–${usd(p.hi)}</td></tr>`).join('')}</tbody>`;
+  const reg={};A.regions.forEach(r=>reg[r.k]=r.v);tiles('#d-map',reg,'217,164,65','Más alto',v=>v+'%');
   $('#d-age').innerHTML=bars(A.age.sort((a,b)=>a.k.localeCompare(b.k)).map(x=>[x.k,x.v,C.navy,x.v+'%']));
   $('#d-gen').innerHTML=bars(A.gender.map(x=>[x.k,x.v,x.k==='female'?C.red:C.navy,x.v+'%']));
   $('#d-plat').innerHTML=bars(Object.entries(A.platforms).map(([k,v])=>[k,v,C.gold]));
   $('#d-samp').innerHTML=A.samples.map(s=>`<a class="it" href="${esc(s.u)}" target="_blank" rel="noopener">${esc(s.t)}<div class="m">${gt(GRP[s.c]?s.c:'other')}<span>${esc(s.p)}</span><span>${esc(s.d)}</span></div></a>`).join('')||E}
 
 // ---------------------------------------------------------------- method
-function method(){const S=D.status||{},nm={rss:'US outlets (RSS)',google_news:'Google News',youtube:'YouTube comments',truth_social:'Truth Social',polls:'Polls (VoteHub + Wikipedia)',gdelt:'GDELT global news',federal_register:'Federal Register',polymarket:'Prediction markets',fred:'Economy (BLS, UMich, Freddie Mac, S&P)',wikipedia:'Wikipedia page views',google_trends:'Google Trends',meta_ads:'Meta Ad Library'};
-  $('#x-st').innerHTML=Object.keys(nm).map(k=>{const s=S[k];return `<div style="display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid var(--line);padding:7px 0"><span class="chip ${s&&s.ok?'ok':'no'}" style="cursor:default">${nm[k]}</span><span style="font:12px var(--mono);color:var(--dim);text-align:right">${!s?'not run yet':s.ok?fmt(s.items)+' items'+(s.new!=null?' · '+fmt(s.new)+' new':''):'unavailable this run'}</span></div>`}).join('')}
+function method(){const S=D.status||{},nm={rss:'Medios de EE.UU. (RSS)',google_news:'Google News',youtube:'Comentarios de YouTube',truth_social:'Truth Social',polls:'Encuestas (VoteHub)',gdelt:'GDELT, noticias del mundo',federal_register:'Federal Register',polymarket:'Mercados de predicción',fred:'Economía (BLS, UMich, Freddie Mac)',wikipedia:'Visitas a Wikipedia',google_trends:'Google Trends',meta_ads:'Biblioteca de anuncios de Meta'};
+  $('#x-st').innerHTML=Object.keys(nm).map(k=>{const s=S[k];return `<div style="display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid var(--line);padding:7px 0"><span class="chip ${s&&s.ok?'ok':'no'}" style="cursor:default">${nm[k]}</span><span style="font:12px var(--mono);color:var(--dim);text-align:right">${!s?'todavía no corrió':s.ok?fmt(s.items)+' registros'+(s.new!=null?' · '+fmt(s.new)+' nuevos':''):'no respondió en esta corrida'}</span></div>`}).join('')}
 </script>
 </body>
 </html>
