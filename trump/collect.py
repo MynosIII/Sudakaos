@@ -837,17 +837,71 @@ def census():
             return json.loads(raw)
         except ValueError:
             raise RuntimeError("not JSON: " + re.sub(r"\s+", " ", raw)[:160])
-    for year in (2024, 2023, 2022):
+    ckey = os.environ.get("CENSUS_API_KEY", "").strip()
+    key = "&key=" + ckey if ckey else ""
+    for year in ((2024, 2023, 2022) if ckey else ()):  # the Census API now asks for a (free) key
         try:
-            rows = cjson(f"https://api.census.gov/data/{year}/acs/acs1?get=NAME,{vals}&for=state:*")
+            rows = cjson(f"https://api.census.gov/data/{year}/acs/acs1?get=NAME,{vals}&for=state:*{key}")
             hdr = rows[0]
             out["acs_year"] = year
             out["acs"] = {r[0]: {k: (float(r[hdr.index(v)]) if r[hdr.index(v)] not in (None, "", "null") else None) for k, v in ACS_VARS.items()} for r in rows[1:]}
             break
         except Exception as e:
             errs.append(f"acs {year}: {type(e).__name__}: {str(e)[:80]}")
+    if not ckey:
+        errs.append("no CENSUS_API_KEY: ACS (education, poverty, veterans...) and rural share skipped")
+    # keyless fallbacks: Census population estimates (race, Hispanic origin, age) and BEA population + per-capita income
+    if not out.get("acs"):
+        for f in ("2020-2024/state/asrh/sc-est2024-sr11h.csv", "2020-2023/state/asrh/sc-est2023-sr11h.csv"):
+            try:
+                txt = get("https://www2.census.gov/programs-surveys/popest/datasets/" + f, headers={"User-Agent": BROWSER}, retries=1, timeout=120).decode("latin-1")
+                rd = csv.DictReader(io.StringIO(txt))
+                col = [c for c in rd.fieldnames if c.startswith("POPESTIMATE")][-1]
+                pe = {}
+                for r in rd:
+                    if r.get("SUMLEV") != "040" or r.get("SEX") != "0":
+                        continue
+                    st = pe.setdefault(r["NAME"], {"pop": 0, "white": 0, "black": 0, "asian": 0, "hisp": 0, "ages": [0] * 86})
+                    v, o, rc, ag = float(r[col]), r["ORIGIN"], r["RACE"], int(r["AGE"])
+                    if o == "0":
+                        st["pop"] += v
+                        st["ages"][min(ag, 85)] += v
+                        if rc in ("1", "2", "4"):
+                            st[{"1": "white", "2": "black", "4": "asian"}[rc]] += v
+                    elif o == "2":
+                        st["hisp"] += v
+                for st in pe.values():
+                    half, acc = st["pop"] / 2, 0
+                    for ag, v in enumerate(st.pop("ages")):
+                        acc += v
+                        if acc >= half:
+                            st["age"] = ag
+                            break
+                if pe:
+                    out["popest"] = {"year": col[-4:], "states": pe}
+                    break
+            except Exception as e:
+                errs.append(f"popest {f[:9]}: {type(e).__name__}: {str(e)[:80]}")
     try:
-        rows = cjson("https://api.census.gov/data/2020/dec/dhc?get=NAME,P2_001N,P2_003N&for=state:*")
+        import zipfile
+        z = zipfile.ZipFile(io.BytesIO(get("https://apps.bea.gov/regional/zip/SAINC.zip", retries=1, timeout=120)))
+        name = next(n for n in z.namelist() if n.startswith("SAINC1_") and "ALL_AREAS" in n and n.endswith(".csv"))
+        rd = csv.reader(io.TextIOWrapper(z.open(name), encoding="latin-1"))
+        hdr = next(rd)
+        yrs = [i for i, h in enumerate(hdr) if h.strip().isdigit()]
+        inc = {}
+        for r in rd:
+            if len(r) > max(yrs) and r[hdr.index("LineCode")].strip() in ("2", "3"):
+                vy = [r[i].strip() for i in yrs if re.match(r"^[\d.]+$", r[i].strip())]
+                if vy:
+                    inc.setdefault(r[hdr.index("GeoName")].strip().strip("*").strip(), {})["pop" if r[hdr.index("LineCode")].strip() == "2" else "pcpi"] = float(vy[-1])
+        out["bea_inc"] = inc
+    except Exception as e:
+        errs.append(f"bea sainc: {type(e).__name__}: {str(e)[:80]}")
+    try:
+        if not ckey:
+            raise RuntimeError("needs CENSUS_API_KEY")
+        rows = cjson("https://api.census.gov/data/2020/dec/dhc?get=NAME,P2_001N,P2_003N&for=state:*" + key)
         out["rural"] = {r[0]: round(100 * float(r[2]) / float(r[1]), 1) for r in rows[1:]}
     except Exception as e:
         errs.append(f"dhc: {type(e).__name__}: {str(e)[:80]}")
@@ -871,10 +925,10 @@ def census():
     out["errors"] = errs
     if errs:
         log(census_errors=errs)
-    if not (out.get("acs") or out.get("rural") or out.get("gdp")):
+    if not (out.get("acs") or out.get("popest") or out.get("bea_inc") or out.get("gdp")):
         raise RuntimeError("; ".join(errs)[:300])
     save_json("census.json", out)
-    return len(out.get("acs") or out.get("gdp") or {})
+    return len(out.get("acs") or (out.get("popest") or {}).get("states") or out.get("gdp") or {})
 
 
 # ---------------------------------------------------------------- main
