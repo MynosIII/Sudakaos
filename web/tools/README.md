@@ -15,3 +15,11 @@ python3 -c "s=open('web/tools/template.html').read();open('web/index.html','w').
 `web/<slug>/index.html` (inteligencia, prospectiva, comunicacion, sistemas, ciberseguridad, comunidad) se generan con
 `python3 web/tools/build.py`, que también rearma `web/index.html` desde `template.html` + `geo.json`.
 El texto está en `content.py`; los gráficos ilustrativos (datos simulados) en `web/assets/charts.js`.
+
+## Datos reales (países y situación)
+
+`web/data/paises.json` y `web/data/situacion.json` los genera `python3 web/tools/datos.py` (solo librería estándar).
+Fuentes gratuitas y sin clave: Banco Mundial, currency-api (fawazahmed0), Google News RSS, GDELT, USGS y GDACS.
+El workflow `landing-datos.yml` lo corre cada 3 horas; al terminar, Pages y Cloudflare (sudakaoslatam.com) publican solos.
+`web/paises/` y `web/situacion/` se arman con `build.py` (texto en `pages_data.py`) y se dibujan con
+`web/assets/paises.js` y `situacion.js`. Los puntos por país del globo salen de `prep_geo.py` (campo `cc` de geo.json).

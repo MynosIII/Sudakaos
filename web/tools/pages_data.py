@@ -14,13 +14,13 @@ PAISES = """
 <section class="cap-hero" style="padding-bottom:28px"><div class="wrap">
 <p class="kicker">Tablero por país · datos públicos reales</p>
 <h1 id="pName">Países</h1>
-<div class="cols"><p class="lead" id="pLead">Cargando datos…</p><p class="intro">Indicadores macro del Banco Mundial (cada cifra con su año), tipo de cambio diario, tono de la cobertura internacional según GDELT y alertas detectadas en medios, sismos y desastres. <span class="upd" id="pUpd"></span></p></div>
+<div class="cols"><p class="lead" id="pLead">Cargando datos…</p><p class="intro">Indicadores macro del Banco Mundial y del FMI (cada cifra con su año y su fuente), tipo de cambio diario, tono de la cobertura internacional según GDELT y alertas detectadas en medios, sismos y desastres. <span class="upd" id="pUpd"></span></p></div>
 </div></section>
 <div class="wrap"><nav class="tabs" id="pTabs" aria-label="Países"></nav>
 <div class="kpis" id="pKpis"></div>
 <div class="grid2">
-<section class="panel"><h2>Inflación anual</h2><p class="sub">Precios al consumidor, % anual · Banco Mundial</p><canvas id="cInf" role="img" aria-label="Serie de inflación anual"></canvas></section>
-<section class="panel"><h2>Crecimiento del PIB</h2><p class="sub">Variación real, % anual · Banco Mundial</p><canvas id="cGdp" role="img" aria-label="Serie de crecimiento del PIB"></canvas></section>
+<section class="panel"><h2>Inflación anual</h2><p class="sub">Precios al consumidor, % anual · Banco Mundial / FMI</p><canvas id="cInf" role="img" aria-label="Serie de inflación anual"></canvas></section>
+<section class="panel"><h2>Crecimiento del PIB</h2><p class="sub">Variación real, % anual · Banco Mundial / FMI</p><canvas id="cGdp" role="img" aria-label="Serie de crecimiento del PIB"></canvas></section>
 <section class="panel"><h2>Tipo de cambio</h2><p class="sub" id="fxSub"></p><canvas id="cFx" role="img" aria-label="Serie de tipo de cambio"></canvas></section>
 <section class="panel"><h2>Tono de la cobertura</h2><p class="sub">Promedio diario, 7 días · GDELT (negativo = cobertura desfavorable)</p><canvas id="cTone" role="img" aria-label="Tono diario de la cobertura"></canvas></section>
 <section class="panel"><h2>Alertas</h2><p class="sub">Últimas 48 horas · titulares clasificados, USGS y GDACS</p><ul class="news" id="pAlerts"></ul></section>
@@ -28,7 +28,7 @@ PAISES = """
 </div>
 <section style="padding:84px 0 0"><h2 style="font-size:clamp(32px,3.6vw,48px);line-height:1.05">Comparación regional</h2><p style="color:var(--muted);font-size:14px;margin:8px 0 0">Tocá una columna para ordenar y una fila para abrir el país.</p>
 <div class="tbl-wrap"><table class="cmp"><thead id="pHead"></thead><tbody id="pRows"></tbody></table></div></section>
-<p class="srcs">Fuentes: Banco Mundial (último dato disponible de cada indicador; algunos países publican con atraso), currency-api de código abierto (tipo de cambio de referencia), GDELT Project (tono de noticias), Google News, USGS y GDACS. Las alertas se clasifican automáticamente por palabras clave y enlazan a la fuente original: requieren lectura humana antes de cualquier decisión. Se actualiza cada 3 horas.</p>
+<p class="srcs">Fuentes: Banco Mundial y FMI (último dato disponible de cada indicador; algunos países publican con atraso), currency-api de código abierto (tipo de cambio de referencia), GDELT Project (tono de noticias), Google News, USGS y GDACS. Las alertas se clasifican automáticamente por palabras clave y enlazan a la fuente original: requieren lectura humana antes de cualquier decisión. Se actualiza cada 3 horas.</p>
 </div>
 """
 

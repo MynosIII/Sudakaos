@@ -16,7 +16,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'data'
-UA = 'Mozilla/5.0 (compatible; SudakaosLanding/1.0; datos públicos agregados)'
+UA = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36'
 NOW = datetime.now(timezone.utc)
 
 # code, nombre, ISO3 Banco Mundial, moneda, lat, lon, idioma de noticias (hl, gl, ceid), término de búsqueda, GDELT
@@ -49,36 +49,50 @@ INDICADORES = {
     'pib': 'NY.GDP.MKTP.CD',           # PIB, US$ corrientes
     'poblacion': 'SP.POP.TOTL',
     'internet': 'IT.NET.USER.ZS',      # usuarios de internet, % de la población
-    'gini': 'SI.POV.GINI',
 }
 
-# Palabras que convierten un titular en alerta: (categoría, severidad 1-3, términos por idioma)
+# Palabras que convierten un titular en alerta: (categoría, severidad 1-3, términos por idioma).
+# Un término terminado en "*" es prefijo; el resto se busca como palabra o frase completa.
 REGLAS = [
-    ('Seguridad', 3, {'es': ['atentado', 'ataque', 'tiroteo', 'masacre', 'asesinad', 'muertos', 'secuestr', 'narco', 'enfrentamiento', 'explosión', 'bomba'],
-                      'pt': ['atentado', 'ataque', 'tiroteio', 'chacina', 'assassinad', 'mortos', 'sequestr', 'facção', 'explosão'],
-                      'en': ['attack', 'shooting', 'killed', 'dead', 'kidnap', 'cartel', 'bomb', 'explosion', 'terror']}),
-    ('Desastre', 3, {'es': ['terremoto', 'sismo', 'inundaci', 'incendio', 'huracán', 'tormenta', 'alerta roja', 'evacua', 'emergencia', 'derrumbe', 'sequía'],
-                     'pt': ['terremoto', 'enchente', 'inundaç', 'incêndio', 'queimada', 'furacão', 'tempestade', 'evacua', 'emergência', 'deslizamento', 'seca'],
-                     'en': ['earthquake', 'flood', 'wildfire', 'fire', 'hurricane', 'storm', 'evacuat', 'emergency', 'landslide', 'drought']}),
-    ('Protesta', 2, {'es': ['protesta', 'paro', 'huelga', 'marcha', 'manifestaci', 'piquete', 'bloqueo', 'cacerolazo', 'represión', 'disturbios'],
-                     'pt': ['protesto', 'greve', 'paralisação', 'manifestaç', 'bloqueio', 'repressão'],
-                     'en': ['protest', 'strike', 'walkout', 'rally', 'riot', 'unrest', 'blockade']}),
-    ('Institucional', 2, {'es': ['renuncia', 'destitu', 'juicio político', 'imputad', 'detenido', 'allanamiento', 'escándalo', 'corrupción', 'fiscal', 'decreto', 'veto', 'congreso', 'senado', 'corte suprema'],
-                          'pt': ['renúncia', 'impeachment', 'indiciad', 'preso', 'operação', 'escândalo', 'corrupção', 'stf', 'congresso', 'senado', 'decreto', 'veto'],
-                          'en': ['resign', 'impeach', 'indict', 'arrest', 'scandal', 'corruption', 'supreme court', 'congress', 'parliament', 'veto', 'sanction']}),
-    ('Economía', 1, {'es': ['inflación', 'dólar', 'devaluaci', 'riesgo país', 'default', 'deuda', 'fmi', 'recesión', 'tarifa', 'aranceles', 'reservas'],
-                     'pt': ['inflação', 'dólar', 'desvaloriz', 'juros', 'selic', 'dívida', 'fmi', 'recessão', 'tarifa'],
-                     'en': ['inflation', 'tariff', 'recession', 'interest rate', 'debt', 'default', 'imf', 'central bank', 'markets']}),
-    ('Elecciones', 1, {'es': ['elecci', 'encuesta', 'candidat', 'votaci', 'balotaje', 'campaña', 'comicios', 'referéndum'],
-                       'pt': ['eleiç', 'pesquisa', 'candidat', 'votação', 'campanha', 'segundo turno'],
-                       'en': ['election', 'poll', 'candidate', 'vote', 'campaign', 'referendum', 'ballot']}),
+    ('Seguridad', 3, {'es': ['atentado', 'tiroteo', 'balacera', 'masacre', 'asesinad*', 'asesinato', 'muertos', 'secuestr*', 'narcotráfico', 'cártel', 'enfrentamientos', 'explosión', 'coche bomba', 'homicidio*', 'feminicidio*', 'motín'],
+                      'pt': ['atentado', 'tiroteio', 'chacina', 'assassinad*', 'assassinato', 'mortos', 'sequestr*', 'facção', 'explosão', 'homicídio*', 'feminicídio*', 'rebelião'],
+                      'en': ['shooting', 'gunman', 'killed', 'massacre', 'kidnap*', 'cartel', 'car bomb', 'explosion', 'terror attack', 'terrorist*', 'stabbing', 'murder*', 'riot police']}),
+    ('Desastre', 3, {'es': ['inundaci*', 'incendio forestal', 'incendios forestales', 'huracán', 'tornado', 'alerta roja', 'evacuad*', 'evacuación', 'estado de emergencia', 'emergencia climática', 'derrumbe', 'deslave', 'alud', 'sequía', 'damnificados', 'temporal'],
+                     'pt': ['enchente*', 'inundaç*', 'incêndio florestal', 'queimadas', 'furacão', 'tornado', 'alerta vermelho', 'desalojad*', 'evacuaç*', 'estado de emergência', 'calamidade', 'deslizamento*', 'seca', 'desabrigad*'],
+                     'en': ['flood*', 'wildfire*', 'hurricane', 'tornado', 'evacuat*', 'state of emergency', 'landslide', 'drought', 'heatwave', 'blizzard']}),
+    ('Sismo', 2, {'es': ['sismo', 'terremoto', 'temblor'], 'pt': ['terremoto', 'tremor de terra', 'abalo sísmico'], 'en': ['earthquake', 'quake']}),
+    ('Protesta', 2, {'es': ['protesta*', 'paro nacional', 'paro general', 'huelga*', 'marcha*', 'manifestaci*', 'piquete*', 'bloqueo*', 'cacerolazo', 'represión', 'disturbios', 'movilizaci*'],
+                     'pt': ['protesto*', 'greve*', 'paralisaç*', 'manifestaç*', 'bloqueio*', 'repressão'],
+                     'en': ['protest*', 'protesters', 'general strike', 'on strike', 'strike action', 'walkout', 'riot*', 'unrest', 'demonstrators']}),
+    ('Institucional', 2, {'es': ['renuncia*', 'renunció', 'destitu*', 'juicio político', 'imputad*', 'detenid*', 'allanamiento*', 'escándalo', 'corrupción', 'decreto', 'veto', 'vetó', 'corte suprema', 'tribunal supremo', 'moción de censura', 'golpe de estado', 'indulto'],
+                          'pt': ['renúncia', 'renunciou', 'impeachment', 'indiciad*', 'preso', 'presa', 'operação da pf', 'escândalo', 'corrupção', 'stf', 'decreto', 'veto', 'vetou', 'cassação', 'golpe'],
+                          'en': ['resign*', 'impeach*', 'indict*', 'arrested', 'scandal', 'corruption', 'supreme court', 'no-confidence', 'coup', 'sanctions', 'executive order', 'pardon*']}),
+    ('Economía', 1, {'es': ['inflación', 'devaluaci*', 'riesgo país', 'default', 'cesación de pagos', 'fmi', 'recesión', 'aranceles', 'desempleo', 'tasa de interés', 'banco central', 'déficit'],
+                     'pt': ['inflação', 'desvaloriz*', 'selic', 'calote', 'fmi', 'recessão', 'tarifaço', 'desemprego', 'banco central', 'déficit'],
+                     'en': ['inflation', 'tariff*', 'recession', 'interest rate*', 'default', 'imf', 'central bank', 'unemployment', 'budget deficit']}),
+    ('Elecciones', 1, {'es': ['elecciones', 'electoral', 'encuesta*', 'candidat*', 'balotaje', 'segunda vuelta', 'comicios', 'referéndum', 'primarias'],
+                       'pt': ['eleição', 'eleições', 'eleitoral', 'pesquisa eleitoral', 'candidat*', 'segundo turno'],
+                       'en': ['election*', 'poll*', 'candidate*', 'ballot', 'referendum', 'primaries', 'by-election']}),
 ]
+# Titulares de servicio (cotización del día, pronóstico, horóscopo…) no son alertas
+RUIDO = re.compile(r'(precio del d[oó]lar|cotizaci[oó]n|tipo de cambio hoy|d[oó]lar hoy|cu[aá]nto est[aá] el d[oó]lar|pron[oó]stico|forecast|hor[oó]scopo|loter[ií]a|quiniela|resultados del sorteo|en vivo|minuto a minuto|live updates|recipe|receta)', re.I)
+_L = 'a-záéíóúâêôãõçñü'
+_RX = {}
+
+
+def _rx(term):
+    if term not in _RX:
+        if term.endswith('*'):
+            _RX[term] = re.compile(r'(?<![' + _L + r'])' + re.escape(term[:-1]))
+        else:
+            _RX[term] = re.compile(r'(?<![' + _L + r'])' + re.escape(term) + r'(?![' + _L + r'])')
+    return _RX[term]
 
 
 def get(url, retries=2, timeout=30):
     for attempt in range(retries + 1):
         try:
-            req = urllib.request.Request(url, headers={'User-Agent': UA, 'Accept': '*/*'})
+            req = urllib.request.Request(url, headers={'User-Agent': UA, 'Accept': 'application/json, application/xml, text/xml, */*', 'Accept-Language': 'es-419,es;q=0.9,en;q=0.8'})
             with urllib.request.urlopen(req, timeout=timeout) as r:
                 return r.read()
         except urllib.error.HTTPError as e:
@@ -127,6 +141,30 @@ def banco_mundial():
     for c in out:
         for k in out[c]:
             out[c][k].sort()
+    return out
+
+
+# FMI (World Economic Outlook, DataMapper): respaldo si el Banco Mundial no responde o le falta el dato
+FMI = {'pib_crec': 'NGDP_RPCH', 'inflacion': 'PCPIPCH', 'desempleo': 'LUR', 'pib_pc': 'NGDPDPC', 'poblacion': 'LP'}
+
+
+def fmi():
+    codes = '/'.join('EU' if p[0] == 'EU' else p[2] for p in PAISES)
+    iso = {('EU' if p[0] == 'EU' else p[2]): p[0] for p in PAISES}
+    years = ','.join(str(y) for y in range(2000, NOW.year))
+    out = {p[0]: {} for p in PAISES}
+    for key, ind in FMI.items():
+        try:
+            d = get_json(f'https://www.imf.org/external/datamapper/api/v1/{ind}/{codes}?periods={years}', timeout=45, retries=1)
+        except Exception as e:
+            log('FMI', ind, e); continue
+        for code, ser in (d.get('values', {}).get(ind) or {}).items():
+            c = iso.get(code)
+            if not c or not isinstance(ser, dict):
+                continue
+            mult = 1e6 if key == 'poblacion' else 1
+            out[c][key] = sorted([int(y), round(float(v) * mult, 3)] for y, v in ser.items() if v is not None)
+        time.sleep(1)
     return out
 
 
@@ -200,9 +238,11 @@ def gnews(q, loc, when='1d'):
 
 def clasificar(titulo, lang):
     low = titulo.lower()
+    if RUIDO.search(low):
+        return None, 0
     for cat, sev, terms in REGLAS:
         for w in terms[lang]:
-            if re.search(r'(?<![a-záéíóúâêôãõç])' + re.escape(w), low):
+            if _rx(w).search(low):
                 return cat, sev
     return None, 0
 
@@ -341,11 +381,26 @@ def main():
     except Exception:
         pass
     log('Banco Mundial…'); wb = banco_mundial()
+    log('FMI…'); imf = fmi()
+    fuente = {}
+    for c in wb:
+        fuente[c] = {}
+        for k in set(wb[c]) | set(imf.get(c, {})):
+            a, b = wb[c].get(k), imf.get(c, {}).get(k)
+            if b and (not a or b[-1][0] > a[-1][0]):  # el FMI suele tener el año más reciente
+                wb[c][k] = b; fuente[c][k] = 'FMI'
+            elif a:
+                fuente[c][k] = 'Banco Mundial'
+    prevp = prev.get('paises', {})
+    for c in wb:  # si ambas fuentes fallan, se conserva lo último publicado
+        if not wb[c] and prevp.get(c, {}).get('wb'):
+            wb[c] = prevp[c]['wb']; fuente[c] = prevp[c].get('fuente', {})
     log('Tipo de cambio…'); fx = tipo_cambio(prev)
     log('Noticias…'); tit, al_medios = noticias()
     log('GDELT…'); tono = gdelt_tono()
-    if not tono:  # si GDELT no respondió, se conserva lo último
-        tono = {c: v.get('tono') for c, v in prev.get('paises', {}).items() if v.get('tono')}
+    for c, v in prev.get('paises', {}).items():  # GDELT limita fuerte: lo que no respondió se toma de la corrida anterior
+        if not tono.get(c) and v.get('tono'):
+            tono[c] = v['tono']
     log('Sismos y desastres…'); al_geo = sismos() + gdacs()
 
     alertas = sorted(al_medios + al_geo, key=lambda a: a['t'], reverse=True)
@@ -361,10 +416,10 @@ def main():
     paises = {}
     for c, nombre, iso3, *_ in PAISES:
         p = BY[c]
-        paises[c] = {'nombre': nombre, 'iso3': iso3, 'lat': p[4], 'lon': p[5], 'wb': wb.get(c, {}), 'fx': fx.get(c, {}),
+        paises[c] = {'nombre': nombre, 'iso3': iso3, 'lat': p[4], 'lon': p[5], 'wb': wb.get(c, {}), 'fuente': fuente.get(c, {}), 'fx': fx.get(c, {}),
                      'tono': tono.get(c) or [], 'titulares': tit.get(c, {}).get('items', []), 'notas24': tit.get(c, {}).get('n24', 0),
                      'alertas': nivel[c]}
-    meta = {'actualizado': iso(NOW), 'fuentes': ['Banco Mundial', 'currency-api (fawazahmed0)', 'Google News', 'GDELT', 'USGS', 'GDACS']}
+    meta = {'actualizado': iso(NOW), 'fuentes': ['Banco Mundial', 'FMI', 'currency-api (fawazahmed0)', 'Google News', 'GDELT', 'USGS', 'GDACS']}
     (OUT / 'paises.json').write_text(json.dumps({'meta': meta, 'paises': paises}, ensure_ascii=False, separators=(',', ':')), encoding='utf8')
     sit = {'meta': meta, 'nivel': nivel, 'alertas': alertas[:160]}
     (OUT / 'situacion.json').write_text(json.dumps(sit, ensure_ascii=False, separators=(',', ':')), encoding='utf8')

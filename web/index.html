@@ -102,7 +102,7 @@ header nav{display:flex;align-items:center;gap:28px;font-size:14px;color:var(--i
 .feed{padding:20px 32px 22px 0;border-right:1px solid #3a3934}.status{padding:20px 0 22px 32px}
 .c-head{display:flex;justify-content:space-between;gap:12px;font-size:13px;color:#9d9c94;margin-bottom:10px}.c-head strong{color:#fff;font-weight:600}
 .c-head .t{font-family:var(--mono);font-size:11px}
-.feed ol{list-style:none;margin:0;padding:0;height:196px;overflow:hidden;position:relative}
+.feed ol{list-style:none;margin:0;padding:0;height:250px;overflow:hidden;position:relative}
 .feed ol:after{content:"";position:absolute;left:0;right:0;bottom:0;height:46px;background:linear-gradient(#0c0c0b00,#0c0c0b)}
 .feed li{display:grid;grid-template-columns:70px 50px 1fr;gap:12px;padding:8px 0;border-bottom:1px solid #2c2b27;font-size:14px;animation:feedin .5s ease}
 .feed li .t{font:11px/1.9 var(--mono);color:#86857d}.feed li .c{font:11px/1.9 var(--mono);color:#fff}.feed li .k{color:#fff}.feed li .s{color:#9d9c94;font-size:13px}
@@ -241,7 +241,7 @@ const cpanel=document.getElementById('cpanel');
 function showPanel(code,onClose){
   const P=DATA&&DATA.paises&&DATA.paises[code],nv=SIT&&SIT.nivel&&SIT.nivel[code];
   let h='<button class="x" type="button" aria-label="Cerrar">×</button><h3>'+esc(CNAME[code])+'</h3>';
-  h+='<p class="lvl">'+(nv?'<b>'+nv.n24+' alerta'+(nv.n24===1?'':'s')+'</b> en las últimas 24 h':'Datos en actualización')+(P&&P.notas24?' · '+P.notas24+' notas en medios':'')+'</p>';
+  h+='<p class="lvl">'+(nv?'<b>'+nv.n24+' alerta'+(nv.n24===1?'':'s')+'</b> en las últimas 24 h':'Datos en actualización')+(P&&P.notas24?' · '+P.notas24+(P.notas24>=100?'+':'')+' notas en medios':'')+'</p>';
   if(P){const w=P.wb||{},row=(lab,k,suf)=>{const v=lastOf(w[k]);return '<dt>'+lab+(v?' <small>'+v[0]+'</small>':'')+'</dt><dd>'+(v?num(v[1])+suf:'—')+'</dd>'};
     h+='<dl>'+row('Inflación anual','inflacion',' %')+row('Crecimiento del PIB','pib_crec',' %')+row('Desempleo','desempleo',' %');
     const fx=P.fx||{},fl=lastOf(fx.serie);

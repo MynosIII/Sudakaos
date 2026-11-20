@@ -53,23 +53,24 @@
   // ---------- Render ----------
   function kpi(lab, val, foot, cls) { return '<div class="kpi"><span>' + lab + '</span><strong' + (cls ? ' class="' + cls + '"' : '') + '>' + val + '</strong><small>' + (foot || '&nbsp;') + '</small></div>'; }
   function wbv(p, k) { return last((p.wb || {})[k]); }
+  function src(p, k, y) { return ((p.fuente || {})[k] || 'Banco Mundial') + ' · ' + y; }
 
   function render() {
     var p = DATA.paises[CUR]; if (!p) return;
     document.title = p.nombre + ' — Tablero por país — Sudakaos LATAM';
     $('pName').textContent = p.nombre;
     var nv = (SIT && SIT.nivel && SIT.nivel[CUR]) || { n24: 0 };
-    $('pLead').textContent = nv.n24 ? nv.n24 + ' alerta' + (nv.n24 === 1 ? '' : 's') + ' en las últimas 24 horas y ' + p.notas24 + ' notas de medios sobre ' + p.nombre + '.' : 'Sin alertas en las últimas 24 horas. ' + p.notas24 + ' notas de medios sobre ' + p.nombre + '.';
+    $('pLead').textContent = nv.n24 ? nv.n24 + ' alerta' + (nv.n24 === 1 ? '' : 's') + ' en las últimas 24 horas y ' + p.notas24 + (p.notas24 >= 100 ? '+' : '') + ' notas de medios sobre ' + p.nombre + '.' : 'Sin alertas en las últimas 24 horas. ' + p.notas24 + (p.notas24 >= 100 ? '+' : '') + ' notas de medios sobre ' + p.nombre + '.';
     [].forEach.call($('pTabs').children, function (a) { if (a.dataset.c === CUR) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
     var inf = wbv(p, 'inflacion'), gdp = wbv(p, 'pib_crec'), un = wbv(p, 'desempleo'), pc = wbv(p, 'pib_pc'), pop = wbv(p, 'poblacion'), net = wbv(p, 'internet');
     var fx = p.fx || {}, fl = last(fx.serie), v30 = fxVar(fx.serie, 30), tono = tonoProm(p);
-    var h = kpi('Inflación anual', inf ? num(inf[1]) + ' %' : '—', inf ? 'Banco Mundial · ' + inf[0] : 'Sin dato', inf && inf[1] > 10 ? 'up' : '') +
-      kpi('Crecimiento del PIB', gdp ? num(gdp[1]) + ' %' : '—', gdp ? 'Banco Mundial · ' + gdp[0] : 'Sin dato', gdp && gdp[1] < 0 ? 'up' : '') +
-      kpi('Desempleo', un ? num(un[1]) + ' %' : '—', un ? 'OIT / Banco Mundial · ' + un[0] : 'Sin dato') +
+    var h = kpi('Inflación anual', inf ? num(inf[1]) + ' %' : '—', inf ? src(p, 'inflacion', inf[0]) : 'Sin dato', inf && inf[1] > 10 ? 'up' : '') +
+      kpi('Crecimiento del PIB', gdp ? num(gdp[1]) + ' %' : '—', gdp ? src(p, 'pib_crec', gdp[0]) : 'Sin dato', gdp && gdp[1] < 0 ? 'up' : '') +
+      kpi('Desempleo', un ? num(un[1]) + ' %' : '—', un ? src(p, 'desempleo', un[0]) : 'Sin dato') +
       (CUR === 'EC' ? kpi('Moneda', 'US$', 'Dolarizado desde 2000') :
         kpi(CUR === 'US' ? 'Euros por US$' : (fx.moneda || '') + ' por US$', fl ? num(fl[1], fl[1] < 10 ? 3 : 1) : '—', v30 != null ? (v30 >= 0 ? '+' : '') + num(v30) + ' % en 30 días · ' + fl[0] : (fl ? fl[0] : 'Sin dato'), v30 > 3 ? 'up' : '')) +
-      kpi('PIB per cápita', pc ? 'US$ ' + num(pc[1], 0) : '—', pc ? 'Banco Mundial · ' + pc[0] : 'Sin dato') +
-      kpi('Población', pop ? compact(pop[1]) : '—', pop ? 'Banco Mundial · ' + pop[0] : 'Sin dato') +
+      kpi('PIB per cápita', pc ? 'US$ ' + num(pc[1], 0) : '—', pc ? src(p, 'pib_pc', pc[0]) : 'Sin dato') +
+      kpi('Población', pop ? compact(pop[1]) : '—', pop ? src(p, 'poblacion', pop[0]) : 'Sin dato') +
       kpi('Usuarios de internet', net ? num(net[1], 0) + ' %' : '—', net ? 'UIT / Banco Mundial · ' + net[0] : 'Sin dato') +
       kpi('Tono de la cobertura', tono != null ? (tono > 0 ? '+' : '') + num(tono, 2) : '—', tono != null ? 'GDELT · promedio 7 días' : 'Sin dato', tono != null && tono < -2 ? 'up' : '');
     $('pKpis').innerHTML = h;
