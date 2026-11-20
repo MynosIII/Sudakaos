@@ -29,14 +29,23 @@ def ring(idx):
         out.extend(p if not out else p[1:])
     return out
 
-polys = []  # (is_latam, [rings])
+# Países con tablero (orden = índice 1..17 en el front): AR BO BR CL CO EC GY PY PE SR UY VE MX US ES GB UE
+CC = ['032','068','076','152','170','218','328','600','604','740','858','862','484','840','724','826']
+EU = {'040','056','100','191','196','203','208','233','246','250','276','300','348','372','380','428','440','442','470','528','616','620','642','703','705','752'}
+def cc_of(i):
+    if i in CC: return CC.index(i) + 1
+    if i in EU: return len(CC) + 1
+    return 0
+
+polys = []  # (is_latam, [rings], country index)
 for g in j['objects']['countries']['geometries']:
     lat = g.get('id') in LATAM
+    ci = cc_of(g.get('id'))
     if g['type'] == 'Polygon':
-        polys.append((lat, [ring(r) for r in g['arcs']]))
+        polys.append((lat, [ring(r) for r in g['arcs']], ci))
     elif g['type'] == 'MultiPolygon':
         for p in g['arcs']:
-            polys.append((lat, [ring(r) for r in p]))
+            polys.append((lat, [ring(r) for r in p], ci))
 
 # Esfera de Fibonacci
 i = np.arange(N)
@@ -55,8 +64,8 @@ def pip(px, py, poly):
         inside ^= c
     return inside
 
-land = np.zeros(N, bool); latam = np.zeros(N, bool)
-for is_lat, rings in polys:
+land = np.zeros(N, bool); latam = np.zeros(N, bool); cid = np.zeros(N, np.int8)
+for is_lat, rings, ci in polys:
     outer = rings[0]
     xs = [p[0] for p in outer]; ys = [p[1] for p in outer]
     m = (lon_d >= min(xs)) & (lon_d <= max(xs)) & (lat_d >= min(ys)) & (lat_d <= max(ys))
@@ -69,6 +78,8 @@ for is_lat, rings in polys:
     land[idx[ins]] = True
     if is_lat:
         latam[idx[ins]] = True
+    if ci:
+        cid[idx[ins]] = ci
 # Antártida fuera (ruido visual abajo del todo)
 land &= lat_d > -60
 
@@ -98,7 +109,7 @@ def dp(pts, eps):
     return [pts[0], pts[-1]]
 
 lines = []
-for is_lat, rings in polys:
+for is_lat, rings, _ in polys:
     if not is_lat: continue
     r = rings[0]
     xs = [p[0] for p in r]; ys = [p[1] for p in r]
@@ -109,5 +120,6 @@ for is_lat, rings in polys:
     for x_, y_ in s: flat += [round(x_ * 10), round(y_ * 10)]
     lines.append(flat)
 
-json.dump({'n': N, 'latam': enc(lat_ids), 'rest': enc(rest_ids), 'borders': lines}, open(OUT, 'w'), separators=(',', ':'))
+cc = [enc(np.nonzero(land & (cid == k))[0]) for k in range(1, len(CC) + 2)]
+json.dump({'n': N, 'latam': enc(lat_ids), 'rest': enc(rest_ids), 'borders': lines, 'cc': cc}, open(OUT, 'w'), separators=(',', ':'))
 print('N', N, 'latam', len(lat_ids), 'rest', len(rest_ids), 'border pts', sum(len(l) for l in lines) // 2)
