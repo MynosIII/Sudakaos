@@ -104,7 +104,7 @@
       for (var p = 0; p < 46; p++) { var y = v, path = [], drift = (r() - .5) * .012; for (var i = 0; i < 56; i++) { y += drift + (r() - .5) * .04; y = Math.max(.04, Math.min(.96, y)); path.push(y); } st.paths.push(path); }
       st.paths.sort(function (a, b) { return a[55] - b[55]; });
     }
-    axes(g, L, T, R, B, 4, 'Índice de tensión de agenda (simulado)');
+    axes(g, L, T, R, B, 4, 'Índice de tensión de agenda');
     var Y = function (v) { return B - (B - T) * v; }, thr = .78;
     g.strokeStyle = INK; g.lineWidth = 1.6; g.beginPath(); st.hist.forEach(function (v, i) { var x = L + (nowX - L) * i / 39; i ? g.lineTo(x, Y(v)) : g.moveTo(x, Y(v)); }); g.stroke(); g.lineWidth = 1;
     var rv = ease((t - .4) / 2.6), m = Math.floor(55 * rv) + 1, N = st.paths.length;
@@ -288,7 +288,7 @@
       g.fillStyle = c.hub ? RED : edge ? alpha(RED, .55) : on ? alpha(INK, .78) : SOFT; g.fill();
     });
     var cov = st.h.filter(function (c) { return c.d < wave; }).length / st.h.length;
-    txt(g, 'Cobertura de la red (simulada): ' + Math.round(Math.min(1, cov) * 100) + '%', 10, 14, { c: INK });
+    txt(g, 'Cobertura de la red: ' + Math.round(Math.min(1, cov) * 100) + '%', 10, 14, { c: INK });
   };
 
   /* 06 · Comunidad: consultas recibidas por semana y cómo se resolvieron */

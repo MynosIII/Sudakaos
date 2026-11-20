@@ -190,7 +190,7 @@
       if (il) k += kpi(esc(ix.nombre), num(il[1], 0), pct((il[1] / ix.serie[0][1] - 1) * 100) + ' en 30 días · ' + fechaC(il[0]));
       k += kpi('Alertas en medios', String(nv.n7 != null ? nv.n7 : (p.alertas || {}).n7 || 0), 'Últimos 7 días · ' + (nv.n24 || 0) + ' en 24 h');
       $('pKpis').innerHTML = k;
-      $('fxSub').textContent = CUR === 'EC' ? 'Ecuador usa el dólar: no hay tipo de cambio propio.' : 'Cierre diario, últimos 30 días · currency-api (referencia de mercado)';
+      $('fxSub').textContent = CUR === 'EC' ? 'Ecuador usa el dólar: no hay tipo de cambio propio.' : 'Cierre diario, últimos 30 días · currency-api';
       var fxs = (fx.serie || []).filter(function (r) { return Date.parse(r[0]) > Date.now() - 31 * 864e5; });
       simple($('cFx'), CUR === 'EC' ? [] : fxs, { fx: function (s) { return s.slice(8, 10) + '/' + s.slice(5, 7); }, vacio: CUR === 'EC' ? 'Economía dolarizada.' : undefined });
       var monthly = inf && inf.serie && inf.serie.length > 1;

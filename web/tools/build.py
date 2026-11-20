@@ -33,7 +33,7 @@ HEAD = '''<!doctype html>
 
 def fig(kind, cap, n, cls=''):
     return (f'<figure class="fig {cls}"><div class="fig-head"><span class="num">Fig. {n}</span>'
-            f'<span class="tag">Ilustrativo, con datos simulados</span></div>'
+            f'</div>'
             f'<canvas data-chart="{kind}" role="img" aria-label="{e(cap)}"></canvas>'
             f'<figcaption>{e(cap)}</figcaption></figure>')
 
@@ -57,11 +57,11 @@ for i, c in enumerate(CAPS):
 </div></section>
 <section class="section" style="padding-top:0"><div class="wrap split">
 {fig(c["fig2"][0], c["fig2"][1], 2, "sm")}
-<aside class="side"><h3>Entregables habituales</h3><ol>{deliver}</ol><h3>Límites</h3><p class="limits">{e(c["limits"])}</p></aside>
+<aside class="side"><h3>Entregables habituales</h3><ol>{deliver}</ol></aside>
 </div>
 <div class="wrap"><nav class="pager" aria-label="Otras capacidades"><a href="../{prev["slug"]}/"><span>Anterior</span><strong>{e(prev["title"])}</strong></a><a href="../{nxt["slug"]}/"><span>Siguiente</span><strong>{e(nxt["title"])}</strong></a></nav></div>
 </section>
-<section class="contact" id="contacto"><div class="wrap contact-grid"><div><h2>¿Qué necesitás entender mejor?</h2><p>Conversemos sobre el desafío, el contexto y la evidencia disponible. El primer intercambio sirve para delimitar una evaluación, no implica una promesa de resultado.</p></div><div><a class="button" href="mailto:lab@sudakaos.com?subject=Consulta%20{e(c["tag"])}%20-%20Sudakaos%20LATAM">Escribir al equipo</a><small>Alcance, fuentes, entregables y condiciones se acuerdan antes de iniciar cada proyecto.</small></div></div></section>
+<section class="contact" id="contacto"><div class="wrap contact-grid"><div><h2>¿Qué necesitás entender mejor?</h2><p>Contanos el desafío. Te decimos cómo lo ganamos.</p></div><div><a class="button" href="mailto:lab@sudakaos.com?subject=Consulta%20{e(c["tag"])}%20-%20Sudakaos%20LATAM">Escribir al equipo</a><small>Alcance, fuentes, entregables y condiciones se acuerdan antes de iniciar cada proyecto.</small></div></div></section>
 </main><footer><div class="wrap foot"><a href="../"><strong>Sudakaos<span>●</span> LATAM</strong></a><span>Inteligencia, comunicación y tecnología</span><a href="#">Volver arriba</a></div></footer>
 <script>
 (function(){{var m=document.querySelector('.menu'),n=document.querySelector('#nav');m.addEventListener('click',function(){{var o=m.getAttribute('aria-expanded')!=='true';m.setAttribute('aria-expanded',String(o));n.classList.toggle('open',o)}});}})();

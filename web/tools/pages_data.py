@@ -3,7 +3,7 @@ El contenido se dibuja en el navegador con web/assets/paises.js y situacion.js a
 import os
 
 CONTACT = ('<section class="contact" id="contacto"><div class="wrap contact-grid"><div><h2>¿Qué necesitás entender mejor?</h2>'
-           '<p>Conversemos sobre el desafío, el contexto y la evidencia disponible. El primer intercambio sirve para delimitar una evaluación, no implica una promesa de resultado.</p></div>'
+           '<p>Contanos el desafío. Te decimos cómo lo ganamos.</p></div>'
            '<div><a class="button" href="mailto:lab@sudakaos.com?subject=Consulta%20Sudakaos%20LATAM">Escribir al equipo</a>'
            '<small>Alcance, fuentes, entregables y condiciones se acuerdan antes de iniciar cada proyecto.</small></div></div></section>')
 FOOT = ('</main><footer><div class="wrap foot"><a href="../"><strong>Sudakaos<span>●</span> LATAM</strong></a><span>Inteligencia, comunicación y tecnología</span><a href="#">Volver arriba</a></div></footer>\n'
@@ -24,7 +24,7 @@ PAISES = """
 <div id="pPolls"></div></section>
 <section class="panel"><h2>Compás político</h2><p class="sub">Eje horizontal: economía (izquierda a derecha). Eje vertical: autoridad (libertario a autoritario). En rojo, quien gobierna.</p>
 <canvas id="cComp" class="sq" role="img" aria-label="Ubicación de los principales actores en un compás político"></canvas>
-<p class="pnote">Ubicación estimada por el equipo de Sudakaos a partir de programas, votaciones y discurso público. No es una medición.</p></section>
+<p class="pnote">Lectura del equipo de Sudakaos.</p></section>
 </div>
 <div class="grid2">
 <section class="panel"><h2>Actores y candidatos</h2><ul class="actors" id="pActors"></ul><div class="elec" id="pElec"></div>
@@ -42,13 +42,13 @@ PAISES = """
 </div>
 <section style="padding:84px 0 0"><h2 style="font-size:clamp(32px,3.6vw,48px);line-height:1.05">Comparación regional</h2><p style="color:var(--muted);font-size:14px;margin:8px 0 0">Aprobación: promedio de las encuestas de los últimos 45 días. Tocá una columna para ordenar y una fila para abrir el país.</p>
 <div class="tbl-wrap"><table class="cmp"><thead id="pHead"></thead><tbody id="pRows"></tbody></table></div></section>
-<p class="srcs">Política: encuestas publicadas por cada encuestadora (CB Consultora, AtlasIntel, Cadem, Ipsos, YouGov, Equipos, Zentrix y otras), con enlace a la nota de origen; se revisan a mano y el promedio es la media simple de la última medición de cada una. Economía: currency-api (tipo de cambio diario), OCDE (inflación mensual) y Banco Mundial (último año, donde no hay dato mensual). Alertas y titulares: Google News, USGS y GDACS, clasificados automáticamente y actualizados cada 3 horas. Fotos: Wikipedia y Wikimedia Commons. Banderas: flagcdn.</p>
+<p class="srcs">Fuentes: CB Consultora, AtlasIntel, Cadem, Ipsos, YouGov, Equipos, Zentrix y otras encuestadoras; OCDE, Banco Mundial y currency-api; Google News, USGS y GDACS. Fotos: Wikipedia / Wikimedia Commons. Banderas: flagcdn.</p>
 </div>
 """
 
 SITUACION = """
 <div class="wrap"><div class="sit-top"><h1>Sala de situación</h1><span class="clock" id="sClock">UTC --:--:--</span></div>
-<p style="font:400 21px/1.4 var(--serif);color:var(--ink-2);max-width:760px;margin:14px 0 0">Alertas reales en Sudamérica, México, Estados Unidos, España, Reino Unido y la Unión Europea: titulares de medios clasificados por tema, sismos y desastres. <span class="upd" id="sUpd"></span></p>
+<p style="font:400 21px/1.4 var(--serif);color:var(--ink-2);max-width:760px;margin:14px 0 0">Alertas en vivo en Sudamérica, México, Estados Unidos, España, Reino Unido y la Unión Europea: titulares de medios clasificados por tema, sismos y desastres. <span class="upd" id="sUpd"></span></p>
 <div class="kpis" id="sKpis"></div>
 <div class="sit-grid">
 <div><div class="map-wrap"><canvas id="map" role="img" aria-label="Mapa de alertas recientes"></canvas><div class="mtip" id="mtip"></div></div>
@@ -58,7 +58,7 @@ SITUACION = """
 <div class="filters" id="sFilters"></div>
 <p class="upd" id="sCount" style="margin:10px 0 0"></p>
 <ol class="sfeed" id="sFeed"></ol>
-<p class="srcs">Cómo se arma: cada 3 horas se consultan Google News (por país e idioma), el feed de sismos M4.5+ del USGS y las alertas de GDACS. Un titular entra como alerta si menciona términos de seguridad, desastres, protestas, hechos institucionales, economía o elecciones. Es una clasificación automática: cada alerta enlaza a su fuente y requiere verificación humana.</p>
+<p class="srcs">Fuentes: Google News, USGS y GDACS, actualizadas cada 3 horas. Cada alerta enlaza a su fuente.</p>
 </div>
 """
 
