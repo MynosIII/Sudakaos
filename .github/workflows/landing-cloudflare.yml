@@ -1,7 +1,8 @@
 name: Landing en sudakaoslatam.com (Cloudflare Pages)
 
 # Publica SOLO la landing (carpeta web/, sin web/tools) en Cloudflare Pages
-# y la conecta al dominio sudakaoslatam.com. Ningún tablero de clientes sale por acá.
+# y la conecta al dominio sudakaoslatam.com. Ningún tablero de clientes sale por acá
+# (la única excepción es la demo pública de Trump en /demo/trump/).
 # Necesita los secrets CLOUDFLARE_API_TOKEN (permisos: Cloudflare Pages Edit + Zone DNS Edit
 # de sudakaoslatam.com) y CLOUDFLARE_ACCOUNT_ID.
 
@@ -10,10 +11,11 @@ on:
     branches: [main]
     paths:
       - 'web/**'
+      - 'trump/**'
       - '.github/workflows/landing-cloudflare.yml'
   # Los datos (web/data) los actualiza "Landing datos" con el token de Actions, que no dispara push
   workflow_run:
-    workflows: ['Landing datos']
+    workflows: ['Landing datos', 'Trump monitor']
     types: [completed]
     branches: [main]
   workflow_dispatch:
@@ -51,6 +53,8 @@ jobs:
           mkdir -p _landing
           cp -r web/. _landing/
           rm -rf _landing/tools
+          # Única excepción pública: la demo de Trump (free trial). Los tableros de clientes nunca salen por acá.
+          python3 trump/build_demo.py _landing/demo/trump
           # Verificación: nada fuera de la landing
           ls -R _landing
 
