@@ -586,6 +586,8 @@ def ads():
             samples.append((i[1], gr, nm, (a.get("ad_delivery_start_time") or "")[:10], a["ad_creative_bodies"][0], a["id"]))
     share = lambda c, n=12: [{"k": k, "v": round(100 * v / sum(c.values()), 1)} for k, v in c.most_common(n)] if sum(c.values()) else []
     samples.sort(reverse=True)
+    seen_b = set()
+    samples = [x for x in samples if not (x[4][:80] in seen_b or seen_b.add(x[4][:80]))]
     return {"n": len(rows), "since": d.get("since"), "camps": tot,
             "pages": sorted([{"p": k, **v} for k, v in pages.items()], key=lambda x: -x["hi"])[:16],
             "regions": share(reg, 51), "age": share(age), "gender": share(gen), "platforms": dict(plat.most_common()),
