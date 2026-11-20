@@ -2,9 +2,9 @@ name: Trump monitor
 
 on:
   workflow_dispatch:
-  # 13:40 UTC = 08:40 ET / 10:40 ART: after the other boards, with US morning news already in
+  # 08:05 UTC = 05:05 ART: right after the YouTube quota resets, before the other boards use the shared keys
   schedule:
-    - cron: '40 13 * * *'
+    - cron: '5 8 * * *'
   push:
     paths:
       - 'trump/*.py'

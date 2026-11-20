@@ -189,7 +189,7 @@ footer{color:var(--dim);font-size:12px;max-width:1600px;margin:0 auto;padding:0 
   <div class="sect">Global coverage · GDELT</div>
   <div class="g">
     <div class="card c8 osint" data-o="GDELT 2.0 · 65 LANGUAGES"><h3>Worldwide news volume and tone</h3><div id="g-vol" style="height:300px"></div></div>
-    <div class="card c4"><h3>Who is writing about Trump · by source country</h3><div class="bars" id="g-ctry"></div></div>
+    <div class="card c4"><h3>Who is writing about Trump · last 24 hours<span class="tag">by source country</span></h3><div class="bars" id="g-ctry"></div></div>
     <div class="card c12"><h3>Foreign press right now<span class="tag">Non-English · last 3 days</span></h3><div class="hl" id="g-arts" style="max-height:380px"></div></div>
   </div>
 </section>
@@ -238,9 +238,9 @@ footer{color:var(--dim);font-size:12px;max-width:1600px;margin:0 auto;padding:0 
     <div class="card c4"><h3>Executive orders by policy area</h3><div class="bars" id="p-top"></div></div>
     <div class="card c12"><h3>Latest signed</h3><div class="scroll" style="max-height:380px"><table id="p-latest"></table></div></div>
   </div>
-  <div class="sect">Prediction markets · Polymarket</div>
+  <div class="sect">Prediction markets</div>
   <div class="mk" id="p-mk"></div>
-  <div class="sect">Economic pulse · FRED</div>
+  <div class="sect">Economic pulse</div>
   <div class="econ" id="p-econ"></div>
 </section>
 
@@ -264,7 +264,7 @@ footer{color:var(--dim);font-size:12px;max-width:1600px;margin:0 auto;padding:0 
       <p><b>Media.</b> 24 US outlets by RSS, tagged Left, Center or Right using widely cited media-bias ratings, plus Google News searches. A story counts as Trump coverage when the headline or summary names him. Topics are keyword families; tone is computed per headline.</p>
       <p><b>Public voice.</b> Top comments on the most relevant YouTube videos about Trump in the last two weeks. Sentiment and emotion use an English transformer model (BERTweet via pysentimiento) when available, otherwise VADER. Only short anonymised excerpts with a link to the original are shown.</p>
       <p><b>Truth Social.</b> His own public posts and their engagement. Posting hours are shown in Eastern Time.</p>
-      <p><b>Other sources.</b> GDELT 2.0 for worldwide coverage, Google Trends and Wikipedia page views for attention, the Federal Register for signed documents, Polymarket for prediction markets, FRED for the economy and the Meta Ad Library for paid political ads.</p>
+      <p><b>Other sources.</b> GDELT 2.0 for worldwide coverage, Google Trends and Wikipedia page views for attention, the Federal Register for signed documents, Polymarket and Kalshi for prediction markets, BLS, University of Michigan, Freddie Mac and Stooq for the economy and the Meta Ad Library for paid political ads.</p>
     </div></div>
   </div>
 </section>
@@ -468,7 +468,7 @@ function policy(){const O=D.orders,TY={executive_order:'Executive orders',memora
     $('#p-latest').innerHTML=`<thead><tr><th>Signed</th><th>Type</th><th>Title</th></tr></thead><tbody>${O.latest.map(x=>`<tr><td style="white-space:nowrap">${x.d}</td><td><span class="pill">${x.eo?'EO '+x.eo:TY[x.type]}</span></td><td><a href="${esc(x.u)}" target="_blank" rel="noopener">${esc(x.t)}</a></td></tr>`).join('')}</tbody>`}
   else $('#p-month').innerHTML=E;
   const K=(D.markets||{}).events||[];
-  $('#p-mk').innerHTML=K.length?K.map(e=>`<div class="e"><h5><a href="${esc(e.u)}" target="_blank" rel="noopener">${esc(e.t)}</a></h5>${e.m.slice(0,4).map(m=>`<div class="o"><span>${esc(m.q&&m.q!==e.t?m.q:m.o)}</span><span class="p">${m.p}%</span><span class="c" style="color:${m.ch>0?C.app:m.ch<0?C.dis:C.dim}">${m.ch?sgn(m.ch,0):''}</span><div class="bb"><i style="width:${m.p}%"></i></div></div>`).join('')}<div class="v">VOL ${usd(e.v)} · 24H ${usd(e.v24)}${e.end?' · RESOLVES '+e.end:''}</div></div>`).join(''):E;
+  $('#p-mk').innerHTML=K.length?K.map(e=>`<div class="e"><h5><a href="${esc(e.u)}" target="_blank" rel="noopener">${esc(e.t)}</a></h5>${e.m.slice(0,4).map(m=>`<div class="o"><span>${esc(m.q&&m.q!==e.t?m.q:m.o)}</span><span class="p">${m.p}%</span><span class="c" style="color:${m.ch>0?C.app:m.ch<0?C.dis:C.dim}">${m.ch?sgn(m.ch,0):''}</span><div class="bb"><i style="width:${m.p}%"></i></div></div>`).join('')}<div class="v">${esc((e.src||'Polymarket').toUpperCase())} · VOL ${e.unit?kfmt(e.v)+' contracts':usd(e.v)} · 24H ${e.unit?kfmt(e.v24):usd(e.v24)}${e.end?' · RESOLVES '+e.end:''}</div></div>`).join(''):E;
   const F=D.econ||{},unit={UNRATE:'%',MORTGAGE30US:'%',GASREGW:'$',SP500:'',UMCSENT:'',CPIAUCSL:''};
   $('#p-econ').innerHTML=Object.keys(F).length?Object.entries(F).map(([k,s])=>{const v=k==='GASREGW'?'$'+s.v.toFixed(2):k==='SP500'?fmt(Math.round(s.v)):s.v+(unit[k]||'');
     const sinceI=s.inaug!=null?(k==='UNRATE'||k==='MORTGAGE30US'?sgn(s.v-s.inaug,1)+' pts':sgn(100*(s.v/s.inaug-1),1)+'%')+' since inauguration':'';
@@ -489,7 +489,7 @@ function ads(){const A=D.ads;if(!A||!A.n){$('#d-pages').innerHTML=`<tr><td>${E}<
   $('#d-samp').innerHTML=A.samples.map(s=>`<a class="it" href="${esc(s.u)}" target="_blank" rel="noopener">${esc(s.t)}<div class="m">${gt(GRP[s.c]?s.c:'other')}<span>${esc(s.p)}</span><span>${esc(s.d)}</span></div></a>`).join('')||E}
 
 // ---------------------------------------------------------------- method
-function method(){const S=D.status||{},nm={rss:'US outlets (RSS)',google_news:'Google News',youtube:'YouTube comments',truth_social:'Truth Social',polls:'Polls (VoteHub + Wikipedia)',gdelt:'GDELT global news',federal_register:'Federal Register',polymarket:'Polymarket',fred:'FRED economy',wikipedia:'Wikipedia page views',google_trends:'Google Trends',meta_ads:'Meta Ad Library'};
+function method(){const S=D.status||{},nm={rss:'US outlets (RSS)',google_news:'Google News',youtube:'YouTube comments',truth_social:'Truth Social',polls:'Polls (VoteHub + Wikipedia)',gdelt:'GDELT global news',federal_register:'Federal Register',polymarket:'Prediction markets',fred:'Economy (BLS, UMich, Freddie Mac, S&P)',wikipedia:'Wikipedia page views',google_trends:'Google Trends',meta_ads:'Meta Ad Library'};
   $('#x-st').innerHTML=Object.keys(nm).map(k=>{const s=S[k];return `<div style="display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid var(--line);padding:7px 0"><span class="chip ${s&&s.ok?'ok':'no'}" style="cursor:default">${nm[k]}</span><span style="font:12px var(--mono);color:var(--dim);text-align:right">${!s?'not run yet':s.ok?fmt(s.items)+' items'+(s.new!=null?' · '+fmt(s.new)+' new':''):'unavailable this run'}</span></div>`}).join('')}
 </script>
 </body>

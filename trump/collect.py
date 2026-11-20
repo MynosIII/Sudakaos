@@ -363,37 +363,38 @@ def google_news():
 
 # ---------------------------------------------------------------- GDELT
 def gdelt():
+    """GDELT DOC 2.0: one artlist of the last 24h in every language (country/language mix + foreign press), then the
+    volume/tone timelines. GDELT asks for one request every 5 seconds and rate-limits GitHub runners often, so each
+    block is optional and yesterday's block is kept when today's fails."""
     g = CONFIG["gdelt"]
     base = "https://api.gdeltproject.org/api/v2/doc/doc?"
+    prev = json.loads((ST / "gdelt.json").read_text(encoding="utf8")) if (ST / "gdelt.json").exists() else {}
     out, errs = {"fetched_at": iso(NOW)}, {}
-    modes = {"vol": ("timelinevolraw", g["timespan"]), "tone": ("timelinetone", g["timespan"]),
-             "country": ("timelinesourcecountry", "1month"), "lang": ("timelinelang", "1month"),
-             "arts": ("artlist", "3days")}
-    for k, (mode, span) in modes.items():
-        params = {"query": g["query"] + (" -sourcelang:english" if k == "arts" else ""), "mode": mode, "format": "json",
-                  "timespan": span}
-        if k == "arts":
-            params |= {"maxrecords": 120, "sort": "hybridrel"}
+    jobs = {"all": {"mode": "artlist", "timespan": "24h", "maxrecords": 250, "sort": "hybridrel"},
+            "arts": {"mode": "artlist", "timespan": "3d", "maxrecords": 150, "sort": "hybridrel", "q": " -sourcelang:english"},
+            "vol": {"mode": "timelinevolraw", "timespan": "90d"}, "tone": {"mode": "timelinetone", "timespan": "90d"}}
+    for k, p in jobs.items():
+        q = '(trump OR "donald trump")' + p.pop("q", "")
         try:
-            raw = get(base + urllib.parse.urlencode(params), retries=3, wait=15, timeout=90).decode("utf8", "replace")
-            out[k] = json.loads(raw)
-            log(gdelt=k, keys=list(out[k])[:5], sample=raw[:200])
+            raw = get(base + urllib.parse.urlencode({"query": q, "format": "json", **p}), retries=1, wait=30, timeout=60).decode("utf8", "replace")
+            d = json.loads(raw) if raw.strip().startswith("{") else {}
+            log(gdelt=k, keys=list(d)[:4], sample=raw[:120])
+            if d:
+                out[k] = d
+            else:
+                errs[k] = "empty"
         except Exception as e:
             errs[k] = f"{type(e).__name__}: {str(e)[:100]}"
             log(gdelt=k, error=errs[k])
-        time.sleep(7)
+        time.sleep(8)
+    for k in jobs:
+        if k not in out and k in prev:
+            out[k] = prev[k]
     out["errors"] = errs
-    prev = ST / "gdelt.json"
-    if len(errs) < len(modes) or not prev.exists():
-        if prev.exists():  # keep older blocks that failed today
-            old = json.loads(prev.read_text(encoding="utf8"))
-            for k in modes:
-                if k not in out and k in old:
-                    out[k] = old[k]
-        save_json("gdelt.json", out)
-    if len(errs) == len(modes):
+    save_json("gdelt.json", out)
+    if len(errs) == len(jobs) and not prev:
         raise RuntimeError("GDELT: " + "; ".join(errs.values()))
-    return len(modes) - len(errs)
+    return len(jobs) - len(errs)
 
 
 # ---------------------------------------------------------------- YouTube
@@ -528,31 +529,69 @@ def federal_register():
 
 # ---------------------------------------------------------------- Polymarket
 def polymarket():
+    """Prediction markets about Trump: Polymarket (gamma API), Kalshi public API as fallback."""
     cfg = CONFIG["polymarket"]
-    evs = get_json("https://gamma-api.polymarket.com/events?" + urllib.parse.urlencode(
-        {"tag_slug": cfg["tag"], "closed": "false", "active": "true", "order": "volume24hr", "ascending": "false", "limit": 60}),
-        headers={"User-Agent": "Mozilla/5.0", "Accept": "*/*"})
-    out = []
-    for e in evs:
-        mk = []
-        for m in e.get("markets") or []:
-            if m.get("closed"):
-                continue
-            try:
-                prices = json.loads(m.get("outcomePrices") or "[]")
-                outs = json.loads(m.get("outcomes") or "[]")
-            except ValueError:
-                continue
-            if not prices:
-                continue
-            mk.append({"q": m.get("groupItemTitle") or m.get("question"), "p": round(100 * float(prices[0]), 1),
-                       "o": outs[0] if outs else "Yes", "ch": round(100 * float(m.get("oneDayPriceChange") or 0), 1),
-                       "v": round(float(m.get("volume") or 0))})
-        if not mk:
+    out, errs = [], []
+    for ua in ("python-requests/2.32.3", BROWSER):
+        try:
+            evs = get_json("https://gamma-api.polymarket.com/events?" + urllib.parse.urlencode(
+                {"tag_slug": cfg["tag"], "closed": "false", "limit": 60, "order": "volume24hr", "ascending": "false"}),
+                headers={"User-Agent": ua, "Accept": "application/json", "Accept-Encoding": "identity"}, retries=0)
+        except Exception as e:
+            errs.append(f"polymarket {type(e).__name__}: {str(e)[:80]}")
             continue
-        mk.sort(key=lambda x: -x["p"])
-        out.append({"t": e.get("title"), "u": "https://polymarket.com/event/" + (e.get("slug") or ""), "v": round(float(e.get("volume") or 0)),
-                    "v24": round(float(e.get("volume24hr") or 0)), "end": (e.get("endDate") or "")[:10], "m": mk[:6]})
+        for e in evs:
+            mk = []
+            for m in e.get("markets") or []:
+                if m.get("closed"):
+                    continue
+                try:
+                    prices = json.loads(m.get("outcomePrices") or "[]")
+                    outs = json.loads(m.get("outcomes") or "[]")
+                except ValueError:
+                    continue
+                if prices:
+                    mk.append({"q": m.get("groupItemTitle") or m.get("question"), "p": round(100 * float(prices[0]), 1), "o": outs[0] if outs else "Yes",
+                               "ch": round(100 * float(m.get("oneDayPriceChange") or 0), 1), "v": round(float(m.get("volume") or 0))})
+            if mk:
+                mk.sort(key=lambda x: -x["p"])
+                out.append({"src": "Polymarket", "t": e.get("title"), "u": "https://polymarket.com/event/" + (e.get("slug") or ""),
+                            "v": round(float(e.get("volume") or 0)), "v24": round(float(e.get("volume24hr") or 0)), "end": (e.get("endDate") or "")[:10], "m": mk[:6]})
+        break
+    if not out:
+        try:
+            cursor, seen = "", 0
+            while seen < 8:
+                d = get_json("https://api.elections.kalshi.com/trade-api/v2/events?" + urllib.parse.urlencode(
+                    {"status": "open", "with_nested_markets": "true", "limit": 200} | ({"cursor": cursor} if cursor else {})), retries=1)
+                for e in d.get("events", []):
+                    if "trump" not in (e.get("title", "") + " " + e.get("sub_title", "")).lower():
+                        continue
+                    mk = []
+                    for m in e.get("markets") or []:
+                        p = m.get("last_price_dollars") or m.get("last_price")
+                        if p is None:
+                            continue
+                        p = float(p) * (100 if float(p) <= 1 and "last_price_dollars" in m else 1)
+                        prev = m.get("previous_price_dollars") or m.get("previous_price")
+                        pv = float(prev) * (100 if prev is not None and "previous_price_dollars" in m else 1) if prev is not None else p
+                        mk.append({"q": m.get("yes_sub_title") or m.get("subtitle") or m.get("title"), "p": round(p, 1), "o": "Yes",
+                                   "ch": round(p - pv, 1), "v": int(float(m.get("volume_fp") or m.get("volume") or 0))})
+                    if mk:
+                        mk.sort(key=lambda x: -x["p"])
+                        vol = sum(x["v"] for x in mk)
+                        out.append({"src": "Kalshi", "t": e.get("title"), "u": "https://kalshi.com/markets/" + (e.get("series_ticker") or "").lower(),
+                                    "v": vol, "v24": int(sum(float(m.get("volume_24h_fp") or m.get("volume_24h") or 0) for m in e.get("markets") or [])),
+                                    "end": "", "m": mk[:6], "unit": "contracts"})
+                cursor = d.get("cursor") or ""
+                seen += 1
+                if not cursor:
+                    break
+        except Exception as e:
+            errs.append(f"kalshi {type(e).__name__}: {str(e)[:80]}")
+    log(markets=len(out), errors=errs)
+    if not out:
+        raise RuntimeError("; ".join(errs) or "no Trump markets")
     out.sort(key=lambda x: -x["v24"])
     save_json("markets.json", {"fetched_at": iso(NOW), "events": out[: cfg["max_events"]]})
     return len(out)
@@ -560,40 +599,52 @@ def polymarket():
 
 # ---------------------------------------------------------------- FRED
 def fred():
+    """Economy without keys: BLS public API (CPI, unemployment), University of Michigan consumer sentiment,
+    Freddie Mac 30-year mortgage rate and the S&P 500 from Stooq. (FRED times out from GitHub runners.)"""
     out = {"fetched_at": iso(NOW), "series": {}}
-    start = "2024-01-01"
-    for sid, name in CONFIG["fred"].items():
-        try:
-            raw = get(f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={sid}&cosd={start}", headers={"User-Agent": BROWSER}).decode()
-            rows = [(r[0], float(r[1])) for r in csv.reader(io.StringIO(raw)) if len(r) == 2 and re.match(r"\d{4}-", r[0]) and r[1] not in (".", "")]
-            out["series"][sid] = {"name": name, "data": rows}
-        except Exception as e:
-            log(fred=sid, error=f"{type(e).__name__}: {str(e)[:100]}")
-        time.sleep(0.5)
-    if len(out["series"]) < 3:  # FRED blocked: BLS public API (no key) + University of Michigan CSV
-        try:
-            body = json.dumps({"seriesid": ["CUUR0000SA0", "LNS14000000"], "startyear": "2024", "endyear": str(NOW.year)}).encode()
-            d = get_json("https://api.bls.gov/publicAPI/v1/timeseries/data/", data=body, headers={"Content-Type": "application/json"})
-            for se in d.get("Results", {}).get("series", []):
-                sid = {"CUUR0000SA0": "CPIAUCSL", "LNS14000000": "UNRATE"}[se["seriesID"]]
-                rows = sorted((f"{x['year']}-{x['period'][1:]}-01", float(x["value"])) for x in se["data"] if x["period"].startswith("M") and x["period"] != "M13")
-                if rows:
-                    out["series"][sid] = {"name": CONFIG["fred"][sid], "data": rows}
-        except Exception as e:
-            log(bls=str(e)[:120])
-        try:
-            raw = get("https://www.sca.isr.umich.edu/files/tbmics.csv", headers={"User-Agent": BROWSER}).decode("utf8", "replace")
-            mon = {m: i + 1 for i, m in enumerate("january february march april may june july august september october november december".split())}
-            rows = []
-            for r in csv.reader(io.StringIO(raw)):
-                if len(r) >= 3 and r[0].strip().lower() in mon and r[1].strip().isdigit() and int(r[1]) >= 2024:
-                    rows.append((f"{int(r[1])}-{mon[r[0].strip().lower()]:02d}-01", float(r[2])))
+    names = CONFIG["fred"]
+    try:
+        body = json.dumps({"seriesid": ["CUUR0000SA0", "LNS14000000"], "startyear": "2023", "endyear": str(NOW.year)}).encode()
+        d = get_json("https://api.bls.gov/publicAPI/v1/timeseries/data/", data=body, headers={"Content-Type": "application/json"})
+        for se in d.get("Results", {}).get("series", []):
+            sid = {"CUUR0000SA0": "CPIAUCSL", "LNS14000000": "UNRATE"}[se["seriesID"]]
+            rows = sorted((f"{x['year']}-{x['period'][1:]}-01", float(x["value"])) for x in se["data"]
+                          if x["period"].startswith("M") and x["period"] != "M13" and re.match(r"^\d+(\.\d+)?$", x["value"]))
             if rows:
-                out["series"]["UMCSENT"] = {"name": CONFIG["fred"]["UMCSENT"], "data": sorted(rows)}
-        except Exception as e:
-            log(umich=str(e)[:120])
+                out["series"][sid] = {"name": names[sid], "data": rows}
+    except Exception as e:
+        log(bls=f"{type(e).__name__}: {str(e)[:120]}")
+    try:
+        raw = get("https://www.sca.isr.umich.edu/files/tbmics.csv", headers={"User-Agent": BROWSER}, retries=1, timeout=40).decode("utf8", "replace")
+        mon = {m: i + 1 for i, m in enumerate("january february march april may june july august september october november december".split())}
+        rows = [(f"{int(r[1])}-{mon[r[0].strip().lower()]:02d}-01", float(r[2])) for r in csv.reader(io.StringIO(raw))
+                if len(r) >= 3 and r[0].strip().lower() in mon and r[1].strip().isdigit() and int(r[1]) >= 2023 and re.match(r"^\d", r[2].strip())]
+        if rows:
+            out["series"]["UMCSENT"] = {"name": names["UMCSENT"], "data": sorted(rows)}
+    except Exception as e:
+        log(umich=f"{type(e).__name__}: {str(e)[:120]}")
+    try:
+        raw = get("https://www.freddiemac.com/pmms/docs/PMMS_history.csv", headers={"User-Agent": BROWSER}, retries=1, timeout=40).decode("utf8", "replace")
+        rows = []
+        for r in csv.reader(io.StringIO(raw)):
+            if len(r) >= 2 and re.match(r"\d{1,2}/\d{1,2}/\d{4}", r[0]) and re.match(r"^\d", r[1]):
+                m, dd, y = r[0].split("/")
+                if int(y) >= 2023:
+                    rows.append((f"{y}-{int(m):02d}-{int(dd):02d}", float(r[1])))
+        if rows:
+            out["series"]["MORTGAGE30US"] = {"name": names["MORTGAGE30US"], "data": sorted(rows)}
+    except Exception as e:
+        log(pmms=f"{type(e).__name__}: {str(e)[:120]}")
+    try:
+        raw = get("https://stooq.com/q/d/l/?s=%5Espx&i=w", headers={"User-Agent": BROWSER}, retries=1, timeout=40).decode("utf8", "replace")
+        rows = [(r[0], float(r[4])) for r in csv.reader(io.StringIO(raw)) if len(r) >= 5 and re.match(r"\d{4}-", r[0]) and r[0] >= "2023"]
+        if rows:
+            out["series"]["SP500"] = {"name": names["SP500"], "data": rows}
+    except Exception as e:
+        log(stooq=f"{type(e).__name__}: {str(e)[:120]}")
+    log(economy=list(out["series"]))
     if not out["series"]:
-        raise RuntimeError("FRED/BLS returned nothing")
+        raise RuntimeError("no economic source answered")
     save_json("fred.json", out)
     return len(out["series"])
 

@@ -359,18 +359,12 @@ def gdelt():
     if t:
         s = daily(t[0])
         out["tone"] = [[d, round(sum(x) / len(x), 2)] for d, x in sorted(s.items())]
-    c = tl(g.get("country"))
-    if c:
-        tot = Counter()
-        for se in c:
-            tot[se.get("series", "?")] = sum(float(p["value"]) for p in se.get("data", []))
-        s = sum(tot.values()) or 1
-        out["countries"] = [{"c": k, "v": round(100 * x / s, 1)} for k, x in tot.most_common(20)]
-    lg = tl(g.get("lang"))
-    if lg:
-        tot = Counter({se.get("series", "?"): sum(float(p["value"]) for p in se.get("data", [])) for se in lg})
-        s = sum(tot.values()) or 1
-        out["langs"] = [{"l": k, "v": round(100 * x / s, 1)} for k, x in tot.most_common(12)]
+    every = (g.get("all") or {}).get("articles") or []
+    if every:
+        cc, lc = Counter(a.get("sourcecountry") or "?" for a in every), Counter(a.get("language") or "?" for a in every)
+        out["countries"] = [{"c": k, "v": pct(v, len(every))} for k, v in cc.most_common(20)]
+        out["langs"] = [{"l": k, "v": pct(v, len(every))} for k, v in lc.most_common(12)]
+        out["n24"] = len(every)
     arts = (g.get("arts") or {}).get("articles") or []
     seen, al = set(), []
     for a in arts:
