@@ -71,86 +71,6 @@
 "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Retrato_Presidente_Jos%C3%A9_Antonio_Kast.png/330px-Retrato_Presidente_Jos%C3%A9_Antonio_Kast.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
 "url": "https://es.wikipedia.org/wiki/Jos%C3%A9_Antonio_Kast"
 },
-"Michelle Bachelet": {
-"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Portrait_Michelle_Bachelet.jpg/330px-Portrait_Michelle_Bachelet.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-"url": "https://en.wikipedia.org/wiki/Michelle_Bachelet"
-},
-"Abelardo de la Espriella": {
-"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Colombian_Presidential_Candidate_Abelardo_de_la_Espriella_%28cropped%29.jpg/330px-Colombian_Presidential_Candidate_Abelardo_de_la_Espriella_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-"url": "https://es.wikipedia.org/wiki/Abelardo_de_la_Espriella"
-},
-"Gustavo Petro": {
-"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Foto_Oficial_Presidente_Gustavo_Petro_%283x4_cropped%29.jpg/330px-Foto_Oficial_Presidente_Gustavo_Petro_%283x4_cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-"url": "https://en.wikipedia.org/wiki/Gustavo_Petro"
-},
-"Álvaro Uribe": {
-"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/%C3%81lvaro_Uribe_%28cropped%29.jpg/330px-%C3%81lvaro_Uribe_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-"url": "https://es.wikipedia.org/wiki/%C3%81lvaro_Uribe_V%C3%A9lez"
-},
-"Daniel Noboa": {
-"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Noboa_en_24_mayo_de_2026.jpg/330px-Noboa_en_24_mayo_de_2026.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-"url": "https://es.wikipedia.org/wiki/Daniel_Noboa"
-},
-"Santiago Peña": {
-"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Santiago_Pe%C3%B1a_junio_2026.jpg/330px-Santiago_Pe%C3%B1a_junio_2026.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-"url": "https://es.wikipedia.org/wiki/Santiago_Pe%C3%B1a"
-},
-"Horacio Cartes": {
-"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/08.16_%E5%89%AF%E7%B8%BD%E7%B5%B1%E7%89%B9%E4%BD%BF%E5%9C%98%E5%87%BA%E5%B8%AD%E5%B7%B4%E6%8B%89%E5%85%B1%E5%92%8C%E5%9C%8B%E6%96%B0%E4%BB%BB%E7%B8%BD%E7%B5%B1%E8%B2%9D%E5%B0%BC%E4%BA%9E%E5%B0%B1%E8%81%B7%E5%85%B8%E7%A6%AE%E5%8F%8A%E7%9B%B8%E9%97%9C%E6%85%B6%E7%A5%9D%E6%B4%BB%E5%8B%95_%285%29_%28cropped%29.jpg/330px-08.16_%E5%89%AF%E7%B8%BD%E7%B5%B1%E7%89%B9%E4%BD%BF%E5%9C%98%E5%87%BA%E5%B8%AD%E5%B7%B4%E6%8B%89%E5%85%B1%E5%92%8C%E5%9C%8B%E6%96%B0%E4%BB%BB%E7%B8%BD%E7%B5%B1%E8%B2%9D%E5%B0%BC%E4%BA%9E%E5%B0%B1%E8%81%B7%E5%85%B8%E7%A6%AE%E5%8F%8A%E7%9B%B8%E9%97%9C%E6%85%B6%E7%A5%9D%E6%B4%BB%E5%8B%95_%285%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-"url": "https://en.wikipedia.org/wiki/Horacio_Cartes"
-},
-"Keiko Fujimori": {
-"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Presidenta_Keiko_Fujimori.jpg/330px-Presidenta_Keiko_Fujimori.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-"url": "https://es.wikipedia.org/wiki/Keiko_Fujimori"
-},
-"Luis Galarreta": {
-"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Luis_Galarreta_2019.jpg/330px-Luis_Galarreta_2019.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-"url": "https://es.wikipedia.org/wiki/Luis_Galarreta"
-},
-"Claudia Sheinbaum": {
-"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Claudia_Sheinbaum_Argentina_v_Spain_19_July_2026-281_%283x4_close_up_cropped%29.jpg/330px-Claudia_Sheinbaum_Argentina_v_Spain_19_July_2026-281_%283x4_close_up_cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-"url": "https://es.wikipedia.org/wiki/Claudia_Sheinbaum"
-},
-"Jorge Álvarez Máynez": {
-"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Jorgealvarezmaynez.jpg/330px-Jorgealvarezmaynez.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-"url": "https://es.wikipedia.org/wiki/Jorge_%C3%81lvarez_M%C3%A1ynez"
-},
-"Donald Trump": {
-"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Official_Presidential_Portrait_of_President_Donald_J._Trump_%282025%29.jpg/330px-Official_Presidential_Portrait_of_President_Donald_J._Trump_%282025%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-"url": "https://es.wikipedia.org/wiki/Donald_Trump"
-},
-"Marco Rubio": {
-"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Official_portrait_of_Secretary_Marco_Rubio%2C_January_2025.jpg/330px-Official_portrait_of_Secretary_Marco_Rubio%2C_January_2025.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-"url": "https://es.wikipedia.org/wiki/Marco_Rubio"
-},
-"Pedro Sánchez": {
-"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Pedro_S%C3%A1nchez_in_2026.jpg/330px-Pedro_S%C3%A1nchez_in_2026.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-"url": "https://es.wikipedia.org/wiki/Pedro_S%C3%A1nchez"
-},
-"Alberto Núñez Feijóo": {
-"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/ALBERTO_N%C3%9A%C3%91EZ_FEIJ%C3%93O.jpg/330px-ALBERTO_N%C3%9A%C3%91EZ_FEIJ%C3%93O.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-"url": "https://es.wikipedia.org/wiki/Alberto_N%C3%BA%C3%B1ez_Feij%C3%B3o"
-},
-"Santiago Abascal": {
-"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Santiago_Abascal_%2854349274173%29_%28cropped%29.jpg/330px-Santiago_Abascal_%2854349274173%29_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-"url": "https://es.wikipedia.org/wiki/Santiago_Abascal"
-},
-"Gabriel Rufián": {
-"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Gabriel_Rufi%C3%A1n_Portavoz_de_Esquerra_Republicana_en_el_Congreso_de_los_diputados_%28cropped%29.jpg/330px-Gabriel_Rufi%C3%A1n_Portavoz_de_Esquerra_Republicana_en_el_Congreso_de_los_diputados_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-"url": "https://en.wikipedia.org/wiki/Gabriel_Rufi%C3%A1n"
-},
-"Andy Burnham": {
-"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Prime_Minister_Andy_Burnham_portrait_%28cropped%29.jpg/330px-Prime_Minister_Andy_Burnham_portrait_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-"url": "https://en.wikipedia.org/wiki/Andy_Burnham"
-},
-"Ursula von der Leyen": {
-"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Ursula_von_der_Leyen_2024.jpg/330px-Ursula_von_der_Leyen_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-"url": "https://es.wikipedia.org/wiki/Ursula_von_der_Leyen"
-},
-"Kaja Kallas": {
-"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Kaja_Kallas%2C_High_Representative_of_the_Union%2C_and_Vice-President_of_the_European_Commission_%283x4_cropped%29.jpg/330px-Kaja_Kallas%2C_High_Representative_of_the_Union%2C_and_Vice-President_of_the_European_Commission_%283x4_cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-"url": "https://es.wikipedia.org/wiki/Kaja_Kallas"
-},
 "Evelyn Matthei": {
 "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Evelyn_Matthei%2C_alcaldesa_de_Providencia.png/250px-Evelyn_Matthei%2C_alcaldesa_de_Providencia.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
 "url": "https://es.wikipedia.org/wiki/Evelyn_Matthei"
@@ -163,9 +83,25 @@
 "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Tom%C3%A1s_Vodanivic_-_2024.jpg/250px-Tom%C3%A1s_Vodanivic_-_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
 "url": "https://es.wikipedia.org/wiki/Tom%C3%A1s_Vodanovic"
 },
+"Michelle Bachelet": {
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Portrait_Michelle_Bachelet.jpg/330px-Portrait_Michelle_Bachelet.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+"url": "https://en.wikipedia.org/wiki/Michelle_Bachelet"
+},
+"Abelardo de la Espriella": {
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Colombian_Presidential_Candidate_Abelardo_de_la_Espriella_%28cropped%29.jpg/330px-Colombian_Presidential_Candidate_Abelardo_de_la_Espriella_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+"url": "https://es.wikipedia.org/wiki/Abelardo_de_la_Espriella"
+},
 "Iván Cepeda": {
 "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Iv%C3%A1n_Cepeda_Castro.jpg/250px-Iv%C3%A1n_Cepeda_Castro.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
 "url": "https://es.wikipedia.org/wiki/Iv%C3%A1n_Cepeda"
+},
+"Gustavo Petro": {
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Foto_Oficial_Presidente_Gustavo_Petro_%283x4_cropped%29.jpg/330px-Foto_Oficial_Presidente_Gustavo_Petro_%283x4_cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+"url": "https://en.wikipedia.org/wiki/Gustavo_Petro"
+},
+"Álvaro Uribe": {
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/%C3%81lvaro_Uribe_%28cropped%29.jpg/330px-%C3%81lvaro_Uribe_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+"url": "https://es.wikipedia.org/wiki/%C3%81lvaro_Uribe_V%C3%A9lez"
 },
 "Paloma Valencia": {
 "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Discurso_Paloma_Valencia.jpg/250px-Discurso_Paloma_Valencia.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
@@ -174,6 +110,10 @@
 "José Manuel Restrepo": {
 "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Secretary_Rubio_Meets_with_Colombian_Vice_President-Elect_%2855395813950%29_%28cropped%29.jpg/250px-Secretary_Rubio_Meets_with_Colombian_Vice_President-Elect_%2855395813950%29_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
 "url": "https://es.wikipedia.org/wiki/Jos%C3%A9_Manuel_Restrepo_Abondano"
+},
+"Daniel Noboa": {
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Noboa_en_24_mayo_de_2026.jpg/330px-Noboa_en_24_mayo_de_2026.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+"url": "https://es.wikipedia.org/wiki/Daniel_Noboa"
 },
 "Rafael Correa": {
 "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Rafael_Correa_2017.jpg/250px-Rafael_Correa_2017.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
@@ -187,6 +127,10 @@
 "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/2025_Irfaan_Ali_%28cropped%29.jpg/250px-2025_Irfaan_Ali_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
 "url": "https://es.wikipedia.org/wiki/Irfaan_Ali"
 },
+"Azruddin Mohamed": {
+"img": "https://upload.wikimedia.org/wikipedia/commons/3/39/Azruddin_Mohamed_WIN_2025_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+"url": "https://en.wikipedia.org/wiki/Azruddin_Mohamed"
+},
 "Aubrey Norton": {
 "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Aubrey_Norton_%28cropped%29.jpg/250px-Aubrey_Norton_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
 "url": "https://es.wikipedia.org/wiki/Aubrey_Norton"
@@ -194,6 +138,14 @@
 "Pedro Alliana": {
 "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Pedro_Alliana_2026.jpg/250px-Pedro_Alliana_2026.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
 "url": "https://es.wikipedia.org/wiki/Pedro_Alliana"
+},
+"Santiago Peña": {
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Santiago_Pe%C3%B1a_junio_2026.jpg/330px-Santiago_Pe%C3%B1a_junio_2026.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+"url": "https://es.wikipedia.org/wiki/Santiago_Pe%C3%B1a"
+},
+"Horacio Cartes": {
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/08.16_%E5%89%AF%E7%B8%BD%E7%B5%B1%E7%89%B9%E4%BD%BF%E5%9C%98%E5%87%BA%E5%B8%AD%E5%B7%B4%E6%8B%89%E5%85%B1%E5%92%8C%E5%9C%8B%E6%96%B0%E4%BB%BB%E7%B8%BD%E7%B5%B1%E8%B2%9D%E5%B0%BC%E4%BA%9E%E5%B0%B1%E8%81%B7%E5%85%B8%E7%A6%AE%E5%8F%8A%E7%9B%B8%E9%97%9C%E6%85%B6%E7%A5%9D%E6%B4%BB%E5%8B%95_%285%29_%28cropped%29.jpg/330px-08.16_%E5%89%AF%E7%B8%BD%E7%B5%B1%E7%89%B9%E4%BD%BF%E5%9C%98%E5%87%BA%E5%B8%AD%E5%B7%B4%E6%8B%89%E5%85%B1%E5%92%8C%E5%9C%8B%E6%96%B0%E4%BB%BB%E7%B8%BD%E7%B5%B1%E8%B2%9D%E5%B0%BC%E4%BA%9E%E5%B0%B1%E8%81%B7%E5%85%B8%E7%A6%AE%E5%8F%8A%E7%9B%B8%E9%97%9C%E6%85%B6%E7%A5%9D%E6%B4%BB%E5%8B%95_%285%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+"url": "https://en.wikipedia.org/wiki/Horacio_Cartes"
 },
 "Efraín Alegre": {
 "img": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Efra%C3%ADnSole22_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
@@ -203,6 +155,10 @@
 "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Retrato_oficial_de_Kattya_Gonz%C3%A1lez_2023_%28cropped%29.jpg/250px-Retrato_oficial_de_Kattya_Gonz%C3%A1lez_2023_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
 "url": "https://es.wikipedia.org/wiki/Kattya_Gonz%C3%A1lez"
 },
+"Keiko Fujimori": {
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Presidenta_Keiko_Fujimori.jpg/330px-Presidenta_Keiko_Fujimori.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+"url": "https://es.wikipedia.org/wiki/Keiko_Fujimori"
+},
 "Roberto Sánchez": {
 "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Congresista_Roberto_S._Palomino.jpg/250px-Congresista_Roberto_S._Palomino.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
 "url": "https://es.wikipedia.org/wiki/Roberto_S%C3%A1nchez_(pol%C3%ADtico)"
@@ -210,6 +166,14 @@
 "Rafael López Aliaga": {
 "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Aliaga.jpg/250px-Aliaga.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
 "url": "https://es.wikipedia.org/wiki/Rafael_L%C3%B3pez-Aliaga"
+},
+"Luis Galarreta": {
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Luis_Galarreta_2019.jpg/330px-Luis_Galarreta_2019.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+"url": "https://es.wikipedia.org/wiki/Luis_Galarreta"
+},
+"Jennifer Geerlings-Simons": {
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Jennifer_Geerlings-Simons%2C_November_2025.jpg/250px-Jennifer_Geerlings-Simons%2C_November_2025.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+"url": "https://en.wikipedia.org/wiki/Jennifer_Geerlings-Simons"
 },
 "Gregory Rusland": {
 "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Sranan_Tori_-_Gregory_Rusland_%28cropped%29.jpg/250px-Sranan_Tori_-_Gregory_Rusland_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
@@ -243,6 +207,10 @@
 "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Diosdado_Cabello_2025.jpg/250px-Diosdado_Cabello_2025.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
 "url": "https://es.wikipedia.org/wiki/Diosdado_Cabello"
 },
+"Claudia Sheinbaum": {
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Claudia_Sheinbaum_Argentina_v_Spain_19_July_2026-281_%283x4_close_up_cropped%29.jpg/330px-Claudia_Sheinbaum_Argentina_v_Spain_19_July_2026-281_%283x4_close_up_cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+"url": "https://es.wikipedia.org/wiki/Claudia_Sheinbaum"
+},
 "Jorge Romero": {
 "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Jorge_Romero.jpg/250px-Jorge_Romero.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
 "url": "https://es.wikipedia.org/wiki/Jorge_Romero_Herrera"
@@ -251,9 +219,21 @@
 "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Alejandro_Alito_Moreno_%28cropped%29.jpg/250px-Alejandro_Alito_Moreno_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
 "url": "https://es.wikipedia.org/wiki/Alejandro_Moreno_C%C3%A1rdenas"
 },
+"Jorge Álvarez Máynez": {
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Jorgealvarezmaynez.jpg/330px-Jorgealvarezmaynez.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+"url": "https://es.wikipedia.org/wiki/Jorge_%C3%81lvarez_M%C3%A1ynez"
+},
+"Donald Trump": {
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Official_Presidential_Portrait_of_President_Donald_J._Trump_%282025%29.jpg/330px-Official_Presidential_Portrait_of_President_Donald_J._Trump_%282025%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+"url": "https://es.wikipedia.org/wiki/Donald_Trump"
+},
 "JD Vance": {
 "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/March_2026_Official_Vice_Presidential_Portrait_of_JD_Vance_%28head-and-shoulders_cropped%29.jpg/250px-March_2026_Official_Vice_Presidential_Portrait_of_JD_Vance_%28head-and-shoulders_cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
 "url": "https://es.wikipedia.org/wiki/J._D._Vance"
+},
+"Marco Rubio": {
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Official_portrait_of_Secretary_Marco_Rubio%2C_January_2025.jpg/330px-Official_portrait_of_Secretary_Marco_Rubio%2C_January_2025.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+"url": "https://es.wikipedia.org/wiki/Marco_Rubio"
 },
 "Gavin Newsom": {
 "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Governor_of_California_Gavin_Newsom_%28cropped_3x4%29.jpg/250px-Governor_of_California_Gavin_Newsom_%28cropped_3x4%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
@@ -263,9 +243,29 @@
 "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Alexandria_Ocasio-Cortez_Official_Portrait.jpg/250px-Alexandria_Ocasio-Cortez_Official_Portrait.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
 "url": "https://es.wikipedia.org/wiki/Alexandria_Ocasio-Cortez"
 },
+"Pedro Sánchez": {
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Pedro_S%C3%A1nchez_in_2026.jpg/330px-Pedro_S%C3%A1nchez_in_2026.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+"url": "https://es.wikipedia.org/wiki/Pedro_S%C3%A1nchez"
+},
+"Alberto Núñez Feijóo": {
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/ALBERTO_N%C3%9A%C3%91EZ_FEIJ%C3%93O.jpg/330px-ALBERTO_N%C3%9A%C3%91EZ_FEIJ%C3%93O.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+"url": "https://es.wikipedia.org/wiki/Alberto_N%C3%BA%C3%B1ez_Feij%C3%B3o"
+},
+"Santiago Abascal": {
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Santiago_Abascal_%2854349274173%29_%28cropped%29.jpg/330px-Santiago_Abascal_%2854349274173%29_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+"url": "https://es.wikipedia.org/wiki/Santiago_Abascal"
+},
 "Ada Colau": {
 "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Ada-Colau-Encuentro-2024.jpg/250px-Ada-Colau-Encuentro-2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
 "url": "https://es.wikipedia.org/wiki/Ada_Colau"
+},
+"Gabriel Rufián": {
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Gabriel_Rufi%C3%A1n_Portavoz_de_Esquerra_Republicana_en_el_Congreso_de_los_diputados_%28cropped%29.jpg/330px-Gabriel_Rufi%C3%A1n_Portavoz_de_Esquerra_Republicana_en_el_Congreso_de_los_diputados_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+"url": "https://en.wikipedia.org/wiki/Gabriel_Rufi%C3%A1n"
+},
+"Andy Burnham": {
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Prime_Minister_Andy_Burnham_portrait_%28cropped%29.jpg/330px-Prime_Minister_Andy_Burnham_portrait_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+"url": "https://en.wikipedia.org/wiki/Andy_Burnham"
 },
 "Kemi Badenoch": {
 "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Official_portrait_of_Kemi_Badenoch_MP_crop_2%2C_2024.jpg/250px-Official_portrait_of_Kemi_Badenoch_MP_crop_2%2C_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
@@ -283,9 +283,17 @@
 "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Green_Party_Group_Shot_6_%28cropped2%29.jpg/250px-Green_Party_Group_Shot_6_%28cropped2%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
 "url": "https://es.wikipedia.org/wiki/Zack_Polanski"
 },
+"Ursula von der Leyen": {
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Ursula_von_der_Leyen_2024.jpg/330px-Ursula_von_der_Leyen_2024.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+"url": "https://es.wikipedia.org/wiki/Ursula_von_der_Leyen"
+},
 "António Costa": {
 "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Antonio_Costa_Portrait_2024_%28cropped%29.jpg/250px-Antonio_Costa_Portrait_2024_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
 "url": "https://es.wikipedia.org/wiki/Ant%C3%B3nio_Costa"
+},
+"Kaja Kallas": {
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Kaja_Kallas%2C_High_Representative_of_the_Union%2C_and_Vice-President_of_the_European_Commission_%283x4_cropped%29.jpg/330px-Kaja_Kallas%2C_High_Representative_of_the_Union%2C_and_Vice-President_of_the_European_Commission_%283x4_cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+"url": "https://es.wikipedia.org/wiki/Kaja_Kallas"
 },
 "Roberta Metsola": {
 "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Official_portrait_of_Roberta_Metsola.jpg/250px-Official_portrait_of_Roberta_Metsola.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
@@ -294,14 +302,6 @@
 "Jordan Bardella": {
 "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/1721231397060_20240717_EP-170912A_DLL_199.jpg/250px-1721231397060_20240717_EP-170912A_DLL_199.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
 "url": "https://es.wikipedia.org/wiki/Jordan_Bardella"
-},
-"Azruddin Mohamed": {
-"img": "https://upload.wikimedia.org/wikipedia/commons/3/39/Azruddin_Mohamed_WIN_2025_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-"url": "https://en.wikipedia.org/wiki/Azruddin_Mohamed"
-},
-"Jennifer Geerlings-Simons": {
-"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Jennifer_Geerlings-Simons%2C_November_2025.jpg/250px-Jennifer_Geerlings-Simons%2C_November_2025.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-"url": "https://en.wikipedia.org/wiki/Jennifer_Geerlings-Simons"
 },
 "Luiz Inácio Lula da Silva": {
 "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Foto_oficial_de_Luiz_In%C3%A1cio_Lula_da_Silva_%28estreita%29.jpg/330px-Foto_oficial_de_Luiz_In%C3%A1cio_Lula_da_Silva_%28estreita%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
