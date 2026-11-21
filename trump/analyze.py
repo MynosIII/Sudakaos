@@ -40,7 +40,9 @@ those through to too under until up very was we were what when where which while
 yourself yourselves amp quot its it's im i'm dont don't thats that's he's hes doesnt didnt cant can't isnt wont via get got gets
 new says said say saying told tells report reports reported first last next two three one now today yesterday week weeks month
 months year years may might must shall us u.s. mr ms per after over amid near could would should also just like""".split())
+STOP |= {"https", "http", "www", "realdonaldtrump"}  # restos de links y el usuario de Trump
 STOP |= set(CONFIG.get("stop_extra", []))
+URLRX = re.compile(r"https?://\S+|www\.\S+|\b[\w\-.]+\.(?:com|org|net|gov|co|ly|be|io|us)(?:/\S*)?")
 WORD = re.compile(r"[a-z][a-z'\-]{2,}")
 LEAN_GROUP = {"Left": "Left", "Lean Left": "Left", "Center": "Center", "Lean Right": "Right", "Right": "Right"}
 TOPICS = CONFIG["temas"]
@@ -103,6 +105,7 @@ def topics_of(text):
 
 
 def words(text, extra=()):
+    text = URLRX.sub(" ", text or "")
     return [w.strip("'-") for w in WORD.findall(fold(text)) if w.strip("'-") not in STOP and w not in extra and len(w.strip("'-")) > 2]
 
 
