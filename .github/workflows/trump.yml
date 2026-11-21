@@ -29,6 +29,8 @@ jobs:
       YOUTUBE_API_KEY_ALT: ${{ secrets.YOUTUBE_API_KEY_ROCA }}
       META_TOKEN: ${{ secrets.META_TOKEN }}
       META_IG_USER_ID: ${{ secrets.META_IG_USER_ID }}
+      # Free key from api.census.gov/data/key_signup.html (optional: without it, education/poverty/rural are skipped)
+      CENSUS_API_KEY: ${{ secrets.CENSUS_API_KEY }}
       TRUMP_NLP_SECONDS: '600'
       # No X_BEARER_TOKEN on purpose: X is paid and only runs by hand
     steps:

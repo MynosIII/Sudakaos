@@ -705,7 +705,7 @@ def instagram():
 
 # ---------------------------------------------------------------- states: approval estimate and correlations
 FEATURES = {"ba": "Con título universitario", "black": "Población afroamericana", "hisp": "Población hispana", "foreign": "Nacidos en el extranjero",
-            "income": "Ingreso mediano del hogar", "gdp_pc": "PIB per cápita", "rural": "Población rural", "age": "Edad mediana",
+            "income": "Ingreso mediano del hogar", "pcpi": "Ingreso personal per cápita", "gdp_pc": "PIB per cápita", "rural": "Población rural", "age": "Edad mediana",
             "pov": "Pobreza", "home": "Valor mediano de la vivienda", "vet": "Veteranos", "asian": "Población asiática",
             "white": "Población blanca", "trends": "Interés en Google por “Trump”", "ads": "Alcance de avisos políticos por habitante"}
 
@@ -723,7 +723,16 @@ def pearson(xs, ys):
 def states(m):
     el = json.loads((HERE / "static" / "elections.json").read_text(encoding="utf8"))
     ce = load("census.json") or {}
-    acs, rural, gdp = ce.get("acs") or {}, ce.get("rural") or {}, ce.get("gdp") or {}
+    acs, rural, gdp = dict(ce.get("acs") or {}), ce.get("rural") or {}, ce.get("gdp") or {}
+    pe, inc = (ce.get("popest") or {}).get("states") or {}, ce.get("bea_inc") or {}
+    for st in el["states"]:  # keyless fallbacks fill what ACS didn't
+        a = acs.setdefault(st, {})
+        for k, v in (pe.get(st) or {}).items():
+            a.setdefault(k, v)
+        if not a.get("pop") and (inc.get(st) or {}).get("pop"):
+            a["pop"] = inc[st]["pop"]
+        if (inc.get(st) or {}).get("pcpi"):
+            a.setdefault("pcpi", inc[st]["pcpi"])
     trends = ((m.get("attention") or {}).get("states")) or {}
     ads_reg = {x["k"]: x["v"] for x in ((m.get("ads") or {}).get("regions") or [])}
     ap = ((m.get("approval") or {}).get("avg") or {}).get("a")
@@ -750,7 +759,7 @@ def states(m):
                 r["pov"] = round(100 * a["pov"] / a["pov_tot"], 1)
             if a.get("vet_tot"):
                 r["vet"] = round(100 * a["vet"] / a["vet_tot"], 1)
-            for k in ("income", "age", "home"):
+            for k in ("income", "age", "home", "pcpi"):
                 if a.get(k) and a[k] > 0:
                     r[k] = a[k]
             g = gdp.get(st)
@@ -772,7 +781,7 @@ def states(m):
                 corr.append({"t": tgt, "f": f, "r": c, "n": len(pts)})
     corr.sort(key=lambda c: -abs(c["r"]))
     return {"rows": rows, "corr": corr, "features": FEATURES, "national": nat, "approval": ap, "counties": el["meta"]["counties"],
-            "acs_year": ce.get("acs_year"), "gdp_year": next(iter(gdp.values()), {}).get("y"), "census_errors": ce.get("errors", [])}
+            "acs_year": ce.get("acs_year") or (ce.get("popest") or {}).get("year"), "gdp_year": next(iter(gdp.values()), {}).get("y"), "census_errors": ce.get("errors", [])}
 
 
 # ---------------------------------------------------------------- main
