@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#ffffff">
+<meta name="description" content="Quién gobierna, imagen del presidente, candidatos, compás político y coyuntura de cada país.">
+<title>Tablero por país — Sudakaos LATAM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=Schibsted+Grotesk:wght@400..700&display=swap">
+<link rel="stylesheet" href="../assets/site.css?v=e641463c">
+</head>
+<body>
+<header><div class="wrap nav"><a class="brand" href="../" aria-label="Sudakaos LATAM inicio">Sudakaos<span>●</span> LATAM</a><button class="menu" aria-expanded="false" aria-controls="nav">Menú</button><nav id="nav"><a href="../#soluciones">Soluciones</a><a href="../#metodo">Cómo trabajamos</a><a href="../paises/">Países</a><a href="../situacion/">Situación</a><a href="../#canal">Canal digital</a><a href="https://sudakaoslatam.com/demo/trump/">Demo en vivo</a><a class="nav-cta" href="#contacto">Hablemos</a></nav></div></header>
+<main>
+<div class="wrap crumb"><a href="../">Inicio</a> / Países</div>
+<section class="cap-hero" style="padding-bottom:24px"><div class="wrap">
+<p class="kicker">Tablero por país · política, encuestas y coyuntura</p>
+<h1 id="pName">Países</h1>
+<div class="cols"><div class="gobrow"><div id="pGob"></div><p class="lead" id="pLead">Cargando datos…</p></div><p class="intro"><span id="pCtx"></span> <span class="upd" id="pUpd"></span></p></div>
+</div></section>
+<div class="wrap"><nav class="tabs" id="pTabs" aria-label="Países"></nav>
+<div id="polSec">
+<div class="polgrid">
+<section class="panel"><h2 id="imgH">Imagen del presidente</h2><div id="pImg"></div>
+<div id="cImgWrap"><canvas id="cImg" class="tall" role="img" aria-label="Evolución de la aprobación por encuestadora"></canvas><p class="leg" id="imgLeg"></p></div>
+<div id="pPolls"></div></section>
+<section class="panel"><h2>Compás político</h2><p class="sub">Eje horizontal: economía (izquierda a derecha). Eje vertical: autoridad (libertario a autoritario). En rojo, quien gobierna.</p>
+<canvas id="cComp" class="sq" role="img" aria-label="Ubicación de los principales actores en un compás político"></canvas>
+<p class="pnote">Lectura del equipo de Sudakaos.</p></section>
+</div>
+<div class="grid2">
+<section class="panel"><h2>Actores y candidatos</h2><ul class="actors" id="pActors"></ul><div class="elec" id="pElec"></div>
+<h3 class="h3s">Partidos</h3><ul class="parties" id="pParties"></ul></section>
+<section class="panel" id="pExtraP"><div id="pExtra"></div></section>
+</div>
+</div>
+<section style="padding:72px 0 0"><h2 style="font-size:clamp(28px,3vw,40px);line-height:1.05">Economía y coyuntura</h2><p style="color:var(--muted);font-size:14px;margin:8px 0 0">El dato más fresco disponible de cada fuente, siempre con su fecha.</p></section>
+<div class="kpis" id="pKpis"></div>
+<div class="grid2">
+<section class="panel"><h2>Tipo de cambio</h2><p class="sub" id="fxSub"></p><canvas id="cFx" role="img" aria-label="Serie de tipo de cambio"></canvas></section>
+<section class="panel"><h2>Inflación</h2><p class="sub" id="infSub"></p><canvas id="cInf" role="img" aria-label="Serie de inflación interanual"></canvas></section>
+<section class="panel"><h2>Alertas</h2><p class="sub">Últimos 30 días · titulares clasificados, USGS y GDACS</p><ul class="news" id="pAlerts"></ul></section>
+<section class="panel"><h2>Titulares</h2><p class="sub">Últimas 24 horas · Google News</p><ul class="news" id="pNews"></ul></section>
+</div>
+<section style="padding:84px 0 0"><h2 style="font-size:clamp(32px,3.6vw,48px);line-height:1.05">Comparación regional</h2><p style="color:var(--muted);font-size:14px;margin:8px 0 0">Aprobación: promedio de las encuestas de los últimos 45 días. Tocá una columna para ordenar y una fila para abrir el país.</p>
+<div class="tbl-wrap"><table class="cmp"><thead id="pHead"></thead><tbody id="pRows"></tbody></table></div></section>
+<p class="srcs">Fuentes: CB Consultora, AtlasIntel, Cadem, Ipsos, YouGov, Equipos, Zentrix y otras encuestadoras; OCDE, Banco Mundial y currency-api; Google News, USGS y GDACS. Fotos: Wikipedia / Wikimedia Commons. Banderas: flagcdn.</p>
+</div>
+<section class="contact" id="contacto"><div class="wrap contact-grid"><div><h2>¿Qué necesitás entender mejor?</h2><p>Contanos el desafío. Te decimos cómo lo ganamos.</p></div><div><a class="button" href="mailto:contacto@sudakaoslatam.com?subject=Consulta%20Sudakaos%20LATAM">Escribir al equipo</a><small>Alcance, fuentes, entregables y condiciones se acuerdan antes de iniciar cada proyecto.</small></div></div></section></main><footer><div class="wrap foot"><a href="../"><strong>Sudakaos<span>●</span> LATAM</strong></a><span>Inteligencia, comunicación y tecnología</span><a href="#">Volver arriba</a></div></footer>
+<script>
+(function(){var m=document.querySelector('.menu'),n=document.querySelector('#nav');m.addEventListener('click',function(){var o=m.getAttribute('aria-expanded')!=='true';m.setAttribute('aria-expanded',String(o));n.classList.toggle('open',o)});})();
+</script>
+<script src="../assets/paises.js?v=79e3adce" defer></script>
+</body></html>

@@ -10,6 +10,8 @@ on:
     paths:
       - 'dirigentes/*/config.json'
       - 'dirigentes/*.py'
+      - 'x/*.py'
+      - 'x/config.json'
       - '.github/workflows/dirigentes.yml'
 
 permissions:
@@ -27,8 +29,12 @@ jobs:
       # Clave propia si se carga YOUTUBE_API_KEY_DIRIGENTES; si no, la de Roca (la del tablero nacional queda afuera)
       YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY_DIRIGENTES || secrets.YOUTUBE_API_KEY_ROCA }}
       RADAR_NLP_SECONDS: '420'
+      # Sin X_BEARER_TOKEN a propósito: X es pago y solo se corre a mano (workflow "X tableros")
     steps:
       - uses: actions/checkout@v4
+      # Corridas en cola: partir del último main (registro de gasto de X incluido), no del commit que las disparó
+      - name: Update to latest
+        run: git fetch --depth=50 origin "${GITHUB_REF_NAME}" && git merge --ff-only FETCH_HEAD || true
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -54,11 +60,12 @@ jobs:
             dirigentes/pagano/.store
             dirigentes/casielles/.store
             dirigentes/braillard/.store
+            dirigentes/clark/.store
           key: dirigentes-store-${{ github.run_id }}
           restore-keys: dirigentes-store-
       - name: Collect and analyze
         run: |
-          for d in pagano casielles braillard; do
+          for d in pagano casielles braillard clark; do
             echo "::group::$d"
             timeout 1500 python dirigentes/collect.py "$d" || echo "recolección de $d cortada por tiempo"
             python dirigentes/analyze.py "$d"
@@ -73,12 +80,13 @@ jobs:
             dirigentes/pagano/.store
             dirigentes/casielles/.store
             dirigentes/braillard/.store
+            dirigentes/clark/.store
           key: dirigentes-store-${{ github.run_id }}
       - name: Commit aggregates
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add dirigentes/*/data/monitor.json dirigentes/*/data/textos.json
+          git add dirigentes/*/data/monitor.json dirigentes/*/data/textos.json x/gasto.json 2>/dev/null || git add dirigentes/*/data/monitor.json dirigentes/*/data/textos.json
           if ! git diff --cached --quiet; then
             git commit -m 'Dirigentes: actualizar agregados'
             for i in 1 2 3; do

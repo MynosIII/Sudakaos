@@ -1,0 +1,556 @@
+{
+ "nombre": "Donald J. Trump Monitor",
+ "slug": "trump",
+ "perfil": {
+  "nombre": "Donald J. Trump",
+  "cargo": "47th President of the United States",
+  "inauguracion": "2025-01-20",
+  "wiki": "Donald_Trump"
+ },
+ "window_days": 120,
+ "news_when": "7d",
+ "rss": [
+  {
+   "name": "New York Times",
+   "url": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
+   "lean": "Lean Left"
+  },
+  {
+   "name": "Washington Post",
+   "url": "https://feeds.washingtonpost.com/rss/politics",
+   "lean": "Lean Left"
+  },
+  {
+   "name": "NPR",
+   "url": "https://feeds.npr.org/1014/rss.xml",
+   "lean": "Lean Left"
+  },
+  {
+   "name": "Politico",
+   "url": "https://rss.politico.com/politics-news.xml",
+   "lean": "Lean Left"
+  },
+  {
+   "name": "NBC News",
+   "url": "https://feeds.nbcnews.com/nbcnews/public/politics",
+   "lean": "Lean Left"
+  },
+  {
+   "name": "CBS News",
+   "url": "https://www.cbsnews.com/latest/rss/politics",
+   "lean": "Lean Left"
+  },
+  {
+   "name": "ABC News",
+   "url": "https://abcnews.go.com/abcnews/politicsheadlines",
+   "lean": "Lean Left"
+  },
+  {
+   "name": "CNN",
+   "url": "http://rss.cnn.com/rss/cnn_allpolitics.rss",
+   "lean": "Lean Left"
+  },
+  {
+   "name": "Axios",
+   "url": "https://api.axios.com/feed/",
+   "lean": "Lean Left"
+  },
+  {
+   "name": "The Guardian US",
+   "url": "https://www.theguardian.com/us-news/us-politics/rss",
+   "lean": "Left"
+  },
+  {
+   "name": "HuffPost",
+   "url": "https://www.huffpost.com/section/politics/feed",
+   "lean": "Left"
+  },
+  {
+   "name": "The Hill",
+   "url": "https://thehill.com/homenews/feed/",
+   "lean": "Center"
+  },
+  {
+   "name": "BBC News",
+   "url": "https://feeds.bbci.co.uk/news/world/us_and_canada/rss.xml",
+   "lean": "Center"
+  },
+  {
+   "name": "Wall Street Journal",
+   "url": "https://feeds.content.dowjones.io/public/rss/socialpoliticsfeed",
+   "lean": "Center"
+  },
+  {
+   "name": "NewsNation",
+   "url": "https://www.newsnationnow.com/politics/feed/",
+   "lean": "Center"
+  },
+  {
+   "name": "Reason",
+   "url": "https://reason.com/feed/",
+   "lean": "Lean Right"
+  },
+  {
+   "name": "New York Post",
+   "url": "https://nypost.com/politics/feed/",
+   "lean": "Lean Right"
+  },
+  {
+   "name": "Washington Examiner",
+   "url": "https://www.washingtonexaminer.com/feed",
+   "lean": "Lean Right"
+  },
+  {
+   "name": "Fox News",
+   "url": "https://moxie.foxnews.com/google-publisher/politics.xml",
+   "lean": "Right"
+  },
+  {
+   "name": "Breitbart",
+   "url": "https://feeds.feedburner.com/breitbart",
+   "lean": "Right"
+  },
+  {
+   "name": "Newsmax",
+   "url": "https://www.newsmax.com/rss/Politics/1/",
+   "lean": "Right"
+  },
+  {
+   "name": "Daily Caller",
+   "url": "https://dailycaller.com/feed/",
+   "lean": "Right"
+  },
+  {
+   "name": "The Federalist",
+   "url": "https://thefederalist.com/feed/",
+   "lean": "Right"
+  },
+  {
+   "name": "Daily Wire",
+   "url": "https://www.dailywire.com/feeds/rss.xml",
+   "lean": "Right"
+  }
+ ],
+ "google_news": {
+  "queries": [
+   "Donald Trump",
+   "Trump approval rating",
+   "Trump tariffs",
+   "Trump immigration",
+   "Trump executive order",
+   "Trump economy",
+   "Trump White House",
+   "Trump poll",
+   "JD Vance",
+   "Trump Truth Social post",
+   "Trump Congress",
+   "Trump Supreme Court"
+  ]
+ },
+ "gdelt": {
+  "query": "trump",
+  "timespan": "3months"
+ },
+ "youtube": {
+  "region": "US",
+  "language": "en",
+  "videos_per_query": 6,
+  "comments_per_video": 100,
+  "days": 14,
+  "queries": [
+   "Donald Trump",
+   "Trump news today",
+   "Trump speech",
+   "Trump approval rating",
+   "Trump tariffs economy",
+   "Trump interview"
+  ],
+  "contexto": [
+   "trump",
+   "white house",
+   "maga",
+   "potus",
+   "vance",
+   "president"
+  ]
+ },
+ "trends": {
+  "terminos": [
+   "Trump",
+   "JD Vance",
+   "Gavin Newsom",
+   "Marco Rubio",
+   "Ocasio-Cortez"
+  ],
+  "issues": [
+   "tariffs",
+   "inflation",
+   "immigration",
+   "Epstein",
+   "gas prices"
+  ],
+  "geo": "US"
+ },
+ "wiki_pages": {
+  "Donald Trump": "Donald_Trump",
+  "JD Vance": "JD_Vance",
+  "Gavin Newsom": "Gavin_Newsom",
+  "Marco Rubio": "Marco_Rubio",
+  "Alexandria Ocasio-Cortez": "Alexandria_Ocasio-Cortez",
+  "Elon Musk": "Elon_Musk"
+ },
+ "fred": {
+  "UMCSENT": "Confianza del consumidor (UMich)",
+  "CPIAUCSL": "Inflación (IPC)",
+  "UNRATE": "Desempleo",
+  "GASREGW": "Nafta común, US$/galón",
+  "SP500": "S&P 500",
+  "MORTGAGE30US": "Hipoteca a 30 años"
+ },
+ "polymarket": {
+  "tag": "trump",
+  "max_events": 14
+ },
+ "meta_ads": {
+  "terms": [
+   "Trump"
+  ],
+  "days": 30,
+  "max_pages": 12,
+  "campo_trump": [
+   "donald j. trump",
+   "team trump",
+   "maga inc",
+   "trump national committee",
+   "never surrender",
+   "republican national committee",
+   "nrcc",
+   "nrsc",
+   "make america great again",
+   "trump 47",
+   "jd vance"
+  ],
+  "oposicion": [
+   "democrat",
+   "dccc",
+   "dscc",
+   "dnc",
+   "moveon",
+   "indivisible",
+   "actblue",
+   "progressive",
+   "sierra club",
+   "letitia james",
+   "newsom",
+   "pritzker",
+   "aclu",
+   "common cause",
+   "vote vets",
+   "votevets",
+   "priorities usa",
+   "league of conservation",
+   "planned parenthood",
+   "working families",
+   "no kings"
+  ],
+  "comercial": [
+   "merch",
+   "deals",
+   "store",
+   "shop",
+   "apparel",
+   "gear",
+   "coins",
+   "coin",
+   "shirts",
+   "collectible",
+   "gold",
+   "mint",
+   "flags",
+   "patriot",
+   "patriots"
+  ]
+ },
+ "temas": {
+  "Economía y precios": [
+   "economy",
+   "economic",
+   "inflation",
+   "prices",
+   "grocery",
+   "groceries",
+   "cost of living",
+   "affordability",
+   "jobs report",
+   "recession",
+   "gdp",
+   "wages",
+   "fed ",
+   "federal reserve",
+   "interest rate",
+   "powell",
+   "stock market",
+   "dow ",
+   "s&p"
+  ],
+  "Aranceles y comercio": [
+   "tariff",
+   "trade war",
+   "trade deal",
+   "import",
+   "export",
+   "customs",
+   "duties"
+  ],
+  "Inmigración y frontera": [
+   "immigration",
+   "immigrant",
+   "migrant",
+   "border",
+   "deport",
+   "ice ",
+   "asylum",
+   "illegal alien",
+   "daca",
+   "visa",
+   "citizenship"
+  ],
+  "Seguridad y Guardia Nacional": [
+   "crime",
+   "national guard",
+   "police",
+   "cartel",
+   "fentanyl",
+   "drug",
+   "troops in",
+   "insurrection act"
+  ],
+  "Justicia y tribunales": [
+   "court",
+   "judge",
+   "supreme court",
+   "lawsuit",
+   "ruling",
+   "indict",
+   "prosecut",
+   "doj",
+   "justice department",
+   "attorney general",
+   "bondi",
+   "pardon"
+  ],
+  "Archivos Epstein": [
+   "epstein",
+   "maxwell"
+  ],
+  "Política exterior": [
+   "ukraine",
+   "russia",
+   "putin",
+   "zelensky",
+   "nato",
+   "china",
+   "xi jinping",
+   "israel",
+   "gaza",
+   "hamas",
+   "iran",
+   "venezuela",
+   "maduro",
+   "greenland",
+   "panama",
+   "canada",
+   "mexico"
+  ],
+  "Salud": [
+   "health care",
+   "healthcare",
+   "obamacare",
+   "aca ",
+   "medicaid",
+   "medicare",
+   "vaccine",
+   "rfk",
+   "kennedy",
+   "insurance premiums"
+  ],
+  "Gobierno y DOGE": [
+   "doge",
+   "federal workers",
+   "layoffs",
+   "shutdown",
+   "budget",
+   "spending bill",
+   "debt ceiling",
+   "deficit",
+   "agency",
+   "funding"
+  ],
+  "Elecciones y 2028": [
+   "election",
+   "midterm",
+   "2028",
+   "third term",
+   "redistricting",
+   "gerrymander",
+   "ballot",
+   "voter",
+   "campaign",
+   "primary"
+  ],
+  "Congreso": [
+   "congress",
+   "senate",
+   "house speaker",
+   "speaker johnson",
+   "thune",
+   "filibuster",
+   "lawmakers",
+   "republicans in congress",
+   "democrats"
+  ],
+  "Energía y clima": [
+   "energy",
+   "oil",
+   "drilling",
+   "gas prices",
+   "climate",
+   "solar",
+   "wind farm",
+   "coal",
+   "lng"
+  ],
+  "Medios y libertad de expresión": [
+   "media",
+   "press",
+   "fake news",
+   "free speech",
+   "censorship",
+   "network",
+   "late-night",
+   "fcc",
+   "first amendment"
+  ],
+  "Tecnología e IA": [
+   "artificial intelligence",
+   " ai ",
+   "tech",
+   "crypto",
+   "bitcoin",
+   "musk",
+   "tiktok",
+   "chips",
+   "nvidia"
+  ]
+ },
+ "positivo": [
+  "great",
+  "best",
+  "win",
+  "winning",
+  "won",
+  "love",
+  "thank",
+  "thanks",
+  "strong",
+  "proud",
+  "amazing",
+  "success",
+  "successful",
+  "deal",
+  "record",
+  "historic",
+  "beautiful",
+  "good",
+  "support",
+  "hero",
+  "saved",
+  "brilliant",
+  "boom",
+  "growth",
+  "victory"
+ ],
+ "negativo": [
+  "worst",
+  "bad",
+  "corrupt",
+  "liar",
+  "lies",
+  "fraud",
+  "crook",
+  "disgrace",
+  "disaster",
+  "failure",
+  "failed",
+  "fascist",
+  "dictator",
+  "traitor",
+  "criminal",
+  "chaos",
+  "crash",
+  "recession",
+  "scam",
+  "pathetic",
+  "weak",
+  "impeach",
+  "shame",
+  "hate",
+  "terrible",
+  "horrible",
+  "dangerous",
+  "rigged",
+  "evil",
+  "stupid"
+ ],
+ "stop_extra": [
+  "trump",
+  "trumps",
+  "donald",
+  "president",
+  "presidents",
+  "says",
+  "said",
+  "new",
+  "news",
+  "video",
+  "will",
+  "would",
+  "could",
+  "also",
+  "just",
+  "like",
+  "get",
+  "one",
+  "people",
+  "know",
+  "think",
+  "going",
+  "want",
+  "make",
+  "even",
+  "still",
+  "really",
+  "much",
+  "many",
+  "back",
+  "time",
+  "year",
+  "years",
+  "day",
+  "week",
+  "us",
+  "u.s",
+  "america",
+  "american",
+  "americans",
+  "u",
+  "s"
+ ],
+ "instagram": {
+  "realdonaldtrump": "Donald J. Trump",
+  "whitehouse": "The White House",
+  "jdvance": "JD Vance",
+  "gavinnewsom": "Gavin Newsom",
+  "aoc": "Alexandria Ocasio-Cortez"
+ }
+}

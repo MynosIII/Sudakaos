@@ -1,0 +1,96 @@
+name: Landing en sudakaoslatam.com (Cloudflare Pages)
+
+# Publica SOLO la landing (carpeta web/, sin web/tools) en Cloudflare Pages
+# y la conecta al dominio sudakaoslatam.com. Ningún tablero de clientes sale por acá
+# (la única excepción es la demo pública de Trump en /demo/trump/).
+# Necesita los secrets CLOUDFLARE_API_TOKEN (permisos: Cloudflare Pages Edit + Zone DNS Edit
+# de sudakaoslatam.com) y CLOUDFLARE_ACCOUNT_ID.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'web/**'
+      - 'trump/**'
+      - '.github/workflows/landing-cloudflare.yml'
+  # Los datos (web/data) los actualiza "Landing datos" con el token de Actions, que no dispara push
+  workflow_run:
+    workflows: ['Landing datos', 'Trump monitor']
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: landing-cloudflare
+  cancel-in-progress: false
+
+env:
+  PROYECTO: sudakaoslatam
+  DOMINIO: sudakaoslatam.com
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Revisar secrets
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "::error::Faltan los secrets CLOUDFLARE_API_TOKEN y/o CLOUDFLARE_ACCOUNT_ID"
+            exit 1
+          fi
+
+      - name: Armar carpeta solo con la landing
+        run: |
+          mkdir -p _landing
+          cp -r web/. _landing/
+          rm -rf _landing/tools
+          # Única excepción pública: la demo de Trump (free trial). Los tableros de clientes nunca salen por acá.
+          python3 trump/build_demo.py _landing/demo/trump
+          # Verificación: nada fuera de la landing
+          ls -R _landing
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Crear el proyecto de Pages (si no existe)
+        run: npx --yes wrangler@3 pages project create "$PROYECTO" --production-branch=main || echo "El proyecto ya existe"
+
+      - name: Subir la landing
+        run: npx --yes wrangler@3 pages deploy _landing --project-name="$PROYECTO" --branch=main --commit-dirty=true
+
+      - name: Conectar dominio (Pages + DNS)
+        run: |
+          set -u
+          API=https://api.cloudflare.com/client/v4
+          AUTH=(-H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" -H "Content-Type: application/json")
+          SUB=$(curl -s "${AUTH[@]}" "$API/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects/$PROYECTO" | jq -r '.result.subdomain')
+          echo "Destino Pages: $SUB"
+          ZONA=$(curl -s "${AUTH[@]}" "$API/zones?name=$DOMINIO" | jq -r '.result[0].id // empty')
+          if [ -z "$ZONA" ]; then echo "::error::El token no ve la zona $DOMINIO (falta permiso Zone DNS Edit)"; exit 1; fi
+          for HOST in "$DOMINIO" "www.$DOMINIO"; do
+            # 1) Dominio en el proyecto de Pages (si ya está, la API responde error y seguimos)
+            curl -s "${AUTH[@]}" -X POST "$API/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects/$PROYECTO/domains" \
+              -d "{\"name\":\"$HOST\"}" | jq -c '{success, errors}'
+            # 2) Registro DNS: solo se crea si no hay ninguno para ese nombre (nunca se pisa uno existente)
+            EXIST=$(curl -s "${AUTH[@]}" "$API/zones/$ZONA/dns_records?name=$HOST" | jq -r '[.result[] | select(.type=="A" or .type=="AAAA" or .type=="CNAME") | "\(.type) \(.content)"] | join(", ")')
+            if [ -z "$EXIST" ]; then
+              curl -s "${AUTH[@]}" -X POST "$API/zones/$ZONA/dns_records" \
+                -d "{\"type\":\"CNAME\",\"name\":\"$HOST\",\"content\":\"$SUB\",\"proxied\":true}" | jq -c '{success, errors}'
+            elif echo "$EXIST" | grep -q "CNAME $SUB"; then
+              echo "$HOST ya apunta a Pages"
+            else
+              echo "::warning::$HOST ya tiene registros DNS ($EXIST). No se tocaron: cambiarlos a mano por CNAME $SUB"
+            fi
+          done
+          curl -s "${AUTH[@]}" "$API/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects/$PROYECTO/domains" \
+            | jq -r '.result[] | "\(.name): \(.status)"'

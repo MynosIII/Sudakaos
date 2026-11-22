@@ -1,0 +1,8 @@
+{
+ "_nota": "Tope de gasto en la API de X (pay-per-use) para todos los tableros juntos. Matías autorizó hasta USD 10 en total (2026-11-19); se deja un margen. costo_por_post_usd: precio de lectura de posts publicado por X (verificar en la consola de desarrollador). gasto.json lleva la cuenta.",
+ "presupuesto_usd": 9.0,
+ "costo_por_post_usd": 0.005,
+ "max_posts_por_corrida": 100,
+ "gasto_fuera_de_registro_usd": 0.04,
+ "_nota_fuera": "2026-11-19: una corrida de prueba en la rama claude/project-thread-3e8kox leyó 8 posts (USD 0,04) que no quedaron en gasto.json de main. Desde entonces X solo corre en main."
+}

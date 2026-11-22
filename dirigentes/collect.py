@@ -8,7 +8,9 @@ Fuentes (cada una falla por separado sin frenar a las demás):
   - Google Trends: interés de búsqueda en la provincia del distrito y en el país, sin clave. Google suele cortar
     pedidos desde servidores: si falla, el tablero lo dice y sigue con el resto.
   - Wikipedia / Wikimedia: visitas diarias a los artículos de cada figura (sin clave) y ficha de la provincia.
-Facebook, Instagram y X no tienen API abierta y gratuita para buscar publicaciones.
+  - X (opcional, pago): si la config trae un bloque "x" y existe X_BEARER_TOKEN, posts recientes con tope de gasto
+    compartido (x/x_api.py, x/config.json, x/gasto.json).
+Facebook e Instagram no tienen API abierta para buscar publicaciones.
 
 Uso: python dirigentes/collect.py <slug>   (pagano | casielles | braillard)
 El almacén con textos (.store/) no se sube al repositorio; en Actions vive en la caché del workflow.
@@ -30,6 +32,8 @@ from email.utils import parsedate_to_datetime
 from pathlib import Path
 
 SLUG = sys.argv[1] if len(sys.argv) > 1 else "pagano"
+# --solo x: corre solo la búsqueda en X (workflow "X tableros"), sin tocar el resto de las fuentes
+SOLO_X = "--solo" in sys.argv and "x" in sys.argv[sys.argv.index("--solo") + 1:]
 HERE = Path(__file__).resolve().parent / SLUG
 CONFIG = json.loads((HERE / "config.json").read_text(encoding="utf8"))
 STORE = HERE / ".store" / "items.jsonl"
@@ -142,6 +146,11 @@ def youtube():
 
 
 # ---------------------------------------------------------------- Google News
+# País del dirigente (por defecto Argentina): región de Google News y huso de Google Trends
+PAIS = {"codigo": "AR", "nombre": "Argentina", "hl": "es-419", "tz_trends": 180} | CONFIG.get("pais", {})
+TZ = PAIS["tz_trends"]
+
+
 def news_queries():
     g = CONFIG["google_news"]
     qs = list(g["queries"])
@@ -155,7 +164,8 @@ def google_news():
     atom_out = []
     for q in news_queries():
         url = "https://news.google.com/rss/search?" + urllib.parse.urlencode(
-            {"q": q + " when:" + CONFIG.get("news_when", "1y"), "hl": "es-419", "gl": "AR", "ceid": "AR:es-419"})
+            {"q": q + " when:" + CONFIG.get("news_when", "1y"), "hl": PAIS.get("hl", "es-419"), "gl": PAIS["codigo"],
+             "ceid": f"{PAIS['codigo']}:{PAIS.get('hl', 'es-419')}"})
         try:
             root = ET.fromstring(get(url))
         except Exception as e:
@@ -288,18 +298,18 @@ def trends():
                 raise
 
     try:  # la primera visita devuelve 429 con la cookie NID; la siguiente pasa
-        op.open("https://trends.google.com/trends/explore?geo=AR", timeout=30).read()
+        op.open("https://trends.google.com/trends/explore?geo=" + PAIS["codigo"], timeout=30).read()
     except urllib.error.HTTPError:
         time.sleep(5)
     js = lambda t: json.loads(t[t.index("{"):])
     out = {"fetched_at": iso(datetime.now(timezone.utc)), "terminos": terms, "series": {}, "errores": {}}
-    for geo in cfg.get("geos", {"AR": "Argentina"}):
+    for geo in cfg.get("geos", {PAIS["codigo"]: PAIS.get("nombre", "")}):
         try:
             req = {"comparisonItem": [{"keyword": t, "geo": geo, "time": "today 12-m"} for t in terms], "category": 0, "property": ""}
-            ex = js(call("https://trends.google.com/trends/api/explore?" + urllib.parse.urlencode({"hl": "es-AR", "tz": 180, "req": json.dumps(req)})))
+            ex = js(call("https://trends.google.com/trends/api/explore?" + urllib.parse.urlencode({"hl": "es-AR", "tz": TZ, "req": json.dumps(req)})))
             w = next(w for w in ex["widgets"] if w.get("id") == "TIMESERIES")
             d = js(call("https://trends.google.com/trends/api/widgetdata/multiline?" + urllib.parse.urlencode(
-                {"hl": "es-AR", "tz": 180, "req": json.dumps(w["request"]), "token": w["token"]})))
+                {"hl": "es-AR", "tz": TZ, "req": json.dumps(w["request"]), "token": w["token"]})))
             serie = {t: {} for t in terms}
             for pt in d["default"]["timelineData"]:
                 day = datetime.fromtimestamp(int(pt["time"]), timezone.utc).strftime("%Y-%m-%d")
@@ -313,6 +323,26 @@ def trends():
     if out["series"] or not TRENDS.exists():
         TRENDS.write_text(json.dumps(out, ensure_ascii=False), encoding="utf8")
     return sum(len(v) for v in out["series"].values())
+
+
+X_ESTADO = {}
+
+
+def x_config():
+    """Bloque "x" del tablero: en su config.json o en x/tableros.json."""
+    xt = HERE.parent.parent / "x" / "tableros.json"
+    return (json.loads(xt.read_text(encoding="utf8")).get(SLUG) if xt.exists() else None)
+
+
+def x_posts():
+    """Posts recientes de X con tope de gasto (ver x/x_api.py)."""
+    sys.path.insert(0, str(HERE.parent.parent / "x"))
+    from x_api import buscar
+    rows, estado = buscar(SLUG, x_config())
+    if not estado.get("ok"):
+        raise RuntimeError(estado.get("error", "X falló"))
+    X_ESTADO["x"] = {k: v for k, v in estado.items() if k not in ("ok", "items")}
+    return rows
 
 
 def save(known):
@@ -331,20 +361,29 @@ def main():
                 known[r["id"]] = r
             except (ValueError, KeyError):
                 pass
+    status_path = HERE / ".store" / "status.json"
     status = {}
-    for name, fn in (("youtube", youtube), ("google_news", google_news), ("rss", rss)):
+    if SOLO_X and status_path.exists():  # conservar el estado de las otras fuentes
+        status = json.loads(status_path.read_text(encoding="utf8"))
+    fuentes = [] if SOLO_X else [("youtube", youtube), ("google_news", google_news), ("rss", rss)]
+    if SOLO_X and x_config():  # X es pago: solo a mano (workflow "X tableros"), nunca en la corrida diaria
+        fuentes.insert(0, ("x", x_posts))
+    for name, fn in fuentes:
         try:
             rows = fn()
             new = sum(1 for r in rows if r["id"] not in known)
             for r in rows:
                 known[r["id"]] = r | {"collected_at": iso(datetime.now(timezone.utc))}
-            status[name] = {"ok": True, "items": len(rows), "new": new}
+            status[name] = {"ok": True, "items": len(rows), "new": new} | X_ESTADO.pop(name, {})
         except Exception as e:
             status[name] = {"ok": False, "error": str(e)[:200]}
         log(source=name, **status[name])
+        if name == "x":
+            save(known)
     save(known)
-    status_path = HERE / ".store" / "status.json"
     status_path.write_text(json.dumps(status, ensure_ascii=False), encoding="utf8")
+    if SOLO_X:
+        return
     try:
         npers, has_m = wiki()
         status["wikipedia"] = {"ok": npers > 0, "items": npers, "provincia": has_m}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0c0c0b">
+<meta name="description" content="Alertas reales de medios, sismos y desastres en las Américas y Europa.">
+<title>Sala de situación — Sudakaos LATAM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=Schibsted+Grotesk:wght@400..700&display=swap">
+<link rel="stylesheet" href="../assets/site.css?v=e641463c">
+</head>
+<body class="dark">
+<header><div class="wrap nav"><a class="brand" href="../" aria-label="Sudakaos LATAM inicio">Sudakaos<span>●</span> LATAM</a><button class="menu" aria-expanded="false" aria-controls="nav">Menú</button><nav id="nav"><a href="../#soluciones">Soluciones</a><a href="../#metodo">Cómo trabajamos</a><a href="../paises/">Países</a><a href="../situacion/">Situación</a><a href="../#canal">Canal digital</a><a href="https://sudakaoslatam.com/demo/trump/">Demo en vivo</a><a class="nav-cta" href="#contacto">Hablemos</a></nav></div></header>
+<main>
+<div class="wrap"><div class="sit-top"><h1>Sala de situación</h1><span class="clock" id="sClock">UTC --:--:--</span></div>
+<p style="font:400 21px/1.4 var(--serif);color:var(--ink-2);max-width:760px;margin:14px 0 0">Alertas en vivo en Sudamérica, México, Estados Unidos, España, Reino Unido y la Unión Europea: titulares de medios clasificados por tema, sismos y desastres. <span class="upd" id="sUpd"></span></p>
+<div class="kpis" id="sKpis"></div>
+<div class="sit-grid">
+<div><div class="map-wrap"><canvas id="map" role="img" aria-label="Mapa de alertas recientes"></canvas><div class="mtip" id="mtip"></div></div>
+<div class="legend"><span><i style="background:#ef3b52"></i>Severidad alta</span><span><i style="background:#f2a33a"></i>Media</span><span><i style="background:#9d9c94"></i>Baja</span><span>El tono de cada país indica cuántas alertas tuvo en 24 h.</span></div></div>
+<aside><h2 class="side-h">Alertas por país, 24 h</h2><ul class="levels" id="sLevels"></ul></aside>
+</div>
+<div class="filters" id="sFilters"></div>
+<p class="upd" id="sCount" style="margin:10px 0 0"></p>
+<ol class="sfeed" id="sFeed"></ol>
+<p class="srcs">Fuentes: Google News, USGS y GDACS, actualizadas cada 3 horas. Cada alerta enlaza a su fuente.</p>
+</div>
+<section class="contact" id="contacto"><div class="wrap contact-grid"><div><h2>¿Qué necesitás entender mejor?</h2><p>Contanos el desafío. Te decimos cómo lo ganamos.</p></div><div><a class="button" href="mailto:contacto@sudakaoslatam.com?subject=Consulta%20Sudakaos%20LATAM">Escribir al equipo</a><small>Alcance, fuentes, entregables y condiciones se acuerdan antes de iniciar cada proyecto.</small></div></div></section></main><footer><div class="wrap foot"><a href="../"><strong>Sudakaos<span>●</span> LATAM</strong></a><span>Inteligencia, comunicación y tecnología</span><a href="#">Volver arriba</a></div></footer>
+<script>
+(function(){var m=document.querySelector('.menu'),n=document.querySelector('#nav');m.addEventListener('click',function(){var o=m.getAttribute('aria-expanded')!=='true';m.setAttribute('aria-expanded',String(o));n.classList.toggle('open',o)});})();
+</script>
+<script src="../assets/geo.js?v=c8f53bed"></script>
+<script src="../assets/situacion.js?v=3dfa9aaf" defer></script>
+</body></html>

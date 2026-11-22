@@ -1,0 +1,18 @@
+{
+ "_nota": "Tableros con X configurado. X NUNCA corre automático (pedido de Matías 2026-11-19): solo a mano con el workflow \"X tableros\" y el tablero. El tope de gasto compartido está en x/config.json.",
+ "pagano": {
+  "query": "(@marcelapagano OR \"Marcela Pagano\" OR \"diputada Pagano\") -is:retweet",
+  "max_posts": 100
+ },
+ "clark": {
+  "query": "(@vclarkb OR \"Víctor Clark\" OR \"Victor Clark\" OR \"gobernador Clark\" OR \"Clark Boscán\" OR \"Clark Boscan\" OR \"gobernador de Falcón\" OR \"gobernación de Falcón\" OR \"gobernacion de Falcon\" OR Hidrofalcón OR Hidrofalcon) -is:retweet -tijuana",
+  "max_posts": 100
+ },
+ "trump": {
+  "query": "(Trump OR \"President Trump\" OR @realDonaldTrump) lang:en -is:retweet -is:nullcast",
+  "max_posts": 896,
+  "max_posts_por_corrida": 896,
+  "tramos_dias": 7,
+  "_nota": "Demo Trump: muestra de 128 posts por día en los últimos 7 días (896 posts ≈ USD 4,48). Matías 2026-11-20: tope USD 5 por corrida."
+ }
+}

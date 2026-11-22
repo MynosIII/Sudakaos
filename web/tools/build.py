@@ -14,25 +14,26 @@ e = html.escape
 tpl = open(os.path.join(HERE, 'template.html'), encoding='utf-8').read()
 geo = open(os.path.join(HERE, 'geo.json'), encoding='utf-8').read()
 open(os.path.join(WEB, 'index.html'), 'w', encoding='utf-8').write(tpl.replace('/*GEO*/', geo))
+open(os.path.join(WEB, 'assets', 'geo.js'), 'w', encoding='utf-8').write('window.SUDAKAOS_GEO=' + geo + ';\n')
 
 # 2) Páginas de capacidades
 HEAD = '''<!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0c0c0b">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="{theme}">
 <meta name="description" content="{desc}">
 <title>{title} — Sudakaos LATAM</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=Schibsted+Grotesk:wght@400..700&display=swap">
 <link rel="stylesheet" href="../assets/site.css">
 </head>
-<body>
-<header><div class="wrap nav"><a class="brand" href="../" aria-label="Sudakaos LATAM inicio">Sudakaos<span>●</span> LATAM</a><button class="menu" aria-expanded="false" aria-controls="nav">Menú</button><nav id="nav"><a href="../#soluciones">Soluciones</a><a href="../#metodo">Cómo trabajamos</a><a href="../#respuesta">Sala de situación</a><a href="../#canal">Canal digital</a><a class="nav-cta" href="#contacto">Hablemos</a></nav></div></header>
+<body{bodycls}>
+<header><div class="wrap nav"><a class="brand" href="../" aria-label="Sudakaos LATAM inicio">Sudakaos<span>●</span> LATAM</a><button class="menu" aria-expanded="false" aria-controls="nav">Menú</button><nav id="nav"><a href="../#soluciones">Soluciones</a><a href="../#metodo">Cómo trabajamos</a><a href="../paises/">Países</a><a href="../situacion/">Situación</a><a href="../#canal">Canal digital</a><a href="https://sudakaoslatam.com/demo/trump/">Demo en vivo</a><a class="nav-cta" href="#contacto">Hablemos</a></nav></div></header>
 <main>'''
 
 def fig(kind, cap, n, cls=''):
     return (f'<figure class="fig {cls}"><div class="fig-head"><span class="num">Fig. {n}</span>'
-            f'<span class="tag">Ilustrativo, con datos simulados</span></div>'
+            f'</div>'
             f'<canvas data-chart="{kind}" role="img" aria-label="{e(cap)}"></canvas>'
             f'<figcaption>{e(cap)}</figcaption></figure>')
 
@@ -56,11 +57,11 @@ for i, c in enumerate(CAPS):
 </div></section>
 <section class="section" style="padding-top:0"><div class="wrap split">
 {fig(c["fig2"][0], c["fig2"][1], 2, "sm")}
-<aside class="side"><h3>Entregables habituales</h3><ol>{deliver}</ol><h3>Límites</h3><p class="limits">{e(c["limits"])}</p></aside>
+<aside class="side"><h3>Entregables habituales</h3><ol>{deliver}</ol></aside>
 </div>
 <div class="wrap"><nav class="pager" aria-label="Otras capacidades"><a href="../{prev["slug"]}/"><span>Anterior</span><strong>{e(prev["title"])}</strong></a><a href="../{nxt["slug"]}/"><span>Siguiente</span><strong>{e(nxt["title"])}</strong></a></nav></div>
 </section>
-<section class="contact" id="contacto"><div class="wrap contact-grid"><div><h2>¿Qué necesitás entender mejor?</h2><p>Conversemos sobre el desafío, el contexto y la evidencia disponible. El primer intercambio sirve para delimitar una evaluación, no implica una promesa de resultado.</p></div><div><a class="button" href="mailto:lab@sudakaos.com?subject=Consulta%20{e(c["tag"])}%20-%20Sudakaos%20LATAM">Escribir al equipo</a><small>Alcance, fuentes, entregables y condiciones se acuerdan antes de iniciar cada proyecto.</small></div></div></section>
+<section class="contact" id="contacto"><div class="wrap contact-grid"><div><h2>¿Qué necesitás entender mejor?</h2><p>Contanos el desafío. Te decimos cómo lo ganamos.</p></div><div><a class="button" href="mailto:contacto@sudakaoslatam.com?subject=Consulta%20{e(c["tag"])}%20-%20Sudakaos%20LATAM">Escribir al equipo</a><small>Alcance, fuentes, entregables y condiciones se acuerdan antes de iniciar cada proyecto.</small></div></div></section>
 </main><footer><div class="wrap foot"><a href="../"><strong>Sudakaos<span>●</span> LATAM</strong></a><span>Inteligencia, comunicación y tecnología</span><a href="#">Volver arriba</a></div></footer>
 <script>
 (function(){{var m=document.querySelector('.menu'),n=document.querySelector('#nav');m.addEventListener('click',function(){{var o=m.getAttribute('aria-expanded')!=='true';m.setAttribute('aria-expanded',String(o));n.classList.toggle('open',o)}});}})();
@@ -68,7 +69,25 @@ for i, c in enumerate(CAPS):
 <script src="../assets/charts.js" defer></script>
 </body></html>
 '''
-    out = HEAD.format(desc=e(c['lead']), title=e(c['title'])) + body
+    out = HEAD.format(desc=e(c['lead']), title=e(c['title']), theme='#ffffff', bodycls='') + body
     d = os.path.join(WEB, c['slug']); os.makedirs(d, exist_ok=True)
     open(os.path.join(d, 'index.html'), 'w', encoding='utf-8').write(out)
-print('ok', len(CAPS), 'páginas')
+from pages_data import build_data_pages
+build_data_pages(HEAD, WEB, e)
+
+# 3) Versión en la URL de cada asset: el navegador y la CDN siempre bajan el archivo nuevo tras un cambio
+import hashlib, re
+def _ver(m):
+    f = os.path.join(WEB, 'assets', m.group(2))
+    return m.group(1) + m.group(2) + '?v=' + hashlib.md5(open(f, 'rb').read()).hexdigest()[:8] if os.path.exists(f) else m.group(0)
+for root, _, files in os.walk(WEB):
+    if os.path.basename(root) == 'tools':
+        continue
+    for fn in files:
+        if fn == 'index.html':
+            fp = os.path.join(root, fn)
+            h = open(fp, encoding='utf-8').read()
+            h2 = re.sub(r'((?:\.\./)?assets/)([\w.-]+\.(?:js|css))(?:\?v=\w+)?', _ver, h)
+            if h2 != h:
+                open(fp, 'w', encoding='utf-8').write(h2)
+print('ok', len(CAPS), 'páginas + países + situación')

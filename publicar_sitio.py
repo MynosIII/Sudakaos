@@ -30,7 +30,7 @@ INDICE = re.sub(r"[^A-Za-z0-9_-]", "", SECRET)
 
 # Nombre visible en la URL: /<nombre>/<clave>/. El nombre solo no muestra nada (no hay index.html ahí).
 PUB = {"nacional": "nacional", "boca": "boca", "roca": "soria", "santacruz": "santacruz", "sanisidro": "sanisidro",
-       "pagano": "pagano", "casielles": "casielles", "braillard": "braillard"}
+       "pagano": "pagano", "casielles": "casielles", "braillard": "braillard", "clark": "clark"}
 
 
 def carpeta(nombre):
@@ -102,12 +102,16 @@ for b in ("boca", "roca", "santacruz", "sanisidro"):
 cp("radar/data/positions.json", tableros["roca"] / "positions.json")
 editar(tableros["roca"] / "index.html", ("'../radar/data/positions.json'", "'positions.json'"))
 
-# Pagano, Casielles y Braillard: build_page.py arma cada uno nombrando solo a su dirigente
-for slug in ("pagano", "casielles", "braillard"):
+# Dirigentes (Pagano, Casielles, Braillard, Clark): build_page.py arma cada uno nombrando solo a su dirigente
+for slug in ("pagano", "casielles", "braillard", "clark"):
     d = carpeta(slug)
     tableros[slug] = d
     subprocess.run([sys.executable, str(REPO / "dirigentes" / "build_page.py"), slug, str(d)], check=True,
                    stdout=subprocess.DEVNULL)
+
+# Demo pública de Trump (free trial): ruta abierta web/demo/trump/, fuera del índice secreto
+subprocess.run([sys.executable, str(REPO / "trump" / "build_demo.py"), str(SITE / "web" / "demo" / "trump")], check=True,
+               stdout=subprocess.DEVNULL)
 
 # Cache del navegador, noindex y control: ningún tablero enlaza a otro ni a la raíz
 otros_nombres = {"dashboard.html", "indice/", "../ig/data/", "../radar/"}
@@ -129,7 +133,7 @@ for nombre, d in tableros.items():
             s = s.replace("<head>", "<head>" + og, 1)
         if 'name="robots"' not in s:
             s = s.replace("<head>", '<head>\n<meta name="robots" content="noindex,nofollow">\n<meta name="referrer" content="no-referrer">', 1)
-        for b in ("boca", "roca", "santacruz", "sanisidro", "pagano", "casielles", "braillard", "dirigentes", "radar", "web"):
+        for b in ("boca", "roca", "santacruz", "sanisidro", "pagano", "casielles", "braillard", "clark", "trump", "dirigentes", "radar", "web"):
             if b == nombre or (nombre == "nacional" and b == "radar"):
                 continue
             if re.search(rf'href="(\.\./)+{b}/?"', s):

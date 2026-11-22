@@ -1,0 +1,44 @@
+{
+ "total_posts": 1005,
+ "total_usd": 5.025,
+ "tableros": {
+  "clark": {
+   "posts": 9,
+   "usd": 0.045,
+   "since_id": "2122444733566071057",
+   "ultima": "2026-11-19T03:29:39Z"
+  },
+  "pagano": {
+   "posts": 100,
+   "usd": 0.5,
+   "since_id": "2123261669438636318",
+   "ultima": "2026-11-19T04:34:57Z"
+  },
+  "trump": {
+   "posts": 896,
+   "usd": 4.48,
+   "since_id": "2123919033972167052",
+   "ultima": "2026-11-20T23:19:56Z"
+  }
+ },
+ "corridas": [
+  {
+   "fecha": "2026-11-19T03:29:39Z",
+   "tablero": "clark",
+   "posts": 9,
+   "usd": 0.045
+  },
+  {
+   "fecha": "2026-11-19T04:34:57Z",
+   "tablero": "pagano",
+   "posts": 100,
+   "usd": 0.5
+  },
+  {
+   "fecha": "2026-11-20T23:19:56Z",
+   "tablero": "trump",
+   "posts": 896,
+   "usd": 4.48
+  }
+ ]
+}
