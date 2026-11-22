@@ -166,6 +166,30 @@
     ],
     "Federico Meca": [
       "federico meca"
+    ],
+    "Fernanda Raverta": [
+      "fernanda raverta",
+      "raverta"
+    ],
+    "Federico Otermin": [
+      "federico otermin",
+      "otermin"
+    ],
+    "Javier Rehl": [
+      "javier rehl",
+      "rehl"
+    ],
+    "Juan Ramos": [
+      "juan ramos"
+    ],
+    "Beatriz Ávila": [
+      "beatriz ávila",
+      "beatriz avila",
+      "senadora ávila",
+      "senadora avila"
+    ],
+    "Alicia Kirchner": [
+      "alicia kirchner"
     ]
   },
   "risk_terms": [
@@ -830,6 +854,30 @@
       "espacio": "Acción Vecinal"
     },
     "Federico Meca": {
+      "pais": "AR",
+      "espacio": "Peronismo"
+    },
+    "Fernanda Raverta": {
+      "pais": "AR",
+      "espacio": "Peronismo"
+    },
+    "Federico Otermin": {
+      "pais": "AR",
+      "espacio": "Peronismo"
+    },
+    "Javier Rehl": {
+      "pais": "AR",
+      "espacio": "Peronismo"
+    },
+    "Juan Ramos": {
+      "pais": "AR",
+      "espacio": "Baradero 400 Años"
+    },
+    "Beatriz Ávila": {
+      "pais": "AR",
+      "espacio": "Independencia"
+    },
+    "Alicia Kirchner": {
       "pais": "AR",
       "espacio": "Peronismo"
     }
