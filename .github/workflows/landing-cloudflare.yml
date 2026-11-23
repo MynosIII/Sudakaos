@@ -12,6 +12,7 @@ on:
     paths:
       - 'web/**'
       - 'trump/**'
+      - 'assets/sala.*'
       - '.github/workflows/landing-cloudflare.yml'
   # Los datos (web/data) los actualiza "Landing datos" con el token de Actions, que no dispara push
   workflow_run:
