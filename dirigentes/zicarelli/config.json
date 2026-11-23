@@ -1,0 +1,568 @@
+{
+ "nombre": "Monitor Álvaro Zicarelli",
+ "slug": "zicarelli",
+ "color": "#546e7a",
+ "distrito": "Argentina",
+ "perfil": {
+  "nombre": "Álvaro Zicarelli",
+  "corto": "Zicarelli",
+  "cargo": "Dirigente de la nueva derecha",
+  "resumen": "Dirigente de la nueva derecha, autor y militante con fuerte presencia en redes. Fue funcionario de Gabriela Michetti en el Senado (desplazado en 2016) y precandidato en las legislativas de 2021.",
+  "objetivo": "Construir una referencia propia en la derecha por fuera de la conducción de Karina Milei.",
+  "fuentes": [
+   "https://www.cronista.com/economia-politica/zicarelli-hubo-una-diabolizacion-de-la-derecha-desde-1983/",
+   "https://alfonsorecasens.com.ar/alvaro-zicarelli-alfonso-recasens/"
+  ]
+ },
+ "focos": [
+  "Álvaro Zicarelli"
+ ],
+ "rivales": [
+  "Ramiro Marra",
+  "Lilia Lemoine",
+  "Gordo Dan"
+ ],
+ "co_clave": [
+  "Javier Milei",
+  "Karina Milei",
+  "Ramiro Marra"
+ ],
+ "window_days": 365,
+ "conversacion_dias": 365,
+ "eleccion": "2027-10-24",
+ "eleccion_nota": "Fecha de referencia: generales de octubre de 2027.",
+ "tema_elecciones": "Elecciones 2027 y candidaturas",
+ "figuras": {
+  "Álvaro Zicarelli": {
+   "alias": [
+    "álvaro zicarelli",
+    "alvaro zicarelli",
+    "zicarelli"
+   ],
+   "bando": "Nueva derecha",
+   "cargo": "Dirigente de la nueva derecha",
+   "foco": true,
+   "trends": "Zicarelli",
+   "excluir_si": [
+    "franco zicarelli",
+    "nicolás zicarelli",
+    "nicolas zicarelli",
+    "talleres de escalada"
+   ]
+  },
+  "Javier Milei": {
+   "alias": [
+    "javier milei",
+    "milei"
+   ],
+   "bando": "Nacional",
+   "cargo": "Presidente",
+   "wiki": [
+    "Javier Milei"
+   ]
+  },
+  "Karina Milei": {
+   "alias": [
+    "karina milei"
+   ],
+   "bando": "Nacional",
+   "cargo": "Secretaria General de la Presidencia",
+   "wiki": [
+    "Karina Milei"
+   ]
+  },
+  "Lilia Lemoine": {
+   "alias": [
+    "lilia lemoine",
+    "lemoine"
+   ],
+   "bando": "La Libertad Avanza",
+   "cargo": "Diputada nacional, LLA",
+   "wiki": [
+    "Lilia Lemoine"
+   ],
+   "trends": "Lilia Lemoine"
+  },
+  "Gordo Dan": {
+   "alias": [
+    "gordo dan",
+    "daniel parisini",
+    "parisini"
+   ],
+   "bando": "La Libertad Avanza",
+   "cargo": "Streamer oficialista (Carajo)",
+   "wiki": [
+    "Daniel Parisini"
+   ],
+   "trends": "Gordo Dan"
+  },
+  "Ramiro Marra": {
+   "alias": [
+    "ramiro marra",
+    "marra"
+   ],
+   "bando": "Ex LLA",
+   "cargo": "Legislador porteño, ex LLA",
+   "wiki": [
+    "Ramiro Marra"
+   ],
+   "trends": "Ramiro Marra"
+  }
+ },
+ "obj_fig": {
+  "zicarelli": "Zicarelli",
+  "milei": "Milei",
+  "lemoine": "Lemoine",
+  "dan": "Dan",
+  "parisini": "Dan",
+  "marra": "Marra"
+ },
+ "mapa_poder": {
+  "metodo": "Codificación editorial inicial, a revisar con el cliente. Eje horizontal: 0 = peronismo, 100 = Milei/LLA orgánico. Eje vertical: peso propio (cargo, aparato, votos o audiencia). El tamaño de cada punto sale de las menciones medidas.",
+  "eje_x": "← peronismo · · · centro / vecinales · · · LLA →",
+  "anot": [
+   [
+    6,
+    "PERONISMO",
+    "#5fb3c9"
+   ],
+   [
+    45,
+    "CENTRO / VECINALES",
+    "#f2b705"
+   ],
+   [
+    94,
+    "LLA",
+    "#9085e9"
+   ]
+  ],
+  "puntos": {
+   "Álvaro Zicarelli": {
+    "alineamiento": 82,
+    "peso": 15,
+    "nota": "Nueva derecha por fuera de la estructura de LLA."
+   },
+   "Ramiro Marra": {
+    "alineamiento": 75,
+    "peso": 30,
+    "nota": "Ex libertario con banca."
+   },
+   "Lilia Lemoine": {
+    "alineamiento": 95,
+    "peso": 40,
+    "nota": "Diputada, voz oficialista en redes."
+   },
+   "Gordo Dan": {
+    "alineamiento": 96,
+    "peso": 45,
+    "nota": "Streamer oficialista."
+   },
+   "Karina Milei": {
+    "alineamiento": 98,
+    "peso": 90,
+    "nota": "Conduce LLA."
+   }
+  }
+ },
+ "intenciones": {
+  "quiere": [
+   "queremos",
+   "quiero",
+   "hay que",
+   "necesitamos",
+   "necesita",
+   "necesitan",
+   "hace falta",
+   "falta de",
+   "que se vaya",
+   "que se vayan",
+   "se tiene que ir",
+   "que renuncie",
+   "fuera",
+   "pedimos",
+   "exigimos",
+   "reclamamos",
+   "que pongan",
+   "que arreglen",
+   "que paguen",
+   "aumento",
+   "trabajo genuino",
+   "que vuelva",
+   "que gobierne",
+   "que se presente",
+   "candidato ya",
+   "que investiguen",
+   "que expliquen",
+   "que devuelvan"
+  ],
+  "espera": [
+   "ojalá",
+   "ojala",
+   "espero",
+   "esperamos",
+   "a ver si",
+   "tengo fe",
+   "fe en",
+   "confío",
+   "confio",
+   "confiamos",
+   "se viene",
+   "se vienen",
+   "en 2027",
+   "el año que viene",
+   "vamos a ganar",
+   "vamos a volver",
+   "volver a gobernar",
+   "recuperar la provincia",
+   "ilusión",
+   "ilusion",
+   "esperanza",
+   "sueño",
+   "próximo gobierno",
+   "proximo gobierno",
+   "que gane",
+   "ojalá sea",
+   "ojala sea"
+  ],
+  "critica": [
+   "vergüenza",
+   "verguenza",
+   "desastre",
+   "fracaso",
+   "horrible",
+   "inútil",
+   "inutil",
+   "no sabe",
+   "no saben",
+   "mediocre",
+   "culpa",
+   "culpable",
+   "pésimo",
+   "pesimo",
+   "un asco",
+   "basta",
+   "lamentable",
+   "patético",
+   "patetico",
+   "ridículo",
+   "ridiculo",
+   "nefasto",
+   "incapaz",
+   "chanta",
+   "mentiroso",
+   "mentira",
+   "se robó",
+   "se robo",
+   "chorro",
+   "chorros",
+   "ladrón",
+   "ladron",
+   "corrupto",
+   "corruptos",
+   "corrupción",
+   "corrupcion",
+   "kukas",
+   "kuka",
+   "caradura",
+   "decepción",
+   "decepcion",
+   "hipócrita",
+   "hipocrita",
+   "traidor",
+   "oportunista",
+   "cínico",
+   "cinico",
+   "peor",
+   "fundieron",
+   "destruyeron",
+   "nunca más",
+   "nunca mas"
+  ],
+  "apoya": [
+   "gracias",
+   "excelente",
+   "bien ahí",
+   "bien ahi",
+   "acierto",
+   "felicitaciones",
+   "bravo",
+   "aplausos",
+   "el mejor",
+   "impecable",
+   "lo banco",
+   "bancamos",
+   "todos con",
+   "gran persona",
+   "gran tipo",
+   "un lujo",
+   "coherente",
+   "honesto",
+   "buena gestión",
+   "buena gestion",
+   "orgullo",
+   "genio",
+   "capo",
+   "querido",
+   "sí se puede",
+   "si se puede",
+   "mi voto",
+   "tiene mi voto",
+   "lo voto",
+   "la voto",
+   "valiente",
+   "la única",
+   "la unica",
+   "el único",
+   "el unico",
+   "gran trabajo",
+   "buen trabajo",
+   "tiene razón",
+   "tiene razon",
+   "dice la verdad"
+  ]
+ },
+ "temas": {
+  "Gobierno de Milei": [
+   "milei",
+   "gobierno",
+   "casa rosada",
+   "motosierra",
+   "libertad avanza",
+   "lla"
+  ],
+  "Karina y la interna libertaria": [
+   "karina",
+   "el jefe",
+   "menem",
+   "lule",
+   "interna",
+   "armado",
+   "listas",
+   "traición",
+   "traicion",
+   "traidor"
+  ],
+  "Corrupción y $LIBRA": [
+   "libra",
+   "$libra",
+   "coima",
+   "coimas",
+   "andis",
+   "spagnuolo",
+   "corrupción",
+   "corrupcion",
+   "delincuente"
+  ],
+  "Economía y bolsillo": [
+   "inflación",
+   "inflacion",
+   "dólar",
+   "dolar",
+   "salario",
+   "sueldo",
+   "jubilad",
+   "ajuste",
+   "desempleo",
+   "precios"
+  ],
+  "Libertad de expresión y redes": [
+   "censura",
+   "streaming",
+   "stream",
+   "youtube",
+   "canal",
+   "redes",
+   "trolls",
+   "troll",
+   "influencer",
+   "influencers"
+  ],
+  "Justicia y causas": [
+   "juicio",
+   "procesado",
+   "causa",
+   "denuncia",
+   "juez",
+   "fiscal",
+   "discriminación",
+   "discriminacion"
+  ],
+  "Elecciones 2027 y candidaturas": [
+   "2027",
+   "candidato",
+   "candidatura",
+   "elecciones",
+   "encuesta",
+   "lista",
+   "partido",
+   "presidente"
+  ]
+ },
+ "narrativas": {
+  "Libertarios de la primera hora": [
+   "primera hora",
+   "originarios",
+   "fundadores",
+   "los de siempre",
+   "viudas"
+  ],
+  "Contra Karina": [
+   "karina",
+   "delincuente",
+   "el jefe",
+   "menem"
+  ],
+  "Guerra de influencers": [
+   "trolls",
+   "influencers",
+   "carajo",
+   "gordo dan",
+   "lemoine",
+   "fuerzas del cielo"
+  ],
+  "Candidatura propia": [
+   "candidato",
+   "candidatura",
+   "partido",
+   "2027",
+   "se presenta"
+  ]
+ },
+ "positivo": [
+  "gracias",
+  "excelente",
+  "bien hecho",
+  "muy bien",
+  "felicit",
+  "impecable",
+  "genial",
+  "bravo",
+  "gran persona",
+  "orgullo",
+  "el mejor",
+  "esperanza",
+  "honesto",
+  "coherente"
+ ],
+ "negativo": [
+  "vergüenza",
+  "verguenza",
+  "desastre",
+  "fracaso",
+  "inútil",
+  "inutil",
+  "mentiroso",
+  "chorro",
+  "corrupto",
+  "mediocre",
+  "basta",
+  "patético",
+  "patetico",
+  "horrible",
+  "peor",
+  "nefasto",
+  "kuka",
+  "traidora",
+  "traidor",
+  "panquequ",
+  "operadora",
+  "operador"
+ ],
+ "contexto": [
+  "libertario",
+  "libertarios",
+  "milei",
+  "karina",
+  "derecha",
+  "nueva derecha"
+ ],
+ "excluir_frases": [],
+ "medios_locales": [],
+ "sitios_locales": [],
+ "rss": [
+  {
+   "name": "Letra P",
+   "url": "https://www.letrap.com.ar/rss/home.xml"
+  },
+  {
+   "name": "Página/12",
+   "url": "https://www.pagina12.com.ar/rss/portada"
+  },
+  {
+   "name": "Infobae",
+   "url": "https://www.infobae.com/arc/outboundfeeds/rss/"
+  },
+  {
+   "name": "Clarín",
+   "url": "https://www.clarin.com/rss/politica/"
+  },
+  {
+   "name": "Perfil",
+   "url": "https://www.perfil.com/feed/politica"
+  },
+  {
+   "name": "La Política Online",
+   "url": "https://www.lapoliticaonline.com/rss/"
+  }
+ ],
+ "google_news": {
+  "queries": [
+   "\"Álvaro Zicarelli\"",
+   "\"Zicarelli\" derecha",
+   "\"Zicarelli\" Milei",
+   "nueva derecha Argentina 2027"
+  ],
+  "sites": [
+   "ambito.com",
+   "clarin.com",
+   "cronista.com",
+   "eldestapeweb.com",
+   "infobae.com",
+   "lanacion.com.ar",
+   "lapoliticaonline.com",
+   "letrap.com.ar",
+   "pagina12.com.ar",
+   "perfil.com"
+  ],
+  "site_terms": [
+   "Zicarelli"
+  ]
+ },
+ "youtube": {
+  "region": "AR",
+  "language": "es",
+  "videos_per_query": 6,
+  "comments_per_video": 100,
+  "queries": [
+   "Álvaro Zicarelli",
+   "Zicarelli entrevista",
+   "Zicarelli Milei"
+  ],
+  "contexto": [
+   "zicarelli",
+   "derecha",
+   "milei",
+   "libertari"
+  ],
+  "excluir": []
+ },
+ "trends": {
+  "terminos": [
+   "Zicarelli",
+   "Ramiro Marra",
+   "Lilia Lemoine"
+  ],
+  "geos": {
+   "AR": "Argentina"
+  },
+  "geo_local": "AR"
+ },
+ "wiki_provincia": [],
+ "stop_extra": [
+  "zicarelli",
+  "álvaro",
+  "alvaro"
+ ],
+ "textos_comentarios": "extracto"
+}

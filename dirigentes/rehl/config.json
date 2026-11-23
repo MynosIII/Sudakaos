@@ -1,0 +1,663 @@
+{
+ "nombre": "Monitor Javier Rehl",
+ "slug": "rehl",
+ "color": "#7c4dff",
+ "distrito": "Escobar",
+ "perfil": {
+  "nombre": "Javier Rehl",
+  "corto": "Rehl",
+  "cargo": "Concejal de Escobar",
+  "resumen": "Concejal de Escobar por la lista de Ariel Sujarchuk y referente de las juventudes del espacio de Axel Kicillof. Cuestiona a Milei por la caída del empleo y el cierre de empresas en el distrito.",
+  "objetivo": "Ganar peso propio en Escobar y en el armado de Kicillof hacia 2027.",
+  "fuentes": [
+   "https://eldiadeescobar.com.ar/ramil-sabena-y-rehl-encabezaran-la-lista-de-concejales-de-sujarchuk/",
+   "https://semanario-regional.com.ar/hay-otro-camino-rehl-destaco-el-rol-de-las-juventudes-en-el-espacio-de-kicillof/"
+  ]
+ },
+ "focos": [
+  "Javier Rehl"
+ ],
+ "rivales": [
+  "Diego Santilli",
+  "Javier Milei"
+ ],
+ "co_clave": [
+  "Ariel Sujarchuk",
+  "Axel Kicillof",
+  "Javier Milei",
+  "Cristina Kirchner"
+ ],
+ "window_days": 365,
+ "conversacion_dias": 365,
+ "eleccion": "2027-10-24",
+ "eleccion_nota": "Fecha de referencia: generales de octubre de 2027 (intendencia y concejo de Escobar).",
+ "tema_elecciones": "Elecciones 2027 y candidaturas",
+ "figuras": {
+  "Javier Rehl": {
+   "alias": [
+    "javier rehl",
+    "rehl",
+    "concejal rehl"
+   ],
+   "bando": "Peronismo",
+   "cargo": "Concejal de Escobar",
+   "foco": true,
+   "trends": "Javier Rehl"
+  },
+  "Ariel Sujarchuk": {
+   "alias": [
+    "ariel sujarchuk",
+    "sujarchuk"
+   ],
+   "bando": "Peronismo",
+   "cargo": "Intendente de Escobar",
+   "wiki": [
+    "Ariel Sujarchuk"
+   ],
+   "trends": "Sujarchuk"
+  },
+  "Diego Santilli": {
+   "alias": [
+    "diego santilli",
+    "santilli"
+   ],
+   "bando": "LLA / PRO",
+   "cargo": "Referente de la alianza LLA-PRO en la provincia",
+   "wiki": [
+    "Diego Santilli"
+   ],
+   "trends": "Diego Santilli"
+  },
+  "Axel Kicillof": {
+   "alias": [
+    "axel kicillof",
+    "kicillof"
+   ],
+   "bando": "Nacional",
+   "cargo": "Gobernador de Buenos Aires",
+   "wiki": [
+    "Axel Kicillof"
+   ]
+  },
+  "Javier Milei": {
+   "alias": [
+    "javier milei",
+    "milei"
+   ],
+   "bando": "Nacional",
+   "cargo": "Presidente",
+   "wiki": [
+    "Javier Milei"
+   ]
+  },
+  "Cristina Kirchner": {
+   "alias": [
+    "cristina kirchner",
+    "cristina fernández",
+    "cristina fernandez",
+    "cfk"
+   ],
+   "bando": "Nacional",
+   "cargo": "Expresidenta, conducción del PJ",
+   "wiki": [
+    "Cristina Fernández de Kirchner"
+   ]
+  }
+ },
+ "obj_fig": {
+  "rehl": "Rehl",
+  "sujarchuk": "Sujarchuk",
+  "santilli": "Santilli",
+  "kicillof": "Kicillof",
+  "milei": "Milei",
+  "kirchner": "Kirchner"
+ },
+ "mapa_poder": {
+  "metodo": "Codificación editorial inicial, a revisar con el cliente. Eje horizontal: 0 = peronismo, 100 = Milei/LLA orgánico. Eje vertical: peso propio (cargo, aparato, votos o audiencia). El tamaño de cada punto sale de las menciones medidas.",
+  "eje_x": "← peronismo · · · centro / vecinales · · · LLA →",
+  "anot": [
+   [
+    6,
+    "PERONISMO",
+    "#5fb3c9"
+   ],
+   [
+    45,
+    "CENTRO / VECINALES",
+    "#f2b705"
+   ],
+   [
+    94,
+    "LLA",
+    "#9085e9"
+   ]
+  ],
+  "puntos": {
+   "Javier Rehl": {
+    "alineamiento": 15,
+    "peso": 15,
+    "nota": "Concejal joven, referencia de juventudes del MDF."
+   },
+   "Ariel Sujarchuk": {
+    "alineamiento": 18,
+    "peso": 60,
+    "nota": "Intendente, conduce el peronismo local."
+   },
+   "Diego Santilli": {
+    "alineamiento": 80,
+    "peso": 60,
+    "nota": "Cara de LLA-PRO en la provincia."
+   },
+   "Javier Milei": {
+    "alineamiento": 98,
+    "peso": 95,
+    "nota": "Presidente."
+   },
+   "Axel Kicillof": {
+    "alineamiento": 12,
+    "peso": 90,
+    "nota": "Gobernador; espacio de pertenencia."
+   }
+  }
+ },
+ "intenciones": {
+  "quiere": [
+   "queremos",
+   "quiero",
+   "hay que",
+   "necesitamos",
+   "necesita",
+   "necesitan",
+   "hace falta",
+   "falta de",
+   "que se vaya",
+   "que se vayan",
+   "se tiene que ir",
+   "que renuncie",
+   "fuera",
+   "pedimos",
+   "exigimos",
+   "reclamamos",
+   "que pongan",
+   "que arreglen",
+   "que paguen",
+   "aumento",
+   "trabajo genuino",
+   "que vuelva",
+   "que gobierne",
+   "que se presente",
+   "candidato ya",
+   "que investiguen",
+   "que expliquen",
+   "que devuelvan"
+  ],
+  "espera": [
+   "ojalá",
+   "ojala",
+   "espero",
+   "esperamos",
+   "a ver si",
+   "tengo fe",
+   "fe en",
+   "confío",
+   "confio",
+   "confiamos",
+   "se viene",
+   "se vienen",
+   "en 2027",
+   "el año que viene",
+   "vamos a ganar",
+   "vamos a volver",
+   "volver a gobernar",
+   "recuperar la provincia",
+   "ilusión",
+   "ilusion",
+   "esperanza",
+   "sueño",
+   "próximo gobierno",
+   "proximo gobierno",
+   "que gane",
+   "ojalá sea",
+   "ojala sea"
+  ],
+  "critica": [
+   "vergüenza",
+   "verguenza",
+   "desastre",
+   "fracaso",
+   "horrible",
+   "inútil",
+   "inutil",
+   "no sabe",
+   "no saben",
+   "mediocre",
+   "culpa",
+   "culpable",
+   "pésimo",
+   "pesimo",
+   "un asco",
+   "basta",
+   "lamentable",
+   "patético",
+   "patetico",
+   "ridículo",
+   "ridiculo",
+   "nefasto",
+   "incapaz",
+   "chanta",
+   "mentiroso",
+   "mentira",
+   "se robó",
+   "se robo",
+   "chorro",
+   "chorros",
+   "ladrón",
+   "ladron",
+   "corrupto",
+   "corruptos",
+   "corrupción",
+   "corrupcion",
+   "kukas",
+   "kuka",
+   "caradura",
+   "decepción",
+   "decepcion",
+   "hipócrita",
+   "hipocrita",
+   "traidor",
+   "oportunista",
+   "cínico",
+   "cinico",
+   "peor",
+   "fundieron",
+   "destruyeron",
+   "nunca más",
+   "nunca mas"
+  ],
+  "apoya": [
+   "gracias",
+   "excelente",
+   "bien ahí",
+   "bien ahi",
+   "acierto",
+   "felicitaciones",
+   "bravo",
+   "aplausos",
+   "el mejor",
+   "impecable",
+   "lo banco",
+   "bancamos",
+   "todos con",
+   "gran persona",
+   "gran tipo",
+   "un lujo",
+   "coherente",
+   "honesto",
+   "buena gestión",
+   "buena gestion",
+   "orgullo",
+   "genio",
+   "capo",
+   "querido",
+   "sí se puede",
+   "si se puede",
+   "mi voto",
+   "tiene mi voto",
+   "lo voto",
+   "la voto",
+   "valiente",
+   "la única",
+   "la unica",
+   "el único",
+   "el unico",
+   "gran trabajo",
+   "buen trabajo",
+   "tiene razón",
+   "tiene razon",
+   "dice la verdad"
+  ]
+ },
+ "temas": {
+  "Seguridad": [
+   "seguridad",
+   "inseguridad",
+   "policía",
+   "policia",
+   "delito",
+   "robo",
+   "robos",
+   "narco",
+   "droga",
+   "drogas",
+   "crimen",
+   "motochorro"
+  ],
+  "Economía y bolsillo": [
+   "inflación",
+   "inflacion",
+   "precios",
+   "salario",
+   "salarios",
+   "sueldo",
+   "sueldos",
+   "jubilad",
+   "dólar",
+   "dolar",
+   "ajuste",
+   "tarifas",
+   "desempleo",
+   "empleo",
+   "pobreza",
+   "comercio",
+   "comercios",
+   "pymes",
+   "pyme",
+   "fábrica",
+   "fabrica",
+   "despidos"
+  ],
+  "Salud y educación": [
+   "hospital",
+   "hospitales",
+   "salud",
+   "guardia",
+   "escuela",
+   "escuelas",
+   "docentes",
+   "educación",
+   "educacion",
+   "universidad"
+  ],
+  "Obras y servicios": [
+   "obra",
+   "obras",
+   "asfalto",
+   "cloacas",
+   "agua",
+   "luz",
+   "basura",
+   "baches",
+   "calles",
+   "iluminación",
+   "iluminacion",
+   "transporte",
+   "colectivo",
+   "colectivos",
+   "vivienda",
+   "viviendas"
+  ],
+  "Gobierno de Milei": [
+   "milei",
+   "gobierno nacional",
+   "casa rosada",
+   "motosierra",
+   "libertad avanza",
+   "karina"
+  ],
+  "Corrupción y transparencia": [
+   "corrupción",
+   "corrupcion",
+   "coima",
+   "coimas",
+   "enriquecimiento",
+   "denuncia",
+   "causa",
+   "juzgado",
+   "fiscal",
+   "transparencia",
+   "declaración jurada",
+   "declaracion jurada"
+  ],
+  "Elecciones 2027 y candidaturas": [
+   "2027",
+   "candidato",
+   "candidata",
+   "candidatura",
+   "elecciones",
+   "encuesta",
+   "lista",
+   "listas",
+   "alianza",
+   "votos",
+   "votar",
+   "intendente",
+   "intendenta",
+   "gobernador",
+   "gobernación",
+   "gobernacion",
+   "senado"
+  ],
+  "Empleo e industria": [
+   "parque industrial",
+   "fábrica",
+   "fabrica",
+   "empresas",
+   "cierre",
+   "despidos",
+   "empleo"
+  ],
+  "Juventud y nuevas agendas": [
+   "jóvenes",
+   "jovenes",
+   "juventud",
+   "inteligencia artificial",
+   " ia ",
+   "tecnología",
+   "tecnologia"
+  ]
+ },
+ "narrativas": {
+  "Crítica al ajuste": [
+   "ajuste",
+   "motosierra",
+   "la gente no llega",
+   "bolsillo",
+   "changuito",
+   "despidos",
+   "cierre"
+  ],
+  "Gestión y obras": [
+   "obra",
+   "obras",
+   "gestión",
+   "gestion",
+   "inauguró",
+   "inauguro",
+   "recorrió",
+   "recorrio"
+  ],
+  "Conflicto e internas": [
+   "interna",
+   "pelea",
+   "cruce",
+   "ruptura",
+   "denuncia"
+  ],
+  "Unidad y armado 2027": [
+   "unidad",
+   "armado",
+   "2027",
+   "frente",
+   "alternativa",
+   "candidat"
+  ],
+  "Peronismo en reconstrucción": [
+   "ordenar el peronismo",
+   "unidad",
+   "nuevos intérpretes",
+   "nuevos interpretes",
+   "quiebre"
+  ],
+  "Kicillof 2027": [
+   "kicillof",
+   "mdf",
+   "movimiento derecho al futuro"
+  ]
+ },
+ "positivo": [
+  "gracias",
+  "excelente",
+  "bien hecho",
+  "muy bien",
+  "felicit",
+  "impecable",
+  "genial",
+  "bravo",
+  "gran persona",
+  "orgullo",
+  "el mejor",
+  "esperanza",
+  "honesto",
+  "coherente"
+ ],
+ "negativo": [
+  "vergüenza",
+  "verguenza",
+  "desastre",
+  "fracaso",
+  "inútil",
+  "inutil",
+  "mentiroso",
+  "chorro",
+  "corrupto",
+  "mediocre",
+  "basta",
+  "patético",
+  "patetico",
+  "horrible",
+  "peor",
+  "nefasto",
+  "kuka",
+  "traidora",
+  "traidor",
+  "panquequ",
+  "operadora",
+  "operador"
+ ],
+ "contexto": [
+  "escobar",
+  "garín",
+  "garin",
+  "belén de escobar",
+  "belen de escobar",
+  "maquinista savio",
+  "ingeniero maschwitz",
+  "maschwitz",
+  "concejo deliberante"
+ ],
+ "excluir_frases": [],
+ "medios_locales": [
+  "el día de escobar",
+  "el dia de escobar",
+  "zona norte hoy",
+  "agencia comunas",
+  "norte online"
+ ],
+ "sitios_locales": [
+  "eldiadeescobar.com.ar",
+  "zonanortehoy.com",
+  "agenciacomunas.com.ar",
+  "norteonline.com.ar"
+ ],
+ "rss": [
+  {
+   "name": "El Día de Escobar",
+   "url": "https://eldiadeescobar.com.ar/feed/",
+   "local": true
+  },
+  {
+   "name": "Zona Norte Hoy",
+   "url": "https://www.zonanortehoy.com/feed/",
+   "local": true
+  },
+  {
+   "name": "Letra P",
+   "url": "https://www.letrap.com.ar/rss/home.xml"
+  },
+  {
+   "name": "Página/12",
+   "url": "https://www.pagina12.com.ar/rss/portada"
+  },
+  {
+   "name": "Infobae",
+   "url": "https://www.infobae.com/arc/outboundfeeds/rss/"
+  },
+  {
+   "name": "Clarín",
+   "url": "https://www.clarin.com/rss/politica/"
+  },
+  {
+   "name": "Perfil",
+   "url": "https://www.perfil.com/feed/politica"
+  }
+ ],
+ "google_news": {
+  "queries": [
+   "\"Javier Rehl\"",
+   "\"Rehl\" Escobar",
+   "\"Rehl\" concejal",
+   "\"Rehl\" Kicillof",
+   "\"Sujarchuk\" Escobar",
+   "Escobar concejo deliberante"
+  ],
+  "sites": [
+   "agenciacomunas.com.ar",
+   "ambito.com",
+   "clarin.com",
+   "cronista.com",
+   "eldestapeweb.com",
+   "eldiadeescobar.com.ar",
+   "infobae.com",
+   "lanacion.com.ar",
+   "lapoliticaonline.com",
+   "letrap.com.ar",
+   "norteonline.com.ar",
+   "pagina12.com.ar",
+   "perfil.com",
+   "zonanortehoy.com"
+  ],
+  "site_terms": [
+   "Rehl"
+  ]
+ },
+ "youtube": {
+  "region": "AR",
+  "language": "es",
+  "videos_per_query": 6,
+  "comments_per_video": 100,
+  "queries": [
+   "Javier Rehl",
+   "Javier Rehl entrevista",
+   "Escobar Sujarchuk",
+   "Escobar concejo deliberante"
+  ],
+  "contexto": [
+   "rehl",
+   "escobar",
+   "sujarchuk",
+   "kicillof",
+   "peronismo"
+  ],
+  "excluir": []
+ },
+ "trends": {
+  "terminos": [
+   "Javier Rehl",
+   "Sujarchuk"
+  ],
+  "geos": {
+   "AR-B": "Provincia de Buenos Aires",
+   "AR": "Argentina"
+  },
+  "geo_local": "AR-B"
+ },
+ "wiki_provincia": [
+  "Provincia de Buenos Aires"
+ ],
+ "stop_extra": [
+  "rehl",
+  "javier",
+  "escobar"
+ ],
+ "textos_comentarios": "extracto"
+}

@@ -543,6 +543,193 @@
      ]
     }
    ]
+  },
+  "dirigentes-raverta": {
+   "titulo": "Fernanda Raverta",
+   "figuras": [
+    {
+     "name": "Fernanda Raverta",
+     "ig": [
+      "fernandaraverta",
+      "raverta.fernanda",
+      "fernanda_raverta",
+      "ferraverta"
+     ]
+    },
+    {
+     "name": "Guillermo Montenegro"
+    },
+    {
+     "name": "Vilma Baragiola"
+    },
+    {
+     "name": "Alejandro Carrancio"
+    }
+   ]
+  },
+  "dirigentes-otermin": {
+   "titulo": "Federico Otermin",
+   "figuras": [
+    {
+     "name": "Federico Otermin",
+     "ig": [
+      "federico.otermin",
+      "federicootermin_",
+      "fedeotermin",
+      "otermin.federico"
+     ]
+    },
+    {
+     "name": "Diego Santilli"
+    },
+    {
+     "name": "Jorge Ferraresi"
+    },
+    {
+     "name": "Máximo Kirchner"
+    }
+   ]
+  },
+  "dirigentes-rehl": {
+   "titulo": "Javier Rehl",
+   "figuras": [
+    {
+     "name": "Javier Rehl",
+     "ig": [
+      "javi.rehl",
+      "javierrehl_",
+      "rehljavier",
+      "javi_rehl"
+     ]
+    },
+    {
+     "name": "Diego Santilli"
+    },
+    {
+     "name": "Javier Milei"
+    }
+   ]
+  },
+  "dirigentes-ramos": {
+   "titulo": "Juan Ramos",
+   "figuras": [
+    {
+     "name": "Juan Ramos",
+     "ig": [
+      "juanramosbaradero"
+     ]
+    },
+    {
+     "name": "Esteban Sanzio"
+    }
+   ]
+  },
+  "dirigentes-avila": {
+   "titulo": "Beatriz Ávila",
+   "figuras": [
+    {
+     "name": "Beatriz Ávila",
+     "ig": [
+      "beatrizavilaok"
+     ]
+    },
+    {
+     "name": "Juan Manzur"
+    },
+    {
+     "name": "Rossana Chahla"
+    },
+    {
+     "name": "Roberto Sánchez"
+    },
+    {
+     "name": "Lisandro Catalán"
+    }
+   ]
+  },
+  "dirigentes-akirchner": {
+   "titulo": "Alicia Kirchner",
+   "figuras": [
+    {
+     "name": "Alicia Kirchner",
+     "ig": [
+      "aliciakirchner"
+     ]
+    },
+    {
+     "name": "Claudio Vidal"
+    },
+    {
+     "name": "Jairo Guzmán"
+    },
+    {
+     "name": "Pablo Grasso"
+    }
+   ]
+  },
+  "dirigentes-zicarelli": {
+   "titulo": "Álvaro Zicarelli",
+   "figuras": [
+    {
+     "name": "Álvaro Zicarelli",
+     "ig": [
+      "alvarozicarelli"
+     ]
+    },
+    {
+     "name": "Ramiro Marra"
+    },
+    {
+     "name": "Lilia Lemoine"
+    },
+    {
+     "name": "Gordo Dan"
+    }
+   ]
+  },
+  "dirigentes-presto": {
+   "titulo": "El Presto",
+   "figuras": [
+    {
+     "name": "El Presto",
+     "ig": [
+      "elprestook",
+      "elpresto",
+      "el.presto"
+     ]
+    },
+    {
+     "name": "Lilia Lemoine"
+    },
+    {
+     "name": "Gordo Dan"
+    },
+    {
+     "name": "Karina Milei"
+    }
+   ]
+  },
+  "dirigentes-danann": {
+   "titulo": "Danann",
+   "figuras": [
+    {
+     "name": "Danann",
+     "ig": [
+      "danann",
+      "danannok",
+      "danann_"
+     ]
+    },
+    {
+     "name": "Lilia Lemoine"
+    },
+    {
+     "name": "Gordo Dan"
+    },
+    {
+     "name": "Karina Milei"
+    }
+   ]
   }
  }
 }

@@ -1,0 +1,727 @@
+{
+ "nombre": "Monitor Alicia Kirchner",
+ "slug": "akirchner",
+ "color": "#c0392b",
+ "distrito": "Santa Cruz",
+ "perfil": {
+  "nombre": "Alicia Kirchner",
+  "corto": "Alicia",
+  "cargo": "Senadora nacional por Santa Cruz; exgobernadora (2015-2023)",
+  "resumen": "Exgobernadora de Santa Cruz (2015-2023) y exministra de Desarrollo Social de la Nación. Como senadora nacional vota en contra de reformas del gobierno, como la de la Ley de Glaciares.",
+  "objetivo": "Sostener la voz del kirchnerismo santacruceño frente al gobierno de Claudio Vidal y rumbo a 2027.",
+  "fuentes": [
+   "https://www.baenegocios.com/tema/alicia-kirchner/"
+  ]
+ },
+ "focos": [
+  "Alicia Kirchner"
+ ],
+ "rivales": [
+  "Claudio Vidal",
+  "Jairo Guzmán",
+  "Pablo Grasso"
+ ],
+ "co_clave": [
+  "Cristina Kirchner",
+  "Máximo Kirchner",
+  "Claudio Vidal",
+  "Pablo Grasso",
+  "Juan Carlos Molina"
+ ],
+ "window_days": 365,
+ "conversacion_dias": 365,
+ "eleccion": "2027-10-24",
+ "eleccion_nota": "Fecha de referencia: generales de octubre de 2027 (gobernación de Santa Cruz).",
+ "tema_elecciones": "Elecciones 2027 y candidaturas",
+ "figuras": {
+  "Alicia Kirchner": {
+   "alias": [
+    "alicia kirchner",
+    "alicia",
+    "senadora kirchner"
+   ],
+   "bando": "Peronismo",
+   "cargo": "Senadora nacional por Santa Cruz; exgobernadora",
+   "alias_contexto": [
+    "alicia"
+   ],
+   "foco": true,
+   "wiki": [
+    "Alicia Kirchner"
+   ],
+   "trends": "Alicia Kirchner"
+  },
+  "Claudio Vidal": {
+   "alias": [
+    "claudio vidal",
+    "vidal",
+    "gobernador vidal",
+    "gobernador de santa cruz"
+   ],
+   "bando": "Por Santa Cruz",
+   "cargo": "Gobernador de Santa Cruz; buscará la reelección",
+   "wiki": [
+    "Claudio Vidal"
+   ],
+   "trends": "Claudio Vidal"
+  },
+  "Pablo Grasso": {
+   "alias": [
+    "pablo grasso",
+    "grasso"
+   ],
+   "bando": "Peronismo",
+   "cargo": "Intendente de Río Gallegos",
+   "wiki": [
+    "Pablo Grasso"
+   ],
+   "trends": "Pablo Grasso"
+  },
+  "Juan Carlos Molina": {
+   "alias": [
+    "juan carlos molina",
+    "cura molina",
+    "padre molina"
+   ],
+   "bando": "Peronismo",
+   "cargo": "Diputado nacional por Santa Cruz",
+   "wiki": [
+    "Juan Carlos Molina"
+   ],
+   "trends": "Juan Carlos Molina"
+  },
+  "Jairo Guzmán": {
+   "alias": [
+    "jairo guzmán",
+    "jairo guzman"
+   ],
+   "bando": "La Libertad Avanza",
+   "cargo": "Referente de LLA en Santa Cruz"
+  },
+  "Cristina Kirchner": {
+   "alias": [
+    "cristina kirchner",
+    "cristina fernández",
+    "cristina fernandez",
+    "cfk"
+   ],
+   "bando": "Nacional",
+   "cargo": "Expresidenta, conducción del PJ",
+   "wiki": [
+    "Cristina Fernández de Kirchner"
+   ]
+  },
+  "Javier Milei": {
+   "alias": [
+    "javier milei",
+    "milei"
+   ],
+   "bando": "Nacional",
+   "cargo": "Presidente",
+   "wiki": [
+    "Javier Milei"
+   ]
+  },
+  "Máximo Kirchner": {
+   "alias": [
+    "máximo kirchner",
+    "maximo kirchner"
+   ],
+   "bando": "Nacional",
+   "cargo": "Diputado nacional, La Cámpora",
+   "wiki": [
+    "Máximo Kirchner"
+   ]
+  }
+ },
+ "obj_fig": {
+  "kirchner": "Kirchner",
+  "alicia": "Kirchner",
+  "vidal": "Vidal",
+  "grasso": "Grasso",
+  "molina": "Molina",
+  "guzman": "Guzmán",
+  "milei": "Milei"
+ },
+ "mapa_poder": {
+  "metodo": "Codificación editorial inicial, a revisar con el cliente. Eje horizontal: 0 = peronismo, 100 = Milei/LLA orgánico. Eje vertical: peso propio (cargo, aparato, votos o audiencia). El tamaño de cada punto sale de las menciones medidas.",
+  "eje_x": "← peronismo · · · centro / vecinales · · · LLA →",
+  "anot": [
+   [
+    6,
+    "PERONISMO",
+    "#5fb3c9"
+   ],
+   [
+    45,
+    "CENTRO / VECINALES",
+    "#f2b705"
+   ],
+   [
+    94,
+    "LLA",
+    "#9085e9"
+   ]
+  ],
+  "puntos": {
+   "Alicia Kirchner": {
+    "alineamiento": 10,
+    "peso": 50,
+    "nota": "Kirchnerismo histórico santacruceño, hoy en el Senado."
+   },
+   "Claudio Vidal": {
+    "alineamiento": 50,
+    "peso": 85,
+    "nota": "Gobernador; desplazó al kirchnerismo en 2023."
+   },
+   "Pablo Grasso": {
+    "alineamiento": 20,
+    "peso": 55,
+    "nota": "Intendente de la capital, aspirante a la gobernación."
+   },
+   "Juan Carlos Molina": {
+    "alineamiento": 15,
+    "peso": 45,
+    "nota": "Ganó la elección de diputados 2025."
+   },
+   "Jairo Guzmán": {
+    "alineamiento": 92,
+    "peso": 35,
+    "nota": "LLA local."
+   },
+   "Cristina Kirchner": {
+    "alineamiento": 5,
+    "peso": 85,
+    "nota": "Conducción nacional."
+   }
+  }
+ },
+ "intenciones": {
+  "quiere": [
+   "queremos",
+   "quiero",
+   "hay que",
+   "necesitamos",
+   "necesita",
+   "necesitan",
+   "hace falta",
+   "falta de",
+   "que se vaya",
+   "que se vayan",
+   "se tiene que ir",
+   "que renuncie",
+   "fuera",
+   "pedimos",
+   "exigimos",
+   "reclamamos",
+   "que pongan",
+   "que arreglen",
+   "que paguen",
+   "aumento",
+   "trabajo genuino",
+   "que vuelva",
+   "que gobierne",
+   "que se presente",
+   "candidato ya",
+   "que investiguen",
+   "que expliquen",
+   "que devuelvan"
+  ],
+  "espera": [
+   "ojalá",
+   "ojala",
+   "espero",
+   "esperamos",
+   "a ver si",
+   "tengo fe",
+   "fe en",
+   "confío",
+   "confio",
+   "confiamos",
+   "se viene",
+   "se vienen",
+   "en 2027",
+   "el año que viene",
+   "vamos a ganar",
+   "vamos a volver",
+   "volver a gobernar",
+   "recuperar la provincia",
+   "ilusión",
+   "ilusion",
+   "esperanza",
+   "sueño",
+   "próximo gobierno",
+   "proximo gobierno",
+   "que gane",
+   "ojalá sea",
+   "ojala sea"
+  ],
+  "critica": [
+   "vergüenza",
+   "verguenza",
+   "desastre",
+   "fracaso",
+   "horrible",
+   "inútil",
+   "inutil",
+   "no sabe",
+   "no saben",
+   "mediocre",
+   "culpa",
+   "culpable",
+   "pésimo",
+   "pesimo",
+   "un asco",
+   "basta",
+   "lamentable",
+   "patético",
+   "patetico",
+   "ridículo",
+   "ridiculo",
+   "nefasto",
+   "incapaz",
+   "chanta",
+   "mentiroso",
+   "mentira",
+   "se robó",
+   "se robo",
+   "chorro",
+   "chorros",
+   "ladrón",
+   "ladron",
+   "corrupto",
+   "corruptos",
+   "corrupción",
+   "corrupcion",
+   "kukas",
+   "kuka",
+   "caradura",
+   "decepción",
+   "decepcion",
+   "hipócrita",
+   "hipocrita",
+   "traidor",
+   "oportunista",
+   "cínico",
+   "cinico",
+   "peor",
+   "fundieron",
+   "destruyeron",
+   "nunca más",
+   "nunca mas"
+  ],
+  "apoya": [
+   "gracias",
+   "excelente",
+   "bien ahí",
+   "bien ahi",
+   "acierto",
+   "felicitaciones",
+   "bravo",
+   "aplausos",
+   "el mejor",
+   "impecable",
+   "lo banco",
+   "bancamos",
+   "todos con",
+   "gran persona",
+   "gran tipo",
+   "un lujo",
+   "coherente",
+   "honesto",
+   "buena gestión",
+   "buena gestion",
+   "orgullo",
+   "genio",
+   "capo",
+   "querido",
+   "sí se puede",
+   "si se puede",
+   "mi voto",
+   "tiene mi voto",
+   "lo voto",
+   "la voto",
+   "valiente",
+   "la única",
+   "la unica",
+   "el único",
+   "el unico",
+   "gran trabajo",
+   "buen trabajo",
+   "tiene razón",
+   "tiene razon",
+   "dice la verdad"
+  ]
+ },
+ "temas": {
+  "Seguridad": [
+   "seguridad",
+   "inseguridad",
+   "policía",
+   "policia",
+   "delito",
+   "robo",
+   "robos",
+   "narco",
+   "droga",
+   "drogas",
+   "crimen",
+   "motochorro"
+  ],
+  "Economía y bolsillo": [
+   "inflación",
+   "inflacion",
+   "precios",
+   "salario",
+   "salarios",
+   "sueldo",
+   "sueldos",
+   "jubilad",
+   "dólar",
+   "dolar",
+   "ajuste",
+   "tarifas",
+   "desempleo",
+   "empleo",
+   "pobreza",
+   "comercio",
+   "comercios",
+   "pymes",
+   "pyme",
+   "fábrica",
+   "fabrica",
+   "despidos"
+  ],
+  "Salud y educación": [
+   "hospital",
+   "hospitales",
+   "salud",
+   "guardia",
+   "escuela",
+   "escuelas",
+   "docentes",
+   "educación",
+   "educacion",
+   "universidad"
+  ],
+  "Obras y servicios": [
+   "obra",
+   "obras",
+   "asfalto",
+   "cloacas",
+   "agua",
+   "luz",
+   "basura",
+   "baches",
+   "calles",
+   "iluminación",
+   "iluminacion",
+   "transporte",
+   "colectivo",
+   "colectivos",
+   "vivienda",
+   "viviendas"
+  ],
+  "Gobierno de Milei": [
+   "milei",
+   "gobierno nacional",
+   "casa rosada",
+   "motosierra",
+   "libertad avanza",
+   "karina"
+  ],
+  "Corrupción y transparencia": [
+   "corrupción",
+   "corrupcion",
+   "coima",
+   "coimas",
+   "enriquecimiento",
+   "denuncia",
+   "causa",
+   "juzgado",
+   "fiscal",
+   "transparencia",
+   "declaración jurada",
+   "declaracion jurada"
+  ],
+  "Elecciones 2027 y candidaturas": [
+   "2027",
+   "candidato",
+   "candidata",
+   "candidatura",
+   "elecciones",
+   "encuesta",
+   "lista",
+   "listas",
+   "alianza",
+   "votos",
+   "votar",
+   "intendente",
+   "intendenta",
+   "gobernador",
+   "gobernación",
+   "gobernacion",
+   "senado"
+  ],
+  "Petróleo, minería y glaciares": [
+   "petróleo",
+   "petroleo",
+   "ypf",
+   "minería",
+   "mineria",
+   "glaciares",
+   "represas",
+   "ycrt",
+   "carbón",
+   "carbon"
+  ],
+  "Senado y leyes": [
+   "senado",
+   "sesión",
+   "sesion",
+   "ley",
+   "proyecto",
+   "votó",
+   "voto"
+  ]
+ },
+ "narrativas": {
+  "Crítica al ajuste": [
+   "ajuste",
+   "motosierra",
+   "la gente no llega",
+   "bolsillo",
+   "changuito",
+   "despidos",
+   "cierre"
+  ],
+  "Gestión y obras": [
+   "obra",
+   "obras",
+   "gestión",
+   "gestion",
+   "inauguró",
+   "inauguro",
+   "recorrió",
+   "recorrio"
+  ],
+  "Conflicto e internas": [
+   "interna",
+   "pelea",
+   "cruce",
+   "ruptura",
+   "denuncia"
+  ],
+  "Unidad y armado 2027": [
+   "unidad",
+   "armado",
+   "2027",
+   "frente",
+   "alternativa",
+   "candidat"
+  ],
+  "Kirchnerismo vs. Vidal": [
+   "vidal",
+   "gobierno provincial",
+   "herencia",
+   "deuda"
+  ],
+  "Familia Kirchner": [
+   "cristina",
+   "máximo",
+   "maximo",
+   "néstor",
+   "nestor",
+   "familia"
+  ]
+ },
+ "positivo": [
+  "gracias",
+  "excelente",
+  "bien hecho",
+  "muy bien",
+  "felicit",
+  "impecable",
+  "genial",
+  "bravo",
+  "gran persona",
+  "orgullo",
+  "el mejor",
+  "esperanza",
+  "honesto",
+  "coherente"
+ ],
+ "negativo": [
+  "vergüenza",
+  "verguenza",
+  "desastre",
+  "fracaso",
+  "inútil",
+  "inutil",
+  "mentiroso",
+  "chorro",
+  "corrupto",
+  "mediocre",
+  "basta",
+  "patético",
+  "patetico",
+  "horrible",
+  "peor",
+  "nefasto",
+  "kuka",
+  "traidora",
+  "traidor",
+  "panquequ",
+  "operadora",
+  "operador"
+ ],
+ "contexto": [
+  "santa cruz",
+  "santacruceño",
+  "santacruceña",
+  "río gallegos",
+  "rio gallegos",
+  "caleta olivia",
+  "el calafate",
+  "senadora"
+ ],
+ "excluir_frases": [],
+ "medios_locales": [
+  "la opinión austral",
+  "tiemposur",
+  "opi santa cruz",
+  "nuevo día",
+  "ahora calafate",
+  "la vanguardia noticias",
+  "santa cruz nuestro lugar"
+ ],
+ "sitios_locales": [
+  "laopinionaustral.com.ar",
+  "tiemposur.com.ar",
+  "opisantacruz.com.ar",
+  "eldiarionuevodia.com.ar",
+  "ahoracalafate.com.ar"
+ ],
+ "rss": [
+  {
+   "name": "La Opinión Austral",
+   "url": "https://laopinionaustral.com.ar/feed",
+   "local": true
+  },
+  {
+   "name": "TiempoSur",
+   "url": "https://www.tiemposur.com.ar/rss",
+   "local": true
+  },
+  {
+   "name": "OPI Santa Cruz",
+   "url": "https://www.opisantacruz.com.ar/feed/",
+   "local": true
+  },
+  {
+   "name": "Nuevo Día",
+   "url": "https://www.eldiarionuevodia.com.ar/feed/",
+   "local": true
+  },
+  {
+   "name": "Ahora Calafate",
+   "url": "https://www.ahoracalafate.com.ar/feed/",
+   "local": true
+  },
+  {
+   "name": "La Vanguardia Noticias",
+   "url": "https://www.lavanguardianoticias.com.ar/feed/",
+   "local": true
+  },
+  {
+   "name": "Santa Cruz Nuestro Lugar",
+   "url": "https://www.santacruznuestrolugar.com/blog-feed.xml",
+   "local": true
+  },
+  {
+   "name": "Letra P",
+   "url": "https://www.letrap.com.ar/rss/home.xml"
+  },
+  {
+   "name": "Página/12",
+   "url": "https://www.pagina12.com.ar/rss/portada"
+  },
+  {
+   "name": "Infobae Política",
+   "url": "https://www.infobae.com/arc/outboundfeeds/rss/category/politica/"
+  }
+ ],
+ "google_news": {
+  "queries": [
+   "\"Alicia Kirchner\"",
+   "\"Alicia Kirchner\" senado",
+   "\"Alicia Kirchner\" Vidal",
+   "\"Alicia Kirchner\" Santa Cruz",
+   "Santa Cruz 2027 gobernación",
+   "\"Claudio Vidal\" 2027"
+  ],
+  "sites": [
+   "ahoracalafate.com.ar",
+   "ambito.com",
+   "clarin.com",
+   "cronista.com",
+   "eldestapeweb.com",
+   "eldiarionuevodia.com.ar",
+   "infobae.com",
+   "lanacion.com.ar",
+   "laopinionaustral.com.ar",
+   "lapoliticaonline.com",
+   "letrap.com.ar",
+   "opisantacruz.com.ar",
+   "pagina12.com.ar",
+   "perfil.com",
+   "tiemposur.com.ar"
+  ],
+  "site_terms": [
+   "Alicia Kirchner"
+  ]
+ },
+ "youtube": {
+  "region": "AR",
+  "language": "es",
+  "videos_per_query": 6,
+  "comments_per_video": 100,
+  "queries": [
+   "Alicia Kirchner",
+   "Alicia Kirchner senado",
+   "Alicia Kirchner Santa Cruz",
+   "Santa Cruz Vidal kirchnerismo"
+  ],
+  "contexto": [
+   "alicia",
+   "kirchner",
+   "santa cruz",
+   "vidal",
+   "senado"
+  ],
+  "excluir": []
+ },
+ "trends": {
+  "terminos": [
+   "Alicia Kirchner",
+   "Claudio Vidal",
+   "Pablo Grasso"
+  ],
+  "geos": {
+   "AR-Z": "Santa Cruz",
+   "AR": "Argentina"
+  },
+  "geo_local": "AR-Z"
+ },
+ "wiki_provincia": [
+  "Provincia de Santa Cruz"
+ ],
+ "stop_extra": [
+  "alicia",
+  "kirchner",
+  "santa",
+  "cruz",
+  "senadora"
+ ],
+ "textos_comentarios": "extracto"
+}

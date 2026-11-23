@@ -1,0 +1,601 @@
+{
+ "nombre": "Monitor Juan Ramos",
+ "slug": "ramos",
+ "color": "#f08c00",
+ "distrito": "Baradero",
+ "perfil": {
+  "nombre": "Juan Ramos",
+  "corto": "Ramos",
+  "cargo": "Candidato a intendente de Baradero (Baradero 400 Años)",
+  "resumen": "Encabeza Baradero 400 Años, la fuerza vecinal que ganó en Baradero las legislativas de 2025. Se proyecta como candidato a intendente en 2027 frente al peronismo de Esteban Sanzio.",
+  "objetivo": "Ganar la intendencia de Baradero en 2027.",
+  "fuentes": [
+   "https://tulineadirecta.com.ar/politica/elecciones-legislativas-juan-ramos-gano-en-baradero/",
+   "https://www.newsdigitales.com/nota/311696/baradero-400-anos-lidera-en-elecciones-con-juan-ramos-a-la-cabeza/"
+  ]
+ },
+ "focos": [
+  "Juan Ramos"
+ ],
+ "rivales": [
+  "Esteban Sanzio"
+ ],
+ "co_clave": [
+  "Esteban Sanzio",
+  "Axel Kicillof",
+  "Javier Milei"
+ ],
+ "window_days": 365,
+ "conversacion_dias": 365,
+ "eleccion": "2027-10-24",
+ "eleccion_nota": "Fecha de referencia: generales de octubre de 2027, cuando se elige intendente de Baradero.",
+ "tema_elecciones": "Elecciones 2027 y candidaturas",
+ "figuras": {
+  "Juan Ramos": {
+   "alias": [
+    "juan ramos",
+    "ramos",
+    "baradero 400 años",
+    "baradero 400 anos"
+   ],
+   "bando": "Baradero 400 Años",
+   "cargo": "Candidato a intendente de Baradero",
+   "alias_contexto": [
+    "juan ramos",
+    "ramos"
+   ],
+   "foco": true,
+   "trends": "Juan Ramos Baradero"
+  },
+  "Esteban Sanzio": {
+   "alias": [
+    "esteban sanzio",
+    "sanzio",
+    "tito sanzio",
+    "intendente sanzio"
+   ],
+   "bando": "Peronismo",
+   "cargo": "Intendente de Baradero",
+   "trends": "Sanzio"
+  },
+  "Axel Kicillof": {
+   "alias": [
+    "axel kicillof",
+    "kicillof"
+   ],
+   "bando": "Nacional",
+   "cargo": "Gobernador de Buenos Aires",
+   "wiki": [
+    "Axel Kicillof"
+   ]
+  },
+  "Javier Milei": {
+   "alias": [
+    "javier milei",
+    "milei"
+   ],
+   "bando": "Nacional",
+   "cargo": "Presidente",
+   "wiki": [
+    "Javier Milei"
+   ]
+  }
+ },
+ "obj_fig": {
+  "ramos": "Ramos",
+  "sanzio": "Sanzio",
+  "kicillof": "Kicillof",
+  "milei": "Milei"
+ },
+ "mapa_poder": {
+  "metodo": "Codificación editorial inicial, a revisar con el cliente. Eje horizontal: 0 = peronismo, 100 = Milei/LLA orgánico. Eje vertical: peso propio (cargo, aparato, votos o audiencia). El tamaño de cada punto sale de las menciones medidas.",
+  "eje_x": "← peronismo · · · centro / vecinales · · · LLA →",
+  "anot": [
+   [
+    6,
+    "PERONISMO",
+    "#5fb3c9"
+   ],
+   [
+    45,
+    "CENTRO / VECINALES",
+    "#f2b705"
+   ],
+   [
+    94,
+    "LLA",
+    "#9085e9"
+   ]
+  ],
+  "puntos": {
+   "Juan Ramos": {
+    "alineamiento": 55,
+    "peso": 40,
+    "nota": "Vecinalismo: ganó el distrito en 2025 por fuera de los partidos nacionales."
+   },
+   "Esteban Sanzio": {
+    "alineamiento": 15,
+    "peso": 60,
+    "nota": "Intendente peronista, en la Liga de Intendentes."
+   },
+   "Axel Kicillof": {
+    "alineamiento": 12,
+    "peso": 90,
+    "nota": "Gobernador."
+   },
+   "Javier Milei": {
+    "alineamiento": 98,
+    "peso": 95,
+    "nota": "Presidente."
+   }
+  }
+ },
+ "intenciones": {
+  "quiere": [
+   "queremos",
+   "quiero",
+   "hay que",
+   "necesitamos",
+   "necesita",
+   "necesitan",
+   "hace falta",
+   "falta de",
+   "que se vaya",
+   "que se vayan",
+   "se tiene que ir",
+   "que renuncie",
+   "fuera",
+   "pedimos",
+   "exigimos",
+   "reclamamos",
+   "que pongan",
+   "que arreglen",
+   "que paguen",
+   "aumento",
+   "trabajo genuino",
+   "que vuelva",
+   "que gobierne",
+   "que se presente",
+   "candidato ya",
+   "que investiguen",
+   "que expliquen",
+   "que devuelvan"
+  ],
+  "espera": [
+   "ojalá",
+   "ojala",
+   "espero",
+   "esperamos",
+   "a ver si",
+   "tengo fe",
+   "fe en",
+   "confío",
+   "confio",
+   "confiamos",
+   "se viene",
+   "se vienen",
+   "en 2027",
+   "el año que viene",
+   "vamos a ganar",
+   "vamos a volver",
+   "volver a gobernar",
+   "recuperar la provincia",
+   "ilusión",
+   "ilusion",
+   "esperanza",
+   "sueño",
+   "próximo gobierno",
+   "proximo gobierno",
+   "que gane",
+   "ojalá sea",
+   "ojala sea"
+  ],
+  "critica": [
+   "vergüenza",
+   "verguenza",
+   "desastre",
+   "fracaso",
+   "horrible",
+   "inútil",
+   "inutil",
+   "no sabe",
+   "no saben",
+   "mediocre",
+   "culpa",
+   "culpable",
+   "pésimo",
+   "pesimo",
+   "un asco",
+   "basta",
+   "lamentable",
+   "patético",
+   "patetico",
+   "ridículo",
+   "ridiculo",
+   "nefasto",
+   "incapaz",
+   "chanta",
+   "mentiroso",
+   "mentira",
+   "se robó",
+   "se robo",
+   "chorro",
+   "chorros",
+   "ladrón",
+   "ladron",
+   "corrupto",
+   "corruptos",
+   "corrupción",
+   "corrupcion",
+   "kukas",
+   "kuka",
+   "caradura",
+   "decepción",
+   "decepcion",
+   "hipócrita",
+   "hipocrita",
+   "traidor",
+   "oportunista",
+   "cínico",
+   "cinico",
+   "peor",
+   "fundieron",
+   "destruyeron",
+   "nunca más",
+   "nunca mas"
+  ],
+  "apoya": [
+   "gracias",
+   "excelente",
+   "bien ahí",
+   "bien ahi",
+   "acierto",
+   "felicitaciones",
+   "bravo",
+   "aplausos",
+   "el mejor",
+   "impecable",
+   "lo banco",
+   "bancamos",
+   "todos con",
+   "gran persona",
+   "gran tipo",
+   "un lujo",
+   "coherente",
+   "honesto",
+   "buena gestión",
+   "buena gestion",
+   "orgullo",
+   "genio",
+   "capo",
+   "querido",
+   "sí se puede",
+   "si se puede",
+   "mi voto",
+   "tiene mi voto",
+   "lo voto",
+   "la voto",
+   "valiente",
+   "la única",
+   "la unica",
+   "el único",
+   "el unico",
+   "gran trabajo",
+   "buen trabajo",
+   "tiene razón",
+   "tiene razon",
+   "dice la verdad"
+  ]
+ },
+ "temas": {
+  "Seguridad": [
+   "seguridad",
+   "inseguridad",
+   "policía",
+   "policia",
+   "delito",
+   "robo",
+   "robos",
+   "narco",
+   "droga",
+   "drogas",
+   "crimen",
+   "motochorro"
+  ],
+  "Economía y bolsillo": [
+   "inflación",
+   "inflacion",
+   "precios",
+   "salario",
+   "salarios",
+   "sueldo",
+   "sueldos",
+   "jubilad",
+   "dólar",
+   "dolar",
+   "ajuste",
+   "tarifas",
+   "desempleo",
+   "empleo",
+   "pobreza",
+   "comercio",
+   "comercios",
+   "pymes",
+   "pyme",
+   "fábrica",
+   "fabrica",
+   "despidos"
+  ],
+  "Salud y educación": [
+   "hospital",
+   "hospitales",
+   "salud",
+   "guardia",
+   "escuela",
+   "escuelas",
+   "docentes",
+   "educación",
+   "educacion",
+   "universidad"
+  ],
+  "Obras y servicios": [
+   "obra",
+   "obras",
+   "asfalto",
+   "cloacas",
+   "agua",
+   "luz",
+   "basura",
+   "baches",
+   "calles",
+   "iluminación",
+   "iluminacion",
+   "transporte",
+   "colectivo",
+   "colectivos",
+   "vivienda",
+   "viviendas"
+  ],
+  "Gobierno de Milei": [
+   "milei",
+   "gobierno nacional",
+   "casa rosada",
+   "motosierra",
+   "libertad avanza",
+   "karina"
+  ],
+  "Corrupción y transparencia": [
+   "corrupción",
+   "corrupcion",
+   "coima",
+   "coimas",
+   "enriquecimiento",
+   "denuncia",
+   "causa",
+   "juzgado",
+   "fiscal",
+   "transparencia",
+   "declaración jurada",
+   "declaracion jurada"
+  ],
+  "Elecciones 2027 y candidaturas": [
+   "2027",
+   "candidato",
+   "candidata",
+   "candidatura",
+   "elecciones",
+   "encuesta",
+   "lista",
+   "listas",
+   "alianza",
+   "votos",
+   "votar",
+   "intendente",
+   "intendenta",
+   "gobernador",
+   "gobernación",
+   "gobernacion",
+   "senado"
+  ],
+  "Campo, río e industria local": [
+   "campo",
+   "productores",
+   "río",
+   "rio",
+   "puerto",
+   "industria",
+   "fábrica",
+   "fabrica",
+   "papelera"
+  ]
+ },
+ "narrativas": {
+  "Crítica al ajuste": [
+   "ajuste",
+   "motosierra",
+   "la gente no llega",
+   "bolsillo",
+   "changuito",
+   "despidos",
+   "cierre"
+  ],
+  "Gestión y obras": [
+   "obra",
+   "obras",
+   "gestión",
+   "gestion",
+   "inauguró",
+   "inauguro",
+   "recorrió",
+   "recorrio"
+  ],
+  "Conflicto e internas": [
+   "interna",
+   "pelea",
+   "cruce",
+   "ruptura",
+   "denuncia"
+  ],
+  "Unidad y armado 2027": [
+   "unidad",
+   "armado",
+   "2027",
+   "frente",
+   "alternativa",
+   "candidat"
+  ],
+  "Vecinalismo vs. partidos": [
+   "vecinal",
+   "vecinos",
+   "400 años",
+   "independiente",
+   "partido vecinal"
+  ]
+ },
+ "positivo": [
+  "gracias",
+  "excelente",
+  "bien hecho",
+  "muy bien",
+  "felicit",
+  "impecable",
+  "genial",
+  "bravo",
+  "gran persona",
+  "orgullo",
+  "el mejor",
+  "esperanza",
+  "honesto",
+  "coherente"
+ ],
+ "negativo": [
+  "vergüenza",
+  "verguenza",
+  "desastre",
+  "fracaso",
+  "inútil",
+  "inutil",
+  "mentiroso",
+  "chorro",
+  "corrupto",
+  "mediocre",
+  "basta",
+  "patético",
+  "patetico",
+  "horrible",
+  "peor",
+  "nefasto",
+  "kuka",
+  "traidora",
+  "traidor",
+  "panquequ",
+  "operadora",
+  "operador"
+ ],
+ "contexto": [
+  "baradero",
+  "baraderense",
+  "baraderenses",
+  "400 años",
+  "santa coloma",
+  "alsina"
+ ],
+ "excluir_frases": [],
+ "medios_locales": [
+  "tu línea directa",
+  "tu linea directa",
+  "visión regional",
+  "vision regional",
+  "baradero te informa",
+  "la noticia 1"
+ ],
+ "sitios_locales": [
+  "tulineadirecta.com.ar",
+  "visionregional.com.ar",
+  "baraderoteinforma.com.ar"
+ ],
+ "rss": [
+  {
+   "name": "Tu Línea Directa",
+   "url": "https://tulineadirecta.com.ar/feed/",
+   "local": true
+  },
+  {
+   "name": "Baradero Te Informa",
+   "url": "https://baraderoteinforma.com.ar/feed/",
+   "local": true
+  },
+  {
+   "name": "Letra P",
+   "url": "https://www.letrap.com.ar/rss/home.xml"
+  },
+  {
+   "name": "Página/12",
+   "url": "https://www.pagina12.com.ar/rss/portada"
+  }
+ ],
+ "google_news": {
+  "queries": [
+   "\"Juan Ramos\" Baradero",
+   "\"Baradero 400 Años\"",
+   "Baradero intendente",
+   "\"Sanzio\" Baradero",
+   "Baradero concejo deliberante"
+  ],
+  "sites": [
+   "ambito.com",
+   "baraderoteinforma.com.ar",
+   "clarin.com",
+   "cronista.com",
+   "eldestapeweb.com",
+   "infobae.com",
+   "lanacion.com.ar",
+   "lapoliticaonline.com",
+   "letrap.com.ar",
+   "pagina12.com.ar",
+   "perfil.com",
+   "tulineadirecta.com.ar",
+   "visionregional.com.ar"
+  ],
+  "site_terms": [
+   "Ramos",
+   "Baradero"
+  ]
+ },
+ "youtube": {
+  "region": "AR",
+  "language": "es",
+  "videos_per_query": 6,
+  "comments_per_video": 100,
+  "queries": [
+   "Juan Ramos Baradero",
+   "Baradero 400 Años",
+   "Baradero intendente Sanzio"
+  ],
+  "contexto": [
+   "baradero",
+   "ramos",
+   "sanzio"
+  ],
+  "excluir": []
+ },
+ "trends": {
+  "terminos": [
+   "Baradero",
+   "Sanzio"
+  ],
+  "geos": {
+   "AR-B": "Provincia de Buenos Aires"
+  },
+  "geo_local": "AR-B"
+ },
+ "wiki_provincia": [
+  "Provincia de Buenos Aires"
+ ],
+ "stop_extra": [
+  "ramos",
+  "juan",
+  "baradero"
+ ],
+ "textos_comentarios": "extracto"
+}

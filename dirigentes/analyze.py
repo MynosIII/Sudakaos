@@ -75,7 +75,9 @@ def rx_exact(terms):
 FIG = CONFIG["figuras"]
 # Alias fuertes (nombre completo) cuentan siempre; los apellidos solos ("pagano", "braillard") solo con contexto del
 # distrito en el texto, porque hay homónimos en las búsquedas.
-POLS = {k: rx_exact([a for a in v["alias"] if a not in v.get("alias_contexto", [])]) for k, v in FIG.items()}
+NUNCA = re.compile(r"(?!x)x")  # sin alias fuertes, una lista vacía haría coincidir cualquier texto
+POLS = {k: (rx_exact(fuertes) if (fuertes := [a for a in v["alias"] if a not in v.get("alias_contexto", [])]) else NUNCA)
+        for k, v in FIG.items()}
 POLS_CTX = {k: rx_exact(v["alias_contexto"]) for k, v in FIG.items() if v.get("alias_contexto")}
 # Homónimos: el apellido solo no cuenta si el texto nombra a otro con el mismo apellido (Pedro vs. Germán Braillard)
 POLS_NO = {k: rx_exact(v["excluir_si"]) for k, v in FIG.items() if v.get("excluir_si")}

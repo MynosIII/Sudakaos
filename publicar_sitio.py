@@ -30,7 +30,8 @@ INDICE = re.sub(r"[^A-Za-z0-9_-]", "", SECRET)
 
 # Nombre visible en la URL: /<nombre>/<clave>/. El nombre solo no muestra nada (no hay index.html ahí).
 PUB = {"nacional": "nacional", "boca": "boca", "roca": "soria", "santacruz": "santacruz", "sanisidro": "sanisidro",
-       "pagano": "pagano", "casielles": "casielles", "braillard": "braillard", "clark": "clark"}
+       "pagano": "pagano", "casielles": "casielles", "braillard": "braillard", "clark": "clark",
+       "raverta": "raverta", "otermin": "otermin", "rehl": "rehl", "ramos": "ramos", "avila": "avila", "akirchner": "alicia", "zicarelli": "zicarelli", "presto": "presto", "danann": "danann"}
 
 
 def carpeta(nombre):
@@ -102,8 +103,10 @@ for b in ("boca", "roca", "santacruz", "sanisidro"):
 cp("radar/data/positions.json", tableros["roca"] / "positions.json")
 editar(tableros["roca"] / "index.html", ("'../radar/data/positions.json'", "'positions.json'"))
 
-# Dirigentes (Pagano, Casielles, Braillard, Clark): build_page.py arma cada uno nombrando solo a su dirigente
-for slug in ("pagano", "casielles", "braillard", "clark"):
+DIRIGENTES = ("pagano", "casielles", "braillard", "clark",
+              "raverta", "otermin", "rehl", "ramos", "avila", "akirchner", "zicarelli", "presto", "danann")
+# Dirigentes del módulo dirigentes: build_page.py arma cada uno nombrando solo a su dirigente
+for slug in DIRIGENTES:
     d = carpeta(slug)
     tableros[slug] = d
     subprocess.run([sys.executable, str(REPO / "dirigentes" / "build_page.py"), slug, str(d)], check=True,
@@ -133,7 +136,7 @@ for nombre, d in tableros.items():
             s = s.replace("<head>", "<head>" + og, 1)
         if 'name="robots"' not in s:
             s = s.replace("<head>", '<head>\n<meta name="robots" content="noindex,nofollow">\n<meta name="referrer" content="no-referrer">', 1)
-        for b in ("boca", "roca", "santacruz", "sanisidro", "pagano", "casielles", "braillard", "clark", "trump", "dirigentes", "radar", "web"):
+        for b in ("boca", "roca", "santacruz", "sanisidro", "pagano", "casielles", "braillard", "clark", *DIRIGENTES[4:], "trump", "dirigentes", "radar", "web"):
             if b == nombre or (nombre == "nacional" and b == "radar"):
                 continue
             if re.search(rf'href="(\.\./)+{b}/?"', s):
