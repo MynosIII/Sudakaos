@@ -15,7 +15,7 @@
   const list = a => a.length <= 1 ? (a[0] || '') : a.slice(0, -1).join(', ') + ' y ' + a[a.length - 1];
   const cap = s => s ? s[0].toUpperCase() + s.slice(1) : s;
   const C = { s1: '#13161d', grid: '#232834', line: '#272c38', txt: '#eef0f4', muted: '#a6adbb', dim: '#717887' };
-  const GCOL = { 'País': '#3987e5', 'Boca': '#c98500', 'Provincia de Buenos Aires': '#199e70', 'CABA': '#d55181', 'San Isidro': '#9085e9', 'Senado': '#e0703c' };
+  const GCOL = { 'País': '#3987e5', 'Boca': '#c98500', 'Provincia de Buenos Aires': '#199e70', 'CABA': '#d55181', 'San Isidro': '#9085e9' };
   const GEN = { female: 'mujeres', male: 'varones', unknown: 'sin dato' };
   const EMO = { ira: 'enojo', asco: 'rechazo', miedo: 'miedo', tristeza: 'tristeza', alegria: 'alegría', sorpresa: 'sorpresa' };
   const BASE = {
@@ -53,7 +53,7 @@
       <div class="card c5"><h3>Qué se va a ver acá</h3><ul class="mg-ol">
         <li><b>Instagram:</b> seguidores y su evolución, publicaciones por semana, interacción mediana, tasa de interacción, qué formato rinde más (Reel, carrusel, foto) y en qué día y franja horaria.</li>
         <li><b>Pauta política en Facebook e Instagram:</b> cantidad de avisos, gasto e impresiones (en rangos, como los publica Meta), a qué provincias, edades y género llegaron.</li>
-        <li><b>Comparación dentro de cada grupo:</b> País, Boca, Provincia (con Tigre), CABA, San Isidro y Senado.</li></ul>
+        <li><b>Comparación dentro de cada grupo:</b> País, Boca, Provincia (con Tigre), CABA y San Isidro.</li></ul>
         <p class="note">Las dos fuentes son de la API oficial de Meta y son gratis. Facebook (páginas) queda afuera: Meta exige revisión de la app para leer páginas ajenas.</p></div></div>`;
       return;
     }

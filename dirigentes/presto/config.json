@@ -1,0 +1,554 @@
+{
+ "nombre": "Monitor El Presto",
+ "slug": "presto",
+ "color": "#ff6b35",
+ "distrito": "Argentina",
+ "perfil": {
+  "nombre": "El Presto",
+  "corto": "Presto",
+  "cargo": "Youtuber libertario de la primera hora",
+  "resumen": "Youtuber y comunicador libertario de la primera hora. Hoy es crítico de Karina Milei y de la conducción de LLA y suenan versiones de candidaturas propias. Tiene una causa por hostigar a Fabiola Yañez que va a juicio oral.",
+  "objetivo": "Convertir su audiencia en capital político propio rumbo a 2027.",
+  "fuentes": [
+   "https://www.perfil.com/noticias/politica/un-youtuber-ira-juicio-oral-por-discriminar-y-hostigar-a-fabiola-yanez.phtml"
+  ]
+ },
+ "focos": [
+  "El Presto"
+ ],
+ "rivales": [
+  "Lilia Lemoine",
+  "Gordo Dan",
+  "Karina Milei"
+ ],
+ "co_clave": [
+  "Javier Milei",
+  "Karina Milei",
+  "Lilia Lemoine"
+ ],
+ "window_days": 365,
+ "conversacion_dias": 365,
+ "eleccion": "2027-10-24",
+ "eleccion_nota": "Fecha de referencia: generales de octubre de 2027.",
+ "tema_elecciones": "Elecciones 2027 y candidaturas",
+ "figuras": {
+  "El Presto": {
+   "alias": [
+    "el presto",
+    "@elpresto",
+    "elpresto"
+   ],
+   "bando": "Libertarios críticos",
+   "cargo": "Youtuber libertario",
+   "foco": true,
+   "trends": "El Presto"
+  },
+  "Javier Milei": {
+   "alias": [
+    "javier milei",
+    "milei"
+   ],
+   "bando": "Nacional",
+   "cargo": "Presidente",
+   "wiki": [
+    "Javier Milei"
+   ]
+  },
+  "Karina Milei": {
+   "alias": [
+    "karina milei"
+   ],
+   "bando": "Nacional",
+   "cargo": "Secretaria General de la Presidencia",
+   "wiki": [
+    "Karina Milei"
+   ]
+  },
+  "Lilia Lemoine": {
+   "alias": [
+    "lilia lemoine",
+    "lemoine"
+   ],
+   "bando": "La Libertad Avanza",
+   "cargo": "Diputada nacional, LLA",
+   "wiki": [
+    "Lilia Lemoine"
+   ],
+   "trends": "Lilia Lemoine"
+  },
+  "Gordo Dan": {
+   "alias": [
+    "gordo dan",
+    "daniel parisini",
+    "parisini"
+   ],
+   "bando": "La Libertad Avanza",
+   "cargo": "Streamer oficialista (Carajo)",
+   "wiki": [
+    "Daniel Parisini"
+   ],
+   "trends": "Gordo Dan"
+  },
+  "Ramiro Marra": {
+   "alias": [
+    "ramiro marra",
+    "marra"
+   ],
+   "bando": "Ex LLA",
+   "cargo": "Legislador porteño, ex LLA",
+   "wiki": [
+    "Ramiro Marra"
+   ],
+   "trends": "Ramiro Marra"
+  }
+ },
+ "obj_fig": {
+  "presto": "Presto",
+  "elpresto": "Presto",
+  "milei": "Milei",
+  "lemoine": "Lemoine",
+  "dan": "Dan",
+  "parisini": "Dan",
+  "marra": "Marra"
+ },
+ "mapa_poder": {
+  "metodo": "Codificación editorial inicial, a revisar con el cliente. Eje horizontal: 0 = peronismo, 100 = Milei/LLA orgánico. Eje vertical: peso propio (cargo, aparato, votos o audiencia). El tamaño de cada punto sale de las menciones medidas.",
+  "eje_x": "← peronismo · · · centro / vecinales · · · LLA →",
+  "anot": [
+   [
+    6,
+    "PERONISMO",
+    "#5fb3c9"
+   ],
+   [
+    45,
+    "CENTRO / VECINALES",
+    "#f2b705"
+   ],
+   [
+    94,
+    "LLA",
+    "#9085e9"
+   ]
+  ],
+  "puntos": {
+   "El Presto": {
+    "alineamiento": 80,
+    "peso": 25,
+    "nota": "Libertario de la primera hora, hoy opositor a Karina."
+   },
+   "Lilia Lemoine": {
+    "alineamiento": 95,
+    "peso": 40,
+    "nota": "Diputada, choca con ellos en redes."
+   },
+   "Gordo Dan": {
+    "alineamiento": 96,
+    "peso": 45,
+    "nota": "Streamer oficialista."
+   },
+   "Karina Milei": {
+    "alineamiento": 98,
+    "peso": 90,
+    "nota": "Conduce LLA."
+   }
+  }
+ },
+ "intenciones": {
+  "quiere": [
+   "queremos",
+   "quiero",
+   "hay que",
+   "necesitamos",
+   "necesita",
+   "necesitan",
+   "hace falta",
+   "falta de",
+   "que se vaya",
+   "que se vayan",
+   "se tiene que ir",
+   "que renuncie",
+   "fuera",
+   "pedimos",
+   "exigimos",
+   "reclamamos",
+   "que pongan",
+   "que arreglen",
+   "que paguen",
+   "aumento",
+   "trabajo genuino",
+   "que vuelva",
+   "que gobierne",
+   "que se presente",
+   "candidato ya",
+   "que investiguen",
+   "que expliquen",
+   "que devuelvan"
+  ],
+  "espera": [
+   "ojalá",
+   "ojala",
+   "espero",
+   "esperamos",
+   "a ver si",
+   "tengo fe",
+   "fe en",
+   "confío",
+   "confio",
+   "confiamos",
+   "se viene",
+   "se vienen",
+   "en 2027",
+   "el año que viene",
+   "vamos a ganar",
+   "vamos a volver",
+   "volver a gobernar",
+   "recuperar la provincia",
+   "ilusión",
+   "ilusion",
+   "esperanza",
+   "sueño",
+   "próximo gobierno",
+   "proximo gobierno",
+   "que gane",
+   "ojalá sea",
+   "ojala sea"
+  ],
+  "critica": [
+   "vergüenza",
+   "verguenza",
+   "desastre",
+   "fracaso",
+   "horrible",
+   "inútil",
+   "inutil",
+   "no sabe",
+   "no saben",
+   "mediocre",
+   "culpa",
+   "culpable",
+   "pésimo",
+   "pesimo",
+   "un asco",
+   "basta",
+   "lamentable",
+   "patético",
+   "patetico",
+   "ridículo",
+   "ridiculo",
+   "nefasto",
+   "incapaz",
+   "chanta",
+   "mentiroso",
+   "mentira",
+   "se robó",
+   "se robo",
+   "chorro",
+   "chorros",
+   "ladrón",
+   "ladron",
+   "corrupto",
+   "corruptos",
+   "corrupción",
+   "corrupcion",
+   "kukas",
+   "kuka",
+   "caradura",
+   "decepción",
+   "decepcion",
+   "hipócrita",
+   "hipocrita",
+   "traidor",
+   "oportunista",
+   "cínico",
+   "cinico",
+   "peor",
+   "fundieron",
+   "destruyeron",
+   "nunca más",
+   "nunca mas"
+  ],
+  "apoya": [
+   "gracias",
+   "excelente",
+   "bien ahí",
+   "bien ahi",
+   "acierto",
+   "felicitaciones",
+   "bravo",
+   "aplausos",
+   "el mejor",
+   "impecable",
+   "lo banco",
+   "bancamos",
+   "todos con",
+   "gran persona",
+   "gran tipo",
+   "un lujo",
+   "coherente",
+   "honesto",
+   "buena gestión",
+   "buena gestion",
+   "orgullo",
+   "genio",
+   "capo",
+   "querido",
+   "sí se puede",
+   "si se puede",
+   "mi voto",
+   "tiene mi voto",
+   "lo voto",
+   "la voto",
+   "valiente",
+   "la única",
+   "la unica",
+   "el único",
+   "el unico",
+   "gran trabajo",
+   "buen trabajo",
+   "tiene razón",
+   "tiene razon",
+   "dice la verdad"
+  ]
+ },
+ "temas": {
+  "Gobierno de Milei": [
+   "milei",
+   "gobierno",
+   "casa rosada",
+   "motosierra",
+   "libertad avanza",
+   "lla"
+  ],
+  "Karina y la interna libertaria": [
+   "karina",
+   "el jefe",
+   "menem",
+   "lule",
+   "interna",
+   "armado",
+   "listas",
+   "traición",
+   "traicion",
+   "traidor"
+  ],
+  "Corrupción y $LIBRA": [
+   "libra",
+   "$libra",
+   "coima",
+   "coimas",
+   "andis",
+   "spagnuolo",
+   "corrupción",
+   "corrupcion",
+   "delincuente"
+  ],
+  "Economía y bolsillo": [
+   "inflación",
+   "inflacion",
+   "dólar",
+   "dolar",
+   "salario",
+   "sueldo",
+   "jubilad",
+   "ajuste",
+   "desempleo",
+   "precios"
+  ],
+  "Libertad de expresión y redes": [
+   "censura",
+   "streaming",
+   "stream",
+   "youtube",
+   "canal",
+   "redes",
+   "trolls",
+   "troll",
+   "influencer",
+   "influencers"
+  ],
+  "Justicia y causas": [
+   "juicio",
+   "procesado",
+   "causa",
+   "denuncia",
+   "juez",
+   "fiscal",
+   "discriminación",
+   "discriminacion"
+  ],
+  "Elecciones 2027 y candidaturas": [
+   "2027",
+   "candidato",
+   "candidatura",
+   "elecciones",
+   "encuesta",
+   "lista",
+   "partido",
+   "presidente"
+  ]
+ },
+ "narrativas": {
+  "Libertarios de la primera hora": [
+   "primera hora",
+   "originarios",
+   "fundadores",
+   "los de siempre",
+   "viudas"
+  ],
+  "Contra Karina": [
+   "karina",
+   "delincuente",
+   "el jefe",
+   "menem"
+  ],
+  "Guerra de influencers": [
+   "trolls",
+   "influencers",
+   "carajo",
+   "gordo dan",
+   "lemoine",
+   "fuerzas del cielo"
+  ],
+  "Candidatura propia": [
+   "candidato",
+   "candidatura",
+   "partido",
+   "2027",
+   "se presenta"
+  ]
+ },
+ "positivo": [
+  "gracias",
+  "excelente",
+  "bien hecho",
+  "muy bien",
+  "felicit",
+  "impecable",
+  "genial",
+  "bravo",
+  "gran persona",
+  "orgullo",
+  "el mejor",
+  "esperanza",
+  "honesto",
+  "coherente"
+ ],
+ "negativo": [
+  "vergüenza",
+  "verguenza",
+  "desastre",
+  "fracaso",
+  "inútil",
+  "inutil",
+  "mentiroso",
+  "chorro",
+  "corrupto",
+  "mediocre",
+  "basta",
+  "patético",
+  "patetico",
+  "horrible",
+  "peor",
+  "nefasto",
+  "kuka",
+  "traidora",
+  "traidor",
+  "panquequ",
+  "operadora",
+  "operador"
+ ],
+ "contexto": [
+  "libertario",
+  "libertarios",
+  "milei",
+  "karina",
+  "youtuber",
+  "youtube"
+ ],
+ "excluir_frases": [],
+ "medios_locales": [],
+ "sitios_locales": [],
+ "rss": [
+  {
+   "name": "Letra P",
+   "url": "https://www.letrap.com.ar/rss/home.xml"
+  },
+  {
+   "name": "Página/12",
+   "url": "https://www.pagina12.com.ar/rss/portada"
+  },
+  {
+   "name": "Infobae",
+   "url": "https://www.infobae.com/arc/outboundfeeds/rss/"
+  },
+  {
+   "name": "Clarín",
+   "url": "https://www.clarin.com/rss/politica/"
+  },
+  {
+   "name": "Perfil",
+   "url": "https://www.perfil.com/feed/politica"
+  },
+  {
+   "name": "La Política Online",
+   "url": "https://www.lapoliticaonline.com/rss/"
+  }
+ ],
+ "google_news": {
+  "queries": [
+   "\"El Presto\" youtuber",
+   "\"El Presto\" Milei",
+   "\"El Presto\" Karina",
+   "\"El Presto\" Fabiola Yañez"
+  ],
+  "sites": [
+   "ambito.com",
+   "clarin.com",
+   "cronista.com",
+   "eldestapeweb.com",
+   "infobae.com",
+   "lanacion.com.ar",
+   "lapoliticaonline.com",
+   "letrap.com.ar",
+   "pagina12.com.ar",
+   "perfil.com"
+  ],
+  "site_terms": [
+   "Presto"
+  ]
+ },
+ "youtube": {
+  "region": "AR",
+  "language": "es",
+  "videos_per_query": 6,
+  "comments_per_video": 100,
+  "queries": [
+   "El Presto",
+   "El Presto Karina Milei",
+   "El Presto youtuber Milei"
+  ],
+  "contexto": [
+   "presto",
+   "milei",
+   "karina",
+   "libertari"
+  ],
+  "excluir": []
+ },
+ "trends": {
+  "terminos": [
+   "El Presto",
+   "Lilia Lemoine"
+  ],
+  "geos": {
+   "AR": "Argentina"
+  },
+  "geo_local": "AR"
+ },
+ "wiki_provincia": [],
+ "stop_extra": [
+  "presto"
+ ],
+ "textos_comentarios": "extracto"
+}

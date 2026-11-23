@@ -24,7 +24,7 @@ concurrency:
 jobs:
   collect-and-analyze:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 330
     env:
       # Clave propia si se carga YOUTUBE_API_KEY_DIRIGENTES; si no, la de Roca (la del tablero nacional queda afuera)
       YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY_DIRIGENTES || secrets.YOUTUBE_API_KEY_ROCA }}
@@ -63,11 +63,26 @@ jobs:
             dirigentes/clark/.store
           key: dirigentes-store-${{ github.run_id }}
           restore-keys: dirigentes-store-
+      - name: Restore store (tableros 2026-11)
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            dirigentes/raverta/.store
+            dirigentes/otermin/.store
+            dirigentes/rehl/.store
+            dirigentes/ramos/.store
+            dirigentes/avila/.store
+            dirigentes/akirchner/.store
+            dirigentes/zicarelli/.store
+            dirigentes/presto/.store
+            dirigentes/danann/.store
+          key: dirigentes2-store-${{ github.run_id }}
+          restore-keys: dirigentes2-store-
       - name: Collect and analyze
         run: |
-          for d in pagano casielles braillard clark; do
+          for d in pagano casielles braillard clark raverta otermin rehl ramos avila akirchner zicarelli presto danann; do
             echo "::group::$d"
-            timeout 1500 python dirigentes/collect.py "$d" || echo "recolección de $d cortada por tiempo"
+            timeout 1200 python dirigentes/collect.py "$d" || echo "recolección de $d cortada por tiempo"
             python dirigentes/analyze.py "$d"
             cat "dirigentes/$d/.store/status.json" || true
             echo "::endgroup::"
@@ -82,6 +97,21 @@ jobs:
             dirigentes/braillard/.store
             dirigentes/clark/.store
           key: dirigentes-store-${{ github.run_id }}
+      - name: Save store (tableros 2026-11)
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            dirigentes/raverta/.store
+            dirigentes/otermin/.store
+            dirigentes/rehl/.store
+            dirigentes/ramos/.store
+            dirigentes/avila/.store
+            dirigentes/akirchner/.store
+            dirigentes/zicarelli/.store
+            dirigentes/presto/.store
+            dirigentes/danann/.store
+          key: dirigentes2-store-${{ github.run_id }}
       - name: Commit aggregates
         run: |
           git config user.name 'github-actions[bot]'

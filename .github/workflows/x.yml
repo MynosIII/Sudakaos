@@ -59,6 +59,21 @@ jobs:
             dirigentes/clark/.store
           key: dirigentes-store-${{ github.run_id }}
           restore-keys: dirigentes-store-
+      - name: Restore store (tableros 2026-11)
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            dirigentes/raverta/.store
+            dirigentes/otermin/.store
+            dirigentes/rehl/.store
+            dirigentes/ramos/.store
+            dirigentes/avila/.store
+            dirigentes/akirchner/.store
+            dirigentes/zicarelli/.store
+            dirigentes/presto/.store
+            dirigentes/danann/.store
+          key: dirigentes2-store-${{ github.run_id }}
+          restore-keys: dirigentes2-store-
       - name: Collect X and analyze
         run: |
           python dirigentes/collect.py "$TABLERO" --solo x
@@ -75,6 +90,21 @@ jobs:
             dirigentes/braillard/.store
             dirigentes/clark/.store
           key: dirigentes-store-${{ github.run_id }}
+      - name: Save store (tableros 2026-11)
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            dirigentes/raverta/.store
+            dirigentes/otermin/.store
+            dirigentes/rehl/.store
+            dirigentes/ramos/.store
+            dirigentes/avila/.store
+            dirigentes/akirchner/.store
+            dirigentes/zicarelli/.store
+            dirigentes/presto/.store
+            dirigentes/danann/.store
+          key: dirigentes2-store-${{ github.run_id }}
       - name: Commit
         run: |
           git config user.name 'github-actions[bot]'

@@ -1,0 +1,680 @@
+{
+ "nombre": "Monitor Federico Otermin",
+ "slug": "otermin",
+ "color": "#2f6fd6",
+ "distrito": "Lomas de Zamora",
+ "perfil": {
+  "nombre": "Federico Otermin",
+  "corto": "Otermin",
+  "cargo": "Intendente de Lomas de Zamora",
+  "resumen": "Intendente de Lomas de Zamora desde 2023; en 2025 ganó el distrito con 30 puntos de ventaja sobre La Libertad Avanza. Ex presidente de la Cámara de Diputados bonaerense, recorre municipios que no gobierna el peronismo y pide construir una alternativa para 2027.",
+  "objetivo": "Proyectarse en la provincia rumbo a 2027 desde la gestión en Lomas.",
+  "fuentes": [
+   "https://www.letrap.com.ar/politica/federico-otermin-arraso-lomas-zamora-y-le-saco-30-puntos-la-libertad-avanza-n5418655",
+   "https://www.letrap.com.ar/sociedad/federico-otermin-visito-san-miguel-del-monte-y-acelera-el-armado-municipios-que-no-gobierna-el-peronismo-n5427137"
+  ]
+ },
+ "focos": [
+  "Federico Otermin"
+ ],
+ "rivales": [
+  "Diego Santilli",
+  "Jorge Ferraresi",
+  "Máximo Kirchner"
+ ],
+ "co_clave": [
+  "Axel Kicillof",
+  "Martín Insaurralde",
+  "Jorge Ferraresi",
+  "Máximo Kirchner",
+  "Javier Milei"
+ ],
+ "window_days": 365,
+ "conversacion_dias": 365,
+ "eleccion": "2027-10-24",
+ "eleccion_nota": "Fecha de referencia: generales de octubre de 2027 (intendencia y gobernación de Buenos Aires).",
+ "tema_elecciones": "Elecciones 2027 y candidaturas",
+ "figuras": {
+  "Federico Otermin": {
+   "alias": [
+    "federico otermin",
+    "federico otermín",
+    "otermin",
+    "otermín",
+    "intendente otermin"
+   ],
+   "bando": "Peronismo",
+   "cargo": "Intendente de Lomas de Zamora",
+   "foco": true,
+   "wiki": [
+    "Federico Otermín"
+   ],
+   "trends": "Federico Otermin"
+  },
+  "Martín Insaurralde": {
+   "alias": [
+    "martín insaurralde",
+    "martin insaurralde",
+    "insaurralde"
+   ],
+   "bando": "Peronismo",
+   "cargo": "Ex intendente de Lomas de Zamora",
+   "wiki": [
+    "Martín Insaurralde"
+   ],
+   "trends": "Insaurralde"
+  },
+  "Jorge Ferraresi": {
+   "alias": [
+    "jorge ferraresi",
+    "ferraresi"
+   ],
+   "bando": "Peronismo",
+   "cargo": "Intendente de Avellaneda",
+   "wiki": [
+    "Jorge Ferraresi"
+   ],
+   "trends": "Ferraresi"
+  },
+  "Diego Santilli": {
+   "alias": [
+    "diego santilli",
+    "santilli"
+   ],
+   "bando": "LLA / PRO",
+   "cargo": "Referente de la alianza LLA-PRO en la provincia",
+   "wiki": [
+    "Diego Santilli"
+   ],
+   "trends": "Diego Santilli"
+  },
+  "Máximo Kirchner": {
+   "alias": [
+    "máximo kirchner",
+    "maximo kirchner"
+   ],
+   "bando": "Peronismo",
+   "cargo": "Diputado nacional, La Cámpora",
+   "wiki": [
+    "Máximo Kirchner"
+   ],
+   "trends": "Máximo Kirchner"
+  },
+  "Axel Kicillof": {
+   "alias": [
+    "axel kicillof",
+    "kicillof"
+   ],
+   "bando": "Nacional",
+   "cargo": "Gobernador de Buenos Aires",
+   "wiki": [
+    "Axel Kicillof"
+   ]
+  },
+  "Javier Milei": {
+   "alias": [
+    "javier milei",
+    "milei"
+   ],
+   "bando": "Nacional",
+   "cargo": "Presidente",
+   "wiki": [
+    "Javier Milei"
+   ]
+  }
+ },
+ "obj_fig": {
+  "otermin": "Otermin",
+  "insaurralde": "Insaurralde",
+  "ferraresi": "Ferraresi",
+  "santilli": "Santilli",
+  "kirchner": "Kirchner",
+  "kicillof": "Kicillof",
+  "milei": "Milei"
+ },
+ "mapa_poder": {
+  "metodo": "Codificación editorial inicial, a revisar con el cliente. Eje horizontal: 0 = peronismo, 100 = Milei/LLA orgánico. Eje vertical: peso propio (cargo, aparato, votos o audiencia). El tamaño de cada punto sale de las menciones medidas.",
+  "eje_x": "← peronismo · · · centro / vecinales · · · LLA →",
+  "anot": [
+   [
+    6,
+    "PERONISMO",
+    "#5fb3c9"
+   ],
+   [
+    45,
+    "CENTRO / VECINALES",
+    "#f2b705"
+   ],
+   [
+    94,
+    "LLA",
+    "#9085e9"
+   ]
+  ],
+  "puntos": {
+   "Federico Otermin": {
+    "alineamiento": 14,
+    "peso": 55,
+    "nota": "Intendente con triunfo amplio en 2025; recorre la provincia."
+   },
+   "Martín Insaurralde": {
+    "alineamiento": 18,
+    "peso": 30,
+    "nota": "Su antecesor; peso residual y costo por los escándalos."
+   },
+   "Jorge Ferraresi": {
+    "alineamiento": 10,
+    "peso": 55,
+    "nota": "Otro intendente con armado propio."
+   },
+   "Diego Santilli": {
+    "alineamiento": 80,
+    "peso": 65,
+    "nota": "Cara de la alianza LLA-PRO en la provincia."
+   },
+   "Máximo Kirchner": {
+    "alineamiento": 8,
+    "peso": 50,
+    "nota": "La Cámpora; interna peronista."
+   },
+   "Axel Kicillof": {
+    "alineamiento": 12,
+    "peso": 90,
+    "nota": "Gobernador."
+   }
+  }
+ },
+ "intenciones": {
+  "quiere": [
+   "queremos",
+   "quiero",
+   "hay que",
+   "necesitamos",
+   "necesita",
+   "necesitan",
+   "hace falta",
+   "falta de",
+   "que se vaya",
+   "que se vayan",
+   "se tiene que ir",
+   "que renuncie",
+   "fuera",
+   "pedimos",
+   "exigimos",
+   "reclamamos",
+   "que pongan",
+   "que arreglen",
+   "que paguen",
+   "aumento",
+   "trabajo genuino",
+   "que vuelva",
+   "que gobierne",
+   "que se presente",
+   "candidato ya",
+   "que investiguen",
+   "que expliquen",
+   "que devuelvan"
+  ],
+  "espera": [
+   "ojalá",
+   "ojala",
+   "espero",
+   "esperamos",
+   "a ver si",
+   "tengo fe",
+   "fe en",
+   "confío",
+   "confio",
+   "confiamos",
+   "se viene",
+   "se vienen",
+   "en 2027",
+   "el año que viene",
+   "vamos a ganar",
+   "vamos a volver",
+   "volver a gobernar",
+   "recuperar la provincia",
+   "ilusión",
+   "ilusion",
+   "esperanza",
+   "sueño",
+   "próximo gobierno",
+   "proximo gobierno",
+   "que gane",
+   "ojalá sea",
+   "ojala sea"
+  ],
+  "critica": [
+   "vergüenza",
+   "verguenza",
+   "desastre",
+   "fracaso",
+   "horrible",
+   "inútil",
+   "inutil",
+   "no sabe",
+   "no saben",
+   "mediocre",
+   "culpa",
+   "culpable",
+   "pésimo",
+   "pesimo",
+   "un asco",
+   "basta",
+   "lamentable",
+   "patético",
+   "patetico",
+   "ridículo",
+   "ridiculo",
+   "nefasto",
+   "incapaz",
+   "chanta",
+   "mentiroso",
+   "mentira",
+   "se robó",
+   "se robo",
+   "chorro",
+   "chorros",
+   "ladrón",
+   "ladron",
+   "corrupto",
+   "corruptos",
+   "corrupción",
+   "corrupcion",
+   "kukas",
+   "kuka",
+   "caradura",
+   "decepción",
+   "decepcion",
+   "hipócrita",
+   "hipocrita",
+   "traidor",
+   "oportunista",
+   "cínico",
+   "cinico",
+   "peor",
+   "fundieron",
+   "destruyeron",
+   "nunca más",
+   "nunca mas"
+  ],
+  "apoya": [
+   "gracias",
+   "excelente",
+   "bien ahí",
+   "bien ahi",
+   "acierto",
+   "felicitaciones",
+   "bravo",
+   "aplausos",
+   "el mejor",
+   "impecable",
+   "lo banco",
+   "bancamos",
+   "todos con",
+   "gran persona",
+   "gran tipo",
+   "un lujo",
+   "coherente",
+   "honesto",
+   "buena gestión",
+   "buena gestion",
+   "orgullo",
+   "genio",
+   "capo",
+   "querido",
+   "sí se puede",
+   "si se puede",
+   "mi voto",
+   "tiene mi voto",
+   "lo voto",
+   "la voto",
+   "valiente",
+   "la única",
+   "la unica",
+   "el único",
+   "el unico",
+   "gran trabajo",
+   "buen trabajo",
+   "tiene razón",
+   "tiene razon",
+   "dice la verdad"
+  ]
+ },
+ "temas": {
+  "Seguridad": [
+   "seguridad",
+   "inseguridad",
+   "policía",
+   "policia",
+   "delito",
+   "robo",
+   "robos",
+   "narco",
+   "droga",
+   "drogas",
+   "crimen",
+   "motochorro"
+  ],
+  "Economía y bolsillo": [
+   "inflación",
+   "inflacion",
+   "precios",
+   "salario",
+   "salarios",
+   "sueldo",
+   "sueldos",
+   "jubilad",
+   "dólar",
+   "dolar",
+   "ajuste",
+   "tarifas",
+   "desempleo",
+   "empleo",
+   "pobreza",
+   "comercio",
+   "comercios",
+   "pymes",
+   "pyme",
+   "fábrica",
+   "fabrica",
+   "despidos"
+  ],
+  "Salud y educación": [
+   "hospital",
+   "hospitales",
+   "salud",
+   "guardia",
+   "escuela",
+   "escuelas",
+   "docentes",
+   "educación",
+   "educacion",
+   "universidad"
+  ],
+  "Obras y servicios": [
+   "obra",
+   "obras",
+   "asfalto",
+   "cloacas",
+   "agua",
+   "luz",
+   "basura",
+   "baches",
+   "calles",
+   "iluminación",
+   "iluminacion",
+   "transporte",
+   "colectivo",
+   "colectivos",
+   "vivienda",
+   "viviendas"
+  ],
+  "Gobierno de Milei": [
+   "milei",
+   "gobierno nacional",
+   "casa rosada",
+   "motosierra",
+   "libertad avanza",
+   "karina"
+  ],
+  "Corrupción y transparencia": [
+   "corrupción",
+   "corrupcion",
+   "coima",
+   "coimas",
+   "enriquecimiento",
+   "denuncia",
+   "causa",
+   "juzgado",
+   "fiscal",
+   "transparencia",
+   "declaración jurada",
+   "declaracion jurada"
+  ],
+  "Elecciones 2027 y candidaturas": [
+   "2027",
+   "candidato",
+   "candidata",
+   "candidatura",
+   "elecciones",
+   "encuesta",
+   "lista",
+   "listas",
+   "alianza",
+   "votos",
+   "votar",
+   "intendente",
+   "intendenta",
+   "gobernador",
+   "gobernación",
+   "gobernacion",
+   "senado"
+  ],
+  "Conurbano y gestión municipal": [
+   "lomas",
+   "banfield",
+   "temperley",
+   "turdera",
+   "llavallol",
+   "fiorito",
+   "budge",
+   "municipio",
+   "municipal"
+  ]
+ },
+ "narrativas": {
+  "Crítica al ajuste": [
+   "ajuste",
+   "motosierra",
+   "la gente no llega",
+   "bolsillo",
+   "changuito",
+   "despidos",
+   "cierre"
+  ],
+  "Gestión y obras": [
+   "obra",
+   "obras",
+   "gestión",
+   "gestion",
+   "inauguró",
+   "inauguro",
+   "recorrió",
+   "recorrio"
+  ],
+  "Conflicto e internas": [
+   "interna",
+   "pelea",
+   "cruce",
+   "ruptura",
+   "denuncia"
+  ],
+  "Unidad y armado 2027": [
+   "unidad",
+   "armado",
+   "2027",
+   "frente",
+   "alternativa",
+   "candidat"
+  ],
+  "Proyección provincial": [
+   "provincia",
+   "recorrida",
+   "visitó",
+   "visito",
+   "gira",
+   "interior"
+  ],
+  "Herencia Insaurralde": [
+   "insaurralde",
+   "yate",
+   "sofía clerici",
+   "sofia clerici",
+   "chocolate"
+  ]
+ },
+ "positivo": [
+  "gracias",
+  "excelente",
+  "bien hecho",
+  "muy bien",
+  "felicit",
+  "impecable",
+  "genial",
+  "bravo",
+  "gran persona",
+  "orgullo",
+  "el mejor",
+  "esperanza",
+  "honesto",
+  "coherente"
+ ],
+ "negativo": [
+  "vergüenza",
+  "verguenza",
+  "desastre",
+  "fracaso",
+  "inútil",
+  "inutil",
+  "mentiroso",
+  "chorro",
+  "corrupto",
+  "mediocre",
+  "basta",
+  "patético",
+  "patetico",
+  "horrible",
+  "peor",
+  "nefasto",
+  "kuka",
+  "traidora",
+  "traidor",
+  "panquequ",
+  "operadora",
+  "operador"
+ ],
+ "contexto": [
+  "lomas de zamora",
+  "lomas",
+  "banfield",
+  "temperley",
+  "conurbano sur"
+ ],
+ "excluir_frases": [],
+ "medios_locales": [
+  "la unión",
+  "la union",
+  "infocielo",
+  "la tecla"
+ ],
+ "sitios_locales": [
+  "launion.com.ar",
+  "infocielo.com",
+  "latecla.info",
+  "diarioconurbano.com.ar"
+ ],
+ "rss": [
+  {
+   "name": "La Unión",
+   "url": "https://www.launion.com.ar/rss",
+   "local": true
+  },
+  {
+   "name": "Letra P",
+   "url": "https://www.letrap.com.ar/rss/home.xml"
+  },
+  {
+   "name": "Página/12",
+   "url": "https://www.pagina12.com.ar/rss/portada"
+  },
+  {
+   "name": "Infobae",
+   "url": "https://www.infobae.com/arc/outboundfeeds/rss/"
+  },
+  {
+   "name": "Clarín",
+   "url": "https://www.clarin.com/rss/politica/"
+  },
+  {
+   "name": "Perfil",
+   "url": "https://www.perfil.com/feed/politica"
+  }
+ ],
+ "google_news": {
+  "queries": [
+   "\"Federico Otermin\"",
+   "\"Otermin\" Lomas",
+   "\"Otermín\" intendente",
+   "\"Otermin\" 2027",
+   "\"Otermin\" Kicillof",
+   "Lomas de Zamora municipio",
+   "intendentes peronistas 2027 provincia"
+  ],
+  "sites": [
+   "ambito.com",
+   "clarin.com",
+   "cronista.com",
+   "diarioconurbano.com.ar",
+   "eldestapeweb.com",
+   "infobae.com",
+   "infocielo.com",
+   "lanacion.com.ar",
+   "lapoliticaonline.com",
+   "latecla.info",
+   "launion.com.ar",
+   "letrap.com.ar",
+   "pagina12.com.ar",
+   "perfil.com"
+  ],
+  "site_terms": [
+   "Otermin",
+   "Otermín"
+  ]
+ },
+ "youtube": {
+  "region": "AR",
+  "language": "es",
+  "videos_per_query": 6,
+  "comments_per_video": 100,
+  "queries": [
+   "Federico Otermin",
+   "Federico Otermín entrevista",
+   "Lomas de Zamora intendente Otermin",
+   "intendentes peronismo 2027 provincia"
+  ],
+  "contexto": [
+   "otermin",
+   "otermín",
+   "lomas",
+   "kicillof",
+   "peronismo",
+   "intendente"
+  ],
+  "excluir": []
+ },
+ "trends": {
+  "terminos": [
+   "Federico Otermin",
+   "Diego Santilli",
+   "Jorge Ferraresi"
+  ],
+  "geos": {
+   "AR-B": "Provincia de Buenos Aires",
+   "AR": "Argentina"
+  },
+  "geo_local": "AR-B"
+ },
+ "wiki_provincia": [
+  "Provincia de Buenos Aires"
+ ],
+ "stop_extra": [
+  "otermin",
+  "otermín",
+  "federico",
+  "lomas",
+  "zamora"
+ ],
+ "textos_comentarios": "extracto"
+}
