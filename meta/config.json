@@ -8,8 +8,7 @@
     "Boca",
     "Provincia de Buenos Aires",
     "CABA",
-    "San Isidro",
-    "Senado"
+    "San Isidro"
   ],
   "dirigentes": [
     {
@@ -211,90 +210,6 @@
       ],
       "ads": [
         "Federico Meca"
-      ]
-    },
-    {
-      "name": "Fernanda Raverta",
-      "grupo": "Provincia de Buenos Aires",
-      "espacio": "Peronismo",
-      "distrito": "Mar del Plata",
-      "ig": [
-        "fernandaraverta",
-        "fernanda.raverta",
-        "raverta"
-      ],
-      "ads": [
-        "Fernanda Raverta"
-      ]
-    },
-    {
-      "name": "Federico Otermin",
-      "grupo": "Provincia de Buenos Aires",
-      "espacio": "Peronismo",
-      "distrito": "Lomas de Zamora",
-      "ig": [
-        "federicootermin",
-        "fedeotermin",
-        "otermin"
-      ],
-      "ads": [
-        "Federico Otermin"
-      ]
-    },
-    {
-      "name": "Javier Rehl",
-      "grupo": "Provincia de Buenos Aires",
-      "espacio": "Peronismo",
-      "distrito": "Escobar",
-      "ig": [
-        "javierrehl",
-        "javier.rehl",
-        "rehljavier"
-      ],
-      "ads": [
-        "Javier Rehl"
-      ]
-    },
-    {
-      "name": "Juan Ramos",
-      "grupo": "Provincia de Buenos Aires",
-      "espacio": "Baradero 400 Años",
-      "distrito": "Baradero",
-      "ig": [
-        "juanramosbaradero",
-        "juanramos.baradero",
-        "juanramosok"
-      ],
-      "ads": [
-        "Juan Ramos"
-      ]
-    },
-    {
-      "name": "Beatriz Ávila",
-      "grupo": "Senado",
-      "espacio": "Independencia",
-      "distrito": "Tucumán",
-      "ig": [
-        "beatrizavilaok",
-        "beatrizavila",
-        "beatriz.avila"
-      ],
-      "ads": [
-        "Beatriz Ávila"
-      ]
-    },
-    {
-      "name": "Alicia Kirchner",
-      "grupo": "Senado",
-      "espacio": "Peronismo",
-      "distrito": "Santa Cruz",
-      "ig": [
-        "aliciakirchnerok",
-        "aliciakirchner",
-        "alicia.kirchner"
-      ],
-      "ads": [
-        "Alicia Kirchner"
       ]
     }
   ]

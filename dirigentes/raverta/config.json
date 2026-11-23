@@ -1,0 +1,681 @@
+{
+ "nombre": "Monitor Fernanda Raverta",
+ "slug": "raverta",
+ "color": "#3da5d9",
+ "distrito": "Mar del Plata (General Pueyrredon)",
+ "perfil": {
+  "nombre": "Fernanda Raverta",
+  "corto": "Raverta",
+  "cargo": "Dirigente peronista de Mar del Plata; ex directora ejecutiva de ANSES",
+  "resumen": "Fue directora ejecutiva de ANSES (2020-2023), candidata a intendenta de General Pueyrredon en 2023 y en 2025 encabezó la lista de senadores bonaerenses de Fuerza Patria en la Quinta Sección, donde volvió a medirse con Guillermo Montenegro.",
+  "objetivo": "Llegar a 2027 como la referencia del peronismo para disputar la intendencia de Mar del Plata.",
+  "fuentes": [
+   "https://www.lacapitalmdp.com/fernanda-raverta-sera-la-primera-candidata-a-senadora-provincial-por-fuerza-patria/",
+   "https://www.letrap.com.ar/conurbano/guillermo-montenegro-vs-fernanda-raverta-el-clasico-marplatense-que-se-reedita-un-lugar-el-senado-n5417437"
+  ]
+ },
+ "focos": [
+  "Fernanda Raverta"
+ ],
+ "rivales": [
+  "Guillermo Montenegro",
+  "Vilma Baragiola",
+  "Alejandro Carrancio"
+ ],
+ "co_clave": [
+  "Axel Kicillof",
+  "Cristina Kirchner",
+  "Guillermo Montenegro",
+  "Javier Milei"
+ ],
+ "window_days": 365,
+ "conversacion_dias": 365,
+ "eleccion": "2027-10-24",
+ "eleccion_nota": "Fecha de referencia: generales de octubre de 2027, cuando se elige intendente de General Pueyrredon.",
+ "tema_elecciones": "Elecciones 2027 y candidaturas",
+ "figuras": {
+  "Fernanda Raverta": {
+   "alias": [
+    "fernanda raverta",
+    "raverta",
+    "fer raverta"
+   ],
+   "bando": "Peronismo",
+   "cargo": "Dirigente peronista de Mar del Plata; ex titular de ANSES",
+   "foco": true,
+   "wiki": [
+    "Fernanda Raverta"
+   ],
+   "trends": "Fernanda Raverta"
+  },
+  "Guillermo Montenegro": {
+   "alias": [
+    "guillermo montenegro",
+    "montenegro"
+   ],
+   "bando": "LLA / PRO",
+   "cargo": "Ex intendente de General Pueyrredon; ganó la Quinta Sección en 2025 (LLA-PRO)",
+   "wiki": [
+    "Guillermo Montenegro"
+   ],
+   "trends": "Guillermo Montenegro"
+  },
+  "Vilma Baragiola": {
+   "alias": [
+    "vilma baragiola",
+    "baragiola"
+   ],
+   "bando": "UCR",
+   "cargo": "Dirigente radical marplatense",
+   "wiki": [
+    "Vilma Baragiola"
+   ],
+   "trends": "Vilma Baragiola"
+  },
+  "Alejandro Carrancio": {
+   "alias": [
+    "alejandro carrancio",
+    "carrancio"
+   ],
+   "bando": "La Libertad Avanza",
+   "cargo": "Referente de LLA en Mar del Plata",
+   "wiki": [],
+   "trends": "Carrancio"
+  },
+  "Axel Kicillof": {
+   "alias": [
+    "axel kicillof",
+    "kicillof"
+   ],
+   "bando": "Nacional",
+   "cargo": "Gobernador de Buenos Aires",
+   "wiki": [
+    "Axel Kicillof"
+   ]
+  },
+  "Javier Milei": {
+   "alias": [
+    "javier milei",
+    "milei"
+   ],
+   "bando": "Nacional",
+   "cargo": "Presidente",
+   "wiki": [
+    "Javier Milei"
+   ]
+  },
+  "Cristina Kirchner": {
+   "alias": [
+    "cristina kirchner",
+    "cristina fernández",
+    "cristina fernandez",
+    "cfk"
+   ],
+   "bando": "Nacional",
+   "cargo": "Expresidenta, conducción del PJ",
+   "wiki": [
+    "Cristina Fernández de Kirchner"
+   ]
+  }
+ },
+ "obj_fig": {
+  "raverta": "Raverta",
+  "montenegro": "Montenegro",
+  "baragiola": "Baragiola",
+  "carrancio": "Carrancio",
+  "kicillof": "Kicillof",
+  "milei": "Milei",
+  "kirchner": "Kirchner"
+ },
+ "mapa_poder": {
+  "metodo": "Codificación editorial inicial, a revisar con el cliente. Eje horizontal: 0 = peronismo, 100 = Milei/LLA orgánico. Eje vertical: peso propio (cargo, aparato, votos o audiencia). El tamaño de cada punto sale de las menciones medidas.",
+  "eje_x": "← peronismo · · · centro / vecinales · · · LLA →",
+  "anot": [
+   [
+    6,
+    "PERONISMO",
+    "#5fb3c9"
+   ],
+   [
+    45,
+    "CENTRO / VECINALES",
+    "#f2b705"
+   ],
+   [
+    94,
+    "LLA",
+    "#9085e9"
+   ]
+  ],
+  "puntos": {
+   "Fernanda Raverta": {
+    "alineamiento": 15,
+    "peso": 45,
+    "nota": "Referente peronista marplatense, cercana a La Cámpora y con diálogo con Kicillof."
+   },
+   "Guillermo Montenegro": {
+    "alineamiento": 80,
+    "peso": 75,
+    "nota": "Gobernó la ciudad dos mandatos; alianza con LLA, ganó la Quinta en 2025."
+   },
+   "Vilma Baragiola": {
+    "alineamiento": 55,
+    "peso": 30,
+    "nota": "Radicalismo local, con votos propios."
+   },
+   "Alejandro Carrancio": {
+    "alineamiento": 92,
+    "peso": 35,
+    "nota": "Cara de LLA en la ciudad."
+   },
+   "Axel Kicillof": {
+    "alineamiento": 12,
+    "peso": 90,
+    "nota": "Gobernador; principal aliado provincial."
+   }
+  }
+ },
+ "intenciones": {
+  "quiere": [
+   "queremos",
+   "quiero",
+   "hay que",
+   "necesitamos",
+   "necesita",
+   "necesitan",
+   "hace falta",
+   "falta de",
+   "que se vaya",
+   "que se vayan",
+   "se tiene que ir",
+   "que renuncie",
+   "fuera",
+   "pedimos",
+   "exigimos",
+   "reclamamos",
+   "que pongan",
+   "que arreglen",
+   "que paguen",
+   "aumento",
+   "trabajo genuino",
+   "que vuelva",
+   "que gobierne",
+   "que se presente",
+   "candidato ya",
+   "que investiguen",
+   "que expliquen",
+   "que devuelvan"
+  ],
+  "espera": [
+   "ojalá",
+   "ojala",
+   "espero",
+   "esperamos",
+   "a ver si",
+   "tengo fe",
+   "fe en",
+   "confío",
+   "confio",
+   "confiamos",
+   "se viene",
+   "se vienen",
+   "en 2027",
+   "el año que viene",
+   "vamos a ganar",
+   "vamos a volver",
+   "volver a gobernar",
+   "recuperar la provincia",
+   "ilusión",
+   "ilusion",
+   "esperanza",
+   "sueño",
+   "próximo gobierno",
+   "proximo gobierno",
+   "que gane",
+   "ojalá sea",
+   "ojala sea"
+  ],
+  "critica": [
+   "vergüenza",
+   "verguenza",
+   "desastre",
+   "fracaso",
+   "horrible",
+   "inútil",
+   "inutil",
+   "no sabe",
+   "no saben",
+   "mediocre",
+   "culpa",
+   "culpable",
+   "pésimo",
+   "pesimo",
+   "un asco",
+   "basta",
+   "lamentable",
+   "patético",
+   "patetico",
+   "ridículo",
+   "ridiculo",
+   "nefasto",
+   "incapaz",
+   "chanta",
+   "mentiroso",
+   "mentira",
+   "se robó",
+   "se robo",
+   "chorro",
+   "chorros",
+   "ladrón",
+   "ladron",
+   "corrupto",
+   "corruptos",
+   "corrupción",
+   "corrupcion",
+   "kukas",
+   "kuka",
+   "caradura",
+   "decepción",
+   "decepcion",
+   "hipócrita",
+   "hipocrita",
+   "traidor",
+   "oportunista",
+   "cínico",
+   "cinico",
+   "peor",
+   "fundieron",
+   "destruyeron",
+   "nunca más",
+   "nunca mas"
+  ],
+  "apoya": [
+   "gracias",
+   "excelente",
+   "bien ahí",
+   "bien ahi",
+   "acierto",
+   "felicitaciones",
+   "bravo",
+   "aplausos",
+   "el mejor",
+   "impecable",
+   "lo banco",
+   "bancamos",
+   "todos con",
+   "gran persona",
+   "gran tipo",
+   "un lujo",
+   "coherente",
+   "honesto",
+   "buena gestión",
+   "buena gestion",
+   "orgullo",
+   "genio",
+   "capo",
+   "querido",
+   "sí se puede",
+   "si se puede",
+   "mi voto",
+   "tiene mi voto",
+   "lo voto",
+   "la voto",
+   "valiente",
+   "la única",
+   "la unica",
+   "el único",
+   "el unico",
+   "gran trabajo",
+   "buen trabajo",
+   "tiene razón",
+   "tiene razon",
+   "dice la verdad"
+  ]
+ },
+ "temas": {
+  "Seguridad": [
+   "seguridad",
+   "inseguridad",
+   "policía",
+   "policia",
+   "delito",
+   "robo",
+   "robos",
+   "narco",
+   "droga",
+   "drogas",
+   "crimen",
+   "motochorro"
+  ],
+  "Economía y bolsillo": [
+   "inflación",
+   "inflacion",
+   "precios",
+   "salario",
+   "salarios",
+   "sueldo",
+   "sueldos",
+   "jubilad",
+   "dólar",
+   "dolar",
+   "ajuste",
+   "tarifas",
+   "desempleo",
+   "empleo",
+   "pobreza",
+   "comercio",
+   "comercios",
+   "pymes",
+   "pyme",
+   "fábrica",
+   "fabrica",
+   "despidos"
+  ],
+  "Salud y educación": [
+   "hospital",
+   "hospitales",
+   "salud",
+   "guardia",
+   "escuela",
+   "escuelas",
+   "docentes",
+   "educación",
+   "educacion",
+   "universidad"
+  ],
+  "Obras y servicios": [
+   "obra",
+   "obras",
+   "asfalto",
+   "cloacas",
+   "agua",
+   "luz",
+   "basura",
+   "baches",
+   "calles",
+   "iluminación",
+   "iluminacion",
+   "transporte",
+   "colectivo",
+   "colectivos",
+   "vivienda",
+   "viviendas"
+  ],
+  "Gobierno de Milei": [
+   "milei",
+   "gobierno nacional",
+   "casa rosada",
+   "motosierra",
+   "libertad avanza",
+   "karina"
+  ],
+  "Corrupción y transparencia": [
+   "corrupción",
+   "corrupcion",
+   "coima",
+   "coimas",
+   "enriquecimiento",
+   "denuncia",
+   "causa",
+   "juzgado",
+   "fiscal",
+   "transparencia",
+   "declaración jurada",
+   "declaracion jurada"
+  ],
+  "Elecciones 2027 y candidaturas": [
+   "2027",
+   "candidato",
+   "candidata",
+   "candidatura",
+   "elecciones",
+   "encuesta",
+   "lista",
+   "listas",
+   "alianza",
+   "votos",
+   "votar",
+   "intendente",
+   "intendenta",
+   "gobernador",
+   "gobernación",
+   "gobernacion",
+   "senado"
+  ],
+  "Turismo, puerto y empleo local": [
+   "turismo",
+   "temporada",
+   "puerto",
+   "pesca",
+   "hotel",
+   "hoteles",
+   "desocupación",
+   "desocupacion",
+   "industria"
+  ],
+  "ANSES y jubilaciones": [
+   "anses",
+   "jubilación",
+   "jubilacion",
+   "jubilados",
+   "auh",
+   "moratoria",
+   "haberes"
+  ]
+ },
+ "narrativas": {
+  "Crítica al ajuste": [
+   "ajuste",
+   "motosierra",
+   "la gente no llega",
+   "bolsillo",
+   "changuito",
+   "despidos",
+   "cierre"
+  ],
+  "Gestión y obras": [
+   "obra",
+   "obras",
+   "gestión",
+   "gestion",
+   "inauguró",
+   "inauguro",
+   "recorrió",
+   "recorrio"
+  ],
+  "Conflicto e internas": [
+   "interna",
+   "pelea",
+   "cruce",
+   "ruptura",
+   "denuncia"
+  ],
+  "Unidad y armado 2027": [
+   "unidad",
+   "armado",
+   "2027",
+   "frente",
+   "alternativa",
+   "candidat"
+  ],
+  "Clásico con Montenegro": [
+   "montenegro",
+   "intendencia",
+   "mar del plata"
+  ],
+  "ANSES y jubilados": [
+   "anses",
+   "jubilad",
+   "auh"
+  ]
+ },
+ "positivo": [
+  "gracias",
+  "excelente",
+  "bien hecho",
+  "muy bien",
+  "felicit",
+  "impecable",
+  "genial",
+  "bravo",
+  "gran persona",
+  "orgullo",
+  "el mejor",
+  "esperanza",
+  "honesto",
+  "coherente"
+ ],
+ "negativo": [
+  "vergüenza",
+  "verguenza",
+  "desastre",
+  "fracaso",
+  "inútil",
+  "inutil",
+  "mentiroso",
+  "chorro",
+  "corrupto",
+  "mediocre",
+  "basta",
+  "patético",
+  "patetico",
+  "horrible",
+  "peor",
+  "nefasto",
+  "kuka",
+  "traidora",
+  "traidor",
+  "panquequ",
+  "operadora",
+  "operador"
+ ],
+ "contexto": [
+  "mar del plata",
+  "marplatense",
+  "general pueyrredon",
+  "batán",
+  "batan",
+  "quinta sección",
+  "quinta seccion"
+ ],
+ "excluir_frases": [],
+ "medios_locales": [
+  "la capital",
+  "0223",
+  "qué digital",
+  "que digital",
+  "mdphoy"
+ ],
+ "sitios_locales": [
+  "lacapitalmdp.com",
+  "0223.com.ar",
+  "quedigital.com.ar",
+  "mdphoy.com"
+ ],
+ "rss": [
+  {
+   "name": "La Capital MdP",
+   "url": "https://www.lacapitalmdp.com/feed/",
+   "local": true
+  },
+  {
+   "name": "Qué Digital",
+   "url": "https://quedigital.com.ar/feed/",
+   "local": true
+  },
+  {
+   "name": "Letra P",
+   "url": "https://www.letrap.com.ar/rss/home.xml"
+  },
+  {
+   "name": "Página/12",
+   "url": "https://www.pagina12.com.ar/rss/portada"
+  },
+  {
+   "name": "Infobae",
+   "url": "https://www.infobae.com/arc/outboundfeeds/rss/"
+  },
+  {
+   "name": "Clarín",
+   "url": "https://www.clarin.com/rss/politica/"
+  },
+  {
+   "name": "Perfil",
+   "url": "https://www.perfil.com/feed/politica"
+  }
+ ],
+ "google_news": {
+  "queries": [
+   "\"Fernanda Raverta\"",
+   "\"Raverta\" Mar del Plata",
+   "\"Raverta\" Montenegro",
+   "\"Raverta\" senado bonaerense",
+   "\"Raverta\" Kicillof",
+   "Mar del Plata intendencia 2027",
+   "\"Guillermo Montenegro\" Mar del Plata"
+  ],
+  "sites": [
+   "0223.com.ar",
+   "ambito.com",
+   "clarin.com",
+   "cronista.com",
+   "eldestapeweb.com",
+   "infobae.com",
+   "lacapitalmdp.com",
+   "lanacion.com.ar",
+   "lapoliticaonline.com",
+   "letrap.com.ar",
+   "mdphoy.com",
+   "pagina12.com.ar",
+   "perfil.com",
+   "quedigital.com.ar"
+  ],
+  "site_terms": [
+   "Raverta"
+  ]
+ },
+ "youtube": {
+  "region": "AR",
+  "language": "es",
+  "videos_per_query": 6,
+  "comments_per_video": 100,
+  "queries": [
+   "Fernanda Raverta",
+   "Fernanda Raverta entrevista",
+   "Raverta Montenegro Mar del Plata",
+   "Mar del Plata política 2027"
+  ],
+  "contexto": [
+   "raverta",
+   "mar del plata",
+   "montenegro",
+   "anses",
+   "kicillof",
+   "peronismo"
+  ],
+  "excluir": []
+ },
+ "trends": {
+  "terminos": [
+   "Fernanda Raverta",
+   "Guillermo Montenegro",
+   "Vilma Baragiola"
+  ],
+  "geos": {
+   "AR-B": "Provincia de Buenos Aires",
+   "AR": "Argentina"
+  },
+  "geo_local": "AR-B"
+ },
+ "wiki_provincia": [
+  "Provincia de Buenos Aires"
+ ],
+ "stop_extra": [
+  "raverta",
+  "fernanda",
+  "mar",
+  "plata",
+  "marplatense"
+ ],
+ "textos_comentarios": "extracto"
+}

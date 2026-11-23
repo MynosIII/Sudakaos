@@ -1,0 +1,737 @@
+{
+ "nombre": "Monitor Beatriz Ávila",
+ "slug": "avila",
+ "color": "#00a896",
+ "distrito": "Tucumán",
+ "perfil": {
+  "nombre": "Beatriz Ávila",
+  "corto": "Ávila",
+  "cargo": "Senadora nacional por Tucumán",
+  "resumen": "Senadora nacional por Tucumán desde 2021 (Partido por la Justicia Social), integra el bloque de aliados del gobernador Osvaldo Jaldo y negocia votos clave en el Senado. Pareja de Germán Alfaro, ex intendente de San Miguel de Tucumán.",
+  "objetivo": "Su banca vence en diciembre de 2027: sostener protagonismo en el Senado y en el armado tucumano.",
+  "fuentes": [
+   "https://www.parlamentario.com/2021/12/09/beatriz-avila-renovo-su-compromiso-legislativo/",
+   "https://www.c5n.com/politica/voto-clave-la-senadora-beatriz-avila-tucuman-rechazara-las-modificaciones-la-ley-tierras-n245402"
+  ]
+ },
+ "focos": [
+  "Beatriz Ávila"
+ ],
+ "rivales": [
+  "Juan Manzur",
+  "Rossana Chahla",
+  "Roberto Sánchez",
+  "Lisandro Catalán"
+ ],
+ "co_clave": [
+  "Osvaldo Jaldo",
+  "Germán Alfaro",
+  "Juan Manzur",
+  "Javier Milei"
+ ],
+ "window_days": 365,
+ "conversacion_dias": 365,
+ "eleccion": "2027-10-24",
+ "eleccion_nota": "Fecha de referencia: generales de octubre de 2027 (gobernación de Tucumán y renovación de su banca).",
+ "tema_elecciones": "Elecciones 2027 y candidaturas",
+ "figuras": {
+  "Beatriz Ávila": {
+   "alias": [
+    "beatriz ávila",
+    "beatriz avila",
+    "senadora ávila",
+    "senadora avila",
+    "ávila",
+    "avila"
+   ],
+   "bando": "Justicia Social",
+   "cargo": "Senadora nacional por Tucumán",
+   "alias_contexto": [
+    "ávila",
+    "avila"
+   ],
+   "foco": true,
+   "wiki": [
+    "Beatriz Ávila"
+   ],
+   "trends": "Beatriz Ávila",
+   "excluir_si": [
+    "ávila camacho",
+    "avila camacho",
+    "jorge ávila",
+    "jorge avila",
+    "teresa de ávila",
+    "teresa de avila"
+   ]
+  },
+  "Osvaldo Jaldo": {
+   "alias": [
+    "osvaldo jaldo",
+    "jaldo"
+   ],
+   "bando": "Peronismo",
+   "cargo": "Gobernador de Tucumán",
+   "wiki": [
+    "Osvaldo Jaldo"
+   ],
+   "trends": "Jaldo"
+  },
+  "Germán Alfaro": {
+   "alias": [
+    "germán alfaro",
+    "german alfaro"
+   ],
+   "bando": "Justicia Social",
+   "cargo": "Ex intendente de San Miguel de Tucumán",
+   "wiki": [
+    "Germán Alfaro"
+   ],
+   "trends": "Germán Alfaro"
+  },
+  "Juan Manzur": {
+   "alias": [
+    "juan manzur",
+    "manzur"
+   ],
+   "bando": "Peronismo",
+   "cargo": "Senador, ex gobernador",
+   "wiki": [
+    "Juan Luis Manzur"
+   ],
+   "trends": "Manzur"
+  },
+  "Rossana Chahla": {
+   "alias": [
+    "rossana chahla",
+    "chahla"
+   ],
+   "bando": "Peronismo",
+   "cargo": "Intendenta de San Miguel de Tucumán",
+   "wiki": [
+    "Rossana Chahla"
+   ],
+   "trends": "Chahla"
+  },
+  "Roberto Sánchez": {
+   "alias": [
+    "roberto sánchez",
+    "roberto sanchez"
+   ],
+   "bando": "UCR",
+   "cargo": "Diputado nacional, radicalismo tucumano",
+   "wiki": [
+    "Roberto Sánchez (político)"
+   ]
+  },
+  "Lisandro Catalán": {
+   "alias": [
+    "lisandro catalán",
+    "lisandro catalan",
+    "catalán",
+    "catalan"
+   ],
+   "bando": "La Libertad Avanza",
+   "cargo": "Referente de LLA en Tucumán",
+   "alias_contexto": [
+    "catalán",
+    "catalan"
+   ],
+   "wiki": [
+    "Lisandro Catalán"
+   ]
+  },
+  "Javier Milei": {
+   "alias": [
+    "javier milei",
+    "milei"
+   ],
+   "bando": "Nacional",
+   "cargo": "Presidente",
+   "wiki": [
+    "Javier Milei"
+   ]
+  }
+ },
+ "obj_fig": {
+  "avila": "Ávila",
+  "jaldo": "Jaldo",
+  "alfaro": "Alfaro",
+  "manzur": "Manzur",
+  "chahla": "Chahla",
+  "sanchez": "Sánchez",
+  "catalan": "Catalán",
+  "milei": "Milei"
+ },
+ "mapa_poder": {
+  "metodo": "Codificación editorial inicial, a revisar con el cliente. Eje horizontal: 0 = peronismo, 100 = Milei/LLA orgánico. Eje vertical: peso propio (cargo, aparato, votos o audiencia). El tamaño de cada punto sale de las menciones medidas.",
+  "eje_x": "← peronismo · · · centro / vecinales · · · LLA →",
+  "anot": [
+   [
+    6,
+    "PERONISMO",
+    "#5fb3c9"
+   ],
+   [
+    45,
+    "CENTRO / VECINALES",
+    "#f2b705"
+   ],
+   [
+    94,
+    "LLA",
+    "#9085e9"
+   ]
+  ],
+  "puntos": {
+   "Beatriz Ávila": {
+    "alineamiento": 55,
+    "peso": 45,
+    "nota": "Senadora dialoguista, socia del gobernador; voto clave en el Senado."
+   },
+   "Osvaldo Jaldo": {
+    "alineamiento": 40,
+    "peso": 90,
+    "nota": "Gobernador; aliado."
+   },
+   "Germán Alfaro": {
+    "alineamiento": 55,
+    "peso": 40,
+    "nota": "Ex intendente capitalino, su pareja política."
+   },
+   "Juan Manzur": {
+    "alineamiento": 25,
+    "peso": 55,
+    "nota": "Ex gobernador, rival interno del jaldismo."
+   },
+   "Rossana Chahla": {
+    "alineamiento": 30,
+    "peso": 55,
+    "nota": "Intendenta de la capital."
+   },
+   "Roberto Sánchez": {
+    "alineamiento": 65,
+    "peso": 40,
+    "nota": "Radicalismo."
+   },
+   "Lisandro Catalán": {
+    "alineamiento": 92,
+    "peso": 45,
+    "nota": "LLA en la provincia."
+   }
+  }
+ },
+ "intenciones": {
+  "quiere": [
+   "queremos",
+   "quiero",
+   "hay que",
+   "necesitamos",
+   "necesita",
+   "necesitan",
+   "hace falta",
+   "falta de",
+   "que se vaya",
+   "que se vayan",
+   "se tiene que ir",
+   "que renuncie",
+   "fuera",
+   "pedimos",
+   "exigimos",
+   "reclamamos",
+   "que pongan",
+   "que arreglen",
+   "que paguen",
+   "aumento",
+   "trabajo genuino",
+   "que vuelva",
+   "que gobierne",
+   "que se presente",
+   "candidato ya",
+   "que investiguen",
+   "que expliquen",
+   "que devuelvan"
+  ],
+  "espera": [
+   "ojalá",
+   "ojala",
+   "espero",
+   "esperamos",
+   "a ver si",
+   "tengo fe",
+   "fe en",
+   "confío",
+   "confio",
+   "confiamos",
+   "se viene",
+   "se vienen",
+   "en 2027",
+   "el año que viene",
+   "vamos a ganar",
+   "vamos a volver",
+   "volver a gobernar",
+   "recuperar la provincia",
+   "ilusión",
+   "ilusion",
+   "esperanza",
+   "sueño",
+   "próximo gobierno",
+   "proximo gobierno",
+   "que gane",
+   "ojalá sea",
+   "ojala sea"
+  ],
+  "critica": [
+   "vergüenza",
+   "verguenza",
+   "desastre",
+   "fracaso",
+   "horrible",
+   "inútil",
+   "inutil",
+   "no sabe",
+   "no saben",
+   "mediocre",
+   "culpa",
+   "culpable",
+   "pésimo",
+   "pesimo",
+   "un asco",
+   "basta",
+   "lamentable",
+   "patético",
+   "patetico",
+   "ridículo",
+   "ridiculo",
+   "nefasto",
+   "incapaz",
+   "chanta",
+   "mentiroso",
+   "mentira",
+   "se robó",
+   "se robo",
+   "chorro",
+   "chorros",
+   "ladrón",
+   "ladron",
+   "corrupto",
+   "corruptos",
+   "corrupción",
+   "corrupcion",
+   "kukas",
+   "kuka",
+   "caradura",
+   "decepción",
+   "decepcion",
+   "hipócrita",
+   "hipocrita",
+   "traidor",
+   "oportunista",
+   "cínico",
+   "cinico",
+   "peor",
+   "fundieron",
+   "destruyeron",
+   "nunca más",
+   "nunca mas"
+  ],
+  "apoya": [
+   "gracias",
+   "excelente",
+   "bien ahí",
+   "bien ahi",
+   "acierto",
+   "felicitaciones",
+   "bravo",
+   "aplausos",
+   "el mejor",
+   "impecable",
+   "lo banco",
+   "bancamos",
+   "todos con",
+   "gran persona",
+   "gran tipo",
+   "un lujo",
+   "coherente",
+   "honesto",
+   "buena gestión",
+   "buena gestion",
+   "orgullo",
+   "genio",
+   "capo",
+   "querido",
+   "sí se puede",
+   "si se puede",
+   "mi voto",
+   "tiene mi voto",
+   "lo voto",
+   "la voto",
+   "valiente",
+   "la única",
+   "la unica",
+   "el único",
+   "el unico",
+   "gran trabajo",
+   "buen trabajo",
+   "tiene razón",
+   "tiene razon",
+   "dice la verdad"
+  ]
+ },
+ "temas": {
+  "Seguridad": [
+   "seguridad",
+   "inseguridad",
+   "policía",
+   "policia",
+   "delito",
+   "robo",
+   "robos",
+   "narco",
+   "droga",
+   "drogas",
+   "crimen",
+   "motochorro"
+  ],
+  "Economía y bolsillo": [
+   "inflación",
+   "inflacion",
+   "precios",
+   "salario",
+   "salarios",
+   "sueldo",
+   "sueldos",
+   "jubilad",
+   "dólar",
+   "dolar",
+   "ajuste",
+   "tarifas",
+   "desempleo",
+   "empleo",
+   "pobreza",
+   "comercio",
+   "comercios",
+   "pymes",
+   "pyme",
+   "fábrica",
+   "fabrica",
+   "despidos"
+  ],
+  "Salud y educación": [
+   "hospital",
+   "hospitales",
+   "salud",
+   "guardia",
+   "escuela",
+   "escuelas",
+   "docentes",
+   "educación",
+   "educacion",
+   "universidad"
+  ],
+  "Obras y servicios": [
+   "obra",
+   "obras",
+   "asfalto",
+   "cloacas",
+   "agua",
+   "luz",
+   "basura",
+   "baches",
+   "calles",
+   "iluminación",
+   "iluminacion",
+   "transporte",
+   "colectivo",
+   "colectivos",
+   "vivienda",
+   "viviendas"
+  ],
+  "Gobierno de Milei": [
+   "milei",
+   "gobierno nacional",
+   "casa rosada",
+   "motosierra",
+   "libertad avanza",
+   "karina"
+  ],
+  "Corrupción y transparencia": [
+   "corrupción",
+   "corrupcion",
+   "coima",
+   "coimas",
+   "enriquecimiento",
+   "denuncia",
+   "causa",
+   "juzgado",
+   "fiscal",
+   "transparencia",
+   "declaración jurada",
+   "declaracion jurada"
+  ],
+  "Elecciones 2027 y candidaturas": [
+   "2027",
+   "candidato",
+   "candidata",
+   "candidatura",
+   "elecciones",
+   "encuesta",
+   "lista",
+   "listas",
+   "alianza",
+   "votos",
+   "votar",
+   "intendente",
+   "intendenta",
+   "gobernador",
+   "gobernación",
+   "gobernacion",
+   "senado"
+  ],
+  "Senado y leyes": [
+   "senado",
+   "sesión",
+   "sesion",
+   "ley",
+   "proyecto",
+   "votó",
+   "voto",
+   "dieta",
+   "presupuesto"
+  ],
+  "Tucumán: producción y empleo": [
+   "azúcar",
+   "azucar",
+   "limón",
+   "limon",
+   "ingenio",
+   "zafra",
+   "citrus",
+   "producción",
+   "produccion"
+  ]
+ },
+ "narrativas": {
+  "Crítica al ajuste": [
+   "ajuste",
+   "motosierra",
+   "la gente no llega",
+   "bolsillo",
+   "changuito",
+   "despidos",
+   "cierre"
+  ],
+  "Gestión y obras": [
+   "obra",
+   "obras",
+   "gestión",
+   "gestion",
+   "inauguró",
+   "inauguro",
+   "recorrió",
+   "recorrio"
+  ],
+  "Conflicto e internas": [
+   "interna",
+   "pelea",
+   "cruce",
+   "ruptura",
+   "denuncia"
+  ],
+  "Unidad y armado 2027": [
+   "unidad",
+   "armado",
+   "2027",
+   "frente",
+   "alternativa",
+   "candidat"
+  ],
+  "Voto clave en el Senado": [
+   "voto clave",
+   "votó",
+   "voto",
+   "senado",
+   "dialoguista",
+   "interbloque"
+  ],
+  "Dietas y privilegios": [
+   "dieta",
+   "sueldo",
+   "viaje",
+   "privilegio",
+   "pasajes"
+  ]
+ },
+ "positivo": [
+  "gracias",
+  "excelente",
+  "bien hecho",
+  "muy bien",
+  "felicit",
+  "impecable",
+  "genial",
+  "bravo",
+  "gran persona",
+  "orgullo",
+  "el mejor",
+  "esperanza",
+  "honesto",
+  "coherente"
+ ],
+ "negativo": [
+  "vergüenza",
+  "verguenza",
+  "desastre",
+  "fracaso",
+  "inútil",
+  "inutil",
+  "mentiroso",
+  "chorro",
+  "corrupto",
+  "mediocre",
+  "basta",
+  "patético",
+  "patetico",
+  "horrible",
+  "peor",
+  "nefasto",
+  "kuka",
+  "traidora",
+  "traidor",
+  "panquequ",
+  "operadora",
+  "operador"
+ ],
+ "contexto": [
+  "tucumán",
+  "tucuman",
+  "tucumano",
+  "tucumana",
+  "san miguel de tucumán",
+  "senadora"
+ ],
+ "excluir_frases": [],
+ "medios_locales": [
+  "la gaceta",
+  "contexto",
+  "el tucumano",
+  "tucumán a las 7",
+  "tucuman a las 7"
+ ],
+ "sitios_locales": [
+  "lagaceta.com.ar",
+  "contextotucuman.com",
+  "eltucumano.com",
+  "tucumanalas7.com.ar"
+ ],
+ "rss": [
+  {
+   "name": "La Gaceta",
+   "url": "https://www.lagaceta.com.ar/rss/politica.xml",
+   "local": true
+  },
+  {
+   "name": "Contexto Tucumán",
+   "url": "https://www.contextotucuman.com/rss",
+   "local": true
+  },
+  {
+   "name": "Parlamentario",
+   "url": "https://www.parlamentario.com/feed/"
+  },
+  {
+   "name": "Letra P",
+   "url": "https://www.letrap.com.ar/rss/home.xml"
+  },
+  {
+   "name": "Página/12",
+   "url": "https://www.pagina12.com.ar/rss/portada"
+  },
+  {
+   "name": "Infobae",
+   "url": "https://www.infobae.com/arc/outboundfeeds/rss/"
+  },
+  {
+   "name": "Clarín",
+   "url": "https://www.clarin.com/rss/politica/"
+  },
+  {
+   "name": "Perfil",
+   "url": "https://www.perfil.com/feed/politica"
+  }
+ ],
+ "google_news": {
+  "queries": [
+   "\"Beatriz Ávila\"",
+   "\"Beatriz Avila\" senadora",
+   "\"Ávila\" Jaldo",
+   "\"Ávila\" Alfaro",
+   "Tucumán senadores 2027",
+   "\"Osvaldo Jaldo\" 2027"
+  ],
+  "sites": [
+   "ambito.com",
+   "clarin.com",
+   "contextotucuman.com",
+   "cronista.com",
+   "eldestapeweb.com",
+   "eltucumano.com",
+   "infobae.com",
+   "lagaceta.com.ar",
+   "lanacion.com.ar",
+   "lapoliticaonline.com",
+   "letrap.com.ar",
+   "pagina12.com.ar",
+   "perfil.com",
+   "tucumanalas7.com.ar"
+  ],
+  "site_terms": [
+   "Ávila",
+   "Avila"
+  ]
+ },
+ "youtube": {
+  "region": "AR",
+  "language": "es",
+  "videos_per_query": 6,
+  "comments_per_video": 100,
+  "queries": [
+   "Beatriz Ávila senadora",
+   "Beatriz Ávila Tucumán",
+   "Jaldo Ávila Senado",
+   "Tucumán política 2027"
+  ],
+  "contexto": [
+   "ávila",
+   "avila",
+   "tucum",
+   "jaldo",
+   "senado",
+   "alfaro"
+  ],
+  "excluir": []
+ },
+ "trends": {
+  "terminos": [
+   "Beatriz Ávila",
+   "Osvaldo Jaldo",
+   "Juan Manzur"
+  ],
+  "geos": {
+   "AR-T": "Tucumán",
+   "AR": "Argentina"
+  },
+  "geo_local": "AR-T"
+ },
+ "wiki_provincia": [
+  "Provincia de Tucumán"
+ ],
+ "stop_extra": [
+  "ávila",
+  "avila",
+  "beatriz",
+  "tucumán",
+  "tucuman",
+  "senadora"
+ ],
+ "textos_comentarios": "extracto"
+}
