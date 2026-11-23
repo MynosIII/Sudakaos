@@ -4,11 +4,14 @@ Lo que la gente piensa cuando le preguntás y lo que se dice en redes, en el mis
 
 Tres piezas:
 
-1. **Quiz público** (`quiz/`): 8 ejes (economía, comercio y moneda, territorio, valores, seguridad, sistema político, mundo, ambiente).
-   Versión Latinoamérica (45 preguntas, 18 figuras de la región) y Argentina (56 preguntas con condimento local, 43 dirigentes:
-   de Milei y Cristina Kirchner a figuras menos conocidas). Devuelve posición por eje, los 5 dirigentes más cercanos, un mapa
-   económico × valores y un link para compartir. Al final, cinco datos opcionales (edad en rango, género, país y provincia,
-   país de nacimiento, red principal) con consentimiento explícito. Se publica en `/quiz/`.
+1. **Quiz público** (`quiz/`): 12 ejes con las preguntas base de [12axes](https://github.com/politicaltests/politicaltests.github.io)
+   (licencia MIT, © 2020 8values / SapplyValues), adaptadas, más preguntas locales por país. Versiones: Latinoamérica general,
+   Argentina, Brasil, Paraguay, Perú, Chile, Colombia y Uruguay (56 a 62 preguntas, 15 a 43 dirigentes por país, de los más
+   conocidos a figuras menores). Idioma aparte del país: selector ES / PT / EN (Brasil arranca en portugués).
+   Devuelve posición por eje, **certeza** por eje (qué tan firme y coherente es la postura, dibujada como una banda), los 5
+   dirigentes más cercanos (la afinidad pesa más los ejes donde la persona está segura), un mapa economía × valores y un link
+   para compartir. Al final, cinco datos opcionales (edad en rango, género, país y provincia o estado, país de nacimiento, red
+   principal) con una casilla de consentimiento. Se publica en `/quiz/`. Los textos de la interfaz están en `quiz/i18n.js`.
 2. **Social listener** (`listener/`): escucha pasiva por eje y por dirigente. Google News, YouTube (videos y comentarios),
    Biblioteca de Anuncios de Meta (avisos por tema con edad y género del público alcanzado), Instagram desde `meta/`, X solo a mano.
 3. **Tablero** (`index.html` + `panel.js`): Panorama, Encuesta, Conversación, Cruce, Resumen accionable (PDF) y Fuentes y método.
@@ -36,9 +39,11 @@ Tres piezas:
 
 | Archivo | Qué hace |
 |---|---|
+| `datos/generar.py` | Fuente de las preguntas (base 12axes + locales) y de la recodificación de dirigentes; genera los tres JSON de abajo |
+| `datos/figuras_base.json`, `datos/locales_base.json` | Posiciones editoriales de dirigentes y preguntas locales por país (se editan acá y se corre `generar.py`) |
 | `datos/ejes.json` | Ejes, polos, escala de respuesta y versiones por país |
 | `datos/preguntas.json` | Banco de preguntas: efecto de cada una sobre cada eje y en qué versiones va |
-| `datos/figuras.json` | Posición editorial de cada dirigente en los 8 ejes (**a revisar**) |
+| `datos/figuras.json` | Posición editorial de cada dirigente en los 12 ejes (**a revisar**) |
 | `quiz/` | Quiz (HTML + JS vanilla, sin build) |
 | `apps_script/Code.gs` | Recepción de respuestas en la planilla y lectura con token |
 | `procesar.py` | Planilla → limpieza → ponderación (si hay `datos/marginales_ar.json`) → `data/quiz.json` |
@@ -46,11 +51,18 @@ Tres piezas:
 | `cruce.py` | Brechas, alertas y acciones → `data/cruce.json` |
 | `tests/test_pipeline.py` | Prueba de punta a punta con datos simulados (`--guardar-demo` regenera `data/demo/`) |
 
+## Certeza
+
+Por eje, 0 a 100 = decisión × coherencia. Decisión: neutral 0, de acuerdo 0,75, muy de acuerdo 1. Coherencia: cada frase de 12axes
+tiene un nivel (1 moderada … 4 extrema); una frase de nivel L la acepta quien está del lado de su polo al menos (L − 1) × 12,5 puntos
+más allá del centro. Las respuestas que coinciden con eso suman y las que no, restan. El mismo cálculo está en `quiz.js` y `procesar.py`.
+
 ## Ponderación
 
-Sin marginales cargadas, la muestra se publica **sin ponderar**. Para ponderar por raking al Censo 2022, crear
-`datos/marginales_ar.json` con `{"fuente": "Censo 2022 (INDEC)", "marginales": {"genero": {"Mujer": 0.52, ...}, "edad_g": {...}, "region": {...}}}`
-usando las mismas categorías que el quiz (`edad_g`: 16-24, 25-34, 35-49, 50+; `region`: AMBA, Pampeana, NOA, NEA, Cuyo, Patagonia).
+Argentina se pondera por raking (IPF, pesos recortados a 0,2-5) a `datos/marginales_ar.json`: Censo 2022 (INDEC), población de 16+
+por género y edad (`edad_g`: 16-24, 25-34, 35-49, 50+; el tramo 16-24 es estimado) y región (AMBA, Pampeana, NOA, NEA, Cuyo,
+Patagonia, según población total por jurisdicción; conurbano = 24 partidos). Se usa cada variable que contestó al menos el 80%.
+Fuentes: cuadros del Censo 2022 en censo.gob.ar e INDEC (c2022_tp_est_c4). Los otros países se publican sin ponderar.
 
 ## Para después
 

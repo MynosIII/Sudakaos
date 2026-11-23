@@ -120,7 +120,7 @@ for f in ("index.html", "panel.js", "data", "datos/ejes.json", "datos/figuras.js
     cp(f"brujula/{f}", d / f)
 editar(d / "index.html", ('panel.js"', f'panel.js?v={SHA}"'))
 q = SITE / "quiz"
-for f in ("index.html", "quiz.js", "quiz.css"):
+for f in ("index.html", "quiz.js", "quiz.css", "i18n.js"):
     cp(f"brujula/quiz/{f}", q / f)
 for f in ("ejes.json", "preguntas.json", "figuras.json"):
     cp(f"brujula/datos/{f}", q / "datos" / f)
@@ -128,7 +128,7 @@ ep = os.environ.get("QUIZ_ENDPOINT", "").strip()
 if ep and not re.fullmatch(r"https://script\.google\.com/macros/s/[A-Za-z0-9_-]+/exec", ep):
     sys.exit("publicar: QUIZ_ENDPOINT no parece una URL de Apps Script (/exec)")
 (q / "config.js").write_text("window.BRUJULA = { datos: 'datos/', endpoint: %s };\n" % repr(ep), encoding="utf8")
-editar(q / "index.html", ('quiz.js"', f'quiz.js?v={SHA}"'), ('quiz.css"', f'quiz.css?v={SHA}"'), ('config.js"', f'config.js?v={SHA}"'))
+editar(q / "index.html", ('quiz.js"', f'quiz.js?v={SHA}"'), ('quiz.css"', f'quiz.css?v={SHA}"'), ('config.js"', f'config.js?v={SHA}"'), ('i18n.js"', f'i18n.js?v={SHA}"'))
 
 # Demo pública de Trump (free trial): ruta abierta web/demo/trump/, fuera del índice secreto
 subprocess.run([sys.executable, str(REPO / "trump" / "build_demo.py"), str(SITE / "web" / "demo" / "trump")], check=True,

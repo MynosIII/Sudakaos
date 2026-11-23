@@ -9,9 +9,9 @@
   const DEMO = /[?&]demo=1/.test(location.search);
   const BASE = DEMO ? 'data/demo/' : 'data/';
   const C = { a: '#3987e5', b: '#e8a33d', pos: '#43d17a', neg: '#ff6b6b', neu: '#5d6470', dim: '#5c6676', txt: '#e4e8ee' };
-  const PAL = ['#e8a33d', '#3987e5', '#43d17a', '#d55181', '#9085e9', '#5fb3c9', '#ff6b6b', '#c98500'];
+  const PAL = ['#e8a33d', '#3987e5', '#43d17a', '#d55181', '#9085e9', '#5fb3c9', '#ff6b6b', '#c98500', '#7c8b9e', '#b5d33d', '#e86f3d', '#3dc9a8'];
   const CFG = { displayModeBar: false, responsive: true };
-  const S = { E: null, Q: {}, L: {}, X: {}, ver: 'ar', var: 'genero', eje: 'eco', br: 'brecha_jovenes', hl: 'eco' };
+  const S = { E: null, Q: {}, L: {}, X: {}, ver: 'ar', var: 'genero', eje: 'pla', br: 'brecha_jovenes', hl: 'pla' };
   const lay = (h, extra = {}) => Object.assign({ height: h, margin: { l: 10, r: 10, t: 10, b: 30 }, showlegend: false }, extra);
   const plot = (id, data, layout) => { const el = $('#' + id); if (el) Plotly.newPlot(el, data, layout, CFG) };
   const empty = (id, t) => { const el = $('#' + id); if (el) el.innerHTML = `<div class="empty">${esc(t)}</div>` };
@@ -34,7 +34,7 @@
       .concat(Object.entries(S.L.ejes || {}).slice(0, 8).flatMap(([k, v]) => (v.titulares || []).slice(0, 1).map(h => `<span><em>${esc(ejeN(k).nombre.toUpperCase())}</em>${esc(h.t)}</span>`)));
     $('#ticker').innerHTML = items.join('') || '<span>Esperando la primera corrida de datos</span>';
     if (DEMO || S.Q.simulado) $('#sim').innerHTML = '<div class="sim">Datos simulados' + (DEMO ? ' (encuesta y conversación)' : ' de encuesta') + ': solo para ver cómo se arma el tablero</div>';
-    $('#foot').textContent = 'Brújula · encuesta propia (quiz de 8 ejes) y escucha de Google News, YouTube, Biblioteca de Anuncios de Meta, Instagram y X.';
+    $('#foot').textContent = 'Brújula · encuesta propia (quiz de 12 ejes con certeza) y escucha de Google News, YouTube, Biblioteca de Anuncios de Meta, Instagram y X.';
   }
 
   // ------------------------------------------------------------------ panorama
@@ -44,10 +44,10 @@
     const nf = Object.values(S.L.figuras || {}).filter(f => f.n).length;
     const k = [['', 'Respuestas válidas', fmt((S.Q.campo || {}).validas), `de ${fmt((S.Q.campo || {}).recibidas)} recibidas`],
       ['', 'n efectivo (AR)', fmt(q.n_efectivo), q.ponderacion || 'sin datos'],
+      ['', 'Certeza media (AR)', q.certeza == null ? '—' : fmt(q.certeza) + '/100', 'qué tan firmes son las posturas'],
       ['', 'Textos escuchados', fmt(L.textos), L.desde ? `${L.desde} a ${L.hasta}` : 'sin datos'],
       ['', 'Dirigentes mencionados', fmt(nf), `de ${S.figs.length} del quiz`],
-      ['f', 'Alertas', fmt((S.X.alertas || []).length), 'cruce automático'],
-      ['', 'Acciones', fmt((S.X.acciones || []).length), 'en el resumen']];
+      ['f', 'Alertas', fmt((S.X.alertas || []).length), 'cruce automático']];
     $('#kpis').innerHTML = k.map(x => `<div class="kpi ${x[0]}"><div class="l">${x[1]}</div><div class="v">${x[2]}</div><div class="d">${esc(x[3])}</div></div>`).join('');
     const ej = S.X.ejes || [];
     if (ej.some(e => e.quiz != null || e.encuadre != null)) {
@@ -56,7 +56,7 @@
       plot('p-dumb', [
         { x: ej.map(e => e.quiz), y, mode: 'markers', name: 'Quiz', marker: { size: 13, color: C.b }, hovertemplate: '%{y}<br>Quiz: %{x:.0f}<extra></extra>' },
         { x: ej.map(e => e.encuadre), y, mode: 'markers', name: 'Conversación', marker: { size: 12, color: C.a, symbol: 'diamond' }, hovertemplate: '%{y}<br>Conversación: %{x:.0f}<extra></extra>' }],
-        lay(330, { margin: { l: 255, r: 10, t: 10, b: 30 }, showlegend: true, legend: { orientation: 'h', y: 1.08 }, shapes: [...lines, { type: 'line', x0: 50, x1: 50, y0: -0.5, y1: ej.length - .5, line: { color: '#263040', dash: 'dot' } }],
+        lay(440, { margin: { l: 255, r: 10, t: 10, b: 30 }, showlegend: true, legend: { orientation: 'h', y: 1.08 }, shapes: [...lines, { type: 'line', x0: 50, x1: 50, y0: -0.5, y1: ej.length - .5, line: { color: '#263040', dash: 'dot' } }],
           xaxis: { range: [0, 100] }, yaxis: { autorange: 'reversed' } }));
     } else empty('p-dumb', 'Sin datos todavía');
     $('#p-alertas').innerHTML = (S.X.alertas || []).map(a => `<div class="${esc(a.nivel)}">${esc(a.t)}</div>`).join('') || '<div class="info">Sin alertas.</div>';
@@ -87,20 +87,25 @@
     const E = S.E.ejes;
     plot('e-ejes', [{ type: 'bar', orientation: 'h', y: E.map(e => `${e.a} ↔ ${e.b}`), x: E.map(e => q.ejes[e.id].m - 50), base: 50,
       error_x: { type: 'data', array: E.map(e => q.ejes[e.id].ci), color: '#98a2b2', thickness: 1 },
-      marker: { color: E.map(e => q.ejes[e.id].m >= 50 ? C.b : C.a) }, hovertemplate: '%{y}<br>%{customdata:.1f}/100<extra></extra>', customdata: E.map(e => q.ejes[e.id].m) }],
-      lay(320, { margin: { l: 255, r: 14, t: 10, b: 30 }, xaxis: { range: [0, 100] }, yaxis: { autorange: 'reversed' } }));
+      marker: { color: E.map(e => q.ejes[e.id].m >= 50 ? C.b : C.a) }, hovertemplate: '%{y}<br>%{customdata[0]:.1f}/100 · certeza %{customdata[1]:.0f}<extra></extra>',
+      customdata: E.map(e => [q.ejes[e.id].m, q.ejes[e.id].cert]) }],
+      lay(440, { margin: { l: 255, r: 14, t: 10, b: 30 }, xaxis: { range: [0, 100] }, yaxis: { autorange: 'reversed' } }));
     const fg = (q.figuras || []).slice(0, 15).reverse();
     plot('e-figs', [{ type: 'bar', orientation: 'h', y: fg.map(f => f.nombre), x: fg.map(f => f.pct), marker: { color: C.b }, hovertemplate: '%{y}: %{x:.1f}%<extra></extra>' }],
-      lay(320, { margin: { l: 170, r: 10, t: 10, b: 30 } }));
+      lay(440, { margin: { l: 170, r: 10, t: 10, b: 30 } }));
     const vars = [['genero', 'Género'], ['edad_g', 'Edad'], ['region', 'Región'], ['red', 'Red principal'], ['pais_res', 'País']];
     chips('e-var', vars, S.var, v => { S.var = v; encuesta() });
     const seg = q.por[S.var] || {};
     const gs = Object.keys(seg);
+    const cx = ['Total', ...gs], cz = E.map(e => [q.ejes[e.id].cert, ...gs.map(g => seg[g].ejes[e.id].cert)]);
+    plot('e-cert', [{ type: 'heatmap', x: cx.map((g, i) => i ? `${g} · media ${fmt(seg[g].certeza)}` : `Total · media ${fmt(q.certeza)}`), y: E.map(e => e.nombre), z: cz, zmin: 0, zmax: 70,
+      colorscale: [[0, '#10151d'], [1, C.pos]], showscale: false, text: cz.map(r => r.map(v => v == null ? '' : v.toFixed(0))), texttemplate: '%{text}',
+      hovertemplate: '%{x}<br>%{y}: certeza %{z:.0f}<extra></extra>' }], lay(400, { margin: { l: 110, r: 10, t: 10, b: 60 }, yaxis: { autorange: 'reversed' } }));
     if (gs.length) {
       const z = E.map(e => gs.map(g => seg[g].ejes[e.id].m));
       plot('e-seg', [{ type: 'heatmap', x: gs.map(g => `${g} (n ${seg[g].n})`), y: E.map(e => `${e.a} ↔ ${e.b}`), z, zmin: 20, zmax: 80, zmid: 50,
         colorscale: [[0, C.a], [.5, '#10151d'], [1, C.b]], text: z.map(r => r.map(v => v.toFixed(0))), texttemplate: '%{text}', showscale: false,
-        hovertemplate: '%{x}<br>%{y}: %{z:.1f}<extra></extra>' }], lay(330, { margin: { l: 255, r: 10, t: 10, b: 60 }, yaxis: { autorange: 'reversed' } }));
+        hovertemplate: '%{x}<br>%{y}: %{z:.1f}<extra></extra>' }], lay(440, { margin: { l: 255, r: 10, t: 10, b: 60 }, yaxis: { autorange: 'reversed' } }));
     } else empty('e-seg', 'Ningún grupo llega al mínimo de respuestas todavía.');
     chips('e-eje', E.map(e => [e.id, e.nombre]), S.eje, v => { S.eje = v; encuesta() });
     heat('e-eg', q.edad_genero, 'edad_g', 'genero');
@@ -166,7 +171,7 @@
     else empty('x-agenda', 'Hacen falta datos de las dos fuentes.');
     const br = (S.X.ejes || []).filter(e => e.brecha != null);
     if (br.length) plot('x-brecha', [{ type: 'bar', orientation: 'h', y: br.map(e => `${e.a} ↔ ${e.b}`), x: br.map(e => e.brecha), marker: { color: br.map(e => e.brecha >= 0 ? C.b : C.a) },
-      hovertemplate: '%{y}<br>%{x:+.0f} puntos<extra></extra>' }], lay(320, { margin: { l: 255, r: 10, t: 10, b: 30 }, yaxis: { autorange: 'reversed' } }));
+      hovertemplate: '%{y}<br>%{x:+.0f} puntos<extra></extra>' }], lay(440, { margin: { l: 255, r: 10, t: 10, b: 30 }, yaxis: { autorange: 'reversed' } }));
     else empty('x-brecha', 'El encuadre aparece con 20+ textos por eje y respuestas del quiz.');
     const pl = S.X.plataformas || [];
     $('#x-plat').innerHTML = pl.length ? `<table><thead><tr><th>Se informa por</th><th class="n">n</th>${S.E.ejes.map(e => `<th class="n" title="${esc(e.a)} 0 ↔ ${esc(e.b)} 100">${esc(e.nombre)}</th>`).join('')}<th>Dirigente más elegido</th><th class="n">Tono en esa red</th></tr></thead><tbody>` +

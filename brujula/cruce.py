@@ -85,7 +85,7 @@ def main():
             alertas.append({"nivel": "alta" if abs(e["brecha"]) >= 25 else "media",
                             "t": f"{e['nombre']}: la conversación se encuadra hacia {hacia} {abs(e['brecha']):.0f} puntos más que lo que piensa la gente en el quiz."})
             acciones.append({"accion": f"En {e['nombre'].lower()}, no confundir el clima de redes con la opinión: el encuadre dominante ({hacia}) está sobrerrepresentado.",
-                             "metrica": f"Encuadre {e['encuadre']:.0f}/100 hacia {e['b']} en redes vs. {e['quiz']:.0f}/100 en el quiz."})
+                             "metrica": f"Redes {e['encuadre']:.0f}/100 vs. quiz {e['quiz']:.0f}/100 ({e['a']} 0 · {e['b']} 100)."})
     if all(e["extremos"] is not None and e["share"] is not None for e in ejes) and ejes:
         vac = sorted(ejes, key=lambda x: (x["share"] or 0) - (x["extremos"] or 0) / 4)[:2]
         for e in vac:
@@ -107,7 +107,7 @@ def main():
     out["plataformas"] = plats
     if len(plats) >= 2:
         m = q.get("ejes") or {}
-        for k in ("eco", "soc", "ins"):
+        for k in ("pla", "pro", "dem", "mig"):
             if k not in m:
                 continue
             mx = max(plats, key=lambda x: abs(x["perfil"][k] - m[k]["m"]))
@@ -157,7 +157,7 @@ def main():
     out["metodo"] = {
         "figuras": "Afinidad = % de respuestas cuyo dirigente más cercano es esa figura. sov = % de menciones entre los dirigentes del quiz. brecha = afinidad − sov.",
         "postura": "Quiz: puntaje medio 0-100 (polo a → polo b). Conversación: % de textos con encuadre del polo b entre los que tienen encuadre. brecha = conversación − quiz.",
-        "agenda": "divide = % con posición fuerte (< 40 o > 60) en el eje; se_habla = % de la conversación sobre los 8 ejes.",
+        "agenda": "divide = % con posición fuerte (< 40 o > 60) en el eje; se_habla = % de la conversación sobre los 12 ejes.",
         "plataformas": "Perfil en el quiz de quienes eligen cada red como su fuente principal, contra el tono de esa red en el listener (YouTube, X y medios; Instagram, Facebook y TikTok no tienen búsqueda abierta).",
         "anuncios": "Público de los avisos por edad y género (Meta) cruzado con la posición media de ese mismo grupo en el quiz.",
     }

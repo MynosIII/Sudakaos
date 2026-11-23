@@ -40,7 +40,7 @@ h2{font-size:clamp(22px,4.4vw,30px);letter-spacing:-.4px;margin:2px 0 10px;line-
 .ver{border:1px solid var(--line);background:linear-gradient(180deg,#0b0f15,#090c11);padding:12px 12px 10px;cursor:pointer;text-align:left;color:var(--txt);position:relative}
 .ver b{display:block;font-size:15px}.ver span{font:11px var(--mono);color:var(--dim)}
 .ver:hover{border-color:var(--line2)}.ver.on{border-color:var(--sig);box-shadow:inset 0 2px 0 var(--sig)}
-.ver[disabled]{opacity:.4;cursor:not-allowed}.ver[disabled] span::after{content:" · próximamente"}
+.ver[disabled]{opacity:.4;cursor:not-allowed}
 /* preguntas */
 .prog{height:3px;background:var(--line);margin-bottom:18px}.prog i{display:block;height:100%;background:var(--sig);width:0;transition:width .25s}
 .qhead{display:flex;justify-content:space-between;gap:10px}
@@ -89,3 +89,15 @@ h2{font-size:clamp(22px,4.4vw,30px);letter-spacing:-.4px;margin:2px 0 10px;line-
 .mbox{background:var(--s1);border:1px solid var(--line2);max-width:620px;padding:18px 20px;position:relative;font-size:14px;color:var(--muted)}
 .mbox h3{color:var(--txt);margin:0 0 8px}.mbox li{margin:6px 0}.x{position:absolute;right:10px;top:6px;background:none;border:0;color:var(--dim);font-size:24px;cursor:pointer}
 @media(max-width:720px){.grid{grid-template-columns:1fr}.clock span:last-child{display:none}.logo small{display:none}.eje{grid-template-columns:1fr 1fr}.eje .bar2{grid-column:1/-1;order:3}.eje .lab{order:4}}
+/* idioma, certeza */
+.lang{display:inline-flex;border:1px solid var(--line);margin-right:4px}
+.lang button{background:none;border:0;color:var(--dim);font:600 11px var(--mono);padding:3px 7px;cursor:pointer;letter-spacing:1px}
+.lang button.on{background:var(--sig);color:#05070a}
+.eje .bar2 .band{position:absolute;top:3px;bottom:3px;background:rgba(255,255,255,.28);border-left:2px solid #fff;border-right:2px solid #fff;box-sizing:border-box;transition:all .6s}
+.eje .lab .c{color:var(--dim)}
+.certg{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;align-items:center;margin:4px 0 10px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.certg .meta{grid-column:1/-1;margin:0}
+#cert-g{display:flex;align-items:center;gap:10px;font-size:13px}#cert-g b{font:600 18px var(--mono)}#cert-g .bar3{flex:1;max-width:220px}
+#cert-g .bar3{height:3px;background:var(--line)}#cert-g .bar3 i{display:block;height:100%;background:var(--sig)}
+.clock em{font-style:normal}
+@media(max-width:720px){.clock>span{display:none}}

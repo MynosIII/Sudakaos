@@ -1,49 +1,559 @@
 {
- "_nota": "Social listener de Brújula: escucha pasiva de la conversación sobre los 8 ejes del quiz y sobre los dirigentes del quiz (datos/figuras.json, versión ar). 'a' y 'b' son palabras de encuadre que suelen usar quienes empujan hacia cada polo del eje: sirven para medir hacia dónde se inclina la conversación, no la opinión de nadie en particular. Codificación editorial a revisar.",
+ "_nota": "Social listener de Brújula: escucha pasiva de la conversación sobre los 12 ejes del quiz y sobre los dirigentes del quiz (datos/figuras.json, versión ar). 'a' y 'b' (en el mismo orden que los polos de datos/ejes.json) son palabras de encuadre que suelen usar quienes empujan hacia cada polo del eje: sirven para medir hacia dónde se inclina la conversación, no la opinión de nadie en particular. Codificación editorial a revisar.",
  "pais": "AR",
  "window_days": 120,
- "youtube": {"region": "AR", "language": "es", "videos_por_query": 8, "comentarios_por_video": 40},
- "x": {"query_base": "lang:es -is:retweet", "max_posts": 100},
+ "youtube": {
+  "region": "AR",
+  "language": "es",
+  "videos_por_query": 8,
+  "comentarios_por_video": 40
+ },
+ "x": {
+  "query_base": "lang:es -is:retweet",
+  "max_posts": 100
+ },
  "temas": {
-  "eco": {"news": ["motosierra gasto público", "planes sociales recorte", "déficit fiscal superávit", "privatizaciones empresas públicas"],
-          "youtube": ["motosierra gasto público Milei", "ajuste jubilados universidades"],
-          "kw": ["motosierra", "gasto publico", "deficit", "superavit", "ajuste", "planes sociales", "privatiz", "empresas publicas", "jubilad", "subsidio", "estado presente", "inflacion", "salario", "paritaria", "reforma laboral", "sindicat", "cgt", "indemnizacion"],
-          "a": ["estado presente", "ajuste", "recorte", "jubilados", "hambre", "despidos", "derechos laborales", "universidad publica", "salud publica", "paritaria", "cgt", "paro"],
-          "b": ["motosierra", "deficit cero", "superavit", "libertad", "casta", "privatizar", "baja de impuestos", "desregul", "reforma laboral", "modernizacion laboral", "achicar el estado"]},
-  "com": {"news": ["importaciones apertura industria nacional", "cepo cambiario dólar", "RIGI inversiones", "acuerdo comercial Mercosur"],
-          "youtube": ["apertura importaciones industria nacional", "cepo dólar bandas cambiarias"],
-          "kw": ["importacion", "apertura", "arancel", "industria nacional", "cepo", "dolar", "rigi", "inversion extranjera", "libre comercio", "tratado", "exportacion", "pymes", "textil"],
-          "a": ["industria nacional", "pymes", "cierre de fabricas", "proteger", "produccion nacional", "invasion de importados", "soberania monetaria"],
-          "b": ["apertura", "libre comercio", "fin del cepo", "salida del cepo", "inversiones", "rigi", "competencia", "baja de aranceles", "dolarizacion"]},
-  "fed": {"news": ["coparticipación gobernadores", "gobernadores fondos provincias Nación", "provincias recursos naturales"],
-          "youtube": ["gobernadores coparticipación fondos"],
-          "kw": ["coparticipacion", "gobernador", "provincias", "federal", "fondos", "atn", "interior", "amba", "transferencias"],
-          "a": ["unidad nacional", "pacto de mayo", "disciplina fiscal", "gobierno nacional decide"],
-          "b": ["federalismo", "federal", "provincias unidas", "fondos de las provincias", "autonomia provincial", "el interior", "discrimina al interior", "recursos de las provincias"]},
-  "soc": {"news": ["aborto ley interrupción embarazo", "ESI educación sexual integral", "batalla cultural ideología de género", "marcha orgullo LGBT"],
-          "youtube": ["batalla cultural ideología de género", "ESI escuelas debate"],
-          "kw": ["aborto", "ive", "esi", "genero", "feminis", "lgbt", "trans", "batalla cultural", "familia", "iglesia", "marcha del orgullo", "wokismo", "woke", "diversidad"],
-          "a": ["derechos", "ni una menos", "diversidad", "igualdad", "feminismo", "orgullo", "perspectiva de genero", "esi"],
-          "b": ["batalla cultural", "ideologia de genero", "provida", "familia", "woke", "wokismo", "valores", "dios", "adoctrinamiento"]},
-  "seg": {"news": ["inseguridad delito policía", "protocolo antipiquetes", "baja de edad de imputabilidad", "narcotráfico Rosario"],
-          "youtube": ["inseguridad mano dura Bullrich", "baja de la edad de imputabilidad"],
-          "kw": ["inseguridad", "delito", "policia", "imputabilidad", "piquete", "protocolo", "narco", "fuerzas armadas", "represion", "gatillo", "penas", "carcel", "seguridad"],
-          "a": ["represion", "gatillo facil", "derechos humanos", "protesta social", "criminalizacion", "garantias"],
-          "b": ["mano dura", "orden", "el que las hace las paga", "protocolo", "baja de imputabilidad", "tolerancia cero", "fuerzas de seguridad", "narco"]},
-  "ins": {"news": ["DNU Congreso veto", "Corte Suprema fallo gobierno", "casta política", "periodistas ataques gobierno"],
-          "youtube": ["DNU Congreso veto Milei", "casta politica"],
-          "kw": ["dnu", "decreto", "veto", "congreso", "corte suprema", "casta", "republica", "division de poderes", "periodistas", "ensobrados", "instituciones", "consenso"],
-          "a": ["institucion", "republica", "division de poderes", "consenso", "dialogo", "acuerdo", "libertad de prensa", "constitucion"],
-          "b": ["casta", "ensobrados", "basta de", "que se vayan todos", "romper", "outsider", "periodismo militante", "kukas", "degenerados fiscales"]},
-  "ext": {"news": ["Milei Estados Unidos Trump acuerdo", "Argentina China relación comercial", "FMI acuerdo Argentina", "Malvinas soberanía reclamo"],
-          "youtube": ["Milei Trump acuerdo Estados Unidos", "FMI Argentina deuda"],
-          "kw": ["estados unidos", "trump", "eeuu", "china", "fmi", "malvinas", "israel", "brics", "mercosur", "bessent", "swap", "otan"],
-          "a": ["soberania", "malvinas", "colonia", "patria grande", "latinoamerica", "brics", "entrega", "sumision"],
-          "b": ["alianza", "occidente", "mundo libre", "estados unidos", "israel", "aliado", "apoyo de trump", "acuerdo con eeuu"]},
-  "amb": {"news": ["Ley de Glaciares minería", "Vaca Muerta producción récord", "litio minería provincias", "incendios ambiente cambio climático"],
-          "youtube": ["ley de glaciares minería", "vaca muerta litio exportaciones"],
-          "kw": ["glaciar", "mineria", "litio", "vaca muerta", "fracking", "ambient", "incendio", "cambio climatico", "agua", "cobre", "petrol", "offshore"],
-          "a": ["el agua no se negocia", "glaciares", "extractivismo", "cambio climatico", "contaminacion", "saqueo", "ambiente", "humedales"],
-          "b": ["vaca muerta", "inversion minera", "exportaciones", "record de produccion", "desarrollo", "empleo minero", "cobre", "rigi"]}
+  "fed": {
+   "news": [
+    "coparticipación gobernadores",
+    "gobernadores fondos provincias Nación",
+    "provincias recursos naturales"
+   ],
+   "youtube": [
+    "gobernadores coparticipación fondos"
+   ],
+   "kw": [
+    "coparticipacion",
+    "gobernador",
+    "provincias",
+    "federal",
+    "fondos",
+    "atn",
+    "interior",
+    "amba",
+    "transferencias"
+   ],
+   "a": [
+    "federalismo",
+    "federal",
+    "provincias unidas",
+    "fondos de las provincias",
+    "autonomia provincial",
+    "el interior",
+    "discrimina al interior",
+    "recursos de las provincias"
+   ],
+   "b": [
+    "unidad nacional",
+    "pacto de mayo",
+    "disciplina fiscal",
+    "gobierno nacional decide"
+   ]
+  },
+  "dem": {
+   "news": [
+    "DNU Congreso veto",
+    "Corte Suprema fallo gobierno",
+    "casta política",
+    "periodistas ataques gobierno"
+   ],
+   "youtube": [
+    "DNU Congreso veto Milei"
+   ],
+   "kw": [
+    "dnu",
+    "decreto",
+    "veto",
+    "congreso",
+    "corte suprema",
+    "casta",
+    "republica",
+    "division de poderes",
+    "periodistas",
+    "ensobrados",
+    "instituciones",
+    "consenso"
+   ],
+   "a": [
+    "institucion",
+    "republica",
+    "division de poderes",
+    "consenso",
+    "dialogo",
+    "acuerdo",
+    "libertad de prensa",
+    "constitucion"
+   ],
+   "b": [
+    "casta",
+    "ensobrados",
+    "basta de",
+    "que se vayan todos",
+    "romper",
+    "outsider",
+    "periodismo militante",
+    "kukas",
+    "degenerados fiscales"
+   ]
+  },
+  "int": {
+   "news": [
+    "Malvinas soberanía reclamo",
+    "Argentina ONU votación",
+    "FMI acuerdo Argentina",
+    "Mercosur integración regional"
+   ],
+   "youtube": [
+    "soberanía Malvinas FMI Milei"
+   ],
+   "kw": [
+    "soberania",
+    "malvinas",
+    "onu",
+    "fmi",
+    "mercosur",
+    "patria",
+    "nacionalis",
+    "integracion",
+    "multilateral",
+    "otan",
+    "brics",
+    "organismos internacionales",
+    "agenda 2030"
+   ],
+   "a": [
+    "integracion regional",
+    "cooperacion",
+    "multilateral",
+    "patria grande",
+    "organismos internacionales",
+    "derecho internacional",
+    "union latinoamericana"
+   ],
+   "b": [
+    "soberania",
+    "argentina primero",
+    "patria",
+    "nacionalis",
+    "agenda 2030",
+    "globalismo",
+    "injerencia",
+    "no nos van a imponer"
+   ]
+  },
+  "mil": {
+   "news": [
+    "Fuerzas Armadas presupuesto defensa",
+    "F-16 compra aviones Argentina",
+    "servicio militar",
+    "Fuerzas Armadas seguridad interior"
+   ],
+   "youtube": [
+    "Fuerzas Armadas F-16 defensa Argentina"
+   ],
+   "kw": [
+    "fuerzas armadas",
+    "militar",
+    "defensa",
+    "f-16",
+    "ejercito",
+    "armada",
+    "rearme",
+    "guerra",
+    "servicio militar",
+    "pacifis",
+    "otan"
+   ],
+   "a": [
+    "fuerzas armadas",
+    "rearme",
+    "f-16",
+    "poder militar",
+    "servicio militar",
+    "defensa nacional",
+    "disuasion"
+   ],
+   "b": [
+    "paz",
+    "pacifis",
+    "no a la guerra",
+    "desmilitariz",
+    "dialogo",
+    "zona de paz",
+    "nunca mas"
+   ]
+  },
+  "lib": {
+   "news": [
+    "inseguridad delito policía",
+    "protocolo antipiquetes",
+    "baja de edad de imputabilidad",
+    "narcotráfico Rosario"
+   ],
+   "youtube": [
+    "inseguridad mano dura Bullrich"
+   ],
+   "kw": [
+    "inseguridad",
+    "delito",
+    "policia",
+    "imputabilidad",
+    "piquete",
+    "protocolo",
+    "narco",
+    "fuerzas armadas",
+    "represion",
+    "gatillo",
+    "penas",
+    "carcel",
+    "seguridad"
+   ],
+   "a": [
+    "mano dura",
+    "orden",
+    "el que las hace las paga",
+    "protocolo",
+    "baja de imputabilidad",
+    "tolerancia cero",
+    "fuerzas de seguridad",
+    "narco"
+   ],
+   "b": [
+    "represion",
+    "gatillo facil",
+    "derechos humanos",
+    "protesta social",
+    "criminalizacion",
+    "garantias"
+   ]
+  },
+  "col": {
+   "news": [
+    "reforma laboral sindicatos",
+    "usurpaciones tomas de tierras",
+    "cooperativas economía popular",
+    "propiedad privada ley"
+   ],
+   "youtube": [
+    "reforma laboral sindicatos CGT"
+   ],
+   "kw": [
+    "sindicat",
+    "cgt",
+    "reforma laboral",
+    "propiedad privada",
+    "usurpa",
+    "toma de tierras",
+    "cooperativa",
+    "economia popular",
+    "convenio colectivo",
+    "indemnizacion",
+    "emprendedor"
+   ],
+   "a": [
+    "derechos laborales",
+    "convenio colectivo",
+    "cooperativa",
+    "economia popular",
+    "funcion social",
+    "organizacion popular",
+    "paritaria"
+   ],
+   "b": [
+    "propiedad privada",
+    "usurpacion",
+    "modernizacion laboral",
+    "libertad de contratar",
+    "emprendedor",
+    "fin de la industria del juicio",
+    "meritocracia"
+   ]
+  },
+  "rel": {
+   "news": [
+    "Iglesia católica gobierno",
+    "Papa León Argentina",
+    "evangélicos política",
+    "educación religiosa escuelas"
+   ],
+   "youtube": [
+    "Iglesia evangélicos política Argentina"
+   ],
+   "kw": [
+    "iglesia",
+    "papa",
+    "catolic",
+    "evangelic",
+    "religio",
+    "laic",
+    "dios",
+    "fe",
+    "obispos",
+    "curas villeros"
+   ],
+   "a": [
+    "estado laico",
+    "laicidad",
+    "separacion iglesia",
+    "educacion laica",
+    "religion privada"
+   ],
+   "b": [
+    "dios",
+    "fe",
+    "cristian",
+    "oracion",
+    "valores cristianos",
+    "la iglesia",
+    "provida"
+   ]
+  },
+  "pro": {
+   "news": [
+    "aborto ley interrupción embarazo",
+    "ESI educación sexual integral",
+    "batalla cultural ideología de género",
+    "marcha orgullo LGBT"
+   ],
+   "youtube": [
+    "batalla cultural ideología de género"
+   ],
+   "kw": [
+    "aborto",
+    "ive",
+    "esi",
+    "genero",
+    "feminis",
+    "lgbt",
+    "trans",
+    "batalla cultural",
+    "familia",
+    "iglesia",
+    "marcha del orgullo",
+    "wokismo",
+    "woke",
+    "diversidad"
+   ],
+   "a": [
+    "derechos",
+    "ni una menos",
+    "diversidad",
+    "igualdad",
+    "feminismo",
+    "orgullo",
+    "perspectiva de genero",
+    "esi"
+   ],
+   "b": [
+    "batalla cultural",
+    "ideologia de genero",
+    "provida",
+    "familia",
+    "woke",
+    "wokismo",
+    "valores",
+    "dios",
+    "adoctrinamiento"
+   ]
+  },
+  "mig": {
+   "news": [
+    "migrantes extranjeros salud universidad arancel",
+    "inmigración ilegal expulsión",
+    "pueblos originarios mapuches conflicto",
+    "DNU migraciones"
+   ],
+   "youtube": [
+    "migrantes extranjeros cobro salud universidad"
+   ],
+   "kw": [
+    "migra",
+    "extranjer",
+    "inmigra",
+    "expuls",
+    "pueblos originarios",
+    "mapuche",
+    "indigena",
+    "xenofob",
+    "frontera",
+    "residencia"
+   ],
+   "a": [
+    "extranjeros",
+    "inmigracion ilegal",
+    "expulsion",
+    "cobrar a extranjeros",
+    "control de fronteras",
+    "integrarse",
+    "las leyes argentinas"
+   ],
+   "b": [
+    "migrantes",
+    "pueblos originarios",
+    "diversidad cultural",
+    "interculturalidad",
+    "xenofobia",
+    "racismo",
+    "derechos de los migrantes"
+   ]
+  },
+  "pla": {
+   "news": [
+    "motosierra gasto público",
+    "planes sociales recorte",
+    "déficit fiscal superávit",
+    "privatizaciones empresas públicas"
+   ],
+   "youtube": [
+    "motosierra gasto público Milei"
+   ],
+   "kw": [
+    "motosierra",
+    "gasto publico",
+    "deficit",
+    "superavit",
+    "ajuste",
+    "planes sociales",
+    "privatiz",
+    "empresas publicas",
+    "jubilad",
+    "subsidio",
+    "estado presente",
+    "inflacion",
+    "salario",
+    "paritaria",
+    "reforma laboral",
+    "sindicat",
+    "cgt",
+    "indemnizacion"
+   ],
+   "a": [
+    "estado presente",
+    "ajuste",
+    "recorte",
+    "jubilados",
+    "hambre",
+    "despidos",
+    "derechos laborales",
+    "universidad publica",
+    "salud publica",
+    "paritaria",
+    "cgt",
+    "paro"
+   ],
+   "b": [
+    "motosierra",
+    "deficit cero",
+    "superavit",
+    "libertad",
+    "casta",
+    "privatizar",
+    "baja de impuestos",
+    "desregul",
+    "reforma laboral",
+    "modernizacion laboral",
+    "achicar el estado"
+   ]
+  },
+  "glo": {
+   "news": [
+    "importaciones apertura industria nacional",
+    "cepo cambiario dólar",
+    "RIGI inversiones",
+    "acuerdo comercial Mercosur"
+   ],
+   "youtube": [
+    "apertura importaciones industria nacional"
+   ],
+   "kw": [
+    "importacion",
+    "apertura",
+    "arancel",
+    "industria nacional",
+    "cepo",
+    "dolar",
+    "rigi",
+    "inversion extranjera",
+    "libre comercio",
+    "tratado",
+    "exportacion",
+    "pymes",
+    "textil"
+   ],
+   "a": [
+    "industria nacional",
+    "pymes",
+    "cierre de fabricas",
+    "proteger",
+    "produccion nacional",
+    "invasion de importados",
+    "soberania monetaria"
+   ],
+   "b": [
+    "apertura",
+    "libre comercio",
+    "fin del cepo",
+    "salida del cepo",
+    "inversiones",
+    "rigi",
+    "competencia",
+    "baja de aranceles",
+    "dolarizacion"
+   ]
+  },
+  "tec": {
+   "news": [
+    "Ley de Glaciares minería",
+    "Vaca Muerta producción récord",
+    "litio minería provincias",
+    "incendios ambiente cambio climático"
+   ],
+   "youtube": [
+    "ley de glaciares minería"
+   ],
+   "kw": [
+    "glaciar",
+    "mineria",
+    "litio",
+    "vaca muerta",
+    "fracking",
+    "ambient",
+    "incendio",
+    "cambio climatico",
+    "agua",
+    "cobre",
+    "petrol",
+    "offshore",
+    "inteligencia artificial",
+    "innovacion",
+    "biotecnologia",
+    "transgenic",
+    "energia nuclear"
+   ],
+   "a": [
+    "vaca muerta",
+    "inversion minera",
+    "exportaciones",
+    "record de produccion",
+    "desarrollo",
+    "empleo minero",
+    "cobre",
+    "rigi",
+    "inteligencia artificial",
+    "innovacion",
+    "energia nuclear",
+    "biotecnologia"
+   ],
+   "b": [
+    "el agua no se negocia",
+    "glaciares",
+    "extractivismo",
+    "cambio climatico",
+    "contaminacion",
+    "saqueo",
+    "ambiente",
+    "humedales"
+   ]
+  }
  }
 }

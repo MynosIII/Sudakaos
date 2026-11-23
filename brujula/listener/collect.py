@@ -1,4 +1,4 @@
-"""Brújula · social listener: escucha pasiva de la conversación sobre los 8 ejes y los dirigentes del quiz.
+"""Brújula · social listener: escucha pasiva de la conversación sobre los 12 ejes y los dirigentes del quiz.
 
 Misma arquitectura que dirigentes/collect.py (stdlib, cada fuente falla sola, textos fuera del repo):
   - Google News RSS: por tema de cada eje y por dirigente (datos/figuras.json, versión ar).

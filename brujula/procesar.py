@@ -43,20 +43,45 @@ EDAD_G = {"16-17": "16-24", "18-24": "16-24", "25-34": "25-34", "35-44": "35-49"
 
 
 # ------------------------------------------------------------------ cálculo (mismo criterio que quiz.js)
-def puntajes(ids, ans):
-    num, den = defaultdict(float), defaultdict(float)
-    for qid, a in zip(ids, ans):
-        q = PREG.get(qid)
-        if not q:
-            continue
+def calcular(ids, ans):
+    """Posición 0-100 por eje (0 = polo a) y certeza 0-100 = decisión × coherencia.
+    Decisión: neutral 0, de acuerdo / en desacuerdo 0,75, muy 1 (promedio ponderado por peso).
+    Coherencia (modelo acumulativo de 12axes): una frase de nivel L hacia un polo la aceptan quienes están del lado de ese polo
+    al menos (L - 1) × 12,5 puntos más allá del centro. Cada respuesta que coincide con lo esperado para su posición suma,
+    cada una que contradice resta."""
+    qs = [(PREG[q], a) for q, a in zip(ids, ans) if q in PREG]
+    Sm, M, D, W = defaultdict(float), defaultdict(float), defaultdict(float), defaultdict(float)
+    for q, a in qs:
         for k, w in q["e"].items():
-            num[k] += a * w
-            den[k] += 2 * abs(w)
-    return {k: (50 + 50 * num[k] / den[k]) if den[k] else 50.0 for k in K}
+            Sm[k] += a * w
+            M[k] += 2 * abs(w)
+            D[k] += abs(w) * (0 if a == 0 else .75 if abs(a) == 1 else 1)
+            W[k] += abs(w)
+    sc = {k: (50 + 50 * Sm[k] / M[k]) if M[k] else 50.0 for k in K}
+    cert = {}
+    for k in K:
+        num = den = 0.0
+        for q, a in qs:
+            w = q["e"].get(k)
+            if not w or not a:
+                continue
+            nivel = q.get("nivel") or (3 if abs(w) >= 2 else 1)
+            pred = 1 if math.copysign(1, w) * (sc[k] - 50) - (nivel - 1) * 12.5 >= 0 else -1
+            num += (1 if math.copysign(1, a) == pred else -1) * abs(w) * abs(a)
+            den += abs(w) * abs(a)
+        d = D[k] / W[k] if W[k] else 0.0
+        cert[k] = 100 * d * max(0.0, num / den if den else 0.0)
+    return sc, cert
 
 
-def afinidad(sc, pos):
-    return max(0.0, 100 - 2 * sum(abs(sc[k] - pos[k]) for k in K) / len(K))
+def puntajes(ids, ans):
+    return calcular(ids, ans)[0]
+
+
+def afinidad(sc, pos, cert=None):
+    """100 - 2 × distancia media ponderada por certeza (los ejes donde la persona duda pesan menos)."""
+    c = {k: 0.3 + 0.7 * ((cert or {}).get(k, 50) / 100) for k in K}
+    return max(0.0, 100 - 2 * sum(c[k] * abs(sc[k] - pos[k]) for k in K) / sum(c.values()))
 
 
 # ------------------------------------------------------------------ lectura
@@ -78,34 +103,46 @@ def leer(args):
     return [dict(zip(cols, r)) for r in d["rows"]]
 
 
+SIM_VER = {"ar": ("Argentina", 70), "br": ("Brasil", 12), "cl": ("Chile", 4), "co": ("Colombia", 4), "pe": ("Perú", 3),
+           "py": ("Paraguay", 2), "uy": ("Uruguay", 2), "general": ("Argentina", 3)}
+
+
 def simular(n, seed=7):
     """Respuestas simuladas con estructura demográfica plausible. Solo para probar el pipeline y el tablero."""
     rnd = random.Random(seed)
-    ids_ar = [q for q, v in PREG.items() if "ar" in v["v"]]
+    vers = list(SIM_VER)
+    ids_v = {v: [q for q, d in PREG.items() if v in d["v"]] for v in vers}
     rows = []
     provs = list(REGION)
     for i in range(n):
+        ver = rnd.choices(vers, [SIM_VER[v][1] for v in vers])[0]
+        pais = SIM_VER[ver][0]
         edad = rnd.choices(list(EDAD_G), [3, 18, 22, 18, 15, 13, 11])[0]
         gen = rnd.choices(["Mujer", "Varón", "No binario / otro", "Prefiero no decir"], [49, 47, 2, 2])[0]
         joven = edad in ("16-17", "18-24", "25-34")
-        # sesgo simulado: varones jóvenes más pro mercado y ruptura; mujeres jóvenes más progresistas
-        lat = {k: rnd.gauss(0, 0.8) for k in K}
+        # sesgo simulado: varones jóvenes más pro mercado y autoridad; mujeres jóvenes más progresistas y laicas
+        g = rnd.gauss(0, 0.7)  # eje izquierda-derecha general que correlaciona varios ejes
+        lat = {k: rnd.gauss(0, 0.6) for k in K}
+        for k, s_ in {"pla": 1, "col": .8, "glo": .7, "pro": .6, "rel": .5, "lib": -.4, "int": .4, "mig": -.3}.items():
+            lat[k] += s_ * g
         if joven and gen == "Varón":
-            lat["eco"] += .8; lat["ins"] += .7; lat["soc"] += .3
+            lat["pla"] += .8; lat["col"] += .5; lat["dem"] += .5; lat["pro"] += .3; lat["tec"] -= .3
         if joven and gen == "Mujer":
-            lat["soc"] -= .9; lat["eco"] -= .3
+            lat["pro"] -= .9; lat["rel"] -= .6; lat["pla"] -= .3; lat["mig"] += .3
         if edad in ("55-64", "65+"):
-            lat["ins"] -= .5; lat["seg"] += .4
+            lat["dem"] -= .4; lat["lib"] -= .4; lat["rel"] += .3
+        firmeza = rnd.uniform(.5, 1.5)
         ans = []
-        for q in ids_ar:
-            s = sum(w * lat[k] for k, w in PREG[q]["e"].items())
-            ans.append(max(-2, min(2, round(s + rnd.gauss(0, .9)))))
+        for q in ids_v[ver]:
+            s_ = sum(w * lat[k] for k, w in PREG[q]["e"].items()) * firmeza
+            ans.append(max(-2, min(2, round(s_ + rnd.gauss(0, .9)))))
         red = rnd.choices(["Instagram", "X (Twitter)", "TikTok", "YouTube", "Facebook", "WhatsApp / Telegram", "Ninguna: medios tradicionales"],
                           [30, 15, 18, 12, 12, 8, 5] if joven else [18, 10, 4, 12, 30, 16, 10])[0]
-        rows.append({"recibido": f"2026-11-{rnd.randint(1, 23):02d}T{rnd.randint(0, 23):02d}:00Z", "schema": 1, "version": "ar",
-                     "ids": ",".join(ids_ar), "ans": ",".join(map(str, ans)), "dur_s": rnd.randint(60, 900),
-                     "cid_hash": f"{rnd.getrandbits(48):012x}", "edad": edad, "genero": gen, "pais_res": "Argentina",
-                     "prov": rnd.choices(provs, [8, 30, 12] + [2] * (len(provs) - 3))[0], "pais_nac": "Argentina", "red": red})
+        prov = rnd.choices(provs, [8, 30, 12] + [2] * (len(provs) - 3))[0] if pais == "Argentina" else ""
+        rows.append({"recibido": f"2026-11-{rnd.randint(1, 23):02d}T{rnd.randint(0, 23):02d}:00Z", "schema": 2, "version": ver,
+                     "lang": "pt" if ver == "br" else "es", "ids": ",".join(ids_v[ver]), "ans": ",".join(map(str, ans)),
+                     "dur_s": rnd.randint(90, 900), "cid_hash": f"{rnd.getrandbits(48):012x}", "edad": edad, "genero": gen,
+                     "pais_res": pais, "prov": prov, "pais_nac": pais, "red": red})
     return rows
 
 
@@ -131,8 +168,12 @@ def limpiar(rows):
         if sum(1 for a in ans if a == 0) > 0.6 * len(ans):
             motivos["mayoría neutral"] += 1
             continue
-        r = dict(r, _sc=puntajes(ids, ans), _ids=ids, _ans=ans)
-        r["region"] = REGION.get(r.get("prov") or "", "Otro país" if r.get("pais_res") != "Argentina" else "Sin dato")
+        sc, cert = calcular(ids, ans)
+        r = dict(r, _sc=sc, _cert=cert, _ids=ids, _ans=ans)
+        if r.get("pais_res") == "Argentina":
+            r["region"] = REGION.get(r.get("prov") or "", "Sin dato")
+        else:
+            r["region"] = r.get("prov") or ("Sin dato" if r.get("pais_res") else "Sin dato")
         r["edad_g"] = EDAD_G.get(r.get("edad"), "Sin dato")
         c = r.get("cid_hash")
         if c and c in vistos:  # misma persona (mismo navegador): vale la última respuesta
@@ -152,10 +193,12 @@ def raking(rows, marg, iters=50, lo=0.2, hi=5.0):
     for _ in range(iters):
         for var, obj in marg.items():
             cats = np.array([r.get(var) for r in rows])
+            known = np.isin(cats, list(obj))  # quien no contestó esa variable queda fuera de ese ajuste
+            tot = w[known].sum()
             for c, p in obj.items():
                 m = cats == c
                 if m.any() and w[m].sum() > 0:
-                    w[m] *= p * w.sum() / w[m].sum()
+                    w[m] *= p * tot / w[m].sum()
         w = np.clip(w / w.mean(), lo, hi)
     return w / w.mean()
 
@@ -169,21 +212,31 @@ def medias(rows, w):
     if not rows:
         return {}
     X = np.array([[r["_sc"][k] for k in K] for r in rows])
+    C = np.array([[r["_cert"][k] for k in K] for r in rows])
     ww = w / w.sum()
     m = (X * ww[:, None]).sum(0)
+    cm = (C * ww[:, None]).sum(0)
     var = ((X - m) ** 2 * ww[:, None]).sum(0)
     ne = n_efectivo(w)
     half = 1.96 * np.sqrt(var / max(ne, 1))
     return {k: {"m": round(float(m[i]), 1), "ci": round(float(half[i]), 1), "sd": round(float(math.sqrt(var[i])), 1),
-                "a": round(float((X[:, i] < 40).astype(float) @ ww * 100), 1), "b": round(float((X[:, i] > 60).astype(float) @ ww * 100), 1)}
+                "a": round(float((X[:, i] < 40).astype(float) @ ww * 100), 1), "b": round(float((X[:, i] > 60).astype(float) @ ww * 100), 1),
+                "cert": round(float(cm[i]), 1)}
             for i, k in enumerate(K)}
+
+
+def certeza(rows, w):
+    if not rows:
+        return None
+    c = np.array([sum(r["_cert"].values()) / len(K) for r in rows])
+    return round(float(c @ (w / w.sum())), 1)
 
 
 def top_figuras(rows, w, ver):
     figs = FIG[EJES["versiones"][ver]["figuras"]]
     c = Counter()
     for r, wi in zip(rows, w):
-        best = max(figs, key=lambda f: afinidad(r["_sc"], f["pos"]))
+        best = max(figs, key=lambda f: afinidad(r["_sc"], f["pos"], r["_cert"]))
         c[best["nombre"]] += wi
     tot = sum(c.values()) or 1
     return [{"nombre": n, "pct": round(100 * v / tot, 1)} for n, v in c.most_common()]
@@ -198,7 +251,7 @@ def segmento(rows, w, var, ver):
         if len(idx) < MIN_N or g in ("Sin dato", "Prefiero no decir"):
             continue
         sub, ws = [rows[i] for i in idx], w[idx]
-        out[g] = {"n": len(idx), "ejes": medias(sub, ws), "figuras": top_figuras(sub, ws, ver)[:5]}
+        out[g] = {"n": len(idx), "certeza": certeza(sub, ws), "ejes": medias(sub, ws), "figuras": top_figuras(sub, ws, ver)[:5]}
     return out
 
 
@@ -273,8 +326,10 @@ def segmentos(rows, w, ver):
         if len(idx) < MIN_N:
             continue
         cen = {k: round(float(C[j][i]), 1) for i, k in enumerate(K)}
-        polos = sorted(EJES["ejes"], key=lambda e: -abs(cen[e["id"]] - 50))[:2]
-        nombre = " + ".join((e["b"] if cen[e["id"]] > 50 else e["a"]) for e in polos)
+        polos = sorted(EJES["ejes"], key=lambda e: -abs(cen[e["id"]] - 50))
+        nombre = " + ".join((e["b"] if cen[e["id"]] > 50 else e["a"]) for e in polos[:2])
+        if any(o["nombre"] == nombre for o in out):  # dos tribus con los mismos dos polos: se suma el tercero
+            nombre += " + " + (polos[2]["b"] if cen[polos[2]["id"]] > 50 else polos[2]["a"])
         sub = [rows[i] for i in idx]
         comp = {}
         for var in ("genero", "edad_g", "region", "red"):
@@ -310,13 +365,15 @@ def main():
         pond = "sin ponderar"
         if ver == "ar" and MARG.exists():
             marg = json.loads(MARG.read_text(encoding="utf8"))
-            usable = {v: obj for v, obj in marg.get("marginales", {}).items() if all(r.get(v) for r in rs)}
+            # se usa cada variable que al menos el 80% contestó (los datos son opcionales)
+            usable = {v: obj for v, obj in marg.get("marginales", {}).items()
+                      if sum(r.get(v) in obj for r in rs) >= 0.8 * len(rs)}
             if usable:
                 w = raking(rs, usable)
                 pond = "raking a " + ", ".join(usable) + f" ({marg.get('fuente', 'marginales')})"
         out["versiones"][ver] = {
             "n": len(rs), "n_efectivo": round(n_efectivo(w)), "ponderacion": pond,
-            "ejes": medias(rs, w), "figuras": top_figuras(rs, w, ver),
+            "certeza": certeza(rs, w), "ejes": medias(rs, w), "figuras": top_figuras(rs, w, ver),
             "por": {var: segmento(rs, w, var, ver) for var in ("genero", "edad_g", "region", "red", "pais_res")},
             "edad_genero": cruce(rs, w, "edad_g", "genero"),
             "region_edad": cruce(rs, w, "region", "edad_g"),
@@ -325,10 +382,11 @@ def main():
         }
     out["metodo"] = {
         "muestra": "Autoselección online (quien entra al quiz y acepta sumar sus respuestas). No es una muestra probabilística: los resultados describen a quienes respondieron y, ponderados, se acercan a la población; el intervalo es de referencia.",
-        "puntaje": "Cada eje: 50 + 50 × (suma de respuesta × peso) / (suma de 2 × |peso|). 0 = polo a, 100 = polo b. a / b = % con puntaje < 40 / > 60.",
+        "puntaje": "12 ejes (preguntas base adaptadas de 12axes, MIT). Cada eje: 50 + 50 × (suma de respuesta × peso) / (suma de 2 × |peso|). 0 = polo a, 100 = polo b. a / b = % con puntaje < 40 / > 60.",
+        "certeza": "Certeza por eje (0-100) = decisión (qué tan lejos de neutral responde) × coherencia (acuerdo con frases cuyo nivel queda cerca de su posición y desacuerdo con las lejanas).",
         "calidad": f"Se descartan respuestas con menos de {SEG_S_POR_PREG} s por pregunta, misma respuesta en todo, más de 60% neutral, incompletas y duplicadas por navegador (vale la última).",
         "publicacion": f"Solo grupos con {MIN_N} respuestas o más. Intervalo 95% con n efectivo de Kish.",
-        "afinidad": "Dirigente más cercano = menor distancia promedio en los 8 ejes contra la codificación editorial de datos/figuras.json (a revisar).",
+        "afinidad": "Dirigente más cercano = menor distancia promedio en los 12 ejes, ponderada por la certeza de cada persona, contra la codificación editorial de datos/figuras.json (a revisar).",
     }
     Path(args.out).parent.mkdir(parents=True, exist_ok=True)
     Path(args.out).write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf8")

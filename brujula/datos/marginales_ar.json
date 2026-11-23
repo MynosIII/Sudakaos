@@ -1,0 +1,24 @@
+{
+ "fuente": "Censo 2022 (INDEC), población de 16 años o más; región según población total por jurisdicción (conurbano: 24 partidos)",
+ "nota": "Edad 16-24 estimada (16-17 = 2/3 de 15-17). Región con población total, no solo 16+. Fuentes en el README.",
+ "marginales": {
+  "genero": {
+   "Mujer": 0.5239,
+   "Varón": 0.4761
+  },
+  "edad_g": {
+   "16-24": 0.1822,
+   "25-34": 0.2016,
+   "35-49": 0.2711,
+   "50+": 0.3451
+  },
+  "region": {
+   "AMBA": 0.3044,
+   "Pampeana": 0.3453,
+   "NOA": 0.1277,
+   "NEA": 0.0921,
+   "Cuyo": 0.0743,
+   "Patagonia": 0.0562
+  }
+ }
+}
