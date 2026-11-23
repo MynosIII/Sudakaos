@@ -30,7 +30,10 @@
   "Karina Milei",
   "Ramiro Marra",
   "Jorge Macri",
-  "Pilar Ramírez"
+  "Pilar Ramírez",
+  "Álvaro Zicarelli",
+  "El Presto",
+  "Dannan"
  ],
  "window_days": 365,
  "conversacion_dias": 365,
@@ -168,6 +171,43 @@
    "wiki": [
     "Karina Milei"
    ]
+  },
+  "Álvaro Zicarelli": {
+   "alias": [
+    "álvaro zicarelli",
+    "alvaro zicarelli",
+    "zicarelli"
+   ],
+   "bando": "Libertarios críticos",
+   "cargo": "Dirigente de la nueva derecha",
+   "wiki": [],
+   "trends": "Zicarelli",
+   "excluir_si": [
+    "franco zicarelli",
+    "talleres de escalada",
+    "nicolás zicarelli",
+    "nicolas zicarelli"
+   ]
+  },
+  "El Presto": {
+   "alias": [
+    "el presto",
+    "@elpresto",
+    "presto y dannan"
+   ],
+   "bando": "Libertarios críticos",
+   "cargo": "Streamer libertario, crítico de Karina Milei",
+   "wiki": [],
+   "trends": "El Presto"
+  },
+  "Dannan": {
+   "alias": [
+    "dannan"
+   ],
+   "bando": "Libertarios críticos",
+   "cargo": "Youtuber libertario, crítico de Karina Milei",
+   "wiki": [],
+   "trends": "Dannan"
   }
  },
  "obj_fig": {
@@ -184,7 +224,10 @@
   "milei": "Milei",
   "karina": "Karina",
   "larreta": "Larreta",
-  "lousteau": "Lousteau"
+  "lousteau": "Lousteau",
+  "zicarelli": "Zicarelli",
+  "presto": "El Presto",
+  "dannan": "Dannan"
  },
  "mapa_poder": {
   "metodo": "Codificación editorial inicial, a revisar con el cliente. Eje horizontal: 0 = peronismo, 100 = Milei/LLA orgánico. Eje vertical: peso propio en la Ciudad (cargo, aparato, votos). El tamaño de cada punto sale de las menciones medidas.",
@@ -251,6 +294,21 @@
     "alineamiento": 35,
     "peso": 32,
     "nota": "UCR porteña."
+   },
+   "Álvaro Zicarelli": {
+    "alineamiento": 70,
+    "peso": 12,
+    "nota": "Dirigente de la nueva derecha, fuera de LLA orgánica."
+   },
+   "El Presto": {
+    "alineamiento": 74,
+    "peso": 20,
+    "nota": "Streamer de los libertarios de la primera hora; audiencia propia y críticas a Karina Milei."
+   },
+   "Dannan": {
+    "alineamiento": 74,
+    "peso": 18,
+    "nota": "Youtuber libertario de la primera hora, crítico de Karina Milei."
    }
   }
  },
@@ -776,7 +834,11 @@
    "\"Jorge Macri\" 2027",
    "\"Leandro Santoro\" 2027",
    "Legislatura porteña ex libertarios",
-   "comuneros Libertad Avanza Ciudad"
+   "comuneros Libertad Avanza Ciudad",
+   "\"Álvaro Zicarelli\"",
+   "\"El Presto\" Milei",
+   "\"El Presto\" Dannan",
+   "Dannan Karina Milei"
   ],
   "sites": [
    "noticiasurbanas.com.ar",
@@ -812,7 +874,10 @@
    "Dante Gebel candidato presidente 2027",
    "Dante Gebel política",
    "Casielles legislatura porteña",
-   "Ramiro Marra Ciudad 2027"
+   "Ramiro Marra Ciudad 2027",
+   "Álvaro Zicarelli",
+   "El Presto Dannan Karina Milei",
+   "Dannan Milei"
   ],
   "contexto": [
    "casielles",
@@ -822,7 +887,10 @@
    "porteñ",
    "milei",
    "marra",
-   "2027"
+   "2027",
+   "zicarelli",
+   "presto",
+   "dannan"
   ],
   "excluir": []
  },
