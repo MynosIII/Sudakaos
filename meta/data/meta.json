@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T21:01-03:00",
+ "updated_at": "2026-11-22T21:14-03:00",
  "grupos": [
   "País",
   "Boca",
@@ -8,8 +8,8 @@
   "San Isidro"
  ],
  "estado": "ok",
- "ads_error": null,
- "ig_ok": 21,
+ "ads_error": "4: límite de llamadas de la app (salteado en esta corrida)",
+ "ig_ok": 18,
  "ig_error": null,
  "diagnostico": {
   "permisos": [
@@ -71,7 +71,7 @@
      "12-15": 14380,
      "15-18": 9702,
      "18-21": 8595,
-     "21-24": 28410
+     "21-24": 28409
     },
     "dias": {
      "lun": 21316,
@@ -155,7 +155,7 @@
      },
      {
       "d": "2024-04-23",
-      "i": 73887,
+      "i": 73886,
       "f": "Reel"
      },
      {
@@ -175,12 +175,12 @@
      },
      {
       "d": "2024-10-02",
-      "i": 27069,
+      "i": 27068,
       "f": "Reel"
      },
      {
       "d": "2024-10-20",
-      "i": 28410,
+      "i": 28409,
       "f": "Carrusel"
      },
      {
@@ -190,7 +190,7 @@
      },
      {
       "d": "2025-03-15",
-      "i": 59935,
+      "i": 59934,
       "f": "Reel"
      },
      {
@@ -470,24 +470,24 @@
    "ig": {
     "usuario": "javiermilei",
     "nombre": "Javier Milei",
-    "followers": 6451124,
+    "followers": 6451099,
     "follows": 1813,
     "media_count": 12627,
     "posts_30d": 52,
     "posts_semana": 12.1,
-    "inter_med": 50662,
-    "likes_med": 47531,
+    "inter_med": 50663,
+    "likes_med": 47532,
     "com_med": 3819,
     "er": 0.785,
     "formatos": {
      "Foto": {
       "n": 38,
-      "inter_med": 47950,
+      "inter_med": 47951,
       "er": 0.743
      },
      "Reel": {
       "n": 14,
-      "inter_med": 80206,
+      "inter_med": 80208,
       "er": 1.243
      }
     },
@@ -496,15 +496,15 @@
     "mejor_franja": 15,
     "franjas": {
      "06-09": 39172,
-     "09-12": 59195,
-     "12-15": 76235,
-     "15-18": 83540,
+     "09-12": 59205,
+     "12-15": 76236,
+     "15-18": 83541,
      "18-21": 43346,
      "21-24": 66903
     },
     "dias": {
-     "lun": 98488,
-     "mar": 42984,
+     "lun": 98489,
+     "mar": 42988,
      "mié": 80327,
      "jue": 90677,
      "vie": 66903,
@@ -531,7 +531,7 @@
       "t": "",
       "u": "https://www.instagram.com/reel/DfnDa5ETXxB/",
       "f": "Reel",
-      "i": 201878,
+      "i": 201879,
       "d": "2026-11-11"
      },
      {
@@ -545,7 +545,7 @@
       "t": "",
       "u": "https://www.instagram.com/reel/Df5WL9rzuTy/",
       "f": "Reel",
-      "i": 173756,
+      "i": 173765,
       "d": "2026-11-18"
      }
     ],
@@ -582,7 +582,7 @@
      },
      {
       "d": "2026-10-30",
-      "i": 160171,
+      "i": 160170,
       "f": "Foto"
      },
      {
@@ -607,7 +607,7 @@
      },
      {
       "d": "2026-11-02",
-      "i": 154766,
+      "i": 154765,
       "f": "Foto"
      },
      {
@@ -617,7 +617,7 @@
      },
      {
       "d": "2026-11-03",
-      "i": 136093,
+      "i": 136092,
       "f": "Foto"
      },
      {
@@ -627,32 +627,32 @@
      },
      {
       "d": "2026-11-05",
-      "i": 48717,
+      "i": 48718,
       "f": "Reel"
      },
      {
       "d": "2026-11-05",
-      "i": 119050,
+      "i": 119051,
       "f": "Foto"
      },
      {
       "d": "2026-11-06",
-      "i": 7656,
+      "i": 7657,
       "f": "Foto"
      },
      {
       "d": "2026-11-06",
-      "i": 29061,
+      "i": 29062,
       "f": "Foto"
      },
      {
       "d": "2026-11-07",
-      "i": 118307,
+      "i": 118308,
       "f": "Foto"
      },
      {
       "d": "2026-11-08",
-      "i": 47957,
+      "i": 47958,
       "f": "Foto"
      },
      {
@@ -662,7 +662,7 @@
      },
      {
       "d": "2026-11-08",
-      "i": 48552,
+      "i": 48553,
       "f": "Foto"
      },
      {
@@ -692,22 +692,22 @@
      },
      {
       "d": "2026-11-08",
-      "i": 88241,
+      "i": 88242,
       "f": "Foto"
      },
      {
       "d": "2026-11-09",
-      "i": 120572,
+      "i": 120573,
       "f": "Reel"
      },
      {
       "d": "2026-11-10",
-      "i": 40976,
+      "i": 40984,
       "f": "Foto"
      },
      {
       "d": "2026-11-11",
-      "i": 153869,
+      "i": 153875,
       "f": "Foto"
      },
      {
@@ -722,96 +722,96 @@
      },
      {
       "d": "2026-11-11",
-      "i": 201878,
+      "i": 201879,
       "f": "Reel"
      },
      {
       "d": "2026-11-11",
-      "i": 40918,
+      "i": 40919,
       "f": "Foto"
      },
      {
       "d": "2026-11-11",
-      "i": 84008,
+      "i": 84010,
       "f": "Reel"
      },
      {
       "d": "2026-11-12",
-      "i": 114027,
+      "i": 114029,
       "f": "Foto"
      },
      {
       "d": "2026-11-15",
-      "i": 95022,
+      "i": 95032,
       "f": "Foto"
      },
      {
       "d": "2026-11-16",
-      "i": 24263,
+      "i": 24266,
       "f": "Foto"
      },
      {
       "d": "2026-11-16",
-      "i": 76404,
+      "i": 76406,
       "f": "Reel"
      },
      {
       "d": "2026-11-17",
-      "i": 30319,
+      "i": 30323,
       "f": "Foto"
      },
      {
       "d": "2026-11-17",
-      "i": 12448,
+      "i": 12453,
       "f": "Foto"
      },
      {
       "d": "2026-11-18",
-      "i": 13444,
+      "i": 13449,
       "f": "Foto"
      },
      {
       "d": "2026-11-18",
-      "i": 173756,
+      "i": 173765,
       "f": "Reel"
      },
      {
       "d": "2026-11-19",
-      "i": 59195,
+      "i": 59205,
       "f": "Foto"
      },
      {
       "d": "2026-11-20",
-      "i": 106798,
+      "i": 106818,
       "f": "Reel"
      },
      {
       "d": "2026-11-20",
-      "i": 41312,
+      "i": 41361,
       "f": "Foto"
      },
      {
       "d": "2026-11-20",
-      "i": 22334,
+      "i": 22349,
       "f": "Reel"
      },
      {
       "d": "2026-11-21",
-      "i": 30680,
+      "i": 30755,
       "f": "Foto"
      },
      {
       "d": "2026-11-22",
-      "i": 4195,
+      "i": 4295,
       "f": "Foto"
      },
      {
       "d": "2026-11-22",
-      "i": 11615,
+      "i": 12277,
       "f": "Foto"
      }
     ],
-    "delta7": -4617,
+    "delta7": -4642,
     "delta30": null
    },
    "historia": [
@@ -837,7 +837,7 @@
     },
     {
      "d": "2026-11-22",
-     "f": 6451124
+     "f": 6451099
     }
    ],
    "ads": {
@@ -912,7 +912,7 @@
    "ig": {
     "usuario": "cristinafkirchner",
     "nombre": "Cristina Kirchner",
-    "followers": 1728362,
+    "followers": 1728363,
     "follows": 67,
     "media_count": 1382,
     "posts_30d": 0,
@@ -942,7 +942,7 @@
     "mejor_dia": "mié",
     "mejor_franja": 6,
     "franjas": {
-     "06-09": 104614,
+     "06-09": 104616,
      "09-12": 47640,
      "12-15": 35494,
      "15-18": 74425,
@@ -952,7 +952,7 @@
     "dias": {
      "lun": 74425,
      "mar": 98906,
-     "mié": 104614,
+     "mié": 104616,
      "jue": 34393,
      "vie": 76245,
      "sáb": 66603,
@@ -1036,7 +1036,7 @@
      },
      {
       "d": "2025-03-22",
-      "i": 77380,
+      "i": 77379,
       "f": "Carrusel"
      },
      {
@@ -1251,7 +1251,7 @@
      },
      {
       "d": "2025-11-05",
-      "i": 49320,
+      "i": 49321,
       "f": "Reel"
      },
      {
@@ -1291,7 +1291,7 @@
      },
      {
       "d": "2026-07-29",
-      "i": 104614,
+      "i": 104616,
       "f": "Foto"
      },
      {
@@ -1300,7 +1300,7 @@
       "f": "Foto"
      }
     ],
-    "delta7": -237,
+    "delta7": -236,
     "delta30": null
    },
    "historia": [
@@ -1326,7 +1326,7 @@
     },
     {
      "d": "2026-11-22",
-     "f": 1728362
+     "f": 1728363
     }
    ],
    "ads": {
@@ -1341,13 +1341,13 @@
    "ig": {
     "usuario": "kicillofok",
     "nombre": "Axel Kicillof",
-    "followers": 1203780,
+    "followers": 1203783,
     "follows": 323,
     "media_count": 2826,
     "posts_30d": 25,
     "posts_semana": 5.8,
-    "inter_med": 9127,
-    "likes_med": 8805,
+    "inter_med": 9130,
+    "likes_med": 8808,
     "com_med": 301,
     "er": 0.758,
     "formatos": {
@@ -1358,17 +1358,17 @@
      },
      "Reel": {
       "n": 8,
-      "inter_med": 4026,
-      "er": 0.334
+      "inter_med": 4027,
+      "er": 0.335
      }
     },
     "mejor_formato": "Carrusel",
     "mejor_dia": "lun",
     "mejor_franja": 21,
     "franjas": {
-     "00-03": 3273,
-     "09-12": 9127,
-     "12-15": 11183,
+     "00-03": 3276,
+     "09-12": 9130,
+     "12-15": 11210,
      "15-18": 9963,
      "18-21": 3862,
      "21-24": 14498
@@ -1377,9 +1377,9 @@
      "lun": 38460,
      "mar": 10293,
      "mié": 11119,
-     "jue": 11183,
+     "jue": 11210,
      "vie": 8463,
-     "sáb": 15707,
+     "sáb": 15708,
      "dom": 2683
     },
     "temas": [
@@ -1413,7 +1413,7 @@
       "t": "León, los bonaerenses y los argentinos guardaremos para siempre en nuestros corazones su visita. Gracias por hablarle a ",
       "u": "https://www.instagram.com/p/Dfm6UqSkfw-/",
       "f": "Carrusel",
-      "i": 88978,
+      "i": 88980,
       "d": "2026-11-11"
      },
      {
@@ -1427,7 +1427,7 @@
     "serie": [
      {
       "d": "2026-10-24",
-      "i": 28403,
+      "i": 28404,
       "f": "Carrusel"
      },
      {
@@ -1487,7 +1487,7 @@
      },
      {
       "d": "2026-11-05",
-      "i": 6418,
+      "i": 6419,
       "f": "Carrusel"
      },
      {
@@ -1512,17 +1512,17 @@
      },
      {
       "d": "2026-11-11",
-      "i": 88978,
+      "i": 88980,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-11",
-      "i": 5041,
+      "i": 5042,
       "f": "Reel"
      },
      {
       "d": "2026-11-15",
-      "i": 9127,
+      "i": 9130,
       "f": "Carrusel"
      },
      {
@@ -1532,26 +1532,26 @@
      },
      {
       "d": "2026-11-17",
-      "i": 4695,
+      "i": 4698,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-19",
-      "i": 3273,
+      "i": 3276,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-19",
-      "i": 11183,
+      "i": 11210,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-19",
-      "i": 25508,
+      "i": 25517,
       "f": "Carrusel"
      }
     ],
-    "delta7": 913,
+    "delta7": 916,
     "delta30": null
    },
    "historia": [
@@ -1577,7 +1577,7 @@
     },
     {
      "d": "2026-11-22",
-     "f": 1203780
+     "f": 1203783
     }
    ],
    "ads": {
@@ -1597,10 +1597,10 @@
     "media_count": 6132,
     "posts_30d": 26,
     "posts_semana": 6.1,
-    "inter_med": 4925,
-    "likes_med": 4272,
+    "inter_med": 4936,
+    "likes_med": 4282,
     "com_med": 339,
-    "er": 0.443,
+    "er": 0.444,
     "formatos": {
      "Reel": {
       "n": 15,
@@ -1625,18 +1625,18 @@
      "06-09": 4651,
      "09-12": 3738,
      "12-15": 10718,
-     "15-18": 5464,
-     "18-21": 5183,
+     "15-18": 5465,
+     "18-21": 5184,
      "21-24": 5746
     },
     "dias": {
      "lun": 5548,
-     "mar": 5464,
+     "mar": 5465,
      "mié": 6811,
-     "jue": 2552,
+     "jue": 2554,
      "vie": 6128,
      "sáb": 12217,
-     "dom": 4943
+     "dom": 4965
     },
     "temas": [
      "papa",
@@ -1658,7 +1658,7 @@
       "t": "Music Sessions #10/11 || PATRICIA BULLRICH & ??? 🔜",
       "u": "https://www.instagram.com/reel/Df90n6uRAAE/",
       "f": "Reel",
-      "i": 34559,
+      "i": 34565,
       "d": "2026-11-20"
      },
      {
@@ -1769,7 +1769,7 @@
      },
      {
       "d": "2026-11-17",
-      "i": 5464,
+      "i": 5465,
       "f": "Carrusel"
      },
      {
@@ -1779,7 +1779,7 @@
      },
      {
       "d": "2026-11-18",
-      "i": 7211,
+      "i": 7212,
       "f": "Carrusel"
      },
      {
@@ -1789,12 +1789,12 @@
      },
      {
       "d": "2026-11-19",
-      "i": 3555,
+      "i": 3558,
       "f": "Reel"
      },
      {
       "d": "2026-11-20",
-      "i": 34559,
+      "i": 34565,
       "f": "Reel"
      },
      {
@@ -1804,7 +1804,7 @@
      },
      {
       "d": "2026-11-22",
-      "i": 4943,
+      "i": 4965,
       "f": "Reel"
      }
     ],
@@ -1849,19 +1849,19 @@
    "ig": {
     "usuario": "victoria.villarruel",
     "nombre": "Victoria Villarruel | Vicepresidente de Argentina",
-    "followers": 1302994,
+    "followers": 1302992,
     "follows": 94,
     "media_count": 666,
     "posts_30d": 6,
     "posts_semana": 1.4,
-    "inter_med": 12194,
-    "likes_med": 11695,
+    "inter_med": 12197,
+    "likes_med": 11698,
     "com_med": 540,
     "er": 0.936,
     "formatos": {
      "Carrusel": {
       "n": 5,
-      "inter_med": 16140,
+      "inter_med": 16146,
       "er": 1.239
      },
      "Foto": {
@@ -1874,11 +1874,11 @@
     "mejor_dia": "dom",
     "mejor_franja": 21,
     "franjas": {
-     "18-21": 6238,
-     "21-24": 16140
+     "18-21": 6239,
+     "21-24": 16146
     },
     "dias": {
-     "jue": 12194,
+     "jue": 12197,
      "vie": 17024,
      "dom": 18215
     },
@@ -1916,7 +1916,7 @@
       "t": "Hoy sesión en el Senado de la Nación con una agenda que incluye temas de relevancia institucional y legislativa. Se apro",
       "u": "https://www.instagram.com/p/Df8eHtVDcVe/",
       "f": "Carrusel",
-      "i": 16140,
+      "i": 16146,
       "d": "2026-11-19"
      }
     ],
@@ -1943,16 +1943,16 @@
      },
      {
       "d": "2026-11-15",
-      "i": 6238,
+      "i": 6239,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-19",
-      "i": 16140,
+      "i": 16146,
       "f": "Carrusel"
      }
     ],
-    "delta7": -1091,
+    "delta7": -1093,
     "delta30": null
    },
    "historia": [
@@ -1978,7 +1978,7 @@
     },
     {
      "d": "2026-11-22",
-     "f": 1302994
+     "f": 1302992
     }
    ],
    "ads": {
@@ -1993,7 +1993,7 @@
    "ig": {
     "usuario": "todosobreroman10",
     "nombre": "Juan Román Riquelme",
-    "followers": 592654,
+    "followers": 592657,
     "follows": 31,
     "media_count": 155,
     "posts_30d": 0,
@@ -2295,7 +2295,7 @@
      },
      {
       "d": "2023-12-17",
-      "i": 56620,
+      "i": 56621,
       "f": "Reel"
      },
      {
@@ -2380,11 +2380,11 @@
      },
      {
       "d": "2025-07-13",
-      "i": 41892,
+      "i": 41893,
       "f": "Carrusel"
      }
     ],
-    "delta7": 2884,
+    "delta7": 2887,
     "delta30": null
    },
    "historia": [
@@ -2410,7 +2410,7 @@
     },
     {
      "d": "2026-11-22",
-     "f": 592654
+     "f": 592657
     }
    ],
    "ads": {
@@ -2425,7 +2425,7 @@
    "ig": {
     "usuario": "mauriciomacri",
     "nombre": "Mauricio Macri",
-    "followers": 1212840,
+    "followers": 1212841,
     "follows": 138,
     "media_count": 2690,
     "posts_30d": 3,
@@ -2491,7 +2491,7 @@
       "t": "En Nueva York esperando la final con Vozinha, con quien acordamos hacer un programa de fútbol y educación digital a trav",
       "u": "https://www.instagram.com/p/Da3VfevpuoP/",
       "f": "Foto",
-      "i": 248641,
+      "i": 248640,
       "d": "2026-07-16"
      },
      {
@@ -2722,7 +2722,7 @@
      },
      {
       "d": "2026-07-16",
-      "i": 248641,
+      "i": 248640,
       "f": "Foto"
      },
      {
@@ -2802,16 +2802,16 @@
      },
      {
       "d": "2026-11-13",
-      "i": 27134,
+      "i": 27139,
       "f": "Foto"
      },
      {
       "d": "2026-11-20",
-      "i": 7693,
+      "i": 7696,
       "f": "Carrusel"
      }
     ],
-    "delta7": -882,
+    "delta7": -881,
     "delta30": null
    },
    "historia": [
@@ -2837,7 +2837,7 @@
     },
     {
      "d": "2026-11-22",
-     "f": 1212840
+     "f": 1212841
     }
    ],
    "ads": {
@@ -2880,10 +2880,10 @@
      "09-12": 833,
      "12-15": 1,
      "18-21": 325,
-     "21-24": 392
+     "21-24": 394
     },
     "dias": {
-     "sáb": 396,
+     "sáb": 399,
      "dom": 293
     },
     "temas": [
@@ -2920,7 +2920,7 @@
       "t": "CAMPEONES DE PUNTA A PUNTA. Así se juegan las finales. Excelente BOCA QUERIDO. Gracias por esta enorme alegría. Otra vez",
       "u": "https://www.instagram.com/p/DgBmtSGsgzC/",
       "f": "Foto",
-      "i": 396,
+      "i": 399,
       "d": "2026-11-21"
      }
     ],
@@ -2957,7 +2957,7 @@
      },
      {
       "d": "2026-11-21",
-      "i": 396,
+      "i": 399,
       "f": "Foto"
      }
     ],
@@ -3002,7 +3002,7 @@
    "ig": {
     "usuario": "diegosantilliok",
     "nombre": "Diego Santilli",
-    "followers": 230853,
+    "followers": 230852,
     "follows": 68,
     "media_count": 2771,
     "posts_30d": 0,
@@ -3391,7 +3391,7 @@
       "f": "Reel"
      }
     ],
-    "delta7": -105,
+    "delta7": -106,
     "delta30": null
    },
    "historia": [
@@ -3417,7 +3417,7 @@
     },
     {
      "d": "2026-11-22",
-     "f": 230853
+     "f": 230852
     }
    ],
    "ads": {
@@ -3437,14 +3437,14 @@
     "media_count": 3767,
     "posts_30d": 13,
     "posts_semana": 3.0,
-    "inter_med": 471,
-    "likes_med": 444,
+    "inter_med": 472,
+    "likes_med": 445,
     "com_med": 32,
-    "er": 0.217,
+    "er": 0.218,
     "formatos": {
      "Carrusel": {
       "n": 8,
-      "inter_med": 528,
+      "inter_med": 529,
       "er": 0.244
      },
      "Reel": {
@@ -3459,13 +3459,13 @@
     "franjas": {
      "09-12": 2370,
      "12-15": 261,
-     "15-18": 735,
+     "15-18": 736,
      "18-21": 468
     },
     "dias": {
      "lun": 436,
      "mar": 1478,
-     "mié": 342,
+     "mié": 343,
      "jue": 675,
      "vie": 620,
      "sáb": 433
@@ -3501,7 +3501,7 @@
       "t": "Gracias Papa León XIV por llenar nuestros corazones de fe y esperanza, por escuchar a los excluidos, por reconocer la so",
       "u": "https://www.instagram.com/p/DfnMwypnylT/",
       "f": "Carrusel",
-      "i": 1345,
+      "i": 1346,
       "d": "2026-11-11"
      },
      {
@@ -3540,7 +3540,7 @@
      },
      {
       "d": "2026-11-11",
-      "i": 1345,
+      "i": 1346,
       "f": "Carrusel"
      },
      {
@@ -3565,7 +3565,7 @@
      },
      {
       "d": "2026-11-18",
-      "i": 471,
+      "i": 472,
       "f": "Carrusel"
      },
      {
@@ -3575,7 +3575,7 @@
      },
      {
       "d": "2026-11-19",
-      "i": 885,
+      "i": 886,
       "f": "Carrusel"
      }
     ],
@@ -3620,7 +3620,7 @@
    "ig": {
     "usuario": "zamora.julio",
     "nombre": "Julio Zamora",
-    "followers": 59555,
+    "followers": 59554,
     "follows": 158,
     "media_count": 3994,
     "posts_30d": 30,
@@ -3855,11 +3855,11 @@
      },
      {
       "d": "2026-11-22",
-      "i": 44,
+      "i": 58,
       "f": "Reel"
      }
     ],
-    "delta7": 90,
+    "delta7": 89,
     "delta30": null
    },
    "historia": [
@@ -3885,7 +3885,7 @@
     },
     {
      "d": "2026-11-22",
-     "f": 59555
+     "f": 59554
     }
    ],
    "ads": {
@@ -4349,6 +4349,7 @@
     "delta7": -11,
     "delta30": null
    },
+   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -4376,7 +4377,8 @@
     }
    ],
    "ads": {
-    "n": 0
+    "n": 0,
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -4737,6 +4739,7 @@
     "delta7": 749,
     "delta30": null
    },
+   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -4764,34 +4767,8 @@
     }
    ],
    "ads": {
-    "n": 1,
-    "activos": 0,
-    "gasto": [
-     200,
-     299
-    ],
-    "impresiones": [
-     0,
-     99
-    ],
-    "moneda": "ARS",
-    "regiones": {},
-    "edades": {},
-    "genero": {},
-    "plataformas": {
-     "facebook": 1,
-     "instagram": 1
-    },
-    "paginas": {
-     "Jorge Macri FANS": 1
-    },
-    "avisos": [
-     {
-      "t": "This ad ran without a required disclaimer.",
-      "d": "2026-08-27",
-      "u": "https://www.facebook.com/ads/library/?id=1075401625033145"
-     }
-    ]
+    "n": 0,
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -4949,6 +4926,7 @@
     "delta7": 2283,
     "delta30": null
    },
+   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -4976,7 +4954,8 @@
     }
    ],
    "ads": {
-    "n": 0
+    "n": 0,
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -5350,6 +5329,7 @@
     "delta7": 316,
     "delta30": null
    },
+   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -5377,65 +5357,8 @@
     }
    ],
    "ads": {
-    "n": 58,
-    "activos": 10,
-    "gasto": [
-     3870400,
-     4500442
-    ],
-    "impresiones": [
-     4410100,
-     5180942
-    ],
-    "moneda": "ARS",
-    "regiones": {
-     "Buenos Aires": 99.9,
-     "Ciudad Autónoma de Buenos Aires": 0.1,
-     "Córdoba": 0.0,
-     "Entre Rios": 0.0,
-     "Santa Fe": 0.0,
-     "Misiones": 0.0,
-     "Río Negro": 0.0,
-     "San Juan": 0.0
-    },
-    "edades": {
-     "25-34": 25.8,
-     "35-44": 18.1,
-     "45-54": 17.3,
-     "18-24": 14.7,
-     "55-64": 12.5,
-     "65+": 11.6,
-     "Unknown": 0.0
-    },
-    "genero": {
-     "male": 52.9,
-     "female": 46.5,
-     "unknown": 0.6
-    },
-    "plataformas": {
-     "facebook": 58,
-     "instagram": 58
-    },
-    "paginas": {
-     "Ramón Lanús": 58
-    },
-    "avisos": [
-     {
-      "t": "La encargada de un comercio alertó a través de Ojos en Alerta sobre un hombre que pedía dinero y amenazaba a quienes estaban en el lugar. De",
-      "d": "2026-08-20",
-      "u": "https://www.facebook.com/ads/library/?id=2826760501032865"
-     },
-     {
-      "t": "En San Isidro nos gusta pasar la tarde en la costa y compartir unos mates al aire libre. Los espero el domingo 15 de noviembre, de 15 a 19 h",
-      "d": "2026-11-10",
-      "u": "https://www.facebook.com/ads/library/?id=1128443226607351"
-     },
-     {
-      "t": "Durante la madrugada, las cámaras de seguridad detectaron a un hombre que escondía una escalera. Desde el Centro de Monitoreo lo seguimos a ",
-      "d": "2026-09-29",
-      "u": "https://www.facebook.com/ads/library/?id=4423471327786030"
-     }
-    ]
+    "n": 0,
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -5602,6 +5525,7 @@
     "delta7": 228,
     "delta30": null
    },
+   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -5629,47 +5553,8 @@
     }
    ],
    "ads": {
-    "n": 1,
-    "activos": 0,
-    "gasto": [
-     20000,
-     24999
-    ],
-    "impresiones": [
-     30000,
-     34999
-    ],
-    "moneda": "ARS",
-    "regiones": {
-     "Buenos Aires": 100.0
-    },
-    "edades": {
-     "25-34": 38.7,
-     "18-24": 37.4,
-     "35-44": 12.1,
-     "45-54": 6.6,
-     "55-64": 2.9,
-     "65+": 2.3,
-     "Unknown": 0.0
-    },
-    "genero": {
-     "male": 47.0,
-     "female": 43.4,
-     "unknown": 9.6
-    },
-    "plataformas": {
-     "instagram": 1
-    },
-    "paginas": {
-     "Gustavo Posse": 1
-    },
-    "avisos": [
-     {
-      "t": "Hay decisiones que, con el paso del tiempo, demuestran que mirar hacia adelante siempre fue el camino. En San Isidro hubo una forma de enten",
-      "d": "2026-09-23",
-      "u": "https://www.facebook.com/ads/library/?id=1737398145057397"
-     }
-    ]
+    "n": 0,
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   },
   {
@@ -5782,6 +5667,7 @@
     "delta7": -27,
     "delta30": null
    },
+   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -5809,7 +5695,8 @@
     }
    ],
    "ads": {
-    "n": 0
+    "n": 0,
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
    }
   }
  ]
