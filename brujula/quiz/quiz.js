@@ -90,6 +90,9 @@
       if ($('#s-preg').classList.contains('on')) pregunta();
       if ($('#s-demo').classList.contains('on')) opcionesDemo();
       if ($('#s-res').classList.contains('on')) resultado(S._enviado, S._link);
+      if ($('#s-ejes').classList.contains('on')) guia();
+      if ($('#s-mapa').classList.contains('on')) mapaPagina();
+      if ($('#s-cara').classList.contains('on')) cara();
       $('#hdr-ver').textContent = S.ver ? `${T().sub} · ${nombreVer(S.ver)}` : T().sub;
     }
   }
@@ -105,7 +108,26 @@
       return `<button class="ver${id === S.ver ? ' on' : ''}" data-v="${id}" ${v.activa ? '' : 'disabled'}><b>${esc(nombreVer(id))}</b><span>${v.activa
         ? `${n} ${T().preguntas} · ${nf} ${T().dirigentes}` : T().pronto}</span></button>`;
     }).join('');
-    if (S.ver) $('#go-meta').textContent = T().minutos(Math.round(S.preg.preguntas.filter(q => q.v.includes(S.ver)).length * 8 / 60));
+    $$('.modo').forEach(b => {
+      b.disabled = !S.ver;
+      const n = S.ver ? seleccion(S.ver, b.dataset.m).length : 0;
+      $('#m-' + b.dataset.m).textContent = S.ver ? T().modo_d(n, Math.max(2, Math.round(n * 8 / 60))) : '';
+    });
+  }
+  // Rápida: por eje, una frase hacia cada polo (de nivel intermedio) + 6 locales. Completa: todas.
+  function seleccion(ver, modo) {
+    const todas = S.preg.preguntas.filter(q => q.v.includes(ver));
+    if (modo !== 'rapida') return todas;
+    const elegidas = new Set();
+    S.ejes.ejes.forEach(e => {
+      const base = todas.filter(q => q.id[0] === 'x' && q.e[e.id]);
+      [1, -1].forEach(sg => {
+        const c = base.filter(q => Math.sign(q.e[e.id]) === sg).sort((a, b) => Math.abs((a.nivel || 2) - 2.5) - Math.abs((b.nivel || 2) - 2.5))[0];
+        if (c) elegidas.add(c);
+      });
+    });
+    todas.filter(q => q.id[0] !== 'x').slice(0, 6).forEach(q => elegidas.add(q));
+    return todas.filter(q => elegidas.has(q));
   }
   function inicio() {
     versiones();
@@ -114,9 +136,8 @@
       S.ver = b.dataset.v;
       const pref = S.ejes.versiones[S.ver].lang || 'es';
       if (!S.langElegido && pref !== S.lang) setLang(pref, false); else versiones();
-      $('#go').disabled = false;
     };
-    $('#go').onclick = () => empezar(S.ver);
+    $$('.modo').forEach(b => b.onclick = () => { if (S.ver) empezar(S.ver, b.dataset.m) });
   }
   function show(id) {
     $$('.screen').forEach(s => s.classList.toggle('on', s.id === id));
@@ -124,9 +145,10 @@
   }
 
   // ------------------------------------------------------------ preguntas
-  function empezar(ver) {
+  function empezar(ver, modo) {
     S.ver = ver;
-    S.qs = S.preg.preguntas.filter(q => q.v.includes(ver));
+    S.qs = seleccion(ver, modo);
+    if (location.hash && location.hash !== '#/') history.replaceState(null, '', location.pathname + location.search + '#/');
     S.ans = new Array(S.qs.length).fill(null);
     S.i = 0; S.t0 = Date.now();
     $('#hdr-ver').textContent = `${T().sub} · ${nombreVer(ver)}`;
@@ -236,27 +258,103 @@
     };
     $('#sent').textContent = enviado === true ? t.gracias : enviado === 'menor' ? t.menor : '';
     $('#again').textContent = desdeLink ? t.hacer : t.de_nuevo;
-    $('#again').onclick = () => { history.replaceState(null, '', location.pathname + location.search); show('s-inicio') };
+    $('#again').onclick = () => { history.replaceState(null, '', location.pathname + location.search + '#/'); show('s-inicio'); nav('quiz') };
     $('#hdr-n').textContent = '✓';
-    show('s-res');
+    if (!desdeLink) { try { localStorage.setItem('brujula_res', JSON.stringify({ ver, sc, cert })) } catch (e) { } }
+    show('s-res'); nav('quiz');
   }
-  function mapa(sc, rk, E) {
-    const W = 420, H = 360, P = 30, X = v => P + (W - 2 * P) * v / 100, Yv = v => P + (H - 2 * P) * (1 - v / 100);
-    const ex = E.find(e => e.id === 'pla'), ey = E.find(e => e.id === 'pro'), U = s => esc(s.toUpperCase());
-    const top = new Set(rk.slice(0, 5).map(x => x.f.nombre));
-    let g = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(T().mapa)}">`;
+  function mapa(sc, rk, E) { svgMapa('#mapa', '#mapa-info', rk, 'pla', 'pro', sc, new Set(rk.slice(0, 5).map(x => x.f.nombre))) }
+  // Mapa de dos ejes cualesquiera: puntos = dirigentes, "vos" si hay resultado.
+  function svgMapa(sel, info, rk, xk, yk, sc, top) {
+    const E = S.ejes.ejes.map(eje), ex = E.find(e => e.id === xk), ey = E.find(e => e.id === yk);
+    const W = 420, H = 360, P = 30, X = v => P + (W - 2 * P) * v / 100, Yv = v => P + (H - 2 * P) * (1 - v / 100), U = s => esc(s.toUpperCase());
+    let g = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(ex.nombre)} × ${esc(ey.nombre)}">`;
     for (let t = 0; t <= 100; t += 25) g += `<line class="gl" x1="${X(t)}" x2="${X(t)}" y1="${P}" y2="${H - P}"/><line class="gl" x1="${P}" x2="${W - P}" y1="${Yv(t)}" y2="${Yv(t)}"/>`;
     g += `<line class="ax" x1="${X(50)}" x2="${X(50)}" y1="${P}" y2="${H - P}"/><line class="ax" x1="${P}" x2="${W - P}" y1="${Yv(50)}" y2="${Yv(50)}"/>`;
-    g += `<text class="q" x="${P}" y="${P - 10}">${U(ex.a)} · ${U(ey.b)}</text><text class="q" x="${W - P}" y="${P - 10}" text-anchor="end">${U(ex.b)} · ${U(ey.b)}</text>`;
-    g += `<text class="q" x="${P}" y="${H - 10}">${U(ex.a)} · ${U(ey.a)}</text><text class="q" x="${W - P}" y="${H - 10}" text-anchor="end">${U(ex.b)} · ${U(ey.a)}</text>`;
+    // polos en los extremos de cada eje (no en las esquinas: con nombres largos se pisan)
+    g += `<text class="q" x="${X(50)}" y="${P - 10}" text-anchor="middle">▲ ${U(ey.b)}</text><text class="q" x="${X(50)}" y="${H - 8}" text-anchor="middle">▼ ${U(ey.a)}</text>`;
+    g += `<text class="q" x="${P + 3}" y="${Yv(50) - 6}">◀ ${U(ex.a)}</text><text class="q" x="${W - P - 3}" y="${Yv(50) - 6}" text-anchor="end">${U(ex.b)} ▶</text>`;
     rk.forEach(({ f, af }) => {
-      const tp = top.has(f.nombre), cx = X(f.pos.pla), cy = Yv(f.pos.pro), ap = f.nombre.split(' ').slice(-1)[0];
-      g += `<g class="pt${tp ? ' top' : ''}"><title>${esc(f.nombre)} · ${af}%</title><circle cx="${cx}" cy="${cy}" r="${tp ? 5 : 3.5}"/>${tp ? `<text x="${cx + 7}" y="${cy + 3}">${esc(ap)}</text>` : ''}</g>`;
+      const tp = top.has(f.nombre), cx = X(f.pos[xk]), cy = Yv(f.pos[yk]), ap = f.nombre.split(' ').slice(-1)[0];
+      g += `<g class="pt${tp ? ' top' : ''}"><title>${esc(f.nombre)}${af != null ? ' · ' + af + '%' : ''}${f.cargo ? ' · ' + esc(f.cargo) : ''}</title><circle cx="${cx}" cy="${cy}" r="${tp ? 5 : 3.5}"/>${tp ? `<text x="${cx + 7}" y="${cy + 3}">${esc(ap)}</text>` : ''}</g>`;
     });
-    const yo = { es: 'VOS', pt: 'VOCÊ', en: 'YOU' }[S.lang];
-    g += `<g class="yo"><circle cx="${X(sc.pla)}" cy="${Yv(sc.pro)}" r="8"/><text x="${X(sc.pla) + 11}" y="${Yv(sc.pro) - 8}">${yo}</text></g></svg>`;
-    $('#mapa').innerHTML = g;
-    $('#mapa').onclick = ev => { const p = ev.target.closest('.pt'); if (p) $('#mapa-info').textContent = p.querySelector('title').textContent };
+    if (sc) {
+      const yo = { es: 'VOS', pt: 'VOCÊ', en: 'YOU' }[S.lang];
+      g += `<g class="yo"><circle cx="${X(sc[xk])}" cy="${Yv(sc[yk])}" r="8"/><text x="${X(sc[xk]) + 11}" y="${Yv(sc[yk]) - 8}">${yo}</text></g>`;
+    }
+    $(sel).innerHTML = g + '</svg>';
+    $(sel).onclick = ev => { const p = ev.target.closest('.pt'); if (p) $(info).textContent = p.querySelector('title').textContent };
+  }
+
+  // ------------------------------------------------------------ secciones: 12 ejes, mapa, mi mapa, cara a cara
+  function guardado() { try { const r = JSON.parse(localStorage.getItem('brujula_res') || 'null'); return r && r.sc ? r : null } catch (e) { return null } }
+  const verDef = () => S.ver || (guardado() || {}).ver || (S.lang === 'pt' ? 'br' : 'ar');
+  function selVer(sel, fn) {
+    const el = $(sel), v = el.value || verDef();
+    el.innerHTML = Object.entries(S.ejes.versiones).filter(([, x]) => x.activa).map(([id]) => `<option value="${id}"${id === v ? ' selected' : ''}>${esc(nombreVer(id))}</option>`).join('');
+    el.onchange = fn;
+    return el.value;
+  }
+  function guia() {
+    const ver = selVer('#ej-ver', guia), figs = figuras(ver), r = guardado(), yo = r && r.sc;
+    $('#ejes-guia').innerHTML = S.ejes.ejes.map(e0 => {
+      const e = eje(e0), ord = figs.slice().sort((a, b) => a.pos[e.id] - b.pos[e.id]);
+      const ex = arr => arr.map(f => esc(f.nombre.split(' ').slice(-1)[0])).join(', ');
+      return `<div class="ejec"><h3>${esc(e.nombre)}</h3><div class="k">${esc(e.a)} ↔ ${esc(e.b)}</div>
+        <div class="polos"><div><b>${esc(e.a)}</b>${esc(e0.a_desc || '')}</div><div><b>${esc(e.b)}</b>${esc(e0.b_desc || '')}</div></div>
+        <div class="strip">${figs.map(f => `<i style="left:${f.pos[e.id]}%" title="${esc(f.nombre)} · ${f.pos[e.id]}"></i>`).join('')}${yo ? `<i class="yo" style="left:${yo[e.id]}%" title="${esc(T().vos)} · ${yo[e.id]}"></i>` : ''}</div>
+        <div class="ext"><div>${ex(ord.slice(0, 3))}</div><div>${ex(ord.slice(-3).reverse())}</div></div></div>`;
+    }).join('');
+  }
+  function mapaPagina() {
+    const ver = selVer('#mp-ver', mapaPagina), E = S.ejes.ejes.map(eje), r = guardado();
+    ['#mp-x', '#mp-y'].forEach((sel, i) => {
+      const el = $(sel), v = el.value || (i ? 'pro' : 'pla');
+      el.innerHTML = E.map(e => `<option value="${e.id}"${e.id === v ? ' selected' : ''}>${esc(e.nombre)} (${esc(e.a)} ↔ ${esc(e.b)})</option>`).join('');
+      el.onchange = mapaPagina;
+    });
+    const sc = r && r.sc, cert = r && r.cert;
+    const rk = figuras(ver).map(f => ({ f, af: sc ? afinidad(sc, f.pos, cert) : null })).sort((a, b) => (b.af || 0) - (a.af || 0));
+    svgMapa('#mapa-g', '#mapa-g-info', rk, $('#mp-x').value, $('#mp-y').value, sc, new Set(sc ? rk.slice(0, 5).map(x => x.f.nombre) : rk.filter(x => x.f.nivel === 1).map(x => x.f.nombre)));
+  }
+  function cara() {
+    const ver = selVer('#cc-ver', () => { $('#cc-a').value = ''; $('#cc-b').value = ''; cara() }), figs = figuras(ver), r = guardado(), t = T();
+    const ops = (sel, def, conVos) => {
+      const el = $(sel), v = el.value || def;
+      el.innerHTML = (conVos && r ? `<option value="__vos">${esc(t.vos)}</option>` : '') + figs.map(f => `<option${f.nombre === v ? ' selected' : ''}>${esc(f.nombre)}</option>`).join('');
+      if (v === '__vos' && r) el.value = '__vos';
+      el.onchange = cara;
+      return el.value;
+    };
+    const va = ops('#cc-a', r ? '__vos' : figs[0].nombre, true), vb = ops('#cc-b', figs[r ? 0 : 1].nombre, false);
+    const get = v => v === '__vos' ? { nombre: t.vos, pos: r.sc, cert: r.cert } : figs.find(f => f.nombre === v);
+    const A = get(va), B = get(vb), E = S.ejes.ejes.map(eje);
+    const filas = E.map(e => ({ e, a: Math.round(A.pos[e.id]), b: Math.round(B.pos[e.id]), d: Math.round(Math.abs(A.pos[e.id] - B.pos[e.id])) }));
+    const af = afinidad(A.pos, B.pos, A.cert), ord = filas.slice().sort((x, y) => x.d - y.d), n = x => x.map(f => esc(f.e.nombre)).join(', ');
+    $('#cara-res').innerHTML = `<div class="leyenda"><span><i style="background:var(--sig)"></i>${esc(A.nombre)}</span><span><i style="background:var(--a)"></i>${esc(B.nombre)}</span></div>
+      <div class="resumen"><div><b>${af}%</b>${esc(t.afin)}</div><div>${esc(t.coinciden)}: ${n(ord.slice(0, 3))}</div><div>${esc(t.chocan)}: ${n(ord.slice(-3).reverse())}</div></div>` +
+      filas.map(({ e, a, b, d }) => `<div class="fila"><div>${esc(e.nombre)}<small>${esc(e.a)} ↔ ${esc(e.b)}</small></div>
+        <div class="tr"><span class="seg" style="left:${Math.min(a, b)}%;width:${d}%"></span><span class="p b" style="left:${b}%" title="${esc(B.nombre)} ${b}"></span><span class="p a" style="left:${a}%" title="${esc(A.nombre)} ${a}"></span></div>
+        <div class="d">${d}</div></div>`).join('');
+  }
+  const RUTAS = { ejes: ['s-ejes', guia], mapa: ['s-mapa', mapaPagina], cara: ['s-cara', cara] };
+  function nav(r) { $$('.nav a').forEach(a => a.classList.toggle('on', a.dataset.r === r)) }
+  function ruta() {
+    const h = location.hash;
+    if (h.startsWith('#r=')) return;
+    const r = h.replace(/^#\/?/, '');
+    if (RUTAS[r]) { show(RUTAS[r][0]); RUTAS[r][1](); nav(r); return }
+    if (r === 'mimapa') {
+      const g = guardado();
+      if (g) { S.ver = g.ver; S.scores = g.sc; S.cert = g.cert; resultado(null, false); nav('mimapa') } else { show('s-vacio'); nav('mimapa') }
+      return;
+    }
+    nav('quiz');
+    if (!$('#s-preg').classList.contains('on') && !$('#s-demo').classList.contains('on')) show('s-inicio');
+  }
+  function tema(t) {
+    document.documentElement.dataset.theme = t;
+    try { localStorage.setItem('brujula_tema', t) } catch (e) { }
   }
 
   // ------------------------------------------------------------ eventos
@@ -297,6 +395,7 @@
     return true;
   }
 
+  try { const t = localStorage.getItem('brujula_tema'); if (t) document.documentElement.dataset.theme = t } catch (e) { }
   async function main() {
     reloj(); setInterval(reloj, 30000);
     const get = f => fetch(CFG.datos + f).then(r => r.json());
@@ -304,7 +403,9 @@
     $('#foot-v').textContent = S.fig.fecha || '';
     inicio(); eventos();
     setLang(idiomaInicial(), false);
-    desdeHash();
+    $('#tema').onclick = () => tema(document.documentElement.dataset.theme === 'light' ? 'dark' : 'light');
+    window.addEventListener('hashchange', () => { if (!desdeHash()) ruta() });
+    if (!desdeHash()) ruta();
   }
   main();
 })();
