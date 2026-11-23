@@ -94,3 +94,37 @@ window.BRUJULA_PAISES = {
   Bolivia: [], Ecuador: [], 'México': [], Venezuela: [], 'Centroamérica y Caribe': [], 'España': [], 'Estados Unidos': [], Otro: []
 };
 window.BRUJULA_VER_PAIS = { ar: 'Argentina', br: 'Brasil', py: 'Paraguay', pe: 'Perú', cl: 'Chile', co: 'Colombia', uy: 'Uruguay' };
+// Navegación, modalidades, guía de ejes, mapa y cara a cara
+Object.assign(window.BRUJULA_I18N.es, {
+  nav_quiz: 'Quiz', nav_ejes: '12 ejes', nav_mapa: 'Mapa', nav_mimapa: 'Mi mapa', nav_cara: 'Cara a cara',
+  modo_k: 'MODALIDAD', rapida: 'Rápida', completa: 'Completa', modo_d: (n, m) => `${n} preguntas · ≈ ${m} min`,
+  ejes_k: 'GUÍA · LOS 12 EJES', ejes_h: 'Los 12 ejes', pais_l: 'País',
+  ejes_lead: 'Cada eje va de un polo a otro. Las rayitas son los dirigentes del país elegido; la marca naranja sos vos, si ya hiciste el quiz.',
+  mas_a: 'Más cerca de este polo', mapa_k: 'MAPA · DIRIGENTES', mapa_h: 'El mapa',
+  mapa_lead: 'Elegí dos ejes cualesquiera y mirá dónde queda cada dirigente. Si hiciste el quiz, aparecés vos.',
+  eje_x: 'Eje horizontal', eje_y: 'Eje vertical', cara_k: 'CARA A CARA', cara_h: 'Cara a cara',
+  cara_lead: 'Compará eje por eje: vos contra un dirigente, o dos dirigentes entre sí.', vos: 'Vos (tu resultado)',
+  coinciden: 'Coinciden en', chocan: 'Chocan en', afin: 'Afinidad', vacio: 'Todavía no hiciste el quiz en este navegador. Hacelo y tu mapa queda guardado acá.'
+});
+Object.assign(window.BRUJULA_I18N.pt, {
+  nav_quiz: 'Teste', nav_ejes: '12 eixos', nav_mapa: 'Mapa', nav_mimapa: 'Meu mapa', nav_cara: 'Cara a cara',
+  modo_k: 'MODALIDADE', rapida: 'Rápida', completa: 'Completa', modo_d: (n, m) => `${n} perguntas · ≈ ${m} min`,
+  ejes_k: 'GUIA · OS 12 EIXOS', ejes_h: 'Os 12 eixos', pais_l: 'País',
+  ejes_lead: 'Cada eixo vai de um polo a outro. Os traços são os políticos do país escolhido; a marca laranja é você, se já fez o teste.',
+  mas_a: 'Mais perto deste polo', mapa_k: 'MAPA · POLÍTICOS', mapa_h: 'O mapa',
+  mapa_lead: 'Escolha dois eixos quaisquer e veja onde fica cada político. Se você fez o teste, aparece também.',
+  eje_x: 'Eixo horizontal', eje_y: 'Eixo vertical', cara_k: 'CARA A CARA', cara_h: 'Cara a cara',
+  cara_lead: 'Compare eixo por eixo: você contra um político, ou dois políticos entre si.', vos: 'Você (seu resultado)',
+  coinciden: 'Concordam em', chocan: 'Divergem em', afin: 'Afinidade', vacio: 'Você ainda não fez o teste neste navegador. Faça e seu mapa fica salvo aqui.'
+});
+Object.assign(window.BRUJULA_I18N.en, {
+  nav_quiz: 'Quiz', nav_ejes: '12 axes', nav_mapa: 'Map', nav_mimapa: 'My map', nav_cara: 'Head to head',
+  modo_k: 'MODE', rapida: 'Quick', completa: 'Full', modo_d: (n, m) => `${n} questions · ≈ ${m} min`,
+  ejes_k: 'GUIDE · THE 12 AXES', ejes_h: 'The 12 axes', pais_l: 'Country',
+  ejes_lead: 'Each axis runs from one pole to the other. Ticks are the politicians of the chosen country; the orange mark is you, if you took the quiz.',
+  mas_a: 'Closest to this pole', mapa_k: 'MAP · POLITICIANS', mapa_h: 'The map',
+  mapa_lead: 'Pick any two axes and see where each politician lands. If you took the quiz, you show up too.',
+  eje_x: 'Horizontal axis', eje_y: 'Vertical axis', cara_k: 'HEAD TO HEAD', cara_h: 'Head to head',
+  cara_lead: 'Compare axis by axis: you against a politician, or two politicians against each other.', vos: 'You (your result)',
+  coinciden: 'Agree on', chocan: 'Clash on', afin: 'Affinity', vacio: 'You have not taken the quiz in this browser yet. Take it and your map is saved here.'
+});
