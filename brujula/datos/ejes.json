@@ -1,0 +1,305 @@
+{
+ "_nota": "12 ejes (mecánica de 12axes, politicaltests, MIT) + certeza. Cada eje va de 0 (polo a) a 100 (polo b).",
+ "ejes": [
+  {
+   "id": "fed",
+   "nombre": "Territorio",
+   "a": "Federal",
+   "b": "Unitario",
+   "a_desc": "Provincias y municipios con poder propio.",
+   "b_desc": "Un gobierno nacional fuerte que decide para todos.",
+   "pt": {
+    "nombre": "Território",
+    "a": "Federal",
+    "b": "Unitário"
+   },
+   "en": {
+    "nombre": "Territory",
+    "a": "Federal",
+    "b": "Unitary"
+   }
+  },
+  {
+   "id": "dem",
+   "nombre": "Gobierno",
+   "a": "Democracia",
+   "b": "Autoridad",
+   "a_desc": "Las decisiones las toma la gente votando.",
+   "b_desc": "Mejor que decidan líderes fuertes o expertos.",
+   "pt": {
+    "nombre": "Governo",
+    "a": "Democracia",
+    "b": "Autoridade"
+   },
+   "en": {
+    "nombre": "Government",
+    "a": "Democracy",
+    "b": "Authority"
+   }
+  },
+  {
+   "id": "int",
+   "nombre": "Mundo",
+   "a": "Internacionalismo",
+   "b": "Nacionalismo",
+   "a_desc": "Cooperación internacional y organismos globales.",
+   "b_desc": "Soberanía primero y desconfianza del exterior.",
+   "pt": {
+    "nombre": "Mundo",
+    "a": "Internacionalismo",
+    "b": "Nacionalismo"
+   },
+   "en": {
+    "nombre": "World",
+    "a": "Internationalism",
+    "b": "Nationalism"
+   }
+  },
+  {
+   "id": "mil",
+   "nombre": "Defensa",
+   "a": "Militarismo",
+   "b": "Pacifismo",
+   "a_desc": "Fuerzas Armadas fuertes y opción militar sobre la mesa.",
+   "b_desc": "Diplomacia ante todo y menos gasto militar.",
+   "pt": {
+    "nombre": "Defesa",
+    "a": "Militarismo",
+    "b": "Pacifismo"
+   },
+   "en": {
+    "nombre": "Defense",
+    "a": "Militarism",
+    "b": "Pacifism"
+   }
+  },
+  {
+   "id": "lib",
+   "nombre": "Seguridad",
+   "a": "Orden",
+   "b": "Libertades",
+   "a_desc": "Más poder a la policía y al Estado para garantizar el orden.",
+   "b_desc": "Libertades civiles por encima del control del Estado.",
+   "pt": {
+    "nombre": "Segurança",
+    "a": "Ordem",
+    "b": "Liberdades"
+   },
+   "en": {
+    "nombre": "Security",
+    "a": "Order",
+    "b": "Liberties"
+   }
+  },
+  {
+   "id": "col",
+   "nombre": "Propiedad",
+   "a": "Colectivismo",
+   "b": "Propiedad privada",
+   "a_desc": "Redistribución y propiedad colectiva.",
+   "b_desc": "Propiedad privada, herencia y capitalismo.",
+   "pt": {
+    "nombre": "Propriedade",
+    "a": "Coletivismo",
+    "b": "Propriedade privada"
+   },
+   "en": {
+    "nombre": "Property",
+    "a": "Collectivism",
+    "b": "Private property"
+   }
+  },
+  {
+   "id": "rel",
+   "nombre": "Religión",
+   "a": "Laicismo",
+   "b": "Religiosidad",
+   "a_desc": "Religión fuera del Estado y de la política.",
+   "b_desc": "La religión como guía de la vida social.",
+   "pt": {
+    "nombre": "Religião",
+    "a": "Laicismo",
+    "b": "Religiosidade"
+   },
+   "en": {
+    "nombre": "Religion",
+    "a": "Secularism",
+    "b": "Religiosity"
+   }
+  },
+  {
+   "id": "pro",
+   "nombre": "Valores",
+   "a": "Progresismo",
+   "b": "Tradición",
+   "a_desc": "Ampliación de derechos y cambio cultural.",
+   "b_desc": "Familia, costumbres y tradición.",
+   "pt": {
+    "nombre": "Valores",
+    "a": "Progressismo",
+    "b": "Tradição"
+   },
+   "en": {
+    "nombre": "Values",
+    "a": "Progressivism",
+    "b": "Tradition"
+   }
+  },
+  {
+   "id": "mig",
+   "nombre": "Migración",
+   "a": "Asimilación",
+   "b": "Multiculturalismo",
+   "a_desc": "Fronteras controladas y que el inmigrante se adapte.",
+   "b_desc": "Apertura a la inmigración y mezcla de culturas.",
+   "pt": {
+    "nombre": "Migração",
+    "a": "Assimilação",
+    "b": "Multiculturalismo"
+   },
+   "en": {
+    "nombre": "Migration",
+    "a": "Assimilation",
+    "b": "Multiculturalism"
+   }
+  },
+  {
+   "id": "pla",
+   "nombre": "Economía",
+   "a": "Planificación",
+   "b": "Mercado",
+   "a_desc": "Estado que regula, planifica y cobra más a los ricos.",
+   "b_desc": "Mercado libre, menos impuestos y menos regulación.",
+   "pt": {
+    "nombre": "Economia",
+    "a": "Planejamento",
+    "b": "Mercado"
+   },
+   "en": {
+    "nombre": "Economy",
+    "a": "Planning",
+    "b": "Markets"
+   }
+  },
+  {
+   "id": "glo",
+   "nombre": "Comercio",
+   "a": "Proteccionismo",
+   "b": "Apertura",
+   "a_desc": "Aranceles y producción nacional.",
+   "b_desc": "Libre comercio y apertura al mundo.",
+   "pt": {
+    "nombre": "Comércio",
+    "a": "Protecionismo",
+    "b": "Abertura"
+   },
+   "en": {
+    "nombre": "Trade",
+    "a": "Protectionism",
+    "b": "Openness"
+   }
+  },
+  {
+   "id": "tec",
+   "nombre": "Tecnología y ambiente",
+   "a": "Tecnología",
+   "b": "Bioconservadurismo",
+   "a_desc": "Confianza en la ciencia, la tecnología y el progreso.",
+   "b_desc": "Frenar la tecnología para cuidar el ambiente y la vida.",
+   "pt": {
+    "nombre": "Tecnologia e ambiente",
+    "a": "Tecnologia",
+    "b": "Bioconservadorismo"
+   },
+   "en": {
+    "nombre": "Technology & environment",
+    "a": "Technology",
+    "b": "Bioconservatism"
+   }
+  }
+ ],
+ "respuestas": [
+  {
+   "v": 2,
+   "t": "Muy de acuerdo"
+  },
+  {
+   "v": 1,
+   "t": "De acuerdo"
+  },
+  {
+   "v": 0,
+   "t": "Neutral / no sé"
+  },
+  {
+   "v": -1,
+   "t": "En desacuerdo"
+  },
+  {
+   "v": -2,
+   "t": "Muy en desacuerdo"
+  }
+ ],
+ "respuestas_pt": [
+  "Concordo totalmente",
+  "Concordo",
+  "Neutro / não sei",
+  "Discordo",
+  "Discordo totalmente"
+ ],
+ "respuestas_en": [
+  "Strongly agree",
+  "Agree",
+  "Neutral / unsure",
+  "Disagree",
+  "Strongly disagree"
+ ],
+ "versiones": {
+  "general": {
+   "nombre": "Latinoamérica (general)",
+   "figuras": "latam",
+   "activa": true
+  },
+  "ar": {
+   "nombre": "Argentina",
+   "figuras": "ar",
+   "activa": true
+  },
+  "br": {
+   "nombre": "Brasil",
+   "figuras": "br",
+   "activa": true,
+   "lang": "pt"
+  },
+  "py": {
+   "nombre": "Paraguay",
+   "figuras": "py",
+   "activa": true
+  },
+  "pe": {
+   "nombre": "Perú",
+   "figuras": "pe",
+   "activa": true
+  },
+  "cl": {
+   "nombre": "Chile",
+   "figuras": "cl",
+   "activa": true
+  },
+  "co": {
+   "nombre": "Colombia",
+   "figuras": "co",
+   "activa": true
+  },
+  "uy": {
+   "nombre": "Uruguay",
+   "figuras": "uy",
+   "activa": true
+  },
+  "mx": {
+   "nombre": "México",
+   "activa": false
+  }
+ },
+ "creditos": "Preguntas base adaptadas de 12axes (politicaltests.github.io), licencia MIT, (c) 2020 8values (SapplyValues)."
+}

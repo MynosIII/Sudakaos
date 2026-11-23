@@ -7,6 +7,7 @@ Tablero de escucha social y opinión pública para Argentina y Brasil, hecho sol
 - **Cubo político** (`radar/data/positions.json`): ubicación editorial de cada político en economía, sociedad y política, con el criterio de cada uno.
 - **San Isidro** (`sanisidro/`): reclamos vecinales por localidad.
 - **Meta** (`meta/`): Instagram (Business Discovery) y Biblioteca de Anuncios de Meta para 18 dirigentes de País, Boca, Provincia (con Tigre), CABA y San Isidro. Gratis con token propio: secrets `META_TOKEN` y `META_IG_USER_ID`. Los usuarios de Instagram se corrigen en `meta/config.json`.
+- **Brújula** (`brujula/`): quiz político público de 12 ejes con certeza (Latinoamérica y 7 países, ES / PT / EN) con afinidad a dirigentes, social listener por eje y tablero que cruza la opinión del quiz con la conversación en redes. Ver `brujula/README.md`.
 - **Resumen accionable** (`resumen.js`): última pestaña del tablero. Informe por dirigente (resumen, acciones, análisis y conclusión) que se descarga en PDF. Con Alt+Shift+P, o tocando el punto al pie del informe, se abre un prompt para hacer videos del candidato a partir de esos datos.
 
 ## Cómo se actualiza

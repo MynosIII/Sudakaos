@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   # Los workflows de datos hacen commit con el token de Actions, que no dispara "push": se publica al terminar
   workflow_run:
-    workflows: ['Radar social listening', 'San Isidro reclamos', 'General Roca monitor', 'Massa Galmarini monitor', 'Boca monitor', 'Santa Cruz monitor', 'Meta dirigentes', 'Dirigentes monitor', 'Instagram tableros', 'X tableros', 'Landing datos', 'Trump monitor']
+    workflows: ['Radar social listening', 'San Isidro reclamos', 'General Roca monitor', 'Massa Galmarini monitor', 'Boca monitor', 'Santa Cruz monitor', 'Meta dirigentes', 'Dirigentes monitor', 'Instagram tableros', 'X tableros', 'Landing datos', 'Trump monitor', 'Brujula opinion y conversacion']
     types: [completed]
 
 permissions:
@@ -37,6 +37,8 @@ jobs:
       - name: Armar sitio con rutas secretas
         env:
           INDICE_RUTA: ${{ secrets.INDICE_RUTA }}
+          # URL /exec del Apps Script que recibe las respuestas del quiz (vacío = el quiz no envía nada)
+          QUIZ_ENDPOINT: ${{ secrets.QUIZ_ENDPOINT }}
         run: python3 publicar_sitio.py "$GITHUB_SHA"
       - uses: actions/upload-pages-artifact@v3
         with:

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brújula política</title>
+<meta name="description" content="12 ejes políticos, qué tan firme es cada posición y los dirigentes de tu país que más se parecen a vos. Argentina, Brasil, Chile, Colombia, Paraguay, Perú, Uruguay y Latinoamérica.">
+<meta property="og:title" content="Brújula política · Bússola política">
+<meta property="og:description" content="12 ejes, tu certeza en cada uno y los dirigentes que piensan como vos. ES · PT · EN.">
+<meta name="theme-color" content="#05070a">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+<header class="top">
+  <div class="bar">
+    <div class="logo"><svg class="rose" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14.5"/><circle cx="16" cy="16" r="9"/><path d="M16 2v28M2 16h28"/><path class="n" d="M16 5l3 11h-6z"/><path class="s" d="M16 27l-3-11h6z"/></svg>
+      <span data-i18n="titulo">Brújula política</span><small id="hdr-ver">12 ejes</small></div>
+    <div class="clock">
+      <div class="lang" role="group" aria-label="Idioma / Language"><button data-l="es">ES</button><button data-l="pt">PT</button><button data-l="en">EN</button></div>
+      <span><em data-i18n="preg">PREG</em> <b id="hdr-n">—</b></span><span><b id="hdr-t">--:--</b> ART</span></div>
+  </div>
+</header>
+
+<main>
+  <!-- 1. Inicio -->
+  <section id="s-inicio" class="screen on">
+    <div class="hero">
+      <div class="k" data-i18n="inicio_k">PAN-00 · INICIO</div>
+      <h1 data-i18n="h1">¿Dónde estás parado?</h1>
+      <p class="lead" data-i18n="lead"></p>
+    </div>
+    <div class="k" data-i18n="elegi">ELEGÍ TU PAÍS</div>
+    <div id="versiones" class="vers"></div>
+    <div class="row">
+      <button id="go" class="btn" disabled data-i18n="empezar">Empezar</button>
+      <span class="meta" id="go-meta"></span>
+    </div>
+    <p class="fine"><span data-i18n="anon">Anónimo.</span> <a href="#" data-open="privacidad" data-i18n="privacidad">Privacidad</a></p>
+  </section>
+
+  <!-- 2. Preguntas -->
+  <section id="s-preg" class="screen">
+    <div class="prog"><i id="prog-bar"></i></div>
+    <div class="qhead"><span class="k" id="q-n"></span><span class="k" id="q-eje"></span></div>
+    <h2 id="q-t" class="qt"></h2>
+    <div id="q-ops" class="ops"></div>
+    <div class="row between">
+      <button id="q-back" class="btn ghost" data-i18n="volver">← Volver</button>
+      <span class="meta" data-i18n="teclas">Teclas 1 a 5</span>
+    </div>
+  </section>
+
+  <!-- 3. Datos opcionales -->
+  <section id="s-demo" class="screen">
+    <div class="k" data-i18n="demo_k">PAN-02 · CASI LISTO</div>
+    <h2 data-i18n="demo_h">Cinco datos (opcionales)</h2>
+    <p class="lead small" data-i18n="demo_lead"></p>
+    <form id="demo" autocomplete="off" novalidate>
+      <label><span data-i18n="edad">Edad</span><select name="edad"></select></label>
+      <label><span data-i18n="genero">Género</span><select name="genero"></select></label>
+      <label><span data-i18n="pais_res">País donde vivís</span><select name="pais_res"></select></label>
+      <label id="lab-prov"><span data-i18n="prov">Provincia</span><select name="prov"></select></label>
+      <label><span data-i18n="pais_nac">País donde naciste</span><select name="pais_nac"></select></label>
+      <label><span data-i18n="red">Red que más usás</span><select name="red"></select></label>
+      <input type="text" name="web" class="hp" tabindex="-1" aria-hidden="true">
+      <label class="chk"><input type="checkbox" name="consiento">
+        <span><span data-i18n="consiento"></span> <a href="#" data-open="privacidad" data-i18n="privacidad">Privacidad</a></span></label>
+      <p class="err" id="demo-err"></p>
+      <div class="row">
+        <button class="btn" type="submit" data-i18n="enviar">Enviar y ver resultado</button>
+        <button class="btn ghost" type="button" id="skip" data-i18n="saltar">Ver resultado sin enviar</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- 4. Resultado -->
+  <section id="s-res" class="screen">
+    <div class="k"><span data-i18n="res_k">PAN-03 · TU RESULTADO</span> <span id="res-ver"></span></div>
+    <h2 id="res-titulo"></h2>
+    <p class="lead small" id="res-sub"></p>
+    <div class="grid">
+      <div class="card wide"><h3><span data-i18n="ejes">Ejes</span> <span class="sl-id">EJ-12</span></h3>
+        <div class="certg"><span class="k" data-i18n="certeza">Certeza</span><div id="cert-g"></div><p class="meta" data-i18n="cert_nota"></p></div>
+        <div id="ejes"></div></div>
+      <div class="card"><h3><span data-i18n="cerca">Dirigentes más cercanos</span> <span class="sl-id">AF-05</span></h3><ol id="match" class="match"></ol>
+        <p class="meta" id="lejos"></p></div>
+      <div class="card"><h3><span data-i18n="mapa">Mapa económico × valores</span> <span class="sl-id">MP-02</span></h3><div id="mapa"></div>
+        <p class="meta" id="mapa-info"></p><p class="meta" data-i18n="mapa_nota"></p></div>
+    </div>
+    <div class="row">
+      <button class="btn" id="share" data-i18n="compartir">Compartir resultado</button>
+      <a class="btn ghost" id="share-wa" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn ghost" id="share-x" target="_blank" rel="noopener">X</a>
+      <button class="btn ghost" id="again"></button>
+    </div>
+    <p class="meta" id="sent"></p>
+    <details class="fine"><summary data-i18n="como">Cómo se calcula</summary><p data-i18n="como_t"></p></details>
+  </section>
+
+  <div id="privacidad" class="modal" hidden><div class="mbox">
+    <button class="x" data-close>×</button>
+    <h3 data-i18n="privacidad">Privacidad</h3>
+    <ul id="priv-list"></ul>
+  </div></div>
+</main>
+<footer><span data-i18n="pie">Brújula política</span><span>12axes (MIT)</span><span id="foot-v"></span></footer>
+<script src="i18n.js"></script>
+<script src="config.js"></script>
+<script src="quiz.js"></script>
+</body>
+</html>

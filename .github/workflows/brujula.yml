@@ -1,0 +1,145 @@
+name: Brujula opinion y conversacion
+
+# Brújula: social listener (Google News, YouTube, Biblioteca de Anuncios de Meta) + respuestas del quiz
+# (planilla privada vía Apps Script) -> solo agregados en brujula/data/. X es pago: solo a mano (input x).
+on:
+  workflow_dispatch:
+    inputs:
+      x:
+        description: 'Leer también X (pago, tope compartido en x/config.json). Solo en main.'
+        type: boolean
+        default: false
+  # 09:05 UTC = 06:05 ART: después de "Dirigentes monitor", con el cupo de YouTube recién reiniciado
+  schedule:
+    - cron: '5 9 * * *'
+  push:
+    paths:
+      - 'brujula/listener/*.py'
+      - 'brujula/listener/config.json'
+      - 'brujula/*.py'
+      - 'brujula/datos/*.json'
+      - '.github/workflows/brujula.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  brujula:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    # Comparte grupo con "Meta dirigentes": el token y el cupo de la app de Meta son compartidos
+    concurrency:
+      group: meta-dirigentes
+      cancel-in-progress: false
+    env:
+      YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY_BRUJULA || secrets.YOUTUBE_API_KEY_DIRIGENTES || secrets.YOUTUBE_API_KEY_ROCA }}
+      META_TOKEN: ${{ secrets.META_TOKEN }}
+      QUIZ_ENDPOINT: ${{ secrets.QUIZ_ENDPOINT }}
+      QUIZ_TOKEN: ${{ secrets.QUIZ_TOKEN }}
+      RADAR_NLP_SECONDS: '600'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update to latest
+        run: git fetch --depth=50 origin "${GITHUB_REF_NAME}" && git merge --ff-only FETCH_HEAD || true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install dependencies
+        run: python -m pip install pandas numpy
+      - name: Install NLP models
+        continue-on-error: true
+        run: |
+          python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install pysentimiento
+      - name: Cache NLP models
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-pysentimiento-v1
+      # Los textos no se suben al repositorio: viven en la caché del workflow
+      - name: Restore store
+        uses: actions/cache/restore@v4
+        with:
+          path: brujula/listener/.store
+          key: brujula-store-${{ github.run_id }}
+          restore-keys: brujula-store-
+      - name: Collect
+        run: timeout 2400 python brujula/listener/collect.py || echo "recolección cortada por tiempo"
+      - name: Analyze, quiz and cruce
+        run: |
+          python brujula/listener/analyze.py
+          python brujula/procesar.py
+          python brujula/cruce.py
+          cat brujula/listener/.store/status.json || true
+      - name: Save store
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: brujula/listener/.store
+          key: brujula-store-${{ github.run_id }}
+      - name: Commit aggregates
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add brujula/data/*.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Brújula: actualizar agregados'
+            for i in 1 2 3; do
+              git pull --rebase -X theirs origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+              sleep $((i * 5))
+            done
+            exit 1
+          fi
+
+  # X (pago): solo a mano y solo en main. Mismo grupo que "Dirigentes monitor" y "X tableros" por el registro de gasto.
+  x:
+    needs: brujula
+    if: github.event_name == 'workflow_dispatch' && inputs.x && github.ref_name == 'main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    concurrency:
+      group: dirigentes-${{ github.ref_name }}
+      cancel-in-progress: false
+    env:
+      X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update to latest
+        run: git fetch --depth=50 origin "${GITHUB_REF_NAME}" && git merge --ff-only FETCH_HEAD || true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: python -m pip install pandas numpy
+      - name: Restore store
+        uses: actions/cache/restore@v4
+        with:
+          path: brujula/listener/.store
+          key: brujula-store-x-${{ github.run_id }}
+          restore-keys: brujula-store-
+      - name: Collect X and analyze
+        run: |
+          python brujula/listener/collect.py --solo x
+          python brujula/listener/analyze.py
+          python brujula/cruce.py
+          cat x/gasto.json || true
+      - name: Save store
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: brujula/listener/.store
+          key: brujula-store-x-${{ github.run_id }}
+      - name: Commit
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add brujula/data/*.json x/gasto.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Brújula: X'
+            for i in 1 2 3; do
+              git pull --rebase -X theirs origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+              sleep $((i * 5))
+            done
+            exit 1
+          fi
