@@ -1,0 +1,46 @@
+{
+ "_nota": "Cada eje va de 0 a 100. 0 = polo 'a', 100 = polo 'b'. Ningún polo es 'izquierda' o 'derecha' por definición: el quiz muestra los dos nombres.",
+ "ejes": [
+  {"id": "eco", "nombre": "Economía", "a": "Estado", "b": "Mercado",
+   "a_desc": "El Estado conduce la economía, es dueño de sectores estratégicos y redistribuye.",
+   "b_desc": "Precios libres, menos impuestos, menos gasto y menos regulación."},
+  {"id": "com", "nombre": "Comercio y moneda", "a": "Protección", "b": "Apertura",
+   "a_desc": "Aranceles, industria nacional y control sobre divisas y capitales.",
+   "b_desc": "Libre comercio, inversión extranjera y libre acceso a divisas."},
+  {"id": "fed", "nombre": "Territorio", "a": "Centralismo", "b": "Federalismo",
+   "a_desc": "El gobierno nacional decide y reparte; reglas iguales para todo el país.",
+   "b_desc": "Las provincias o regiones deciden, recaudan y manejan sus recursos."},
+  {"id": "soc", "nombre": "Valores", "a": "Progresismo", "b": "Conservadurismo",
+   "a_desc": "Ampliación de derechos civiles, laicidad y agenda de género.",
+   "b_desc": "Familia tradicional, religión y límites a las reformas culturales."},
+  {"id": "seg", "nombre": "Seguridad", "a": "Garantismo", "b": "Mano dura",
+   "a_desc": "Prevención, causas sociales del delito y límites al poder punitivo.",
+   "b_desc": "Penas más duras, más poder a las fuerzas y orden en la calle."},
+  {"id": "ins", "nombre": "Sistema político", "a": "Institucionalismo", "b": "Ruptura",
+   "a_desc": "Acuerdos, división de poderes y respeto a las reglas aunque frenen cambios.",
+   "b_desc": "Romper con la clase política, liderazgos fuertes y atajos ante el bloqueo."},
+  {"id": "ext", "nombre": "Mundo", "a": "Soberanía regional", "b": "Alineamiento occidental",
+   "a_desc": "Integración latinoamericana, multipolaridad y distancia con EE. UU.",
+   "b_desc": "Alianza con Estados Unidos, Israel y los organismos occidentales."},
+  {"id": "amb", "nombre": "Ambiente", "a": "Ambientalismo", "b": "Productivismo",
+   "a_desc": "Proteger ecosistemas y comunidades aunque cueste crecimiento.",
+   "b_desc": "Explotar recursos naturales para crecer y generar divisas."}
+ ],
+ "respuestas": [
+  {"v": 2, "t": "Muy de acuerdo"},
+  {"v": 1, "t": "De acuerdo"},
+  {"v": 0, "t": "Neutral / no sé"},
+  {"v": -1, "t": "En desacuerdo"},
+  {"v": -2, "t": "Muy en desacuerdo"}
+ ],
+ "versiones": {
+  "general": {"nombre": "Latinoamérica (general)", "figuras": "latam", "activa": true},
+  "ar": {"nombre": "Argentina", "figuras": "ar", "activa": true},
+  "cl": {"nombre": "Chile", "activa": false},
+  "uy": {"nombre": "Uruguay", "activa": false},
+  "br": {"nombre": "Brasil", "activa": false},
+  "mx": {"nombre": "México", "activa": false},
+  "co": {"nombre": "Colombia", "activa": false},
+  "pe": {"nombre": "Perú", "activa": false}
+ }
+}

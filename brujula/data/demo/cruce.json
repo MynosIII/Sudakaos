@@ -1,0 +1,739 @@
+{
+ "updated_at": "2026-11-23T21:51:07Z",
+ "simulado": true,
+ "n_quiz": 1354,
+ "textos": 251,
+ "figuras": [
+  {
+   "nombre": "Elisa Carrió",
+   "afinidad": 11.5,
+   "sov": 0.0,
+   "brecha": 11.5,
+   "tono": null,
+   "n": 0
+  },
+  {
+   "nombre": "Facundo Manes",
+   "afinidad": 11.4,
+   "sov": 0.0,
+   "brecha": 11.4,
+   "tono": null,
+   "n": 0
+  },
+  {
+   "nombre": "Marcela Pagano",
+   "afinidad": 7.6,
+   "sov": 0.0,
+   "brecha": 7.6,
+   "tono": null,
+   "n": 0
+  },
+  {
+   "nombre": "Leandro Santoro",
+   "afinidad": 7.2,
+   "sov": 0.0,
+   "brecha": 7.2,
+   "tono": null,
+   "n": 0
+  },
+  {
+   "nombre": "Margarita Stolbizer",
+   "afinidad": 7.2,
+   "sov": 0.0,
+   "brecha": 7.2,
+   "tono": null,
+   "n": 0
+  },
+  {
+   "nombre": "Sergio Massa",
+   "afinidad": 6.2,
+   "sov": 0.0,
+   "brecha": 6.2,
+   "tono": null,
+   "n": 0
+  },
+  {
+   "nombre": "Florencio Randazzo",
+   "afinidad": 5.9,
+   "sov": 0.0,
+   "brecha": 5.9,
+   "tono": null,
+   "n": 0
+  },
+  {
+   "nombre": "Martín Lousteau",
+   "afinidad": 5.4,
+   "sov": 0.0,
+   "brecha": 5.4,
+   "tono": null,
+   "n": 0
+  },
+  {
+   "nombre": "Guillermo Moreno",
+   "afinidad": 4.9,
+   "sov": 0.0,
+   "brecha": 4.9,
+   "tono": null,
+   "n": 0
+  },
+  {
+   "nombre": "Horacio Rodríguez Larreta",
+   "afinidad": 3.6,
+   "sov": 0.0,
+   "brecha": 3.6,
+   "tono": null,
+   "n": 0
+  },
+  {
+   "nombre": "Victoria Villarruel",
+   "afinidad": 3.3,
+   "sov": 0.0,
+   "brecha": 3.3,
+   "tono": null,
+   "n": 0
+  },
+  {
+   "nombre": "Agustín Rossi",
+   "afinidad": 2.9,
+   "sov": 0.0,
+   "brecha": 2.9,
+   "tono": null,
+   "n": 0
+  },
+  {
+   "nombre": "Miguel Ángel Pichetto",
+   "afinidad": 2.9,
+   "sov": 0.0,
+   "brecha": 2.9,
+   "tono": null,
+   "n": 0
+  },
+  {
+   "nombre": "Juan Grabois",
+   "afinidad": 2.3,
+   "sov": 0.0,
+   "brecha": 2.3,
+   "tono": null,
+   "n": 0
+  },
+  {
+   "nombre": "Martín Llaryora",
+   "afinidad": 2.0,
+   "sov": 0.0,
+   "brecha": 2.0,
+   "tono": null,
+   "n": 0
+  },
+  {
+   "nombre": "Ofelia Fernández",
+   "afinidad": 1.9,
+   "sov": 0.0,
+   "brecha": 1.9,
+   "tono": null,
+   "n": 0
+  },
+  {
+   "nombre": "Emilio Monzó",
+   "afinidad": 1.4,
+   "sov": 0.0,
+   "brecha": 1.4,
+   "tono": null,
+   "n": 0
+  },
+  {
+   "nombre": "Guillermo Francos",
+   "afinidad": 1.2,
+   "sov": 0.0,
+   "brecha": 1.2,
+   "tono": null,
+   "n": 0
+  },
+  {
+   "nombre": "Juan Schiaretti",
+   "afinidad": 1.1,
+   "sov": 0.0,
+   "brecha": 1.1,
+   "tono": null,
+   "n": 0
+  },
+  {
+   "nombre": "Maximiliano Pullaro",
+   "afinidad": 1.0,
+   "sov": 0.0,
+   "brecha": 1.0,
+   "tono": null,
+   "n": 0
+  },
+  {
+   "nombre": "Mayra Mendoza",
+   "afinidad": 0.8,
+   "sov": 0.0,
+   "brecha": 0.8,
+   "tono": null,
+   "n": 0
+  },
+  {
+   "nombre": "Lilia Lemoine",
+   "afinidad": 0.7,
+   "sov": 0.0,
+   "brecha": 0.7,
+   "tono": null,
+   "n": 0
+  },
+  {
+   "nombre": "Gerardo Morales",
+   "afinidad": 0.6,
+   "sov": 0.0,
+   "brecha": 0.6,
+   "tono": null,
+   "n": 0
+  },
+  {
+   "nombre": "Diego Santilli",
+   "afinidad": 0.5,
+   "sov": 0.0,
+   "brecha": 0.5,
+   "tono": null,
+   "n": 0
+  },
+  {
+   "nombre": "Ignacio Torres",
+   "afinidad": 0.5,
+   "sov": 0.0,
+   "brecha": 0.5,
+   "tono": null,
+   "n": 0
+  },
+  {
+   "nombre": "Gabriel Solano",
+   "afinidad": 0.4,
+   "sov": 0.0,
+   "brecha": 0.4,
+   "tono": null,
+   "n": 0
+  },
+  {
+   "nombre": "Alfredo Cornejo",
+   "afinidad": 0.3,
+   "sov": 0.0,
+   "brecha": 0.3,
+   "tono": null,
+   "n": 0
+  },
+  {
+   "nombre": "Karina Milei",
+   "afinidad": 0.3,
+   "sov": 0.0,
+   "brecha": 0.3,
+   "tono": null,
+   "n": 0
+  },
+  {
+   "nombre": "Luis Caputo",
+   "afinidad": 0.3,
+   "sov": 0.0,
+   "brecha": 0.3,
+   "tono": null,
+   "n": 0
+  },
+  {
+   "nombre": "Federico Sturzenegger",
+   "afinidad": 0.2,
+   "sov": 0.0,
+   "brecha": 0.2,
+   "tono": null,
+   "n": 0
+  },
+  {
+   "nombre": "Máximo Kirchner",
+   "afinidad": 0.2,
+   "sov": 0.0,
+   "brecha": 0.2,
+   "tono": null,
+   "n": 0
+  },
+  {
+   "nombre": "Ricardo López Murphy",
+   "afinidad": 0.2,
+   "sov": 0.0,
+   "brecha": 0.2,
+   "tono": null,
+   "n": 0
+  },
+  {
+   "nombre": "Jorge Macri",
+   "afinidad": 1.8,
+   "sov": 12.2,
+   "brecha": -10.4,
+   "tono": null,
+   "n": 14
+  },
+  {
+   "nombre": "Mauricio Macri",
+   "afinidad": 0.6,
+   "sov": 12.2,
+   "brecha": -11.6,
+   "tono": null,
+   "n": 14
+  },
+  {
+   "nombre": "Cristina Kirchner",
+   "afinidad": 1.3,
+   "sov": 13.0,
+   "brecha": -11.7,
+   "tono": null,
+   "n": 15
+  },
+  {
+   "nombre": "Patricia Bullrich",
+   "afinidad": 0.0,
+   "sov": 12.2,
+   "brecha": -12.2,
+   "tono": null,
+   "n": 14
+  },
+  {
+   "nombre": "Axel Kicillof",
+   "afinidad": 0.0,
+   "sov": 13.0,
+   "brecha": -13.0,
+   "tono": null,
+   "n": 15
+  },
+  {
+   "nombre": "Javier Milei",
+   "afinidad": 0.0,
+   "sov": 13.0,
+   "brecha": -13.0,
+   "tono": null,
+   "n": 15
+  },
+  {
+   "nombre": "Manuel Adorni",
+   "afinidad": 0.2,
+   "sov": 24.3,
+   "brecha": -24.1,
+   "tono": -17.9,
+   "n": 28
+  }
+ ],
+ "ejes": [
+  {
+   "id": "eco",
+   "nombre": "Economía",
+   "a": "Estado",
+   "b": "Mercado",
+   "quiz": 52.2,
+   "sd": 20.6,
+   "extremos": 68.9,
+   "encuadre": 44.1,
+   "share": 13.5,
+   "n": 34,
+   "tono": -29.4,
+   "brecha": -8.1
+  },
+  {
+   "id": "com",
+   "nombre": "Comercio y moneda",
+   "a": "Protección",
+   "b": "Apertura",
+   "quiz": 50.2,
+   "sd": 19.7,
+   "extremos": 65.2,
+   "encuadre": 50.0,
+   "share": 12.0,
+   "n": 30,
+   "tono": 0.0,
+   "brecha": -0.2
+  },
+  {
+   "id": "fed",
+   "nombre": "Territorio",
+   "a": "Centralismo",
+   "b": "Federalismo",
+   "quiz": 48.9,
+   "sd": 19.6,
+   "extremos": 61.6,
+   "encuadre": null,
+   "share": 5.6,
+   "n": 14,
+   "tono": -7.2,
+   "brecha": null
+  },
+  {
+   "id": "soc",
+   "nombre": "Valores",
+   "a": "Progresismo",
+   "b": "Conservadurismo",
+   "quiz": 47.2,
+   "sd": 24.0,
+   "extremos": 72.9,
+   "encuadre": 50.0,
+   "share": 13.5,
+   "n": 34,
+   "tono": -11.8,
+   "brecha": 2.8
+  },
+  {
+   "id": "seg",
+   "nombre": "Seguridad",
+   "a": "Garantismo",
+   "b": "Mano dura",
+   "quiz": 51.8,
+   "sd": 20.5,
+   "extremos": 67.3,
+   "encuadre": 50.0,
+   "share": 18.3,
+   "n": 46,
+   "tono": -19.6,
+   "brecha": -1.8
+  },
+  {
+   "id": "ins",
+   "nombre": "Sistema político",
+   "a": "Institucionalismo",
+   "b": "Ruptura",
+   "quiz": 50.8,
+   "sd": 22.0,
+   "extremos": 66.4,
+   "encuadre": 50.0,
+   "share": 12.0,
+   "n": 30,
+   "tono": 0.0,
+   "brecha": -0.8
+  },
+  {
+   "id": "ext",
+   "nombre": "Mundo",
+   "a": "Soberanía regional",
+   "b": "Alineamiento occidental",
+   "quiz": 50.2,
+   "sd": 22.5,
+   "extremos": 67.7,
+   "encuadre": 48.3,
+   "share": 11.6,
+   "n": 29,
+   "tono": 0.0,
+   "brecha": -1.9
+  },
+  {
+   "id": "amb",
+   "nombre": "Ambiente",
+   "a": "Ambientalismo",
+   "b": "Productivismo",
+   "quiz": 50.2,
+   "sd": 22.5,
+   "extremos": 67.1,
+   "encuadre": 50.0,
+   "share": 13.5,
+   "n": 34,
+   "tono": -11.8,
+   "brecha": -0.2
+  }
+ ],
+ "agenda": [
+  {
+   "id": "soc",
+   "nombre": "Valores",
+   "divide": 72.9,
+   "se_habla": 13.5
+  },
+  {
+   "id": "eco",
+   "nombre": "Economía",
+   "divide": 68.9,
+   "se_habla": 13.5
+  },
+  {
+   "id": "ext",
+   "nombre": "Mundo",
+   "divide": 67.7,
+   "se_habla": 11.6
+  },
+  {
+   "id": "seg",
+   "nombre": "Seguridad",
+   "divide": 67.3,
+   "se_habla": 18.3
+  },
+  {
+   "id": "amb",
+   "nombre": "Ambiente",
+   "divide": 67.1,
+   "se_habla": 13.5
+  },
+  {
+   "id": "ins",
+   "nombre": "Sistema político",
+   "divide": 66.4,
+   "se_habla": 12.0
+  },
+  {
+   "id": "com",
+   "nombre": "Comercio y moneda",
+   "divide": 65.2,
+   "se_habla": 12.0
+  },
+  {
+   "id": "fed",
+   "nombre": "Territorio",
+   "divide": 61.6,
+   "se_habla": 5.6
+  }
+ ],
+ "plataformas": [
+  {
+   "red": "Facebook",
+   "n_quiz": 285,
+   "perfil": {
+    "eco": 50.7,
+    "com": 50.6,
+    "fed": 46.6,
+    "soc": 48.8,
+    "seg": 54.8,
+    "ins": 47.4,
+    "ext": 50.6,
+    "amb": 51.4
+   },
+   "figura": "Facundo Manes",
+   "plataforma": null,
+   "tono": null,
+   "agresivo": null,
+   "textos": null
+  },
+  {
+   "red": "Instagram",
+   "n_quiz": 290,
+   "perfil": {
+    "eco": 52.7,
+    "com": 50.3,
+    "fed": 49.3,
+    "soc": 44.8,
+    "seg": 49.9,
+    "ins": 53.7,
+    "ext": 49.9,
+    "amb": 50.7
+   },
+   "figura": "Facundo Manes",
+   "plataforma": null,
+   "tono": null,
+   "agresivo": null,
+   "textos": null
+  },
+  {
+   "red": "Ninguna: medios tradicionales",
+   "n_quiz": 94,
+   "perfil": {
+    "eco": 51.9,
+    "com": 48.1,
+    "fed": 52.1,
+    "soc": 52.5,
+    "seg": 54.7,
+    "ins": 45.8,
+    "ext": 49.1,
+    "amb": 47.2
+   },
+   "figura": "Elisa Carrió",
+   "plataforma": "Medios",
+   "tono": -6.3,
+   "agresivo": 43.8,
+   "textos": 80
+  },
+  {
+   "red": "TikTok",
+   "n_quiz": 146,
+   "perfil": {
+    "eco": 53.9,
+    "com": 51.0,
+    "fed": 50.3,
+    "soc": 45.7,
+    "seg": 49.9,
+    "ins": 53.0,
+    "ext": 50.3,
+    "amb": 48.8
+   },
+   "figura": "Marcela Pagano",
+   "plataforma": null,
+   "tono": null,
+   "agresivo": null,
+   "textos": null
+  },
+  {
+   "red": "WhatsApp / Telegram",
+   "n_quiz": 169,
+   "perfil": {
+    "eco": 51.6,
+    "com": 49.7,
+    "fed": 49.2,
+    "soc": 47.0,
+    "seg": 51.9,
+    "ins": 51.2,
+    "ext": 50.0,
+    "amb": 50.9
+   },
+   "figura": "Elisa Carrió",
+   "plataforma": null,
+   "tono": null,
+   "agresivo": null,
+   "textos": null
+  },
+  {
+   "red": "X (Twitter)",
+   "n_quiz": 187,
+   "perfil": {
+    "eco": 53.8,
+    "com": 50.4,
+    "fed": 49.9,
+    "soc": 47.2,
+    "seg": 50.5,
+    "ins": 50.2,
+    "ext": 48.6,
+    "amb": 50.1
+   },
+   "figura": "Elisa Carrió",
+   "plataforma": "X",
+   "tono": -6.1,
+   "agresivo": 42.7,
+   "textos": 82
+  },
+  {
+   "red": "YouTube",
+   "n_quiz": 183,
+   "perfil": {
+    "eco": 51.3,
+    "com": 49.9,
+    "fed": 47.6,
+    "soc": 47.2,
+    "seg": 51.2,
+    "ins": 52.5,
+    "ext": 52.4,
+    "amb": 49.9
+   },
+   "figura": "Elisa Carrió",
+   "plataforma": "YouTube",
+   "tono": -7.0,
+   "agresivo": 41.2,
+   "textos": 85
+  }
+ ],
+ "anuncios": [
+  {
+   "id": "amb",
+   "nombre": "Ambiente",
+   "avisos": 1,
+   "publico": [
+    {
+     "edad": "16-24",
+     "genero": "Varón",
+     "pct": 40.0
+    },
+    {
+     "edad": "25-34",
+     "genero": "Mujer",
+     "pct": 30.0
+    }
+   ],
+   "posicion_publico": 51.3,
+   "posicion_total": 50.2
+  },
+  {
+   "id": "eco",
+   "nombre": "Economía",
+   "avisos": 1,
+   "publico": [
+    {
+     "edad": "16-24",
+     "genero": "Varón",
+     "pct": 40.0
+    },
+    {
+     "edad": "25-34",
+     "genero": "Mujer",
+     "pct": 30.0
+    }
+   ],
+   "posicion_publico": 55.2,
+   "posicion_total": 52.2
+  },
+  {
+   "id": "seg",
+   "nombre": "Seguridad",
+   "avisos": 1,
+   "publico": [
+    {
+     "edad": "16-24",
+     "genero": "Varón",
+     "pct": 40.0
+    },
+    {
+     "edad": "25-34",
+     "genero": "Mujer",
+     "pct": 30.0
+    }
+   ],
+   "posicion_publico": 51.8,
+   "posicion_total": 51.8
+  },
+  {
+   "id": "soc",
+   "nombre": "Valores",
+   "avisos": 1,
+   "publico": [
+    {
+     "edad": "16-24",
+     "genero": "Varón",
+     "pct": 40.0
+    },
+    {
+     "edad": "25-34",
+     "genero": "Mujer",
+     "pct": 30.0
+    }
+   ],
+   "posicion_publico": 46.4,
+   "posicion_total": 47.2
+  }
+ ],
+ "alertas": [],
+ "acciones": [
+  {
+   "accion": "Hay un público que piensa como Elisa Carrió y casi no escucha a nadie con ese perfil en redes: es un espacio para ocupar.",
+   "metrica": "11,5% del quiz tiene a Elisa Carrió como figura más cercana; su share of voice es 0,0%."
+  },
+  {
+   "accion": "Hay un público que piensa como Facundo Manes y casi no escucha a nadie con ese perfil en redes: es un espacio para ocupar.",
+   "metrica": "11,4% del quiz tiene a Facundo Manes como figura más cercana; su share of voice es 0,0%."
+  },
+  {
+   "accion": "Hay un público que piensa como Marcela Pagano y casi no escucha a nadie con ese perfil en redes: es un espacio para ocupar.",
+   "metrica": "7,6% del quiz tiene a Marcela Pagano como figura más cercana; su share of voice es 0,0%."
+  },
+  {
+   "accion": "Manuel Adorni domina la conversación por encima de su base de afinidad: más ruido que representación.",
+   "metrica": "Share of voice 24,3% vs. 0,2% de afinidad en el quiz; tono neto -17,9."
+  },
+  {
+   "accion": "Axel Kicillof domina la conversación por encima de su base de afinidad: más ruido que representación.",
+   "metrica": "Share of voice 13,0% vs. 0,0% de afinidad en el quiz."
+  },
+  {
+   "accion": "Javier Milei domina la conversación por encima de su base de afinidad: más ruido que representación.",
+   "metrica": "Share of voice 13,0% vs. 0,0% de afinidad en el quiz."
+  },
+  {
+   "accion": "Agenda vacante: territorio divide a la gente pero casi no se discute. Quien lo plantee primero define el encuadre.",
+   "metrica": "62% de quienes respondieron toma posición fuerte en este eje; es el 6% de la conversación."
+  },
+  {
+   "accion": "Agenda vacante: mundo divide a la gente pero casi no se discute. Quien lo plantee primero define el encuadre.",
+   "metrica": "68% de quienes respondieron toma posición fuerte en este eje; es el 12% de la conversación."
+  }
+ ],
+ "metodo": {
+  "figuras": "Afinidad = % de respuestas cuyo dirigente más cercano es esa figura. sov = % de menciones entre los dirigentes del quiz. brecha = afinidad − sov.",
+  "postura": "Quiz: puntaje medio 0-100 (polo a → polo b). Conversación: % de textos con encuadre del polo b entre los que tienen encuadre. brecha = conversación − quiz.",
+  "agenda": "divide = % con posición fuerte (< 40 o > 60) en el eje; se_habla = % de la conversación sobre los 8 ejes.",
+  "plataformas": "Perfil en el quiz de quienes eligen cada red como su fuente principal, contra el tono de esa red en el listener (YouTube, X y medios; Instagram, Facebook y TikTok no tienen búsqueda abierta).",
+  "anuncios": "Público de los avisos por edad y género (Meta) cruzado con la posición media de ese mismo grupo en el quiz."
+ }
+}

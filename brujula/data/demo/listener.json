@@ -1,0 +1,1765 @@
+{
+ "updated_at": "2026-11-23T21:51:06Z",
+ "status": {},
+ "totales": {
+  "textos": 251,
+  "por_plataforma": {
+   "YouTube": 85,
+   "X": 82,
+   "Medios": 80,
+   "Anuncios Meta": 4
+  },
+  "por_tipo": {
+   "comentario": 167,
+   "nota": 80,
+   "aviso": 4
+  },
+  "desde": "2026-09-24",
+  "hasta": "2026-11-23",
+  "metodo_nlp": {
+   "lexico": 251
+  }
+ },
+ "ejes": {
+  "eco": {
+   "n": 34,
+   "tono": {
+    "n": 34,
+    "pos": 26.5,
+    "neu": 17.6,
+    "neg": 55.9,
+    "agresivo": 44.1,
+    "neto": -29.4
+   },
+   "encuadre": {
+    "a": 19,
+    "b": 15,
+    "b_pct": 44.1
+   },
+   "plataformas": {
+    "X": 10,
+    "YouTube": 10,
+    "Medios": 10,
+    "Anuncios Meta": 4
+   },
+   "semanas": {
+    "2026-09-28": 5,
+    "2026-10-05": 5,
+    "2026-10-12": 4,
+    "2026-10-19": 5,
+    "2026-10-26": 1,
+    "2026-11-02": 7,
+    "2026-11-09": 1,
+    "2026-11-16": 2,
+    "2026-11-23": 4
+   },
+   "titulares": [
+    {
+     "t": "La motosierra y el deficit cero de Milei vergüenza",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/21",
+     "f": "2026-11-04"
+    },
+    {
+     "t": "La motosierra y el deficit cero de Milei",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/485",
+     "f": "2026-11-04"
+    },
+    {
+     "t": "La motosierra y el deficit cero de Milei un desastre",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/187",
+     "f": "2026-10-23"
+    },
+    {
+     "t": "Kicillof critica el ajuste a jubilados un desastre",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/240",
+     "f": "2026-10-21"
+    },
+    {
+     "t": "Kicillof critica el ajuste a jubilados vergüenza",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/381",
+     "f": "2026-10-19"
+    },
+    {
+     "t": "La motosierra y el deficit cero de Milei gran avance",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/54",
+     "f": "2026-10-17"
+    }
+   ],
+   "share": 13.5
+  },
+  "com": {
+   "n": 30,
+   "tono": {
+    "n": 30,
+    "pos": 40.0,
+    "neu": 20.0,
+    "neg": 40.0,
+    "agresivo": 100.0,
+    "neto": 0.0
+   },
+   "encuadre": {
+    "a": 15,
+    "b": 15,
+    "b_pct": 50.0
+   },
+   "plataformas": {
+    "YouTube": 10,
+    "Medios": 10,
+    "X": 10
+   },
+   "semanas": {
+    "2026-09-28": 4,
+    "2026-10-05": 4,
+    "2026-10-12": 2,
+    "2026-10-19": 7,
+    "2026-10-26": 2,
+    "2026-11-02": 3,
+    "2026-11-09": 3,
+    "2026-11-16": 5
+   },
+   "titulares": [
+    {
+     "t": "Vaca Muerta record de produccion y exportaciones",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/85",
+     "f": "2026-11-22"
+    },
+    {
+     "t": "Apertura de importaciones golpea a pymes e industria nacional vergüenza",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/138",
+     "f": "2026-11-22"
+    },
+    {
+     "t": "Vaca Muerta record de produccion y exportaciones excelente",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/526",
+     "f": "2026-11-18"
+    },
+    {
+     "t": "Apertura de importaciones golpea a pymes e industria nacional",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/149",
+     "f": "2026-11-16"
+    },
+    {
+     "t": "Apertura de importaciones golpea a pymes e industria nacional un desastre",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/358",
+     "f": "2026-11-02"
+    },
+    {
+     "t": "Vaca Muerta record de produccion y exportaciones vergüenza",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/27",
+     "f": "2026-10-24"
+    }
+   ],
+   "share": 12.0
+  },
+  "fed": {
+   "n": 14,
+   "tono": {
+    "n": 14,
+    "pos": 35.7,
+    "neu": 21.4,
+    "neg": 42.9,
+    "agresivo": 0.0,
+    "neto": -7.2
+   },
+   "encuadre": {
+    "a": 0,
+    "b": 14,
+    "b_pct": null
+   },
+   "plataformas": {
+    "Medios": 5,
+    "YouTube": 5,
+    "X": 4
+   },
+   "semanas": {
+    "2026-09-21": 1,
+    "2026-09-28": 2,
+    "2026-10-12": 3,
+    "2026-10-19": 1,
+    "2026-10-26": 2,
+    "2026-11-02": 2,
+    "2026-11-09": 2,
+    "2026-11-16": 1
+   },
+   "titulares": [
+    {
+     "t": "Gobernadores reclaman coparticipacion y federalismo gran avance",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/0",
+     "f": "2026-11-07"
+    },
+    {
+     "t": "Gobernadores reclaman coparticipacion y federalismo excelente",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/199",
+     "f": "2026-10-30"
+    },
+    {
+     "t": "Gobernadores reclaman coparticipacion y federalismo vergüenza",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/344",
+     "f": "2026-10-25"
+    },
+    {
+     "t": "Gobernadores reclaman coparticipacion y federalismo",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/73",
+     "f": "2026-10-15"
+    },
+    {
+     "t": "Gobernadores reclaman coparticipacion y federalismo un desastre",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/371",
+     "f": "2026-09-24"
+    }
+   ],
+   "share": 5.6
+  },
+  "soc": {
+   "n": 34,
+   "tono": {
+    "n": 34,
+    "pos": 35.3,
+    "neu": 17.6,
+    "neg": 47.1,
+    "agresivo": 44.1,
+    "neto": -11.8
+   },
+   "encuadre": {
+    "a": 15,
+    "b": 15,
+    "b_pct": 50.0
+   },
+   "plataformas": {
+    "Medios": 10,
+    "X": 10,
+    "YouTube": 10,
+    "Anuncios Meta": 4
+   },
+   "semanas": {
+    "2026-09-21": 1,
+    "2026-09-28": 5,
+    "2026-10-05": 1,
+    "2026-10-12": 2,
+    "2026-10-19": 6,
+    "2026-10-26": 2,
+    "2026-11-02": 2,
+    "2026-11-09": 4,
+    "2026-11-16": 7,
+    "2026-11-23": 4
+   },
+   "titulares": [
+    {
+     "t": "Ni una menos: derechos y ESI excelente",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/6",
+     "f": "2026-11-22"
+    },
+    {
+     "t": "Ni una menos: derechos y ESI un desastre",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/421",
+     "f": "2026-11-19"
+    },
+    {
+     "t": "Batalla cultural contra la ideologia de genero excelente",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/78",
+     "f": "2026-11-18"
+    },
+    {
+     "t": "Ni una menos: derechos y ESI",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/69",
+     "f": "2026-11-05"
+    },
+    {
+     "t": "Batalla cultural contra la ideologia de genero gran avance",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/76",
+     "f": "2026-10-25"
+    },
+    {
+     "t": "Ni una menos: derechos y ESI gran avance",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/158",
+     "f": "2026-10-23"
+    }
+   ],
+   "share": 13.5
+  },
+  "seg": {
+   "n": 46,
+   "tono": {
+    "n": 46,
+    "pos": 30.4,
+    "neu": 19.6,
+    "neg": 50.0,
+    "agresivo": 0.0,
+    "neto": -19.6
+   },
+   "encuadre": {
+    "a": 14,
+    "b": 14,
+    "b_pct": 50.0
+   },
+   "plataformas": {
+    "YouTube": 15,
+    "X": 14,
+    "Medios": 13,
+    "Anuncios Meta": 4
+   },
+   "semanas": {
+    "2026-09-21": 4,
+    "2026-09-28": 2,
+    "2026-10-05": 1,
+    "2026-10-12": 5,
+    "2026-10-19": 10,
+    "2026-10-26": 6,
+    "2026-11-02": 1,
+    "2026-11-09": 4,
+    "2026-11-16": 9,
+    "2026-11-23": 4
+   },
+   "titulares": [
+    {
+     "t": "Represion en la marcha, denuncian derechos humanos un desastre",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/186",
+     "f": "2026-11-20"
+    },
+    {
+     "t": "Jorge Macri y la seguridad en CABA un desastre",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/274",
+     "f": "2026-11-12"
+    },
+    {
+     "t": "Jorge Macri y la seguridad en CABA excelente",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/79",
+     "f": "2026-11-11"
+    },
+    {
+     "t": "Bullrich y el protocolo antipiquetes: mano dura",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/213",
+     "f": "2026-11-07"
+    },
+    {
+     "t": "Represion en la marcha, denuncian derechos humanos",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/71",
+     "f": "2026-10-28"
+    },
+    {
+     "t": "Bullrich y el protocolo antipiquetes: mano dura excelente",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/34",
+     "f": "2026-10-26"
+    }
+   ],
+   "share": 18.3
+  },
+  "ins": {
+   "n": 30,
+   "tono": {
+    "n": 30,
+    "pos": 40.0,
+    "neu": 20.0,
+    "neg": 40.0,
+    "agresivo": 50.0,
+    "neto": 0.0
+   },
+   "encuadre": {
+    "a": 15,
+    "b": 15,
+    "b_pct": 50.0
+   },
+   "plataformas": {
+    "Medios": 10,
+    "YouTube": 10,
+    "X": 10
+   },
+   "semanas": {
+    "2026-09-21": 3,
+    "2026-09-28": 2,
+    "2026-10-05": 2,
+    "2026-10-12": 7,
+    "2026-10-19": 6,
+    "2026-10-26": 1,
+    "2026-11-02": 2,
+    "2026-11-09": 3,
+    "2026-11-16": 3,
+    "2026-11-23": 1
+   },
+   "titulares": [
+    {
+     "t": "Casta y ensobrados, dice Adorni un desastre",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/464",
+     "f": "2026-11-23"
+    },
+    {
+     "t": "DNU y division de poderes en el Congreso vergüenza",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/280",
+     "f": "2026-11-19"
+    },
+    {
+     "t": "DNU y division de poderes en el Congreso",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/61",
+     "f": "2026-11-13"
+    },
+    {
+     "t": "Casta y ensobrados, dice Adorni excelente",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/457",
+     "f": "2026-11-03"
+    },
+    {
+     "t": "DNU y division de poderes en el Congreso un desastre",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/2",
+     "f": "2026-10-23"
+    },
+    {
+     "t": "Casta y ensobrados, dice Adorni",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/297",
+     "f": "2026-10-20"
+    }
+   ],
+   "share": 12.0
+  },
+  "ext": {
+   "n": 29,
+   "tono": {
+    "n": 29,
+    "pos": 41.4,
+    "neu": 17.2,
+    "neg": 41.4,
+    "agresivo": 51.7,
+    "neto": 0.0
+   },
+   "encuadre": {
+    "a": 15,
+    "b": 14,
+    "b_pct": 48.3
+   },
+   "plataformas": {
+    "X": 10,
+    "YouTube": 10,
+    "Medios": 9
+   },
+   "semanas": {
+    "2026-09-21": 6,
+    "2026-09-28": 3,
+    "2026-10-05": 4,
+    "2026-10-12": 3,
+    "2026-10-19": 2,
+    "2026-10-26": 4,
+    "2026-11-02": 2,
+    "2026-11-09": 2,
+    "2026-11-16": 2,
+    "2026-11-23": 1
+   },
+   "titulares": [
+    {
+     "t": "Cristina habla de soberania y Malvinas vergüenza",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/98",
+     "f": "2026-11-06"
+    },
+    {
+     "t": "Cristina habla de soberania y Malvinas un desastre",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/82",
+     "f": "2026-10-27"
+    },
+    {
+     "t": "Acuerdo con Estados Unidos, alianza con Trump gran avance",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/711",
+     "f": "2026-10-18"
+    },
+    {
+     "t": "Cristina habla de soberania y Malvinas",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/108",
+     "f": "2026-10-11"
+    },
+    {
+     "t": "Acuerdo con Estados Unidos, alianza con Trump vergüenza",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/327",
+     "f": "2026-10-11"
+    },
+    {
+     "t": "Acuerdo con Estados Unidos, alianza con Trump excelente",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/77",
+     "f": "2026-10-02"
+    }
+   ],
+   "share": 11.6
+  },
+  "amb": {
+   "n": 34,
+   "tono": {
+    "n": 34,
+    "pos": 35.3,
+    "neu": 17.6,
+    "neg": 47.1,
+    "agresivo": 88.2,
+    "neto": -11.8
+   },
+   "encuadre": {
+    "a": 15,
+    "b": 15,
+    "b_pct": 50.0
+   },
+   "plataformas": {
+    "YouTube": 10,
+    "Medios": 10,
+    "X": 10,
+    "Anuncios Meta": 4
+   },
+   "semanas": {
+    "2026-09-28": 2,
+    "2026-10-05": 3,
+    "2026-10-12": 5,
+    "2026-10-19": 5,
+    "2026-10-26": 1,
+    "2026-11-02": 3,
+    "2026-11-09": 4,
+    "2026-11-16": 7,
+    "2026-11-23": 4
+   },
+   "titulares": [
+    {
+     "t": "Vaca Muerta record de produccion y exportaciones",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/85",
+     "f": "2026-11-22"
+    },
+    {
+     "t": "Ley de Glaciares: el agua no se negocia",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/520",
+     "f": "2026-11-20"
+    },
+    {
+     "t": "Vaca Muerta record de produccion y exportaciones excelente",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/526",
+     "f": "2026-11-18"
+    },
+    {
+     "t": "Ley de Glaciares: el agua no se negocia vergüenza",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/950",
+     "f": "2026-11-18"
+    },
+    {
+     "t": "Ley de Glaciares: el agua no se negocia gran avance",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/533",
+     "f": "2026-11-08"
+    },
+    {
+     "t": "Ley de Glaciares: el agua no se negocia un desastre",
+     "medio": "Medio",
+     "url": "https://ejemplo.com/557",
+     "f": "2026-11-04"
+    }
+   ],
+   "share": 13.5
+  }
+ },
+ "figuras": {
+  "Javier Milei": {
+   "n": 15,
+   "sov": 13.0,
+   "tono": {
+    "n": 15
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {
+    "X": 5,
+    "YouTube": 5,
+    "Medios": 5
+   },
+   "ejes": {
+    "eco": 15,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   },
+   "ig": {
+    "usuario": "javiermilei",
+    "followers": 6451099,
+    "posts_30d": 52,
+    "er": 0.785,
+    "inter_med": 50663,
+    "mejor_formato": "Reel"
+   }
+  },
+  "Karina Milei": {
+   "n": 0,
+   "sov": 0.0,
+   "tono": {
+    "n": 0
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {},
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   }
+  },
+  "Victoria Villarruel": {
+   "n": 0,
+   "sov": 0.0,
+   "tono": {
+    "n": 0
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {},
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   },
+   "ig": {
+    "usuario": "victoria.villarruel",
+    "followers": 1302992,
+    "posts_30d": 6,
+    "er": 0.936,
+    "inter_med": 12197,
+    "mejor_formato": "Carrusel"
+   }
+  },
+  "Patricia Bullrich": {
+   "n": 14,
+   "sov": 12.2,
+   "tono": {
+    "n": 14
+   },
+   "ult7": 3,
+   "prev7": 1,
+   "plataformas": {
+    "YouTube": 5,
+    "X": 5,
+    "Medios": 4
+   },
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 14,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   },
+   "ig": {
+    "usuario": "patobullrich",
+    "followers": 1111603,
+    "posts_30d": 26,
+    "er": 0.444,
+    "inter_med": 4936,
+    "mejor_formato": "Foto"
+   }
+  },
+  "Luis Caputo": {
+   "n": 0,
+   "sov": 0.0,
+   "tono": {
+    "n": 0
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {},
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   }
+  },
+  "Manuel Adorni": {
+   "n": 28,
+   "sov": 24.3,
+   "tono": {
+    "n": 28,
+    "pos": 32.1,
+    "neu": 17.9,
+    "neg": 50.0,
+    "agresivo": 0.0,
+    "neto": -17.9
+   },
+   "ult7": 2,
+   "prev7": 3,
+   "plataformas": {
+    "YouTube": 10,
+    "X": 9,
+    "Medios": 9
+   },
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 15,
+    "ext": 0,
+    "amb": 0
+   }
+  },
+  "Federico Sturzenegger": {
+   "n": 0,
+   "sov": 0.0,
+   "tono": {
+    "n": 0
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {},
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   }
+  },
+  "José Luis Espert": {
+   "n": 0,
+   "sov": 0.0,
+   "tono": {
+    "n": 0
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {},
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   }
+  },
+  "Lilia Lemoine": {
+   "n": 0,
+   "sov": 0.0,
+   "tono": {
+    "n": 0
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {},
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   }
+  },
+  "Ramiro Marra": {
+   "n": 0,
+   "sov": 0.0,
+   "tono": {
+    "n": 0
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {},
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   }
+  },
+  "Marcela Pagano": {
+   "n": 0,
+   "sov": 0.0,
+   "tono": {
+    "n": 0
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {},
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   }
+  },
+  "Diego Santilli": {
+   "n": 0,
+   "sov": 0.0,
+   "tono": {
+    "n": 0
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {},
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   },
+   "ig": {
+    "usuario": "diegosantilliok",
+    "followers": 230852,
+    "posts_30d": 0,
+    "er": 2.005,
+    "inter_med": 4629,
+    "mejor_formato": "Carrusel"
+   }
+  },
+  "Mauricio Macri": {
+   "n": 14,
+   "sov": 12.2,
+   "tono": {
+    "n": 14
+   },
+   "ult7": 3,
+   "prev7": 1,
+   "plataformas": {
+    "YouTube": 5,
+    "X": 5,
+    "Medios": 4
+   },
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   },
+   "ig": {
+    "usuario": "mauriciomacri",
+    "followers": 1212841,
+    "posts_30d": 3,
+    "er": 1.528,
+    "inter_med": 18537,
+    "mejor_formato": "Foto"
+   }
+  },
+  "Jorge Macri": {
+   "n": 14,
+   "sov": 12.2,
+   "tono": {
+    "n": 14
+   },
+   "ult7": 2,
+   "prev7": 2,
+   "plataformas": {
+    "YouTube": 5,
+    "X": 5,
+    "Medios": 4
+   },
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 14,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   },
+   "ig": {
+    "usuario": "jorgemacri",
+    "followers": 273075,
+    "posts_30d": 52,
+    "er": 1.804,
+    "inter_med": 4926,
+    "mejor_formato": "Reel"
+   }
+  },
+  "Horacio Rodríguez Larreta": {
+   "n": 0,
+   "sov": 0.0,
+   "tono": {
+    "n": 0
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {},
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   }
+  },
+  "Ricardo López Murphy": {
+   "n": 0,
+   "sov": 0.0,
+   "tono": {
+    "n": 0
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {},
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   }
+  },
+  "Martín Lousteau": {
+   "n": 0,
+   "sov": 0.0,
+   "tono": {
+    "n": 0
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {},
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   }
+  },
+  "Facundo Manes": {
+   "n": 0,
+   "sov": 0.0,
+   "tono": {
+    "n": 0
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {},
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   }
+  },
+  "Elisa Carrió": {
+   "n": 0,
+   "sov": 0.0,
+   "tono": {
+    "n": 0
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {},
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   }
+  },
+  "Margarita Stolbizer": {
+   "n": 0,
+   "sov": 0.0,
+   "tono": {
+    "n": 0
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {},
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   }
+  },
+  "Emilio Monzó": {
+   "n": 0,
+   "sov": 0.0,
+   "tono": {
+    "n": 0
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {},
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   }
+  },
+  "Miguel Ángel Pichetto": {
+   "n": 0,
+   "sov": 0.0,
+   "tono": {
+    "n": 0
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {},
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   }
+  },
+  "Florencio Randazzo": {
+   "n": 0,
+   "sov": 0.0,
+   "tono": {
+    "n": 0
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {},
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   }
+  },
+  "Guillermo Francos": {
+   "n": 0,
+   "sov": 0.0,
+   "tono": {
+    "n": 0
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {},
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   }
+  },
+  "Juan Schiaretti": {
+   "n": 0,
+   "sov": 0.0,
+   "tono": {
+    "n": 0
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {},
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   }
+  },
+  "Martín Llaryora": {
+   "n": 0,
+   "sov": 0.0,
+   "tono": {
+    "n": 0
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {},
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   }
+  },
+  "Maximiliano Pullaro": {
+   "n": 0,
+   "sov": 0.0,
+   "tono": {
+    "n": 0
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {},
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   }
+  },
+  "Ignacio Torres": {
+   "n": 0,
+   "sov": 0.0,
+   "tono": {
+    "n": 0
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {},
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   }
+  },
+  "Alfredo Cornejo": {
+   "n": 0,
+   "sov": 0.0,
+   "tono": {
+    "n": 0
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {},
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   }
+  },
+  "Gerardo Morales": {
+   "n": 0,
+   "sov": 0.0,
+   "tono": {
+    "n": 0
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {},
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   }
+  },
+  "Cristina Kirchner": {
+   "n": 15,
+   "sov": 13.0,
+   "tono": {
+    "n": 15
+   },
+   "ult7": 0,
+   "prev7": 1,
+   "plataformas": {
+    "Medios": 5,
+    "X": 5,
+    "YouTube": 5
+   },
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 15,
+    "amb": 0
+   },
+   "ig": {
+    "usuario": "cristinafkirchner",
+    "followers": 1728363,
+    "posts_30d": 0,
+    "er": 3.996,
+    "inter_med": 69061,
+    "mejor_formato": "Carrusel"
+   }
+  },
+  "Axel Kicillof": {
+   "n": 15,
+   "sov": 13.0,
+   "tono": {
+    "n": 15
+   },
+   "ult7": 2,
+   "prev7": 1,
+   "plataformas": {
+    "YouTube": 5,
+    "Medios": 5,
+    "X": 5
+   },
+   "ejes": {
+    "eco": 15,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   },
+   "ig": {
+    "usuario": "kicillofok",
+    "followers": 1203783,
+    "posts_30d": 25,
+    "er": 0.758,
+    "inter_med": 9130,
+    "mejor_formato": "Carrusel"
+   }
+  },
+  "Máximo Kirchner": {
+   "n": 0,
+   "sov": 0.0,
+   "tono": {
+    "n": 0
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {},
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   }
+  },
+  "Sergio Massa": {
+   "n": 0,
+   "sov": 0.0,
+   "tono": {
+    "n": 0
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {},
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   },
+   "ig": {
+    "usuario": "sergiomassaok",
+    "followers": 462414,
+    "posts_30d": 3,
+    "er": 2.269,
+    "inter_med": 10492,
+    "mejor_formato": "Reel"
+   }
+  },
+  "Leandro Santoro": {
+   "n": 0,
+   "sov": 0.0,
+   "tono": {
+    "n": 0
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {},
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   },
+   "ig": {
+    "usuario": "leandrosantorook",
+    "followers": 650256,
+    "posts_30d": 13,
+    "er": 4.498,
+    "inter_med": 29249,
+    "mejor_formato": "Reel"
+   }
+  },
+  "Mayra Mendoza": {
+   "n": 0,
+   "sov": 0.0,
+   "tono": {
+    "n": 0
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {},
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   }
+  },
+  "Agustín Rossi": {
+   "n": 0,
+   "sov": 0.0,
+   "tono": {
+    "n": 0
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {},
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   }
+  },
+  "Juan Grabois": {
+   "n": 0,
+   "sov": 0.0,
+   "tono": {
+    "n": 0
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {},
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   }
+  },
+  "Ofelia Fernández": {
+   "n": 0,
+   "sov": 0.0,
+   "tono": {
+    "n": 0
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {},
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   }
+  },
+  "Guillermo Moreno": {
+   "n": 0,
+   "sov": 0.0,
+   "tono": {
+    "n": 0
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {},
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   }
+  },
+  "Myriam Bregman": {
+   "n": 0,
+   "sov": 0.0,
+   "tono": {
+    "n": 0
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {},
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   }
+  },
+  "Nicolás del Caño": {
+   "n": 0,
+   "sov": 0.0,
+   "tono": {
+    "n": 0
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {},
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   }
+  },
+  "Gabriel Solano": {
+   "n": 0,
+   "sov": 0.0,
+   "tono": {
+    "n": 0
+   },
+   "ult7": 0,
+   "prev7": 0,
+   "plataformas": {},
+   "ejes": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 0,
+    "seg": 0,
+    "ins": 0,
+    "ext": 0,
+    "amb": 0
+   }
+  }
+ },
+ "plataformas": {
+  "Anuncios Meta": {
+   "tono": {
+    "n": 4,
+    "pos": 0.0,
+    "neu": 0.0,
+    "neg": 100.0,
+    "agresivo": 0.0,
+    "neto": -100.0
+   },
+   "ejes": {
+    "eco": 4,
+    "com": 0,
+    "fed": 0,
+    "soc": 4,
+    "seg": 4,
+    "ins": 0,
+    "ext": 0,
+    "amb": 4
+   }
+  },
+  "Medios": {
+   "tono": {
+    "n": 80,
+    "pos": 37.5,
+    "neu": 18.8,
+    "neg": 43.8,
+    "agresivo": 43.8,
+    "neto": -6.3
+   },
+   "ejes": {
+    "eco": 10,
+    "com": 10,
+    "fed": 5,
+    "soc": 10,
+    "seg": 13,
+    "ins": 10,
+    "ext": 9,
+    "amb": 10
+   }
+  },
+  "X": {
+   "tono": {
+    "n": 82,
+    "pos": 36.6,
+    "neu": 20.7,
+    "neg": 42.7,
+    "agresivo": 42.7,
+    "neto": -6.1
+   },
+   "ejes": {
+    "eco": 10,
+    "com": 10,
+    "fed": 4,
+    "soc": 10,
+    "seg": 14,
+    "ins": 10,
+    "ext": 10,
+    "amb": 10
+   }
+  },
+  "YouTube": {
+   "tono": {
+    "n": 85,
+    "pos": 36.5,
+    "neu": 20.0,
+    "neg": 43.5,
+    "agresivo": 41.2,
+    "neto": -7.0
+   },
+   "ejes": {
+    "eco": 10,
+    "com": 10,
+    "fed": 5,
+    "soc": 10,
+    "seg": 15,
+    "ins": 10,
+    "ext": 10,
+    "amb": 10
+   }
+  }
+ },
+ "anuncios": {
+  "amb": {
+   "avisos": 1,
+   "paginas": [
+    {
+     "p": "Pagina 0",
+     "n": 1
+    }
+   ],
+   "demo": [
+    {
+     "edad": "18-24",
+     "genero": "Varón",
+     "pct": 40.0
+    },
+    {
+     "edad": "25-34",
+     "genero": "Mujer",
+     "pct": 30.0
+    },
+    {
+     "edad": "65+",
+     "genero": "Mujer",
+     "pct": 30.0
+    }
+   ]
+  },
+  "eco": {
+   "avisos": 1,
+   "paginas": [
+    {
+     "p": "Pagina 0",
+     "n": 1
+    }
+   ],
+   "demo": [
+    {
+     "edad": "18-24",
+     "genero": "Varón",
+     "pct": 40.0
+    },
+    {
+     "edad": "25-34",
+     "genero": "Mujer",
+     "pct": 30.0
+    },
+    {
+     "edad": "65+",
+     "genero": "Mujer",
+     "pct": 30.0
+    }
+   ]
+  },
+  "seg": {
+   "avisos": 1,
+   "paginas": [
+    {
+     "p": "Pagina 1",
+     "n": 1
+    }
+   ],
+   "demo": [
+    {
+     "edad": "18-24",
+     "genero": "Varón",
+     "pct": 40.0
+    },
+    {
+     "edad": "25-34",
+     "genero": "Mujer",
+     "pct": 30.0
+    },
+    {
+     "edad": "65+",
+     "genero": "Mujer",
+     "pct": 30.0
+    }
+   ]
+  },
+  "soc": {
+   "avisos": 1,
+   "paginas": [
+    {
+     "p": "Pagina 2",
+     "n": 1
+    }
+   ],
+   "demo": [
+    {
+     "edad": "18-24",
+     "genero": "Varón",
+     "pct": 40.0
+    },
+    {
+     "edad": "25-34",
+     "genero": "Mujer",
+     "pct": 30.0
+    },
+    {
+     "edad": "65+",
+     "genero": "Mujer",
+     "pct": 30.0
+    }
+   ]
+  }
+ },
+ "metodo": {
+  "ventana": "Últimos 120 días.",
+  "ejes": "Un texto cuenta para un eje si nombra alguna de sus palabras clave (listener/config.json). Un mismo texto puede sumar a varios ejes.",
+  "encuadre": "Textos del eje con palabras de encuadre de cada polo; b_pct = % hacia el polo b. Solo con 20+ textos con encuadre. Es un indicador de cómo se habla del tema, no de qué opina la gente.",
+  "tono": "pysentimiento (RoBERTuito) en CPU; si no está, diccionarios. neto = % positivo − % negativo.",
+  "figuras": "Menciones por nombre y alias; el alias más largo gana (Jorge Macri no suma a Mauricio Macri). sov = share of voice entre los dirigentes del quiz.",
+  "anuncios": "Biblioteca de Anuncios de Meta (avisos políticos y de temas sociales en Argentina) con la búsqueda principal de cada eje. Distribución de impresiones por edad y género ponderada por el punto medio del rango de impresiones.",
+  "fuentes": "Google News, YouTube (videos y comentarios), Biblioteca de Anuncios de Meta, Instagram (meta/) y X solo en corridas manuales."
+ }
+}

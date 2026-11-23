@@ -1,0 +1,704 @@
+{
+ "_nota": "e = efecto de estar de acuerdo: peso positivo empuja hacia el polo 'b' (100) del eje; negativo, hacia el polo 'a' (0). v = versiones del quiz que incluyen la pregunta.",
+ "preguntas": [
+  {
+   "id": "g01",
+   "t": "El Estado debería ser dueño de las empresas estratégicas, como energía, agua o transporte.",
+   "e": {
+    "eco": -1
+   },
+   "v": [
+    "general",
+    "ar"
+   ]
+  },
+  {
+   "id": "g02",
+   "t": "Bajar impuestos es más importante que aumentar el gasto social.",
+   "e": {
+    "eco": 1
+   },
+   "v": [
+    "general",
+    "ar"
+   ]
+  },
+  {
+   "id": "g03",
+   "t": "Los precios deberían fijarlos la oferta y la demanda, aunque a veces suban mucho.",
+   "e": {
+    "eco": 1
+   },
+   "v": [
+    "general",
+    "ar"
+   ]
+  },
+  {
+   "id": "g04",
+   "t": "La salud y la educación deberían ser exclusivamente públicas y gratuitas.",
+   "e": {
+    "eco": -1
+   },
+   "v": [
+    "general"
+   ]
+  },
+  {
+   "id": "g05",
+   "t": "El déficit fiscal cero tiene que ser una prioridad aunque implique recortes duros.",
+   "e": {
+    "eco": 1
+   },
+   "v": [
+    "general"
+   ]
+  },
+  {
+   "id": "g06",
+   "t": "Los planes sociales son una herramienta necesaria y no deberían recortarse.",
+   "e": {
+    "eco": -1
+   },
+   "v": [
+    "general",
+    "ar"
+   ]
+  },
+  {
+   "id": "g07",
+   "t": "Hay que proteger la industria nacional con aranceles, aunque los productos importados sean más baratos.",
+   "e": {
+    "com": -1
+   },
+   "v": [
+    "general",
+    "ar"
+   ]
+  },
+  {
+   "id": "g08",
+   "t": "Firmar tratados de libre comercio trae más beneficios que perjuicios.",
+   "e": {
+    "com": 1
+   },
+   "v": [
+    "general",
+    "ar"
+   ]
+  },
+  {
+   "id": "g09",
+   "t": "Cualquier persona debería poder comprar dólares u otras monedas sin restricciones.",
+   "e": {
+    "com": 1,
+    "eco": 0.5
+   },
+   "v": [
+    "general",
+    "ar"
+   ]
+  },
+  {
+   "id": "g10",
+   "t": "El Estado debería obligar a las grandes empresas a reinvertir sus ganancias en el país.",
+   "e": {
+    "com": -1,
+    "eco": -0.5
+   },
+   "v": [
+    "general",
+    "ar"
+   ]
+  },
+  {
+   "id": "g11",
+   "t": "Atraer inversión extranjera justifica darle beneficios impositivos especiales.",
+   "e": {
+    "com": 1
+   },
+   "v": [
+    "general",
+    "ar"
+   ]
+  },
+  {
+   "id": "g12",
+   "t": "Las provincias o regiones deberían recaudar y administrar la mayor parte de sus impuestos.",
+   "e": {
+    "fed": 1
+   },
+   "v": [
+    "general",
+    "ar"
+   ]
+  },
+  {
+   "id": "g13",
+   "t": "Las decisiones importantes se toman mejor desde el gobierno nacional que desde cada provincia.",
+   "e": {
+    "fed": -1
+   },
+   "v": [
+    "general",
+    "ar"
+   ]
+  },
+  {
+   "id": "g14",
+   "t": "Los recursos naturales deberían pertenecer a la provincia o región donde están.",
+   "e": {
+    "fed": 1
+   },
+   "v": [
+    "general",
+    "ar"
+   ]
+  },
+  {
+   "id": "g15",
+   "t": "La capital del país concentra demasiados recursos y poder.",
+   "e": {
+    "fed": 1
+   },
+   "v": [
+    "general",
+    "ar"
+   ]
+  },
+  {
+   "id": "g16",
+   "t": "Un mismo programa nacional para todo el país es más justo que dejar que cada región decida.",
+   "e": {
+    "fed": -1
+   },
+   "v": [
+    "general"
+   ]
+  },
+  {
+   "id": "g17",
+   "t": "El aborto debería ser legal, seguro y gratuito.",
+   "e": {
+    "soc": -2
+   },
+   "v": [
+    "general",
+    "ar"
+   ]
+  },
+  {
+   "id": "g18",
+   "t": "La educación sexual integral debería ser obligatoria en todas las escuelas.",
+   "e": {
+    "soc": -1
+   },
+   "v": [
+    "general",
+    "ar"
+   ]
+  },
+  {
+   "id": "g19",
+   "t": "La familia tradicional es la base de la sociedad y el Estado debería protegerla.",
+   "e": {
+    "soc": 1
+   },
+   "v": [
+    "general",
+    "ar"
+   ]
+  },
+  {
+   "id": "g20",
+   "t": "Las personas trans deberían poder cambiar su identidad en el documento sin trámites judiciales.",
+   "e": {
+    "soc": -1
+   },
+   "v": [
+    "general",
+    "ar"
+   ]
+  },
+  {
+   "id": "g21",
+   "t": "El consumo personal de marihuana debería ser legal.",
+   "e": {
+    "soc": -1,
+    "seg": -0.5
+   },
+   "v": [
+    "general",
+    "ar"
+   ]
+  },
+  {
+   "id": "g22",
+   "t": "La religión debería tener un lugar en la educación pública.",
+   "e": {
+    "soc": 1
+   },
+   "v": [
+    "general"
+   ]
+  },
+  {
+   "id": "g23",
+   "t": "Bajar la edad de imputabilidad ayudaría a reducir el delito.",
+   "e": {
+    "seg": 1
+   },
+   "v": [
+    "general",
+    "ar"
+   ]
+  },
+  {
+   "id": "g24",
+   "t": "La policía debería poder usar armas de fuego con menos restricciones.",
+   "e": {
+    "seg": 1
+   },
+   "v": [
+    "general",
+    "ar"
+   ]
+  },
+  {
+   "id": "g25",
+   "t": "La pobreza y la desigualdad explican la mayor parte del delito.",
+   "e": {
+    "seg": -1,
+    "eco": -0.5
+   },
+   "v": [
+    "general",
+    "ar"
+   ]
+  },
+  {
+   "id": "g26",
+   "t": "Las Fuerzas Armadas deberían poder participar en la seguridad interior.",
+   "e": {
+    "seg": 1
+   },
+   "v": [
+    "general",
+    "ar"
+   ]
+  },
+  {
+   "id": "g27",
+   "t": "Endurecer las penas no reduce el delito: hay que invertir en prevención y reinserción.",
+   "e": {
+    "seg": -1
+   },
+   "v": [
+    "general",
+    "ar"
+   ]
+  },
+  {
+   "id": "g28",
+   "t": "Cortar calles en una protesta debería ser sancionado.",
+   "e": {
+    "seg": 1
+   },
+   "v": [
+    "general"
+   ]
+  },
+  {
+   "id": "g29",
+   "t": "Para cambiar el país de verdad hay que romper con toda la clase política tradicional.",
+   "e": {
+    "ins": 1
+   },
+   "v": [
+    "general",
+    "ar"
+   ]
+  },
+  {
+   "id": "g30",
+   "t": "Los acuerdos entre oficialismo y oposición son necesarios para gobernar.",
+   "e": {
+    "ins": -1
+   },
+   "v": [
+    "general",
+    "ar"
+   ]
+  },
+  {
+   "id": "g31",
+   "t": "Gobernar por decreto está justificado cuando el Congreso bloquea reformas urgentes.",
+   "e": {
+    "ins": 1
+   },
+   "v": [
+    "general"
+   ]
+  },
+  {
+   "id": "g32",
+   "t": "Los fallos de la Corte Suprema hay que acatarlos aunque uno no esté de acuerdo.",
+   "e": {
+    "ins": -1
+   },
+   "v": [
+    "general",
+    "ar"
+   ]
+  },
+  {
+   "id": "g33",
+   "t": "El periodismo tradicional miente más de lo que informa.",
+   "e": {
+    "ins": 1
+   },
+   "v": [
+    "general",
+    "ar"
+   ]
+  },
+  {
+   "id": "g34",
+   "t": "Un líder fuerte que no dependa de los partidos sería bueno para el país.",
+   "e": {
+    "ins": 1
+   },
+   "v": [
+    "general",
+    "ar"
+   ]
+  },
+  {
+   "id": "g35",
+   "t": "Nuestro país debería alinearse con Estados Unidos e Israel en política exterior.",
+   "e": {
+    "ext": 1
+   },
+   "v": [
+    "general",
+    "ar"
+   ]
+  },
+  {
+   "id": "g36",
+   "t": "Fortalecer el Mercosur y la integración latinoamericana debería ser una prioridad.",
+   "e": {
+    "ext": -1
+   },
+   "v": [
+    "general",
+    "ar"
+   ]
+  },
+  {
+   "id": "g37",
+   "t": "China es un socio tan válido como Estados Unidos.",
+   "e": {
+    "ext": -1
+   },
+   "v": [
+    "general",
+    "ar"
+   ]
+  },
+  {
+   "id": "g38",
+   "t": "Organismos como el FMI ayudan más de lo que perjudican.",
+   "e": {
+    "ext": 1,
+    "eco": 0.5
+   },
+   "v": [
+    "general",
+    "ar"
+   ]
+  },
+  {
+   "id": "g39",
+   "t": "Los BRICS son una mejor alternativa que los acuerdos con Occidente.",
+   "e": {
+    "ext": -1
+   },
+   "v": [
+    "general"
+   ]
+  },
+  {
+   "id": "g40",
+   "t": "La protección del ambiente debería estar por encima del crecimiento económico.",
+   "e": {
+    "amb": -1
+   },
+   "v": [
+    "general",
+    "ar"
+   ]
+  },
+  {
+   "id": "g41",
+   "t": "La minería a gran escala es una oportunidad que hay que aprovechar.",
+   "e": {
+    "amb": 1
+   },
+   "v": [
+    "general",
+    "ar"
+   ]
+  },
+  {
+   "id": "g42",
+   "t": "La explotación petrolera, incluido el fracking y el offshore, debería ampliarse.",
+   "e": {
+    "amb": 1
+   },
+   "v": [
+    "general"
+   ]
+  },
+  {
+   "id": "g43",
+   "t": "El cambio climático es causado principalmente por la actividad humana y exige medidas urgentes.",
+   "e": {
+    "amb": -1
+   },
+   "v": [
+    "general",
+    "ar"
+   ]
+  },
+  {
+   "id": "g44",
+   "t": "Las comunidades locales deberían poder vetar proyectos extractivos en su territorio.",
+   "e": {
+    "amb": -1,
+    "fed": 0.5
+   },
+   "v": [
+    "general",
+    "ar"
+   ]
+  },
+  {
+   "id": "g45",
+   "t": "Las leyes ambientales actuales frenan el desarrollo.",
+   "e": {
+    "amb": 1
+   },
+   "v": [
+    "general"
+   ]
+  },
+  {
+   "id": "a01",
+   "t": "La dolarización sería una buena solución para la economía argentina.",
+   "e": {
+    "eco": 1,
+    "com": 0.5,
+    "ext": 0.5
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "a02",
+   "t": "La motosierra sobre el gasto público era necesaria aunque tuviera costos sociales.",
+   "e": {
+    "eco": 2
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "a03",
+   "t": "Las universidades nacionales deberían recibir más presupuesto aunque eso implique déficit.",
+   "e": {
+    "eco": -1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "a04",
+   "t": "El RIGI (régimen de incentivo a grandes inversiones) es bueno para el país.",
+   "e": {
+    "com": 1,
+    "amb": 0.5
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "a05",
+   "t": "YPF debería seguir bajo control del Estado.",
+   "e": {
+    "eco": -1,
+    "com": -0.5
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "a06",
+   "t": "Aerolíneas Argentinas debería privatizarse.",
+   "e": {
+    "eco": 1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "a07",
+   "t": "La coparticipación federal reparte injustamente los recursos entre provincias.",
+   "e": {
+    "fed": 1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "a08",
+   "t": "El AMBA recibe subsidios al transporte y la energía que el interior no recibe, y eso hay que corregirlo.",
+   "e": {
+    "fed": 1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "a09",
+   "t": "Los juicios por delitos de lesa humanidad tienen que seguir adelante.",
+   "e": {
+    "seg": -1,
+    "soc": -1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "a10",
+   "t": "Sobre los años 70 hay que hablar de 'memoria completa', incluyendo a las víctimas de la guerrilla.",
+   "e": {
+    "soc": 1,
+    "seg": 1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "a11",
+   "t": "El protocolo antipiquetes es una medida correcta.",
+   "e": {
+    "seg": 1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "a12",
+   "t": "Argentina debería reclamar activamente por Malvinas en todos los foros internacionales.",
+   "e": {
+    "ext": -1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "a13",
+   "t": "Los sindicatos tienen demasiado poder en Argentina.",
+   "e": {
+    "eco": 1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "a14",
+   "t": "Las indemnizaciones por despido deberían reemplazarse por un fondo de cese laboral.",
+   "e": {
+    "eco": 1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "a15",
+   "t": "La Ley de Glaciares debería modificarse para permitir más minería.",
+   "e": {
+    "amb": 2
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "a16",
+   "t": "Vaca Muerta debería ser la prioridad energética del país, por encima de las renovables.",
+   "e": {
+    "amb": 1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "a17",
+   "t": "El Congreso debería poder frenar los DNU con más facilidad.",
+   "e": {
+    "ins": -1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "a18",
+   "t": "Los subsidios a la energía y al transporte deberían eliminarse.",
+   "e": {
+    "eco": 1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "a19",
+   "t": "El Estado debería financiar el cine, la cultura y los medios públicos.",
+   "e": {
+    "eco": -1,
+    "soc": -0.5
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "a20",
+   "t": "La relación con Estados Unidos debería ser la prioridad absoluta de la política exterior argentina.",
+   "e": {
+    "ext": 2
+   },
+   "v": [
+    "ar"
+   ]
+  }
+ ]
+}

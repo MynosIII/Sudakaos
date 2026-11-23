@@ -1,0 +1,1087 @@
+{
+ "_nota": "Codificación editorial inicial A REVISAR (programas, votaciones y declaraciones públicas). No es una medición de opinión. 0-100 por eje, mismos polos que ejes.json.",
+ "revision": "a revisar",
+ "fecha": "2026-11-23",
+ "ar": [
+  {
+   "nombre": "Javier Milei",
+   "nivel": 1,
+   "espacio": "La Libertad Avanza",
+   "cargo": "Presidente de la Nación",
+   "pos": {
+    "eco": 95,
+    "com": 95,
+    "fed": 45,
+    "soc": 75,
+    "seg": 80,
+    "ins": 85,
+    "ext": 95,
+    "amb": 90
+   },
+   "alias": [
+    "milei"
+   ]
+  },
+  {
+   "nombre": "Karina Milei",
+   "nivel": 2,
+   "espacio": "La Libertad Avanza",
+   "cargo": "Secretaria General de la Presidencia",
+   "pos": {
+    "eco": 90,
+    "com": 90,
+    "fed": 45,
+    "soc": 70,
+    "seg": 75,
+    "ins": 75,
+    "ext": 90,
+    "amb": 85
+   },
+   "alias": [
+    "karina milei",
+    "el jefe"
+   ]
+  },
+  {
+   "nombre": "Victoria Villarruel",
+   "nivel": 1,
+   "espacio": "Independiente (ex LLA)",
+   "cargo": "Vicepresidenta de la Nación",
+   "pos": {
+    "eco": 70,
+    "com": 65,
+    "fed": 55,
+    "soc": 90,
+    "seg": 95,
+    "ins": 55,
+    "ext": 75,
+    "amb": 75
+   },
+   "alias": [
+    "villarruel"
+   ]
+  },
+  {
+   "nombre": "Patricia Bullrich",
+   "nivel": 1,
+   "espacio": "La Libertad Avanza",
+   "cargo": "Senadora nacional",
+   "pos": {
+    "eco": 80,
+    "com": 80,
+    "fed": 45,
+    "soc": 65,
+    "seg": 95,
+    "ins": 55,
+    "ext": 90,
+    "amb": 80
+   },
+   "alias": [
+    "bullrich"
+   ]
+  },
+  {
+   "nombre": "Luis Caputo",
+   "nivel": 2,
+   "espacio": "La Libertad Avanza",
+   "cargo": "Ministro de Economía",
+   "pos": {
+    "eco": 90,
+    "com": 85,
+    "fed": 40,
+    "soc": 60,
+    "seg": 65,
+    "ins": 50,
+    "ext": 90,
+    "amb": 85
+   },
+   "alias": [
+    "toto caputo",
+    "luis caputo"
+   ]
+  },
+  {
+   "nombre": "Manuel Adorni",
+   "nivel": 2,
+   "espacio": "La Libertad Avanza",
+   "cargo": "Jefe de Gabinete",
+   "pos": {
+    "eco": 92,
+    "com": 90,
+    "fed": 40,
+    "soc": 70,
+    "seg": 75,
+    "ins": 80,
+    "ext": 90,
+    "amb": 85
+   },
+   "alias": [
+    "adorni"
+   ]
+  },
+  {
+   "nombre": "Federico Sturzenegger",
+   "nivel": 2,
+   "espacio": "La Libertad Avanza",
+   "cargo": "Ministro de Desregulación",
+   "pos": {
+    "eco": 95,
+    "com": 95,
+    "fed": 50,
+    "soc": 55,
+    "seg": 65,
+    "ins": 70,
+    "ext": 90,
+    "amb": 85
+   },
+   "alias": [
+    "sturzenegger"
+   ]
+  },
+  {
+   "nombre": "José Luis Espert",
+   "nivel": 2,
+   "espacio": "La Libertad Avanza",
+   "cargo": "Economista, ex diputado nacional",
+   "pos": {
+    "eco": 95,
+    "com": 95,
+    "fed": 45,
+    "soc": 65,
+    "seg": 90,
+    "ins": 70,
+    "ext": 90,
+    "amb": 85
+   },
+   "alias": [
+    "espert"
+   ]
+  },
+  {
+   "nombre": "Lilia Lemoine",
+   "nivel": 2,
+   "espacio": "La Libertad Avanza",
+   "cargo": "Diputada nacional",
+   "pos": {
+    "eco": 90,
+    "com": 85,
+    "fed": 45,
+    "soc": 85,
+    "seg": 85,
+    "ins": 90,
+    "ext": 90,
+    "amb": 85
+   },
+   "alias": [
+    "lemoine"
+   ]
+  },
+  {
+   "nombre": "Ramiro Marra",
+   "nivel": 2,
+   "espacio": "Independiente liberal",
+   "cargo": "Dirigente liberal porteño",
+   "pos": {
+    "eco": 92,
+    "com": 95,
+    "fed": 45,
+    "soc": 60,
+    "seg": 80,
+    "ins": 80,
+    "ext": 90,
+    "amb": 85
+   },
+   "alias": [
+    "ramiro marra"
+   ]
+  },
+  {
+   "nombre": "Marcela Pagano",
+   "nivel": 2,
+   "espacio": "Monobloque (ex LLA)",
+   "cargo": "Diputada nacional",
+   "pos": {
+    "eco": 75,
+    "com": 75,
+    "fed": 45,
+    "soc": 60,
+    "seg": 75,
+    "ins": 70,
+    "ext": 70,
+    "amb": 75
+   },
+   "alias": [
+    "marcela pagano"
+   ]
+  },
+  {
+   "nombre": "Diego Santilli",
+   "nivel": 2,
+   "espacio": "LLA / PRO",
+   "cargo": "Ministro del Interior",
+   "pos": {
+    "eco": 70,
+    "com": 70,
+    "fed": 45,
+    "soc": 55,
+    "seg": 80,
+    "ins": 40,
+    "ext": 75,
+    "amb": 75
+   },
+   "alias": [
+    "santilli"
+   ]
+  },
+  {
+   "nombre": "Mauricio Macri",
+   "nivel": 1,
+   "espacio": "PRO",
+   "cargo": "Ex presidente, titular del PRO",
+   "pos": {
+    "eco": 80,
+    "com": 80,
+    "fed": 40,
+    "soc": 55,
+    "seg": 75,
+    "ins": 45,
+    "ext": 85,
+    "amb": 80
+   },
+   "alias": [
+    "macri"
+   ]
+  },
+  {
+   "nombre": "Jorge Macri",
+   "nivel": 2,
+   "espacio": "PRO",
+   "cargo": "Jefe de Gobierno porteño",
+   "pos": {
+    "eco": 70,
+    "com": 70,
+    "fed": 30,
+    "soc": 50,
+    "seg": 80,
+    "ins": 35,
+    "ext": 75,
+    "amb": 70
+   },
+   "alias": [
+    "jorge macri"
+   ]
+  },
+  {
+   "nombre": "Horacio Rodríguez Larreta",
+   "nivel": 1,
+   "espacio": "Independiente (ex PRO)",
+   "cargo": "Ex jefe de Gobierno porteño",
+   "pos": {
+    "eco": 65,
+    "com": 70,
+    "fed": 35,
+    "soc": 40,
+    "seg": 60,
+    "ins": 25,
+    "ext": 70,
+    "amb": 65
+   },
+   "alias": [
+    "larreta"
+   ]
+  },
+  {
+   "nombre": "Ricardo López Murphy",
+   "nivel": 2,
+   "espacio": "Republicanos Unidos",
+   "cargo": "Ex diputado nacional",
+   "pos": {
+    "eco": 85,
+    "com": 90,
+    "fed": 50,
+    "soc": 50,
+    "seg": 75,
+    "ins": 30,
+    "ext": 85,
+    "amb": 75
+   },
+   "alias": [
+    "lopez murphy",
+    "bulldog"
+   ]
+  },
+  {
+   "nombre": "Martín Lousteau",
+   "nivel": 2,
+   "espacio": "UCR",
+   "cargo": "Dirigente de la UCR",
+   "pos": {
+    "eco": 55,
+    "com": 65,
+    "fed": 55,
+    "soc": 30,
+    "seg": 40,
+    "ins": 20,
+    "ext": 60,
+    "amb": 55
+   },
+   "alias": [
+    "lousteau"
+   ]
+  },
+  {
+   "nombre": "Facundo Manes",
+   "nivel": 2,
+   "espacio": "Independiente (ex UCR)",
+   "cargo": "Neurocientífico y dirigente político",
+   "pos": {
+    "eco": 50,
+    "com": 55,
+    "fed": 60,
+    "soc": 40,
+    "seg": 50,
+    "ins": 30,
+    "ext": 55,
+    "amb": 50
+   },
+   "alias": [
+    "manes"
+   ]
+  },
+  {
+   "nombre": "Elisa Carrió",
+   "nivel": 2,
+   "espacio": "Coalición Cívica",
+   "cargo": "Líder de la Coalición Cívica",
+   "pos": {
+    "eco": 60,
+    "com": 65,
+    "fed": 45,
+    "soc": 45,
+    "seg": 55,
+    "ins": 35,
+    "ext": 70,
+    "amb": 45
+   },
+   "alias": [
+    "carrio",
+    "lilita"
+   ]
+  },
+  {
+   "nombre": "Margarita Stolbizer",
+   "nivel": 2,
+   "espacio": "GEN",
+   "cargo": "Diputada nacional",
+   "pos": {
+    "eco": 45,
+    "com": 55,
+    "fed": 50,
+    "soc": 30,
+    "seg": 40,
+    "ins": 20,
+    "ext": 55,
+    "amb": 40
+   },
+   "alias": [
+    "stolbizer"
+   ]
+  },
+  {
+   "nombre": "Emilio Monzó",
+   "nivel": 2,
+   "espacio": "Encuentro Federal",
+   "cargo": "Ex diputado nacional",
+   "pos": {
+    "eco": 60,
+    "com": 60,
+    "fed": 55,
+    "soc": 45,
+    "seg": 60,
+    "ins": 20,
+    "ext": 60,
+    "amb": 65
+   },
+   "alias": [
+    "monzo"
+   ]
+  },
+  {
+   "nombre": "Miguel Ángel Pichetto",
+   "nivel": 2,
+   "espacio": "Encuentro Federal",
+   "cargo": "Ex diputado nacional",
+   "pos": {
+    "eco": 60,
+    "com": 55,
+    "fed": 55,
+    "soc": 60,
+    "seg": 80,
+    "ins": 30,
+    "ext": 70,
+    "amb": 75
+   },
+   "alias": [
+    "pichetto"
+   ]
+  },
+  {
+   "nombre": "Florencio Randazzo",
+   "nivel": 2,
+   "espacio": "Encuentro Federal",
+   "cargo": "Ex diputado nacional",
+   "pos": {
+    "eco": 50,
+    "com": 50,
+    "fed": 45,
+    "soc": 45,
+    "seg": 65,
+    "ins": 30,
+    "ext": 55,
+    "amb": 65
+   },
+   "alias": [
+    "randazzo"
+   ]
+  },
+  {
+   "nombre": "Guillermo Francos",
+   "nivel": 2,
+   "espacio": "Independiente",
+   "cargo": "Ex jefe de Gabinete",
+   "pos": {
+    "eco": 75,
+    "com": 75,
+    "fed": 55,
+    "soc": 55,
+    "seg": 65,
+    "ins": 35,
+    "ext": 80,
+    "amb": 80
+   },
+   "alias": [
+    "francos"
+   ]
+  },
+  {
+   "nombre": "Juan Schiaretti",
+   "nivel": 1,
+   "espacio": "Provincias Unidas",
+   "cargo": "Ex gobernador de Córdoba, referente de Provincias Unidas",
+   "pos": {
+    "eco": 60,
+    "com": 60,
+    "fed": 85,
+    "soc": 45,
+    "seg": 60,
+    "ins": 25,
+    "ext": 60,
+    "amb": 75
+   },
+   "alias": [
+    "schiaretti"
+   ]
+  },
+  {
+   "nombre": "Martín Llaryora",
+   "nivel": 1,
+   "espacio": "Provincias Unidas",
+   "cargo": "Gobernador de Córdoba",
+   "pos": {
+    "eco": 55,
+    "com": 55,
+    "fed": 85,
+    "soc": 45,
+    "seg": 60,
+    "ins": 30,
+    "ext": 55,
+    "amb": 75
+   },
+   "alias": [
+    "llaryora"
+   ]
+  },
+  {
+   "nombre": "Maximiliano Pullaro",
+   "nivel": 1,
+   "espacio": "Provincias Unidas",
+   "cargo": "Gobernador de Santa Fe",
+   "pos": {
+    "eco": 60,
+    "com": 60,
+    "fed": 80,
+    "soc": 45,
+    "seg": 90,
+    "ins": 35,
+    "ext": 60,
+    "amb": 70
+   },
+   "alias": [
+    "pullaro"
+   ]
+  },
+  {
+   "nombre": "Ignacio Torres",
+   "nivel": 2,
+   "espacio": "Provincias Unidas",
+   "cargo": "Gobernador de Chubut",
+   "pos": {
+    "eco": 65,
+    "com": 60,
+    "fed": 90,
+    "soc": 50,
+    "seg": 70,
+    "ins": 35,
+    "ext": 60,
+    "amb": 80
+   },
+   "alias": [
+    "nacho torres",
+    "ignacio torres"
+   ]
+  },
+  {
+   "nombre": "Alfredo Cornejo",
+   "nivel": 2,
+   "espacio": "UCR / LLA",
+   "cargo": "Gobernador de Mendoza",
+   "pos": {
+    "eco": 65,
+    "com": 60,
+    "fed": 80,
+    "soc": 55,
+    "seg": 75,
+    "ins": 30,
+    "ext": 65,
+    "amb": 85
+   },
+   "alias": [
+    "cornejo"
+   ]
+  },
+  {
+   "nombre": "Gerardo Morales",
+   "nivel": 2,
+   "espacio": "UCR",
+   "cargo": "Ex gobernador de Jujuy",
+   "pos": {
+    "eco": 55,
+    "com": 55,
+    "fed": 80,
+    "soc": 50,
+    "seg": 80,
+    "ins": 30,
+    "ext": 60,
+    "amb": 85
+   },
+   "alias": [
+    "gerardo morales"
+   ]
+  },
+  {
+   "nombre": "Cristina Kirchner",
+   "nivel": 1,
+   "espacio": "Partido Justicialista",
+   "cargo": "Ex presidenta, titular del PJ",
+   "pos": {
+    "eco": 20,
+    "com": 20,
+    "fed": 25,
+    "soc": 25,
+    "seg": 25,
+    "ins": 40,
+    "ext": 15,
+    "amb": 60
+   },
+   "alias": [
+    "cristina",
+    "cfk",
+    "kirchner"
+   ]
+  },
+  {
+   "nombre": "Axel Kicillof",
+   "nivel": 1,
+   "espacio": "Partido Justicialista",
+   "cargo": "Gobernador de Buenos Aires",
+   "pos": {
+    "eco": 15,
+    "com": 15,
+    "fed": 35,
+    "soc": 20,
+    "seg": 25,
+    "ins": 30,
+    "ext": 15,
+    "amb": 55
+   },
+   "alias": [
+    "kicillof"
+   ]
+  },
+  {
+   "nombre": "Máximo Kirchner",
+   "nivel": 2,
+   "espacio": "Partido Justicialista",
+   "cargo": "Dirigente del PJ bonaerense",
+   "pos": {
+    "eco": 15,
+    "com": 15,
+    "fed": 30,
+    "soc": 25,
+    "seg": 25,
+    "ins": 40,
+    "ext": 15,
+    "amb": 55
+   },
+   "alias": [
+    "maximo kirchner"
+   ]
+  },
+  {
+   "nombre": "Sergio Massa",
+   "nivel": 1,
+   "espacio": "Frente Renovador",
+   "cargo": "Ex ministro de Economía",
+   "pos": {
+    "eco": 40,
+    "com": 40,
+    "fed": 40,
+    "soc": 40,
+    "seg": 60,
+    "ins": 25,
+    "ext": 45,
+    "amb": 70
+   },
+   "alias": [
+    "massa"
+   ]
+  },
+  {
+   "nombre": "Leandro Santoro",
+   "nivel": 2,
+   "espacio": "Partido Justicialista",
+   "cargo": "Legislador porteño",
+   "pos": {
+    "eco": 30,
+    "com": 35,
+    "fed": 40,
+    "soc": 20,
+    "seg": 35,
+    "ins": 25,
+    "ext": 30,
+    "amb": 45
+   },
+   "alias": [
+    "santoro"
+   ]
+  },
+  {
+   "nombre": "Mayra Mendoza",
+   "nivel": 2,
+   "espacio": "Partido Justicialista",
+   "cargo": "Intendenta de Quilmes",
+   "pos": {
+    "eco": 20,
+    "com": 20,
+    "fed": 30,
+    "soc": 20,
+    "seg": 30,
+    "ins": 35,
+    "ext": 15,
+    "amb": 55
+   },
+   "alias": [
+    "mayra mendoza"
+   ]
+  },
+  {
+   "nombre": "Agustín Rossi",
+   "nivel": 2,
+   "espacio": "Partido Justicialista",
+   "cargo": "Ex jefe de Gabinete",
+   "pos": {
+    "eco": 25,
+    "com": 30,
+    "fed": 40,
+    "soc": 30,
+    "seg": 35,
+    "ins": 25,
+    "ext": 25,
+    "amb": 55
+   },
+   "alias": [
+    "agustin rossi"
+   ]
+  },
+  {
+   "nombre": "Juan Grabois",
+   "nivel": 1,
+   "espacio": "Frente Patria Grande",
+   "cargo": "Dirigente social",
+   "pos": {
+    "eco": 10,
+    "com": 15,
+    "fed": 55,
+    "soc": 35,
+    "seg": 15,
+    "ins": 60,
+    "ext": 10,
+    "amb": 30
+   },
+   "alias": [
+    "grabois"
+   ]
+  },
+  {
+   "nombre": "Ofelia Fernández",
+   "nivel": 2,
+   "espacio": "Frente Patria Grande",
+   "cargo": "Ex legisladora porteña",
+   "pos": {
+    "eco": 15,
+    "com": 25,
+    "fed": 40,
+    "soc": 5,
+    "seg": 10,
+    "ins": 55,
+    "ext": 10,
+    "amb": 25
+   },
+   "alias": [
+    "ofelia fernandez"
+   ]
+  },
+  {
+   "nombre": "Guillermo Moreno",
+   "nivel": 2,
+   "espacio": "Principios y Valores",
+   "cargo": "Ex secretario de Comercio",
+   "pos": {
+    "eco": 15,
+    "com": 10,
+    "fed": 35,
+    "soc": 70,
+    "seg": 60,
+    "ins": 55,
+    "ext": 20,
+    "amb": 70
+   },
+   "alias": [
+    "guillermo moreno"
+   ]
+  },
+  {
+   "nombre": "Myriam Bregman",
+   "nivel": 1,
+   "espacio": "Frente de Izquierda",
+   "cargo": "Diputada nacional",
+   "pos": {
+    "eco": 5,
+    "com": 15,
+    "fed": 50,
+    "soc": 5,
+    "seg": 5,
+    "ins": 75,
+    "ext": 5,
+    "amb": 15
+   },
+   "alias": [
+    "bregman"
+   ]
+  },
+  {
+   "nombre": "Nicolás del Caño",
+   "nivel": 2,
+   "espacio": "Frente de Izquierda",
+   "cargo": "Ex diputado nacional",
+   "pos": {
+    "eco": 5,
+    "com": 15,
+    "fed": 50,
+    "soc": 5,
+    "seg": 5,
+    "ins": 75,
+    "ext": 5,
+    "amb": 15
+   },
+   "alias": [
+    "del caño",
+    "del cano"
+   ]
+  },
+  {
+   "nombre": "Gabriel Solano",
+   "nivel": 2,
+   "espacio": "Frente de Izquierda",
+   "cargo": "Legislador porteño",
+   "pos": {
+    "eco": 5,
+    "com": 15,
+    "fed": 50,
+    "soc": 10,
+    "seg": 5,
+    "ins": 80,
+    "ext": 5,
+    "amb": 20
+   },
+   "alias": [
+    "gabriel solano"
+   ]
+  }
+ ],
+ "latam": [
+  {
+   "nombre": "Javier Milei",
+   "pais": "Argentina",
+   "pos": {
+    "eco": 95,
+    "com": 95,
+    "fed": 45,
+    "soc": 75,
+    "seg": 80,
+    "ins": 85,
+    "ext": 95,
+    "amb": 90
+   }
+  },
+  {
+   "nombre": "Cristina Kirchner",
+   "pais": "Argentina",
+   "pos": {
+    "eco": 20,
+    "com": 20,
+    "fed": 25,
+    "soc": 25,
+    "seg": 25,
+    "ins": 40,
+    "ext": 15,
+    "amb": 60
+   }
+  },
+  {
+   "nombre": "Luiz Inácio Lula da Silva",
+   "pais": "Brasil",
+   "pos": {
+    "eco": 25,
+    "com": 30,
+    "fed": 40,
+    "soc": 30,
+    "seg": 35,
+    "ins": 25,
+    "ext": 15,
+    "amb": 55
+   }
+  },
+  {
+   "nombre": "Jair Bolsonaro",
+   "pais": "Brasil",
+   "pos": {
+    "eco": 75,
+    "com": 65,
+    "fed": 50,
+    "soc": 90,
+    "seg": 95,
+    "ins": 80,
+    "ext": 90,
+    "amb": 90
+   }
+  },
+  {
+   "nombre": "Gabriel Boric",
+   "pais": "Chile",
+   "pos": {
+    "eco": 25,
+    "com": 45,
+    "fed": 50,
+    "soc": 10,
+    "seg": 25,
+    "ins": 40,
+    "ext": 30,
+    "amb": 25
+   }
+  },
+  {
+   "nombre": "José Antonio Kast",
+   "pais": "Chile",
+   "pos": {
+    "eco": 80,
+    "com": 80,
+    "fed": 50,
+    "soc": 90,
+    "seg": 90,
+    "ins": 60,
+    "ext": 80,
+    "amb": 80
+   }
+  },
+  {
+   "nombre": "Evelyn Matthei",
+   "pais": "Chile",
+   "pos": {
+    "eco": 70,
+    "com": 75,
+    "fed": 45,
+    "soc": 55,
+    "seg": 75,
+    "ins": 25,
+    "ext": 75,
+    "amb": 70
+   }
+  },
+  {
+   "nombre": "Gustavo Petro",
+   "pais": "Colombia",
+   "pos": {
+    "eco": 15,
+    "com": 30,
+    "fed": 45,
+    "soc": 15,
+    "seg": 15,
+    "ins": 65,
+    "ext": 10,
+    "amb": 10
+   }
+  },
+  {
+   "nombre": "Nayib Bukele",
+   "pais": "El Salvador",
+   "pos": {
+    "eco": 60,
+    "com": 65,
+    "fed": 20,
+    "soc": 75,
+    "seg": 100,
+    "ins": 85,
+    "ext": 60,
+    "amb": 70
+   }
+  },
+  {
+   "nombre": "Claudia Sheinbaum",
+   "pais": "México",
+   "pos": {
+    "eco": 30,
+    "com": 40,
+    "fed": 35,
+    "soc": 30,
+    "seg": 40,
+    "ins": 35,
+    "ext": 35,
+    "amb": 50
+   }
+  },
+  {
+   "nombre": "Andrés Manuel López Obrador",
+   "pais": "México",
+   "pos": {
+    "eco": 25,
+    "com": 35,
+    "fed": 30,
+    "soc": 55,
+    "seg": 50,
+    "ins": 55,
+    "ext": 30,
+    "amb": 70
+   }
+  },
+  {
+   "nombre": "Daniel Noboa",
+   "pais": "Ecuador",
+   "pos": {
+    "eco": 75,
+    "com": 75,
+    "fed": 45,
+    "soc": 60,
+    "seg": 95,
+    "ins": 55,
+    "ext": 85,
+    "amb": 75
+   }
+  },
+  {
+   "nombre": "Rafael Correa",
+   "pais": "Ecuador",
+   "pos": {
+    "eco": 20,
+    "com": 30,
+    "fed": 30,
+    "soc": 55,
+    "seg": 55,
+    "ins": 50,
+    "ext": 15,
+    "amb": 70
+   }
+  },
+  {
+   "nombre": "Yamandú Orsi",
+   "pais": "Uruguay",
+   "pos": {
+    "eco": 35,
+    "com": 50,
+    "fed": 50,
+    "soc": 25,
+    "seg": 35,
+    "ins": 15,
+    "ext": 35,
+    "amb": 45
+   }
+  },
+  {
+   "nombre": "Luis Lacalle Pou",
+   "pais": "Uruguay",
+   "pos": {
+    "eco": 75,
+    "com": 80,
+    "fed": 50,
+    "soc": 50,
+    "seg": 70,
+    "ins": 20,
+    "ext": 70,
+    "amb": 65
+   }
+  },
+  {
+   "nombre": "Rodrigo Paz",
+   "pais": "Bolivia",
+   "pos": {
+    "eco": 65,
+    "com": 65,
+    "fed": 60,
+    "soc": 55,
+    "seg": 65,
+    "ins": 45,
+    "ext": 70,
+    "amb": 70
+   }
+  },
+  {
+   "nombre": "María Corina Machado",
+   "pais": "Venezuela",
+   "pos": {
+    "eco": 85,
+    "com": 85,
+    "fed": 55,
+    "soc": 60,
+    "seg": 75,
+    "ins": 60,
+    "ext": 90,
+    "amb": 75
+   }
+  },
+  {
+   "nombre": "Nicolás Maduro",
+   "pais": "Venezuela",
+   "pos": {
+    "eco": 5,
+    "com": 10,
+    "fed": 10,
+    "soc": 55,
+    "seg": 85,
+    "ins": 70,
+    "ext": 0,
+    "amb": 85
+   }
+  }
+ ],
+ "_nota_cargos": "Cargos a noviembre de 2026, a revisar."
+}
