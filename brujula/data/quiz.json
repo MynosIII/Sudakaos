@@ -1,0 +1,20 @@
+{
+ "updated_at": "2026-11-23T22:06:35Z",
+ "simulado": false,
+ "min_n": 30,
+ "campo": {
+  "recibidas": 0,
+  "validas": 0,
+  "descartes": {},
+  "por_version": {},
+  "por_dia": {}
+ },
+ "versiones": {},
+ "metodo": {
+  "muestra": "Autoselección online (quien entra al quiz y acepta sumar sus respuestas). No es una muestra probabilística: los resultados describen a quienes respondieron y, ponderados, se acercan a la población; el intervalo es de referencia.",
+  "puntaje": "Cada eje: 50 + 50 × (suma de respuesta × peso) / (suma de 2 × |peso|). 0 = polo a, 100 = polo b. a / b = % con puntaje < 40 / > 60.",
+  "calidad": "Se descartan respuestas con menos de 2.5 s por pregunta, misma respuesta en todo, más de 60% neutral, incompletas y duplicadas por navegador (vale la última).",
+  "publicacion": "Solo grupos con 30 respuestas o más. Intervalo 95% con n efectivo de Kish.",
+  "afinidad": "Dirigente más cercano = menor distancia promedio en los 8 ejes contra la codificación editorial de datos/figuras.json (a revisar)."
+ }
+}
