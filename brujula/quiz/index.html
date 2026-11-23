@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Brújula política</title>
-<meta name="description" content="12 ejes políticos, qué tan firme es cada posición y los dirigentes de tu país que más se parecen a vos. Argentina, Brasil, Chile, Colombia, Paraguay, Perú, Uruguay y Latinoamérica.">
+<meta name="description" content="12 ejes políticos, qué tan firme es cada posición, las ideologías y los dirigentes de tu país que más se parecen a vos. Argentina, Brasil, Chile, Colombia, Paraguay, Perú, Uruguay y Latinoamérica.">
 <meta property="og:title" content="Brújula política · Bússola política">
-<meta property="og:description" content="12 ejes, tu certeza en cada uno y los dirigentes que piensan como vos. ES · PT · EN.">
-<meta name="theme-color" content="#05070a">
+<meta property="og:description" content="12 ejes, tu certeza en cada uno, tu ideología y los dirigentes que piensan como vos. ES · PT · EN.">
+<meta name="theme-color" content="#0e1013">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="quiz.css">
 </head>
 <body>
 <header class="top">
   <div class="bar">
-    <div class="logo"><svg class="rose" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14.5"/><circle cx="16" cy="16" r="9"/><path d="M16 2v28M2 16h28"/><path class="n" d="M16 5l3 11h-6z"/><path class="s" d="M16 27l-3-11h6z"/></svg>
-      <span data-i18n="titulo">Brújula política</span><small id="hdr-ver">12 ejes</small></div>
+    <a class="logo" href="#/"><svg class="rose" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14.5"/><circle cx="16" cy="16" r="9"/><path d="M16 2v28M2 16h28"/><path class="n" d="M16 5l3 11h-6z"/><path class="s" d="M16 27l-3-11h6z"/></svg>
+      <span data-i18n="titulo">Brújula política</span><small id="hdr-ver">12 ejes</small></a>
     <div class="clock">
       <button class="tema" id="tema" title="Tema claro / oscuro" aria-label="Tema">◐</button>
       <div class="lang" role="group" aria-label="Idioma / Language"><button data-l="es">ES</button><button data-l="pt">PT</button><button data-l="en">EN</button></div>
@@ -25,36 +25,52 @@
 </header>
 <nav class="nav"><div class="in">
   <a href="#/" data-r="quiz" data-i18n="nav_quiz">Quiz</a><a href="#/ejes" data-r="ejes" data-i18n="nav_ejes">12 ejes</a>
-  <a href="#/mapa" data-r="mapa" data-i18n="nav_mapa">Mapa</a><a href="#/mimapa" data-r="mimapa" data-i18n="nav_mimapa">Mi mapa</a>
-  <a href="#/cara" data-r="cara" data-i18n="nav_cara">Cara a cara</a></div></nav>
+  <a href="#/mapa" data-r="mapa" data-i18n="nav_mapa">Mapa</a><a href="#/mimapa" data-r="mimapa" data-i18n="nav_mimapa">Mi resultado</a>
+  <a href="#/cara" data-r="cara" data-i18n="nav_cara">Cara a cara</a><a href="#/glosario" data-r="glosario" data-i18n="nav_glos">Glosario</a></div></nav>
 
 <main>
   <!-- 1. Inicio -->
   <section id="s-inicio" class="screen on">
-    <div class="hero">
-      <div class="k" data-i18n="inicio_k">PAN-00 · INICIO</div>
-      <h1 data-i18n="h1">¿Dónde estás parado?</h1>
-      <p class="lead" data-i18n="lead"></p>
+    <div class="hgrid">
+      <div>
+        <div class="k" data-i18n="inicio_k">PAN-00 · INICIO</div>
+        <h1 data-i18n="h1">¿Dónde estás parado?</h1>
+        <p class="lead" data-i18n="lead"></p>
+        <div class="row"><button class="btn" id="cta1" data-i18n="cta1">Descubrí tu perfil</button><a class="btn ghost" href="#/ejes" data-i18n="cta2">Ver los 12 ejes</a><a class="btn ghost" href="#/mapa" data-i18n="cta3">Explorar el mapa</a></div>
+        <div class="chips" id="chips"></div>
+      </div>
+      <div class="stack"><div class="ej" id="ejemplo"></div></div>
     </div>
-    <div class="k" data-i18n="elegi">ELEGÍ TU PAÍS</div>
+    <div class="k" data-i18n="como_k">CÓMO FUNCIONA</div>
+    <div class="paso" id="pasos"></div>
+    <div id="elegir" class="k" data-i18n="elegi">ELEGÍ TU PAÍS</div>
     <div id="versiones" class="vers"></div>
     <div class="k" data-i18n="modo_k">MODALIDAD</div>
-    <div class="modos">
-      <button class="modo" data-m="rapida" disabled><b data-i18n="rapida">Rápida</b><span id="m-rapida"></span></button>
-      <button class="modo" data-m="completa" disabled><b data-i18n="completa">Completa</b><span id="m-completa"></span></button>
-    </div>
+    <div class="modos" id="modos"></div>
+    <div class="k" data-i18n="ejes_k2">LOS 12 EJES</div>
+    <div class="ejlist" id="ejlist"></div>
     <p class="fine"><span data-i18n="anon">Anónimo.</span> <a href="#" data-open="privacidad" data-i18n="privacidad">Privacidad</a></p>
   </section>
 
   <!-- 2. Preguntas -->
   <section id="s-preg" class="screen">
-    <div class="prog"><i id="prog-bar"></i></div>
-    <div class="qhead"><span class="k" id="q-n"></span><span class="k" id="q-eje"></span></div>
-    <h2 id="q-t" class="qt"></h2>
-    <div id="q-ops" class="ops"></div>
-    <div class="row between">
-      <button id="q-back" class="btn ghost" data-i18n="volver">← Volver</button>
-      <span class="meta" data-i18n="teclas">Teclas 1 a 5</span>
+    <div class="qwrap">
+      <div class="prog"><i id="prog-bar"></i></div>
+      <div class="qhead"><span class="qchip" id="q-eje"></span><span class="qcount" id="q-n"></span></div>
+      <div class="qcard">
+        <h2 id="q-t" class="qt"></h2>
+        <button class="qhelp" id="q-help" aria-label="?" title="?">?</button>
+        <div class="ayuda" id="q-ayuda" hidden></div>
+      </div>
+      <div id="q-ops" class="ops"></div>
+      <div class="qnav">
+        <button id="q-back" class="btn ghost sm" data-i18n="anterior">← Anterior</button>
+        <button id="q-next" class="btn ghost sm" data-i18n="siguiente">Siguiente →</button>
+        <span class="sp"></span>
+        <button id="q-rev" class="btn ghost sm" data-i18n="revisar">Revisar respuestas</button>
+        <button id="q-reset" class="btn ghost sm" data-i18n="reiniciar">Reiniciar</button>
+      </div>
+      <p class="lema" id="q-lema"></p>
     </div>
   </section>
 
@@ -83,26 +99,29 @@
 
   <!-- 4. Resultado -->
   <section id="s-res" class="screen">
-    <div class="k"><span data-i18n="res_k">PAN-03 · TU RESULTADO</span> <span id="res-ver"></span></div>
-    <h2 id="res-titulo"></h2>
-    <p class="lead small" id="res-sub"></p>
-    <div class="grid">
-      <div class="card wide"><h3><span data-i18n="ejes">Ejes</span> <span class="sl-id">EJ-12</span></h3>
-        <div class="certg"><span class="k" data-i18n="certeza">Certeza</span><div id="cert-g"></div><p class="meta" data-i18n="cert_nota"></p></div>
-        <div id="ejes"></div></div>
-      <div class="card"><h3><span data-i18n="cerca">Dirigentes más cercanos</span> <span class="sl-id">AF-05</span></h3><ol id="match" class="match"></ol>
-        <p class="meta" id="lejos"></p></div>
-      <div class="card"><h3><span data-i18n="mapa">Mapa económico × valores</span> <span class="sl-id">MP-02</span></h3><div id="mapa" class="mapa"></div>
-        <p class="meta" id="mapa-info"></p><p class="meta" data-i18n="mapa_nota"></p></div>
+    <div class="resw">
+      <nav class="toc" id="toc">
+        <a href="#r-perfil" data-i18n="t_perfil">Perfil</a><a href="#r-ejes" data-i18n="t_ejes">12 ejes</a><a href="#r-brujula" data-i18n="t_brujula">Brújula</a>
+        <a href="#r-ideo" data-i18n="t_ideo">Ideologías</a><a href="#r-dir" data-i18n="t_dir">Dirigentes</a><a href="#r-anal" data-i18n="t_anal">Análisis</a><a href="#r-comp" data-i18n="t_comp">Compartir</a>
+      </nav>
+      <div>
+        <div class="sec perfil" id="r-perfil"></div>
+        <div class="sec" id="r-ejes"><h3><span data-i18n="t_ejes2">Tus 12 ejes</span> <span class="sl-id">EJ-12</span></h3><p class="sub" data-i18n="cert_nota"></p>
+          <div class="tog" id="ejes-tog"><button data-v="barras" class="on" data-i18n="barras">Barras</button><button data-v="radar" data-i18n="radar">Radar</button></div>
+          <div id="ejes" class="ejes2"></div><div id="radar" class="radar" hidden></div></div>
+        <div class="sec" id="r-brujula"><h3><span data-i18n="t_brujula2">Brújula 2D</span> <span class="sl-id">BR-02</span></h3><p class="sub" data-i18n="bru_sub"></p><div class="bru" id="bru"></div></div>
+        <div class="sec" id="r-ideo"><h3><span data-i18n="t_ideo2">Ideologías más cercanas</span> <span class="sl-id">ID-16</span></h3><p class="sub" data-i18n="ideo_sub"></p><div id="ideo"></div></div>
+        <div class="sec" id="r-dir"><h3><span data-i18n="cerca">Dirigentes más cercanos</span> <span class="sl-id">AF-05</span></h3><p class="sub" id="dir-sub"></p><div id="dir"></div></div>
+        <div class="sec" id="r-anal"><h3><span data-i18n="t_anal2">Análisis</span> <span class="sl-id">AN-04</span></h3><p class="sub" data-i18n="anal_sub"></p><div id="anal"></div></div>
+        <div class="sec" id="r-comp"><h3><span data-i18n="t_comp2">Tu tarjeta</span> <span class="sl-id">TJ-01</span></h3><p class="sub" data-i18n="comp_sub"></p>
+          <div class="card-prev"><canvas id="tarjeta" width="1080" height="1920"></canvas>
+            <div><div class="row"><button class="btn" id="descargar" data-i18n="descargar">Descargar tarjeta</button><button class="btn ghost" id="share" data-i18n="compartir">Compartir resultado</button></div>
+              <div class="row"><a class="btn ghost sm" id="share-wa" target="_blank" rel="noopener">WhatsApp</a><a class="btn ghost sm" id="share-x" target="_blank" rel="noopener">X</a><button class="btn ghost sm" id="copiar" data-i18n="copiar">Copiar link</button></div>
+              <div class="row"><button class="btn ghost sm" id="again"></button></div>
+              <p class="meta" id="sent"></p></div></div></div>
+        <details class="fine"><summary data-i18n="como">Cómo se calcula</summary><p data-i18n="como_t"></p></details>
+      </div>
     </div>
-    <div class="row">
-      <button class="btn" id="share" data-i18n="compartir">Compartir resultado</button>
-      <a class="btn ghost" id="share-wa" target="_blank" rel="noopener">WhatsApp</a>
-      <a class="btn ghost" id="share-x" target="_blank" rel="noopener">X</a>
-      <button class="btn ghost" id="again"></button>
-    </div>
-    <p class="meta" id="sent"></p>
-    <details class="fine"><summary data-i18n="como">Cómo se calcula</summary><p data-i18n="como_t"></p></details>
   </section>
 
   <!-- 5. Los 12 ejes -->
@@ -135,9 +154,17 @@
     <div id="cara-res" class="cara"></div>
   </section>
 
-  <!-- 8. Mi mapa sin resultado -->
+  <!-- 8. Glosario -->
+  <section id="s-glos" class="screen">
+    <div class="k" data-i18n="glos_k">GLOSARIO</div>
+    <h2 data-i18n="glos_h">Glosario</h2>
+    <p class="lead small" data-i18n="glos_lead"></p>
+    <div class="glos" id="glos"></div>
+  </section>
+
+  <!-- 9. Mi resultado sin resultado -->
   <section id="s-vacio" class="screen">
-    <h2 data-i18n="nav_mimapa">Mi mapa</h2>
+    <h2 data-i18n="nav_mimapa">Mi resultado</h2>
     <p class="lead small" data-i18n="vacio"></p>
     <div class="row"><a class="btn" href="#/" data-i18n="hacer">Hacer el quiz</a></div>
   </section>
@@ -147,6 +174,14 @@
     <h3 data-i18n="privacidad">Privacidad</h3>
     <ul id="priv-list"></ul>
   </div></div>
+  <div id="revision" class="modal" hidden><div class="mbox">
+    <button class="x" data-close>×</button>
+    <h3 data-i18n="revisar">Revisar respuestas</h3>
+    <p class="meta" id="rev-info"></p>
+    <div class="rev" id="rev"></div>
+    <div class="row"><button class="btn" id="rev-fin" data-i18n="ver_res">Ver resultado</button></div>
+  </div></div>
+  <div id="pop" class="pop" hidden></div>
 </main>
 <footer><span data-i18n="pie">Brújula política</span><span>12axes (MIT)</span><span id="foot-v"></span></footer>
 <script src="i18n.js"></script>
