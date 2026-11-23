@@ -122,7 +122,7 @@ editar(d / "index.html", ('panel.js"', f'panel.js?v={SHA}"'))
 q = SITE / "quiz"
 for f in ("index.html", "quiz.js", "quiz.css", "i18n.js"):
     cp(f"brujula/quiz/{f}", q / f)
-for f in ("ejes.json", "preguntas.json", "figuras.json"):
+for f in ("ejes.json", "preguntas.json", "figuras.json", "ideologias.json"):
     cp(f"brujula/datos/{f}", q / "datos" / f)
 ep = os.environ.get("QUIZ_ENDPOINT", "").strip()
 if ep and not re.fullmatch(r"https://script\.google\.com/macros/s/[A-Za-z0-9_-]+/exec", ep):
