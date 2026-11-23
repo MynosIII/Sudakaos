@@ -15,8 +15,13 @@ if '"../assets/plotly.min.js"' not in s:
     sys.exit("build_demo: plotly path not found")
 s = s.replace('"../assets/plotly.min.js"', '"plotly.min.js"')
 s = s.replace("const TOPO='../assets/topo/'", "const TOPO='topo/'")
+for f in ("sala.css", "sala.js"):  # capa visual común de los tableros
+    if f'"../assets/{f}"' not in s:
+        sys.exit(f"build_demo: {f} path not found")
+    s = s.replace(f'"../assets/{f}"', f'"{f}"')
 (out / "index.html").write_text(s, encoding="utf8")
 shutil.copytree(ROOT / "data", out / "data", dirs_exist_ok=True)
-shutil.copy(ROOT.parent / "assets" / "plotly.min.js", out / "plotly.min.js")
+for f in ("plotly.min.js", "sala.css", "sala.js"):
+    shutil.copy(ROOT.parent / "assets" / f, out / f)
 shutil.copytree(ROOT.parent / "assets" / "topo", out / "topo", dirs_exist_ok=True)
 print(f"demo -> {out}")
