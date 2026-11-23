@@ -24,7 +24,7 @@ jobs:
     timeout-minutes: 10
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.deployment2.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -43,6 +43,16 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
+      # A veces deploy-pages no encuentra el artefacto recién subido ("No artifacts named github-pages"):
+      # es una demora de la API de GitHub. Se reintenta una vez después de esperar.
       - name: Deploy GitHub Pages
         id: deployment
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+      - name: Esperar antes de reintentar
+        if: steps.deployment.outcome == 'failure'
+        run: sleep 45
+      - name: Deploy GitHub Pages (reintento)
+        id: deployment2
+        if: steps.deployment.outcome == 'failure'
         uses: actions/deploy-pages@v4
