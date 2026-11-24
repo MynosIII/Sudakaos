@@ -405,7 +405,7 @@ Object.assign(window.BRUJULA_I18N.es, {
   completa: 'Completa', exhaustiva: 'Exhaustiva',
   d_rapida: 'Cuatro frases por eje y lo más caliente de tu país. Para una primera idea.',
   d_completa: 'Siete frases por eje: el mejor equilibrio entre tiempo y precisión.',
-  d_exhaustiva: 'Todas las frases, unas 190. El resultado más fino y una certeza más confiable.',
+  d_exhaustiva: 'Todas las frases, casi 200 (más en Argentina). El resultado más fino y una certeza más confiable.',
   ejes_lead: 'Cada eje va de un polo a otro. Las rayitas son los dirigentes del país elegido; la marca destacada sos vos, si ya hiciste el quiz.'
 });
 Object.assign(window.BRUJULA_I18N.pt, {
@@ -415,7 +415,7 @@ Object.assign(window.BRUJULA_I18N.pt, {
   lead: 'Talvez você esteja se rotulando errado. Responda frases curtas e descubra seu perfil em <b>12 eixos</b>, a <b>ideologia</b> mais parecida com você e com quais <b>políticos do seu país</b> você concorda.',
   d_rapida: 'Quatro frases por eixo e o mais quente do seu país. Para uma primeira ideia.',
   d_completa: 'Sete frases por eixo: o melhor equilíbrio entre tempo e precisão.',
-  d_exhaustiva: 'Todas as frases, umas 190. O resultado mais fino e uma certeza mais confiável.',
+  d_exhaustiva: 'Todas as frases, quase 200 (mais na Argentina). O resultado mais fino e uma certeza mais confiável.',
   ejes_lead: 'Cada eixo vai de um polo a outro. Os traços são os políticos do país escolhido; a marca destacada é você, se já fez o teste.'
 });
 Object.assign(window.BRUJULA_I18N.en, {
@@ -425,6 +425,6 @@ Object.assign(window.BRUJULA_I18N.en, {
   lead: 'You might be labeling yourself wrong. Answer short statements and find your profile on <b>12 axes</b>, the closest <b>ideology</b> and which <b>politicians in your country</b> you agree with.',
   d_rapida: 'Four statements per axis plus the hottest local issues. For a first idea.',
   d_completa: 'Seven statements per axis: the best balance between time and precision.',
-  d_exhaustiva: 'Every statement, about 190. The finest result and a more reliable certainty.',
+  d_exhaustiva: 'Every statement, almost 200 (more for Argentina). The finest result and a more reliable certainty.',
   ejes_lead: 'Each axis runs from one pole to the other. Ticks are the politicians of the chosen country; the highlighted mark is you, if you took the quiz.'
 });

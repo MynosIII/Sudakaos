@@ -1,17 +1,17 @@
 /* Brújula política v3: azul noche + celeste, Space Grotesk, un color por eje. Celular primero. Tema claro en :root[data-theme=light]. */
 :root{
-  --page:#12151b;--s1:#1b1f27;--s2:#222731;--s3:#2b313d;--line:#2a303b;--line2:#3a4250;
-  --txt:#eef0f4;--muted:#b0b8c5;--dim:#7e8796;
-  --sig:#7aa6d8;--sig2:rgba(122,166,216,.55);--sig3:rgba(122,166,216,.14);--gold:#d9b35b;--hot:#ef6b6b;--ok:#4cc38a;--a:#7aa6d8;--b:#d9b35b;
-  --r:16px;--mono:"Space Grotesk",system-ui,sans-serif;--head:"Space Grotesk",system-ui,sans-serif;--body:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --page:#14181f;--s1:#1d2430;--s2:#222a37;--s3:#2a3342;--line:#323b4b;--line2:#3d4759;
+  --txt:#F5F1E8;--muted:#a3acba;--dim:#7d8696;
+  --sig:#75AADB;--sig2:rgba(117,170,219,.55);--sig3:rgba(117,170,219,.14);--gold:#D6B56D;--hot:#e08a63;--ok:#4cc38a;--a:#75AADB;--b:#D6B56D;
+  --r:16px;--mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;--head:"Space Grotesk",Arial,sans-serif;--body:"Plus Jakarta Sans",Arial,sans-serif;
   --grid:transparent;--shadow:0 14px 40px rgba(0,0,0,.35);color-scheme:dark
 }
-:root[data-theme=light]{--page:#f5f6f8;--s1:#ffffff;--s2:#f0f2f6;--s3:#e5e9ef;--line:#e2e6ec;--line2:#cbd2dc;--txt:#151922;--muted:#465163;--dim:#748093;
-  --sig:#3f73b3;--sig2:rgba(63,115,179,.5);--sig3:rgba(63,115,179,.1);--gold:#b48a2c;--a:#3f73b3;--b:#b48a2c;--grid:transparent;--shadow:0 12px 30px rgba(20,30,50,.1);color-scheme:light}
+:root[data-theme=light]{--page:#F5F1E8;--s1:#ffffff;--s2:#f8f5ee;--s3:#ece6d8;--line:#ddd5c2;--line2:#cfc5ae;--txt:#20242C;--muted:#5b6472;--dim:#7c8492;
+  --sig:#153B66;--sig2:rgba(21,59,102,.5);--sig3:rgba(21,59,102,.1);--gold:#b8963f;--hot:#b8502f;--a:#2a6fb0;--b:#b8963f;--grid:transparent;--shadow:0 12px 30px rgba(40,30,10,.1);color-scheme:light}
 *{box-sizing:border-box}
 html{background:var(--page);-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{margin:0;color:var(--txt);font:15.5px/1.6 var(--body);min-height:100vh;display:flex;flex-direction:column;
-  background:radial-gradient(900px 480px at 85% -10%,rgba(122,166,216,.08),transparent 60%),var(--page);background-attachment:fixed}
+  background:radial-gradient(900px 480px at 85% -10%,rgba(117,170,219,.08),transparent 60%),var(--page);background-attachment:fixed}
 a{color:var(--sig)}::selection{background:var(--sig);color:#000}
 button{font-family:inherit}
 .top{border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--page) 85%,transparent);backdrop-filter:blur(8px);position:sticky;top:0;z-index:5}
@@ -243,7 +243,8 @@ table.tt{width:100%;border-collapse:collapse;font-size:12.5px}.tt th{font:600 10
 .resw>div{min-width:0}.sec{min-width:0;overflow:hidden}.kpis div{min-width:0}
 
 /* ---------- v3: más amigable (tipografía tipo 12 ejes, sin códigos, botones en minúscula) */
-.btn{font:600 14.5px var(--body);letter-spacing:0;text-transform:none;padding:12px 20px;border-radius:10px;color:#0d1420}
+.btn{font:600 14.5px var(--body);letter-spacing:0;text-transform:none;padding:12px 20px;border-radius:10px;color:#14181f}
+:root[data-theme=light] .btn:not(.ghost){color:#F5F1E8}
 .btn.ghost{color:var(--txt);border-width:1.5px}.btn.sm{font-size:13px;padding:7px 13px}
 .nav{background:transparent}.nav a{font:500 14px var(--body);letter-spacing:0;text-transform:none;color:var(--muted);padding:12px 12px}
 .nav a.on{color:var(--txt);border-bottom-color:var(--sig)}
@@ -261,3 +262,4 @@ h2,h3{font-family:var(--head);letter-spacing:-.2px}
 .ver{display:inline-flex!important;align-items:center;gap:9px}
 footer{font-family:var(--body)}
 body{font-variant-numeric:tabular-nums}.tema{font-size:13px;padding:4px 10px}
+:root[data-theme=light] .lang button.on,:root[data-theme=light] .ej .tg,:root[data-theme=light] .tog button.on,:root[data-theme=light] ::selection{color:#F5F1E8}
