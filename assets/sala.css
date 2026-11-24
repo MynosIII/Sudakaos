@@ -84,7 +84,8 @@ footer{max-width:1480px;margin:0 auto;padding:0 20px 40px;font:12px var(--sans);
 .hero,.mg-hero,.hero2 .me{background:var(--s1)!important;border-radius:0!important;border:1px solid var(--line)!important;box-shadow:none!important}
 .hero h1,.mg-who h2,.prof h2,.me h1,.side h2{font-family:var(--serif)!important;font-weight:600;letter-spacing:-.2px}
 .hero h1,.me h1{font-size:30px!important;line-height:1.15}
-.hero2{border-radius:0!important}.hero2 .nums div{border-radius:0!important;background:transparent!important}
+.hero2{border-radius:0!important}
+.duel{background:var(--s1)!important;border:1px solid var(--line)!important}.duel .side.a,.duel .side.b{background:var(--s1)!important}.duel .side.a{box-shadow:inset 2px 0 0 var(--c,var(--sig))}.duel .side.b{box-shadow:inset -2px 0 0 var(--c,var(--sig))}.hero2 .nums div{border-radius:0!important;background:transparent!important}
 .av{border-radius:0!important;box-shadow:none!important;text-shadow:none!important;font-family:var(--sans)!important}
 .hero>.av,.me .hd>.av,.side .hd>.av,.prof>.av,.mg-who>.av{width:96px!important;height:96px!important;font-size:24px!important}
 

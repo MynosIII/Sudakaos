@@ -117,7 +117,6 @@ Generado por `fotos/bajar.py`. Fotos de Wikimedia Commons (licencia libre, se re
 | Verónica Magario | `eb7016fa` | Embajada de EEUU en Argentina | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Marc_Stanley_y_Ver%C3%B3nica_Magario_(cropped).jpg |
 | Víctor Clark | `49e72bc3` | Instagram @vclarkb | perfil público | https://www.instagram.com/vclarkb/ |
 | Victoria Villarruel | `348f8da6` | Senado Argentina | Public domain | https://commons.wikimedia.org/wiki/File:Victoria_Villarruel_Abril_2025_(cropped).jpg |
-| Walter Cortés | `e918d2ea` | FarukGarcia | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Walter_Cort%C3%A9s.jpg |
 | Walter Klix | `6a44cc1c` | Instagram @klixwalter | perfil público | https://www.instagram.com/klixwalter/ |
 
 ## Sin foto

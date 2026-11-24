@@ -141,7 +141,7 @@
     document.documentElement.classList.add('sl-on');
     var li=document.querySelector('.logo i');
     if(li&&/^[◉·\s]*$/.test(li.textContent)&&!li.id){li.outerHTML=mark()}
-    else{var lg=document.querySelector('.logo,.brand');if(lg)lg.insertAdjacentHTML('afterbegin',mark())}
+    else if(!li){var lg=document.querySelector('.logo,.brand');if(lg)lg.insertAdjacentHTML('afterbegin',mark())}
     kpiText();fotos();
     new MutationObserver(function(){
       if(pend)return;pend=1;requestAnimationFrame(function(){pend=0;kpiText();fotos()});
