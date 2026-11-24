@@ -15,6 +15,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from base_ampliada import AMPLIADA  # noqa: E402
+from base_argentina import AR_EXTRA  # noqa: E402
 
 D = Path(__file__).resolve().parent
 PAISES = ["ar", "br", "py", "pe", "cl", "co", "uy"]
@@ -193,6 +194,8 @@ def preguntas():
                 if q.get(lg):
                     d[lg] = q[lg]
             qs.append(d)
+    for i, (t, tpt, ten, e) in enumerate(AR_EXTRA, len(LOCAL["ar"]) + 1):
+        qs.append({"id": f"ar{i:02d}", "t": t, "t_pt": tpt, "t_en": ten, "e": e, "v": ["ar"]})
     return qs
 
 

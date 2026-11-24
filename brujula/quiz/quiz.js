@@ -532,11 +532,11 @@
   async function tarjeta(sinFoto) {
     const cv = $('#tarjeta'), x = cv.getContext('2d'), t = T(), sc = S.scores, cert = S.cert, rk = S.rk, E = EJES();
     const light = document.documentElement.dataset.theme === 'light';
-    const bg = light ? '#f5f6f8' : '#12151b', s1 = light ? '#ffffff' : '#1b1f27', s3 = light ? '#e5e9ef' : '#2b313d', txt = light ? '#151922' : '#eef0f4', mut = light ? '#465163' : '#b0b8c5', sig = light ? '#3f73b3' : '#7aa6d8';
+    const bg = light ? '#F5F1E8' : '#14181f', s1 = light ? '#ffffff' : '#1d2430', s3 = light ? '#ece6d8' : '#2a3342', txt = light ? '#20242C' : '#F5F1E8', mut = light ? '#5b6472' : '#a3acba', sig = light ? '#153B66' : '#75AADB';
     try { await document.fonts.ready } catch (e) { }
     const top = rk.figs[0], img = sinFoto || !top ? null : await cargarImg(await foto(top.f.nombre));
     if (S.rk !== rk) return; // cambió el resultado mientras cargaba
-    const W = 1080, H = 1920, F = (w, s, f) => `${w} ${s}px ${f || '"Plus Jakarta Sans", sans-serif'}`, HEAD = '"Space Grotesk", sans-serif', MONO = '"Space Grotesk", sans-serif';
+    const W = 1080, H = 1920, F = (w, s, f) => `${w} ${s}px ${f || '"Plus Jakarta Sans", sans-serif'}`, HEAD = '"Space Grotesk", sans-serif', MONO = '"JetBrains Mono", monospace';
     const caja = (Y, h) => { rrect(x, 60, Y, W - 120, h, 28); x.fillStyle = s1; x.fill() };
     const corta = (s, w) => { while (x.measureText(s).width > w && s.length > 4) s = s.slice(0, -2) + '…'; return s };
     x.clearRect(0, 0, W, H); x.fillStyle = bg; x.fillRect(0, 0, W, H);

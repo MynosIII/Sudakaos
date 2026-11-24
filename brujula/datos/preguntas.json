@@ -4728,6 +4728,450 @@
    ],
    "t_pt": "O Uruguai deveria ter uma postura mais dura com o governo da Venezuela.",
    "t_en": "Uruguay should take a tougher stance on Venezuela's government."
+  },
+  {
+   "id": "ar15",
+   "t": "YPF tendría que seguir siendo mayormente del Estado.",
+   "t_pt": "A YPF deveria continuar majoritariamente estatal.",
+   "t_en": "YPF should remain mostly state-owned.",
+   "e": {
+    "pla": -1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "ar16",
+   "t": "Aerolíneas Argentinas debería privatizarse aunque se pierdan rutas poco rentables.",
+   "t_pt": "A Aerolíneas Argentinas deveria ser privatizada mesmo perdendo rotas pouco rentáveis.",
+   "t_en": "Aerolíneas Argentinas should be privatized even if unprofitable routes are lost.",
+   "e": {
+    "pla": 1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "ar17",
+   "t": "El Banco Central no debería intervenir en el precio del dólar.",
+   "t_pt": "O Banco Central não deveria intervir no preço do dólar.",
+   "t_en": "The Central Bank should not intervene in the dollar exchange rate.",
+   "e": {
+    "pla": 1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "ar18",
+   "t": "Los controles de precios, como Precios Justos, sirven para frenar la inflación.",
+   "t_pt": "Os controles de preços, como o Precios Justos, ajudam a frear a inflação.",
+   "t_en": "Price controls such as 'Precios Justos' help curb inflation.",
+   "e": {
+    "pla": -1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "ar19",
+   "t": "Sobran empleados públicos y hay que reducir la planta del Estado.",
+   "t_pt": "Há funcionários públicos demais e é preciso reduzir o quadro do Estado.",
+   "t_en": "There are too many public employees and the state payroll should shrink.",
+   "e": {
+    "pla": 1,
+    "col": 0.5
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "ar20",
+   "t": "El transporte público tiene que seguir subsidiado aunque cueste plata al Estado.",
+   "t_pt": "O transporte público deve continuar subsidiado mesmo custando caro ao Estado.",
+   "t_en": "Public transport should stay subsidized even if it costs the state money.",
+   "e": {
+    "pla": -1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "ar21",
+   "t": "Hay que reformar la ley de contrato de trabajo para que contratar sea más fácil.",
+   "t_pt": "É preciso reformar a lei trabalhista para que contratar seja mais fácil.",
+   "t_en": "Labor law should be reformed to make hiring easier.",
+   "e": {
+    "col": 1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "ar22",
+   "t": "Los repartidores de aplicaciones deberían ser empleados en blanco de esas empresas.",
+   "t_pt": "Os entregadores de aplicativo deveriam ser empregados formais dessas empresas.",
+   "t_en": "App delivery riders should be formal employees of those companies.",
+   "e": {
+    "col": -1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "ar23",
+   "t": "Los paros de la CGT hacen más daño que bien.",
+   "t_pt": "As greves gerais da CGT fazem mais mal do que bem.",
+   "t_en": "General strikes by the CGT do more harm than good.",
+   "e": {
+    "col": 1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "ar24",
+   "t": "La AUH y los planes sociales son necesarios para que nadie quede afuera.",
+   "t_pt": "A AUH e os programas sociais são necessários para que ninguém fique de fora.",
+   "t_en": "Child allowances and social programs are needed so nobody is left behind.",
+   "e": {
+    "col": -1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "ar25",
+   "t": "Quien cobra un plan social debería dar algo a cambio con trabajo comunitario.",
+   "t_pt": "Quem recebe um programa social deveria dar algo em troca com trabalho comunitário.",
+   "t_en": "People on welfare should give something back through community work.",
+   "e": {
+    "col": 1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "ar26",
+   "t": "Un impuesto a las grandes fortunas es justo.",
+   "t_pt": "Um imposto sobre grandes fortunas é justo.",
+   "t_en": "A tax on large fortunes is fair.",
+   "e": {
+    "col": -1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "ar27",
+   "t": "El litio tendría que industrializarse acá y no exportarse en bruto.",
+   "t_pt": "O lítio deveria ser industrializado aqui e não exportado bruto.",
+   "t_en": "Lithium should be processed here rather than exported raw.",
+   "e": {
+    "glo": -1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "ar28",
+   "t": "El acuerdo Mercosur-Unión Europea es una oportunidad para el país.",
+   "t_pt": "O acordo Mercosul-União Europeia é uma oportunidade para o país.",
+   "t_en": "The Mercosur-EU trade deal is an opportunity for the country.",
+   "e": {
+    "glo": 1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "ar29",
+   "t": "Comprar afuera por internet debería tener menos trabas y aranceles.",
+   "t_pt": "Comprar do exterior pela internet deveria ter menos entraves e tarifas.",
+   "t_en": "Buying from abroad online should face fewer hurdles and tariffs.",
+   "e": {
+    "glo": 1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "ar30",
+   "t": "Los decretos de necesidad y urgencia deberían usarse mucho menos.",
+   "t_pt": "Os decretos de necessidade e urgência deveriam ser usados muito menos.",
+   "t_en": "Emergency decrees should be used much less.",
+   "e": {
+    "dem": -1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "ar31",
+   "t": "A veces el Congreso traba más de lo que ayuda a gobernar.",
+   "t_pt": "Às vezes o Congresso atrapalha mais do que ajuda a governar.",
+   "t_en": "Congress sometimes gets in the way of governing more than it helps.",
+   "e": {
+    "dem": 1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "ar32",
+   "t": "Quien fue condenado por corrupción no debería poder ser candidato.",
+   "t_pt": "Quem foi condenado por corrupção não deveria poder ser candidato.",
+   "t_en": "Anyone convicted of corruption should be barred from running for office.",
+   "e": {
+    "dem": -0.5,
+    "lib": -0.5
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "ar33",
+   "t": "La Boleta Única de Papel mejora la transparencia de las elecciones.",
+   "t_pt": "A cédula única de papel melhora a transparência das eleições.",
+   "t_en": "The single paper ballot makes elections more transparent.",
+   "e": {
+    "dem": -1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "ar34",
+   "t": "La TV Pública debería ser independiente del gobierno de turno.",
+   "t_pt": "A TV Pública deveria ser independente do governo da vez.",
+   "t_en": "Public TV should be independent from whoever is in government.",
+   "e": {
+    "dem": -1,
+    "lib": 0.5
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "ar35",
+   "t": "El gobierno debería poder disolver cortes de calle sin esperar a un juez.",
+   "t_pt": "O governo deveria poder dissolver bloqueios de rua sem esperar um juiz.",
+   "t_en": "The government should be able to clear road blockades without waiting for a judge.",
+   "e": {
+    "lib": -1,
+    "dem": 0.5
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "ar36",
+   "t": "Hay que bajar la edad de imputabilidad.",
+   "t_pt": "É preciso reduzir a maioridade penal.",
+   "t_en": "The age of criminal responsibility should be lowered.",
+   "e": {
+    "lib": -1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "ar37",
+   "t": "Las Fuerzas Armadas deberían ayudar a combatir el narco en ciudades como Rosario.",
+   "t_pt": "As Forças Armadas deveriam ajudar a combater o tráfico em cidades como Rosário.",
+   "t_en": "The armed forces should help fight drug trafficking in cities like Rosario.",
+   "e": {
+    "lib": -1,
+    "mil": -0.5
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "ar38",
+   "t": "La prisión preventiva se usa demasiado y debería ser la excepción.",
+   "t_pt": "A prisão preventiva é usada demais e deveria ser a exceção.",
+   "t_en": "Pretrial detention is overused and should be the exception.",
+   "e": {
+    "lib": 1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "ar39",
+   "t": "Tener un arma para defenderse debería ser más fácil.",
+   "t_pt": "Ter uma arma para se defender deveria ser mais fácil.",
+   "t_en": "It should be easier to own a gun for self-defense.",
+   "e": {
+    "lib": 1,
+    "col": 0.5
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "ar40",
+   "t": "La ley de aborto legal fue un avance.",
+   "t_pt": "A lei do aborto legal foi um avanço.",
+   "t_en": "The legal abortion law was a step forward.",
+   "e": {
+    "pro": -1,
+    "rel": -0.5
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "ar41",
+   "t": "El lenguaje inclusivo no debería usarse en escuelas ni en documentos oficiales.",
+   "t_pt": "A linguagem neutra não deveria ser usada em escolas nem em documentos oficiais.",
+   "t_en": "Gender-neutral language should not be used in schools or official documents.",
+   "e": {
+    "pro": 1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "ar42",
+   "t": "La educación sexual integral tendría que darse en todas las escuelas.",
+   "t_pt": "A educação sexual integral deveria ser dada em todas as escolas.",
+   "t_en": "Comprehensive sex education should be taught in every school.",
+   "e": {
+    "pro": -1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "ar43",
+   "t": "Regular el consumo personal de marihuana es el camino correcto.",
+   "t_pt": "Regulamentar o consumo pessoal de maconha é o caminho certo.",
+   "t_en": "Regulating personal cannabis use is the right path.",
+   "e": {
+    "pro": -0.5,
+    "lib": 1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "ar44",
+   "t": "Buenos Aires concentra demasiado poder y el interior paga las consecuencias.",
+   "t_pt": "Buenos Aires concentra poder demais e o interior paga as consequências.",
+   "t_en": "Buenos Aires concentrates too much power and the provinces pay the price.",
+   "e": {
+    "fed": -1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "ar45",
+   "t": "Las provincias con petróleo o litio deberían quedarse con más de lo que generan.",
+   "t_pt": "As províncias com petróleo ou lítio deveriam ficar com mais do que geram.",
+   "t_en": "Provinces with oil or lithium should keep more of what those resources generate.",
+   "e": {
+    "fed": -1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "ar46",
+   "t": "Los fondos a las provincias tendrían que repartirse con reglas fijas y no a dedo.",
+   "t_pt": "Os repasses às províncias deveriam seguir regras fixas e não favoritismo.",
+   "t_en": "Funds for the provinces should follow fixed rules, not discretion.",
+   "e": {
+    "fed": -0.5,
+    "dem": -0.5
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "ar47",
+   "t": "El reclamo por Malvinas tiene que ser una prioridad permanente.",
+   "t_pt": "A reivindicação das Malvinas deve ser uma prioridade permanente.",
+   "t_en": "The Falklands/Malvinas claim must be a permanent priority.",
+   "e": {
+    "int": 1
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "ar48",
+   "t": "Argentina debería alinearse con Estados Unidos en política exterior.",
+   "t_pt": "A Argentina deveria se alinhar com os Estados Unidos na política externa.",
+   "t_en": "Argentina should align with the United States on foreign policy.",
+   "e": {
+    "int": -0.5,
+    "glo": 0.5
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "ar49",
+   "t": "El país tiene que desarrollar sus propios satélites y reactores, como INVAP y ARSAT, aunque cueste más.",
+   "t_pt": "O país deve desenvolver seus próprios satélites e reatores, como INVAP e ARSAT, mesmo custando mais.",
+   "t_en": "The country should build its own satellites and reactors, like INVAP and ARSAT, even if it costs more.",
+   "e": {
+    "tec": -1,
+    "glo": -0.5
+   },
+   "v": [
+    "ar"
+   ]
+  },
+  {
+   "id": "ar50",
+   "t": "El Conicet y la ciencia pública merecen más presupuesto.",
+   "t_pt": "O Conicet e a ciência pública merecem mais orçamento.",
+   "t_en": "CONICET and public science deserve more funding.",
+   "e": {
+    "tec": -1,
+    "pla": -0.5
+   },
+   "v": [
+    "ar"
+   ]
   }
  ]
 }
