@@ -88,6 +88,18 @@
   }
   const texto = q => (S.lang === 'pt' && q.t_pt) || (S.lang === 'en' && q.t_en) || q.t;
   const respuestas = () => S.ejes.respuestas.map((r, j) => ({ v: r.v, t: S.lang === 'pt' ? S.ejes.respuestas_pt[j] : S.lang === 'en' ? S.ejes.respuestas_en[j] : r.t }));
+  // Banderas simplificadas (SVG en línea, 30×20).
+  const BANDERA = {
+    ar: '<rect width="30" height="20" fill="#74acdf"/><rect y="6.67" width="30" height="6.67" fill="#fff"/><circle cx="15" cy="10" r="2" fill="#f6b40e"/>',
+    br: '<rect width="30" height="20" fill="#009c3b"/><path d="M15 2.5 27 10 15 17.5 3 10z" fill="#ffdf00"/><circle cx="15" cy="10" r="4.2" fill="#002776"/>',
+    py: '<rect width="30" height="20" fill="#fff"/><rect width="30" height="6.67" fill="#d52b1e"/><rect y="13.33" width="30" height="6.67" fill="#0038a8"/>',
+    pe: '<rect width="30" height="20" fill="#d91023"/><rect x="10" width="10" height="20" fill="#fff"/>',
+    cl: '<rect width="30" height="20" fill="#fff"/><rect y="10" width="30" height="10" fill="#d52b1e"/><rect width="10" height="10" fill="#0039a6"/><circle cx="5" cy="5" r="1.6" fill="#fff"/>',
+    co: '<rect width="30" height="20" fill="#ce1126"/><rect width="30" height="15" fill="#003893"/><rect width="30" height="10" fill="#fcd116"/>',
+    uy: '<rect width="30" height="20" fill="#fff"/><g fill="#0038a8"><rect y="2.22" width="30" height="2.22"/><rect y="6.67" width="30" height="2.22"/><rect y="11.11" width="30" height="2.22"/><rect y="15.56" width="30" height="2.22"/></g><rect width="11" height="11.11" fill="#fff"/><circle cx="5.5" cy="5.5" r="2.4" fill="#fcd116"/>',
+    mx: '<rect width="30" height="20" fill="#fff"/><rect width="10" height="20" fill="#006847"/><rect x="20" width="10" height="20" fill="#ce1126"/><circle cx="15" cy="10" r="2" fill="#8c6a2e"/>'
+  };
+  const bandera = id => BANDERA[id] ? `<span class="flag"><svg viewBox="0 0 30 20" aria-hidden="true">${BANDERA[id]}</svg></span>` : '';
   const nombreVer = id => (VER_NOMBRE[S.lang] || {})[id] || S.ejes.versiones[id].nombre;
   function figuras(ver) { return S.fig[(S.ejes.versiones[ver] || {}).figuras || 'latam'] || [] }
   const ideoNom = i => (i[S.lang] || i.es).nombre, ideoDesc = i => (i[S.lang] || i.es).desc;
@@ -163,14 +175,11 @@
   }
 
   // ------------------------------------------------------------ inicio
-  function reloj() {
-    $('#hdr-t').textContent = new Date().toLocaleTimeString('es-AR', { timeZone: 'America/Argentina/Buenos_Aires', hour: '2-digit', minute: '2-digit' });
-  }
   function verInicial() {
-    try { const g = JSON.parse(localStorage.getItem('brujula_res') || 'null'); if (g && g.ver && S.ejes.versiones[g.ver]) return g.ver } catch (e) { }
+    try { const g = JSON.parse(localStorage.getItem('brujula_res') || 'null'); if (g && g.ver && g.ver !== 'general' && S.ejes.versiones[g.ver]) return g.ver } catch (e) { }
     const reg = ((navigator.language || '').split('-')[1] || '').toUpperCase(), m = { AR: 'ar', BR: 'br', PY: 'py', PE: 'pe', CL: 'cl', CO: 'co', UY: 'uy' }[reg];
     if (m && S.ejes.versiones[m] && S.ejes.versiones[m].activa) return m;
-    return S.lang === 'pt' ? 'br' : S.lang === 'en' ? 'general' : 'ar';
+    return S.lang === 'pt' ? 'br' : 'ar';
   }
   function portada() {
     const t = T(), act = Object.entries(S.ejes.versiones).filter(([id, v]) => v.activa && id !== 'general');
@@ -192,8 +201,8 @@
   }
   function versiones() {
     const t = T();
-    $('#versiones').innerHTML = Object.entries(S.ejes.versiones).map(([id, v]) =>
-      `<button class="ver${id === S.ver ? ' on' : ''}" data-v="${id}" ${v.activa ? '' : 'disabled'}><b>${esc(nombreVer(id))}</b>${v.activa ? '' : `<span>${esc(t.pronto)}</span>`}</button>`).join('');
+    $('#versiones').innerHTML = Object.entries(S.ejes.versiones).filter(([id]) => id !== 'general').map(([id, v]) =>
+      `<button class="ver${id === S.ver ? ' on' : ''}" data-v="${id}" ${v.activa ? '' : 'disabled'}>${bandera(id)}<b>${esc(nombreVer(id))}</b>${v.activa ? '' : `<span>${esc(t.pronto)}</span>`}</button>`).join('');
     $('#modos').innerHTML = ['rapida', 'completa', 'exhaustiva'].map(m => {
       const n = seleccion(S.ver, m).length;
       return `<div class="modo${m === 'completa' ? ' rec' : ''}">${m === 'completa' ? `<span class="tg">${esc(t.rec)}</span>` : ''}<b>${esc(t[m])}</b>
@@ -201,25 +210,31 @@
         <button class="btn${m === 'completa' ? '' : ' ghost'}" data-m="${m}">${esc(t.empezar)} →</button></div>`;
     }).join('');
   }
-  /* Express: por eje, una frase hacia cada polo (de nivel intermedio) + 6 locales.
-     Completa: tres por eje + 9 locales. Exhaustiva: todas. Las locales alternan dos del país y una general. */
+  /* Express: las 4 frases originales por eje + 7 locales. Completa: 7 por eje (las 4 originales + 3 de la
+     ampliación, alternando polos y prefiriendo intensidad media) + 11 locales. Exhaustiva: todas.
+     Orden: eje por eje, con las locales intercaladas de forma pareja. */
   function seleccion(ver, modo) {
     const todas = S.preg.preguntas.filter(q => q.v.includes(ver));
-    if (modo === 'exhaustiva') return todas;
-    const elegidas = new Set(), porEje = modo === 'rapida' ? 2 : 3, nLoc = modo === 'rapida' ? 6 : 9;
+    const extra = modo === 'rapida' ? 0 : modo === 'completa' ? 3 : 99, nLoc = modo === 'rapida' ? 7 : modo === 'completa' ? 11 : 999;
+    const base = [];
     S.ejes.ejes.forEach(e => {
-      const base = todas.filter(q => q.id[0] === 'x' && q.e[e.id]);
-      const orden = s => base.filter(q => Math.sign(q.e[e.id]) === s).sort((a, b) => Math.abs((a.nivel || 2) - 2.5) - Math.abs((b.nivel || 2) - 2.5));
+      const del = todas.filter(q => q.id[0] === 'x' && q.e[e.id]);
+      const orig = del.filter(q => !q.extra), amp = del.filter(q => q.extra);
+      const orden = s => amp.filter(q => Math.sign(q.e[e.id]) === s).sort((a, b) => Math.abs((a.nivel || 2) - 2.5) - Math.abs((b.nivel || 2) - 2.5));
       const pos = orden(1), neg = orden(-1), out = [];
-      for (let j = 0; out.length < porEje && (pos[j] || neg[j]); j++) { if (neg[j]) out.push(neg[j]); if (pos[j] && out.length < porEje) out.push(pos[j]) }
-      out.forEach(q => elegidas.add(q));
+      for (let j = 0; out.length < extra && (pos[j] || neg[j]); j++) { if (neg[j]) out.push(neg[j]); if (pos[j] && out.length < extra) out.push(pos[j]) }
+      const sel = new Set([...orig, ...out]);
+      base.push(...del.filter(q => sel.has(q)));
     });
     const pais = todas.filter(q => q.id[0] !== 'x' && q.id[0] !== 'g'), gen = todas.filter(q => q.id[0] === 'g'), loc = [];
-    for (let j = 0; loc.length < nLoc && (pais[2 * j] || gen[j]); j++) {
+    for (let j = 0; loc.length < nLoc && (pais[2 * j] || pais[2 * j + 1] || gen[j]); j++) {
       [pais[2 * j], pais[2 * j + 1], gen[j]].forEach(q => { if (q && loc.length < nLoc) loc.push(q) });
     }
-    loc.forEach(q => elegidas.add(q));
-    return todas.filter(q => elegidas.has(q));
+    const out = [], paso = base.length / (loc.length + 1);
+    let k = 0;
+    base.forEach((q, j) => { out.push(q); while (k < loc.length && j + 1 >= Math.round(paso * (k + 1))) out.push(loc[k++]) });
+    while (k < loc.length) out.push(loc[k++]);
+    return out;
   }
   function show(id) {
     $$('.screen').forEach(s => s.classList.toggle('on', s.id === id));
@@ -250,7 +265,6 @@
     const q = S.qs[S.i], n = S.qs.length, t = T(), r = S.ans.filter(a => a !== null).length;
     const ks = Object.entries(q.e).filter(([, w]) => w).sort((a, b) => Math.abs(b[1]) - Math.abs(a[1])), k0 = ks[0][0], e0 = ejeK(k0);
     $('#q-n').innerHTML = t.q_count(S.i + 1, n, r, n - r);
-    $('#hdr-n').textContent = `${S.i + 1}/${n}`;
     $('#q-eje').style.color = COLOR[k0];
     $('#q-eje').innerHTML = `${ic(k0)}${esc(e0.nombre)}${ks.length > 1 ? ` <small>+ ${ks.slice(1).map(([k]) => esc(ejeK(k).nombre)).join(', ')}</small>` : ''}`;
     $('#q-t').innerHTML = glosar(esc(texto(q)));
@@ -375,7 +389,6 @@
     $('#sent').textContent = enviado === true ? t.gracias : enviado === 'menor' ? t.menor : '';
     $('#again').textContent = desdeLink ? t.hacer : t.de_nuevo;
     $('#again').onclick = () => { history.replaceState(null, '', location.pathname + location.search + '#/'); show('s-inicio'); nav('quiz') };
-    $('#hdr-n').textContent = '✓';
     if (!desdeLink) { try { localStorage.setItem('brujula_res', JSON.stringify({ ver, sc, cert, n: S.nresp, dist: S.dist })) } catch (e) { } }
     show('s-res'); nav('quiz');
     fotos($('#s-res'));
@@ -490,7 +503,7 @@
     let sep = '';
     if (top) {
       const ds = E.map(e => ({ e, d: sc[e.id] - top.f.pos[e.id] })).sort((p, q) => Math.abs(p.d) - Math.abs(q.d));
-      const fila = (x, cls) => `<div class="dif"><span style="text-align:left;font:12.5px Inter,sans-serif;color:var(--muted)">${esc(x.e.nombre)}</span><div class="t"><i class="${cls}" style="left:${Math.min(sc[x.e.id], top.f.pos[x.e.id])}%;width:${Math.max(2, Math.abs(x.d))}%"></i></div><span>${Math.round(Math.abs(x.d))}</span></div>`;
+      const fila = (x, cls) => `<div class="dif"><span style="text-align:left;font:12.5px var(--body);color:var(--muted)">${esc(x.e.nombre)}</span><div class="t"><i class="${cls}" style="left:${Math.min(sc[x.e.id], top.f.pos[x.e.id])}%;width:${Math.max(2, Math.abs(x.d))}%"></i></div><span>${Math.round(Math.abs(x.d))}</span></div>`;
       sep = `<h4>${esc(t.a_sep(top.f.nombre))}</h4><div class="k">${esc(t.a_cerca)}</div>${ds.slice(0, 3).map(x => fila(x, 'c')).join('')}<div class="k" style="margin-top:10px">${esc(t.a_lejos)}</div>${ds.slice(-3).reverse().map(x => fila(x, '')).join('')}`;
     }
     // 4. cómo respondiste
@@ -519,15 +532,15 @@
   async function tarjeta(sinFoto) {
     const cv = $('#tarjeta'), x = cv.getContext('2d'), t = T(), sc = S.scores, cert = S.cert, rk = S.rk, E = EJES();
     const light = document.documentElement.dataset.theme === 'light';
-    const bg = light ? '#f4f2ed' : '#0e1013', s1 = light ? '#ffffff' : '#16191e', s3 = light ? '#e8e4da' : '#2a2f38', txt = light ? '#17191d' : '#eceef1', mut = light ? '#4d5562' : '#a3abb7', sig = light ? '#c47f14' : '#e8a33d';
+    const bg = light ? '#f5f6f8' : '#12151b', s1 = light ? '#ffffff' : '#1b1f27', s3 = light ? '#e5e9ef' : '#2b313d', txt = light ? '#151922' : '#eef0f4', mut = light ? '#465163' : '#b0b8c5', sig = light ? '#3f73b3' : '#7aa6d8';
     try { await document.fonts.ready } catch (e) { }
     const top = rk.figs[0], img = sinFoto || !top ? null : await cargarImg(await foto(top.f.nombre));
     if (S.rk !== rk) return; // cambió el resultado mientras cargaba
-    const W = 1080, H = 1920, F = (w, s, f) => `${w} ${s}px ${f || 'Inter, sans-serif'}`, HEAD = 'Archivo, Inter, sans-serif', MONO = '"JetBrains Mono", monospace';
+    const W = 1080, H = 1920, F = (w, s, f) => `${w} ${s}px ${f || '"Plus Jakarta Sans", sans-serif'}`, HEAD = '"Space Grotesk", sans-serif', MONO = '"Space Grotesk", sans-serif';
     const caja = (Y, h) => { rrect(x, 60, Y, W - 120, h, 28); x.fillStyle = s1; x.fill() };
     const corta = (s, w) => { while (x.measureText(s).width > w && s.length > 4) s = s.slice(0, -2) + '…'; return s };
     x.clearRect(0, 0, W, H); x.fillStyle = bg; x.fillRect(0, 0, W, H);
-    const gr = x.createRadialGradient(W, 0, 50, W, 0, 1000); gr.addColorStop(0, light ? 'rgba(196,127,20,.2)' : 'rgba(232,163,61,.2)'); gr.addColorStop(1, 'rgba(0,0,0,0)');
+    const gr = x.createRadialGradient(W, 0, 50, W, 0, 1000); gr.addColorStop(0, light ? 'rgba(63,115,179,.18)' : 'rgba(122,166,216,.2)'); gr.addColorStop(1, 'rgba(0,0,0,0)');
     x.fillStyle = gr; x.fillRect(0, 0, W, H);
     // encabezado
     x.fillStyle = sig; x.beginPath(); x.moveTo(92, 84); x.lineTo(104, 128); x.lineTo(80, 128); x.closePath(); x.fill();
@@ -594,7 +607,7 @@
   const verDef = () => S.ver || (guardado() || {}).ver || (S.lang === 'pt' ? 'br' : 'ar');
   function selVer(sel, fn) {
     const el = $(sel), v = el.value || verDef();
-    el.innerHTML = Object.entries(S.ejes.versiones).filter(([, x]) => x.activa).map(([id]) => `<option value="${id}"${id === v ? ' selected' : ''}>${esc(nombreVer(id))}</option>`).join('');
+    el.innerHTML = Object.entries(S.ejes.versiones).filter(([id, x]) => x.activa && (id !== 'general' || id === v)).map(([id]) => `<option value="${id}"${id === v ? ' selected' : ''}>${esc(nombreVer(id))}</option>`).join('');
     el.onchange = fn;
     return el.value;
   }
@@ -768,7 +781,6 @@
 
   try { const t = localStorage.getItem('brujula_tema'); if (t) document.documentElement.dataset.theme = t } catch (e) { }
   async function main() {
-    reloj(); setInterval(reloj, 30000);
     const get = f => fetch(CFG.datos + f).then(r => r.json());
     let ideo;
     [S.ejes, S.preg, S.fig, ideo] = await Promise.all([get('ejes.json'), get('preguntas.json'), get('figuras.json'), get('ideologias.json').catch(() => ({ ideologias: [] }))]);

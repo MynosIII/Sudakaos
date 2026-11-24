@@ -396,3 +396,35 @@ window.BRUJULA_GLOS = {
     ['transitional justice', 'Transitional justice', 'Special courts and measures to deal with crimes from an armed conflict or dictatorship.']
   ]
 };
+// v3: textos más amigables, sin códigos de panel, más preguntas por modalidad
+Object.assign(window.BRUJULA_I18N.es, {
+  inicio_k: 'Descubrimiento político', demo_k: 'Casi listo', res_k: 'Tu resultado', ejes_k: 'Guía', mapa_k: 'Mapa político', cara_k: 'Comparar', glos_k: 'Palabras clave',
+  como_k: 'Cómo funciona', ejes_k2: 'Los 12 ejes', modo_k: 'Elegí cuánto tiempo tenés', elegi: 'Elegí tu país',
+  h1: '¿Conocés de verdad tu <em>ideología política</em>?', nav_mapa: 'Mapa político', nav_mimapa: 'Mi mapa', mapa_h: 'Mapa político',
+  lead: 'Puede que te estés etiquetando mal. Respondé frases cortas y descubrí tu perfil en <b>12 ejes</b>, la <b>ideología</b> que más se te parece y con qué <b>dirigentes de tu país</b> coincidís.',
+  completa: 'Completa', exhaustiva: 'Exhaustiva',
+  d_rapida: 'Cuatro frases por eje y lo más caliente de tu país. Para una primera idea.',
+  d_completa: 'Siete frases por eje: el mejor equilibrio entre tiempo y precisión.',
+  d_exhaustiva: 'Todas las frases, unas 190. El resultado más fino y una certeza más confiable.',
+  ejes_lead: 'Cada eje va de un polo a otro. Las rayitas son los dirigentes del país elegido; la marca destacada sos vos, si ya hiciste el quiz.'
+});
+Object.assign(window.BRUJULA_I18N.pt, {
+  inicio_k: 'Descoberta política', demo_k: 'Quase pronto', res_k: 'Seu resultado', ejes_k: 'Guia', mapa_k: 'Mapa político', cara_k: 'Comparar', glos_k: 'Palavras-chave',
+  como_k: 'Como funciona', ejes_k2: 'Os 12 eixos', modo_k: 'Escolha quanto tempo você tem', elegi: 'Escolha seu país',
+  h1: 'Você conhece mesmo sua <em>ideologia política</em>?', nav_mapa: 'Mapa político', nav_mimapa: 'Meu mapa', mapa_h: 'Mapa político',
+  lead: 'Talvez você esteja se rotulando errado. Responda frases curtas e descubra seu perfil em <b>12 eixos</b>, a <b>ideologia</b> mais parecida com você e com quais <b>políticos do seu país</b> você concorda.',
+  d_rapida: 'Quatro frases por eixo e o mais quente do seu país. Para uma primeira ideia.',
+  d_completa: 'Sete frases por eixo: o melhor equilíbrio entre tempo e precisão.',
+  d_exhaustiva: 'Todas as frases, umas 190. O resultado mais fino e uma certeza mais confiável.',
+  ejes_lead: 'Cada eixo vai de um polo a outro. Os traços são os políticos do país escolhido; a marca destacada é você, se já fez o teste.'
+});
+Object.assign(window.BRUJULA_I18N.en, {
+  inicio_k: 'Political discovery', demo_k: 'Almost done', res_k: 'Your result', ejes_k: 'Guide', mapa_k: 'Political map', cara_k: 'Compare', glos_k: 'Key words',
+  como_k: 'How it works', ejes_k2: 'The 12 axes', modo_k: 'How much time do you have?', elegi: 'Pick your country',
+  h1: 'Do you really know your <em>political ideology</em>?', nav_mapa: 'Political map', nav_mimapa: 'My map', mapa_h: 'Political map',
+  lead: 'You might be labeling yourself wrong. Answer short statements and find your profile on <b>12 axes</b>, the closest <b>ideology</b> and which <b>politicians in your country</b> you agree with.',
+  d_rapida: 'Four statements per axis plus the hottest local issues. For a first idea.',
+  d_completa: 'Seven statements per axis: the best balance between time and precision.',
+  d_exhaustiva: 'Every statement, about 190. The finest result and a more reliable certainty.',
+  ejes_lead: 'Each axis runs from one pole to the other. Ticks are the politicians of the chosen country; the highlighted mark is you, if you took the quiz.'
+});

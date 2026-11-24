@@ -3,13 +3,18 @@
     python brujula/datos/generar.py
 
 Banco base: preguntas de 12axes (politicaltests, licencia MIT, (c) 2020 8values / SapplyValues), traducidas y
-adaptadas a Latinoamérica: 4 por eje (niveles 3 y 1 de cada polo), más preguntas con condimento local por país.
+adaptadas a Latinoamérica: 14 por eje (4 originales de niveles 3 y 1, más 10 de base_ampliada.py con niveles 1 a 4),
+más preguntas con condimento local por país.
 Cada pregunta: e = {eje: peso}; peso negativo = estar de acuerdo empuja al polo 'a' (0), positivo al polo 'b' (100).
-nivel = intensidad de la frase (1 moderada, 3 fuerte): sirve para medir qué tan amplia es la posición (certeza).
+nivel = intensidad de la frase (1 moderada … 4 extrema): sirve para medir qué tan amplia es la posición (certeza).
 Las posiciones de los dirigentes son codificación editorial A REVISAR (ver figuras_base.json).
 """
 import json
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from base_ampliada import AMPLIADA  # noqa: E402
 
 D = Path(__file__).resolve().parent
 PAISES = ["ar", "br", "py", "pe", "cl", "co", "uy"]
@@ -176,8 +181,10 @@ def preguntas():
     qs = []
     for i, (k, nivel, t, tpt) in enumerate(BASE, 1):
         qs.append({"id": f"x{i:02d}", "t": t, "t_pt": tpt, "t_en": EN[(k, nivel)], "e": {k: -1 if nivel > 0 else 1}, "nivel": abs(nivel), "v": TODAS})
+    for i, (k, nivel, t, tpt, ten) in enumerate(AMPLIADA, len(BASE) + 1):
+        qs.append({"id": f"x{i:03d}" if i > 99 else f"x{i:02d}", "t": t, "t_pt": tpt, "t_en": ten, "e": {k: -1 if nivel > 0 else 1}, "nivel": abs(nivel), "v": TODAS, "extra": 1})
     for i, (t, tpt, ten, e) in enumerate(GENERAL, 1):
-        qs.append({"id": f"g{i:02d}", "t": t, "t_pt": tpt, "t_en": ten, "e": e, "v": ["general"]})
+        qs.append({"id": f"g{i:02d}", "t": t, "t_pt": tpt, "t_en": ten, "e": e, "v": TODAS})
     for p in PAISES:
         for i, q in enumerate(LOCAL[p], 1):
             e = q.get("e12") or A12(q["e"])
@@ -250,7 +257,7 @@ def ejes():
 
 if __name__ == "__main__":
     qs = preguntas()
-    (D / "preguntas.json").write_text(json.dumps({"_nota": "e = efecto de estar de acuerdo (peso negativo: polo a; positivo: polo b). nivel = intensidad (1 o 3) en las preguntas base. v = versiones.",
+    (D / "preguntas.json").write_text(json.dumps({"_nota": "e = efecto de estar de acuerdo (peso negativo: polo a; positivo: polo b). nivel = intensidad (1 a 4) en las preguntas base; extra = ampliada (no entra en Express). v = versiones.",
                                                   "preguntas": qs}, ensure_ascii=False, indent=1), encoding="utf8")
     (D / "figuras.json").write_text(json.dumps(figuras(), ensure_ascii=False, indent=1), encoding="utf8")
     (D / "ejes.json").write_text(json.dumps(ejes(), ensure_ascii=False, indent=1), encoding="utf8")
