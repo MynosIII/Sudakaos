@@ -435,7 +435,7 @@ const C={s1:'#13161d',s2:'#1a1e27',line:'#272c38',grid:'#232834',txt:'#eef0f4',m
 const SLOT=['#3987e5','#d95926','#199e70','#c98500'];
 const ESP={'La Libertad Avanza':'#9085e9','PRO':'#c98500','Peronismo':'#3987e5','UCR':'#e66767','Provincias Unidas':'#199e70','Izquierda':'#d55181','PT':'#e66767','PL':'#199e70','PSB':'#d95926','Republicanos':'#5fb3c9','Novo':'#d95926','União Brasil':'#c98500','STF':'#5d6470'};
 const ini=n=>n.split(' ').filter(w=>w.length>2||w===w.toUpperCase()).slice(0,2).map(w=>w[0]).join('').toUpperCase();
-const av=(a,cls='')=>`<span class="av ${cls}" style="background:${ESP[a.espacio]||'#454b57'}">${esc(ini(a.name))}</span>`;
+const av=(a,cls='')=>`<span class="av ${cls}" style="background:${ESP[a.espacio]||'#454b57'}" data-foto="${esc(a.name||'')}">${esc(ini(a.name))}</span>`;
 const BASE={paper_bgcolor:C.s1,plot_bgcolor:C.s1,font:{family:'Inter,system-ui,sans-serif',color:C.txt,size:11.5},margin:{l:50,r:16,t:16,b:40},
   hoverlabel:{bgcolor:'#0b0d12',bordercolor:C.line,font:{family:'Inter,system-ui,sans-serif'}},legend:{orientation:'h',y:-0.2,font:{color:C.muted}},
   xaxis:{gridcolor:C.grid,zerolinecolor:C.line,linecolor:C.line,tickfont:{color:C.muted}},yaxis:{gridcolor:C.grid,zerolinecolor:C.line,linecolor:C.line,tickfont:{color:C.muted}}};

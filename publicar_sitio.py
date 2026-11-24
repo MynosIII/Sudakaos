@@ -19,6 +19,9 @@ import subprocess
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from fotos.subset import copiar as copiar_fotos  # noqa: E402
+
 REPO = Path(__file__).resolve().parent
 SITE = REPO / "_site"
 SECRET = os.environ.get("INDICE_RUTA", "")
@@ -133,6 +136,12 @@ editar(q / "index.html", ('quiz.js"', f'quiz.js?v={SHA}"'), ('quiz.css"', f'quiz
 # Demo pública de Trump (free trial): ruta abierta web/demo/trump/, fuera del índice secreto
 subprocess.run([sys.executable, str(REPO / "trump" / "build_demo.py"), str(SITE / "web" / "demo" / "trump")], check=True,
                stdout=subprocess.DEVNULL)
+
+# Fotos: cada tablero lleva solo las de las personas que ya nombra (nunca la carpeta completa)
+shutil.rmtree(SITE / "assets" / "fotos", ignore_errors=True)
+shutil.rmtree(tableros["nacional"] / "assets" / "fotos", ignore_errors=True)
+for nombre, d in tableros.items():
+    copiar_fotos(d)
 
 # Cache del navegador, noindex y control: ningún tablero enlaza a otro ni a la raíz
 otros_nombres = {"dashboard.html", "indice/", "../ig/data/", "../radar/"}

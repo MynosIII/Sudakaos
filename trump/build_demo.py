@@ -24,4 +24,7 @@ shutil.copytree(ROOT / "data", out / "data", dirs_exist_ok=True)
 for f in ("plotly.min.js", "sala.css", "sala.js"):
     shutil.copy(ROOT.parent / "assets" / f, out / f)
 shutil.copytree(ROOT.parent / "assets" / "topo", out / "topo", dirs_exist_ok=True)
+sys.path.insert(0, str(ROOT.parent))
+from fotos.subset import copiar  # noqa: E402  solo las fotos de quien la demo ya nombra
+copiar(out)
 print(f"demo -> {out}")

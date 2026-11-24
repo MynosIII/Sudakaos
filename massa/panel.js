@@ -32,7 +32,7 @@ function drawSub(){if(drawn.has(sub))return;drawn.add(sub);({dupla,agenda,datos}
 function dupla(){const P=D.politicos,M=P.find(p=>p.name===D.foco)||{},G=P.find(p=>p.name===D.foco2)||{},V=D.voz_propia||{};
   const rank=[...P].filter(p=>p.n).sort((a,b)=>b.n-a.n);
   P.forEach((p,i)=>{if(!COL[p.name])COL[p.name]=PAL[i%PAL.length]});
-  const card=p=>`<div class="mg-who"><span class="av" style="background:${COL[p.name]};width:52px;height:52px;font-size:18px">${ini(p.name||'')}</span><div><h2>${esc(p.name)}</h2><div class="k">${esc(p.cargo)} · ${esc(p.espacio)}</div>
+  const card=p=>`<div class="mg-who"><span class="av" style="background:${COL[p.name]};width:52px;height:52px;font-size:18px" data-foto="${esc(p.name||'')}">${ini(p.name||'')}</span><div><h2>${esc(p.name)}</h2><div class="k">${esc(p.cargo)} · ${esc(p.espacio)}</div>
     <div class="k"><a href="#${encodeURIComponent(p.name)}" data-goprof="${esc(p.name)}">perfil en el tablero →</a></div></div></div>`;
   const F=[];
   if(M.n&&G.n)F.push(`En los últimos ${D.conversacion_dias} días, <b>${esc(G.name)}</b> tuvo ${fmt(G.n)} menciones y <b>${esc(M.name)}</b> ${fmt(M.n)}.`);
@@ -59,7 +59,7 @@ function dupla(){const P=D.politicos,M=P.find(p=>p.name===D.foco)||{},G=P.find(p
   $('#mg-cl1').innerHTML=cloud(M.cloud,COL[D.foco]);$('#mg-cl2').innerHTML=cloud(G.cloud,COL[D.foco2]);
   const rows=[...P].sort((a,b)=>b.n-a.n);
   $('#mg-tab').innerHTML='<thead><tr><th>Político</th><th>Espacio</th><th class="num">Menciones</th><th class="num">Part.</th><th class="num">7 días</th><th>Tono</th><th class="num">% neg.</th><th>Narrativa principal</th></tr></thead><tbody>'+
-    rows.map(p=>`<tr${p.foco?' class="mg-sel"':''}><td><div class="who"><span class="av" style="background:${COL[p.name]}">${ini(p.name)}</span><div><b style="color:var(--txt)">${esc(p.name)}</b><small>${esc(p.cargo)}</small></div></div></td><td>${esc(p.espacio)}</td><td class="num">${fmt(p.n)}</td><td class="num">${p.share!=null?p.share+'%':'–'}</td><td class="num">${fmt(p.last7)}</td><td style="min-width:110px">${tbar(p.tone)}</td><td class="num">${p.tone?p.tone.NEG+'%':'–'}</td><td>${p.narrativas&&p.narrativas[0]?esc(p.narrativas[0].n):'–'}</td></tr>`).join('')+'</tbody>';
+    rows.map(p=>`<tr${p.foco?' class="mg-sel"':''}><td><div class="who"><span class="av" style="background:${COL[p.name]}" data-foto="${esc(p.name)}">${ini(p.name)}</span><div><b style="color:var(--txt)">${esc(p.name)}</b><small>${esc(p.cargo)}</small></div></div></td><td>${esc(p.espacio)}</td><td class="num">${fmt(p.n)}</td><td class="num">${p.share!=null?p.share+'%':'–'}</td><td class="num">${fmt(p.last7)}</td><td style="min-width:110px">${tbar(p.tone)}</td><td class="num">${p.tone?p.tone.NEG+'%':'–'}</td><td>${p.narrativas&&p.narrativas[0]?esc(p.narrativas[0].n):'–'}</td></tr>`).join('')+'</tbody>';
   const W=D.wiki;
   plot('mg-wiki',W?[D.foco,D.foco2,'Axel Kicillof'].filter(k=>W.series[k]).map(k=>({x:D.semanas,y:W.series[k],name:k,type:'scatter',mode:'lines',line:{color:COL[k],width:k===D.foco2?3:1.6,shape:'spline'}})):[],{hovermode:'x unified',margin:{l:50,r:10,t:10,b:50}});
   $('#mg-co').innerHTML=hb((G.co||[]).map(c=>[c.a,c.n,COL[c.a]]));
