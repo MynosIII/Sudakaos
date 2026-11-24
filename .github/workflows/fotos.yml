@@ -1,0 +1,52 @@
+name: Fotos de los tableros
+
+# Baja las fotos de fotos/lista.json (Wikimedia Commons; respaldo: foto de perfil de Instagram)
+# y las deja en assets/fotos/. Corre cuando cambia la lista o a mano.
+on:
+  workflow_dispatch:
+    inputs:
+      forzar:
+        description: 'Volver a bajar todas (1) o solo las que faltan (0)'
+        default: '0'
+  push:
+    paths:
+      - 'fotos/lista.json'
+      - 'fotos/bajar.py'
+      - '.github/workflows/fotos.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fotos-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  fotos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      META_TOKEN: ${{ secrets.META_TOKEN }}
+      META_IG_USER_ID: ${{ secrets.META_IG_USER_ID }}
+      FOTOS_FORZAR: ${{ github.event.inputs.forzar || '0' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pillow==11.0.0
+      - name: Bajar fotos
+        run: python fotos/bajar.py
+      - name: Commit
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/fotos fotos/CREDITOS.md
+          if ! git diff --cached --quiet; then
+            git commit -m 'Fotos: actualizar fotos de los tableros'
+            for i in 1 2 3; do
+              git pull --rebase -X theirs origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+              sleep $((i * 5))
+            done
+            exit 1
+          fi
