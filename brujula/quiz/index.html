@@ -25,7 +25,7 @@
 <nav class="nav"><div class="in">
   <a href="#/" data-r="quiz" data-i18n="nav_quiz">Quiz</a><a href="#/ejes" data-r="ejes" data-i18n="nav_ejes">12 ejes</a>
   <a href="#/mapa" data-r="mapa" data-i18n="nav_mapa">Mapa político</a><a href="#/mimapa" data-r="mimapa" data-i18n="nav_mimapa">Mi mapa</a>
-  <a href="#/cara" data-r="cara" data-i18n="nav_cara">Cara a cara</a><a href="#/glosario" data-r="glosario" data-i18n="nav_glos">Glosario</a></div></nav>
+  <a href="#/cara" data-r="cara" data-i18n="nav_cara">Cara a cara</a><a href="#/glosario" data-r="glosario" data-i18n="nav_glos">Glosario</a><a href="#/privacidad" data-r="privacidad" data-i18n="privacidad">Privacidad</a></div></nav>
 
 <main>
   <!-- 1. Inicio -->
@@ -36,9 +36,8 @@
         <h1 data-i18n="h1">¿Dónde estás parado?</h1>
         <p class="lead" data-i18n="lead"></p>
         <div class="row"><button class="btn" id="cta1" data-i18n="cta1">Descubrí tu perfil</button><a class="btn ghost" href="#/ejes" data-i18n="cta2">Ver los 12 ejes</a><a class="btn ghost" href="#/mapa" data-i18n="cta3">Explorar el mapa</a></div>
-        <div class="chips" id="chips"></div>
       </div>
-      <div class="stack"><div class="ej" id="ejemplo"></div></div>
+      <div class="stack"><div class="sc" id="ejemplo"></div></div>
     </div>
     <div class="k" data-i18n="como_k">CÓMO FUNCIONA</div>
     <div class="paso" id="pasos"></div>
@@ -48,7 +47,6 @@
     <div class="modos" id="modos"></div>
     <div class="k" data-i18n="ejes_k2">LOS 12 EJES</div>
     <div class="ejlist" id="ejlist"></div>
-    <p class="fine"><span data-i18n="anon">Anónimo.</span> <a href="#" data-open="privacidad" data-i18n="privacidad">Privacidad</a></p>
   </section>
 
   <!-- 2. Preguntas -->
@@ -159,6 +157,14 @@
     <h2 data-i18n="glos_h">Glosario</h2>
     <p class="lead small" data-i18n="glos_lead"></p>
     <div class="glos" id="glos"></div>
+  </section>
+
+  <!-- Privacidad -->
+  <section id="s-priv" class="screen">
+    <div class="k" data-i18n="priv_k">Tus datos</div>
+    <h2 data-i18n="privacidad">Privacidad</h2>
+    <p class="lead small" data-i18n="priv_lead"></p>
+    <ul class="privl" id="priv-page"></ul>
   </section>
 
   <!-- 9. Mi resultado sin resultado -->

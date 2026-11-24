@@ -428,3 +428,13 @@ Object.assign(window.BRUJULA_I18N.en, {
   d_exhaustiva: 'Every statement, almost 200 (more for Argentina). The finest result and a more reliable certainty.',
   ejes_lead: 'Each axis runs from one pole to the other. Ticks are the politicians of the chosen country; the highlighted mark is you, if you took the quiz.'
 });
+// v3b: tarjetas de ejemplo y página de privacidad
+Object.assign(window.BRUJULA_I18N.es, { ej_af: 'Afinidad principal', ej_cerca: 'Más compatible', ej_ejes: 'Tus 12 ejes', priv_k: 'Tus datos',
+  priv_lead: 'El quiz es anónimo. Esto es lo que pasa con tus respuestas.',
+  priv_t: ['No pedimos nombre, mail ni teléfono.', 'Tus respuestas se guardan solo si marcás la casilla al final; si no, quedan en tu navegador.', 'Solo se publican totales de grupos grandes, nunca respuestas individuales.', 'Si tenés menos de 16 años, no se guarda nada.', 'Las posiciones de los dirigentes son una estimación editorial y pueden cambiar.'] });
+Object.assign(window.BRUJULA_I18N.pt, { ej_af: 'Afinidade principal', ej_cerca: 'Mais compatível', ej_ejes: 'Seus 12 eixos', priv_k: 'Seus dados',
+  priv_lead: 'O teste é anônimo. Veja o que acontece com suas respostas.',
+  priv_t: ['Não pedimos nome, e-mail nem telefone.', 'Suas respostas só são salvas se você marcar a caixa no final; senão, ficam no seu navegador.', 'Só publicamos totais de grupos grandes, nunca respostas individuais.', 'Se você tem menos de 16 anos, nada é salvo.', 'As posições dos políticos são uma estimativa editorial e podem mudar.'] });
+Object.assign(window.BRUJULA_I18N.en, { ej_af: 'Top match', ej_cerca: 'Most compatible', ej_ejes: 'Your 12 axes', priv_k: 'Your data',
+  priv_lead: 'The quiz is anonymous. Here is what happens with your answers.',
+  priv_t: ['We do not ask for your name, email or phone.', 'Your answers are only stored if you tick the box at the end; otherwise they stay in your browser.', 'We only publish totals for large groups, never individual answers.', 'If you are under 16, nothing is stored.', 'Politician positions are an editorial estimate and may change.'] });
