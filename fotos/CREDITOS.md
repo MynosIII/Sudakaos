@@ -146,4 +146,5 @@ Generado por `fotos/bajar.py`. Fotos de Wikimedia Commons (licencia libre, se re
 - Pablo González
 - Roberto Sánchez
 - Vilma Baragiola
+- Walter Cortés
 - Yanira León
