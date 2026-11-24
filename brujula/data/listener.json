@@ -1,214 +1,245 @@
 {
- "updated_at": "2026-11-23T23:10:44Z",
+ "updated_at": "2026-11-24T14:59:32Z",
  "status": {
   "google_news": {
    "ok": true,
-   "items": 5195,
-   "new": 1565,
-   "at": "2026-11-23T23:06:48Z"
+   "items": 5077,
+   "new": 649,
+   "at": "2026-11-24T14:56:49Z"
   },
   "youtube": {
    "ok": true,
-   "items": 81,
-   "new": 71,
-   "at": "2026-11-23T23:06:48Z"
+   "items": 1170,
+   "new": 1089,
+   "at": "2026-11-24T14:56:49Z"
   },
   "meta_ads": {
    "ok": false,
    "error": "Meta Ad Library 400: <!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <title>4xx Client Error</title>\n  <meta charset=\"utf-8\">\n  <meta http-equiv=\"cache-control\" content=\"no-cache\">\n  <meta http-equiv=\"cache",
-   "at": "2026-11-23T23:06:48Z",
+   "at": "2026-11-24T14:56:49Z",
    "ultimo_ok": null
   }
  },
  "totales": {
-  "textos": 6344,
+  "textos": 7994,
   "por_plataforma": {
-   "Medios": 6271,
-   "YouTube": 73
+   "Medios": 6889,
+   "YouTube": 1105
   },
   "por_tipo": {
-   "nota": 6271,
-   "comentario": 57,
-   "video": 16
+   "nota": 6889,
+   "comentario": 1009,
+   "video": 96
   },
-  "desde": "2026-08-21",
-  "hasta": "2026-11-23",
+  "desde": "2026-07-29",
+  "hasta": "2026-11-24",
   "metodo_nlp": {
-   "modelo": 4288,
-   "lexico": 2056
+   "modelo": 6144,
+   "lexico": 1850
   }
  },
  "ejes": {
   "fed": {
-   "n": 389,
+   "n": 430,
    "tono": {
-    "n": 389,
-    "pos": 8.5,
-    "neu": 78.9,
+    "n": 430,
+    "pos": 5.6,
+    "neu": 81.9,
     "neg": 12.6,
-    "agresivo": 33.9,
-    "neto": -4.1
+    "agresivo": 9.1,
+    "neto": -7.0
    },
    "encuadre": {
-    "a": 51,
+    "a": 58,
     "b": 0,
     "b_pct": 0.0
    },
    "plataformas": {
-    "Medios": 380,
-    "YouTube": 9
+    "Medios": 413,
+    "YouTube": 17
    },
    "semanas": {
-    "2026-09-07": 1,
+    "2026-08-10": 3,
+    "2026-09-07": 2,
     "2026-09-14": 1,
     "2026-09-21": 1,
-    "2026-10-12": 3,
+    "2026-10-05": 2,
+    "2026-10-12": 5,
     "2026-10-19": 1,
-    "2026-10-26": 76,
-    "2026-11-02": 120,
-    "2026-11-09": 58,
-    "2026-11-16": 121,
-    "2026-11-23": 7
+    "2026-10-26": 78,
+    "2026-11-02": 126,
+    "2026-11-09": 60,
+    "2026-11-16": 138,
+    "2026-11-23": 13
    },
    "titulares": [
     {
-     "t": "La interna también se disputa en las provincias: Kicillof y Massa buscan sumar gobernadores de cara a 2027 - La Nación",
-     "medio": "La Nación",
-     "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNNllqcTJWTXVIdzd0c2ZDdUtsWEJGNVNZVDlyR2gwRV93M1paQTU1SzFVcWFoR3lnWXQ5SDNaMEpoSGNxNmFwYTJqbEtBaXEyMUZwbVlPcGdVaXM4NDNJY1hVb0FPdFU3SkpoNGQ1MHNiRnlWek1uVnU4YnYzODlHWXEtXzc3SE9fX3J2N3hRWmxmVGNRTDJGQVl3aVF4NWhpOHJpbjVrVEYyaW1ReFlPckZKckRpaFFvZEo5dEE2UUF4YWMtQWduaHNacFl4MUgxMTA3UndDdzFpSTdBVHRfRXZYdXE?oc=5",
-     "f": "2026-11-23"
+     "t": "Axel Kicillof entrega más de un centenar de viviendas en el interior bonaerense - El nuevo rojense",
+     "medio": "El nuevo rojense",
+     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNLW51aEFFLXFOUmFkWktDY05zLU9nRW5sVTFDdnlSTUJ5UVAwekt0Znd0RlVoMTIxZm43RHRhSGduYVpoR0hWM2ltanEyaTFBMTMxN2ZDX0FSalhubXR2VjJDNm90QXVmV3IwTUI4cFI0aGxuczl0Wi04a3JGRkM2XzQxNnBuMHBwRjZlMms0Rms2c19VRkQxSWx5YWF5TTBfSnBlanlYeFlwYWFlMmJR?oc=5",
+     "f": "2026-11-24"
     },
     {
-     "t": "La confianza en el Gobierno de Javier Milei subió 4,1% en noviembre: en el interior del país es más alta que en el Conurbano - Diario Río Negro",
-     "medio": "Diario Río Negro",
-     "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxOTF9YQy16eS03Y0x6eTd1RnkwZG5kM1VVQkFsVllRMkN1RmNmQ2Y2VTVOT2FueXNicUJSVjBELWpnNXdmY1J2emZOMXREVkVfZ3V0Mzg1ZEVwZHNwX3VkbGM3SGctR2JvdWdXUzVrcTNaNGFKRVZzYU54aHpXdVhJT2JsaTlzRnl0bUJjNklMTm9iMHdjX1Z5VU42eURYb05GemlqNmJsMDY0TVI1a0UtS2FtSktZaFBaSG9KSklhUWd0ekoyMkt2V3FoQ0hkVzRXUkg5MktObnBUT01DRG9KcTJOZlhHRHJPb0YyenY5MVQyQzBCYUprdmwxOTd1UnPSAYcCQVVfeXFMTVVQWi1oZDlfVGZrSl9FV3ZxcDJOWGgyQVVhaVQxbXA1ejJPS3g0b0RZaHlWSE04NXN0UC1CcVo0eEY3ZjRjVmFONTk1UGxkb0lDLWlUX2l0ZXRRWTFRakdsMXZVSVN5emdqbXFuQUoxeTRSVjFxNzdndU5OTlhPSV91cnRjdFJsS25OUUtWc0hZbE45NVFQVEI5ZkFwb251c2c2QUJyaUg4X21uLUZLR2ZoM3JFOTNSUjZPY1d4Sk8wYUhYYXNRaUFDSDR1N0VPWEgzMzNva3NtRlpBRndSZDRhdWNoX1JIeGZfRkVSc1NqYVRTQ2g1bFJlNHVQZUNkdGRHc2JoQTQ?oc=5",
-     "f": "2026-11-23"
+     "t": "Hasta 12 provincias no han practicado ni un solo aborto en 2025 - Newtral",
+     "medio": "Newtral",
+     "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1INFVxUFA0cGE3VXJHQXNKbldOakU1OUgwYzF1anZHdlhxVExHU2Jhb2s1MWZqcDJuQ2owekxyYXRZLW9KZHlQd3pEX0NYc0RFZk5HQVFONFR2dF9iOFJxMnBNUWgtSU10REk1b0daeHNoQQ?oc=5",
+     "f": "2026-11-24"
     },
     {
-     "t": "La gestión del gobernador Pullaro encara la recta final de la transformación del Parque España - Gobierno de Santa Fe",
-     "medio": "Gobierno de Santa Fe",
-     "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBPcUlVVG9SVVZsZWZWZW9NWEMwWlJQR2tuMWFHeDNWU2JfYVlMM0NNQVZFVkxWejBBZkprQ0dfd2tKUlVDYkRNc1dRSS1nQXdnOFNhZDREa2RLeDJTeEdLaw?oc=5",
-     "f": "2026-11-23"
+     "t": "Castilla-La Mancha organiza intercambios de ropa en las cinco provincias para prevenir residuos textiles - Objetivo CLM Noticias",
+     "medio": "Objetivo CLM Noticias",
+     "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNRHVDM0htREd2cE9wZ2k0a3pmYzdhWHByelVOeGl0RHRJRUFtd1YwQ0RzYWxQZWg2UzZvcE5aOVI1bWtWd3hiS1lhckFqVkVJZXVKcVdUZnRSTV9VYkhPUkFyWFYxR2tUVFBxeHJta0lfRGR0QTR3R3NNMG9lLS1FdEpieEU5bF9xc0c0Mm41RVFDNGdGMGxFLTJiV3dSalBsYVVBQzRxOWRHRk1hdW04ZWM3OFo4U1FSblhVcnlTN3h6bTd4SS1MT2JZWmphZ2hoS3RzRmxTMm5ITl80?oc=5",
+     "f": "2026-11-24"
     },
     {
-     "t": "Pullaro: “Defender el legado de Estanislao López es luchar por un país federal, que redistribuya los recursos que salen de las provincias” - Gobierno de Santa Fe",
-     "medio": "Gobierno de Santa Fe",
-     "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBZTEhmeUtIVnZSNFB1NWZIdFFBZXlNWWRGajg3TVc5bzZQMXNXY0N0NlBZVFFXS2dOMVZKYzNuczR2eUFnT3diVnRhWUZhUVBCc3ZzT3BvaEg2VnlsallTaw?oc=5",
-     "f": "2026-11-23"
+     "t": "Después de la visita del papa León XIV, el desafío de hacerse cargo - La Voz del Interior",
+     "medio": "La Voz del Interior",
+     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPTUZ0dTYyYTFRdmJFNjc2NlBScXhuT2pNTDc3V1ROeEFVOVhMUGNuRjZuWDBDbEVxUEpyQ2stX1lZX2ZNbk5ac1FQczJhMFVVMk5RdkxRUWh6WF9XTW93SVBZM1V1M2RWZkdzRzFRVnZ0LXEwaW04aUxzWnV6bUdPVDk0S3U0bXVPTkhRdXJQQnh4azl2UTA1dkNXTDd5d04tT2Rv?oc=5",
+     "f": "2026-11-24"
     },
     {
-     "t": "Pullaro reivindicó el legado del Brigadier López: “Tenemos que luchar por un país más federal” - CFIN Noticias",
-     "medio": "CFIN Noticias",
-     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPdUdVMTJpYmRFcGhXdkJIRV93TmFVbE9XTlF5eDVZX0x6dG1yWW0tU0laUi1pMEp2SEI0aEFJV0x1OFFMajhtalY3QnJVWUZVdTdKeFMyX3lMdzE2WERXSk5wUmEyM013MmthTHRFc3JGSHZIaWMzVmJpcVlqZ0dRNGVBdkxVN0ZG?oc=5",
-     "f": "2026-11-23"
+     "t": "Macri cedió ante los gobernadores y aceptó que el PRO vote la suspensión de las PASO - Política y Medios",
+     "medio": "Política y Medios",
+     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNVUxIZ1pIYzZBQlZkN3hkSkk4S3h0TmZ2NUhDRzQtZzZ3enRrUWV2dFJWNWE5RDhVOTNFU3BVVDM0QklManZ3aWpOdWFuVER6WG8zTDhBQmhKYUgzTUNiOU04cWhuV3AwNEptX2M1cF9nd3JYbkpNa2lkVG5XdElocUZnc1pvbXc3WTFTeWlFSmszcFFTSGdQVWpLa1lpUGtVcG1RNmRiaEQ3NGhRem5ZTUEzcTg1aVptNTNrVThlZVpNcmRiUlE?oc=5",
+     "f": "2026-11-24"
     },
     {
-     "t": "Desde 2013 el empleo privado directo en el litio creció 700%: estiman cuántos puestos totales generó en 3 provincias del NOA - Infobae",
-     "medio": "Infobae",
-     "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNX0JiTDhaTGFtNENqQktpc3lVcnJEUUFSRUpPbDZzeUtjYWNTVUwydEdvZEN6cVhibHhPMWlORXo4WXNwUEZlTHJoZG5ZV3RFVDlqNExvRFQ5NEVYRlA5c3hCY3ZpVmh5YThpX0xpMUt6ejJ2NG5tLTdTbnNxbnFYSnVxdlVsWmt6elRZQzNLdmtBczFVc3VwRXd1dHZZOTZRZGJ1cEczeTYwanc4aDBpY2d3dzA1M3gtLXlWQzlWT2Q4OERtMW5BTEMzTTFabWZ2YTZJbzVFUUt1U3FJd0dqc3pnSmhpMlpITHBMRWktMXdWdExodFZObGZ5Y9IBlgJBVV95cUxNOEF2TXQ0SzYxM2FfSk5UeS1FR0FJNkpMd25aNnRTSnRQUUdhVndMTVAyb0E3Uy1peHI4U1Nkb1VuSXVwWUpzY2JnRjRibkRpakh1dllDTEN3UGJsd3hOZmxaZ2pTYkxTTGM1NnFtT2RPeVBPZENTVW4yT3oyQnZWakZ6amF6cG9yQ1JvY3psUXAzR0o0dkdKOW90RmRXUmkwTFNXN2RlQlE3RFE3OVhsb0ZIN0lNVTdNTlVwa3J3Q1ZvcUFyOG5kQjVEVTdxdmdzajJ1T19RVjUtTWlXaHZ3UkxlQTRQNTNBWjVaQTR1Wk5HWVZMcDJIbE1lekRwMV9xRjJ3eXg2SDhXOFUyTjJNY0FIVUo3Zw?oc=5",
-     "f": "2026-11-23"
+     "t": "Desde Chaco, Quintela llamó a unir al peronismo y a construir un proyecto federal con sectores más allá del PJ - La 4x4 Radio",
+     "medio": "La 4x4 Radio",
+     "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPTVRYemIzWWxYSnBoSm83NGEtYmZ5MmxVUmJmdk9fRm1OenJIXzNZeVU1aXJfZ2oxeUZERi1pZGhRdXl4SmlQWmhNRE8xVnpjRjIzN0QxUmJqX3dJVUtvQU9SQ05qSUxIWHhPNTBEZDBMRXJNTEdkWTJLVHBRNjFCVS1BekJkcDFYTDZtbU5sSmJWOFhiXy1fMHMzMWxHYm9HV1FrcUVSQnF3eENnZEVtYzYwQTV2WExWdTVYNkZabW13anRpV1F1b19JR0prMDl3NFE?oc=5",
+     "f": "2026-11-24"
     }
    ],
-   "share": 9.8
+   "share": 9.0
   },
   "dem": {
-   "n": 274,
+   "n": 315,
    "tono": {
-    "n": 274,
-    "pos": 4.4,
-    "neu": 81.0,
-    "neg": 14.6,
-    "agresivo": 23.7,
-    "neto": -10.2
+    "n": 315,
+    "pos": 3.8,
+    "neu": 80.0,
+    "neg": 16.2,
+    "agresivo": 14.3,
+    "neto": -12.4
    },
    "encuadre": {
-    "a": 53,
-    "b": 42,
-    "b_pct": 44.2
+    "a": 62,
+    "b": 44,
+    "b_pct": 41.5
    },
    "plataformas": {
-    "Medios": 267,
-    "YouTube": 7
+    "Medios": 294,
+    "YouTube": 21
    },
    "semanas": {
-    "2026-08-31": 1,
+    "2026-08-10": 1,
+    "2026-08-24": 2,
+    "2026-08-31": 3,
+    "2026-09-07": 1,
+    "2026-09-14": 2,
     "2026-09-21": 1,
+    "2026-10-05": 2,
     "2026-10-12": 5,
     "2026-10-19": 12,
-    "2026-10-26": 46,
-    "2026-11-02": 42,
-    "2026-11-09": 32,
-    "2026-11-16": 121,
-    "2026-11-23": 14
+    "2026-10-26": 47,
+    "2026-11-02": 44,
+    "2026-11-09": 36,
+    "2026-11-16": 132,
+    "2026-11-23": 27
    },
    "titulares": [
     {
-     "t": "El Gobierno acelera en el Congreso y reúne a su mesa chica para cerrar agenda legislativa - iProfesional",
-     "medio": "iProfesional",
-     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNYUdOVzdRWjhScE1jM1lUUkM1RXp4R3dZay10TVdTVXd1WlEwd0k1ZTdCVW9RNWMwOFEydXNUaHY0RWtsMnlROHpVQXMtcHRiT1Q4WkpXa0wxTkNycm1INWV3M3Q0aWpNTi1lODdlcUdjUTRsRVVqN0cwUmpPd01YbkxYMWlVdmI0ZlNFNjVXcEE0YmZ3UWwxVEdodEQ0azdIMHVWMTh6OGFxWFFGV3VkV2pCcDk2aDjSAbwBQVVfeXFMT242dXNDRWJBVF9PR0FiR0FNMHZhYzVEVmlSZUxwd0o0QnVfSzlxT0FRamQ2dTVMaklWU2U1MmpKMWFrRUxzczM0eGxaT2hKN0ktX1A2aFZLNjNlZTROOEItSGdnbDdwRlRZR0ZwVDRWanQ3SEdwTlp0T0tWc29TeXJRZXV2Rmd5Zzl3U0dNeFFxaUxvbU9LdndheWZuekptVzQwSXFJYWQ2UkRubWxTaktSSnBFM0xReUh2dEQ?oc=5",
-     "f": "2026-11-23"
+     "t": "La Provincia entregó aportes a 28 instituciones de Saldán - Prensa Cba",
+     "medio": "Prensa Cba",
+     "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOVllLdTJXc000bGNiRWV5c0dyamRLSjhNekdFekFjWUhlQjFJQmdTSkhBTTZsVE9Hc3NTdkd5RFhUeDJPZUlLeC14clQzZ3pZYlh4LTNpVHU0UXN1YXltMEFHdGtfZEZJX0tJTGxid3gyRmVjMGdvSWFaWmVZS0kxOU1jOGVodGtHT3hDMw?oc=5",
+     "f": "2026-11-24"
     },
     {
-     "t": "Semana clave en el Congreso: cuándo se debaten el Presupuesto 2027, la Reforma Electoral y cuándo expondrá Santilli - Diario Río Negro",
-     "medio": "Diario Río Negro",
-     "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQOTFPaFVNU0lpNnNEN3NpUDFiYTlDZUFra2lJSjBwRFlQZWNaQU1hUkFzeDFNdk53VjhRUmRkakk4Qm10ZTRIcGhUOThiU295NGxiNTBoWWVHUVdFbTlLNmNuQW1welVpQjlpb1NkZ21BT2N0OUptTlI1MW5WS1J5Yi1zR1MtZGRDektfTHh3RmJSNktnaUs3bFozWG5SQWxpS0N4eTFET05KNHJNN1Jack85RkI3NzRuYjR2REQtLXlYN2dqSGQ0OXU1SzhqNjBQeWVzVU01RGY4cGc4MzFxSUx5SzJESUNZdFNVenVsS3JXbXB4aVHSAf4BQVVfeXFMTXNkbDU0TVY2U2NDVmRJbGVrbk0za2FZR1BBdjRtdmpacW42VHFZdXN3enEyZHF1Q2g0LXcydkNzMFN5QVBvQmdIV0hEUzRiZURNYnEtQmc4dndxN19rOGlXOVljQ0RzcUZlZ09pTXE1Q1FfMDQyQll5dGZ1MHcydXNmUE1jamh4WUs5Qm50d3RHWG1ZcXpuMDFtM1hCUkpiWHFjOVd3RmRMNVNaRjFucTQ1U0pyaDByNmtMMWZPSG9CbW1yYmRjcWxWenhCWE94dVFDSE5OekJRZ1hTVkhZMVd4ZkQwcUZYVk53eWZqZllqaUJIekNvdnZLTjBKdkE?oc=5",
-     "f": "2026-11-23"
+     "t": "Semana clave en Congreso: informe de Diego Santilli - LA17",
+     "medio": "LA17",
+     "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNWjdBcDZ0NlZKMHFFU3huQ1ZnQU1NRkNqWDJGM24zTE50MEJkM2dpVm5CNG5KeDU3WjBwYkJGc1BWd0xmZEVvR3phTVVsRmhIRnoybTFwVXREUGZxd003NzhtOFByaEtjNGh0d1g1bnJRQ0F0MnlNU3NycHlEdWFiNlFrMXFlQkNkejZIUmhPcm5lZ0dvRzE1NjNLMk9BcFpkbGJ0TFdWc3ZDdkFBY1FGMjFKWjZWMTlOVlhOYXQxLXpUX09kSGRKeDNxc1FONW8?oc=5",
+     "f": "2026-11-24"
     },
     {
-     "t": "Máximo Kirchner asumió en el Congreso del PJ: todos los cargos - El Termometro",
-     "medio": "El Termometro",
-     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPQVlJa0o0NUh6RmFiZlU2UHVhb2ZBaGFqNkVYaHhkYUsxTHRLSDdRVHBWdi1Tcno5Z0N4R2pMSWlkZ1pxWGZyTXcwUGNwZkpXQ3g5VDlXUHVPWHQ3UWliOHdONHRmQ0hhbzYtdTUyWUg5SkVLY1NzU1lyMUYwMTNjblYwU3NsSV9GY1NyOXhTaTYxTUxMX3h5alNLRlZ4V00?oc=5",
-     "f": "2026-11-23"
+     "t": "Argentina asumió la Presidencia Pro Tempore del MERCOSUR Salud - Consenso Salud",
+     "medio": "Consenso Salud",
+     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQUHR4ZDBYVXBnRUlYNHl4UGNWcC1TaXB2azU2NXdBQk5kZVhwOXAxa2I4eW8zYm5hX0YxcFFROGZhOS1lQk81RVBjM1hIeEhDVWxScUVNb0R4eGR4c2U0V1FkbWtJTUczRllQdlB6bnJmYzdyQkE0am5iT3FxTlF3cDBJOGZiNGlvcWhxYzJJblZjV001akRv?oc=5",
+     "f": "2026-11-24"
     },
     {
-     "t": "JAVIER MILEI Y LUIS CAPUTO LLEGAN A CORRIENTES PARA EL 13° CONGRESO DE ECONOMÍA REGIONAL - Diario Primera Hora",
-     "medio": "Diario Primera Hora",
-     "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQel9HbW9hZEQxcGhZS1c0YWJocEIxUnM4ZHNiSXRzWUlrSk5fNVFRNWY2dklMTnBiSm5FUEZvRkpCakVINHNJZWY3dk9OYWhBZWNCSTV1ZVpWU0ZPVE9Ga0txU3htRVAzVFVrR0wtcHlUdTVSdUthQ2o3dXpGVTBLRlNLS1VlX3lpN1lvbGwwdDA0emxBYk5IMW5ib0NCZEFiWUlBUnNqbTExcktrZG03T1ZCQTlIVlZzaWVHcXpBTUJPR3dnZFdRaFZVdHNKSVlzdE5xWEU0NlQ?oc=5",
-     "f": "2026-11-23"
+     "t": "Sombra vetó la adhesión al RIGI en Azul - Séptima Sección",
+     "medio": "Séptima Sección",
+     "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE44RHdXT3NYaDk4c0I1QnUzSXZLbm44dHplMkFJQ0V6MU9icTEzWWtrQk9hRUlFNEhqTmUtQVMxOGZLTkowU3ZhNEVUeUJlbjYtZklZRzZOcS03XzEzTUxJYjhUWFFwNlRNZE1sWnNVcDBGa0NVb2VtX0lR?oc=5",
+     "f": "2026-11-24"
     },
     {
-     "t": "Javier Milei y Luis Caputo llegan a Corrientes para el 13° Congreso de Economía Regional - Perfil",
-     "medio": "Perfil",
-     "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNNDY4STNzMTY1RXV0ajk0dWhZaHRWa0hLc2ZFMFdZZkNGMWpKUU01V1JYRjFnRUJOU0NBTnNXX09hbDc5WDRRaFFvY1BJanFILTZWbmVnMGZOWFExWThNQmZMUjlJSFpyQmRtcURxdmUyXzJTZ24zbi1fRG1QcVhzTlBvOUZJc2ZjNXZ3c3RjdUk1M1RSVjVJREwtbjI0ckwzRk1sVHQ2SS01S2pKcnFHZU1paXRERlFQdC00YXczclQ?oc=5",
-     "f": "2026-11-23"
+     "t": "El Gobierno blinda por decreto la información sobre el aborto y lleva al Constitucional la ley del concebido no nacido - ConSalud",
+     "medio": "ConSalud",
+     "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNalkwV3JMbUZBLWwwdk15d0RqNk5XV096N0Uzdm9QS1hFTG43ZVl6Q0dhSDV1N0R6ODZramd0VUtYX1ZUeXJIeWNJdHpza2o3Y3ZSeFY5RE1Ic3FEcTlyNjIxOS1YMWFNenNVQjhRQWtQQ3QzWGEyY0hCYlp6TW95V2NPbDdYSGlWd2txbGZ3UVZoUHFCeWpyNjVkUVcxZkxDbXptYmUzdzNhb0FsYkpJX3UyQ2tncE9EbEFQT1djVTR6WThyQy1nbExWTmpORWhhME9lczRzNmRsUzY0RVdnRGpfZ0FTU2YtdmlPWQ?oc=5",
+     "f": "2026-11-24"
     },
     {
-     "t": "Semana clave en el Congreso: el oficialismo busca aprobar el Presupuesto 2027, la reforma política y recibe a Diego Santilli - El Liberal",
-     "medio": "El Liberal",
-     "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxORnVCbU5xbzZRaldkdGpRb3lvdXZ6MHV0aEQycVRuQUpfZkdGRWI5NmVtRC0yMk5LNGFMX05sMFdoN2JQY3lMWmNGZ25odDYwcDVTbWNRV202OWdKRU9sTTZwR1VJbll6aXZHV3BPWEpTZTBucFNKNFlGdDRETXpRb1NZV1BnYnJHX1hvTWpBbUNfR3JYb2VtaGFBWk1WaHBZR0hxWkFfVXJ1dVp6Tll5dXNyUWVzSnJnWVlRT3NUQ20tT1h6WnFXV2FxcGlCQ3cwcG13Z0ItTUFkS00wWjFQUzZVSHJucE9jMWpaUGU5UUluRWJLb3h5dk95VS1WOThS0gGKAkFVX3lxTE04TE1ocGx4SExOR3ZkeWhaV3R3T1A4eUFzamppQzI1UHpxOWtCLVA0ejI0YTFOWF9ub1hPYy1uZVQ4cnlfZDg1WTFVZE5QYnNPd3ZieEZFV3VJNUhHQjhtanpXYVMxRFNybHVXa203UVRDalFaSzNHQlhPcnlJSk1EOFJwSE5oOWlpVEtsNGdhcmhSTThQaURLamlMMTJDY1p4Z05oSjduZzYyYTY5X2owRVFVQXZMTTZMV1FEY29rYnA3dV9pdHFSLXRJOUgzNjVKRG1UZ2RCN1E1VUFIT2hJLXZPQzgzd0xrY19rWS10XzU2aWw1NzAxTVNqa1RLQWZ4OTk2RGdhbV9B?oc=5",
-     "f": "2026-11-23"
+     "t": "Diego Santilli brindará su primer informe de gestión en una semana clave para el Congreso - Elonce.com",
+     "medio": "Elonce.com",
+     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNU05fWjNLRTVIRUtWaExaQ0d3andQZTFzd3lRVVA3S253NlhSS0kxTnBVMWxxX0F5WFJKZWo0MjRHU21Vd01BMVlFY1dDYXBtVXBkYmVEejlFZlFPaFhmelZnRGRsRzRiNmIzNFl5ZHhVcVBpLUtabmdJbXZWNHRxNXE4MzljY2ZLdlMtakpnb2RyZ0dldF9GUWJuR191N0Z0Z3k4Mm9B?oc=5",
+     "f": "2026-11-24"
     }
    ],
-   "share": 6.9
+   "share": 6.6
   },
   "int": {
-   "n": 506,
+   "n": 551,
    "tono": {
-    "n": 506,
+    "n": 551,
     "pos": 5.3,
-    "neu": 80.8,
-    "neg": 13.8,
-    "agresivo": 29.2,
-    "neto": -8.5
+    "neu": 81.5,
+    "neg": 13.2,
+    "agresivo": 22.3,
+    "neto": -7.9
    },
    "encuadre": {
     "a": 9,
-    "b": 49,
-    "b_pct": 84.5
+    "b": 65,
+    "b_pct": 87.8
    },
    "plataformas": {
-    "Medios": 505,
-    "YouTube": 1
+    "Medios": 514,
+    "YouTube": 37
    },
    "semanas": {
-    "2026-09-14": 1,
+    "2026-08-03": 2,
+    "2026-08-31": 5,
+    "2026-09-07": 5,
+    "2026-09-14": 9,
+    "2026-09-21": 1,
+    "2026-09-28": 3,
+    "2026-10-05": 3,
     "2026-10-19": 4,
-    "2026-10-26": 174,
-    "2026-11-02": 78,
-    "2026-11-09": 61,
-    "2026-11-16": 184,
-    "2026-11-23": 4
+    "2026-10-26": 175,
+    "2026-11-02": 80,
+    "2026-11-09": 66,
+    "2026-11-16": 187,
+    "2026-11-23": 11
    },
    "titulares": [
+    {
+     "t": "Chile y Mercosur buscan integrar sus mercados de gas y electricidad para fortalecer la seguridad energética - Revista Digital Minera REDIMIN",
+     "medio": "Revista Digital Minera REDIMIN",
+     "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQSWpidmhHYnJ1UjEwZFJVeE5kWmxxdFBXUjhrT3Nlb0ZpcE12OWMycV91WmNGLVRPeThwWnFNSkkzaWZpdUZTSlNsT2UzRjJacFh2RUcxTTg2MXdCcVdnYWNMcFk5bThxcjZNSTM3SlNFWWxLZmZfVndodFZkeHZnQ204QWZBd0lLTC14elcwQU9GOHltWnN4WnFsVGtRV25fREg2dnc2Tnc4VEdIM1M2LUpoM3FubWl1NTZjem5LeURMVUpLbEM4OEtR?oc=5",
+     "f": "2026-11-24"
+    },
+    {
+     "t": "Acuerdo UE-Mercosur: Guía de oportunidades para España - empresa Exterior",
+     "medio": "empresa Exterior",
+     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOaTFXdFR3dm1fdjlId3JXVmVUblhBSmhsNHdzckxKb1k0UU83ZjZlWFlvUURvVHVHR2ZxaVk3R0VIMFp2UkFpMWtwcHVYUzlLOXM2by1iUTNpeDJ4bnR3N0FFVTRCX25QTHRHbVltUE1nVXZSalZWRkJNaWltRW53WnZ2bzVua0NMdDNpaUNpZnBPQzVoNXZMVnBFa2pPOE5mTndfMzZJWUFMTUszbk40eTZxb016VE9ZVVZIRy01TEpId2NDd1pj?oc=5",
+     "f": "2026-11-24"
+    },
+    {
+     "t": "Argentina asumió la Presidencia Pro Tempore del MERCOSUR Salud - Consenso Salud",
+     "medio": "Consenso Salud",
+     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQUHR4ZDBYVXBnRUlYNHl4UGNWcC1TaXB2azU2NXdBQk5kZVhwOXAxa2I4eW8zYm5hX0YxcFFROGZhOS1lQk81RVBjM1hIeEhDVWxScUVNb0R4eGR4c2U0V1FkbWtJTUczRllQdlB6bnJmYzdyQkE0am5iT3FxTlF3cDBJOGZiNGlvcWhxYzJJblZjV001akRv?oc=5",
+     "f": "2026-11-24"
+    },
     {
      "t": "MERCOSUR y Chile avanzan en integración energética regional - Reporte Minero",
      "medio": "Reporte Minero",
@@ -226,198 +257,222 @@
      "medio": "El Sureño",
      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOeGxzVUl6dDlINl82Sk5UUXY2TzJoXzFoNkd1Tnc4dDFYM2hLZkwwZ1pPVjJOaURHT3NYM0diUjEwLWhxbVROZy1UVnpiZEdvNlhuX0RkWHJXSk5FY01jbXpPY1d0YmdxVkNZYUJmcURoMFdqSWFkNG1mM1ZGUjYwWXNIbVk?oc=5",
      "f": "2026-11-23"
-    },
-    {
-     "t": "Qué propone cada partido para Defensa: financiación estable, más soberanía o recortes del gasto militar - Defensa.com",
-     "medio": "Defensa.com",
-     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQZV9ER19lcWVpS0djNU4xMUlUS0x4bG5iTEVPMktTS1ZPaVVjdF92OGVubVY0M3FMVUhtbUZLN3Bfd1RLQ1RNWXdMaTUyUUdUWUd6WlB0SGJCZElMOVRxVS1wbkJtZ3ctdDlTdFVpVTVadExtVDg5NXVaTERQWjlzVmdBS0FZVUtEd2t2azJJUGFOek5OZTVaZ0VMQQ?oc=5",
-     "f": "2026-11-23"
-    },
-    {
-     "t": "Argentina: Diez años sin sueldo y sin viáticos para sus parlamentarios del MERCOSUR; ahora buscan quitarle al pueblo el derecho a elegirlos - Prensa Mercosur",
-     "medio": "Prensa Mercosur",
-     "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxNazlPbFJsckphanlrVnA3VjJwMXR0c3AzRktLSTlkRnBNc0Ziai1vTE5sZXFwaExSb1Q4YTIyYi1XSEh4QUZEX3ZOVVIwcXY0bUI0SHppMUVQQzJ4YXhTOFlDb0pfLVUweHFYWWdXWDlGaVNKOVFHa0NHakd4UmN4VmlxeG9qX1hxYU9qQXlGYnpGd25VakZHcTYzUDFSMV8tY1RxelJIaF9EU3BISS1yNzdzNnJWMVBPWVR1dHplYnNJdDdxNHB3Wk8xQVp0X2xyWGtrbUU2ZWlsUnFqVFZwd3F1eXVzYnM3blBjRGlJS00zdFN5elNXLXVhWGhFRXg4dDEwOU9RQQ?oc=5",
-     "f": "2026-11-22"
-    },
-    {
-     "t": "La respuesta del Gobierno a Amnistía Internacional luego de la abstención en la ONU: \"Desde Londres, pretende darle lecciones al país\" - Perfil",
-     "medio": "Perfil",
-     "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxPSTVUVHVQTi10cGJwQlJjWHk2eElJQkFveEdLckxtM19GNWlKLVlxMm8xaTRtc19iQmlHRTIwRmw3REZya0R4clpsaWFyS1l2dGI4V25CZFdsNndjUTBSNTd4cjdMM1hHSENsUko1OXdvWkQxeWVFMURycUpuVDc5d2ZrNjhNQUFVcVUxNVA1RzJFQW5WdUhZamFGY2R5dk1OSHE2WlNGY21XODZrWFlsWlFxNE5sTlZCNmlONmk1VVVuSHRCZlhRY1RNeHp0ck5qNkl0MncyalJnQVVVTFhZLURhUE95bmpjN2IxTGxNOHczU3ZmQlBoNHg5UjFDLVhrNGcycVZB?oc=5",
-     "f": "2026-11-22"
     }
    ],
-   "share": 12.7
+   "share": 11.5
   },
   "mil": {
-   "n": 311,
+   "n": 431,
    "tono": {
-    "n": 311,
-    "pos": 6.8,
-    "neu": 86.2,
-    "neg": 7.1,
-    "agresivo": 21.9,
-    "neto": -0.3
+    "n": 431,
+    "pos": 6.7,
+    "neu": 83.5,
+    "neg": 9.7,
+    "agresivo": 14.2,
+    "neto": -3.0
    },
    "encuadre": {
-    "a": 189,
-    "b": 5,
-    "b_pct": 2.6
+    "a": 243,
+    "b": 9,
+    "b_pct": 3.6
    },
    "plataformas": {
-    "Medios": 310,
-    "YouTube": 1
+    "Medios": 371,
+    "YouTube": 60
    },
    "semanas": {
+    "2026-08-10": 1,
+    "2026-08-24": 1,
+    "2026-08-31": 4,
+    "2026-09-07": 1,
+    "2026-09-14": 5,
+    "2026-09-21": 2,
+    "2026-09-28": 5,
+    "2026-10-05": 6,
+    "2026-10-12": 2,
     "2026-10-19": 4,
-    "2026-10-26": 32,
-    "2026-11-02": 80,
-    "2026-11-09": 65,
-    "2026-11-16": 108,
+    "2026-10-26": 36,
+    "2026-11-02": 91,
+    "2026-11-09": 95,
+    "2026-11-16": 128,
+    "2026-11-23": 50
+   },
+   "titulares": [
+    {
+     "t": "Informe N°146: Argentina prevé adquirir misiles aire-mar para expandir la capacidad de ataque de sus cazas F-16 - Zona Militar",
+     "medio": "Zona Militar",
+     "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQZnhWM082cGdRb0RNaDRLVDd4bGFUblhSUkZkUUJMakQ3NjlheE1MZEUyWS1YeHRqRHh1Vks1QkRSNFR0MUM2a3cyaENJUWRKNnlRWEd6bzdLOU13NlF5X0t2RVhadXUwMUtJTTVMSmFqQkhKSWV2bk01dWtac2JYWU1OYmJhZnZXal84UzIxcktvSkF2N3c2Rl9vc05FdkdFcjhMWkljVGdsbDNZaXBmM2NIYWJoQTQtV3ZrWkVSUkZtdW1QLXcya25oR0lXNmJnUllPUm9LS1M3b29qWHRIQzVOMVI?oc=5",
+     "f": "2026-11-24"
+    },
+    {
+     "t": "La propuesta de Eisenkot sobre el servicio militar de ultraortodoxos - Enlace Judío",
+     "medio": "Enlace Judío",
+     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOX05ZcDhqMWxOcWhFX1RYLU8zX243SjVsb3lmaGxRVjlYLW13QU1NdHd6NnpZcV9BSVhPU2Rta1Vad3laR0hQcmk1RFNjUzlTNU9WSTlGdzJ4VWoxR0Vkang3Q2xHd1Z0R0NCRXNvcHBBYW1fLURISnZ1T1diWHh3UVpOVmF4S0ZlUS12YjY1U05iLTNQQkF0bzlRWEd5YXh0Tk5YOVhXQVZEcTR30gGyAUFVX3lxTFBsblVBY0hmbGpVYnBtZmRfNnRZSVNhR2pwZmVkcTZZWEY4MnpxcWFPdW4ydE92VmRqZ0cyQlhOSmhueEplNGFPT3Z2dDcwS2hNTmhfb3ZIbU16UDJCVWdzazMwUDlNVEtEZjBYaEgtMExUTk5jbmhFM0stVHh4MWlaUDM5WE8ta21ILUJwWTFpRWdHUDVJeVRYRDJZU1hyejlIbGIzS0s1am9oMkluLVpQM1E?oc=5",
+     "f": "2026-11-24"
+    },
+    {
+     "t": "¿Servicio Militar en vacaciones o los sábados? Ejército inicia selección para estudiantes en Chile - El Martutino",
+     "medio": "El Martutino",
+     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNV2diN3BuWExUUGxrVF8zend4TmM2alUxZnBvVW0tSUphUFVCeDF5ZHVMUDBXUnBjSVZYNk1GWF84MVQ1VHZKdjZyczBOQ3Z2bThGOE5LaTlFRkM4V1dsNFczaEpTY1RCVURmc3luNTBvd1dTR0QxeVpEOE11RmNJUUZsMHFKakZxZExzM0FRbkIzMXVOODdld0oybVBCMDB1UUtCNjRMZDBwdHNhSzZiM2J6ZHRxOXR6Mms5UUlYQXFyUWNBTGc?oc=5",
+     "f": "2026-11-24"
+    },
+    {
+     "t": "Comienza la selección para el Servicio Militar Obligatorio de estudiantes - UCV radio",
+     "medio": "UCV radio",
+     "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOeWlkOG5lNVc4OHM1QnZpSzVqR0c0clVVSlBNZm4xWjBrYUt3MUpROVBSS1h6cmxQXzZXdHlhRi1iRWdoQkhDQU9vYmxyZmtzSC02NGVFdEY1TnU3NUU1M0VqTTZGM1YteDFOZF92WDBXYXpWYUJFdHdNcG1KZkZ3TVpHUThQTUxGR2V3N1BBNk5kanhvNVU4NVJKcHZPOW01?oc=5",
+     "f": "2026-11-24"
+    },
+    {
+     "t": "Más allá de la mili: los sistemas de reclutamiento militar que amplían el control sobre la juventud - lamarea.com",
+     "medio": "lamarea.com",
+     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9uUjY5VkRjWVZCbWc1aFc0TFJqd0lfRUhxaW5IYXJzUnpYdTZhM1NmdXAtbUxlb1hpdlNWRER1R3NIQ1piRzA2Unp2X1dmZThtT0tiTFlRUWRZeVZtWTNtWWpIdDMxWnNETldFYzRR?oc=5",
+     "f": "2026-11-24"
+    },
+    {
+     "t": "Informe 77: El servicio militar ante el rearme europeo - Centre Delàs",
+     "medio": "Centre Delàs",
+     "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPYlZMTEdCcjZ0LVFRM0wzLU9KYWFBVGt4SlEtdnBTTl9jVGtDVGtUa09ndmJfZTVUMUNaT1JHR3QyNzBNc1RCS2p4dG83dnhYOWlhNEVuTTd6dUw0cW9HNm5EamxmNzRyZVFvbmpZcDhualBWWGYzNFc1NHl6RVVyaHNnNHNnTGtDNURRWVJoRjJmTXc?oc=5",
+     "f": "2026-11-24"
+    }
+   ],
+   "share": 9.0
+  },
+  "lib": {
+   "n": 350,
+   "tono": {
+    "n": 350,
+    "pos": 4.9,
+    "neu": 79.4,
+    "neg": 15.7,
+    "agresivo": 13.1,
+    "neto": -10.8
+   },
+   "encuadre": {
+    "a": 91,
+    "b": 3,
+    "b_pct": 3.2
+   },
+   "plataformas": {
+    "Medios": 321,
+    "YouTube": 29
+   },
+   "semanas": {
+    "2026-08-17": 1,
+    "2026-08-24": 3,
+    "2026-08-31": 2,
+    "2026-09-07": 3,
+    "2026-09-14": 1,
+    "2026-09-21": 3,
+    "2026-09-28": 1,
+    "2026-10-05": 1,
+    "2026-10-12": 7,
+    "2026-10-19": 4,
+    "2026-10-26": 44,
+    "2026-11-02": 79,
+    "2026-11-09": 90,
+    "2026-11-16": 89,
     "2026-11-23": 22
    },
    "titulares": [
     {
-     "t": "Participan Cientos de Jóvenes de Nuevo Laredo en Sorteo del Servicio Militar Nacional - Noticiero de Victoria",
-     "medio": "Noticiero de Victoria",
-     "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQWGlYN0tlMUdkLWdmRjRjVUtSM2JKakFlbTYtbWdiM21WMWJyQWJrcFVVcTBRVVBBNWxkZUhNSDRtbmw1SURXSUtvUWZ3b1VzMUlPd19MVGZVS2Q5b1poSHhyemt3SDFWbTJwWC1jeThWMnJHbkhtTnUtUTNqMnZzaFo1UmJYeURZdUtQUEdfc3dMUGc1TFRydFJnNzlkZ1oxaXNRTkdhR3d1djBZcldVdFo1Ti1KUkcxVHc?oc=5",
-     "f": "2026-11-23"
+     "t": "Chile y Mercosur buscan integrar sus mercados de gas y electricidad para fortalecer la seguridad energética - Revista Digital Minera REDIMIN",
+     "medio": "Revista Digital Minera REDIMIN",
+     "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQSWpidmhHYnJ1UjEwZFJVeE5kWmxxdFBXUjhrT3Nlb0ZpcE12OWMycV91WmNGLVRPeThwWnFNSkkzaWZpdUZTSlNsT2UzRjJacFh2RUcxTTg2MXdCcVdnYWNMcFk5bThxcjZNSTM3SlNFWWxLZmZfVndodFZkeHZnQ204QWZBd0lLTC14elcwQU9GOHltWnN4WnFsVGtRV25fREg2dnc2Tnc4VEdIM1M2LUpoM3FubWl1NTZjem5LeURMVUpLbEM4OEtR?oc=5",
+     "f": "2026-11-24"
     },
     {
-     "t": "Ejército inicia selección del Servicio Militar para estudiantes - Paislobo Prensa",
-     "medio": "Paislobo Prensa",
-     "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNVFVob3R1Zy1DT1A4OE1faXVUSkMzVzVibjA3ZEsyTnIzVFdadG9DODM5alRWeXdmZjVHM2VwZlF4UmVvdER4S0VOdWU3bkxNclRXUkJpUGFqamE4VThmRU1rUkc5UHFIV1ZYdGVJcVJmRm9VcFNwdHM4OFZUOTUzSg?oc=5",
-     "f": "2026-11-23"
+     "t": "El mapa digital que dirá cuántos delitos ocurren cerca de tu casa y qué hace la policía al respecto - La Posta Noticias",
+     "medio": "La Posta Noticias",
+     "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQYUtpR2pzNEhaa0NmZFJPTElGU3M4ejZrekFybmFRM2VWWDF2V3NZNEVHcnZLaVQ2cktXMWZ0akVOeWVjbm9WOUlvOGo2cGpCOFNYVlVkX3dNNVpqQXVtNGVrbVFUMTJEVnU3YVVsZ3VrVkVYSVZ4ZDMxTkNSNGJrNFNVbEtpb1hjcGx2QzViZXVTUHI5SHltQjR5UGJrUEEyalNlLVJqanJ4N1k4Ym1UTHRob1FrY3BvN1N3TTNEcmFXTHdfc0g2bm9la0lvazJBMnRuMHI5QmRWZ1dxRlo5VVFQVmhxVjQ?oc=5",
+     "f": "2026-11-24"
     },
     {
-     "t": "Jóvenes de la Clase 2008 definirán su modalidad de Servicio Militar este domingo - Poblanerías",
-     "medio": "Poblanerías",
-     "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9XODVrMjZTbVNZOUwwYjB1d3JsOFdGa3RWUnFwZ2FIQ1ZWVWlCT3lydnpDd3ZLUTc2Tm9GbERENXQ1QWNlSW1mamUyUE91eU5zODliaXBsNkwzT0h2U2kyT3RrQ29GU1VUVEt2a3ZoaDhVRi0zLTB6aEx3Zw?oc=5",
-     "f": "2026-11-23"
+     "t": "Robos con violencia disminuyen un 19% y robos violentos de vehículos bajan un 24% en 2026 - Revista Seguridad",
+     "medio": "Revista Seguridad",
+     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxORkdtSVVjVVd3X1J3VjNyb2lfcW9MRXJwVmw1b3dCYmxwOTF2d3lzNWtGbnlmNmQxVTN5U3BwQlJqVjNyTWpNajJ3eVRNaG85bmtsX2xyTjdaMTdXZ1dXcVlDODVoVVRmZGF3S0Fsc05PWDFJMjVRQzc3cVZWZ3J1cjlLcThJSmxpZ2MxbFJCcmphaXU1UkhvODJLOHVWRFlGLUgtdE5kYzFTVEJNcXpZV1k4ME05OUFXVTIyamFiQlc4QllOWXc?oc=5",
+     "f": "2026-11-24"
     },
     {
-     "t": "Cuauhtémoc realiza sorteo del Servicio Militar para jóvenes de la clase 2008 - La Crónica de Hoy",
-     "medio": "La Crónica de Hoy",
-     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxObmNwM2JYWVEtWDgydTZwNThnU1M4X1U5Y3VXbVg0VDdqcVEtaE9qazVQSk1mZE9LVkN6MU9sZkhVeHgxT1dpV25ibVBobU5CQnY2MmFjN3lfR18zZ2ZVNTh5R3lxQ1JVU3p3elhiSUgzbFJkMEVZTkxBc0NKRUJqX3BUSTdZQzdLRTMwU2Q1QjVNNjNZZVNydFhkbUpxbGdGeFF2ZVhZdzRIdzBqX3FuOExqNUtvX3FJM08tVlVDU21PM2M?oc=5",
-     "f": "2026-11-23"
+     "t": "Diputados: piden crear un mapa del delito para evaluar la seguridad en la provincia - 25 Digital",
+     "medio": "25 Digital",
+     "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQZDYydmwwc0ZJYlRub0I5VG9KOTZwdWg2QV9MUkRIemdwWHBqUmQ3a0x1VV9EYzBNTHpRTWJmWFRGMTFCbTVmR3drZkRjOFpDOGlXRWpGdWZTV0ZUeFMtLWJLdXZWUHl1eUYxT0FsRHgtSG1YWkV2MUN2SGFVenNiUGphNE9YRmdOMDZwTGU4cER1Y2t1Zk1ybXFwTWMxamRFTms3Z3JHYkZjNllsbnlVVTljY3JGSERsbXkxR2F1dTkzWENVbmRwZ1RnYzlBUQ?oc=5",
+     "f": "2026-11-24"
     },
     {
-     "t": "Del distrito de Aguablanca a los grandes escenarios: el soldado caleño que cumplió sus sueños en el Ejército Nacional - Ejército Nacional de Colombia",
-     "medio": "Ejército Nacional de Colombia",
-     "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPX2trMlU1S2pzNHpVNlBnSXlqSS02SDhnakttOW5MaUdiempDeVlFbXl1OGk2aG9aMHFORWFUZTZoa2hxUmxrZjlMZE1hbWdLUXFwYVd5bjdrU2VJZlVoOFRCc0FPVU9HTTlzT0tNTlpCUERNNXVuczR5cC01cThPaXQwejd4T21fcGs2eHpmY2hKMlNpLWk3UjU2MXR3akhyNmdWNGdLNWhoWEUzTTVUSTVScFRMUmROVDVhbkFka25wOWlVSkhTbXU2TjdydEhjUE5uMkY2OFRtaFBL?oc=5",
-     "f": "2026-11-23"
+     "t": "Aoun y Salam discuten los arreglos post-UNIFIL y la seguridad alimentaria - Daily Beirut",
+     "medio": "Daily Beirut",
+     "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOTnZfWjhCVmYwOXAxdUpsRmM4Q0JaXy1JY2dHN28zNGYzSXdwaTlmMVh4Zk5IR2dFOGVJYjQ1QksyRTN2VnBsdllwNWRVeElDTm0tZ19PRXFKTnJrd0s5NDhYdURiYy1Sdk9EanZPWm5leWpGS1dfcGJyTHhJNHlIbWtraGhON1MycnNRRVdtT2xsTnkyTnVGbGlKWlB5WkJUM0E?oc=5",
+     "f": "2026-11-24"
     },
     {
-     "t": "Más de 600 soldados de la Quinta Brigada juraron bandera y consolidaron su compromiso de servir a Colombia - Ejército Nacional de Colombia",
-     "medio": "Ejército Nacional de Colombia",
-     "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQT1lSWEdzeExSS0VVMUx0bjRhaTMzNW1VLXpVS28zd1l5UGJxb0o4UHBNUEQtcUV3WlJQYmk3dnEyeHZSVGtSUlNtMGNQSkZmNGxXX2xyWnhHN0M5V0kyVXhlWGZiTUo5enhuVWdwUVN6c2FYR1RwdzRiN1NSS2F0akdINHlkd2Y1bXpBcGszT2ctZ1JhSlUtM1ZHeEk5X3ZLbTR5NFE4dlVtZ2F6QS1YS1M2SDdHZzM1MDdETUpWUEtoTzRZS1UxanU0dGJUbHc?oc=5",
-     "f": "2026-11-23"
-    }
-   ],
-   "share": 7.8
-  },
-  "lib": {
-   "n": 290,
-   "tono": {
-    "n": 290,
-    "pos": 5.2,
-    "neu": 79.0,
-    "neg": 15.9,
-    "agresivo": 27.2,
-    "neto": -10.7
-   },
-   "encuadre": {
-    "a": 84,
-    "b": 1,
-    "b_pct": 1.2
-   },
-   "plataformas": {
-    "Medios": 290
-   },
-   "semanas": {
-    "2026-10-19": 3,
-    "2026-10-26": 40,
-    "2026-11-02": 71,
-    "2026-11-09": 85,
-    "2026-11-16": 80,
-    "2026-11-23": 11
-   },
-   "titulares": [
-    {
-     "t": "Policía redoblará seguridad en todo el país por el Viernes Negro - El Nacional — La voz de todos",
-     "medio": "El Nacional — La voz de todos",
-     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNTmJhTDBzUXlXZC1vWDB1MkFQMTc2WlRXMWJIZnhYcFdWdjAySUxJQWdBaWx3WDZ6dXNjMGxteEt1c1FGOUJ5WTdsaVdRU2xHR05BWFRwMUozTEFsWDEyR2RfMEtWSFJDRlA4RnFGRy1GS1Z6ZkpwMjU2YlJhV0trSUcxMWk1eGpQYkdYRzVSSkhSdFI1eFRPU2xDS2QwNDdMNFdBQ2N1Q01Fdw?oc=5",
-     "f": "2026-11-23"
-    },
-    {
-     "t": "Policía refuerza coordinación contra problemas de seguridad en Los Alcarrizos - El Nacional — La voz de todos",
-     "medio": "El Nacional — La voz de todos",
-     "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOd1BnTk8wemdZQkxtVE1fQlpMbnFTYmY5YnQ1dy1JNUlOcnhJVjVjcDJxb2RRbUItZFdtQk5WWHM1UnN3eURVbE4xSjMzTVp0S3BKWFoyQmFIVnhSUHR3UnFHbXdQczJXNWR0R1lCWmwxVlRzUWhjeDVHVDExb1VFWEpmOGtCUU42WjMwOXhVSFlPWk9uQWdZNS1HYkJuUW9ELVAyeUJPTG9XLWxfQTBOVU9hMThQUEhnZnlvZtIBwgFBVV95cUxNdjIxc3BmdjNYelpLYWxRc3pNT1Q5b0hXQlAwRGstYVBjTmVJVXlGc0FhcC1YbkhUaE41U1oyMnByZ1g0OWNaS05URFJudkdDVnBZaEdISzdJYUZLcTIyVEstWE5sNFVKZnFwRHdBam5iTjR2T0s1dVVqT2xMeXN5eVR3VzJwcy1CSkkyZWpxZTRyYldvSEp4bUIwNE81Wl80RmZxNk5meGVlYmNnUTZZSmlSVmhlNG4xR0oxelB3MUpaZw?oc=5",
-     "f": "2026-11-23"
-    },
-    {
-     "t": "Detienen a tres policías de Cuautlancingo por secuestro, robo de mercancía y vehículos - El Popular, periodismo con causa",
-     "medio": "El Popular, periodismo con causa",
-     "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPUHBRZExTV1AtQURHQkxYYll6MF9adzRyZERfZGpqODlrc0N4LU9ZdGFIS2hTZnF3ME1jbWFIeHo0aEFEd2pvNWRFeHR2TV9Kc1pDVXZoTlNsRW1OR1l3d09WRy1XUTN3UnFwNVZMS1djQjBUdXJXbExQY3huSHVVWkJOejlHOEJCTmpmb19xRkQ4NjVBSmVBTnBaelhCTXk2UzBxYXJrM09qcWlhYUktaWZUc2g5My1odDcwYnFLdzE3TzBhNXVlOTBzT1lKV01fdnZN?oc=5",
-     "f": "2026-11-23"
-    },
-    {
-     "t": "Balance de seguridad: Gobierno reporta baja en homicidios, robos con violencia y robos violentos de vehículos - Puranoticia.cl",
-     "medio": "Puranoticia.cl",
-     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNWTBGUnRPZW44QXNzYVpCQUg5V3ZYejREZGRlTHVjWEdvOVA4NVpqRWhESzBJNjFSMnREc3l1b1NSeGVWTndoNFdFSUVZdExaMFhwZF9NTWVLTTBTZDRjMXNEWFcyMl81VTRUejVDOGZUc29ibVBBLUxreHNsc3FSWlhmZkpvbXBvdUNNY2pudkl6cE9pdFJzc00xNFF2M2hLcEI5RA?oc=5",
-     "f": "2026-11-23"
-    },
-    {
-     "t": "Carabineros de la Policía cumplen 20 años con nuevas capacidades para enfrentar delitos ambientales y garantizar la seguridad rural - El Tiempo",
-     "medio": "El Tiempo",
-     "url": "https://news.google.com/rss/articles/CBMipAJBVV95cUxQcjNvdlZQRnRqQTNTTm1QVjN6R09ncjdWSFpIQUw4N2hLTEdicXk5Yl9KWjVMYVZsOHBKOVpjbFJrLVJ5eEthR3J3bWdsZEhmd2w3M0JkM00wRWtnQWx3T19DZ3psNVEzNWtxSjhNZHZOUGdfUExXYXBqelNUczZHUExvZ2ptSHc5YnNwOHJHcEc5TVV0NngtSzRZZHRRTDZXVlZPaTMwMmFaSm1hUE9aREZzU0ttN1dRb3ZESzBPcnFHVEV6S1hyQ3luajhMTUdzX0o5ay0zUHgyWEVqWV9iSkl5cFNTMDJUTjE1LVAzVkZyVVMxV281anRpbzdLRG8tWE5lNTNmR3ZBRnVld0hXVmNXTi1BZlVGVHRwZ3NTZFh1M2420gGqAkFVX3lxTE1udmlPTE5qUXFFZzJZTktGWGlIQ2NTZDdMbXdwaEVrQ0tpZDd2ekgzUlNQUWE0Vm1NMTVCUFFlZFlsQ3hIaHk5U0d5TDZHX0JyLTBUTW1xSjI0QjV1RXJvZEZTSDNtX25TWVZxWU5zM0Jpa1VDU2hWWm9jN19vUzNZQ2lmTzhyWFgyR0s0UDV6SmFPb0ZHX1NXWTZJaXA2OXNXNUtQUkFLcTVfSmhzS001a1pMY0lNVGUwdVdVdkxSRnQ3ejA5M0t2ZkJ5cTRPSHc2bl9xV2tmSnFVLXhwc2QtSXduT3Exc1BlSzdSWThwUzB6eGF2c3ZNeC1aQ2xOLTdoQjRnTTF2Z19jOGRpNzFPeEF1YnhseHZQM3BoblJLMkZ2ckdfRWRmcnc?oc=5",
-     "f": "2026-11-23"
-    },
-    {
-     "t": "Diputados: piden crear un mapa del delito para evaluar la seguridad en la provincia - Diputados Bonaerenses",
-     "medio": "Diputados Bonaerenses",
-     "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE95R2ljWWp2cEhYNEptR3p2WWxJZllGTGF6bWNVU2VIY0M1YjR3eF9rU2xyeTgzczJvYW40RVQwcTc4ZzRZQ25UOGgwMWU1RVJ2MGpIYWU3SWhIMjZFaTVKVVBXOEpXcThfOGc?oc=5",
-     "f": "2026-11-23"
+     "t": "Au Lau aspira a construir unas fuerzas armadas fuertes e integrales. - Vietnam.vn",
+     "medio": "Vietnam.vn",
+     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNdlljZktOandVbnU3SXlxSDc5N3llYWRzVjdCbmduTGVOZ0RhRU03X1AwNDlvVTRwSGI2a0FOLW02bkM0dkNOdzhpMzFCVG9PdEx2bDQ5Q1ZUV1pJRVZ4WTBHdkpRWTdydlB2RW1SaWxDWHFacjlzTUtnNFl1cXN0QWh5bjlKUkozS2h6ZEJDNHdjQmc4?oc=5",
+     "f": "2026-11-24"
     }
    ],
    "share": 7.3
   },
   "col": {
-   "n": 181,
+   "n": 217,
    "tono": {
-    "n": 181,
-    "pos": 7.7,
-    "neu": 85.1,
-    "neg": 7.2,
-    "agresivo": 14.9,
-    "neto": 0.5
+    "n": 217,
+    "pos": 6.5,
+    "neu": 82.5,
+    "neg": 11.1,
+    "agresivo": 11.5,
+    "neto": -4.6
    },
    "encuadre": {
-    "a": 31,
-    "b": 108,
-    "b_pct": 77.7
+    "a": 35,
+    "b": 112,
+    "b_pct": 76.2
    },
    "plataformas": {
-    "Medios": 181
+    "Medios": 207,
+    "YouTube": 10
    },
    "semanas": {
-    "2026-10-19": 3,
-    "2026-10-26": 18,
-    "2026-11-02": 12,
-    "2026-11-09": 26,
-    "2026-11-16": 117,
-    "2026-11-23": 5
+    "2026-08-10": 1,
+    "2026-08-31": 1,
+    "2026-09-07": 1,
+    "2026-10-05": 1,
+    "2026-10-19": 4,
+    "2026-10-26": 24,
+    "2026-11-02": 16,
+    "2026-11-09": 37,
+    "2026-11-16": 125,
+    "2026-11-23": 7
    },
    "titulares": [
     {
-     "t": "Dos cooperativas argentinas le regalaron al papa León XIV un Libro de Oro hecho con trabajo y solidaridad - Agencia de Noticias Solidarias",
-     "medio": "Agencia de Noticias Solidarias",
-     "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE8zbGJzaVFNSWFtRmlsUHBvWXZhcWQ1T2tLYkJIZkxuYmcwS2VNZG9EbVRtdElUWXllQVFkYWc5eDNXT3JSdVBfM0NrZW1QV2NseUFxUVliaGtxRWI4MlZJNU5LMUZiMWFzR3dVWHBkaTFoLURqOW5MUzUySHQ?oc=5",
-     "f": "2026-11-23"
+     "t": "Qué cambia con la nueva ley de inviolabilidad de la propiedad privada y los desalojos exprés - Nueva Ciudad",
+     "medio": "Nueva Ciudad",
+     "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNS1E0VWdGZEwwWGkwQTFaTm53Q0JCay1ERVRuTnRiTjZDbGYxVDQzSzE0NjhkQ2NQQzM3MlFwRE1lcExKalJVaHlBY0ZzdWJqOHl1S2R6UENWQnFBTHlfNGFndnItLVplVnhYaVRQRUVmNU1YemVHdlVtTzRqRUFfZW95X09mXzVmU2dTenVNUGd2dFpUNEl6RFJMRXRtbFRrd2llVHpkQXNJY0hENHN2a29VRUNmS0FaeWI4QUVUT202cWhlb3JFclJrVXVfRExGeDMyazdNZVA3T2dtT0F5TE1n?oc=5",
+     "f": "2026-11-24"
+    },
+    {
+     "t": "Recuperar un inmueble con la nueva ley de propiedad privada: plazos, trámite sumarísimo y requisitos - El Cronista",
+     "medio": "El Cronista",
+     "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPRkRSY0FkLThfbHFGZ1hoUzhOaElMYjJRUTRuRjJmQXloUlB2aU8tUGZDX2RTaXpOVkFmTmlpcGZyc0FNZndSVjVHN3R0d1NBRzhQUHB1SnJZTTVfek04R19mMlBHMjFFMDNmMm1qNEs3LVlCOUo2R3k4cHhyWDV3QWh3NU5Gc3hQcklMSzhhOC1HZE9vd2s5Y1oyTl9ualVLTk42R1hGSWVsRlZhTzNQODRfUXZuQ0xFTVprQ0MwTlUwbjFIOWhoUm1vZjNoNjBjT1d4Z0RnTkYwd05GbzRkZ9IB-wFBVV95cUxNeTVoMGhrQnMzMjh5WXh4MG9YU0k1ZFBJX05CZHdzWXVlZ2NST0syZlRkYmlaNDZGWUJyeFRkZzZCUlhHdHRTa3BHRkVpY2hTYWV0WGp0U1h1S2Q5bUN0Y3o2Mnpuc1RxM3B2cnhaUVZRdEY2S2FyeE84QUVDZUk0NFdKVDUzNG9pdzV1clBqSXpwVkNaYktIUGVaQllSalNKb2FVLWxBckVJcHVrOFBvbUFqRVFyLXRUalU3MnM0WDFoNUlka3pDMElLRzRzU3Y1alYwOHVFcGdQa0dfRUdKc2RVR0JUY3plNEdYam8yb05ZLThCSC1KcVJtRQ?oc=5",
+     "f": "2026-11-24"
     },
     {
      "t": "El Gobierno comenzó a convocar a sindicatos y empresas para renegociar más de 400 convenios colectivos - DeGremiales.com",
      "medio": "DeGremiales.com",
      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPSk1zeklqUzVkaUxzUDUxQ0dWNXUydlRib2IxNTlyTThkZTRrMzJMYmRiYVRtQjhsZmNlbTBQbzBKRUhiOHNiVGpHWGc5cnZXQmQxMXVxOFFraGhFLWlNcVFHcjdiSHhmMkFpWW9tbng1TFozNUpPNktEa3dVODZfYmZwNVpfOG9GZTRkN1VkQk5ja1dJRFRhaVZEUjh5UXg5UEJkOWFVZWk3dzM2U0dfUHk4ZDhLYlk3VXM5TWhjS0R2eUlMY3FJX1lfM0VOR2FC?oc=5",
+     "f": "2026-11-24"
+    },
+    {
+     "t": "El Senado convirtió en ley la reforma de propiedad privada y restituyó los límites a la extranjerización de tierras rurales - Economis",
+     "medio": "Economis",
+     "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxONjFucF9CTmVHbEVQUFdUUlhvZ0NsOVJqcHcxRHZkWUJac1lnRUwwX1h4cGM5X3poV1E1T1V3X0l4bWluMS01d1dCWTJ0Y3NKT0VZcWhQU1VhWS1WSEhRM1dVb1BpdFBEWEVST2llUWcwNzhZeWZyNWhwX2p5TDBFYXRZQUFqS2RqckpFR3pyV2hZc3VnN0t2YUJ4YXRYQQ?oc=5",
+     "f": "2026-11-24"
+    },
+    {
+     "t": "Dos cooperativas argentinas le regalaron al papa León XIV un Libro de Oro hecho con trabajo y solidaridad - Agencia de Noticias Solidarias",
+     "medio": "Agencia de Noticias Solidarias",
+     "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE8zbGJzaVFNSWFtRmlsUHBvWXZhcWQ1T2tLYkJIZkxuYmcwS2VNZG9EbVRtdElUWXllQVFkYWc5eDNXT3JSdVBfM0NrZW1QV2NseUFxUVliaGtxRWI4MlZJNU5LMUZiMWFzR3dVWHBkaTFoLURqOW5MUzUySHQ?oc=5",
      "f": "2026-11-23"
     },
     {
@@ -425,187 +480,202 @@
      "medio": "Voces de Cuenca",
      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPc2VudzNDLXFla0lkaEtWUmJBZi1MRmViREV4RHphZ3Rpck1WRlVDczlOXy1aSGNBSEpnc1Y3SEF1LVZYUE9DbWJpX2tjUTlzWGxwSzU4T0JLN2ZadmtHM3g0b1ZGeHNCLTQzMTFTdm9XUGhuNFdrQWZKUkFEbnAtQldGOVEyYm4yOW56TS00SDd3b1pBal9YaXlweTJEUG9tU01rUVFyem9lYkNCNm0yRldUazVhdkFmeUZmRUNlOUVvSy1rdlloR05HQklPaXZybUh0N2ZB?oc=5",
      "f": "2026-11-23"
-    },
-    {
-     "t": "Los sindicatos presentan 150 propuestas para situar los salarios, la vivienda y los derechos laborales en el centro de la próxima legislatura - Diario Sabemos",
-     "medio": "Diario Sabemos",
-     "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOZ3ZPQXBTSTVsX055YUdhVjYtdVI1SjNoaG1ONVlEVWNHLWNKNVBkSjFFYU9jSnVYSDdhY0txQVJFTUxoRl9ROTJKZUstYlNQRG16U2ZEVmc5c2xMMGxDY0tRcHI4dW9kNmtpNkRSNjQ0ajYxamxfNE91UTlrTHRab3Nfd1JRMGVqeVg4dUwxV2FkbUZpak9ESUFaV0RvRlJBaW9JOW1xeXFfM3RxSHpvQjlab2R3RVZ0YlZUZkduRDJEQUVXcGc0ZllQdlktVnU4TVJNTzlZUnY2MlRkQy1CSnVpb1VUQ1VGTlJvUV8wc2dvZw?oc=5",
-     "f": "2026-11-23"
-    },
-    {
-     "t": "El Senado convirtió en ley la reforma de propiedad privada y restituyó los límites a la extranjerización de tierras rurales - Economis",
-     "medio": "Economis",
-     "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxONjFucF9CTmVHbEVQUFdUUlhvZ0NsOVJqcHcxRHZkWUJac1lnRUwwX1h4cGM5X3poV1E1T1V3X0l4bWluMS01d1dCWTJ0Y3NKT0VZcWhQU1VhWS1WSEhRM1dVb1BpdFBEWEVST2llUWcwNzhZeWZyNWhwX2p5TDBFYXRZQUFqS2RqckpFR3pyV2hZc3VnN0t2YUJ4YXRYQQ?oc=5",
-     "f": "2026-11-23"
-    },
-    {
-     "t": "A la CGT le salió el Frente de Sindicatos Unidos, ¿competencia o complementariedad? - Diario Anticipos",
-     "medio": "Diario Anticipos",
-     "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNc2p6eVE1ZWpFdzhZVVdjWTJTXzZma0hWdXM4VEhOYlNJUGQ5ZG1hbnZxcF9mNURlbHRZZFB0WWZiN3VsV3d6dThDWlJreFM1MjFIR3NVWldkUjhQQ25QME9Ya1BpTHNjejN3d2taT19oZWNlSFR6U2RQeXlfa0k5aWZiRGx0SDBRanNaRzJsTlQ2bG1hTlY0X1RqOUExSG1BdjZxNnRKZXBXeEh0akFNZjFDcTV1czZXM2dSVQ?oc=5",
-     "f": "2026-11-22"
     }
    ],
    "share": 4.5
   },
   "rel": {
-   "n": 608,
+   "n": 720,
    "tono": {
-    "n": 608,
-    "pos": 13.5,
-    "neu": 77.5,
-    "neg": 9.0,
-    "agresivo": 16.9,
-    "neto": 4.5
+    "n": 720,
+    "pos": 13.2,
+    "neu": 75.0,
+    "neg": 11.8,
+    "agresivo": 6.2,
+    "neto": 1.4
    },
    "encuadre": {
-    "a": 2,
-    "b": 95,
-    "b_pct": 97.9
+    "a": 3,
+    "b": 158,
+    "b_pct": 98.1
    },
    "plataformas": {
-    "Medios": 608
+    "Medios": 642,
+    "YouTube": 78
    },
    "semanas": {
+    "2026-07-27": 2,
+    "2026-08-10": 2,
+    "2026-08-17": 7,
+    "2026-08-24": 8,
+    "2026-09-07": 1,
+    "2026-09-14": 1,
+    "2026-09-21": 1,
+    "2026-10-12": 3,
     "2026-10-19": 3,
-    "2026-10-26": 75,
-    "2026-11-02": 168,
-    "2026-11-09": 259,
-    "2026-11-16": 77,
-    "2026-11-23": 26
+    "2026-10-26": 103,
+    "2026-11-02": 198,
+    "2026-11-09": 271,
+    "2026-11-16": 83,
+    "2026-11-23": 37
    },
    "titulares": [
     {
-     "t": "«No dejen morir este proyecto»: el Episcopado y los evangélicos presionan al Senado por la ley de ludopatía - Flipr.news",
-     "medio": "Flipr.news",
-     "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNVUF4R1M2VTJDUWt2RTgtYzNZX3VGVUcwSzU3UU1DaHFkSHBLMnlzeVh0MXZBRDluNDBtTEo0UDBrQ1BuNUJ3OGYycG9UZUtYakJ1V0w5blluODQ2ZUJzdkxUejRCWGRlMEJ4UXlLd0VvZ0hKYXhKNXQ4dllpaDZxX1FhdXlPU2g2VmtBdnpIOG1rY0w4TXk5NkthcVdXR1Q5ZFdBVlRzcTg1eG1VQUQyRkZJTWJqaFBKWEVIbWV0b1dNVVh5Tk1kV3FQbkgyZUJYVkp5OUNpaDM1LU5tUzNfcGVn?oc=5",
-     "f": "2026-11-23"
+     "t": "(audio) Héctor Luis Milani, el argentino que confeccionó los zapatos del papa León XIV: “Un orgullo y una bendición” - LU24 – Radio Tres Arroyos",
+     "medio": "LU24 – Radio Tres Arroyos",
+     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOWWUtcHhadjkyVERSa05ZcGRkc0ZNOE5Jc2hyazBWamJRT29NUXRFaEl6dUI5WGRLMG5ucXd1NGUzUzBqZk9MSjJiSkE2SkI3dU9TbUx4aHNJOHRFNFNxZzh5R1NydDlNcF9LZDZIemNYOVBGNmFlbkczdnlkWnJqMVQ4WVpTN1BZdEhVRjJYdUdCN1UtalBpX3ZVLWx5VVZfMTFGdmFvcXkwS2lfN3N2YXVqdw?oc=5",
+     "f": "2026-11-24"
     },
     {
-     "t": "Llaryora acompañó la asunción del nuevo obispo de la Iglesia Greco-Católica Melquita en Argentina - Prensa Cba",
-     "medio": "Prensa Cba",
-     "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQTzVUSEZDRFZqSXUyM2l4MWdzTGtyeGZCTlJDbzI5T1FIdl9DRVg2dDNkc2lrOUtzajJxYVBmZUFBbnc3cWlEd3RwSVB6dUNXUlMwVnBwSUExTkQzTGg0Y1YyS3IxY2hHY3UtUDJzU3JWcjQ5cm5wa2c3MXBydXNDdVV5QjRTSktCOVhNeGlXb0VyLTdIX1VNb2ZXcXdPeFlHLTRvd3p0Z2pic3RTSGszczBmVC1VNC03RWh6U3YzTWJEdw?oc=5",
-     "f": "2026-11-23"
+     "t": "El diario secreto del Papa Francisco saldrá a la venta en Argentina en diciembre - El Diario de Carlos Paz",
+     "medio": "El Diario de Carlos Paz",
+     "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPa1dSVWR6MERkUEVCZVlLdno3V255enpLSFZvLXVSZDV6bTRRV3RHM1NRTUhDSzMzaVppcnpRRFAtejREX2lWbVRqdUJfbGlLMEtNamtNRW1FbllSNVdrQ2kxemd6a2tHRWMxSW5tYllzWEhxNUdYR05za0FpWFIxVU0wMnJBZTAzWGtDLXJ0enpCZmZlYXNtR2NkWW1wcnJILVdrUXpublFKTUhZN0lvSWtIc3F0bldNWWJMY1ZRYzVWckZNbGtKU3BwQ3BCRC1PRkRkMlQ4WncyaGhtOHVKc215dG1iZw?oc=5",
+     "f": "2026-11-24"
     },
     {
-     "t": "Evangélicos y obispos presionan al Senado por la ley de ludopatía - El Argentino Diario",
-     "medio": "El Argentino Diario",
-     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOSkFiZkJtMzVDdVlYa24tUUJMOVBSS0d3SmNLcDRZTUU1TFBsNG1Sc241R1doN0NoT3BLUF9jX3RxdXRDNDdwTl8wa2Q4VEk4TlVLX25oM0F0M1prMGh0QUhxNGhjOVg4cHNMSHlZYjUyckdIVk1fRm1hMERuY25vbF84YzJXT1dGd0RyWF92VE50OUZkRGZqMXBLOHlwZ082ZE8ybHlaOVBRWFd6YjVEYk1ZY0pIeUhFN2c0?oc=5",
-     "f": "2026-11-23"
+     "t": "Tres hipótesis sobre la visita del papa León XIV a Hispanoamérica - Periódico Zócalo",
+     "medio": "Periódico Zócalo",
+     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQQWZPNjNob2FjYndQUkdJSFJESjE0X0ZvOGtnRk9qWEVRVnB5T3JyNldPeC1aRmludktFcmlUM2ppUy1NaWE0cTE1NDNHXzFDV3pvaXRtY2tCeFJMajEtYVJ0dU1Lbm0xb3d0enNxeHQ0OVFVdVV2VmdfZzBmUWpHMUR0cXZhR0FCTk0ydkttSERnNEhTRXRV?oc=5",
+     "f": "2026-11-24"
     },
     {
-     "t": "Voluntarios de la visita del papa León XIV se reunieron en Luján en una misa de agradecimiento - MDZ Online",
-     "medio": "MDZ Online",
-     "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPazBtdlU5NmFrTHd1bzNpUzNLR3JJYXpFeGtEZ0ZFWnRjb1VBeVBJMm5oRWRIUG0ydjBjSGFiV0hhYzJfbEY2WnRHTUhsNnhhR0xuSHozZFBlRlBRam5GRVItQno1M2Q4OFc2R0J4VW00dUhmS1NLdmxtMkc5VXVzT3F3WVRCM0dMWGdpWDhYblB4MmkxY1VRbllUUmRkVjZDX2hpbXhsZVpsamNtZnhXRmlEUVFERmtvbUR4azA4V3p2ZDZqU21GVDU0OTlySkIzVHF3cXNoaWRydEloVzI5MkJIUQ?oc=5",
-     "f": "2026-11-23"
+     "t": "Después de la visita del papa León XIV, el desafío de hacerse cargo - La Voz del Interior",
+     "medio": "La Voz del Interior",
+     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPTUZ0dTYyYTFRdmJFNjc2NlBScXhuT2pNTDc3V1ROeEFVOVhMUGNuRjZuWDBDbEVxUEpyQ2stX1lZX2ZNbk5ac1FQczJhMFVVMk5RdkxRUWh6WF9XTW93SVBZM1V1M2RWZkdzRzFRVnZ0LXEwaW04aUxzWnV6bUdPVDk0S3U0bXVPTkhRdXJQQnh4azl2UTA1dkNXTDd5d04tT2Rv?oc=5",
+     "f": "2026-11-24"
     },
     {
-     "t": "Con una frase del papa León XIV, la Iglesia reclamó al Senado que apruebe la ley contra la ludopatía: \"No dejen morir este proyecto\" - LT7Noticias",
-     "medio": "LT7Noticias",
-     "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNdUNWNUh0M0oycFkyQlNhVW5VZnQ3dUpSZ3l6UnN4WTFCVVZYQmdDUHVWaDZuejcxRzZZc1Z2R0J5eEtKS1I0TnFib2hDS01waTIzNkZ5NGZidlplSlZFWVE2Sk1BT3dGeUIxeFV5WUpCcTJTWTI5UGh0c2lmdjh3cGpia0VyYzBBakRHWFA1UVYzWk5mZnVLVWl0d1VrVHpwN3pLOFBGY0tPX2tZTjJMWUlET0dYQ2lVYmtnNDAwdlVRWVZTdmp5cUVCSTVnZHhjdGVWWmVZWHdFRXF4eWlNeVQ3Sjliby01TC1DUW84QU9NTFVm?oc=5",
-     "f": "2026-11-23"
+     "t": "De los Valles al encuentro con el Papa, el balance de monseñor Darío Rubén Quintana - Nuevo Diario de Salta",
+     "medio": "Nuevo Diario de Salta",
+     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNQ0VCVWpzdTFILUk4ZThEMndsWTJPYlRWbWVLSEFpM1d1MVNBNU9kNllMQ25td0VPS2kxejlJaVNITko5ME9ud21CazhBT042MkFwc054NnFzeTZoRldIbjRMTDdfRmdPYWp0djl6V28zbzg5aFB6c1k4UDlsX1V4NmVZUEhVNkhMN0FCcjZiT2FmcDUxU3VIaHRtV0huVHFfRVd3QzdZZGdHN3UtRExTOWpDWnBvSWFH?oc=5",
+     "f": "2026-11-24"
     },
     {
-     "t": "Dos cooperativas argentinas le regalaron al papa León XIV un Libro de Oro hecho con trabajo y solidaridad - Agencia de Noticias Solidarias",
-     "medio": "Agencia de Noticias Solidarias",
-     "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE8zbGJzaVFNSWFtRmlsUHBvWXZhcWQ1T2tLYkJIZkxuYmcwS2VNZG9EbVRtdElUWXllQVFkYWc5eDNXT3JSdVBfM0NrZW1QV2NseUFxUVliaGtxRWI4MlZJNU5LMUZiMWFzR3dVWHBkaTFoLURqOW5MUzUySHQ?oc=5",
-     "f": "2026-11-23"
+     "t": "Mi opinión personal sobre el Papa León XIV - Los Andes",
+     "medio": "Los Andes",
+     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPTW5iQXJKb080Ui0wZTM0NDRSa1FkOE5SWjJVSDQzeUhpY2dCUWJfaFVJeDdicnhYWG0yT1dnR3dBUU42My1jb0JJVHZhWU82RGY4TF9nTGEzVFZ1RU9ManV1QlJGdUtFdjJoejRFaFhFaWVXcEVaaXNnNmNkaktPYTV2NGhWX05M?oc=5",
+     "f": "2026-11-24"
     }
    ],
-   "share": 15.3
+   "share": 15.0
   },
   "pro": {
-   "n": 422,
+   "n": 531,
    "tono": {
-    "n": 422,
-    "pos": 14.2,
-    "neu": 70.1,
-    "neg": 15.6,
-    "agresivo": 18.7,
-    "neto": -1.4
+    "n": 531,
+    "pos": 9.6,
+    "neu": 74.2,
+    "neg": 16.2,
+    "agresivo": 9.0,
+    "neto": -6.6
    },
    "encuadre": {
-    "a": 140,
-    "b": 50,
-    "b_pct": 26.3
+    "a": 164,
+    "b": 79,
+    "b_pct": 32.5
    },
    "plataformas": {
-    "Medios": 422
+    "Medios": 480,
+    "YouTube": 51
    },
    "semanas": {
+    "2026-08-03": 1,
+    "2026-08-10": 1,
+    "2026-08-17": 10,
+    "2026-08-24": 6,
+    "2026-08-31": 1,
+    "2026-09-07": 3,
+    "2026-09-28": 1,
+    "2026-10-05": 1,
+    "2026-10-12": 2,
     "2026-10-19": 3,
-    "2026-10-26": 49,
-    "2026-11-02": 154,
-    "2026-11-09": 53,
-    "2026-11-16": 140,
-    "2026-11-23": 23
+    "2026-10-26": 65,
+    "2026-11-02": 173,
+    "2026-11-09": 61,
+    "2026-11-16": 156,
+    "2026-11-23": 47
    },
    "titulares": [
     {
-     "t": "Suecia: tercer país europeo en meter el aborto a la Constitución - ZENIT - Espanol - El mundo visto desde Roma",
-     "medio": "ZENIT - Espanol - El mundo visto desde Roma",
-     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNakxPajJTaHpsYWJCSGdwelFqdHRZQWtRUUNuSGJhOVdxcHJKNmNtanEtZXNoaHNaNE9JdWtZQXMtSTJHa0JpelVWd1N4ME81QWdJMGk2Qk9RS3VCOFlQRHFaMzc4bV84VGItLUllOGFJN2xWdUZTTVNSS3NpLXl5NGJqR21fdzJZNlZjYzNCdmg4Qk1qa1lXeW5PTm8?oc=5",
-     "f": "2026-11-23"
+     "t": "EXPO ESI 2026: más de 180 proyectos en toda la provincia, a 20 años de la sanción de la Ley de Educación Sexual Integral - SUTEF",
+     "medio": "SUTEF",
+     "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNSDhaOUZRd2Z6SXRlTzFFc1Q2ZU1weVE0WU5qZG82ZzNoVWhIeDBsenV5OGRiTGp2QktMeWdhQUpDTHdlVDRiaUNXODdqeGVSS2ZkX0E0WUxoWWtoT09lV3o0NDRwekxGNHJ6bDFGOG1MMHk1MUhXb2JoUllWVlBtRTlIdzB4M01fX0NzSWtfOUc2cjVHNHVEcFFCNnlrZ0hfLVpnYVhVSGplVGswYnY5NE9UZGxlcFN1WmRPV0IxM3ZBRXRZVGRpcnRKNzZJc090UUVZ?oc=5",
+     "f": "2026-11-24"
     },
     {
-     "t": "Mercedes celebró la quinta Marcha y Fiesta del Orgullo como cierre del Ciclo de la Diversidad - HoyMercedes",
-     "medio": "HoyMercedes",
-     "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPNzg2LXBfX1R4N0E3VzJQN1Ixc3BmbF9jWHlnMEJnLU5XNDRfR29uS0dkNF92S3M4a2F0WjB5N3RhSE5CVElROWNWNWxIN0RFa3NXSUFvX2lNcnozNlVITFowN2dmZVhWYmhRbzJiejBTR1AyR1Q5ckdXbk16ME1uMjh6UWxtTlZBaTE0ZUpxN1FlbGtFM1F4QkR0TjY4cEhGQlJrUzVxa1MxZnk2Zk00WGhnOFRDdm04SmFNU0FLNW5uNk5nc0x4VF9zY1h0YVhTVW5ZdkpDdF9LTl9mQnhz?oc=5",
-     "f": "2026-11-23"
+     "t": "Más pruebas contra la Municipalidad de San Isidro por violar la ley de aborto - ANDigital",
+     "medio": "ANDigital",
+     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNMC1QcFBpMUE4bjZWQTh5eDg4R2wwTmNucndEX043TUR4RjEteWNyNld1U3VqRk1JYXdSM1NoR0dGa2w3YXVuTlVYRUo2eVgyeEhqVEM0SDFiYXg4U1VfUlgtVW5hbmRVbUpwN0RBRXRacjFjaV9GOHlOQTA2OTlGX25rVmdsX3ZzRjV4Q0Z0YjJ4dDNwN3FHWlQ0UF9BVVVQaXBqOVJvajdwVXM4OGItVFdvUHRGZw?oc=5",
+     "f": "2026-11-24"
     },
     {
-     "t": "Kicillof aprobó un nuevo trámite obligatorio para las empresas de PBA: de qué se trata y por qué generó polémica - TN",
-     "medio": "TN",
-     "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNZVBHanFsWkJkMldBWFZqMDAwdXJRVGJvXzJfdFNyZWMxaUhuT2cyNkFaWDBOMWZIdDl5dkdBR2hweFA1T2pSZVFfdWFvS19lZUY4dFZXMU9ROUlNd1ZuVVZDVFNSMjV3Rll5d0ZVWFNMYVBZWkNUWTc1b1M2SXI4c3ZtcGpkcHU1R2M4T1F2TkVPZU1MMGZpOUl6UkY2elI5SmNwdXRHRHBXc2tiQ3Q4eTloZXdwVWVTM1dKLS1VR0pTakJ3T0ItTXprb2pxVGprTW5oNTFrZXpHRVNOT0lQZ0psZ3HSAfgBQVVfeXFMTTdTM2NUall5RW0tdTI3N09Bb3FrRnUtTnR0UzJjdUhhdW9UREpQQWlaUWwtcjNob0RjaTBGU19VcnVtMnp2LUtzUVdKdU90akpGRFRUdlA4UXdMS2JKeUIzZllQTlJTeVZXVmdMNW12NmlhQlAyNzAxc0lJTmNGQ2VXSFoyeHAyRGZVQVItcV8tT1BmdFJPRFZESUEydXFWUV80LTlPWTdYTVVSUjJhMW9raXhVUXhCSFpUZlJnNHVRMkUxOFM1QVdFMDJObFNVOGRMWVRhM1hzWXg4bVNaSHd5MzVEdlR3bFR2VGVla1FhQll6aTBsZEs?oc=5",
-     "f": "2026-11-23"
+     "t": "Redondo, sobre el recurso contra la ley del no nacido de Ayuso: provoca \"un conflicto\" con el derecho al aborto - Infosalus",
+     "medio": "Infosalus",
+     "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQNmFXeHFFMDdzWFhma2pNd21rSzBpcWNReEoyY0xUdF82by1Dend1SWpUd3gzcXl2dFlOcW4zYXBRamE5UTVHYzRUdFI2MldCdnRjVVRJQlZjZTU5Sm13d1FCY3JvTXJPQWRzU2lDc1hRdXZkcWhJZWtaTEIya1hkS1Bqd01kZjA2cVprckwwSXFHX2N5ck5HSXVDU0hpNGtVV0FOeFNSSFphODNPNjJfdUtuRXl5bEFqZUNRczhOYkVPb2x3dFhsS1ZEeUE1X3ZoeFZsS0t2Yw?oc=5",
+     "f": "2026-11-24"
     },
     {
-     "t": "Llaryora acompañó la asunción del nuevo obispo de la Iglesia Greco-Católica Melquita en Argentina - Prensa Cba",
-     "medio": "Prensa Cba",
-     "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQTzVUSEZDRFZqSXUyM2l4MWdzTGtyeGZCTlJDbzI5T1FIdl9DRVg2dDNkc2lrOUtzajJxYVBmZUFBbnc3cWlEd3RwSVB6dUNXUlMwVnBwSUExTkQzTGg0Y1YyS3IxY2hHY3UtUDJzU3JWcjQ5cm5wa2c3MXBydXNDdVV5QjRTSktCOVhNeGlXb0VyLTdIX1VNb2ZXcXdPeFlHLTRvd3p0Z2pic3RTSGszczBmVC1VNC03RWh6U3YzTWJEdw?oc=5",
-     "f": "2026-11-23"
+     "t": "Canarias registra 4.700 abortos en 2025, 300 menos que el año anterior - Eldía",
+     "medio": "Eldía",
+     "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPenlfRlpORktZd1Z0ZU5OMC1rZFdtS01wOHlXOGV4MXBDa0JVbXJnRHhCUWQtZnhkeUc4UlM5OGo2TjA0ZHZJVkRaRDJRQkltUGxhTzNqYnNBMjU5aDl4YnJvdWN5TkVoZk1GT0pnQy14cGp4RUJ6ODlaa0phbFg4ZWp0YWRudm01WklKVlg0VHHSAZYBQVVfeXFMUGl6YllhT3hvc2NWekVXMU84THBrNXhwem5wT3BnOTlYTWcxbTgxN2RjSF9wSm1FaVdpQjZpUnZsQmwwcW10LVEwV0JjUTI0VWxNNjVCeUN1V3VyZVl5SUViSFp5RXVZVi1tdE9kTU9yUXlmb0JGWThRdUtWU0YzTjAtMHMtY2Ywbi0zeUQtQXgzZzRfZFZB?oc=5",
+     "f": "2026-11-24"
     },
     {
-     "t": "Con una frase del papa León XIV, la Iglesia reclamó al Senado que apruebe la ley contra la ludopatía: \"No dejen morir este proyecto\" - LT7Noticias",
-     "medio": "LT7Noticias",
-     "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNdUNWNUh0M0oycFkyQlNhVW5VZnQ3dUpSZ3l6UnN4WTFCVVZYQmdDUHVWaDZuejcxRzZZc1Z2R0J5eEtKS1I0TnFib2hDS01waTIzNkZ5NGZidlplSlZFWVE2Sk1BT3dGeUIxeFV5WUpCcTJTWTI5UGh0c2lmdjh3cGpia0VyYzBBakRHWFA1UVYzWk5mZnVLVWl0d1VrVHpwN3pLOFBGY0tPX2tZTjJMWUlET0dYQ2lVYmtnNDAwdlVRWVZTdmp5cUVCSTVnZHhjdGVWWmVZWHdFRXF4eWlNeVQ3Sjliby01TC1DUW84QU9NTFVm?oc=5",
-     "f": "2026-11-23"
+     "t": "El Gobierno vuelve a agitar el aborto en la última semana de campaña electoral - ABC",
+     "medio": "ABC",
+     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQSnZIT29RNGhiUHZ6LUVOeXE4dHVYckpKQ3lvWm5fZ0UwU0lNUWM1Uk4zMm5zZjZMRUg2RlYyZXJoQm43OU5Bc0dwdWhwOW9ZbUhQd3BQN2JuLVVIY0lYV1d3X003LWdmNFlQV3NrTUlTd1FwTzJBYTFNaU85Q2ZfakFVZzBCWXN6ZEJnZkRHempvUEo1TXhzZzU4eWZZZ1plWGx3dNIBqgFBVV95cUxQNUI4aDE0dFhlZWV3UnlQWm9IM1V3a3M4UGtGQXNrSGVjNlpkTWdLT1NRVlEyZkNfTkg1TU9fakNUSGMwX0pUT2ZyLXNTVkhvWkNMUWtRbzRvUElpSTF4SjFjT0p4bXRCTEd6cnowcEVSU1BCc2FZNTFTLWw3Uzl2c2RHckNnWHdnUkllLUpHVGRnMWdQYlV0NFFTS0R1anZFbWFDcGQtTTg0UQ?oc=5",
+     "f": "2026-11-24"
     },
     {
-     "t": "Denuncian presunta intimidación a mujeres que solicitan servicios de aborto en Chihuahua - Quadratín Michoacán",
-     "medio": "Quadratín Michoacán",
-     "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPRFZfSkdYRkpfQUk4Y2JXanYycU9mdWhfUlo0QlZ5YjRKcThjWGJKOEFoTnBMNnpRVml6OEZFYVZxYklpaWZFcDMwMDk3TXI5VUR0MVR4Yi05VUlYQVJQNEFuQVBRVjZYVXlyZF9JNE1rQjFDaW1vak8xQWJkWWRhTzhCOEU0TGdfWUVTUUw3dTZRTE9WaDFkQXhIYWpYNHNjaGoyYnRzcmVSaVI2Q2dNMXJHQlFzbWZVMnh6dUl2MkVaM21YZlVYZ2tzMzBvb1E?oc=5",
-     "f": "2026-11-23"
+     "t": "El Gobierno anuncia nuevas medidas para facilitar el aborto a solo cinco días de las elecciones - El Debate",
+     "medio": "El Debate",
+     "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNXzRrSWhTc292QUQ1LXM5NVBFVnlZOE9lQXRNdVN6V0ZSb1dHT2JCVlBLUTczMTc5M19YcDFVYnpLUWlYekU3Sk5WdzcyQ1ltMGo1dnV5ODZreTk2RUl2ejVSU2FtLXl3Z2ZBOE5ZeHJiYTRWV2ZnR0VnLWJQN3ZGN185S05KQ3dDY1llOW5mQjRtMEVITU8zZVVZYVgzTHJVNERxdHBYSWJSN284Vlo0LUNKNDVhWFZxbHZiWm9rM3J6RDdZOHdFMdIBzgFBVV95cUxQOUszUUdDTjY1aWJvMi1HQm9Za3k1MGg4Ukc3Z0lFQXRjdTgzWVhZTjYyZ0hHTTZWcDJ4SW5CWU04eE56ak03dVV3OWlLWUs1Y0RiTWtJbk9nUGR4NkdJWkdFblJZRktSY0hFQjVHTTctQ0sxOHpSUXdwLWpvUUtZVHFGdkFIZXc3akw2b3V5blpGY1h5cEpqV05rS1FPWmhhVlJTanl2d01ON0pEaTRMdWZjS3VRdk9JUTJrbEJNNENkWW41Q19ydkJkTEdMZw?oc=5",
+     "f": "2026-11-24"
     }
    ],
-   "share": 10.6
+   "share": 11.1
   },
   "mig": {
-   "n": 105,
+   "n": 154,
    "tono": {
-    "n": 105,
-    "pos": 2.9,
-    "neu": 81.0,
-    "neg": 16.2,
-    "agresivo": 22.9,
-    "neto": -13.3
+    "n": 154,
+    "pos": 4.5,
+    "neu": 78.6,
+    "neg": 16.9,
+    "agresivo": 25.3,
+    "neto": -12.4
    },
    "encuadre": {
-    "a": 36,
-    "b": 15,
-    "b_pct": 29.4
+    "a": 61,
+    "b": 18,
+    "b_pct": 22.8
    },
    "plataformas": {
-    "Medios": 105
+    "Medios": 116,
+    "YouTube": 38
    },
    "semanas": {
+    "2026-08-10": 34,
     "2026-10-19": 1,
-    "2026-10-26": 15,
+    "2026-10-26": 17,
     "2026-11-02": 12,
-    "2026-11-09": 17,
-    "2026-11-16": 56,
-    "2026-11-23": 4
+    "2026-11-09": 19,
+    "2026-11-16": 63,
+    "2026-11-23": 8
    },
    "titulares": [
+    {
+     "t": "El Senado convirtió en ley la reforma de propiedad privada y restituyó los límites a la extranjerización de tierras rurales - Economis",
+     "medio": "Economis",
+     "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxONjFucF9CTmVHbEVQUFdUUlhvZ0NsOVJqcHcxRHZkWUJac1lnRUwwX1h4cGM5X3poV1E1T1V3X0l4bWluMS01d1dCWTJ0Y3NKT0VZcWhQU1VhWS1WSEhRM1dVb1BpdFBEWEVST2llUWcwNzhZeWZyNWhwX2p5TDBFYXRZQUFqS2RqckpFR3pyV2hZc3VnN0t2YUJ4YXRYQQ?oc=5",
+     "f": "2026-11-24"
+    },
+    {
+     "t": "El alambrado: Memoria y despojo en la Patagonia. El biodrama de una familia mapuche - Nota al Pie",
+     "medio": "Nota al Pie",
+     "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBGOXA5WW02ZHdEVVhRQW5QWkxIc1hORlczUkdUdUgzc2hkY2czNWlEcHdwWEtaQUsyQTVNWEhxcG1IY2pHUmhMWGs3NERka2FETGVIX194WWhweE1BT3hFbW55UjFyeEh2NjJfdEpPXzYtd2wxUEhVak13?oc=5",
+     "f": "2026-11-23"
+    },
     {
      "t": "Portugal: Ventura defiende abiertamente la expulsión de inmigrantes - Euronews.com",
      "medio": "Euronews.com",
@@ -625,289 +695,303 @@
      "f": "2026-11-23"
     },
     {
-     "t": "El Senado convirtió en ley la reforma de propiedad privada y restituyó los límites a la extranjerización de tierras rurales - Economis",
-     "medio": "Economis",
-     "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxONjFucF9CTmVHbEVQUFdUUlhvZ0NsOVJqcHcxRHZkWUJac1lnRUwwX1h4cGM5X3poV1E1T1V3X0l4bWluMS01d1dCWTJ0Y3NKT0VZcWhQU1VhWS1WSEhRM1dVb1BpdFBEWEVST2llUWcwNzhZeWZyNWhwX2p5TDBFYXRZQUFqS2RqckpFR3pyV2hZc3VnN0t2YUJ4YXRYQQ?oc=5",
-     "f": "2026-11-23"
-    },
-    {
      "t": "Argentina: gobierno de Javier Milei cobraría a extranjeros ilegales por salud y educación pública - tvperu.gob.pe",
      "medio": "tvperu.gob.pe",
      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPSlB4YW83bTBDZl9RSzJDbXo4NG9hT2dWbEhjZ3JHRmJzVFZMem5HMENlZWh2b1Qza0pmVVJNV3ZmVHlpLXJWMlF3Zjc1TkxSdEtlZDBEN1BlVml0aTl5N0R2OGhOcnAzQkowbkNySUltLTNaOTBHWU5CMkZmRkF0RnliSy1ZTUttSm5FV0NKS3BGRnEwRmxZUnIyaXBUamxzSlJ2U29jazNNZ1pSM0RiRkFER3o1aHY5NmZBbXNfUzBGWDQ?oc=5",
      "f": "2026-11-22"
-    },
-    {
-     "t": "Un cartel de la campaña xenófoba de Jorge Macri se derrumbó sobre un pibe en la Villa 31 - Prensa Obrera",
-     "medio": "Prensa Obrera",
-     "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNb2xMcHQzcjdBekhITGtDNWctQkphUmw0VUV1ZzlHUjN5c1R1cE5FazlwYWtRc0hNYmZqQmVpRG5Ob0xsSmU3ZTVsVUxRZVhiVFliM0lqc21TeG45NnNuaWR5YnU0NU9LMVBsOW14MnFXdXFNanJXRGNaajRmU1pEdWNSUGV5WGhMQ1VOZjFhYzRnbmdxZWZsUWZWRjBHeUpRRUhjLUJiSXJ3c0pPWTN6OWhWaG1Sd2I1R1dsaDk3WQ?oc=5",
-     "f": "2026-11-22"
     }
    ],
-   "share": 2.6
+   "share": 3.2
   },
   "pla": {
-   "n": 226,
+   "n": 295,
    "tono": {
-    "n": 226,
-    "pos": 3.5,
-    "neu": 70.8,
-    "neg": 25.7,
-    "agresivo": 24.3,
-    "neto": -22.2
+    "n": 295,
+    "pos": 3.1,
+    "neu": 71.9,
+    "neg": 25.1,
+    "agresivo": 16.9,
+    "neto": -22.0
    },
    "encuadre": {
-    "a": 50,
-    "b": 95,
-    "b_pct": 65.5
+    "a": 68,
+    "b": 122,
+    "b_pct": 64.2
    },
    "plataformas": {
-    "Medios": 225,
-    "YouTube": 1
+    "Medios": 262,
+    "YouTube": 33
    },
    "semanas": {
+    "2026-07-27": 2,
+    "2026-08-10": 4,
+    "2026-08-31": 2,
+    "2026-09-07": 1,
     "2026-09-14": 1,
-    "2026-10-19": 4,
-    "2026-10-26": 42,
-    "2026-11-02": 36,
-    "2026-11-09": 46,
-    "2026-11-16": 89,
-    "2026-11-23": 8
+    "2026-09-21": 2,
+    "2026-10-05": 2,
+    "2026-10-12": 11,
+    "2026-10-19": 5,
+    "2026-10-26": 49,
+    "2026-11-02": 39,
+    "2026-11-09": 62,
+    "2026-11-16": 105,
+    "2026-11-23": 10
    },
    "titulares": [
     {
-     "t": "Qué dijo Guillermo Francos sobre el bolsillo, la inflación y el plan económico de Milei - NewsDigitales",
-     "medio": "NewsDigitales",
-     "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNVUZVdUhBSXFaMVhsQnVjUkk0cUc0dlVpaTVFeXlycFltR1Q3T2NfLWZuZ1hZbVhOaEIwX19odE1IVHhjNDIyWHItSEpFV3ZidlE5TGJ1UWJPaDR1M0VxSnJjejhkeXlIRmZRUldyT3dZSXgza0xYakJ5WHZQcDVKNHl2ODhlc25vSDRzMzltdzVYbWhYa1p4T2JkWlYzekVSbnpIaUhKX3B2YlJoY0dyRnpwNjMwQTQ3eUk1SExmNkp5bXJNU0lEVA?oc=5",
-     "f": "2026-11-23"
+     "t": "La Rioja cerró el primer semestre con un superávit de $40.054 millones, pese a que sus impuestos propios cayeron 13% en términos reales - Eduardo German",
+     "medio": "Eduardo German",
+     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQS2dpSFZhc1NTSG5zYWxOUkVMbkgwYjEwS2RJbmNDYV9jbmJuOG1GLU5VWmZtWWhoYUcxa0J3NUZOZXJxbHRkME1paF9BUnZfT2dwaHo4cThUTTdnZDRya2xYa2VaTUFIRXVVNzBkdWVlNWo0eUVBV2JkRUZXTU42WEtRTHUxczJZa1NndzVYRzNkdGNvVVhOaEQyaVBfd01QaEVaQ05lR0hCdw?oc=5",
+     "f": "2026-11-24"
+    },
+    {
+     "t": "Paritarias: Llaryora comienza a mostrar las cartas y negocia acuerdos hasta junio y septiembre - Comercio y Justicia",
+     "medio": "Comercio y Justicia",
+     "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQRmJ6UU1kcHJZT2piU2Rac1pGNmp2ZHNMRHZmZ1EyUXhCbzNzamlDLXE3N3VKWTNjdmFMTHBVYzJ0cVBfZFlEcGlwZDZFRmhiQjNwT1dFY2lRZEloYmJhM2NqcVh3RHpzZUIyS1VkN0FSQmQyenpCX0p6Z2w1cVNBXzE2NVk3YU5mdThjMU5VNVEyWTJaZVRKNnl2NzZLZEZ4bkdYRWdKX3ZGdjBCN1ZoU0ZYZm05LXRfZ0hJRzVTUHRRaE4zT3dVa3NxekIxNzA?oc=5",
+     "f": "2026-11-24"
     },
     {
      "t": "El Gobierno comenzó a convocar a sindicatos y empresas para renegociar más de 400 convenios colectivos - DeGremiales.com",
      "medio": "DeGremiales.com",
      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPSk1zeklqUzVkaUxzUDUxQ0dWNXUydlRib2IxNTlyTThkZTRrMzJMYmRiYVRtQjhsZmNlbTBQbzBKRUhiOHNiVGpHWGc5cnZXQmQxMXVxOFFraGhFLWlNcVFHcjdiSHhmMkFpWW9tbng1TFozNUpPNktEa3dVODZfYmZwNVpfOG9GZTRkN1VkQk5ja1dJRFRhaVZEUjh5UXg5UEJkOWFVZWk3dzM2U0dfUHk4ZDhLYlk3VXM5TWhjS0R2eUlMY3FJX1lfM0VOR2FC?oc=5",
-     "f": "2026-11-23"
+     "f": "2026-11-24"
     },
     {
      "t": "La Justicia suspendió la privatización de AySA y suma un nuevo obstáculo al programa de ventas del Gobierno - DeGremiales.com",
      "medio": "DeGremiales.com",
      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQRkxxa3EyME5aTUNHanVNVzRtdEhHdHpXMnFIOXZHbXpidGMyODZGRzlreEJhRUVWRHBZY0dfQk1qaHFRZFFOZW1aVGVnVVh5cXpadWNPY2dNNGpvZzhQVFVZc3B6aFhxZjRsaFFvcERIaDFOUzhyNVJvazBLSzM3eFJjamRYTjI4UzlBZXFONzFoV0NHcVp3VkhLTDQ1U3dsdHprY3hfT1BUOHh6M3BSYW01bjhWd1F3aDFHYmxPZnFvSjRyU0VoWFlPNE9EU3pZVjBCREsyYw?oc=5",
-     "f": "2026-11-23"
+     "f": "2026-11-24"
     },
     {
-     "t": "La Federación Aceitera denunció una persecución contra dirigentes sindicales y organizaciones que enfrentan el ajuste - Enfoque Sindical |",
-     "medio": "Enfoque Sindical |",
-     "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOZHB0akZKcmZtSWVkWXp0STQtVnRONkxJOFdEVEJOemo3U0Z0czdpd01SaExPeFk2STJ5RDdJY3FZR0ZGX25JZlF3MERRMGE2bW9IRHlCNHVnUUoyZ3lJbmhyQ01sOV80bFRrSmFWc1EyNjQ4MzAzWUItdndPR1pqczVoclFiMVY4dXN5a1cxd2p2RkxEOV9aNS1tNGo2aDQ3bnk4TlptYkJRc25uZFlqOWEyS21UTDZIQjNBekdxNXotQQ?oc=5",
-     "f": "2026-11-23"
+     "t": "El secretario de Finanzas atribuyó la suba del riesgo país al \"shock internacional\" y aseguró que el dólar no afectará la inflación - A24.com",
+     "medio": "A24.com",
+     "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPTTBYYXc2aUZrNkpfODBid3ZXcE4yZExQUnF2aml6RHNGTTREYzI2Q1hOSTdvcmFhV0cwbmhiNlZWMndWQ1ppZFNlNEtHSUpOdks0bDlTbTVySnJ6YVBaUUpjQ1VYazU0RE95WDNZNzhZM1VlMEZkOVU5Wkd1WEJhb3g3UGpDSU5oQ1lkakVUYTY1VXhpWTVzWE9rUW5PdmkyN0RqWXZ0VlF3MFZOcHllRU1SVHpDbVRRWkIzSTlkcnh5eURqYlBXaUdtMllhSkh2b2c3akRhUEJodmpWNnY3ZDZYQ1VKekhQMmZVR05kMkp1NUZxaGY40gH8AUFVX3lxTE9TQ2taU1JrMjhXM3J5OFFoellKRFFka09RX3ZGeDBtaGQ1a2tnOXhWTDNlVk40V3hwOTMwajJzNDAtbThDZ0NqQjhWaldpTVQ5WTBqQUR3dlI1MnUtYk1Fem94SzVHZFFGa2ZHTG5WVVUxVTFGMEpNUngwQWhoMHNJdlVDUjR5YlRBNjlOY3NGajNLYnhFU09ZdG9sWGhpSXlVZkx2ZGJxcERYSWxOLTMxR0ZUMjN2NW9lQzBiT3FoWWlSQmJ5RjVCdHFhU0twdlZwVHBOc0c5dVVJVDZpbjVSNjYwajhZM0ZLMks3TjVkQnlZdl8wN0FyVnZwdQ?oc=5",
+     "f": "2026-11-24"
     },
     {
-     "t": "Sahuquillo: \"Los sindicatos y las empresas son fundamentales para crear empleo estable y de calidad\" - Voces de Cuenca",
-     "medio": "Voces de Cuenca",
-     "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPc2VudzNDLXFla0lkaEtWUmJBZi1MRmViREV4RHphZ3Rpck1WRlVDczlOXy1aSGNBSEpnc1Y3SEF1LVZYUE9DbWJpX2tjUTlzWGxwSzU4T0JLN2ZadmtHM3g0b1ZGeHNCLTQzMTFTdm9XUGhuNFdrQWZKUkFEbnAtQldGOVEyYm4yOW56TS00SDd3b1pBal9YaXlweTJEUG9tU01rUVFyem9lYkNCNm0yRldUazVhdkFmeUZmRUNlOUVvSy1rdlloR05HQklPaXZybUh0N2ZB?oc=5",
-     "f": "2026-11-23"
-    },
-    {
-     "t": "Los sindicatos presentan 150 propuestas para situar los salarios, la vivienda y los derechos laborales en el centro de la próxima legislatura - Diario Sabemos",
-     "medio": "Diario Sabemos",
-     "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOZ3ZPQXBTSTVsX055YUdhVjYtdVI1SjNoaG1ONVlEVWNHLWNKNVBkSjFFYU9jSnVYSDdhY0txQVJFTUxoRl9ROTJKZUstYlNQRG16U2ZEVmc5c2xMMGxDY0tRcHI4dW9kNmtpNkRSNjQ0ajYxamxfNE91UTlrTHRab3Nfd1JRMGVqeVg4dUwxV2FkbUZpak9ESUFaV0RvRlJBaW9JOW1xeXFfM3RxSHpvQjlab2R3RVZ0YlZUZkduRDJEQUVXcGc0ZllQdlktVnU4TVJNTzlZUnY2MlRkQy1CSnVpb1VUQ1VGTlJvUV8wc2dvZw?oc=5",
+     "t": "Qué dijo Guillermo Francos sobre el bolsillo, la inflación y el plan económico de Milei - NewsDigitales",
+     "medio": "NewsDigitales",
+     "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNVUZVdUhBSXFaMVhsQnVjUkk0cUc0dlVpaTVFeXlycFltR1Q3T2NfLWZuZ1hZbVhOaEIwX19odE1IVHhjNDIyWHItSEpFV3ZidlE5TGJ1UWJPaDR1M0VxSnJjejhkeXlIRmZRUldyT3dZSXgza0xYakJ5WHZQcDVKNHl2ODhlc25vSDRzMzltdzVYbWhYa1p4T2JkWlYzekVSbnpIaUhKX3B2YlJoY0dyRnpwNjMwQTQ3eUk1SExmNkp5bXJNU0lEVA?oc=5",
      "f": "2026-11-23"
     }
    ],
-   "share": 5.7
+   "share": 6.1
   },
   "glo": {
-   "n": 438,
+   "n": 499,
    "tono": {
-    "n": 438,
-    "pos": 2.5,
-    "neu": 88.6,
-    "neg": 8.9,
-    "agresivo": 22.4,
-    "neto": -6.4
+    "n": 499,
+    "pos": 2.4,
+    "neu": 86.2,
+    "neg": 11.4,
+    "agresivo": 14.8,
+    "neto": -9.0
    },
    "encuadre": {
-    "a": 43,
-    "b": 172,
-    "b_pct": 80.0
+    "a": 59,
+    "b": 190,
+    "b_pct": 76.3
    },
    "plataformas": {
-    "Medios": 438
+    "Medios": 479,
+    "YouTube": 20
    },
    "semanas": {
-    "2026-10-19": 8,
-    "2026-10-26": 96,
-    "2026-11-02": 60,
-    "2026-11-09": 45,
-    "2026-11-16": 222,
-    "2026-11-23": 7
+    "2026-07-27": 1,
+    "2026-08-10": 6,
+    "2026-08-24": 1,
+    "2026-08-31": 1,
+    "2026-09-14": 1,
+    "2026-09-21": 2,
+    "2026-10-05": 1,
+    "2026-10-19": 9,
+    "2026-10-26": 101,
+    "2026-11-02": 70,
+    "2026-11-09": 50,
+    "2026-11-16": 238,
+    "2026-11-23": 18
    },
    "titulares": [
     {
-     "t": "Milei celebró el desembarco de Tesla en Argentina y volvió a respaldar la apertura comercial - Nuevo Diario Web",
-     "medio": "Nuevo Diario Web",
-     "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQNGxLRUF4UXZBU2NCRjVXdGJ4enlUekxsWVF1OUw0Q0pNa3lhYllOWjd0QlpQaGdNNzdTU2Z3b3VsVmU3RFFaZ3d5X09EcnVYS0J5Tk12MGdXYUtRbDVyUS1Jdk1TdjF3TmxVd0pKVUtFNGFfYVpaS09wNENWcWg5bzFvZ3Q5dEt5bnBGaDNvRkMtUmMwdUFSal8tR1paWTlvV0RDeTVzMnJBLUNZekRoQUNvV3NDczROUkU5SkdEcTNrOWFKdDNnNDE5bFRCNWc?oc=5",
-     "f": "2026-11-23"
+     "t": "“Patricia Bullrich” habló en el Pase sobre su posible candidatura para las elecciones presidenciales: “¿Dónde están los dólares? - Radio Mitre",
+     "medio": "Radio Mitre",
+     "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNU19VNVIyMXQyWnVZNWdhRnJrNXhjYUxFcEZKQXBKbmtib3E0U0ItQ2xGYnkyZ1k3VUI0bUtOR2JKdVFKcnVUaFp0VzVQYzI0eXIzdURKb0M3RjdIMGN1ZVhqRjJjWVdSOFl2SkJTUGxNWEpMYVFEbzBGb19LWTlTRGhrNE9NTngweDl4RnpWOFlDd1lheklicXdwUTdWc09oUHRCd1JTYlhOVV9Ldk5nZzQyVlIyQndWNGRVQ1ZnQWhTd0VZU1MwaFVWMVFvTTBzTFRGek5lV0RSVFppUk5vRTVCY003V3RUSXNJR3phOHhKQ1I2b1JR?oc=5",
+     "f": "2026-11-24"
     },
     {
-     "t": "Crisis en las pymes: el sector del calzado sumó un nuevo cierre industrial y muda su fabricación a Brasil - C5N",
-     "medio": "C5N",
-     "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNdW5zUXpTd242YXA1ZjlDVnRBaEEyci00N24wWUtLbzFfUFhWZ3g4OUstZ1YxZjhKLVFkeWZGWERiazF0MHR1VEhyYkFqanZIY0plWkc2RzdwMjVaeVZ5R3VHNVM4Tm52cktrZ01fM0tIbzJ6NXN3a3QtTHBNd3cxVjRrZkV6MkVVWVB1Y2Y2RVJNdVRobHkxVEdKMHVDZEktbVY1WjZxSFZXclVSdGxrOXp4WjJwNVhlLW12VkJGaDMwU2tTeUpsc1pWSUJ3ZjNaMXNubGNxTdIB1wFBVV95cUxNdW5zUXpTd242YXA1ZjlDVnRBaEEyci00N24wWUtLbzFfUFhWZ3g4OUstZ1YxZjhKLVFkeWZGWERiazF0MHR1VEhyYkFqanZIY0plWkc2RzdwMjVaeVZ5R3VHNVM4Tm52cktrZ01fM0tIbzJ6NXN3a3QtTHBNd3cxVjRrZkV6MkVVWVB1Y2Y2RVJNdVRobHkxVEdKMHVDZEktbVY1WjZxSFZXclVSdGxrOXp4WjJwNVhlLW12VkJGaDMwU2tTeUpsc1pWSUJ3ZjNaMXNubGNxTQ?oc=5",
-     "f": "2026-11-23"
+     "t": "Dólar hoy: a cuánto cotizan el oficial y sus diferentes tipos de cambio este martes 24 de noviembre - Clarín",
+     "medio": "Clarín",
+     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQeGNubFpMcnFBc3JSZm5zTUpiT3l3TThTRjhYWkhSYnk3LW5YVW9FNzI2dlhMSU5QOGNYeXRwQk01Tmo1cDJkN1N6NWtzNm45dm54dmhPQ21OSy12aHF6WnJoRmNERWlHWHFwZktDdlNlUUxNOFgwNkZBNFBwMkJMZlN4UEVIRFk2WTcwS0luUTFxR0RfNGZiY0d1WEhqcjh0aTg0bWk5cHNFdVFPeGxtVTRBbjMyX1Y4WXVV0gHAAUFVX3lxTE1UYVNEMVZ3X1NjOWh5NkFoZnNUWDZzbHhvNFBzYXQ3Ry1xM0NtQ0FGanpHZ1ZoMV9qbWlmaG1ZNjBEbko1eGJUUzFCUTFseXhVMGZ0T0NEUXBhUVoySXBmSW42bXhFaDJuSHNabm9MODBzM3VsYkNfd2ktRTNFSHY0RDdyNFlMQUxveEx3ZU9xaGtySGtOMkFMZFJ5YnhFem1pcEdVSW1PQjZjTUVnXzdIT01OVDVJa3hGQ2g2bGY2cw?oc=5",
+     "f": "2026-11-24"
     },
     {
-     "t": "Exclusiva en MDI | Pichetto cuestionó las importaciones y alertó por el retroceso de la industria nacional - Info del Estero",
-     "medio": "Info del Estero",
-     "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQQl9uSUFXaFA4Q1RjQjE4TVlzZVdFa1p4Q1BzYlJWaHQ4MXB6OU91c3lNVVVHQXNuTGc4UmpoQjdmRFFLYmNuN3R5bHlBZ3poUlIxclN0V3EzTGI3V3E5Q19YYjlBZ1pFUi1FR3phblFxUDVkcW91NThZRUJHb0dXc2F3RXoxdFU5bGxmbGlLaXVxcFpHYnhuMEVMZ2lRN2hBdVNUNzZkYXgtTTV3bmlSOFo2aWtpTUFSeGwydTRnNUE0dw?oc=5",
-     "f": "2026-11-23"
+     "t": "Las exportaciones mineras alcanzaron un récord histórico: u$s 7.455 millones entre enero y octubre - Editorial RN",
+     "medio": "Editorial RN",
+     "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNSGluT2d1eldRR095elozNzdQcFI2bzdTMFZCQ0hTRXpGaEtzR3ZncnJwektyVUtlUTViUVBaRGpOM0E1Q0ppR0JScXFILThzSkJJR1l5MndNcDFza0ZQbHFmTEs0ak5JbGZtd096aTZydmVqeDlQazRhSkJRRE90X0dQY2ltTmRnV3VBeHpRVEw1b1kwRU9aVmMzakJLVWc4UlpYOFlOT3RLcmRFbkw3SlRpVDBUcVdLaWctWlowYmhEZw?oc=5",
+     "f": "2026-11-24"
     },
     {
-     "t": "Del discurso a los dólares: el RIGI se convierte en la carta económica de Milei - El Economista - Últimas noticias económicas y financieras",
+     "t": "Sombra vetó la adhesión al RIGI en Azul - Séptima Sección",
+     "medio": "Séptima Sección",
+     "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE44RHdXT3NYaDk4c0I1QnUzSXZLbm44dHplMkFJQ0V6MU9icTEzWWtrQk9hRUlFNEhqTmUtQVMxOGZLTkowU3ZhNEVUeUJlbjYtZklZRzZOcS03XzEzTUxJYjhUWFFwNlRNZE1sWnNVcDBGa0NVb2VtX0lR?oc=5",
+     "f": "2026-11-24"
+    },
+    {
+     "t": "Dólar hoy: a cuánto cotiza este martes 24 de noviembre - El Economista - Últimas noticias económicas y financieras",
      "medio": "El Economista - Últimas noticias económicas y financieras",
-     "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNUjRXVmNZb1VFcWhvdm9RX0ZmX1NJd1hpZWZyanpzQlV3RndXSUFOT29iOWVtSTZvVy1XZklpR2JoY1dzakdlVC00OGNKa1JhNm1vdWc2UTE1RW1ldnFkcHVXTTVWdU5Rc1lkdlZkZ25sRS03c1A1N2FiamN3T19wc09TYV9IRFp5bzQ5U1prcmZTZkY1QlBnYmZ3TDltM2NtN3fSAacBQVVfeXFMTkw3dC1RY1NDQndwWDdDQ3pIeExiQktid2pjYUdMYWh0RWdsYzAzQ1Z2OVdraE96WmFiSG8yMzl4bWp4M2JlZFlkN1F6dTBxMmpuZ0NHTnliT19BMU1TTU9nUkRNRkhoZDB3ZUQ1TGJ3eWxKbVRQODl1d1VKRFRQZlpzWjhnbFVicVhHMG8tcWJiWTdla3lZTkVYMno1STI1UGNma1hXNmM?oc=5",
-     "f": "2026-11-23"
+     "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPX3dDOTV0QmRBS1RMU1hSbWRkN0xab0NhbTNNWGxNaHJadFkxNG95N1VvdC01RHJaWW1VV0pmdlZ6T0dtYVp2cmxMV3FjLVpuUUUyMDVFRW1CZElkWWVPbDBrVVJnYjZmdG1weFFNU3ZoRjFmRGVabXdwZU41bzcxSHVjd0MxM0Z6UnBmcFFfT0vSAZYBQVVfeXFMT1VsNjZmcHZrRmV0U2hJT1lENWwwWHBKMl91Wl91M1FjRTduZzZ5M2l2S2R0WUZaUFlJVmZxazRoMEg3MkdFYVhMSFc0RVE5SHp3NVhmNmNoRTBfZzRONFdlZ0xjakY0RVU3elhOeUVCRWhlbU8xdW0takxwUXZvdWE1dml3QUNrNURoanI5dTZ0ZURNREJ3?oc=5",
+     "f": "2026-11-24"
     },
     {
-     "t": "El Gobierno sigue de cerca el dólar y el riesgo país mientras se prepara para un dato que puede confirmar una recesión técnica - TN",
-     "medio": "TN",
-     "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPdEpScENZOEI4OGt5QlZhRzhLcmRSSk5hVXdoRENpM0l5bWNYUWZVaXpHU1VvbFptMTJnRS0wcURjYUJJTV9uYTg5ZFBIN2JPNUcxd1c5dGF2aFFKY1pVejRRMzJBN1NzLWF0aHZuTE9aOGJDMm4xNE4xSTVORmNWM0FPVjQ5c2pkOUVUbVBnclRRNnphUHQ4QTdPbmtSdWt4c25BenRQMDhXa0lsSWEyakRhXy1HQi1zeHBDRWJxQXVqcHhzQjJrTDh2WWszcEhtWXBJakZDSkVJbUsyRFhWS1AyUzVNSzlXSjNwdVdjcW43OTEzTHhfSdIBjAJBVV95cUxOaE5kREhVYVFURmVfemtiTXBNMGVBckJRNm9wb3FSUERQa05tWEgxQ3lwS0V0LThVTm54SkFzNlBNRzRranBRNGYzdDNqZGZrZ042OVBHZHdLekV2OXNrRl85WGthWWp3RGJhZDhFall3ejlTbG5QaUoyRmN1UlA0X3RPSmFvSG5WcnlrWkRWaHFYSUV3THMtN3F6bGFJdjdZVEdoTDgwaGtfVEhUMU1RNXZ1OUlzdmdoMFhsT0JBeGZ2SEt5Vm9DQVAtaWVUaFg1b0VvdUl0aFk2M0FmeG0zcVFpYWsyMG95MkpkLW1IcS00c1FoQXVkY1FUYVhvNWdRYWw1NzNsRGxzcFBL?oc=5",
-     "f": "2026-11-23"
-    },
-    {
-     "t": "El embajador de EE.UU. celebró el tratado de patentes y respaldó a Javier Milei: “Así crece el país” - TN",
-     "medio": "TN",
-     "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQS09ZNnR1M012MEFudVZsVHFIcWlsMFlic2dOSUdReXYzLXIyOGZET3JXc2RJa2VScGg4ODRMbWNScjlIZlRMd0Z3QnVzY3ZsWkQ2SlFEV3dDT2ZLZERyWHp5dEpvWFJHUDNfMWRUcXMyQXFhYWlIVUFRYjdXanducEhwajBHMjZTUmZpd2ZLRThKdVFTelIzdEs0RUNlWWNmbTYzeDdzMFdWYVJqQXBjMUhXNk1LWW1SMHEwZFR2VmdTMURkR1hkN3dUYWNPT1VTTjE3NVJScmVjdlVzdlI1LV9hSG5odVUxMzVWSzBoU2gtV2RPQnfSAYoCQVVfeXFMTWFVSGo2NnBRWlp1NGVnbm9JdlU3STVRaUVOTFI5TjM0RmI0Ni1WU2lwUUdHRHFILU0yTE1jOEhPV19pTVpXWk00Q29ZenZUb1dLVHRqY2VnbmM1b2xvUTJvVUVLclFiY0Yta25fem04Z3RmZng3ZGxZbU5XcXlrWkFnU3ZtbDdRcnRJS01lVDdxQWplb3FMM1VkU0tqblM1R0RqYkowMnp1dm12eFQtTTVhMGJmR3k0MXlxb1ZDTXFuN2dXM2tFNm9ZazZhX1N5RXh4MHFYZk8tSDNOWlFSZWxmZmdCcDg3Vi1DLXdiU3BRajhycHlwQkxUckVramwza1JIOVdEZEIySlE?oc=5",
-     "f": "2026-11-23"
+     "t": "Castilla-La Mancha organiza intercambios de ropa en las cinco provincias para prevenir residuos textiles - Objetivo CLM Noticias",
+     "medio": "Objetivo CLM Noticias",
+     "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNRHVDM0htREd2cE9wZ2k0a3pmYzdhWHByelVOeGl0RHRJRUFtd1YwQ0RzYWxQZWg2UzZvcE5aOVI1bWtWd3hiS1lhckFqVkVJZXVKcVdUZnRSTV9VYkhPUkFyWFYxR2tUVFBxeHJta0lfRGR0QTR3R3NNMG9lLS1FdEpieEU5bF9xc0c0Mm41RVFDNGdGMGxFLTJiV3dSalBsYVVBQzRxOWRHRk1hdW04ZWM3OFo4U1FSblhVcnlTN3h6bTd4SS1MT2JZWmphZ2hoS3RzRmxTMm5ITl80?oc=5",
+     "f": "2026-11-24"
     }
    ],
-   "share": 11.0
+   "share": 10.4
   },
   "tec": {
-   "n": 233,
+   "n": 306,
    "tono": {
-    "n": 233,
-    "pos": 9.4,
-    "neu": 85.8,
-    "neg": 4.7,
-    "agresivo": 30.5,
-    "neto": 4.7
+    "n": 306,
+    "pos": 9.8,
+    "neu": 83.7,
+    "neg": 6.5,
+    "agresivo": 21.6,
+    "neto": 3.3
    },
    "encuadre": {
-    "a": 95,
-    "b": 36,
-    "b_pct": 27.5
+    "a": 117,
+    "b": 50,
+    "b_pct": 29.9
    },
    "plataformas": {
-    "Medios": 233
+    "Medios": 269,
+    "YouTube": 37
    },
    "semanas": {
+    "2026-07-27": 1,
+    "2026-08-03": 10,
+    "2026-08-10": 4,
+    "2026-08-17": 1,
+    "2026-09-07": 1,
+    "2026-09-21": 1,
+    "2026-09-28": 3,
+    "2026-10-05": 1,
+    "2026-10-12": 6,
     "2026-10-19": 11,
-    "2026-10-26": 59,
-    "2026-11-02": 38,
-    "2026-11-09": 41,
-    "2026-11-16": 74,
-    "2026-11-23": 10
+    "2026-10-26": 72,
+    "2026-11-02": 43,
+    "2026-11-09": 49,
+    "2026-11-16": 86,
+    "2026-11-23": 17
    },
    "titulares": [
+    {
+     "t": "Incendios forestales en la Patagonia: una región que combate el fuego, pero no logra anticiparse - Bacap Noticias",
+     "medio": "Bacap Noticias",
+     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQekxTUTVCVG8tUENBLTZxSTlXZ093NXg5SHhQVjVZX293VXBlWUdXYXhVdlB1eW5LMWE2YXRtM2prVXBJUXcxVzlNRHc0aUwwTEdVR1YxTk9aWmd4ekYtMUs2ckYyT29zQ08wYmctQUFvbDY3OFZ4MURpUUdGUEFPeHlMYlN5RlJyV3VZS3FzSEQxRHJ0SkxPS0trS0FtNVB6NEowczN1SVIzaGMybVdjLUdLN1cydk1UTXA0V0xGRlNjcTVwVlE?oc=5",
+     "f": "2026-11-24"
+    },
+    {
+     "t": "Maule activa un plan para enfrentar los efectos del cambio climático - Diario La Mañana",
+     "medio": "Diario La Mañana",
+     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNN1BDUEFDTVNVbDBjOUhBZkFzbHRMR0QzaVAwVkJQMmRRSVM0bE9TVXdWVTV0bW13M3dwUTgtY0lrQ2s5SkZqb1VFVjBfOVJBU3dWeUFSOGNhZC1hQmx2SlNyX0hqSmxJeVRHVWloS2hEZkJaV2kxQmFRcDZzaXB4d3lkWERwc3FuaEl0RGh3VHQyQzNOYzNwM284UV8wa2F4bHFHag?oc=5",
+     "f": "2026-11-24"
+    },
+    {
+     "t": "Vaca Muerta: YPF consiguió el RIGI para Argentina LNG, el megaproyecto de US$50.750 millones - RoadShow",
+     "medio": "RoadShow",
+     "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOaXA2X19hakJSS05nY1Y2dUNWb3FJc3cxZVBsbkpOc1dSWE00bHZGTkdXMXlTeDMwVDIzQTdtUUZUS1IySzkxVVJjSU4xOVBNMEtiajZQOERUdkp4cnpyMndWTmpHQjRiLVN5VkVSdGZwbkpmVVlONTVvb0xEU01aMUx5Uk1sa0FYNktnMV9GX1NoWWlrZ2hnRXo0LTRZMW92OW0xeTZ1MEM1MTVWVjNwWVNxbTVQekU0M2c?oc=5",
+     "f": "2026-11-24"
+    },
+    {
+     "t": "Litio en el NOA: el empleo directo creció ocho veces y la actividad se asocia a 35.000 puestos - Los Primeros TV",
+     "medio": "Los Primeros TV",
+     "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNQkxRNDVuZnhHVlVqSkpMaTlTNVRPTlpzcGRnZVNYbExlMko2SldReWs3MEVPVWZrVFpfQ2ZrSWNZNFo3aGZ2TXliRGlXVVptOUpKQmtDQmJXV3NWSWxraURSYVZhNVNkU3p6QTI2VTdubm1CSUpuNFNFdmtwdVA1ZW1rTTdBR3ZsaTQtd0lIcVBpVlhDWWwtT1JuUDdfRFZyYVY5ODBmM0R5bEREXzJtZmF1ZlVQQjQ5Q29QbXQ3N1Y1d2RyZE50cHhnNldiMTExa1FVT0RiN00xaGdnRWNtdnVVNzIyTm9rZkt5M1hwdUI?oc=5",
+     "f": "2026-11-24"
+    },
+    {
+     "t": "Maule aprueba plan regional de cambio climático con 28 medidas para enfrentar sequías, incendios e inundaciones - musicaynoticias.cl",
+     "medio": "musicaynoticias.cl",
+     "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxPNUpCYk80VVhrU0NLc1ZNSC14S2xJNGVBWDhkNWpjRDJFb1lQalcwbHlQM0QwdEZwV0Nnc2xpbmFVOVVmNFhHYU5tX3czVWtPeGFnUk9QOXQ3MlFNeUpOZzNTQXY5dU52MVFKdzlWX21ic2xSbVhpRElFV0JGQjA3a0RvRS1US2hQSl9LOGxhcGY1MTdsWGhaM1hyT3pmbnNuckdYZjdNZlF2LWFjbXIxbGlSLXdvZjBlOHQ1UllXNVpfTDdmYVRsel9MeTFhczA1WDBFSW1raFpDRGpsZ1g2QlJfN0FoZF9yZ3FudnBILVRzeElId2lJTjVUTDQ1TjdWS1J4WWxRMGQ?oc=5",
+     "f": "2026-11-24"
+    },
     {
      "t": "El litio crece en un NOA que pierde empleo - Perfil",
      "medio": "Perfil",
      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPWjRXWXNUandzYkJZNDh1TGx5dlQwM2MyU0VndXRHQkpRaWhBZ00yYTNobEdQclM4ckxiRWd1RVdINE9qRWVqVW5yRUpYT0hFOGxQOGtMQ3pnaFFmM3licm00QlZCSEx0NXd1OENMRzY0RFdkd0x2aWtQM1FSbHVMMVMzV2F4MXk1eVFmb2drY0M?oc=5",
      "f": "2026-11-23"
-    },
-    {
-     "t": "Del distrito de Aguablanca a los grandes escenarios: el soldado caleño que cumplió sus sueños en el Ejército Nacional - Ejército Nacional de Colombia",
-     "medio": "Ejército Nacional de Colombia",
-     "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPX2trMlU1S2pzNHpVNlBnSXlqSS02SDhnakttOW5MaUdiempDeVlFbXl1OGk2aG9aMHFORWFUZTZoa2hxUmxrZjlMZE1hbWdLUXFwYVd5bjdrU2VJZlVoOFRCc0FPVU9HTTlzT0tNTlpCUERNNXVuczR5cC01cThPaXQwejd4T21fcGs2eHpmY2hKMlNpLWk3UjU2MXR3akhyNmdWNGdLNWhoWEUzTTVUSTVScFRMUmROVDVhbkFka25wOWlVSkhTbXU2TjdydEhjUE5uMkY2OFRtaFBL?oc=5",
-     "f": "2026-11-23"
-    },
-    {
-     "t": "Carabineros de la Policía cumplen 20 años con nuevas capacidades para enfrentar delitos ambientales y garantizar la seguridad rural - El Tiempo",
-     "medio": "El Tiempo",
-     "url": "https://news.google.com/rss/articles/CBMipAJBVV95cUxQcjNvdlZQRnRqQTNTTm1QVjN6R09ncjdWSFpIQUw4N2hLTEdicXk5Yl9KWjVMYVZsOHBKOVpjbFJrLVJ5eEthR3J3bWdsZEhmd2w3M0JkM00wRWtnQWx3T19DZ3psNVEzNWtxSjhNZHZOUGdfUExXYXBqelNUczZHUExvZ2ptSHc5YnNwOHJHcEc5TVV0NngtSzRZZHRRTDZXVlZPaTMwMmFaSm1hUE9aREZzU0ttN1dRb3ZESzBPcnFHVEV6S1hyQ3luajhMTUdzX0o5ay0zUHgyWEVqWV9iSkl5cFNTMDJUTjE1LVAzVkZyVVMxV281anRpbzdLRG8tWE5lNTNmR3ZBRnVld0hXVmNXTi1BZlVGVHRwZ3NTZFh1M2420gGqAkFVX3lxTE1udmlPTE5qUXFFZzJZTktGWGlIQ2NTZDdMbXdwaEVrQ0tpZDd2ekgzUlNQUWE0Vm1NMTVCUFFlZFlsQ3hIaHk5U0d5TDZHX0JyLTBUTW1xSjI0QjV1RXJvZEZTSDNtX25TWVZxWU5zM0Jpa1VDU2hWWm9jN19vUzNZQ2lmTzhyWFgyR0s0UDV6SmFPb0ZHX1NXWTZJaXA2OXNXNUtQUkFLcTVfSmhzS001a1pMY0lNVGUwdVdVdkxSRnQ3ejA5M0t2ZkJ5cTRPSHc2bl9xV2tmSnFVLXhwc2QtSXduT3Exc1BlSzdSWThwUzB6eGF2c3ZNeC1aQ2xOLTdoQjRnTTF2Z19jOGRpNzFPeEF1YnhseHZQM3BoblJLMkZ2ckdfRWRmcnc?oc=5",
-     "f": "2026-11-23"
-    },
-    {
-     "t": "Prevención de incendios: 7,3 millones tras un año con 10.670 hectáreas quemadas - iambiente",
-     "medio": "iambiente",
-     "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNVGxXaXBFTzdNZkw4NnFJVlJ3UXZ6OFd6aVVuc3g0cm4tRGgxMU5LOVJaZWJ4aTlJOUVYclVVUjFlN0lvaEU0ZkVGVldTT2xLNmJWZWpUeExOOUlBbkVRNkJtSEIxU3NlWXdValVPc3dDSjkyelFRZFVfRGl5YnI5SE5yZ2lWT3Z6Mk9LcmVKdVBtZw?oc=5",
-     "f": "2026-11-23"
-    },
-    {
-     "t": "RECUPERARÁN MIL HAS DE BOSQUES AFECTADOS POR INCENDIOS FORESTALES - DIARIO AHORA",
-     "medio": "DIARIO AHORA",
-     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNZ0dQd0FSczFpeHpyS280anJaa0FYenpTSTJSZmJ5d1k5RlNkX3QzYmwwLUtPZkhLTkQ1VmlETmdCUW5fZHJ0Wjc1NWl3SXNHQjBmaF9aMk5IcFBodGU4UnNaNHlYTVVJelYzQVJGbFJSZWpScXRKQmxaZngzejRWeW1EOElCeGxJcXBRZkJzMkJXRTYwejVfbU5nOFNBRFNWd2ZaWksxUkVsQQ?oc=5",
-     "f": "2026-11-23"
-    },
-    {
-     "t": "Propuestas contra incendios forestales: PSOE, PP, VOX y Frente Amplio revelan sus planes - ECOticias.com - El periódico verde",
-     "medio": "ECOticias.com - El periódico verde",
-     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPVlpLVU4weElkTVN6bXJ1ZWE5OS1kQVM3TU9ySjZTcGpVRURERnVSLXg1MGhqX3ZwMjVadjBmMVJzMTJGYnJ1VDBQNVVXZ3BsM0w0N1haQ09ROW8wcWg1OTI0ZDVrdnhkZ01lMVlvUHY4bElGV3V1Y2xST2Z1N2lUcUtOWUJWb0lKUzRXRWRMZ2lOY2NyUTlTQTVHYWszWVk?oc=5",
-     "f": "2026-11-23"
     }
    ],
-   "share": 5.8
+   "share": 6.4
   }
  },
  "figuras": {
   "Javier Milei": {
-   "n": 905,
-   "sov": 22.1,
+   "n": 1030,
+   "sov": 23.0,
    "tono": {
-    "n": 905,
-    "pos": 5.5,
-    "neu": 79.6,
-    "neg": 14.9,
-    "agresivo": 21.8,
-    "neto": -9.4
+    "n": 1030,
+    "pos": 5.0,
+    "neu": 78.9,
+    "neg": 16.0,
+    "agresivo": 15.0,
+    "neto": -11.0
    },
-   "ult7": 378,
-   "prev7": 155,
+   "ult7": 382,
+   "prev7": 180,
    "plataformas": {
-    "Medios": 890,
-    "YouTube": 15
+    "Medios": 953,
+    "YouTube": 77
    },
    "ejes": {
-    "fed": 44,
-    "dem": 52,
-    "int": 40,
-    "mil": 8,
-    "lib": 9,
-    "col": 9,
-    "rel": 91,
-    "pro": 26,
-    "mig": 3,
-    "pla": 44,
-    "glo": 43,
-    "tec": 11
+    "fed": 47,
+    "dem": 58,
+    "int": 49,
+    "mil": 9,
+    "lib": 11,
+    "col": 12,
+    "rel": 105,
+    "pro": 33,
+    "mig": 8,
+    "pla": 57,
+    "glo": 52,
+    "tec": 20
    },
    "ig": {
     "usuario": "javiermilei",
-    "followers": 6451099,
-    "posts_30d": 52,
-    "er": 0.785,
-    "inter_med": 50663,
+    "followers": 6449574,
+    "posts_30d": 51,
+    "er": 0.816,
+    "inter_med": 52618,
     "mejor_formato": "Reel"
    }
   },
   "Karina Milei": {
-   "n": 159,
-   "sov": 3.9,
+   "n": 165,
+   "sov": 3.7,
    "tono": {
-    "n": 159,
-    "pos": 5.0,
-    "neu": 89.3,
-    "neg": 5.7,
-    "agresivo": 13.2,
-    "neto": -0.7
+    "n": 165,
+    "pos": 3.0,
+    "neu": 90.9,
+    "neg": 6.1,
+    "agresivo": 5.5,
+    "neto": -3.1
    },
-   "ult7": 65,
-   "prev7": 54,
+   "ult7": 62,
+   "prev7": 52,
    "plataformas": {
-    "Medios": 159
+    "Medios": 164,
+    "YouTube": 1
    },
    "ejes": {
     "fed": 13,
     "dem": 3,
     "int": 1,
-    "mil": 3,
+    "mil": 4,
     "lib": 7,
     "col": 5,
     "rel": 14,
@@ -919,20 +1003,20 @@
    }
   },
   "Victoria Villarruel": {
-   "n": 171,
-   "sov": 4.2,
+   "n": 173,
+   "sov": 3.9,
    "tono": {
-    "n": 171,
-    "pos": 8.2,
-    "neu": 64.3,
-    "neg": 27.5,
-    "agresivo": 4.1,
-    "neto": -19.3
+    "n": 173,
+    "pos": 4.0,
+    "neu": 68.8,
+    "neg": 27.2,
+    "agresivo": 1.7,
+    "neto": -23.2
    },
-   "ult7": 65,
-   "prev7": 29,
+   "ult7": 61,
+   "prev7": 20,
    "plataformas": {
-    "Medios": 171
+    "Medios": 173
    },
    "ejes": {
     "fed": 6,
@@ -941,7 +1025,7 @@
     "mil": 1,
     "lib": 3,
     "col": 0,
-    "rel": 65,
+    "rel": 66,
     "pro": 3,
     "mig": 0,
     "pla": 10,
@@ -950,70 +1034,71 @@
    },
    "ig": {
     "usuario": "victoria.villarruel",
-    "followers": 1302992,
+    "followers": 1302753,
     "posts_30d": 6,
-    "er": 0.936,
-    "inter_med": 12197,
+    "er": 0.956,
+    "inter_med": 12457,
     "mejor_formato": "Carrusel"
    }
   },
   "Patricia Bullrich": {
-   "n": 250,
+   "n": 272,
    "sov": 6.1,
    "tono": {
-    "n": 250,
-    "pos": 4.0,
-    "neu": 88.0,
-    "neg": 8.0,
-    "agresivo": 14.8,
-    "neto": -4.0
+    "n": 272,
+    "pos": 3.3,
+    "neu": 88.6,
+    "neg": 8.1,
+    "agresivo": 6.6,
+    "neto": -4.8
    },
-   "ult7": 127,
-   "prev7": 49,
+   "ult7": 130,
+   "prev7": 65,
    "plataformas": {
-    "Medios": 250
+    "Medios": 271,
+    "YouTube": 1
    },
    "ejes": {
     "fed": 6,
-    "dem": 9,
+    "dem": 11,
     "int": 5,
     "mil": 3,
-    "lib": 1,
+    "lib": 2,
     "col": 0,
     "rel": 3,
     "pro": 3,
     "mig": 0,
     "pla": 1,
-    "glo": 10,
+    "glo": 11,
     "tec": 0
    },
    "ig": {
     "usuario": "patobullrich",
-    "followers": 1111603,
-    "posts_30d": 26,
-    "er": 0.444,
-    "inter_med": 4936,
+    "followers": 1111588,
+    "posts_30d": 25,
+    "er": 0.442,
+    "inter_med": 4911,
     "mejor_formato": "Foto"
    }
   },
   "Luis Caputo": {
-   "n": 119,
-   "sov": 2.9,
+   "n": 134,
+   "sov": 3.0,
    "tono": {
-    "n": 119,
-    "pos": 1.7,
-    "neu": 77.3,
-    "neg": 21.0,
-    "agresivo": 16.8,
-    "neto": -19.3
+    "n": 134,
+    "pos": 1.5,
+    "neu": 75.4,
+    "neg": 23.1,
+    "agresivo": 5.2,
+    "neto": -21.6
    },
-   "ult7": 61,
-   "prev7": 20,
+   "ult7": 66,
+   "prev7": 29,
    "plataformas": {
-    "Medios": 119
+    "Medios": 134
    },
    "ejes": {
-    "fed": 6,
+    "fed": 7,
     "dem": 2,
     "int": 2,
     "mil": 0,
@@ -1023,32 +1108,33 @@
     "pro": 1,
     "mig": 0,
     "pla": 4,
-    "glo": 24,
+    "glo": 25,
     "tec": 0
    }
   },
   "Manuel Adorni": {
-   "n": 109,
-   "sov": 2.7,
+   "n": 117,
+   "sov": 2.6,
    "tono": {
-    "n": 109,
-    "pos": 0.9,
-    "neu": 79.8,
-    "neg": 19.3,
-    "agresivo": 21.1,
-    "neto": -18.4
+    "n": 117,
+    "pos": 0.0,
+    "neu": 76.1,
+    "neg": 23.9,
+    "agresivo": 0.0,
+    "neto": -23.9
    },
-   "ult7": 2,
-   "prev7": 8,
+   "ult7": 3,
+   "prev7": 9,
    "plataformas": {
-    "Medios": 109
+    "Medios": 115,
+    "YouTube": 2
    },
    "ejes": {
     "fed": 2,
     "dem": 0,
     "int": 0,
     "mil": 2,
-    "lib": 3,
+    "lib": 4,
     "col": 0,
     "rel": 0,
     "pro": 1,
@@ -1059,20 +1145,20 @@
    }
   },
   "Federico Sturzenegger": {
-   "n": 90,
-   "sov": 2.2,
+   "n": 93,
+   "sov": 2.1,
    "tono": {
-    "n": 90,
-    "pos": 15.6,
-    "neu": 63.3,
-    "neg": 21.1,
-    "agresivo": 23.3,
-    "neto": -5.5
+    "n": 93,
+    "pos": 12.9,
+    "neu": 60.2,
+    "neg": 26.9,
+    "agresivo": 7.5,
+    "neto": -14.0
    },
-   "ult7": 24,
-   "prev7": 10,
+   "ult7": 22,
+   "prev7": 15,
    "plataformas": {
-    "Medios": 90
+    "Medios": 93
    },
    "ejes": {
     "fed": 0,
@@ -1091,7 +1177,7 @@
   },
   "José Luis Espert": {
    "n": 71,
-   "sov": 1.7,
+   "sov": 1.6,
    "tono": {
     "n": 71,
     "pos": 1.4,
@@ -1100,8 +1186,8 @@
     "agresivo": 54.9,
     "neto": -7.1
    },
-   "ult7": 2,
-   "prev7": 23,
+   "ult7": 1,
+   "prev7": 12,
    "plataformas": {
     "Medios": 71
    },
@@ -1121,20 +1207,20 @@
    }
   },
   "Lilia Lemoine": {
-   "n": 94,
-   "sov": 2.3,
+   "n": 95,
+   "sov": 2.1,
    "tono": {
-    "n": 94,
-    "pos": 6.4,
-    "neu": 68.1,
-    "neg": 25.5,
-    "agresivo": 9.6,
-    "neto": -19.1
+    "n": 95,
+    "pos": 6.3,
+    "neu": 66.3,
+    "neg": 27.4,
+    "agresivo": 7.4,
+    "neto": -21.1
    },
    "ult7": 21,
-   "prev7": 48,
+   "prev7": 47,
    "plataformas": {
-    "Medios": 94
+    "Medios": 95
    },
    "ejes": {
     "fed": 2,
@@ -1178,20 +1264,20 @@
    }
   },
   "Marcela Pagano": {
-   "n": 72,
-   "sov": 1.8,
+   "n": 77,
+   "sov": 1.7,
    "tono": {
-    "n": 72,
+    "n": 77,
     "pos": 0.0,
-    "neu": 66.7,
-    "neg": 33.3,
-    "agresivo": 18.1,
-    "neto": -33.3
+    "neu": 68.8,
+    "neg": 31.2,
+    "agresivo": 15.6,
+    "neto": -31.2
    },
-   "ult7": 24,
-   "prev7": 25,
+   "ult7": 27,
+   "prev7": 23,
    "plataformas": {
-    "Medios": 72
+    "Medios": 77
    },
    "ejes": {
     "fed": 1,
@@ -1209,29 +1295,29 @@
    }
   },
   "Diego Santilli": {
-   "n": 117,
-   "sov": 2.9,
+   "n": 127,
+   "sov": 2.8,
    "tono": {
-    "n": 117,
-    "pos": 3.4,
-    "neu": 96.6,
-    "neg": 0.0,
-    "agresivo": 17.1,
-    "neto": 3.4
+    "n": 127,
+    "pos": 2.4,
+    "neu": 96.9,
+    "neg": 0.8,
+    "agresivo": 13.4,
+    "neto": 1.6
    },
-   "ult7": 72,
-   "prev7": 20,
+   "ult7": 82,
+   "prev7": 17,
    "plataformas": {
-    "Medios": 117
+    "Medios": 127
    },
    "ejes": {
     "fed": 7,
-    "dem": 9,
+    "dem": 13,
     "int": 0,
     "mil": 0,
     "lib": 0,
     "col": 0,
-    "rel": 0,
+    "rel": 1,
     "pro": 0,
     "mig": 0,
     "pla": 0,
@@ -1240,7 +1326,7 @@
    },
    "ig": {
     "usuario": "diegosantilliok",
-    "followers": 230852,
+    "followers": 230850,
     "posts_30d": 0,
     "er": 2.005,
     "inter_med": 4629,
@@ -1248,20 +1334,21 @@
    }
   },
   "Mauricio Macri": {
-   "n": 151,
-   "sov": 3.7,
+   "n": 157,
+   "sov": 3.5,
    "tono": {
-    "n": 151,
-    "pos": 13.9,
-    "neu": 76.8,
-    "neg": 9.3,
-    "agresivo": 12.6,
-    "neto": 4.6
+    "n": 157,
+    "pos": 11.5,
+    "neu": 78.3,
+    "neg": 10.2,
+    "agresivo": 4.5,
+    "neto": 1.3
    },
-   "ult7": 71,
-   "prev7": 19,
+   "ult7": 58,
+   "prev7": 36,
    "plataformas": {
-    "Medios": 151
+    "Medios": 156,
+    "YouTube": 1
    },
    "ejes": {
     "fed": 4,
@@ -1271,7 +1358,7 @@
     "lib": 0,
     "col": 0,
     "rel": 11,
-    "pro": 2,
+    "pro": 3,
     "mig": 0,
     "pla": 1,
     "glo": 2,
@@ -1279,28 +1366,29 @@
    },
    "ig": {
     "usuario": "mauriciomacri",
-    "followers": 1212841,
-    "posts_30d": 3,
+    "followers": 1212759,
+    "posts_30d": 2,
     "er": 1.528,
-    "inter_med": 18537,
+    "inter_med": 18535,
     "mejor_formato": "Foto"
    }
   },
   "Jorge Macri": {
-   "n": 109,
-   "sov": 2.7,
+   "n": 116,
+   "sov": 2.6,
    "tono": {
-    "n": 109,
-    "pos": 8.3,
-    "neu": 73.4,
-    "neg": 18.3,
-    "agresivo": 24.8,
-    "neto": -10.0
+    "n": 116,
+    "pos": 6.0,
+    "neu": 72.4,
+    "neg": 21.6,
+    "agresivo": 4.3,
+    "neto": -15.6
    },
-   "ult7": 40,
-   "prev7": 14,
+   "ult7": 41,
+   "prev7": 11,
    "plataformas": {
-    "Medios": 109
+    "Medios": 115,
+    "YouTube": 1
    },
    "ejes": {
     "fed": 1,
@@ -1313,43 +1401,43 @@
     "pro": 6,
     "mig": 1,
     "pla": 2,
-    "glo": 2,
+    "glo": 4,
     "tec": 1
    },
    "ig": {
     "usuario": "jorgemacri",
-    "followers": 273075,
+    "followers": 273115,
     "posts_30d": 52,
-    "er": 1.804,
-    "inter_med": 4926,
+    "er": 1.853,
+    "inter_med": 5061,
     "mejor_formato": "Reel"
    }
   },
   "Horacio Rodríguez Larreta": {
-   "n": 83,
-   "sov": 2.0,
+   "n": 106,
+   "sov": 2.4,
    "tono": {
-    "n": 83,
-    "pos": 2.4,
-    "neu": 81.9,
-    "neg": 15.7,
-    "agresivo": 12.0,
-    "neto": -13.3
+    "n": 106,
+    "pos": 2.8,
+    "neu": 81.1,
+    "neg": 16.0,
+    "agresivo": 13.2,
+    "neto": -13.2
    },
-   "ult7": 59,
-   "prev7": 3,
+   "ult7": 64,
+   "prev7": 5,
    "plataformas": {
-    "Medios": 83
+    "Medios": 106
    },
    "ejes": {
     "fed": 2,
     "dem": 1,
-    "int": 2,
+    "int": 3,
     "mil": 0,
     "lib": 1,
     "col": 0,
-    "rel": 3,
-    "pro": 5,
+    "rel": 5,
+    "pro": 6,
     "mig": 0,
     "pla": 0,
     "glo": 0,
@@ -1383,15 +1471,20 @@
    }
   },
   "Martín Lousteau": {
-   "n": 17,
-   "sov": 0.4,
+   "n": 23,
+   "sov": 0.5,
    "tono": {
-    "n": 17
+    "n": 23,
+    "pos": 17.4,
+    "neu": 65.2,
+    "neg": 17.4,
+    "agresivo": 17.4,
+    "neto": 0.0
    },
-   "ult7": 7,
+   "ult7": 12,
    "prev7": 4,
    "plataformas": {
-    "Medios": 17
+    "Medios": 23
    },
    "ejes": {
     "fed": 0,
@@ -1409,15 +1502,16 @@
    }
   },
   "Facundo Manes": {
-   "n": 5,
-   "sov": 0.1,
+   "n": 7,
+   "sov": 0.2,
    "tono": {
-    "n": 5
+    "n": 7
    },
    "ult7": 0,
    "prev7": 3,
    "plataformas": {
-    "Medios": 5
+    "Medios": 5,
+    "YouTube": 2
    },
    "ejes": {
     "fed": 0,
@@ -1436,13 +1530,13 @@
   },
   "Elisa Carrió": {
    "n": 29,
-   "sov": 0.7,
+   "sov": 0.6,
    "tono": {
     "n": 29,
     "pos": 3.4,
     "neu": 82.8,
     "neg": 13.8,
-    "agresivo": 13.8,
+    "agresivo": 3.4,
     "neto": -10.4
    },
    "ult7": 3,
@@ -1519,17 +1613,17 @@
   },
   "Miguel Ángel Pichetto": {
    "n": 24,
-   "sov": 0.6,
+   "sov": 0.5,
    "tono": {
     "n": 24,
-    "pos": 12.5,
-    "neu": 70.8,
+    "pos": 8.3,
+    "neu": 75.0,
     "neg": 16.7,
     "agresivo": 4.2,
-    "neto": -4.2
+    "neto": -8.4
    },
-   "ult7": 14,
-   "prev7": 2,
+   "ult7": 12,
+   "prev7": 4,
    "plataformas": {
     "Medios": 24
    },
@@ -1575,20 +1669,20 @@
    }
   },
   "Guillermo Francos": {
-   "n": 47,
+   "n": 48,
    "sov": 1.1,
    "tono": {
-    "n": 47,
-    "pos": 4.3,
-    "neu": 85.1,
-    "neg": 10.6,
-    "agresivo": 10.6,
-    "neto": -6.3
+    "n": 48,
+    "pos": 6.2,
+    "neu": 77.1,
+    "neg": 16.7,
+    "agresivo": 4.2,
+    "neto": -10.5
    },
    "ult7": 11,
    "prev7": 21,
    "plataformas": {
-    "Medios": 47
+    "Medios": 48
    },
    "ejes": {
     "fed": 1,
@@ -1612,7 +1706,7 @@
     "n": 6
    },
    "ult7": 2,
-   "prev7": 3,
+   "prev7": 1,
    "plataformas": {
     "Medios": 6
    },
@@ -1632,51 +1726,52 @@
    }
   },
   "Martín Llaryora": {
-   "n": 105,
-   "sov": 2.6,
+   "n": 147,
+   "sov": 3.3,
    "tono": {
-    "n": 105,
-    "pos": 14.3,
-    "neu": 81.9,
-    "neg": 3.8,
-    "agresivo": 7.6,
-    "neto": 10.5
+    "n": 147,
+    "pos": 11.6,
+    "neu": 82.3,
+    "neg": 6.1,
+    "agresivo": 2.7,
+    "neto": 5.5
    },
-   "ult7": 36,
-   "prev7": 44,
+   "ult7": 57,
+   "prev7": 41,
    "plataformas": {
-    "Medios": 105
+    "Medios": 146,
+    "YouTube": 1
    },
    "ejes": {
-    "fed": 16,
-    "dem": 2,
+    "fed": 22,
+    "dem": 4,
     "int": 0,
-    "mil": 0,
-    "lib": 6,
+    "mil": 1,
+    "lib": 8,
     "col": 0,
-    "rel": 15,
+    "rel": 20,
     "pro": 1,
     "mig": 0,
-    "pla": 1,
-    "glo": 1,
+    "pla": 2,
+    "glo": 6,
     "tec": 0
    }
   },
   "Maximiliano Pullaro": {
-   "n": 74,
+   "n": 79,
    "sov": 1.8,
    "tono": {
-    "n": 74,
-    "pos": 13.5,
-    "neu": 77.0,
-    "neg": 9.5,
-    "agresivo": 1.4,
-    "neto": 4.0
+    "n": 79,
+    "pos": 12.7,
+    "neu": 75.9,
+    "neg": 11.4,
+    "agresivo": 0.0,
+    "neto": 1.3
    },
-   "ult7": 53,
-   "prev7": 19,
+   "ult7": 55,
+   "prev7": 17,
    "plataformas": {
-    "Medios": 74
+    "Medios": 79
    },
    "ejes": {
     "fed": 17,
@@ -1694,20 +1789,20 @@
    }
   },
   "Ignacio Torres": {
-   "n": 35,
-   "sov": 0.9,
+   "n": 37,
+   "sov": 0.8,
    "tono": {
-    "n": 35,
-    "pos": 2.9,
-    "neu": 91.4,
-    "neg": 5.7,
-    "agresivo": 5.7,
-    "neto": -2.8
+    "n": 37,
+    "pos": 2.7,
+    "neu": 89.2,
+    "neg": 8.1,
+    "agresivo": 2.7,
+    "neto": -5.4
    },
    "ult7": 17,
-   "prev7": 12,
+   "prev7": 11,
    "plataformas": {
-    "Medios": 35
+    "Medios": 37
    },
    "ejes": {
     "fed": 0,
@@ -1725,20 +1820,20 @@
    }
   },
   "Alfredo Cornejo": {
-   "n": 100,
+   "n": 107,
    "sov": 2.4,
    "tono": {
-    "n": 100,
-    "pos": 10.0,
-    "neu": 84.0,
-    "neg": 6.0,
-    "agresivo": 29.0,
-    "neto": 4.0
+    "n": 107,
+    "pos": 9.3,
+    "neu": 82.2,
+    "neg": 8.4,
+    "agresivo": 15.0,
+    "neto": 0.9
    },
-   "ult7": 19,
-   "prev7": 24,
+   "ult7": 21,
+   "prev7": 19,
    "plataformas": {
-    "Medios": 100
+    "Medios": 107
    },
    "ejes": {
     "fed": 3,
@@ -1751,7 +1846,7 @@
     "pro": 0,
     "mig": 0,
     "pla": 3,
-    "glo": 6,
+    "glo": 7,
     "tec": 5
    }
   },
@@ -1782,100 +1877,100 @@
    }
   },
   "Cristina Kirchner": {
-   "n": 245,
-   "sov": 6.0,
+   "n": 263,
+   "sov": 5.9,
    "tono": {
-    "n": 245,
-    "pos": 6.1,
-    "neu": 81.2,
-    "neg": 12.7,
-    "agresivo": 23.3,
-    "neto": -6.6
+    "n": 263,
+    "pos": 5.7,
+    "neu": 82.1,
+    "neg": 12.2,
+    "agresivo": 9.5,
+    "neto": -6.5
    },
-   "ult7": 127,
-   "prev7": 28,
+   "ult7": 124,
+   "prev7": 36,
    "plataformas": {
-    "Medios": 242,
-    "YouTube": 3
+    "Medios": 259,
+    "YouTube": 4
    },
    "ejes": {
     "fed": 8,
     "dem": 4,
     "int": 8,
     "mil": 3,
-    "lib": 1,
+    "lib": 2,
     "col": 1,
     "rel": 1,
-    "pro": 2,
+    "pro": 3,
     "mig": 0,
-    "pla": 3,
+    "pla": 4,
     "glo": 1,
     "tec": 1
    },
    "ig": {
     "usuario": "cristinafkirchner",
-    "followers": 1728363,
+    "followers": 1728333,
     "posts_30d": 0,
-    "er": 3.996,
-    "inter_med": 69061,
+    "er": 3.995,
+    "inter_med": 69050,
     "mejor_formato": "Carrusel"
    }
   },
   "Axel Kicillof": {
-   "n": 289,
-   "sov": 7.1,
+   "n": 310,
+   "sov": 6.9,
    "tono": {
-    "n": 289,
-    "pos": 7.6,
-    "neu": 84.4,
-    "neg": 8.0,
-    "agresivo": 15.9,
-    "neto": -0.4
+    "n": 310,
+    "pos": 5.5,
+    "neu": 85.8,
+    "neg": 8.7,
+    "agresivo": 8.1,
+    "neto": -3.2
    },
-   "ult7": 166,
-   "prev7": 45,
+   "ult7": 162,
+   "prev7": 58,
    "plataformas": {
-    "Medios": 288,
-    "YouTube": 1
+    "Medios": 307,
+    "YouTube": 3
    },
    "ejes": {
-    "fed": 21,
+    "fed": 23,
     "dem": 25,
     "int": 7,
     "mil": 0,
-    "lib": 2,
+    "lib": 3,
     "col": 0,
-    "rel": 14,
+    "rel": 15,
     "pro": 5,
     "mig": 1,
-    "pla": 2,
+    "pla": 3,
     "glo": 2,
     "tec": 1
    },
    "ig": {
     "usuario": "kicillofok",
-    "followers": 1203783,
+    "followers": 1203780,
     "posts_30d": 25,
-    "er": 0.758,
-    "inter_med": 9130,
+    "er": 0.771,
+    "inter_med": 9285,
     "mejor_formato": "Carrusel"
    }
   },
   "Máximo Kirchner": {
-   "n": 134,
-   "sov": 3.3,
+   "n": 138,
+   "sov": 3.1,
    "tono": {
-    "n": 134,
-    "pos": 3.0,
-    "neu": 90.3,
-    "neg": 6.7,
-    "agresivo": 9.0,
-    "neto": -3.7
+    "n": 138,
+    "pos": 1.4,
+    "neu": 89.1,
+    "neg": 9.4,
+    "agresivo": 2.9,
+    "neto": -8.0
    },
-   "ult7": 101,
-   "prev7": 7,
+   "ult7": 102,
+   "prev7": 10,
    "plataformas": {
-    "Medios": 134
+    "Medios": 138
    },
    "ejes": {
     "fed": 4,
@@ -1893,23 +1988,23 @@
    }
   },
   "Sergio Massa": {
-   "n": 172,
-   "sov": 4.2,
+   "n": 180,
+   "sov": 4.0,
    "tono": {
-    "n": 172,
-    "pos": 9.9,
-    "neu": 81.4,
-    "neg": 8.7,
-    "agresivo": 13.4,
-    "neto": 1.2
+    "n": 180,
+    "pos": 9.4,
+    "neu": 81.1,
+    "neg": 9.4,
+    "agresivo": 7.2,
+    "neto": 0.0
    },
-   "ult7": 134,
-   "prev7": 9,
+   "ult7": 126,
+   "prev7": 23,
    "plataformas": {
-    "Medios": 172
+    "Medios": 180
    },
    "ejes": {
-    "fed": 20,
+    "fed": 21,
     "dem": 1,
     "int": 1,
     "mil": 3,
@@ -1924,7 +2019,7 @@
    },
    "ig": {
     "usuario": "sergiomassaok",
-    "followers": 462414,
+    "followers": 462392,
     "posts_30d": 3,
     "er": 2.269,
     "inter_med": 10492,
@@ -1936,14 +2031,14 @@
    "sov": 0.5,
    "tono": {
     "n": 21,
-    "pos": 9.5,
+    "pos": 4.8,
     "neu": 61.9,
-    "neg": 28.6,
-    "agresivo": 23.8,
-    "neto": -19.1
+    "neg": 33.3,
+    "agresivo": 14.3,
+    "neto": -28.5
    },
    "ult7": 4,
-   "prev7": 6,
+   "prev7": 5,
    "plataformas": {
     "Medios": 21
    },
@@ -1963,59 +2058,59 @@
    },
    "ig": {
     "usuario": "leandrosantorook",
-    "followers": 650256,
+    "followers": 650370,
     "posts_30d": 13,
-    "er": 4.498,
-    "inter_med": 29249,
+    "er": 4.497,
+    "inter_med": 29248,
     "mejor_formato": "Reel"
    }
   },
   "Mayra Mendoza": {
-   "n": 57,
-   "sov": 1.4,
+   "n": 92,
+   "sov": 2.1,
    "tono": {
-    "n": 57,
-    "pos": 21.1,
-    "neu": 75.4,
-    "neg": 3.5,
-    "agresivo": 19.3,
-    "neto": 17.6
+    "n": 92,
+    "pos": 18.5,
+    "neu": 75.0,
+    "neg": 6.5,
+    "agresivo": 8.7,
+    "neto": 12.0
    },
-   "ult7": 22,
-   "prev7": 16,
+   "ult7": 32,
+   "prev7": 28,
    "plataformas": {
-    "Medios": 57
+    "Medios": 92
    },
    "ejes": {
-    "fed": 4,
-    "dem": 0,
+    "fed": 7,
+    "dem": 2,
     "int": 0,
     "mil": 0,
     "lib": 0,
     "col": 1,
-    "rel": 0,
-    "pro": 2,
+    "rel": 2,
+    "pro": 3,
     "mig": 0,
-    "pla": 1,
-    "glo": 0,
+    "pla": 2,
+    "glo": 1,
     "tec": 0
    }
   },
   "Agustín Rossi": {
-   "n": 29,
+   "n": 30,
    "sov": 0.7,
    "tono": {
-    "n": 29,
-    "pos": 3.4,
-    "neu": 86.2,
-    "neg": 10.3,
-    "agresivo": 34.5,
-    "neto": -6.9
+    "n": 30,
+    "pos": 3.3,
+    "neu": 83.3,
+    "neg": 13.3,
+    "agresivo": 30.0,
+    "neto": -10.0
    },
    "ult7": 12,
-   "prev7": 4,
+   "prev7": 5,
    "plataformas": {
-    "Medios": 29
+    "Medios": 30
    },
    "ejes": {
     "fed": 0,
@@ -2033,24 +2128,24 @@
    }
   },
   "Juan Grabois": {
-   "n": 82,
-   "sov": 2.0,
+   "n": 86,
+   "sov": 1.9,
    "tono": {
-    "n": 82,
-    "pos": 17.1,
-    "neu": 74.4,
-    "neg": 8.5,
-    "agresivo": 28.0,
-    "neto": 8.6
+    "n": 86,
+    "pos": 15.1,
+    "neu": 76.7,
+    "neg": 8.1,
+    "agresivo": 22.1,
+    "neto": 7.0
    },
-   "ult7": 18,
+   "ult7": 20,
    "prev7": 20,
    "plataformas": {
-    "Medios": 82
+    "Medios": 86
    },
    "ejes": {
     "fed": 7,
-    "dem": 1,
+    "dem": 2,
     "int": 0,
     "mil": 1,
     "lib": 0,
@@ -2091,16 +2186,16 @@
   },
   "Guillermo Moreno": {
    "n": 23,
-   "sov": 0.6,
+   "sov": 0.5,
    "tono": {
     "n": 23,
     "pos": 4.3,
     "neu": 78.3,
     "neg": 17.4,
-    "agresivo": 17.4,
+    "agresivo": 13.0,
     "neto": -13.1
    },
-   "ult7": 9,
+   "ult7": 8,
    "prev7": 4,
    "plataformas": {
     "Medios": 23
@@ -2121,25 +2216,26 @@
    }
   },
   "Myriam Bregman": {
-   "n": 46,
+   "n": 51,
    "sov": 1.1,
    "tono": {
-    "n": 46,
-    "pos": 6.5,
-    "neu": 71.7,
-    "neg": 21.7,
-    "agresivo": 39.1,
-    "neto": -15.2
+    "n": 51,
+    "pos": 3.9,
+    "neu": 72.5,
+    "neg": 23.5,
+    "agresivo": 33.3,
+    "neto": -19.6
    },
-   "ult7": 6,
-   "prev7": 6,
+   "ult7": 7,
+   "prev7": 3,
    "plataformas": {
-    "Medios": 46
+    "Medios": 48,
+    "YouTube": 3
    },
    "ejes": {
     "fed": 1,
     "dem": 2,
-    "int": 0,
+    "int": 3,
     "mil": 3,
     "lib": 1,
     "col": 0,
@@ -2184,7 +2280,7 @@
     "n": 12
    },
    "ult7": 3,
-   "prev7": 1,
+   "prev7": 0,
    "plataformas": {
     "Medios": 12
    },
@@ -2207,50 +2303,50 @@
  "plataformas": {
   "Medios": {
    "tono": {
-    "n": 6271,
-    "pos": 7.6,
-    "neu": 80.1,
-    "neg": 12.3,
-    "agresivo": 20.8,
-    "neto": -4.7
+    "n": 6889,
+    "pos": 5.9,
+    "neu": 80.8,
+    "neg": 13.4,
+    "agresivo": 9.6,
+    "neto": -7.5
    },
    "ejes": {
-    "fed": 380,
-    "dem": 267,
-    "int": 505,
-    "mil": 310,
-    "lib": 290,
-    "col": 181,
-    "rel": 608,
-    "pro": 422,
-    "mig": 105,
-    "pla": 225,
-    "glo": 438,
-    "tec": 233
+    "fed": 413,
+    "dem": 294,
+    "int": 514,
+    "mil": 371,
+    "lib": 321,
+    "col": 207,
+    "rel": 642,
+    "pro": 480,
+    "mig": 116,
+    "pla": 262,
+    "glo": 479,
+    "tec": 269
    }
   },
   "YouTube": {
    "tono": {
-    "n": 73,
-    "pos": 15.1,
-    "neu": 68.5,
-    "neg": 16.4,
-    "agresivo": 38.4,
-    "neto": -1.3
+    "n": 1105,
+    "pos": 24.0,
+    "neu": 61.3,
+    "neg": 14.8,
+    "agresivo": 40.5,
+    "neto": 9.2
    },
    "ejes": {
-    "fed": 9,
-    "dem": 7,
-    "int": 1,
-    "mil": 1,
-    "lib": 0,
-    "col": 0,
-    "rel": 0,
-    "pro": 0,
-    "mig": 0,
-    "pla": 1,
-    "glo": 0,
-    "tec": 0
+    "fed": 17,
+    "dem": 21,
+    "int": 37,
+    "mil": 60,
+    "lib": 29,
+    "col": 10,
+    "rel": 78,
+    "pro": 51,
+    "mig": 38,
+    "pla": 33,
+    "glo": 20,
+    "tec": 37
    }
   }
  },
