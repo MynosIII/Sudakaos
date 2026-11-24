@@ -1,5 +1,5 @@
 {
- "_nota": "e = efecto de estar de acuerdo (peso negativo: polo a; positivo: polo b). nivel = intensidad (1 o 3) en las preguntas base. v = versiones.",
+ "_nota": "e = efecto de estar de acuerdo (peso negativo: polo a; positivo: polo b). nivel = intensidad (1 a 4) en las preguntas base; extra = ampliada (no entra en Express). v = versiones.",
  "preguntas": [
   {
    "id": "x01",
@@ -962,6 +962,2526 @@
    ]
   },
   {
+   "id": "x49",
+   "t": "No hace falta un gobierno nacional.",
+   "t_pt": "Não é preciso um governo federal.",
+   "t_en": "There is no need for a national government.",
+   "e": {
+    "fed": -1
+   },
+   "nivel": 4,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x50",
+   "t": "La gente debería sentirse más de su provincia que de su país.",
+   "t_pt": "As pessoas deveriam se sentir mais do seu estado do que do seu país.",
+   "t_en": "People should feel more loyal to their province or state than to their country.",
+   "e": {
+    "fed": -1
+   },
+   "nivel": 3,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x51",
+   "t": "Las provincias y los municipios deberían tener más poder del que tienen hoy.",
+   "t_pt": "Os estados e os municípios deveriam ter mais poder do que têm hoje.",
+   "t_en": "Local governments should have more power than they currently do.",
+   "e": {
+    "fed": -1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x52",
+   "t": "Es buena idea probar una política en una provincia antes de aplicarla en todo el país.",
+   "t_pt": "É boa ideia testar uma política em um estado antes de aplicá-la no país inteiro.",
+   "t_en": "It's a good idea to test a policy in one province before implementing it nationwide.",
+   "e": {
+    "fed": -1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x53",
+   "t": "Los gobiernos locales se ocupan de temas que el gobierno nacional nunca tocaría.",
+   "t_pt": "Os governos locais cuidam de temas que o governo federal nunca tocaria.",
+   "t_en": "Local governments address issues the national government would never touch.",
+   "e": {
+    "fed": -1
+   },
+   "nivel": 1,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x54",
+   "t": "El gobierno nacional protege mejor a las minorías que algunos gobiernos provinciales.",
+   "t_pt": "O governo federal protege melhor as minorias do que alguns governos estaduais.",
+   "t_en": "The national government protects minorities better than some local governments do.",
+   "e": {
+    "fed": 1
+   },
+   "nivel": 1,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x55",
+   "t": "El gobierno nacional necesita más poder.",
+   "t_pt": "O governo federal precisa de mais poder.",
+   "t_en": "The national government needs more power.",
+   "e": {
+    "fed": 1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x56",
+   "t": "Las provincias no deberían poder quedar exentas de las leyes nacionales.",
+   "t_pt": "Os estados não deveriam poder ficar isentos das leis federais.",
+   "t_en": "Provinces should not be able to exempt themselves from national laws.",
+   "e": {
+    "fed": 1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x57",
+   "t": "Un país sin un gobierno nacional fuerte es apenas una alianza de provincias.",
+   "t_pt": "Um país sem um governo federal forte é apenas uma aliança de estados.",
+   "t_en": "A group of provinces without a strong national government is merely an alliance, not a nation.",
+   "e": {
+    "fed": 1
+   },
+   "nivel": 3,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x58",
+   "t": "Las leyes deberían ser exactamente iguales en todas las regiones del país.",
+   "t_pt": "As leis deveriam ser exatamente iguais em todas as regiões do país.",
+   "t_en": "Laws should be completely consistent across all regions of a nation.",
+   "e": {
+    "fed": 1
+   },
+   "nivel": 4,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x59",
+   "t": "La democracia directa es la mejor forma de gobierno.",
+   "t_pt": "A democracia direta é a melhor forma de governo.",
+   "t_en": "Direct democracy is the best form of government.",
+   "e": {
+    "dem": -1
+   },
+   "nivel": 4,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x60",
+   "t": "La gente debería votar cada tema importante, no solo a sus representantes.",
+   "t_pt": "As pessoas deveriam votar cada tema importante, não só seus representantes.",
+   "t_en": "People should vote on major issues themselves, not just for representatives.",
+   "e": {
+    "dem": -1
+   },
+   "nivel": 3,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x61",
+   "t": "Las elecciones son una buena forma de mostrar si un gobierno tiene apoyo.",
+   "t_pt": "As eleições são uma boa forma de mostrar se um governo tem apoio.",
+   "t_en": "Elections are an effective way of showing government approval.",
+   "e": {
+    "dem": -1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x62",
+   "t": "Cada persona debería tener un voto, y todos deberían valer lo mismo.",
+   "t_pt": "Cada pessoa deveria ter um voto, e todos deveriam valer o mesmo.",
+   "t_en": "Each person should have one vote, each equal to every other.",
+   "e": {
+    "dem": -1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x63",
+   "t": "El gobierno tiene que ser del pueblo y para el pueblo.",
+   "t_pt": "O governo tem que ser do povo e para o povo.",
+   "t_en": "Government must be by the people, for the people.",
+   "e": {
+    "dem": -1
+   },
+   "nivel": 1,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x64",
+   "t": "La opinión de la mayoría no siempre tiene razón.",
+   "t_pt": "A opinião da maioria nem sempre tem razão.",
+   "t_en": "Popular opinion is not always right.",
+   "e": {
+    "dem": 1
+   },
+   "nivel": 1,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x65",
+   "t": "Una sociedad no puede funcionar sin líderes que manden y gente que obedezca.",
+   "t_pt": "Uma sociedade não funciona sem líderes que mandam e pessoas que obedecem.",
+   "t_en": "Society could not function without leaders and followers.",
+   "e": {
+    "dem": 1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x66",
+   "t": "La opinión pública cambia demasiado con las emociones como para guiar las políticas.",
+   "t_pt": "A opinião pública muda demais com as emoções para guiar as políticas.",
+   "t_en": "Public opinion swings too much with emotional events to guide policy.",
+   "e": {
+    "dem": 1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x67",
+   "t": "Un gobierno fuerte que no dependa de elecciones sería mejor que una democracia liberal.",
+   "t_pt": "Um governo forte que não dependa de eleições seria melhor do que uma democracia liberal.",
+   "t_en": "A strong government that does not depend on elections would be better than a liberal democracy.",
+   "e": {
+    "dem": 1
+   },
+   "nivel": 3,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x68",
+   "t": "Un país tiene que obedecer a sus líderes sin cuestionarlos.",
+   "t_pt": "Um país tem que obedecer a seus líderes sem questioná-los.",
+   "t_en": "A nation must obey its leadership without question.",
+   "e": {
+    "dem": 1
+   },
+   "nivel": 4,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x69",
+   "t": "Un gobierno mundial unificado sería bueno para la humanidad.",
+   "t_pt": "Um governo mundial unificado seria bom para a humanidade.",
+   "t_en": "A united world government would be beneficial to mankind.",
+   "e": {
+    "int": -1
+   },
+   "nivel": 4,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x70",
+   "t": "Las Naciones Unidas deberían tener fuerzas propias para hacer cumplir sus resoluciones.",
+   "t_pt": "As Nações Unidas deveriam ter forças próprias para fazer cumprir suas resoluções.",
+   "t_en": "The United Nations should have a military to enforce its resolutions.",
+   "e": {
+    "int": -1
+   },
+   "nivel": 3,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x71",
+   "t": "Apoyo las uniones regionales con instituciones comunes, como la Unión Europea.",
+   "t_pt": "Apoio uniões regionais com instituições comuns, como a União Europeia.",
+   "t_en": "I support regional unions with shared institutions, such as the European Union.",
+   "e": {
+    "int": -1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x72",
+   "t": "Los gobiernos deberían rendir cuentas ante la comunidad internacional.",
+   "t_pt": "Os governos deveriam prestar contas à comunidade internacional.",
+   "t_en": "Governments should be accountable to the international community.",
+   "e": {
+    "int": -1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x73",
+   "t": "Las alianzas con otros países son importantes para proteger a una nación.",
+   "t_pt": "As alianças com outros países são importantes para proteger uma nação.",
+   "t_en": "Alliances are important for protecting a nation.",
+   "e": {
+    "int": -1
+   },
+   "nivel": 1,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x74",
+   "t": "Un país debería mantenerse neutral en los conflictos de otros.",
+   "t_pt": "Um país deveria se manter neutro nos conflitos dos outros.",
+   "t_en": "A nation should mostly stay neutral in foreign affairs.",
+   "e": {
+    "int": 1
+   },
+   "nivel": 1,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x75",
+   "t": "La ayuda internacional casi siempre es plata tirada.",
+   "t_pt": "A ajuda internacional quase sempre é dinheiro jogado fora.",
+   "t_en": "International aid is a waste of money most of the time.",
+   "e": {
+    "int": 1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x76",
+   "t": "Las alianzas internacionales pueden poner en riesgo la soberanía.",
+   "t_pt": "As alianças internacionais podem pôr a soberania em risco.",
+   "t_en": "Alliances can pose a threat to a nation's sovereignty.",
+   "e": {
+    "int": 1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x77",
+   "t": "Nuestro país debería salir de las Naciones Unidas.",
+   "t_pt": "Nosso país deveria sair das Nações Unidas.",
+   "t_en": "Our country should leave the United Nations.",
+   "e": {
+    "int": 1
+   },
+   "nivel": 3,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x78",
+   "t": "Mi país es mejor que todos los demás.",
+   "t_pt": "Meu país é melhor do que todos os outros.",
+   "t_en": "My nation is better than all other nations.",
+   "e": {
+    "int": 1
+   },
+   "nivel": 4,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x79",
+   "t": "La guerra es necesaria para que una economía prospere.",
+   "t_pt": "A guerra é necessária para que uma economia prospere.",
+   "t_en": "War is needed to make an economy thrive.",
+   "e": {
+    "mil": -1
+   },
+   "nivel": 4,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x80",
+   "t": "Los gobiernos extranjeros que atentan contra nuestros intereses deberían ser derrocados.",
+   "t_pt": "Os governos estrangeiros que atentam contra nossos interesses deveriam ser derrubados.",
+   "t_en": "Foreign governments that act against our interests should be toppled.",
+   "e": {
+    "mil": -1
+   },
+   "nivel": 3,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x81",
+   "t": "La opción militar siempre debería estar sobre la mesa.",
+   "t_pt": "A opção militar sempre deveria estar sobre a mesa.",
+   "t_en": "A military option should always be considered.",
+   "e": {
+    "mil": -1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x82",
+   "t": "A veces la acción militar es necesaria para proteger al país.",
+   "t_pt": "Às vezes a ação militar é necessária para proteger o país.",
+   "t_en": "Military action is sometimes necessary to protect the nation.",
+   "e": {
+    "mil": -1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x83",
+   "t": "Hay que respetar y reconocer a quienes sirvieron en las Fuerzas Armadas.",
+   "t_pt": "É preciso respeitar e reconhecer quem serviu nas Forças Armadas.",
+   "t_en": "We should respect those who have served in the military.",
+   "e": {
+    "mil": -1
+   },
+   "nivel": 1,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x84",
+   "t": "La paz es preferible a la guerra siempre que sea posible.",
+   "t_pt": "A paz é preferível à guerra sempre que possível.",
+   "t_en": "Peace is preferable to war whenever possible.",
+   "e": {
+    "mil": 1
+   },
+   "nivel": 1,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x85",
+   "t": "La paz duradera trae prosperidad.",
+   "t_pt": "A paz duradoura traz prosperidade.",
+   "t_en": "Lasting peace leads to prosperity.",
+   "e": {
+    "mil": 1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x86",
+   "t": "Mi país gasta demasiado en defensa.",
+   "t_pt": "Meu país gasta demais com defesa.",
+   "t_en": "My country spends too much on the military.",
+   "e": {
+    "mil": 1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x87",
+   "t": "Ningún país tiene derecho a intervenir militarmente en otro.",
+   "t_pt": "Nenhum país tem o direito de intervir militarmente em outro.",
+   "t_en": "No country has the right to intervene militarily in another.",
+   "e": {
+    "mil": 1
+   },
+   "nivel": 3,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x88",
+   "t": "Los países no deberían tener Fuerzas Armadas.",
+   "t_pt": "Os países não deveriam ter Forças Armadas.",
+   "t_en": "Nations should not maintain a military.",
+   "e": {
+    "mil": 1
+   },
+   "nivel": 4,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x89",
+   "t": "El Estado debería vigilar a todos los ciudadanos para combatir el delito y el terrorismo.",
+   "t_pt": "O Estado deveria vigiar todos os cidadãos para combater o crime e o terrorismo.",
+   "t_en": "The government should monitor all citizens to fight crime and terrorism.",
+   "e": {
+    "lib": -1
+   },
+   "nivel": 4,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x90",
+   "t": "Mantener la ley y el orden es lo más importante.",
+   "t_pt": "Manter a lei e a ordem é o mais importante.",
+   "t_en": "Maintaining law and order is what matters most.",
+   "e": {
+    "lib": -1
+   },
+   "nivel": 3,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x91",
+   "t": "El que no tiene nada que esconder no tiene nada que temer.",
+   "t_pt": "Quem não tem nada a esconder não tem nada a temer.",
+   "t_en": "If you have nothing to hide, you have nothing to fear.",
+   "e": {
+    "lib": -1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x92",
+   "t": "Las cámaras y la vigilancia del Estado son necesarias en el mundo de hoy.",
+   "t_pt": "As câmeras e a vigilância do Estado são necessárias no mundo de hoje.",
+   "t_en": "Government surveillance is necessary in the modern world.",
+   "e": {
+    "lib": -1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x93",
+   "t": "La justicia debería poder leer los mensajes de sospechosos de delitos graves.",
+   "t_pt": "A justiça deveria poder ler as mensagens de suspeitos de crimes graves.",
+   "t_en": "Authorities should have access to the messages of people suspected of serious crimes.",
+   "e": {
+    "lib": -1
+   },
+   "nivel": 1,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x94",
+   "t": "La marihuana debería ser legal.",
+   "t_pt": "A maconha deveria ser legal.",
+   "t_en": "Marijuana should be legal.",
+   "e": {
+    "lib": 1
+   },
+   "nivel": 1,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x95",
+   "t": "Ninguna autoridad debería quedar libre de cuestionamiento.",
+   "t_pt": "Nenhuma autoridade deveria ficar livre de questionamento.",
+   "t_en": "No authority should be left unquestioned.",
+   "e": {
+    "lib": 1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x96",
+   "t": "Quien resigna libertad a cambio de seguridad termina sin ninguna de las dos.",
+   "t_pt": "Quem abre mão da liberdade em troca de segurança acaba sem nenhuma das duas.",
+   "t_en": "Those who give up liberty for safety end up with neither.",
+   "e": {
+    "lib": 1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x97",
+   "t": "Los que filtran abusos del poder le hacen un bien a la sociedad.",
+   "t_pt": "Quem vaza abusos do poder faz um bem à sociedade.",
+   "t_en": "Whistleblowers are good for society.",
+   "e": {
+    "lib": 1
+   },
+   "nivel": 3,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x98",
+   "t": "La libertad de las personas no debería tener ningún límite.",
+   "t_pt": "A liberdade das pessoas não deveria ter nenhum limite.",
+   "t_en": "People's freedom should have no limits.",
+   "e": {
+    "lib": 1
+   },
+   "nivel": 4,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x99",
+   "t": "El comunismo, bien aplicado, sería un buen sistema económico.",
+   "t_pt": "O comunismo, bem aplicado, seria um bom sistema econômico.",
+   "t_en": "Communism, if implemented correctly, would be a good economic system.",
+   "e": {
+    "col": -1
+   },
+   "nivel": 4,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x100",
+   "t": "La propiedad privada de las grandes empresas debería abolirse.",
+   "t_pt": "A propriedade privada das grandes empresas deveria ser abolida.",
+   "t_en": "Private ownership of large companies should be abolished.",
+   "e": {
+    "col": -1
+   },
+   "nivel": 3,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x101",
+   "t": "Prefiero lo colectivo antes que lo individual.",
+   "t_pt": "Prefiro o coletivo ao individual.",
+   "t_en": "I prefer collectivism over individualism.",
+   "e": {
+    "col": -1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x102",
+   "t": "La lucha de clases es un problema real e importante.",
+   "t_pt": "A luta de classes é um problema real e importante.",
+   "t_en": "Class struggle is a real and important issue.",
+   "e": {
+    "col": -1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x103",
+   "t": "Los servicios básicos, como el agua o la luz, deberían ser públicos.",
+   "t_pt": "Os serviços básicos, como água e luz, deveriam ser públicos.",
+   "t_en": "Basic services such as water and electricity should be publicly owned.",
+   "e": {
+    "col": -1
+   },
+   "nivel": 1,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x104",
+   "t": "Sin capitalismo, una economía termina colapsando.",
+   "t_pt": "Sem capitalismo, uma economia acaba colapsando.",
+   "t_en": "Economies without any capitalism will collapse.",
+   "e": {
+    "col": 1
+   },
+   "nivel": 1,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x105",
+   "t": "El capitalismo es mejor que cualquier alternativa que exista.",
+   "t_pt": "O capitalismo é melhor do que qualquer alternativa que exista.",
+   "t_en": "Capitalism is better than any existing alternative.",
+   "e": {
+    "col": 1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x106",
+   "t": "Las diferencias entre clases sociales son inevitables.",
+   "t_pt": "As diferenças entre classes sociais são inevitáveis.",
+   "t_en": "Economic classes are inevitable.",
+   "e": {
+    "col": 1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x107",
+   "t": "Cada uno debería ganarse con su trabajo todo lo que tiene.",
+   "t_pt": "Cada um deveria conquistar com seu trabalho tudo o que tem.",
+   "t_en": "People should have to work for everything they get.",
+   "e": {
+    "col": 1
+   },
+   "nivel": 3,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x108",
+   "t": "La caridad privada ayuda a los pobres mejor que los planes sociales del Estado.",
+   "t_pt": "A caridade privada ajuda os pobres melhor do que os programas sociais do Estado.",
+   "t_en": "Private charity helps the poor better than public welfare.",
+   "e": {
+    "col": 1
+   },
+   "nivel": 4,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x109",
+   "t": "La religión tiene que perder peso para que la sociedad progrese.",
+   "t_pt": "A religião precisa perder peso para que a sociedade progrida.",
+   "t_en": "Religion must decline for society to progress.",
+   "e": {
+    "rel": -1
+   },
+   "nivel": 4,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x110",
+   "t": "El Estado no debería financiar a ninguna religión de ninguna forma.",
+   "t_pt": "O Estado não deveria financiar nenhuma religião de forma alguma.",
+   "t_en": "The government should not fund any religious organization in any way.",
+   "e": {
+    "rel": -1
+   },
+   "nivel": 3,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x111",
+   "t": "La humanidad ya no necesita la religión.",
+   "t_pt": "A humanidade já não precisa da religião.",
+   "t_en": "Humanity has moved beyond the need for religion.",
+   "e": {
+    "rel": -1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x112",
+   "t": "La mayoría de las religiones organizadas se contradicen a sí mismas.",
+   "t_pt": "A maioria das religiões organizadas se contradiz.",
+   "t_en": "Most organized religions contradict themselves.",
+   "e": {
+    "rel": -1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x113",
+   "t": "Tiene que haber una separación clara entre Iglesia y Estado.",
+   "t_pt": "Tem que haver uma separação clara entre Igreja e Estado.",
+   "t_en": "There must be a separation between church and state.",
+   "e": {
+    "rel": -1
+   },
+   "nivel": 1,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x114",
+   "t": "Creo que hay algo después de la muerte.",
+   "t_pt": "Acredito que há algo depois da morte.",
+   "t_en": "I believe there is something after death.",
+   "e": {
+    "rel": 1
+   },
+   "nivel": 1,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x115",
+   "t": "Creo en Dios o en un poder superior.",
+   "t_pt": "Acredito em Deus ou em um poder superior.",
+   "t_en": "I believe in God or a higher power.",
+   "e": {
+    "rel": 1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x116",
+   "t": "Los chicos deberían ser educados en valores religiosos.",
+   "t_pt": "As crianças deveriam ser educadas em valores religiosos.",
+   "t_en": "Children should be educated in religious values.",
+   "e": {
+    "rel": 1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x117",
+   "t": "La religión es fundamental para la sociedad.",
+   "t_pt": "A religião é fundamental para a sociedade.",
+   "t_en": "Religion is essential to society.",
+   "e": {
+    "rel": 1
+   },
+   "nivel": 3,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x118",
+   "t": "Muchos de los males del mundo vienen de habernos alejado de la religión.",
+   "t_pt": "Muitos dos males do mundo vêm de termos nos afastado da religião.",
+   "t_en": "Most bad things in the world come from turning away from religion.",
+   "e": {
+    "rel": 1
+   },
+   "nivel": 4,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x119",
+   "t": "Las tradiciones solo frenan el progreso de la humanidad.",
+   "t_pt": "As tradições só atrasam o progresso da humanidade.",
+   "t_en": "Tradition just hinders the progress of humanity.",
+   "e": {
+    "pro": -1
+   },
+   "nivel": 4,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x120",
+   "t": "Las políticas de cupos para grupos históricamente discriminados son positivas.",
+   "t_pt": "As políticas de cotas para grupos historicamente discriminados são positivas.",
+   "t_en": "Affirmative action for historically discriminated groups is mostly beneficial.",
+   "e": {
+    "pro": -1
+   },
+   "nivel": 3,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x121",
+   "t": "Apoyo al movimiento LGBTQ+.",
+   "t_pt": "Apoio o movimento LGBTQ+.",
+   "t_en": "I support the LGBTQ+ movement.",
+   "e": {
+    "pro": -1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x122",
+   "t": "Algunos monumentos a figuras históricas deberían retirarse.",
+   "t_pt": "Alguns monumentos a figuras históricas deveriam ser retirados.",
+   "t_en": "Statues of certain historical figures should be taken down.",
+   "e": {
+    "pro": -1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x123",
+   "t": "Los movimientos contra el racismo tienen razón en sus reclamos.",
+   "t_pt": "Os movimentos antirracistas têm razão em suas reivindicações.",
+   "t_en": "Anti-racism movements are right in their demands.",
+   "e": {
+    "pro": -1
+   },
+   "nivel": 1,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x124",
+   "t": "Perseguir el progreso a cualquier costo es peligroso.",
+   "t_pt": "Perseguir o progresso a qualquer custo é perigoso.",
+   "t_en": "Chasing progress at all costs is dangerous.",
+   "e": {
+    "pro": 1
+   },
+   "nivel": 1,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x125",
+   "t": "Mantener los valores familiares es fundamental.",
+   "t_pt": "Manter os valores familiares é fundamental.",
+   "t_en": "Maintaining family values is essential.",
+   "e": {
+    "pro": 1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x126",
+   "t": "Las relaciones sexuales antes del matrimonio están mal.",
+   "t_pt": "Relações sexuais antes do casamento são erradas.",
+   "t_en": "Sex before marriage is immoral.",
+   "e": {
+    "pro": 1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x127",
+   "t": "Los mayores saben mejor que nadie qué camino le conviene a la sociedad.",
+   "t_pt": "Os mais velhos sabem melhor que ninguém o caminho certo para a sociedade.",
+   "t_en": "The elders in society know the best path for it.",
+   "e": {
+    "pro": 1
+   },
+   "nivel": 3,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x128",
+   "t": "La homosexualidad debería estar prohibida.",
+   "t_pt": "A homossexualidade deveria ser proibida.",
+   "t_en": "Homosexuality should be criminalized.",
+   "e": {
+    "pro": 1
+   },
+   "nivel": 4,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x129",
+   "t": "No deberíamos recibir refugiados.",
+   "t_pt": "Não deveríamos receber refugiados.",
+   "t_en": "We should not allow any refugees.",
+   "e": {
+    "mig": -1
+   },
+   "nivel": 4,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x130",
+   "t": "Si se acepta inmigración, los inmigrantes tienen que adoptar nuestra cultura.",
+   "t_pt": "Se aceitarmos imigrantes, eles têm que adotar nossa cultura.",
+   "t_en": "If we accept migrants at all, they must assimilate into our culture.",
+   "e": {
+    "mig": -1
+   },
+   "nivel": 3,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x131",
+   "t": "Los inmigrantes en situación irregular no le aportan nada al país.",
+   "t_pt": "Os imigrantes em situação irregular não trazem nenhum benefício ao país.",
+   "t_en": "Undocumented immigrants do not benefit the host country.",
+   "e": {
+    "mig": -1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x132",
+   "t": "La cultura nacional hay que protegerla.",
+   "t_pt": "A cultura nacional precisa ser protegida.",
+   "t_en": "A nation's culture is important to protect.",
+   "e": {
+    "mig": -1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x133",
+   "t": "Los inmigrantes deberían aprender el idioma del país.",
+   "t_pt": "Os imigrantes deveriam aprender a língua do país.",
+   "t_en": "Immigrants should be expected to learn the country's language.",
+   "e": {
+    "mig": -1
+   },
+   "nivel": 1,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x134",
+   "t": "Deberíamos recibir más refugiados.",
+   "t_pt": "Deveríamos receber mais refugiados.",
+   "t_en": "We should take in more refugees.",
+   "e": {
+    "mig": 1
+   },
+   "nivel": 1,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x135",
+   "t": "Ninguna cultura es superior a otra.",
+   "t_pt": "Nenhuma cultura é superior a outra.",
+   "t_en": "No culture is superior to others.",
+   "e": {
+    "mig": 1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x136",
+   "t": "Todas las sociedades son una mezcla de culturas.",
+   "t_pt": "Todas as sociedades são uma mistura de culturas.",
+   "t_en": "All societies are a blend of cultures.",
+   "e": {
+    "mig": 1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x137",
+   "t": "Todos los seres humanos compartimos una identidad común.",
+   "t_pt": "Todos os seres humanos compartilham uma identidade comum.",
+   "t_en": "All humans share a common identity.",
+   "e": {
+    "mig": 1
+   },
+   "nivel": 3,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x138",
+   "t": "Cualquiera que quiera entrar al país debería poder hacerlo.",
+   "t_pt": "Qualquer pessoa que queira entrar no país deveria poder.",
+   "t_en": "Anybody who wants to enter the country should be able to.",
+   "e": {
+    "mig": 1
+   },
+   "nivel": 4,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x139",
+   "t": "La mayoría de las empresas deberían ser del Estado.",
+   "t_pt": "A maioria das empresas deveria ser do Estado.",
+   "t_en": "Most, if not all, businesses should be owned by the government.",
+   "e": {
+    "pla": -1
+   },
+   "nivel": 4,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x140",
+   "t": "Una economía muy regulada es buena para el país.",
+   "t_pt": "Uma economia muito regulada é boa para o país.",
+   "t_en": "High levels of economic regulation are good for the country.",
+   "e": {
+    "pla": -1
+   },
+   "nivel": 3,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x141",
+   "t": "El Estado tiene que intervenir en la economía para proteger a los consumidores.",
+   "t_pt": "O Estado tem que intervir na economia para proteger os consumidores.",
+   "t_en": "The government must intervene in the economy to protect consumers.",
+   "e": {
+    "pla": -1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x142",
+   "t": "El Estado tiene que partir los monopolios para que haya competencia justa.",
+   "t_pt": "O Estado tem que desmontar os monopólios para garantir concorrência justa.",
+   "t_en": "The government must break up monopolies to ensure fair competition.",
+   "e": {
+    "pla": -1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x143",
+   "t": "Sin regulación, los monopolios terminan dominando todo el mercado.",
+   "t_pt": "Sem regulação, os monopólios acabam dominando todo o mercado.",
+   "t_en": "Without economic regulation, monopolies will dominate the entire market.",
+   "e": {
+    "pla": -1
+   },
+   "nivel": 1,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x144",
+   "t": "Hay que bajarles los impuestos a la clase media y a los que menos tienen.",
+   "t_pt": "É preciso baixar os impostos da classe média e dos mais pobres.",
+   "t_en": "Taxes on the middle and lower classes should be lowered.",
+   "e": {
+    "pla": 1
+   },
+   "nivel": 1,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x145",
+   "t": "La regulación económica hace más daño que bien.",
+   "t_pt": "A regulação econômica faz mais mal do que bem.",
+   "t_en": "Economic regulation causes more harm than good.",
+   "e": {
+    "pla": 1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x146",
+   "t": "Los impuestos son demasiado complicados y habría que simplificarlos.",
+   "t_pt": "Os impostos são complicados demais e deveriam ser simplificados.",
+   "t_en": "Taxes are too complex and should be simplified.",
+   "e": {
+    "pla": 1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x147",
+   "t": "La salud privada funciona mejor que un sistema público único.",
+   "t_pt": "A saúde privada funciona melhor do que um sistema público único.",
+   "t_en": "Private healthcare works better than a single public system.",
+   "e": {
+    "pla": 1
+   },
+   "nivel": 3,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x148",
+   "t": "Los impuestos son un robo.",
+   "t_pt": "Impostos são roubo.",
+   "t_en": "Taxation is theft.",
+   "e": {
+    "pla": 1
+   },
+   "nivel": 4,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x149",
+   "t": "Los productos importados deberían prohibirse o restringirse mucho.",
+   "t_pt": "Os produtos importados deveriam ser proibidos ou muito restringidos.",
+   "t_en": "Foreign products should be banned or heavily restricted.",
+   "e": {
+    "glo": -1
+   },
+   "nivel": 4,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x150",
+   "t": "Hacen falta aranceles altos para proteger a la industria nacional.",
+   "t_pt": "São necessárias tarifas altas para proteger a indústria nacional.",
+   "t_en": "High tariffs are needed to protect local industries.",
+   "e": {
+    "glo": -1
+   },
+   "nivel": 3,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x151",
+   "t": "El Estado debería subsidiar las exportaciones para proteger a la industria local.",
+   "t_pt": "O Estado deveria subsidiar as exportações para proteger a indústria local.",
+   "t_en": "Export subsidies should be used to protect local industries.",
+   "e": {
+    "glo": -1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x152",
+   "t": "El conocimiento técnico y científico del país hay que protegerlo de otros países.",
+   "t_pt": "O conhecimento técnico e científico do país precisa ser protegido de outros países.",
+   "t_en": "Technical and scientific knowledge should be protected from other countries.",
+   "e": {
+    "glo": -1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x153",
+   "t": "La globalización económica trajo más perjuicios que beneficios.",
+   "t_pt": "A globalização econômica trouxe mais prejuízos do que benefícios.",
+   "t_en": "Economic globalization has caused more harm than good.",
+   "e": {
+    "glo": -1
+   },
+   "nivel": 1,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x154",
+   "t": "La cooperación económica global suele dar buenos resultados.",
+   "t_pt": "A cooperação econômica global costuma dar bons resultados.",
+   "t_en": "Global economic cooperation generally leads to positive outcomes.",
+   "e": {
+    "glo": 1
+   },
+   "nivel": 1,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x155",
+   "t": "Los aranceles deberían bajar.",
+   "t_pt": "As tarifas de importação deveriam baixar.",
+   "t_en": "Tariffs should be lowered.",
+   "e": {
+    "glo": 1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x156",
+   "t": "Las restricciones al comercio le hacen mal a la economía.",
+   "t_pt": "As restrições ao comércio fazem mal à economia.",
+   "t_en": "Restrictions on trade are bad for the economy.",
+   "e": {
+    "glo": 1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x157",
+   "t": "Los productos importados son tan buenos como los nacionales.",
+   "t_pt": "Os produtos importados são tão bons quanto os nacionais.",
+   "t_en": "Foreign products are as good as local products.",
+   "e": {
+    "glo": 1
+   },
+   "nivel": 3,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x158",
+   "t": "El proteccionismo es una idea innecesaria y poco realista.",
+   "t_pt": "O protecionismo é uma ideia desnecessária e pouco realista.",
+   "t_en": "Protectionism is an unnecessary and unrealistic idea.",
+   "e": {
+    "glo": 1
+   },
+   "nivel": 4,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x159",
+   "t": "Si una inteligencia artificial gobernara mejor que los humanos, debería gobernar.",
+   "t_pt": "Se uma inteligência artificial governasse melhor que os humanos, deveria governar.",
+   "t_en": "If AI could rule more effectively than humans, AI should rule.",
+   "e": {
+    "tec": -1
+   },
+   "nivel": 4,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x160",
+   "t": "La modificación genética es positiva, incluso en seres humanos.",
+   "t_pt": "A modificação genética é positiva, inclusive em seres humanos.",
+   "t_en": "Genetic modification is a force for good, even in humans.",
+   "e": {
+    "tec": -1
+   },
+   "nivel": 3,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x161",
+   "t": "Deberíamos invertir para llevar una persona a Marte en los próximos años.",
+   "t_pt": "Deveríamos investir para levar uma pessoa a Marte nos próximos anos.",
+   "t_en": "We should invest in getting a person to Mars in the near future.",
+   "e": {
+    "tec": -1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x162",
+   "t": "El progreso tecnológico casi siempre es bueno.",
+   "t_pt": "O progresso tecnológico quase sempre é bom.",
+   "t_en": "Technological progress is usually good.",
+   "e": {
+    "tec": -1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x163",
+   "t": "Desarrollar nuevas tecnologías ayuda más al ambiente que poner regulaciones.",
+   "t_pt": "Desenvolver novas tecnologias ajuda mais o meio ambiente do que impor regulações.",
+   "t_en": "Developing new technology helps the environment more than regulation does.",
+   "e": {
+    "tec": -1
+   },
+   "nivel": 1,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x164",
+   "t": "La tecnología está dejando a gente sin trabajo, y eso es dañino.",
+   "t_pt": "A tecnologia está deixando gente sem emprego, e isso é prejudicial.",
+   "t_en": "Technology is costing people their jobs, and that is harmful.",
+   "e": {
+    "tec": 1
+   },
+   "nivel": 1,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x165",
+   "t": "Me opongo a la modificación genética de seres humanos.",
+   "t_pt": "Sou contra a modificação genética de seres humanos.",
+   "t_en": "I oppose human genetic modification.",
+   "e": {
+    "tec": 1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x166",
+   "t": "El riesgo de que las máquinas dominen a la humanidad es real.",
+   "t_pt": "O risco de as máquinas dominarem a humanidade é real.",
+   "t_en": "The threat of machines taking over humanity is very real.",
+   "e": {
+    "tec": 1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x167",
+   "t": "La tecnología y la vida moderna hicieron la vida vacía y aburrida.",
+   "t_pt": "A tecnologia e a vida moderna deixaram a vida vazia e chata.",
+   "t_en": "Modern technology and lifestyles have made life meaningless and dull.",
+   "e": {
+    "tec": 1
+   },
+   "nivel": 3,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
+   "id": "x168",
+   "t": "Las medicinas tradicionales suelen ser más efectivas que las modernas.",
+   "t_pt": "Os remédios tradicionais costumam ser mais eficazes do que os modernos.",
+   "t_en": "Traditional medicines are often more effective than modern ones.",
+   "e": {
+    "tec": 1
+   },
+   "nivel": 4,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "extra": 1
+  },
+  {
    "id": "g01",
    "t": "Cualquier persona debería poder comprar dólares sin restricciones.",
    "t_pt": "Qualquer pessoa deveria poder comprar dólares sem restrições.",
@@ -971,7 +3491,14 @@
     "pla": 0.5
    },
    "v": [
-    "general"
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
    ]
   },
   {
@@ -984,7 +3511,14 @@
     "rel": -0.5
    },
    "v": [
-    "general"
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
    ]
   },
   {
@@ -996,7 +3530,14 @@
     "lib": -1
    },
    "v": [
-    "general"
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
    ]
   },
   {
@@ -1009,7 +3550,14 @@
     "lib": -0.5
    },
    "v": [
-    "general"
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
    ]
   },
   {
@@ -1021,7 +3569,14 @@
     "int": -1
    },
    "v": [
-    "general"
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
    ]
   },
   {
@@ -1034,7 +3589,14 @@
     "glo": 0.5
    },
    "v": [
-    "general"
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
    ]
   },
   {
@@ -1046,7 +3608,14 @@
     "tec": -1
    },
    "v": [
-    "general"
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
    ]
   },
   {
@@ -1058,7 +3627,14 @@
     "dem": 1
    },
    "v": [
-    "general"
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
    ]
   },
   {
