@@ -183,21 +183,45 @@
   }
   function portada() {
     const t = T(), act = Object.entries(S.ejes.versiones).filter(([id, v]) => v.activa && id !== 'general');
-    const nd = new Set(Object.values(S.fig).filter(Array.isArray).flat().map(f => f.nombre)).size;
-    $('#chips').innerHTML = t.chips(act.length, nd).map(c => `<span>${esc(c)}</span>`).join('');
-    // tarjeta de ejemplo (datos ficticios)
-    const ex = { pla: 34, pro: 28, lib: 74, dem: 22, int: 38 }, E = EJES(), sd = S.ideo.find(i => i.id === 'socialdemocracia') || S.ideo[0];
-    $('#ejemplo').innerHTML = `<span class="tg">${esc(t.ej_tag)}</span>
-      <div class="hd">${ring(81, 'sm')}<div><small>${esc(t.ej_af)}</small><b>${esc(sd ? ideoNom(sd) : '')}</b></div></div>
-      <div class="who"><span class="av">AB</span><div>${esc(t.ej_nombre)}<br><small class="meta">${esc(t.ej_cerca)}</small></div><span class="pc">77%</span></div>` +
-      Object.entries(ex).map(([k, v]) => {
-        const e = E.find(x => x.id === k);
-        return `<div class="mini"><span style="color:${COLOR[k]}">${ic(k)}</span><div><div style="color:var(--muted);font-size:12px">${esc(e.nombre)} · ${esc(polo(e, v))}</div>
-          <div class="t"><i style="left:${Math.min(v, 50)}%;width:${Math.abs(v - 50)}%;background:${COLOR[k]}"></i></div></div><span>${v > 50 ? v : 100 - v}%</span></div>`;
-      }).join('');
+    const E = EJES();
+    ejemplos();
     $('#pasos').innerHTML = t.pasos.map(([h, p], j) => `<div><i>0${j + 1}</i><b>${esc(h)}</b>${esc(p)}</div>`).join('');
     $('#ejlist').innerHTML = E.map(e => `<a href="#/ejes/${e.id}">${icb(e.id)}<span><b>${esc(e.nombre)}</b><small>${esc(e.a)} ↔ ${esc(e.b)}</small></span></a>`).join('');
     versiones();
+  }
+  // Tarjetas de ejemplo (estilo 12 ejes): un perfil parecido al de un dirigente real, su ideología más cercana y sus 12 ejes.
+  const IDEO_COL = { libertarismo: ['#7B4FC4', '#2a1450'], lib_conservador: ['#A98A25', '#3d2d00'], lib_progresista: ['#3A92AD', '#0b3b4a'],
+    socialdemocracia: ['#D0457A', '#55102c'], socialismo_dem: ['#C4443B', '#55120d'], comunismo: ['#B3201A', '#3b0b09'], nacional_popular: ['#1F5FA8', '#0a2a5c'],
+    desarrollismo: ['#D2701F', '#5a2a04'], centrismo: ['#5b6b80', '#1f2733'], democracia_cristiana: ['#3E86C8', '#0b3566'], conservadurismo: ['#8C5E3A', '#3a2210'],
+    derecha_nacionalista: ['#B3262E', '#22252c'], ecologismo: ['#2E9A5C', '#0c3a21'], federalismo: ['#3E8E43', '#0f3a12'], anarquismo: ['#444a55', '#111318'], tecnocracia: ['#2a6fb0', '#0c2440'] };
+  const EJ_NOMBRES = ['Javier Milei', 'Luiz Inácio Lula da Silva', 'Axel Kicillof', 'Nayib Bukele', 'Gabriel Boric', 'Mauricio Macri'];
+  let EJ_I = 0, EJ_T = null;
+  function ejemplos() {
+    const todos = Object.entries(S.fig).filter(([k, v]) => Array.isArray(v) && k !== 'latam').flatMap(([, v]) => v).concat(S.fig.latam || []), lista = [];
+    EJ_NOMBRES.forEach(n => { const f = todos.find(x => x.nombre === n); if (f && !lista.includes(f)) lista.push(f) });
+    if (!lista.length || !S.ideo.length) return;
+    const el = $('#ejemplo'), t = T(), E = EJES();
+    const pinta = () => {
+      const f = lista[EJ_I % lista.length], sc = {};
+      Object.keys(f.pos).forEach(k => { sc[k] = Math.round(f.pos[k] * 0.85 + 50 * 0.15) });
+      const id = S.ideo.map(i => ({ i, af: afinidad(sc, Object.fromEntries(S.ejes.ejes.map((e, j) => [e.id, i.pos[j]]))) })).sort((a, b) => b.af - a.af)[0];
+      const [c1, c2] = IDEO_COL[id.i.id] || ['#4a4e58', '#33363e'], pc = afinidad(sc, f.pos);
+      el.style.setProperty('--c1', `color-mix(in srgb,${c1} 68%,${c2})`); el.style.setProperty('--c2', c2);
+      el.innerHTML = `<div class="sch"><b><svg class="rose" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14.5"/><circle cx="16" cy="16" r="9"/><path d="M16 2v28M2 16h28"/><path class="n" d="M16 5l3 11h-6z"/><path class="s" d="M16 27l-3-11h6z"/></svg>${esc(t.sub)}</b><i></i><span>${esc(t.ej_tag)}</span></div>
+        <div class="sct">${esc(t.ej_af)}</div><h3>${esc(ideoNom(id.i))}</h3>
+        <div class="scg"><div class="scp"><span class="av scf" data-f="${esc(f.nombre)}">${esc(iniciales(f.nombre))}</span><div class="pc">${pc}%</div><small>${esc(t.ej_cerca)}</small><b>${esc(f.nombre)}</b><span>${esc(f.espacio || f.cargo || '')}</span></div>
+        <div class="sca"><div class="t">${esc(t.ej_ejes)}</div>${E.map(e => { const v = sc[e.id], w = v > 50 ? v : 100 - v;
+          return `<div class="scr"><span class="ib" style="--c0:${COLOR[e.id]}">${ic(e.id)}</span><span class="pn" title="${esc(e.nombre)}">${esc(polo(e, v))}</span><span class="xb2"><i style="width:${w}%;background:color-mix(in srgb,${COLOR[e.id]} 62%,#fff)"></i></span><em>${w}%</em></div>` }).join('')}</div></div>
+        <div class="scd">${lista.map((x, j) => `<button aria-label="${esc(x.nombre)}" class="${j === EJ_I % lista.length ? 'on' : ''}" data-j="${j}"></button>`).join('')}</div>`;
+      el.classList.remove('xin'); void el.offsetWidth; el.classList.add('xin');
+      fotos(el);
+    };
+    el.onclick = ev => { const b = ev.target.closest('.scd button'); if (b) { EJ_I = +b.dataset.j; pinta(); reinicia() } };
+    const reinicia = () => { clearInterval(EJ_T); EJ_T = setInterval(() => { if ($('#s-inicio').classList.contains('on') && !document.hidden) { EJ_I++; pinta() } }, 6500) };
+    pinta(); reinicia();
+  }
+  function privacidad() {
+    $('#priv-page').innerHTML = T().priv_t.map(x => `<li>${esc(x)}</li>`).join('');
   }
   function versiones() {
     const t = T();
@@ -684,7 +708,7 @@
     const g = (GLOS[S.lang] || []).slice().sort((a, b) => a[1].localeCompare(b[1], S.lang));
     $('#glos').innerHTML = g.map(([, term, def]) => `<div><b>${esc(term)}</b>${esc(def)}</div>`).join('');
   }
-  const RUTAS = { ejes: ['s-ejes', guia], mapa: ['s-mapa', mapaPagina], cara: ['s-cara', cara], glosario: ['s-glos', glosario] };
+  const RUTAS = { ejes: ['s-ejes', guia], mapa: ['s-mapa', mapaPagina], cara: ['s-cara', cara], glosario: ['s-glos', glosario], privacidad: ['s-priv', privacidad] };
   function nav(r) { $$('.nav a').forEach(a => a.classList.toggle('on', a.dataset.r === r)) }
   function ruta() {
     const h = location.hash;
