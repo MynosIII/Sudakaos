@@ -22,7 +22,8 @@
     "rel": 65,
     "int": 60,
     "dem": 55
-   }
+   },
+   "cargo": "Presidente de Argentina"
   },
   {
    "nombre": "Cristina Kirchner",
@@ -40,7 +41,8 @@
    "ajuste": {
     "int": 65,
     "rel": 45
-   }
+   },
+   "cargo": "Expresidenta de Argentina"
   },
   {
    "nombre": "Luiz Inácio Lula da Silva",
@@ -58,7 +60,8 @@
    "ajuste": {
     "rel": 55,
     "mil": 75
-   }
+   },
+   "cargo": "Presidente de Brasil"
   },
   {
    "nombre": "Jair Bolsonaro",
@@ -78,7 +81,8 @@
     "mil": 5,
     "dem": 75,
     "int": 70
-   }
+   },
+   "cargo": "Expresidente de Brasil"
   },
   {
    "nombre": "Gabriel Boric",
@@ -96,7 +100,8 @@
    "ajuste": {
     "rel": 15,
     "mig": 70
-   }
+   },
+   "cargo": "Presidente de Chile"
   },
   {
    "nombre": "José Antonio Kast",
@@ -116,7 +121,8 @@
     "mig": 10,
     "mil": 15,
     "int": 65
-   }
+   },
+   "cargo": "Líder del Partido Republicano"
   },
   {
    "nombre": "Evelyn Matthei",
@@ -130,7 +136,8 @@
     "ins": 25,
     "ext": 75,
     "amb": 70
-   }
+   },
+   "cargo": "Dirigente de la UDI"
   },
   {
    "nombre": "Gustavo Petro",
@@ -149,7 +156,8 @@
     "rel": 35,
     "mil": 90,
     "mig": 75
-   }
+   },
+   "cargo": "Presidente de Colombia"
   },
   {
    "nombre": "Nayib Bukele",
@@ -169,7 +177,8 @@
     "mil": 10,
     "tec": 20,
     "rel": 65
-   }
+   },
+   "cargo": "Presidente de El Salvador"
   },
   {
    "nombre": "Claudia Sheinbaum",
@@ -187,7 +196,8 @@
    "ajuste": {
     "rel": 20,
     "tec": 35
-   }
+   },
+   "cargo": "Presidenta de México"
   },
   {
    "nombre": "Andrés Manuel López Obrador",
@@ -205,7 +215,8 @@
    "ajuste": {
     "rel": 65,
     "int": 75
-   }
+   },
+   "cargo": "Expresidente de México"
   },
   {
    "nombre": "Daniel Noboa",
@@ -219,7 +230,8 @@
     "ins": 55,
     "ext": 85,
     "amb": 75
-   }
+   },
+   "cargo": "Presidente de Ecuador"
   },
   {
    "nombre": "Rafael Correa",
@@ -233,7 +245,8 @@
     "ins": 50,
     "ext": 15,
     "amb": 70
-   }
+   },
+   "cargo": "Expresidente de Ecuador"
   },
   {
    "nombre": "Yamandú Orsi",
@@ -250,7 +263,8 @@
    },
    "ajuste": {
     "rel": 25
-   }
+   },
+   "cargo": "Presidente de Uruguay"
   },
   {
    "nombre": "Luis Lacalle Pou",
@@ -267,7 +281,8 @@
    },
    "ajuste": {
     "rel": 55
-   }
+   },
+   "cargo": "Expresidente de Uruguay"
   },
   {
    "nombre": "Rodrigo Paz",
@@ -281,7 +296,8 @@
     "ins": 45,
     "ext": 70,
     "amb": 70
-   }
+   },
+   "cargo": "Presidente de Bolivia"
   },
   {
    "nombre": "María Corina Machado",
@@ -295,7 +311,8 @@
     "ins": 60,
     "ext": 90,
     "amb": 75
-   }
+   },
+   "cargo": "Líder opositora de Venezuela"
   },
   {
    "nombre": "Nicolás Maduro",
@@ -315,7 +332,8 @@
     "mil": 15,
     "int": 85,
     "rel": 55
-   }
+   },
+   "cargo": "Gobernante de Venezuela"
   }
  ],
  "ar": [
@@ -892,7 +910,8 @@
    "alias": [
     "nacho torres",
     "ignacio torres"
-   ]
+   ],
+   "wiki": "Ignacio Agustín Torres"
   },
   {
    "nombre": "Alfredo Cornejo",
@@ -1312,7 +1331,8 @@
    },
    "alias": [
     "nicolas marquez"
-   ]
+   ],
+   "wiki": "Nicolás Márquez (escritor)"
   },
   {
    "nombre": "Alejandro Fantino",
@@ -1597,25 +1617,6 @@
    },
    "alias": [
     "eduardo de pedro"
-   ]
-  },
-  {
-   "nombre": "Wado de Pedro",
-   "nivel": 3,
-   "espacio": "Unión por la Patria",
-   "cargo": "Dirigente de La Cámpora",
-   "pos": {
-    "eco": 28,
-    "com": 35,
-    "fed": 55,
-    "soc": 35,
-    "seg": 40,
-    "ins": 50,
-    "ext": 30,
-    "amb": 55
-   },
-   "alias": [
-    "wado de pedro"
    ]
   },
   {
@@ -4234,7 +4235,8 @@
    },
    "alias": [
     "joao campos"
-   ]
+   ],
+   "wiki": "João Henrique Campos"
   },
   {
    "nombre": "Ricardo Nunes",
@@ -5280,7 +5282,8 @@
    },
    "alias": [
     "bachi nunez"
-   ]
+   ],
+   "wiki": "Basilio Núñez"
   },
   {
    "nombre": "Raúl Latorre",
@@ -5356,25 +5359,6 @@
    },
    "alias": [
     "sixto pereira"
-   ]
-  },
-  {
-   "nombre": "Payo Cubas",
-   "nivel": 3,
-   "espacio": "Cruzada Nacional",
-   "cargo": "Ex senador",
-   "pos": {
-    "eco": 60,
-    "com": 40,
-    "fed": 55,
-    "soc": 75,
-    "seg": 92,
-    "ins": 85,
-    "ext": 45,
-    "amb": 70
-   },
-   "alias": [
-    "payo cubas"
    ]
   },
   {
@@ -5584,7 +5568,8 @@
    },
    "alias": [
     "andres rodriguez"
-   ]
+   ],
+   "wiki": "Andrés Rodríguez Pedotti"
   },
   {
    "nombre": "Juan Carlos Wasmosy",
@@ -5866,7 +5851,8 @@
    "ajuste": {
     "tec": 20,
     "lib": 55
-   }
+   },
+   "wiki": "Hernando de Soto (economista)"
   },
   {
    "nombre": "George Forsyth",
@@ -6169,7 +6155,8 @@
    },
    "alias": [
     "roberto sanchez"
-   ]
+   ],
+   "wiki": "Roberto Sánchez (político)"
   },
   {
    "nombre": "Lucio Castro",
@@ -6378,7 +6365,8 @@
    },
    "alias": [
     "manuel prado"
-   ]
+   ],
+   "wiki": "Manuel Prado Ugarteche"
   },
   {
    "nombre": "Manuel A. Odría",
@@ -8455,7 +8443,8 @@
    },
    "alias": [
     "camilo torres"
-   ]
+   ],
+   "wiki": "Camilo Torres Restrepo"
   },
   {
    "nombre": "Manuel Marulanda",
@@ -8635,7 +8624,8 @@
    },
    "alias": [
     "alejandro sánchez"
-   ]
+   ],
+   "wiki": "Alejandro Sánchez (político)"
   },
   {
    "nombre": "Gabriel Oddone",
@@ -8673,7 +8663,8 @@
    },
    "alias": [
     "fernando pereira"
-   ]
+   ],
+   "wiki": "Fernando Pereira Kosec"
   },
   {
    "nombre": "Constanza Moreira",
@@ -8736,7 +8727,8 @@
    },
    "alias": [
     "álvaro delgado"
-   ]
+   ],
+   "wiki": "Álvaro Delgado Ceretta"
   },
   {
    "nombre": "Javier García",
@@ -8755,7 +8747,8 @@
    },
    "alias": [
     "javier garcía"
-   ]
+   ],
+   "wiki": "Javier García Duchini"
   },
   {
    "nombre": "Laura Raffo",
@@ -8974,7 +8967,8 @@
    },
    "alias": [
     "oscar andrade"
-   ]
+   ],
+   "wiki": "Óscar Andrade (político)"
   },
   {
    "nombre": "Robert Silva",
@@ -9433,5 +9427,1675 @@
    ]
   }
  ],
- "_nota_hist": "hist = figura histórica: se muestra aparte (resultado, mapa con casilla, cara a cara). Posición editorial aproximada de su época, A REVISAR."
+ "_nota_hist": "hist = figura histórica: se muestra aparte (resultado, mapa con casilla, cara a cara). Posición editorial aproximada de su época, A REVISAR.",
+ "mundo": [
+  {
+   "nombre": "Donald Trump",
+   "pais": "Estados Unidos",
+   "cargo": "Presidente de EE.UU.",
+   "espacio": "Partido Republicano",
+   "pos": {
+    "eco": 72,
+    "com": 15,
+    "fed": 50,
+    "soc": 80,
+    "seg": 88,
+    "ins": 85,
+    "ext": 70,
+    "amb": 90
+   },
+   "alias": [
+    "donald trump"
+   ]
+  },
+  {
+   "nombre": "JD Vance",
+   "pais": "Estados Unidos",
+   "cargo": "Vicepresidente de EE.UU.",
+   "espacio": "Partido Republicano",
+   "pos": {
+    "eco": 62,
+    "com": 20,
+    "fed": 55,
+    "soc": 85,
+    "seg": 85,
+    "ins": 70,
+    "ext": 65,
+    "amb": 85
+   },
+   "alias": [
+    "jd vance"
+   ]
+  },
+  {
+   "nombre": "Joe Biden",
+   "pais": "Estados Unidos",
+   "cargo": "Expresidente de EE.UU.",
+   "espacio": "Partido Demócrata",
+   "pos": {
+    "eco": 45,
+    "com": 50,
+    "fed": 50,
+    "soc": 35,
+    "seg": 50,
+    "ins": 25,
+    "ext": 85,
+    "amb": 45
+   },
+   "alias": [
+    "joe biden"
+   ]
+  },
+  {
+   "nombre": "Kamala Harris",
+   "pais": "Estados Unidos",
+   "cargo": "Exvicepresidenta de EE.UU.",
+   "espacio": "Partido Demócrata",
+   "pos": {
+    "eco": 40,
+    "com": 55,
+    "fed": 50,
+    "soc": 25,
+    "seg": 45,
+    "ins": 25,
+    "ext": 85,
+    "amb": 40
+   },
+   "alias": [
+    "kamala harris"
+   ]
+  },
+  {
+   "nombre": "Barack Obama",
+   "pais": "Estados Unidos",
+   "cargo": "Expresidente de EE.UU.",
+   "espacio": "Partido Demócrata",
+   "pos": {
+    "eco": 50,
+    "com": 70,
+    "fed": 50,
+    "soc": 30,
+    "seg": 50,
+    "ins": 20,
+    "ext": 85,
+    "amb": 45
+   },
+   "alias": [
+    "barack obama"
+   ]
+  },
+  {
+   "nombre": "Bernie Sanders",
+   "pais": "Estados Unidos",
+   "cargo": "Senador",
+   "espacio": "Independiente / socialdemócrata",
+   "pos": {
+    "eco": 15,
+    "com": 25,
+    "fed": 50,
+    "soc": 20,
+    "seg": 30,
+    "ins": 20,
+    "ext": 45,
+    "amb": 30
+   },
+   "alias": [
+    "bernie sanders"
+   ]
+  },
+  {
+   "nombre": "Alexandria Ocasio-Cortez",
+   "pais": "Estados Unidos",
+   "cargo": "Representante",
+   "espacio": "Partido Demócrata",
+   "pos": {
+    "eco": 12,
+    "com": 35,
+    "fed": 50,
+    "soc": 10,
+    "seg": 20,
+    "ins": 20,
+    "ext": 40,
+    "amb": 20
+   },
+   "alias": [
+    "alexandria ocasio-cortez"
+   ]
+  },
+  {
+   "nombre": "Marco Rubio",
+   "pais": "Estados Unidos",
+   "cargo": "Secretario de Estado",
+   "espacio": "Partido Republicano",
+   "pos": {
+    "eco": 70,
+    "com": 50,
+    "fed": 50,
+    "soc": 75,
+    "seg": 80,
+    "ins": 55,
+    "ext": 95,
+    "amb": 75
+   },
+   "alias": [
+    "marco rubio"
+   ]
+  },
+  {
+   "nombre": "Ron DeSantis",
+   "pais": "Estados Unidos",
+   "cargo": "Gobernador de Florida",
+   "espacio": "Partido Republicano",
+   "pos": {
+    "eco": 72,
+    "com": 45,
+    "fed": 60,
+    "soc": 85,
+    "seg": 85,
+    "ins": 60,
+    "ext": 80,
+    "amb": 85
+   },
+   "alias": [
+    "ron desantis"
+   ]
+  },
+  {
+   "nombre": "Elon Musk",
+   "pais": "Estados Unidos",
+   "cargo": "Empresario",
+   "espacio": "Independiente",
+   "pos": {
+    "eco": 85,
+    "com": 55,
+    "fed": 50,
+    "soc": 65,
+    "seg": 65,
+    "ins": 70,
+    "ext": 70,
+    "amb": 30
+   },
+   "alias": [
+    "elon musk"
+   ]
+  },
+  {
+   "nombre": "Ronald Reagan",
+   "pais": "Estados Unidos",
+   "cargo": "Presidente 1981–1989",
+   "espacio": "Partido Republicano",
+   "pos": {
+    "eco": 88,
+    "com": 80,
+    "fed": 55,
+    "soc": 75,
+    "seg": 85,
+    "ins": 55,
+    "ext": 95,
+    "amb": 80
+   },
+   "alias": [
+    "ronald reagan"
+   ],
+   "hist": 1
+  },
+  {
+   "nombre": "Franklin D. Roosevelt",
+   "pais": "Estados Unidos",
+   "cargo": "Presidente 1933–1945",
+   "espacio": "Partido Demócrata",
+   "pos": {
+    "eco": 25,
+    "com": 50,
+    "fed": 40,
+    "soc": 45,
+    "seg": 60,
+    "ins": 60,
+    "ext": 70,
+    "amb": 70
+   },
+   "alias": [
+    "franklin d. roosevelt"
+   ],
+   "hist": 1
+  },
+  {
+   "nombre": "John F. Kennedy",
+   "pais": "Estados Unidos",
+   "cargo": "Presidente 1961–1963",
+   "espacio": "Partido Demócrata",
+   "pos": {
+    "eco": 50,
+    "com": 65,
+    "fed": 50,
+    "soc": 45,
+    "seg": 65,
+    "ins": 35,
+    "ext": 85,
+    "amb": 70
+   },
+   "alias": [
+    "john f. kennedy"
+   ],
+   "hist": 1
+  },
+  {
+   "nombre": "Martin Luther King",
+   "pais": "Estados Unidos",
+   "cargo": "Líder por los derechos civiles",
+   "espacio": "Movimiento por los derechos civiles",
+   "pos": {
+    "eco": 30,
+    "com": 55,
+    "fed": 50,
+    "soc": 40,
+    "seg": 15,
+    "ins": 20,
+    "ext": 40,
+    "amb": 50
+   },
+   "alias": [
+    "martin luther king"
+   ],
+   "hist": 1
+  },
+  {
+   "nombre": "Noam Chomsky",
+   "pais": "Estados Unidos",
+   "cargo": "Lingüista y activista",
+   "espacio": "Socialismo libertario",
+   "pos": {
+    "eco": 10,
+    "com": 40,
+    "fed": 60,
+    "soc": 15,
+    "seg": 10,
+    "ins": 5,
+    "ext": 5,
+    "amb": 35
+   },
+   "alias": [
+    "noam chomsky"
+   ]
+  },
+  {
+   "nombre": "Jordan Peterson",
+   "pais": "Canadá",
+   "cargo": "Psicólogo y escritor",
+   "espacio": "Conservadurismo",
+   "pos": {
+    "eco": 70,
+    "com": 65,
+    "fed": 50,
+    "soc": 80,
+    "seg": 65,
+    "ins": 40,
+    "ext": 75,
+    "amb": 70
+   },
+   "alias": [
+    "jordan peterson"
+   ]
+  },
+  {
+   "nombre": "Justin Trudeau",
+   "pais": "Canadá",
+   "cargo": "Ex primer ministro",
+   "espacio": "Partido Liberal",
+   "pos": {
+    "eco": 40,
+    "com": 70,
+    "fed": 50,
+    "soc": 15,
+    "seg": 40,
+    "ins": 25,
+    "ext": 80,
+    "amb": 30
+   },
+   "alias": [
+    "justin trudeau"
+   ]
+  },
+  {
+   "nombre": "Pedro Sánchez",
+   "pais": "España",
+   "cargo": "Presidente del Gobierno",
+   "espacio": "PSOE",
+   "pos": {
+    "eco": 35,
+    "com": 70,
+    "fed": 60,
+    "soc": 20,
+    "seg": 40,
+    "ins": 35,
+    "ext": 75,
+    "amb": 35
+   },
+   "alias": [
+    "pedro sanchez"
+   ]
+  },
+  {
+   "nombre": "Alberto Núñez Feijóo",
+   "pais": "España",
+   "cargo": "Líder del PP",
+   "espacio": "Partido Popular",
+   "pos": {
+    "eco": 68,
+    "com": 72,
+    "fed": 50,
+    "soc": 65,
+    "seg": 65,
+    "ins": 35,
+    "ext": 80,
+    "amb": 60
+   },
+   "alias": [
+    "alberto nunez feijoo"
+   ]
+  },
+  {
+   "nombre": "Isabel Díaz Ayuso",
+   "pais": "España",
+   "cargo": "Presidenta de la Comunidad de Madrid",
+   "espacio": "Partido Popular",
+   "pos": {
+    "eco": 80,
+    "com": 75,
+    "fed": 55,
+    "soc": 70,
+    "seg": 70,
+    "ins": 50,
+    "ext": 80,
+    "amb": 65
+   },
+   "alias": [
+    "isabel diaz ayuso"
+   ]
+  },
+  {
+   "nombre": "Santiago Abascal",
+   "pais": "España",
+   "cargo": "Líder de Vox",
+   "espacio": "Vox",
+   "pos": {
+    "eco": 70,
+    "com": 40,
+    "fed": 15,
+    "soc": 90,
+    "seg": 90,
+    "ins": 65,
+    "ext": 70,
+    "amb": 80
+   },
+   "alias": [
+    "santiago abascal"
+   ]
+  },
+  {
+   "nombre": "Yolanda Díaz",
+   "pais": "España",
+   "cargo": "Vicepresidenta del Gobierno",
+   "espacio": "Sumar",
+   "pos": {
+    "eco": 15,
+    "com": 50,
+    "fed": 60,
+    "soc": 15,
+    "seg": 30,
+    "ins": 30,
+    "ext": 45,
+    "amb": 25
+   },
+   "alias": [
+    "yolanda diaz"
+   ]
+  },
+  {
+   "nombre": "Pablo Iglesias",
+   "pais": "España",
+   "cargo": "Exvicepresidente del Gobierno",
+   "espacio": "Podemos",
+   "pos": {
+    "eco": 10,
+    "com": 40,
+    "fed": 65,
+    "soc": 15,
+    "seg": 25,
+    "ins": 45,
+    "ext": 20,
+    "amb": 30
+   },
+   "alias": [
+    "pablo iglesias"
+   ],
+   "wiki": "Pablo Iglesias Turrión"
+  },
+  {
+   "nombre": "Felipe González",
+   "pais": "España",
+   "cargo": "Presidente del Gobierno 1982–1996",
+   "espacio": "PSOE",
+   "pos": {
+    "eco": 50,
+    "com": 75,
+    "fed": 55,
+    "soc": 35,
+    "seg": 55,
+    "ins": 35,
+    "ext": 80,
+    "amb": 55
+   },
+   "alias": [
+    "felipe gonzalez"
+   ],
+   "hist": 1
+  },
+  {
+   "nombre": "Francisco Franco",
+   "pais": "España",
+   "cargo": "Dictador 1939–1975",
+   "espacio": "Franquismo",
+   "pos": {
+    "eco": 45,
+    "com": 25,
+    "fed": 5,
+    "soc": 98,
+    "seg": 100,
+    "ins": 100,
+    "ext": 55,
+    "amb": 70
+   },
+   "alias": [
+    "francisco franco"
+   ],
+   "hist": 1
+  },
+  {
+   "nombre": "Emmanuel Macron",
+   "pais": "Francia",
+   "cargo": "Presidente de Francia",
+   "espacio": "Renaissance",
+   "pos": {
+    "eco": 65,
+    "com": 80,
+    "fed": 30,
+    "soc": 35,
+    "seg": 60,
+    "ins": 45,
+    "ext": 80,
+    "amb": 45
+   },
+   "alias": [
+    "emmanuel macron"
+   ]
+  },
+  {
+   "nombre": "Marine Le Pen",
+   "pais": "Francia",
+   "cargo": "Líder de Rassemblement National",
+   "espacio": "Rassemblement National",
+   "pos": {
+    "eco": 40,
+    "com": 20,
+    "fed": 25,
+    "soc": 80,
+    "seg": 90,
+    "ins": 60,
+    "ext": 35,
+    "amb": 70
+   },
+   "alias": [
+    "marine le pen"
+   ]
+  },
+  {
+   "nombre": "Jean-Luc Mélenchon",
+   "pais": "Francia",
+   "cargo": "Líder de La France Insoumise",
+   "espacio": "La France Insoumise",
+   "pos": {
+    "eco": 10,
+    "com": 30,
+    "fed": 40,
+    "soc": 20,
+    "seg": 25,
+    "ins": 55,
+    "ext": 15,
+    "amb": 25
+   },
+   "alias": [
+    "jean-luc melenchon"
+   ]
+  },
+  {
+   "nombre": "Charles de Gaulle",
+   "pais": "Francia",
+   "cargo": "Presidente 1959–1969",
+   "espacio": "Gaullismo",
+   "pos": {
+    "eco": 45,
+    "com": 45,
+    "fed": 20,
+    "soc": 70,
+    "seg": 75,
+    "ins": 75,
+    "ext": 45,
+    "amb": 75
+   },
+   "alias": [
+    "charles de gaulle"
+   ],
+   "hist": 1
+  },
+  {
+   "nombre": "Giorgia Meloni",
+   "pais": "Italia",
+   "cargo": "Presidenta del Consejo de Ministros",
+   "espacio": "Fratelli d'Italia",
+   "pos": {
+    "eco": 60,
+    "com": 45,
+    "fed": 40,
+    "soc": 85,
+    "seg": 85,
+    "ins": 55,
+    "ext": 75,
+    "amb": 70
+   },
+   "alias": [
+    "giorgia meloni"
+   ]
+  },
+  {
+   "nombre": "Benito Mussolini",
+   "pais": "Italia",
+   "cargo": "Dictador 1922–1943",
+   "espacio": "Fascismo",
+   "pos": {
+    "eco": 40,
+    "com": 15,
+    "fed": 5,
+    "soc": 90,
+    "seg": 100,
+    "ins": 100,
+    "ext": 20,
+    "amb": 80
+   },
+   "alias": [
+    "benito mussolini"
+   ],
+   "hist": 1
+  },
+  {
+   "nombre": "Friedrich Merz",
+   "pais": "Alemania",
+   "cargo": "Canciller",
+   "espacio": "CDU",
+   "pos": {
+    "eco": 70,
+    "com": 78,
+    "fed": 50,
+    "soc": 60,
+    "seg": 65,
+    "ins": 35,
+    "ext": 85,
+    "amb": 60
+   },
+   "alias": [
+    "friedrich merz"
+   ]
+  },
+  {
+   "nombre": "Olaf Scholz",
+   "pais": "Alemania",
+   "cargo": "Ex canciller",
+   "espacio": "SPD",
+   "pos": {
+    "eco": 40,
+    "com": 70,
+    "fed": 50,
+    "soc": 30,
+    "seg": 50,
+    "ins": 25,
+    "ext": 80,
+    "amb": 40
+   },
+   "alias": [
+    "olaf scholz"
+   ]
+  },
+  {
+   "nombre": "Angela Merkel",
+   "pais": "Alemania",
+   "cargo": "Canciller 2005–2021",
+   "espacio": "CDU",
+   "pos": {
+    "eco": 58,
+    "com": 78,
+    "fed": 50,
+    "soc": 45,
+    "seg": 55,
+    "ins": 25,
+    "ext": 80,
+    "amb": 45
+   },
+   "alias": [
+    "angela merkel"
+   ],
+   "hist": 1
+  },
+  {
+   "nombre": "Alice Weidel",
+   "pais": "Alemania",
+   "cargo": "Líder de AfD",
+   "espacio": "AfD",
+   "pos": {
+    "eco": 70,
+    "com": 40,
+    "fed": 45,
+    "soc": 85,
+    "seg": 85,
+    "ins": 55,
+    "ext": 45,
+    "amb": 80
+   },
+   "alias": [
+    "alice weidel"
+   ]
+  },
+  {
+   "nombre": "Adolf Hitler",
+   "pais": "Alemania",
+   "cargo": "Dictador 1933–1945",
+   "espacio": "Nazismo",
+   "pos": {
+    "eco": 35,
+    "com": 10,
+    "fed": 0,
+    "soc": 95,
+    "seg": 100,
+    "ins": 100,
+    "ext": 10,
+    "amb": 85
+   },
+   "alias": [
+    "adolf hitler"
+   ],
+   "hist": 1
+  },
+  {
+   "nombre": "Karl Marx",
+   "pais": "Alemania",
+   "cargo": "Filósofo y economista",
+   "espacio": "Comunismo",
+   "pos": {
+    "eco": 0,
+    "com": 40,
+    "fed": 40,
+    "soc": 30,
+    "seg": 40,
+    "ins": 60,
+    "ext": 20,
+    "amb": 60
+   },
+   "alias": [
+    "karl marx"
+   ],
+   "hist": 1
+  },
+  {
+   "nombre": "Keir Starmer",
+   "pais": "Reino Unido",
+   "cargo": "Primer ministro",
+   "espacio": "Partido Laborista",
+   "pos": {
+    "eco": 42,
+    "com": 65,
+    "fed": 45,
+    "soc": 30,
+    "seg": 55,
+    "ins": 30,
+    "ext": 85,
+    "amb": 40
+   },
+   "alias": [
+    "keir starmer"
+   ]
+  },
+  {
+   "nombre": "Nigel Farage",
+   "pais": "Reino Unido",
+   "cargo": "Líder de Reform UK",
+   "espacio": "Reform UK",
+   "pos": {
+    "eco": 78,
+    "com": 40,
+    "fed": 40,
+    "soc": 80,
+    "seg": 85,
+    "ins": 60,
+    "ext": 60,
+    "amb": 80
+   },
+   "alias": [
+    "nigel farage"
+   ]
+  },
+  {
+   "nombre": "Margaret Thatcher",
+   "pais": "Reino Unido",
+   "cargo": "Primera ministra 1979–1990",
+   "espacio": "Partido Conservador",
+   "pos": {
+    "eco": 90,
+    "com": 85,
+    "fed": 20,
+    "soc": 75,
+    "seg": 90,
+    "ins": 60,
+    "ext": 95,
+    "amb": 80
+   },
+   "alias": [
+    "margaret thatcher"
+   ],
+   "hist": 1
+  },
+  {
+   "nombre": "Winston Churchill",
+   "pais": "Reino Unido",
+   "cargo": "Primer ministro 1940–1945 y 1951–1955",
+   "espacio": "Partido Conservador",
+   "pos": {
+    "eco": 65,
+    "com": 60,
+    "fed": 25,
+    "soc": 75,
+    "seg": 90,
+    "ins": 65,
+    "ext": 85,
+    "amb": 75
+   },
+   "alias": [
+    "winston churchill"
+   ],
+   "hist": 1
+  },
+  {
+   "nombre": "Tony Blair",
+   "pais": "Reino Unido",
+   "cargo": "Primer ministro 1997–2007",
+   "espacio": "Partido Laborista",
+   "pos": {
+    "eco": 60,
+    "com": 85,
+    "fed": 45,
+    "soc": 35,
+    "seg": 70,
+    "ins": 35,
+    "ext": 95,
+    "amb": 50
+   },
+   "alias": [
+    "tony blair"
+   ],
+   "hist": 1
+  },
+  {
+   "nombre": "Viktor Orbán",
+   "pais": "Hungría",
+   "cargo": "Primer ministro",
+   "espacio": "Fidesz",
+   "pos": {
+    "eco": 50,
+    "com": 40,
+    "fed": 20,
+    "soc": 90,
+    "seg": 85,
+    "ins": 80,
+    "ext": 30,
+    "amb": 75
+   },
+   "alias": [
+    "viktor orban"
+   ]
+  },
+  {
+   "nombre": "Vladimir Putin",
+   "pais": "Rusia",
+   "cargo": "Presidente de Rusia",
+   "espacio": "Rusia Unida",
+   "pos": {
+    "eco": 45,
+    "com": 30,
+    "fed": 10,
+    "soc": 85,
+    "seg": 100,
+    "ins": 100,
+    "ext": 0,
+    "amb": 90
+   },
+   "alias": [
+    "vladimir putin"
+   ]
+  },
+  {
+   "nombre": "Volodímir Zelenski",
+   "pais": "Ucrania",
+   "cargo": "Presidente de Ucrania",
+   "espacio": "Servidor del Pueblo",
+   "pos": {
+    "eco": 60,
+    "com": 70,
+    "fed": 45,
+    "soc": 45,
+    "seg": 75,
+    "ins": 55,
+    "ext": 95,
+    "amb": 60
+   },
+   "alias": [
+    "volodimir zelenski"
+   ]
+  },
+  {
+   "nombre": "Lenin",
+   "pais": "Rusia",
+   "cargo": "Líder de la Revolución rusa",
+   "espacio": "Bolcheviques",
+   "pos": {
+    "eco": 0,
+    "com": 20,
+    "fed": 5,
+    "soc": 35,
+    "seg": 95,
+    "ins": 100,
+    "ext": 0,
+    "amb": 85
+   },
+   "alias": [
+    "lenin"
+   ],
+   "hist": 1
+  },
+  {
+   "nombre": "Iósif Stalin",
+   "pais": "Unión Soviética",
+   "cargo": "Dictador 1924–1953",
+   "espacio": "Partido Comunista",
+   "pos": {
+    "eco": 0,
+    "com": 10,
+    "fed": 0,
+    "soc": 60,
+    "seg": 100,
+    "ins": 100,
+    "ext": 0,
+    "amb": 95
+   },
+   "alias": [
+    "iosif stalin"
+   ],
+   "hist": 1
+  },
+  {
+   "nombre": "Mijaíl Gorbachov",
+   "pais": "Unión Soviética",
+   "cargo": "Último líder soviético",
+   "espacio": "Partido Comunista",
+   "pos": {
+    "eco": 30,
+    "com": 55,
+    "fed": 40,
+    "soc": 40,
+    "seg": 45,
+    "ins": 45,
+    "ext": 55,
+    "amb": 60
+   },
+   "alias": [
+    "mijail gorbachov"
+   ],
+   "hist": 1
+  },
+  {
+   "nombre": "Recep Tayyip Erdoğan",
+   "pais": "Turquía",
+   "cargo": "Presidente de Turquía",
+   "espacio": "AKP",
+   "pos": {
+    "eco": 55,
+    "com": 45,
+    "fed": 15,
+    "soc": 90,
+    "seg": 90,
+    "ins": 90,
+    "ext": 35,
+    "amb": 80
+   },
+   "alias": [
+    "recep tayyip erdogan"
+   ]
+  },
+  {
+   "nombre": "Papa Francisco",
+   "pais": "Vaticano",
+   "cargo": "Papa 2013–2025",
+   "espacio": "Iglesia católica",
+   "pos": {
+    "eco": 30,
+    "com": 50,
+    "fed": 50,
+    "soc": 70,
+    "seg": 20,
+    "ins": 40,
+    "ext": 40,
+    "amb": 25
+   },
+   "alias": [
+    "papa francisco"
+   ],
+   "hist": 1
+  },
+  {
+   "nombre": "León XIV",
+   "pais": "Vaticano",
+   "cargo": "Papa",
+   "espacio": "Iglesia católica",
+   "pos": {
+    "eco": 35,
+    "com": 50,
+    "fed": 50,
+    "soc": 72,
+    "seg": 25,
+    "ins": 45,
+    "ext": 45,
+    "amb": 35
+   },
+   "alias": [
+    "leon xiv"
+   ]
+  },
+  {
+   "nombre": "Greta Thunberg",
+   "pais": "Suecia",
+   "cargo": "Activista climática",
+   "espacio": "Ecologismo",
+   "pos": {
+    "eco": 15,
+    "com": 40,
+    "fed": 55,
+    "soc": 10,
+    "seg": 20,
+    "ins": 20,
+    "ext": 30,
+    "amb": 0
+   },
+   "alias": [
+    "greta thunberg"
+   ]
+  },
+  {
+   "nombre": "Xi Jinping",
+   "pais": "China",
+   "cargo": "Presidente de China",
+   "espacio": "Partido Comunista de China",
+   "pos": {
+    "eco": 25,
+    "com": 50,
+    "fed": 5,
+    "soc": 70,
+    "seg": 95,
+    "ins": 100,
+    "ext": 0,
+    "amb": 85
+   },
+   "alias": [
+    "xi jinping"
+   ]
+  },
+  {
+   "nombre": "Mao Zedong",
+   "pais": "China",
+   "cargo": "Líder de China 1949–1976",
+   "espacio": "Partido Comunista de China",
+   "pos": {
+    "eco": 0,
+    "com": 5,
+    "fed": 5,
+    "soc": 50,
+    "seg": 100,
+    "ins": 100,
+    "ext": 0,
+    "amb": 85
+   },
+   "alias": [
+    "mao zedong"
+   ],
+   "hist": 1
+  },
+  {
+   "nombre": "Deng Xiaoping",
+   "pais": "China",
+   "cargo": "Líder de China 1978–1989",
+   "espacio": "Partido Comunista de China",
+   "pos": {
+    "eco": 50,
+    "com": 70,
+    "fed": 10,
+    "soc": 60,
+    "seg": 95,
+    "ins": 95,
+    "ext": 30,
+    "amb": 95
+   },
+   "alias": [
+    "deng xiaoping"
+   ],
+   "hist": 1
+  },
+  {
+   "nombre": "Narendra Modi",
+   "pais": "India",
+   "cargo": "Primer ministro de India",
+   "espacio": "BJP",
+   "pos": {
+    "eco": 60,
+    "com": 50,
+    "fed": 30,
+    "soc": 90,
+    "seg": 85,
+    "ins": 75,
+    "ext": 55,
+    "amb": 85
+   },
+   "alias": [
+    "narendra modi"
+   ]
+  },
+  {
+   "nombre": "Mahatma Gandhi",
+   "pais": "India",
+   "cargo": "Líder de la independencia",
+   "espacio": "Congreso Nacional Indio",
+   "pos": {
+    "eco": 30,
+    "com": 25,
+    "fed": 70,
+    "soc": 65,
+    "seg": 0,
+    "ins": 30,
+    "ext": 20,
+    "amb": 10
+   },
+   "alias": [
+    "mahatma gandhi"
+   ],
+   "hist": 1
+  },
+  {
+   "nombre": "Benjamín Netanyahu",
+   "pais": "Israel",
+   "cargo": "Líder del Likud",
+   "espacio": "Likud",
+   "pos": {
+    "eco": 75,
+    "com": 70,
+    "fed": 30,
+    "soc": 80,
+    "seg": 95,
+    "ins": 75,
+    "ext": 90,
+    "amb": 75
+   },
+   "alias": [
+    "benjamin netanyahu"
+   ]
+  },
+  {
+   "nombre": "Nelson Mandela",
+   "pais": "Sudáfrica",
+   "cargo": "Presidente 1994–1999",
+   "espacio": "ANC",
+   "pos": {
+    "eco": 35,
+    "com": 55,
+    "fed": 50,
+    "soc": 40,
+    "seg": 30,
+    "ins": 15,
+    "ext": 45,
+    "amb": 50
+   },
+   "alias": [
+    "nelson mandela"
+   ],
+   "hist": 1
+  },
+  {
+   "nombre": "Kim Jong-un",
+   "pais": "Corea del Norte",
+   "cargo": "Líder supremo",
+   "espacio": "Partido del Trabajo",
+   "pos": {
+    "eco": 0,
+    "com": 0,
+    "fed": 0,
+    "soc": 80,
+    "seg": 100,
+    "ins": 100,
+    "ext": 0,
+    "amb": 85
+   },
+   "alias": [
+    "kim jong-un"
+   ]
+  },
+  {
+   "nombre": "Alí Jamenei",
+   "pais": "Irán",
+   "cargo": "Líder supremo de Irán",
+   "espacio": "República Islámica",
+   "pos": {
+    "eco": 30,
+    "com": 20,
+    "fed": 10,
+    "soc": 100,
+    "seg": 100,
+    "ins": 100,
+    "ext": 0,
+    "amb": 80
+   },
+   "alias": [
+    "ali jamenei"
+   ]
+  },
+  {
+   "nombre": "Fidel Castro",
+   "pais": "Cuba",
+   "cargo": "Líder de Cuba 1959–2008",
+   "espacio": "Partido Comunista de Cuba",
+   "pos": {
+    "eco": 0,
+    "com": 10,
+    "fed": 5,
+    "soc": 50,
+    "seg": 95,
+    "ins": 100,
+    "ext": 0,
+    "amb": 70
+   },
+   "alias": [
+    "fidel castro"
+   ],
+   "hist": 1
+  },
+  {
+   "nombre": "Ernesto Che Guevara",
+   "pais": "Cuba / Argentina",
+   "cargo": "Revolucionario",
+   "espacio": "Revolución cubana",
+   "pos": {
+    "eco": 0,
+    "com": 10,
+    "fed": 30,
+    "soc": 45,
+    "seg": 90,
+    "ins": 95,
+    "ext": 0,
+    "amb": 65
+   },
+   "alias": [
+    "ernesto che guevara"
+   ],
+   "hist": 1
+  },
+  {
+   "nombre": "Miguel Díaz-Canel",
+   "pais": "Cuba",
+   "cargo": "Presidente de Cuba",
+   "espacio": "Partido Comunista de Cuba",
+   "pos": {
+    "eco": 5,
+    "com": 15,
+    "fed": 5,
+    "soc": 55,
+    "seg": 95,
+    "ins": 100,
+    "ext": 0,
+    "amb": 65
+   },
+   "alias": [
+    "miguel diaz-canel"
+   ]
+  },
+  {
+   "nombre": "Hugo Chávez",
+   "pais": "Venezuela",
+   "cargo": "Presidente 1999–2013",
+   "espacio": "PSUV",
+   "pos": {
+    "eco": 10,
+    "com": 15,
+    "fed": 20,
+    "soc": 55,
+    "seg": 75,
+    "ins": 95,
+    "ext": 0,
+    "amb": 85
+   },
+   "alias": [
+    "hugo chavez"
+   ],
+   "hist": 1
+  },
+  {
+   "nombre": "Edmundo González Urrutia",
+   "pais": "Venezuela",
+   "cargo": "Candidato presidencial 2024",
+   "espacio": "Plataforma Unitaria",
+   "pos": {
+    "eco": 65,
+    "com": 70,
+    "fed": 45,
+    "soc": 55,
+    "seg": 55,
+    "ins": 25,
+    "ext": 85,
+    "amb": 60
+   },
+   "alias": [
+    "edmundo gonzalez urrutia"
+   ]
+  },
+  {
+   "nombre": "Rómulo Betancourt",
+   "pais": "Venezuela",
+   "cargo": "Presidente 1959–1964",
+   "espacio": "Acción Democrática",
+   "pos": {
+    "eco": 40,
+    "com": 50,
+    "fed": 40,
+    "soc": 45,
+    "seg": 60,
+    "ins": 35,
+    "ext": 75,
+    "amb": 75
+   },
+   "alias": [
+    "romulo betancourt"
+   ],
+   "hist": 1
+  },
+  {
+   "nombre": "Evo Morales",
+   "pais": "Bolivia",
+   "cargo": "Expresidente",
+   "espacio": "MAS-IPSP",
+   "pos": {
+    "eco": 15,
+    "com": 20,
+    "fed": 40,
+    "soc": 55,
+    "seg": 55,
+    "ins": 80,
+    "ext": 5,
+    "amb": 70
+   },
+   "alias": [
+    "evo morales"
+   ],
+   "hist": 1
+  },
+  {
+   "nombre": "Luis Arce",
+   "pais": "Bolivia",
+   "cargo": "Expresidente de Bolivia",
+   "espacio": "MAS-IPSP",
+   "pos": {
+    "eco": 20,
+    "com": 25,
+    "fed": 40,
+    "soc": 55,
+    "seg": 55,
+    "ins": 55,
+    "ext": 10,
+    "amb": 70
+   },
+   "alias": [
+    "luis arce"
+   ]
+  },
+  {
+   "nombre": "Jorge Quiroga",
+   "pais": "Bolivia",
+   "cargo": "Expresidente y candidato",
+   "espacio": "Libre",
+   "pos": {
+    "eco": 75,
+    "com": 75,
+    "fed": 45,
+    "soc": 65,
+    "seg": 65,
+    "ins": 35,
+    "ext": 80,
+    "amb": 70
+   },
+   "alias": [
+    "jorge quiroga"
+   ]
+  },
+  {
+   "nombre": "Luisa González",
+   "pais": "Ecuador",
+   "cargo": "Candidata presidencial",
+   "espacio": "Revolución Ciudadana",
+   "pos": {
+    "eco": 25,
+    "com": 30,
+    "fed": 30,
+    "soc": 55,
+    "seg": 60,
+    "ins": 60,
+    "ext": 15,
+    "amb": 65
+   },
+   "alias": [
+    "luisa gonzalez"
+   ]
+  },
+  {
+   "nombre": "Guillermo Lasso",
+   "pais": "Ecuador",
+   "cargo": "Expresidente de Ecuador",
+   "espacio": "CREO",
+   "pos": {
+    "eco": 80,
+    "com": 80,
+    "fed": 45,
+    "soc": 75,
+    "seg": 70,
+    "ins": 40,
+    "ext": 85,
+    "amb": 70
+   },
+   "alias": [
+    "guillermo lasso"
+   ]
+  },
+  {
+   "nombre": "Xóchitl Gálvez",
+   "pais": "México",
+   "cargo": "Excandidata presidencial",
+   "espacio": "PAN / coalición opositora",
+   "pos": {
+    "eco": 55,
+    "com": 70,
+    "fed": 55,
+    "soc": 40,
+    "seg": 60,
+    "ins": 30,
+    "ext": 70,
+    "amb": 55
+   },
+   "alias": [
+    "xochitl galvez"
+   ]
+  },
+  {
+   "nombre": "Marcelo Ebrard",
+   "pais": "México",
+   "cargo": "Secretario de Economía",
+   "espacio": "Morena",
+   "pos": {
+    "eco": 40,
+    "com": 60,
+    "fed": 40,
+    "soc": 35,
+    "seg": 55,
+    "ins": 45,
+    "ext": 55,
+    "amb": 60
+   },
+   "alias": [
+    "marcelo ebrard"
+   ]
+  },
+  {
+   "nombre": "Lázaro Cárdenas",
+   "pais": "México",
+   "cargo": "Presidente 1934–1940",
+   "espacio": "PRM",
+   "pos": {
+    "eco": 10,
+    "com": 15,
+    "fed": 20,
+    "soc": 40,
+    "seg": 60,
+    "ins": 75,
+    "ext": 10,
+    "amb": 80
+   },
+   "alias": [
+    "lazaro cardenas"
+   ],
+   "hist": 1
+  },
+  {
+   "nombre": "Vicente Fox",
+   "pais": "México",
+   "cargo": "Presidente 2000–2006",
+   "espacio": "PAN",
+   "pos": {
+    "eco": 75,
+    "com": 85,
+    "fed": 55,
+    "soc": 65,
+    "seg": 60,
+    "ins": 40,
+    "ext": 85,
+    "amb": 65
+   },
+   "alias": [
+    "vicente fox"
+   ],
+   "hist": 1
+  },
+  {
+   "nombre": "Carlos Salinas de Gortari",
+   "pais": "México",
+   "cargo": "Presidente 1988–1994",
+   "espacio": "PRI",
+   "pos": {
+    "eco": 80,
+    "com": 90,
+    "fed": 30,
+    "soc": 55,
+    "seg": 65,
+    "ins": 65,
+    "ext": 85,
+    "amb": 75
+   },
+   "alias": [
+    "carlos salinas de gortari"
+   ],
+   "hist": 1
+  },
+  {
+   "nombre": "Emiliano Zapata",
+   "pais": "México",
+   "cargo": "Revolucionario",
+   "espacio": "Revolución mexicana",
+   "pos": {
+    "eco": 10,
+    "com": 30,
+    "fed": 85,
+    "soc": 65,
+    "seg": 70,
+    "ins": 60,
+    "ext": 10,
+    "amb": 40
+   },
+   "alias": [
+    "emiliano zapata"
+   ],
+   "hist": 1
+  },
+  {
+   "nombre": "Daniel Ortega",
+   "pais": "Nicaragua",
+   "cargo": "Presidente de Nicaragua",
+   "espacio": "FSLN",
+   "pos": {
+    "eco": 20,
+    "com": 30,
+    "fed": 10,
+    "soc": 70,
+    "seg": 95,
+    "ins": 100,
+    "ext": 5,
+    "amb": 70
+   },
+   "alias": [
+    "daniel ortega"
+   ]
+  },
+  {
+   "nombre": "Augusto César Sandino",
+   "pais": "Nicaragua",
+   "cargo": "Revolucionario",
+   "espacio": "Ejército Defensor de la Soberanía Nacional",
+   "pos": {
+    "eco": 15,
+    "com": 25,
+    "fed": 50,
+    "soc": 60,
+    "seg": 70,
+    "ins": 70,
+    "ext": 0,
+    "amb": 55
+   },
+   "alias": [
+    "augusto cesar sandino"
+   ],
+   "hist": 1
+  },
+  {
+   "nombre": "Óscar Arias",
+   "pais": "Costa Rica",
+   "cargo": "Presidente 1986–1990 y 2006–2010",
+   "espacio": "PLN",
+   "pos": {
+    "eco": 55,
+    "com": 75,
+    "fed": 50,
+    "soc": 45,
+    "seg": 20,
+    "ins": 20,
+    "ext": 70,
+    "amb": 45
+   },
+   "alias": [
+    "oscar arias"
+   ],
+   "hist": 1
+  },
+  {
+   "nombre": "Bernardo Arévalo",
+   "pais": "Guatemala",
+   "cargo": "Presidente de Guatemala",
+   "espacio": "Semilla",
+   "pos": {
+    "eco": 40,
+    "com": 60,
+    "fed": 50,
+    "soc": 35,
+    "seg": 45,
+    "ins": 20,
+    "ext": 65,
+    "amb": 40
+   },
+   "alias": [
+    "bernardo arevalo"
+   ]
+  },
+  {
+   "nombre": "Xiomara Castro",
+   "pais": "Honduras",
+   "cargo": "Expresidenta de Honduras",
+   "espacio": "Libre",
+   "pos": {
+    "eco": 20,
+    "com": 35,
+    "fed": 40,
+    "soc": 45,
+    "seg": 50,
+    "ins": 55,
+    "ext": 25,
+    "amb": 55
+   },
+   "alias": [
+    "xiomara castro"
+   ]
+  },
+  {
+   "nombre": "José Raúl Mulino",
+   "pais": "Panamá",
+   "cargo": "Presidente de Panamá",
+   "espacio": "Realizando Metas",
+   "pos": {
+    "eco": 75,
+    "com": 75,
+    "fed": 40,
+    "soc": 65,
+    "seg": 75,
+    "ins": 55,
+    "ext": 80,
+    "amb": 75
+   },
+   "alias": [
+    "jose raul mulino"
+   ]
+  },
+  {
+   "nombre": "Luis Abinader",
+   "pais": "República Dominicana",
+   "cargo": "Presidente",
+   "espacio": "PRM",
+   "pos": {
+    "eco": 62,
+    "com": 72,
+    "fed": 40,
+    "soc": 60,
+    "seg": 65,
+    "ins": 35,
+    "ext": 80,
+    "amb": 65
+   },
+   "alias": [
+    "luis abinader"
+   ]
+  },
+  {
+   "nombre": "Juan Orlando Hernández",
+   "pais": "Honduras",
+   "cargo": "Expresidente",
+   "espacio": "Partido Nacional",
+   "pos": {
+    "eco": 70,
+    "com": 70,
+    "fed": 30,
+    "soc": 80,
+    "seg": 85,
+    "ins": 80,
+    "ext": 85,
+    "amb": 75
+   },
+   "alias": [
+    "juan orlando hernandez"
+   ]
+  }
+ ]
 }

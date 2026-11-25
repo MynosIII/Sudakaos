@@ -441,3 +441,6 @@ Object.assign(window.BRUJULA_I18N.en, { ej_af: 'Top match', ej_cerca: 'Most comp
 Object.assign(window.BRUJULA_I18N.es, { hist_k: 'Figuras históricas más cercanas', hist_check: 'Incluir históricos', hist_grp: 'Históricos', act_grp: 'Actuales' });
 Object.assign(window.BRUJULA_I18N.pt, { hist_k: 'Figuras históricas mais próximas', hist_check: 'Incluir históricos', hist_grp: 'Históricos', act_grp: 'Atuais' });
 Object.assign(window.BRUJULA_I18N.en, { hist_k: 'Closest historical figures', hist_check: 'Include historical figures', hist_grp: 'Historical', act_grp: 'Current' });
+Object.assign(window.BRUJULA_I18N.es, { int_k: 'Figuras del mundo más cercanas', int_check: 'Incluir resto del mundo', int_grp: 'Mundo y Latinoamérica' });
+Object.assign(window.BRUJULA_I18N.pt, { int_k: 'Figuras do mundo mais próximas', int_check: 'Incluir resto do mundo', int_grp: 'Mundo e América Latina' });
+Object.assign(window.BRUJULA_I18N.en, { int_k: 'Closest world figures', int_check: 'Include rest of the world', int_grp: 'World and Latin America' });
