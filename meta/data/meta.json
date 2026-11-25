@@ -1375,7 +1375,7 @@
    "ig": {
     "usuario": "kicillofok",
     "nombre": "Axel Kicillof",
-    "followers": 1203783,
+    "followers": 1203780,
     "follows": 323,
     "media_count": 2827,
     "posts_30d": 23,
@@ -2337,7 +2337,7 @@
      },
      {
       "d": "2023-12-17",
-      "i": 56621,
+      "i": 56620,
       "f": "Reel"
      },
      {
@@ -4429,7 +4429,6 @@
     "delta7": -11,
     "delta30": null
    },
-   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -4465,8 +4464,7 @@
     }
    ],
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 0
    }
   },
   {
@@ -4827,7 +4825,6 @@
     "delta7": 959,
     "delta30": null
    },
-   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -4863,8 +4860,34 @@
     }
    ],
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 1,
+    "activos": 0,
+    "gasto": [
+     200,
+     299
+    ],
+    "impresiones": [
+     0,
+     99
+    ],
+    "moneda": "ARS",
+    "regiones": {},
+    "edades": {},
+    "genero": {},
+    "plataformas": {
+     "facebook": 1,
+     "instagram": 1
+    },
+    "paginas": {
+     "Jorge Macri FANS": 1
+    },
+    "avisos": [
+     {
+      "t": "This ad ran without a required disclaimer.",
+      "d": "2026-08-27",
+      "u": "https://www.facebook.com/ads/library/?id=1075401625033145"
+     }
+    ]
    }
   },
   {
@@ -5026,7 +5049,6 @@
     "delta7": 1593,
     "delta30": null
    },
-   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -5062,8 +5084,7 @@
     }
    ],
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 0
    }
   },
   {
@@ -5437,7 +5458,6 @@
     "delta7": 254,
     "delta30": null
    },
-   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -5693,7 +5713,6 @@
     "delta7": 118,
     "delta30": null
    },
-   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -5729,8 +5748,47 @@
     }
    ],
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 1,
+    "activos": 0,
+    "gasto": [
+     20000,
+     24999
+    ],
+    "impresiones": [
+     30000,
+     34999
+    ],
+    "moneda": "ARS",
+    "regiones": {
+     "Buenos Aires": 100.0
+    },
+    "edades": {
+     "25-34": 38.7,
+     "18-24": 37.4,
+     "35-44": 12.1,
+     "45-54": 6.6,
+     "55-64": 2.9,
+     "65+": 2.3,
+     "Unknown": 0.0
+    },
+    "genero": {
+     "male": 47.0,
+     "female": 43.4,
+     "unknown": 9.6
+    },
+    "plataformas": {
+     "instagram": 1
+    },
+    "paginas": {
+     "Gustavo Posse": 1
+    },
+    "avisos": [
+     {
+      "t": "Hay decisiones que, con el paso del tiempo, demuestran que mirar hacia adelante siempre fue el camino. En San Isidro hubo una forma de enten",
+      "d": "2026-09-23",
+      "u": "https://www.facebook.com/ads/library/?id=1737398145057397"
+     }
+    ]
    }
   },
   {
@@ -5843,7 +5901,6 @@
     "delta7": 12,
     "delta30": null
    },
-   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
