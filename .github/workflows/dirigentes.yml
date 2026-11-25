@@ -89,6 +89,7 @@ jobs:
         uses: actions/cache/restore@v4
         with:
           path: |
+            dirigentes/letcher/.store
             dirigentes/strada/.store
           key: dirigentes3-store-${{ github.run_id }}
           restore-keys: dirigentes3-store-
@@ -98,7 +99,7 @@ jobs:
           EVENTO: ${{ github.event_name }}
           ANTES: ${{ github.event.before }}
         run: |
-          TODOS="pagano casielles braillard clark raverta otermin rehl ramos avila akirchner zicarelli presto danann strada"
+          TODOS="pagano casielles braillard clark raverta otermin rehl ramos avila akirchner zicarelli presto danann letcher strada"
           LISTA="$TODOS"
           # A mano con un tablero, o un push que cambia configs sin tocar el código de recolección: correr solo esos (cuida el cupo de YouTube)
           if [ -n "$SOLO" ]; then
@@ -151,6 +152,7 @@ jobs:
         uses: actions/cache/save@v4
         with:
           path: |
+            dirigentes/letcher/.store
             dirigentes/strada/.store
           key: dirigentes3-store-${{ github.run_id }}
       - name: Commit aggregates

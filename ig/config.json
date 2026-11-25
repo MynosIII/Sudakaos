@@ -763,6 +763,28 @@
      ]
     }
    ]
+  },
+  "dirigentes-letcher": {
+   "titulo": "Hernán Letcher",
+   "figuras": [
+    {
+     "name": "Hernán Letcher",
+     "ig": [
+      "hernanletcher",
+      "hernan.letcher",
+      "letcherhernan"
+     ]
+    },
+    {
+     "name": "Luis Caputo"
+    },
+    {
+     "name": "Carlos Melconian"
+    },
+    {
+     "name": "Emmanuel Álvarez Agis"
+    }
+   ]
   }
  },
  "dirigentes-strada": {
