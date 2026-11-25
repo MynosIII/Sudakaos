@@ -147,18 +147,18 @@
   },
   {
    "id": "mig",
-   "nombre": "Migración",
+   "nombre": "Cultura y migración",
    "a": "Asimilación",
    "b": "Multiculturalismo",
-   "a_desc": "Fronteras controladas y que el inmigrante se adapte.",
-   "b_desc": "Apertura a la inmigración y mezcla de culturas.",
+   "a_desc": "Una cultura común: fronteras controladas y que quien llega se adapte.",
+   "b_desc": "Diversidad cultural, la de quienes llegan y la de los pueblos originarios.",
    "pt": {
-    "nombre": "Migração",
+    "nombre": "Cultura e migração",
     "a": "Assimilação",
     "b": "Multiculturalismo"
    },
    "en": {
-    "nombre": "Migration",
+    "nombre": "Culture & migration",
     "a": "Assimilation",
     "b": "Multiculturalism"
    }
@@ -253,6 +253,314 @@
   "Neutral / unsure",
   "Disagree",
   "Strongly disagree"
+ ],
+ "ejes2": [
+  {
+   "id": "ecl",
+   "nombre": "Ambiente",
+   "a": "Ecocentrismo",
+   "b": "Productivismo",
+   "a_desc": "La naturaleza vale por sí misma y pone límites a la producción.",
+   "b_desc": "Producir y crecer primero; el ambiente se cuida sin frenar la economía.",
+   "pt": {
+    "nombre": "Ambiente",
+    "a": "Ecocentrismo",
+    "b": "Produtivismo"
+   },
+   "en": {
+    "nombre": "Environment",
+    "a": "Ecocentrism",
+    "b": "Productivism"
+   }
+  },
+  {
+   "id": "dis",
+   "nombre": "Distribución",
+   "a": "Igualitarismo",
+   "b": "Meritocracia",
+   "a_desc": "Achicar las diferencias de ingreso y riqueza.",
+   "b_desc": "Que cada uno reciba según su esfuerzo y su talento.",
+   "pt": {
+    "nombre": "Distribuição",
+    "a": "Igualitarismo",
+    "b": "Meritocracia"
+   },
+   "en": {
+    "nombre": "Distribution",
+    "a": "Egalitarianism",
+    "b": "Meritocracy"
+   }
+  },
+  {
+   "id": "bie",
+   "nombre": "Bienestar",
+   "a": "Universalismo social",
+   "b": "Responsabilidad individual",
+   "a_desc": "Salud, educación y protección para todos, garantizadas por el Estado.",
+   "b_desc": "Cada persona se hace cargo de sí misma; el Estado ayuda lo mínimo.",
+   "pt": {
+    "nombre": "Bem-estar",
+    "a": "Universalismo social",
+    "b": "Responsabilidade individual"
+   },
+   "en": {
+    "nombre": "Welfare",
+    "a": "Social universalism",
+    "b": "Individual responsibility"
+   }
+  },
+  {
+   "id": "epi",
+   "nombre": "Conocimiento",
+   "a": "Empirismo",
+   "b": "Dogmatismo",
+   "a_desc": "Decidir con datos y evidencia, y cambiar de idea si los datos cambian.",
+   "b_desc": "Hay verdades firmes que no dependen de la evidencia.",
+   "pt": {
+    "nombre": "Conhecimento",
+    "a": "Empirismo",
+    "b": "Dogmatismo"
+   },
+   "en": {
+    "nombre": "Knowledge",
+    "a": "Empiricism",
+    "b": "Dogmatism"
+   }
+  },
+  {
+   "id": "ges",
+   "nombre": "Gestión",
+   "a": "Tecnocracia",
+   "b": "Participacionismo",
+   "a_desc": "Que decidan especialistas con conocimiento técnico.",
+   "b_desc": "Que la gente participe directamente en las decisiones.",
+   "pt": {
+    "nombre": "Gestão",
+    "a": "Tecnocracia",
+    "b": "Participacionismo"
+   },
+   "en": {
+    "nombre": "Governance",
+    "a": "Technocracy",
+    "b": "Participation"
+   }
+  },
+  {
+   "id": "tra",
+   "nombre": "Cambio",
+   "a": "Reformismo",
+   "b": "Revolucionarismo",
+   "a_desc": "Cambios graduales, dentro de las reglas.",
+   "b_desc": "Cambios de raíz, aunque rompan con el orden vigente.",
+   "pt": {
+    "nombre": "Mudança",
+    "a": "Reformismo",
+    "b": "Revolucionarismo"
+   },
+   "en": {
+    "nombre": "Change",
+    "a": "Reformism",
+    "b": "Revolutionism"
+   }
+  },
+  {
+   "id": "idc",
+   "nombre": "Identidad",
+   "a": "Individualismo",
+   "b": "Comunitarismo",
+   "a_desc": "La persona y sus elecciones van primero.",
+   "b_desc": "La comunidad, la familia y los lazos van primero.",
+   "pt": {
+    "nombre": "Identidade",
+    "a": "Individualismo",
+    "b": "Comunitarismo"
+   },
+   "en": {
+    "nombre": "Identity",
+    "a": "Individualism",
+    "b": "Communitarianism"
+   }
+  },
+  {
+   "id": "pen",
+   "nombre": "Justicia penal",
+   "a": "Rehabilitación",
+   "b": "Punitivismo",
+   "a_desc": "La cárcel tiene que reinsertar.",
+   "b_desc": "Penas más duras y más largas.",
+   "pt": {
+    "nombre": "Justiça penal",
+    "a": "Reabilitação",
+    "b": "Punitivismo"
+   },
+   "en": {
+    "nombre": "Criminal justice",
+    "a": "Rehabilitation",
+    "b": "Punitivism"
+   }
+  },
+  {
+   "id": "lab",
+   "nombre": "Trabajo",
+   "a": "Autogestión",
+   "b": "Jerarquía empresarial",
+   "a_desc": "Trabajadores que participan o deciden en sus empresas.",
+   "b_desc": "La empresa la conducen sus dueños y gerentes.",
+   "pt": {
+    "nombre": "Trabalho",
+    "a": "Autogestão",
+    "b": "Hierarquia empresarial"
+   },
+   "en": {
+    "nombre": "Work",
+    "a": "Self-management",
+    "b": "Corporate hierarchy"
+   }
+  },
+  {
+   "id": "eti",
+   "nombre": "Ética",
+   "a": "Consecuencialismo",
+   "b": "Deontologismo",
+   "a_desc": "Lo correcto se juzga por sus resultados.",
+   "b_desc": "Hay reglas morales que no se rompen, pase lo que pase.",
+   "pt": {
+    "nombre": "Ética",
+    "a": "Consequencialismo",
+    "b": "Deontologismo"
+   },
+   "en": {
+    "nombre": "Ethics",
+    "a": "Consequentialism",
+    "b": "Deontology"
+   }
+  },
+  {
+   "id": "tem",
+   "nombre": "Horizonte",
+   "a": "Cortoplacismo",
+   "b": "Largoplacismo",
+   "a_desc": "Resultados rápidos y visibles.",
+   "b_desc": "Políticas de Estado pensadas a décadas.",
+   "pt": {
+    "nombre": "Horizonte",
+    "a": "Curto prazo",
+    "b": "Longo prazo"
+   },
+   "en": {
+    "nombre": "Time horizon",
+    "a": "Short-termism",
+    "b": "Long-termism"
+   }
+  },
+  {
+   "id": "fut",
+   "nombre": "Generaciones",
+   "a": "Prioridad futura",
+   "b": "Prioridad presente",
+   "a_desc": "Sacrificios hoy para las generaciones que vienen.",
+   "b_desc": "Primero resolver las necesidades de hoy.",
+   "pt": {
+    "nombre": "Gerações",
+    "a": "Prioridade futura",
+    "b": "Prioridade presente"
+   },
+   "en": {
+    "nombre": "Generations",
+    "a": "Future priority",
+    "b": "Present priority"
+   }
+  },
+  {
+   "id": "ind",
+   "nombre": "Estrategia económica",
+   "a": "Industrialismo",
+   "b": "Especialización",
+   "a_desc": "Desarrollar industria propia, aunque cueste.",
+   "b_desc": "Producir lo que el país hace mejor y comerciar el resto.",
+   "pt": {
+    "nombre": "Estratégia econômica",
+    "a": "Industrialismo",
+    "b": "Especialização"
+   },
+   "en": {
+    "nombre": "Economic strategy",
+    "a": "Industrialism",
+    "b": "Specialization"
+   }
+  },
+  {
+   "id": "mon",
+   "nombre": "Moneda",
+   "a": "Discrecionalidad",
+   "b": "Reglas monetarias",
+   "a_desc": "Usar la emisión y el tipo de cambio según la coyuntura.",
+   "b_desc": "Reglas fijas y un Banco Central que no se maneja a gusto.",
+   "pt": {
+    "nombre": "Moeda",
+    "a": "Discricionariedade",
+    "b": "Regras monetárias"
+   },
+   "en": {
+    "nombre": "Money",
+    "a": "Discretion",
+    "b": "Monetary rules"
+   }
+  },
+  {
+   "id": "inf",
+   "nombre": "Información",
+   "a": "Pluralismo informativo",
+   "b": "Control informativo",
+   "a_desc": "Muchas voces y medios, aunque digan cosas que molestan.",
+   "b_desc": "El Estado puede filtrar lo que considera falso o dañino.",
+   "pt": {
+    "nombre": "Informação",
+    "a": "Pluralismo informativo",
+    "b": "Controle informativo"
+   },
+   "en": {
+    "nombre": "Information",
+    "a": "Media pluralism",
+    "b": "Information control"
+   }
+  },
+  {
+   "id": "ipe",
+   "nombre": "Instituciones",
+   "a": "Personalismo",
+   "b": "Institucionalismo",
+   "a_desc": "Lo que importa es quién conduce.",
+   "b_desc": "Lo que importa son las reglas y las instituciones.",
+   "pt": {
+    "nombre": "Instituições",
+    "a": "Personalismo",
+    "b": "Institucionalismo"
+   },
+   "en": {
+    "nombre": "Institutions",
+    "a": "Personalism",
+    "b": "Institutionalism"
+   }
+  },
+  {
+   "id": "uni",
+   "nombre": "Sociedad",
+   "a": "Universalismo",
+   "b": "Particularismo",
+   "a_desc": "Los mismos derechos y la misma vara para todos los seres humanos.",
+   "b_desc": "Primero los nuestros: la propia nación, el propio grupo.",
+   "pt": {
+    "nombre": "Sociedade",
+    "a": "Universalismo",
+    "b": "Particularismo"
+   },
+   "en": {
+    "nombre": "Society",
+    "a": "Universalism",
+    "b": "Particularism"
+   }
+  }
  ],
  "versiones": {
   "general": {

@@ -10,7 +10,7 @@ window.BRUJULA_I18N = {
     elegi_op: 'Elegí', menos16: 'Menos de 16', mujer: 'Mujer', varon: 'Varón', nb: 'No binario / otro', nodecir: 'Prefiero no decir',
     ninguna: 'Ninguna: medios tradicionales', otro: 'Otro',
     consiento: 'Acepto que mis respuestas anónimas se usen con fines estadísticos.', privacidad: 'Privacidad',
-    enviar: 'Enviar y ver resultado', saltar: 'Ver resultado sin enviar', falta: 'Completá los datos y marcá la casilla, o tocá "Ver resultado sin enviar".',
+    enviar: 'Enviar y ver resultado', saltar: 'prefiero no enviar mis respuestas', falta: 'Completá los datos y marcá la casilla.',
     res_k: 'PAN-03 · TU RESULTADO', res_h: 'Tu brújula', res_link: 'Un resultado compartido',
     define: x => `Lo que más te define: ${x}.`, centro: 'Estás cerca del centro en casi todo.',
     ejes: 'Ejes', cerca: 'Dirigentes más cercanos', mapa: 'Mapa económico × valores', lejos: (n, a) => `Más lejos de vos: ${n} (${a}%).`,
@@ -34,7 +34,7 @@ window.BRUJULA_I18N = {
     elegi_op: 'Escolha', menos16: 'Menos de 16', mujer: 'Mulher', varon: 'Homem', nb: 'Não binário / outro', nodecir: 'Prefiro não dizer',
     ninguna: 'Nenhuma: mídia tradicional', otro: 'Outro',
     consiento: 'Aceito que minhas respostas anônimas sejam usadas para fins estatísticos.', privacidad: 'Privacidade',
-    enviar: 'Enviar e ver resultado', saltar: 'Ver resultado sem enviar', falta: 'Preencha os dados e marque a caixa, ou toque em "Ver resultado sem enviar".',
+    enviar: 'Enviar e ver resultado', saltar: 'prefiro não enviar minhas respostas', falta: 'Preencha os dados e marque a caixa.',
     res_k: 'PAN-03 · SEU RESULTADO', res_h: 'Sua bússola', res_link: 'Um resultado compartilhado',
     define: x => `O que mais te define: ${x}.`, centro: 'Você está perto do centro em quase tudo.',
     ejes: 'Eixos', cerca: 'Políticos mais próximos', mapa: 'Mapa econômico × valores', lejos: (n, a) => `Mais distante de você: ${n} (${a}%).`,
@@ -58,7 +58,7 @@ window.BRUJULA_I18N = {
     elegi_op: 'Choose', menos16: 'Under 16', mujer: 'Woman', varon: 'Man', nb: 'Non-binary / other', nodecir: 'Prefer not to say',
     ninguna: 'None: traditional media', otro: 'Other',
     consiento: 'I agree that my anonymous answers may be used for statistical purposes.', privacidad: 'Privacy',
-    enviar: 'Send and see result', saltar: 'See result without sending', falta: 'Fill in the details and tick the box, or tap "See result without sending".',
+    enviar: 'Send and see result', saltar: "I'd rather not send my answers", falta: 'Fill in the details and tick the box.',
     res_k: 'PAN-03 · YOUR RESULT', res_h: 'Your compass', res_link: 'A shared result',
     define: x => `What defines you most: ${x}.`, centro: 'You are close to the center on almost everything.',
     ejes: 'Axes', cerca: 'Closest politicians', mapa: 'Economy × values map', lejos: (n, a) => `Furthest from you: ${n} (${a}%).`,
@@ -444,3 +444,29 @@ Object.assign(window.BRUJULA_I18N.en, { hist_k: 'Closest historical figures', hi
 Object.assign(window.BRUJULA_I18N.es, { int_k: 'Figuras del mundo más cercanas', int_check: 'Incluir resto del mundo', int_grp: 'Mundo y Latinoamérica' });
 Object.assign(window.BRUJULA_I18N.pt, { int_k: 'Figuras do mundo mais próximas', int_check: 'Incluir resto do mundo', int_grp: 'Mundo e América Latina' });
 Object.assign(window.BRUJULA_I18N.en, { int_k: 'Closest world figures', int_check: 'Include rest of the world', int_grp: 'World and Latin America' });
+
+// v4: ejes complementarios, bandera, valores y modo sobremesa
+Object.assign(window.BRUJULA_I18N.es, { t_val: 'Valores', t_val2: 'Tu bandera y tus valores', t_mas: 'Más ejes', t_mas2: 'Ejes complementarios', t_sob: 'Sobremesa', t_sob2: 'Modo sobremesa',
+  val_sub: 'Tu bandera se arma con tus posiciones más marcadas: los colores, el diseño y el escudo cambian con tu perfil.',
+  valoras_k: 'Lo que más valorás', temas_k: 'Tus valores por tema', band_k: 'Tu bandera', band_dl: 'Descargar bandera',
+  mas_sub: 'Diecisiete ejes más, medidos con las mismas frases (muchas puntúan en varios ejes a la vez) y algunas nuevas. No cambian tu ideología ni tu afinidad con dirigentes.',
+  mas_vacio: 'Respondé más frases para ver estos ejes: la versión Completa o la Exhaustiva los miden mejor.',
+  sob_nota: 'Juego de humor: no mide nada ni cambia tu resultado.', sat_ck: 'Nivel de convicción', sat_hk: 'Nivel de coherencia',
+  sat_c: ['Barra brava de tus ideas', 'Militante de sobremesa', 'Opinólogo moderado', 'Veleta con buena onda'],
+  sat_h: ['Relojero suizo', 'Agenda prolija', 'Lista del súper con tachones', 'Chat grupal a la madrugada'] });
+Object.assign(window.BRUJULA_I18N.pt, { t_val: 'Valores', t_val2: 'Sua bandeira e seus valores', t_mas: 'Mais eixos', t_mas2: 'Eixos complementares', t_sob: 'Resenha', t_sob2: 'Modo resenha',
+  val_sub: 'Sua bandeira é feita com suas posições mais marcadas: as cores, o desenho e o brasão mudam com seu perfil.',
+  valoras_k: 'O que você mais valoriza', temas_k: 'Seus valores por tema', band_k: 'Sua bandeira', band_dl: 'Baixar bandeira',
+  mas_sub: 'Mais dezessete eixos, medidos com as mesmas frases (muitas pontuam em vários eixos ao mesmo tempo) e algumas novas. Não mudam sua ideologia nem sua afinidade com políticos.',
+  mas_vacio: 'Responda mais frases para ver estes eixos: as versões Completa ou Exaustiva medem melhor.',
+  sob_nota: 'Brincadeira: não mede nada nem muda seu resultado.', sat_ck: 'Nível de convicção', sat_hk: 'Nível de coerência',
+  sat_c: ['Torcida organizada das próprias ideias', 'Militante de churrasco', 'Palpiteiro moderado', 'Biruta de bem com a vida'],
+  sat_h: ['Relojoeiro suíço', 'Agenda caprichada', 'Lista de mercado rabiscada', 'Grupo de família de madrugada'] });
+Object.assign(window.BRUJULA_I18N.en, { t_val: 'Values', t_val2: 'Your flag and your values', t_mas: 'More axes', t_mas2: 'Additional axes', t_sob: 'Just for fun', t_sob2: 'Just for fun',
+  val_sub: 'Your flag is built from your strongest positions: colors, layout and emblem change with your profile.',
+  valoras_k: 'What you value most', temas_k: 'Your values by topic', band_k: 'Your flag', band_dl: 'Download flag',
+  mas_sub: 'Seventeen more axes, measured with the same statements (many count toward several axes at once) plus a few new ones. They do not change your ideology or your match with politicians.',
+  mas_vacio: 'Answer more statements to see these axes: the Complete or Exhaustive versions measure them better.',
+  sob_nota: 'A joke: it measures nothing and does not change your result.', sat_ck: 'Conviction level', sat_hk: 'Consistency level',
+  sat_c: ['Ultras of your own ideas', 'Dinner-table activist', 'Moderate pundit', 'Easygoing weathervane'],
+  sat_h: ['Swiss watchmaker', 'Tidy planner', 'Scribbled shopping list', 'Group chat at 3 a.m.'] });
