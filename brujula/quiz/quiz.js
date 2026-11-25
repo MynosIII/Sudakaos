@@ -103,6 +103,11 @@
   const nombreVer = id => (VER_NOMBRE[S.lang] || {})[id] || S.ejes.versiones[id].nombre;
   function figuras(ver, conHist) { const l = S.fig[(S.ejes.versiones[ver] || {}).figuras || 'latam'] || []; return conHist ? l : l.filter(f => !f.hist) }
   const figurasH = ver => figuras(ver, true).filter(f => f.hist);
+  // Internacionales: el resto del mundo y de Latinoamérica (sin repetir a los del país elegido).
+  function figurasInt(ver) {
+    const nom = (S.ejes.versiones[ver] || {}).nombre, propios = new Set(figuras(ver, true).map(f => f.nombre));
+    return [...(S.fig.mundo || []), ...(S.fig.latam || [])].filter(f => f.pais !== nom && !propios.has(f.nombre)).map(f => Object.assign({ int: 1 }, f));
+  }
   const ideoNom = i => (i[S.lang] || i.es).nombre, ideoDesc = i => (i[S.lang] || i.es).desc;
   const iniciales = n => n.split(/\s+/).filter(w => /^[A-ZÁÉÍÓÚÑ]/.test(w)).slice(0, 2).map(w => w[0]).join('') || n[0];
   const apellido = n => n.split(' ').slice(-1)[0];
@@ -115,26 +120,37 @@
   const avatar = (f, cls) => `<span class="av ${cls || ''}" data-f="${esc(f.nombre)}">${esc(iniciales(f.nombre))}</span>`;
 
   // ------------------------------------------------------------ fotos (Wikipedia, desde el navegador de quien mira; si no hay, iniciales)
-  const FOTOS = new Map(), FCACHE = {};
+  const FOTOS = new Map(), FCACHE = {}, WIKI = {};
   try { Object.assign(FCACHE, JSON.parse(sessionStorage.getItem('brujula_fotos') || '{}')) } catch (e) { }
   // Para no mostrar la foto de un homónimo, la página tiene que describir a alguien de la política.
-  const POLITICO = /pol[ií]tic|dictador|ditador|caudill|pr[oó]cer|libertador|escritor|guerriller|revolucion|imperador|emperador|jurista|abolicion|antrop[oó]log|ambientalist|sacerdote|sindicalist|periodista|ide[oó]log|l[ií]der|militante|president|senador|diputad|deputad|gobernador|governador|ministr|alcalde|intendente|prefeit|vereador|congres|legislad|candidat|abogad|advogad|economist|activist|ativist|sindical|militar|jefe de gabinete|vocero|portavoz|porta-voz|politician|governor|mayor|senator/i;
+  const POLITICO = /pol[ií]tic|empresari|businessman|entrepreneur|psic[oó]log|psycholog|ling[uü]ist|fil[oó]sof|philosoph|papa |pope|dictator|revolutionar|monarch|emperor|primer ministro|primera ministra|prime minister|canciller|chancellor|leader|ayatol|dictador|ditador|caudill|pr[oó]cer|libertador|escritor|guerriller|revolucion|imperador|emperador|jurista|abolicion|antrop[oó]log|ambientalist|sacerdote|sindicalist|periodista|ide[oó]log|l[ií]der|militante|president|senador|diputad|deputad|gobernador|governador|ministr|alcalde|intendente|prefeit|vereador|congres|legislad|candidat|abogad|advogad|economist|activist|ativist|sindical|militar|jefe de gabinete|vocero|portavoz|porta-voz|politician|governor|mayor|senator/i;
+  // cola: como mucho 4 consultas a Wikipedia a la vez (evita el límite de pedidos)
+  let activas = 0; const espera = [];
+  const turno = () => activas < 4 ? (activas++, Promise.resolve()) : new Promise(ok => espera.push(ok));
+  const libre = () => { const sig = espera.shift(); if (sig) sig(); else activas-- };
   function foto(nombre) {
     if (nombre in FCACHE) return Promise.resolve(FCACHE[nombre]);
     if (FOTOS.has(nombre)) return FOTOS.get(nombre);
-    const langs = S.ver === 'br' ? ['pt', 'es'] : ['es', 'pt'];
+    const langs = S.ver === 'br' ? ['pt', 'es', 'en'] : ['es', 'pt', 'en'];
     const p = (async () => {
+      await turno();
+      let fallo = false;
+      try {
       for (const l of langs) {
         try {
-          const r = await fetch(`https://${l}.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(nombre.replace(/ /g, '_'))}`);
+          const url = `https://${l}.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent((WIKI[nombre] || nombre).replace(/ /g, '_'))}`;
+          let r = await fetch(url);
+          if (r.status === 429) { await new Promise(ok => setTimeout(ok, 1500)); r = await fetch(url) }
+          if (r.status === 429 || r.status >= 500) { fallo = true; continue }
           if (!r.ok) continue;
           const j = await r.json();
           if (j.type === 'disambiguation' || !j.thumbnail || !POLITICO.test((j.description || '') + ' ' + (j.extract || ''))) continue;
           return j.thumbnail.source;
-        } catch (e) { }
+        } catch (e) { fallo = true }
       }
-      return null;
-    })().then(u => { FCACHE[nombre] = u; try { sessionStorage.setItem('brujula_fotos', JSON.stringify(FCACHE)) } catch (e) { } return u });
+      return fallo ? undefined : null;
+      } finally { libre() }
+    })().then(u => { if (u === undefined) { FOTOS.delete(nombre); return null } FCACHE[nombre] = u; try { sessionStorage.setItem('brujula_fotos', JSON.stringify(FCACHE)) } catch (e) { } return u });
     FOTOS.set(nombre, p);
     return p;
   }
@@ -191,10 +207,11 @@
     versiones();
   }
   // Tarjetas de ejemplo (estilo 12 ejes): un perfil parecido al de un dirigente real, su ideología más cercana y sus 12 ejes.
-  const IDEO_COL = { libertarismo: ['#7B4FC4', '#2a1450'], lib_conservador: ['#A98A25', '#3d2d00'], lib_progresista: ['#3A92AD', '#0b3b4a'],
-    socialdemocracia: ['#D0457A', '#55102c'], socialismo_dem: ['#C4443B', '#55120d'], comunismo: ['#B3201A', '#3b0b09'], nacional_popular: ['#1F5FA8', '#0a2a5c'],
-    desarrollismo: ['#D2701F', '#5a2a04'], centrismo: ['#5b6b80', '#1f2733'], democracia_cristiana: ['#3E86C8', '#0b3566'], conservadurismo: ['#8C5E3A', '#3a2210'],
-    derecha_nacionalista: ['#B3262E', '#22252c'], ecologismo: ['#2E9A5C', '#0c3a21'], federalismo: ['#3E8E43', '#0f3a12'], anarquismo: ['#444a55', '#111318'], tecnocracia: ['#2a6fb0', '#0c2440'] };
+  // tarjetas en gris y azul: tonos de azul para unas familias, pizarra para otras
+  const IDEO_COL = { libertarismo: ['#2563eb', '#0b1f4d'], lib_conservador: ['#1e40af', '#0a1433'], lib_progresista: ['#3b82c4', '#0e2a44'],
+    socialdemocracia: ['#3b82c4', '#0e2a44'], socialismo_dem: ['#2563eb', '#0b1f4d'], comunismo: ['#1e40af', '#0a1433'], nacional_popular: ['#2563eb', '#0b1f4d'],
+    desarrollismo: ['#5b6472', '#1b1f26'], centrismo: ['#5b6472', '#1b1f26'], democracia_cristiana: ['#3b82c4', '#0e2a44'], conservadurismo: ['#5b6472', '#1b1f26'],
+    derecha_nacionalista: ['#1e40af', '#0a1433'], ecologismo: ['#3b82c4', '#0e2a44'], federalismo: ['#5b6472', '#1b1f26'], anarquismo: ['#5b6472', '#1b1f26'], tecnocracia: ['#2563eb', '#0b1f4d'] };
   const EJ_NOMBRES = ['Javier Milei', 'Luiz Inácio Lula da Silva', 'Axel Kicillof', 'Nayib Bukele', 'Gabriel Boric', 'Mauricio Macri'];
   let EJ_I = 0, EJ_T = null;
   function ejemplos() {
@@ -382,6 +399,7 @@
     const ids = IDS();
     const figs = figuras(S.ver).map(f => ({ f, af: afinidad(sc, f.pos, cert) })).sort((a, b) => b.af - a.af);
     S.hist = figurasH(S.ver).map(f => ({ f, af: afinidad(sc, f.pos, cert) })).sort((a, b) => b.af - a.af);
+    S.intl = figurasInt(S.ver).map(f => ({ f, af: afinidad(sc, f.pos, cert) })).sort((a, b) => b.af - a.af);
     const ideo = S.ideo.map(i => { const pos = {}; ids.forEach((k, j) => { pos[k] = i.pos[j] }); return { i, pos, af: afinidad(sc, pos, cert) } }).sort((a, b) => b.af - a.af);
     return { figs, ideo };
   }
@@ -505,7 +523,7 @@
       <div class="k" style="margin-top:16px">${esc(t.tambien)}</div><div class="dims">${dims}</div>
       <div class="fgrid">${F.slice(1, 9).map(({ f, af }) => `<div class="fc">${avatar(f)}<b>${esc(f.nombre)}</b><span class="pc">${af}%</span><small>${esc(f.cargo || f.pais || '')}${f.espacio ? ' · ' + esc(f.espacio) : ''}</small><a href="${cmp(f)}">${esc(t.comparar)}</a></div>`).join('')}</div>
       <div class="lejos">${esc(t.lejos_d)} ${F.slice(-3).reverse().map(x => `<span>${esc(x.f.nombre)} · ${x.af}%</span>`).join('')}</div>` +
-      ((S.hist || []).length ? `<div class="k" style="margin-top:18px">${esc(t.hist_k)}</div><div class="fgrid">${S.hist.slice(0, 6).map(({ f, af }) => `<div class="fc">${avatar(f)}<b>${esc(f.nombre)}</b><span class="pc">${af}%</span><small>${esc(f.cargo || '')}</small><a href="${cmp(f)}">${esc(t.comparar)}</a></div>`).join('')}</div>` : '');
+      [[S.intl, t.int_k], [S.hist, t.hist_k]].map(([L, k]) => (L || []).length ? `<div class="k" style="margin-top:18px">${esc(k)}</div><div class="fgrid">${L.slice(0, 6).map(({ f, af }) => `<div class="fc">${avatar(f)}<b>${esc(f.nombre)}</b><span class="pc">${af}%</span><small>${esc(f.cargo || '')}${f.int && f.pais ? ' · ' + esc(f.pais) : ''}</small><a href="${cmp(f)}">${esc(t.comparar)}</a></div>`).join('')}</div>` : '').join('');
     fotos($('#dir'));
   }
   function analisis(sc, cert, rk, E) {
@@ -560,7 +578,7 @@
   async function tarjeta(sinFoto) {
     const cv = $('#tarjeta'), x = cv.getContext('2d'), t = T(), sc = S.scores, cert = S.cert, rk = S.rk, E = EJES();
     const light = document.documentElement.dataset.theme === 'light';
-    const bg = light ? '#F5F1E8' : '#14181f', s1 = light ? '#ffffff' : '#1d2430', s3 = light ? '#ece6d8' : '#2a3342', txt = light ? '#20242C' : '#F5F1E8', mut = light ? '#5b6472' : '#a3acba', sig = light ? '#153B66' : '#75AADB';
+    const bg = light ? '#f2f4f7' : '#111316', s1 = light ? '#ffffff' : '#1a1d22', s3 = light ? '#e6e9ee' : '#2a2f37', txt = light ? '#16191d' : '#eceef1', mut = light ? '#4f5866' : '#a4abb6', sig = light ? '#2563eb' : '#4f8ff7';
     try { await document.fonts.ready } catch (e) { }
     const top = rk.figs[0], img = sinFoto || !top ? null : await cargarImg(await foto(top.f.nombre));
     if (S.rk !== rk) return; // cambió el resultado mientras cargaba
@@ -568,7 +586,7 @@
     const caja = (Y, h) => { rrect(x, 60, Y, W - 120, h, 28); x.fillStyle = s1; x.fill() };
     const corta = (s, w) => { while (x.measureText(s).width > w && s.length > 4) s = s.slice(0, -2) + '…'; return s };
     x.clearRect(0, 0, W, H); x.fillStyle = bg; x.fillRect(0, 0, W, H);
-    const gr = x.createRadialGradient(W, 0, 50, W, 0, 1000); gr.addColorStop(0, light ? 'rgba(63,115,179,.18)' : 'rgba(122,166,216,.2)'); gr.addColorStop(1, 'rgba(0,0,0,0)');
+    const gr = x.createRadialGradient(W, 0, 50, W, 0, 1000); gr.addColorStop(0, light ? 'rgba(37,99,235,.16)' : 'rgba(79,143,247,.2)'); gr.addColorStop(1, 'rgba(0,0,0,0)');
     x.fillStyle = gr; x.fillRect(0, 0, W, H);
     // encabezado
     x.fillStyle = sig; x.beginPath(); x.moveTo(92, 84); x.lineTo(104, 128); x.lineTo(80, 128); x.closePath(); x.fill();
@@ -659,8 +677,8 @@
       el.onchange = mapaPagina;
     });
     const sc = r && r.sc, cert = r && r.cert;
-    const rk = figuras(ver, $('#mp-hist').checked).map(f => ({ f, af: sc ? afinidad(sc, f.pos, cert) : null })).sort((a, b) => (b.af || 0) - (a.af || 0));
-    $('#mp-hist').onchange = mapaPagina;
+    const rk = figuras(ver, $('#mp-hist').checked).concat($('#mp-int').checked ? figurasInt(ver).filter(f => $('#mp-hist').checked || !f.hist) : []).map(f => ({ f, af: sc ? afinidad(sc, f.pos, cert) : null })).sort((a, b) => (b.af || 0) - (a.af || 0));
+    $('#mp-hist').onchange = $('#mp-int').onchange = mapaPagina;
     svgMapa('#mapa-g', '#mapa-g-info', rk, $('#mp-x').value, $('#mp-y').value, sc, new Set(sc ? rk.slice(0, 5).map(x => x.f.nombre) : rk.filter(x => x.f.nivel === 1).map(x => x.f.nombre)));
   }
   // Mapa de dos ejes cualesquiera: puntos = dirigentes, "vos" si hay resultado.
@@ -674,7 +692,7 @@
     g += `<text class="q" x="${P + 3}" y="${Yv(50) - 6}">◀ ${U(ex.a)}</text><text class="q" x="${W - P - 3}" y="${Yv(50) - 6}" text-anchor="end">${U(ex.b)} ▶</text>`;
     rk.forEach(({ f, af }) => {
       const tp = top.has(f.nombre), cx = X(f.pos[xk]), cy = Yv(f.pos[yk]);
-      g += `<g class="pt${tp ? ' top' : ''}${f.hist ? ' h' : ''}"><title>${esc(f.nombre)}${af != null ? ' · ' + af + '%' : ''}${f.cargo ? ' · ' + esc(f.cargo) : ''}</title><circle cx="${cx}" cy="${cy}" r="${tp ? 5 : 3.5}"/>${tp ? `<text x="${cx + 7}" y="${cy + 3}">${esc(apellido(f.nombre))}</text>` : ''}</g>`;
+      g += `<g class="pt${tp ? ' top' : ''}${f.hist ? ' h' : ''}${f.int ? ' i' : ''}"><title>${esc(f.nombre)}${af != null ? ' · ' + af + '%' : ''}${f.cargo ? ' · ' + esc(f.cargo) : ''}</title><circle cx="${cx}" cy="${cy}" r="${tp ? 5 : 3.5}"/>${tp ? `<text x="${cx + 7}" y="${cy + 3}">${esc(apellido(f.nombre))}</text>` : ''}</g>`;
     });
     if (sc) {
       const yo = { es: 'VOS', pt: 'VOCÊ', en: 'YOU' }[S.lang];
@@ -684,12 +702,12 @@
     $(sel).onclick = ev => { const p = ev.target.closest('.pt'); if (p) $(info).textContent = p.querySelector('title').textContent };
   }
   function cara(preB) {
-    const ver = selVer('#cc-ver', () => { $('#cc-a').value = ''; $('#cc-b').value = ''; cara() }), figs = figuras(ver, true), r = guardado(), t = T();
+    const ver = selVer('#cc-ver', () => { $('#cc-a').value = ''; $('#cc-b').value = ''; cara() }), figs = figuras(ver, true).concat(figurasInt(ver)), r = guardado(), t = T();
     if (!figs.length) { $('#cara-res').innerHTML = ''; return }
     const ok = preB && figs.some(f => f.nombre === preB);
     const ops = (sel, def, conVos, forzar) => {
       const el = $(sel), v = forzar || el.value || def;
-      el.innerHTML = (conVos && r ? `<option value="__vos">${esc(t.vos)}</option>` : '') + [figs.filter(f => !f.hist), figs.filter(f => f.hist)].map((l, j) => l.length ? `<optgroup label="${esc(j ? t.hist_grp : t.act_grp)}">` + l.map(f => `<option${f.nombre === v ? ' selected' : ''}>${esc(f.nombre)}</option>`).join('') + '</optgroup>' : '').join('');
+      el.innerHTML = (conVos && r ? `<option value="__vos">${esc(t.vos)}</option>` : '') + [figs.filter(f => !f.hist && !f.int), figs.filter(f => f.hist && !f.int), figs.filter(f => f.int)].map((l, j) => l.length ? `<optgroup label="${esc([t.act_grp, t.hist_grp, t.int_grp][j])}">` + l.map(f => `<option${f.nombre === v ? ' selected' : ''}>${esc(f.nombre)}</option>`).join('') + '</optgroup>' : '').join('');
       if (v === '__vos' && r) el.value = '__vos';
       el.onchange = () => cara();
       return el.value;
@@ -814,6 +832,7 @@
     let ideo;
     [S.ejes, S.preg, S.fig, ideo] = await Promise.all([get('ejes.json'), get('preguntas.json'), get('figuras.json'), get('ideologias.json').catch(() => ({ ideologias: [] }))]);
     S.ideo = ideo.ideologias || [];
+    Object.values(S.fig).filter(Array.isArray).flat().forEach(f => { if (f.wiki) WIKI[f.nombre] = f.wiki });
     $('#foot-v').textContent = S.fig.fecha || '';
     S.lang = idiomaInicial();
     S.ver = verInicial();

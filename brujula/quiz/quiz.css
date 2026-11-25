@@ -1,17 +1,17 @@
-/* Brújula política v3: azul noche + celeste, Space Grotesk, un color por eje. Celular primero. Tema claro en :root[data-theme=light]. */
+/* Brújula política: gris + azul, Space Grotesk, un color por eje. Celular primero. Tema claro en :root[data-theme=light]. */
 :root{
-  --page:#14181f;--s1:#1d2430;--s2:#222a37;--s3:#2a3342;--line:#323b4b;--line2:#3d4759;
-  --txt:#F5F1E8;--muted:#a3acba;--dim:#7d8696;
-  --sig:#75AADB;--sig2:rgba(117,170,219,.55);--sig3:rgba(117,170,219,.14);--gold:#D6B56D;--hot:#e08a63;--ok:#4cc38a;--a:#75AADB;--b:#D6B56D;
+  --page:#111316;--s1:#1a1d22;--s2:#20242a;--s3:#2a2f37;--line:#2c3139;--line2:#3a404a;
+  --txt:#eceef1;--muted:#a4abb6;--dim:#767e8a;
+  --sig:#4f8ff7;--sig2:rgba(79,143,247,.55);--sig3:rgba(79,143,247,.14);--gold:#8b95a5;--hot:#e5735f;--ok:#4cc38a;--a:#4f8ff7;--b:#8b95a5;
   --r:16px;--mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;--head:"Space Grotesk",Arial,sans-serif;--body:"Plus Jakarta Sans",Arial,sans-serif;
-  --grid:transparent;--shadow:0 14px 40px rgba(0,0,0,.35);color-scheme:dark
+  --grid:transparent;--shadow:0 14px 40px rgba(0,0,0,.4);color-scheme:dark
 }
-:root[data-theme=light]{--page:#F5F1E8;--s1:#ffffff;--s2:#f8f5ee;--s3:#ece6d8;--line:#ddd5c2;--line2:#cfc5ae;--txt:#20242C;--muted:#5b6472;--dim:#7c8492;
-  --sig:#153B66;--sig2:rgba(21,59,102,.5);--sig3:rgba(21,59,102,.1);--gold:#b8963f;--hot:#b8502f;--a:#2a6fb0;--b:#b8963f;--grid:transparent;--shadow:0 12px 30px rgba(40,30,10,.1);color-scheme:light}
+:root[data-theme=light]{--page:#f2f4f7;--s1:#ffffff;--s2:#f6f7f9;--s3:#e6e9ee;--line:#e0e4ea;--line2:#c9d0da;--txt:#16191d;--muted:#4f5866;--dim:#7a8390;
+  --sig:#2563eb;--sig2:rgba(37,99,235,.5);--sig3:rgba(37,99,235,.1);--gold:#6b7585;--hot:#c2410c;--a:#2563eb;--b:#6b7585;--grid:transparent;--shadow:0 12px 30px rgba(20,30,50,.1);color-scheme:light}
 *{box-sizing:border-box}
 html{background:var(--page);-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{margin:0;color:var(--txt);font:15.5px/1.6 var(--body);min-height:100vh;display:flex;flex-direction:column;
-  background:radial-gradient(900px 480px at 85% -10%,rgba(117,170,219,.08),transparent 60%),var(--page);background-attachment:fixed}
+  background:radial-gradient(900px 480px at 85% -10%,rgba(79,143,247,.08),transparent 60%),var(--page);background-attachment:fixed}
 a{color:var(--sig)}::selection{background:var(--sig);color:#000}
 button{font-family:inherit}
 .top{border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--page) 85%,transparent);backdrop-filter:blur(8px);position:sticky;top:0;z-index:5}
@@ -243,8 +243,8 @@ table.tt{width:100%;border-collapse:collapse;font-size:12.5px}.tt th{font:600 10
 .resw>div{min-width:0}.sec{min-width:0;overflow:hidden}.kpis div{min-width:0}
 
 /* ---------- v3: más amigable (tipografía tipo 12 ejes, sin códigos, botones en minúscula) */
-.btn{font:600 14.5px var(--body);letter-spacing:0;text-transform:none;padding:12px 20px;border-radius:10px;color:#14181f}
-:root[data-theme=light] .btn:not(.ghost){color:#F5F1E8}
+.btn{font:600 14.5px var(--body);letter-spacing:0;text-transform:none;padding:12px 20px;border-radius:10px;color:#fff}
+:root[data-theme=light] .btn:not(.ghost){color:#fff}
 .btn.ghost{color:var(--txt);border-width:1.5px}.btn.sm{font-size:13px;padding:7px 13px}
 .nav{background:transparent}.nav a{font:500 14px var(--body);letter-spacing:0;text-transform:none;color:var(--muted);padding:12px 12px}
 .nav a.on{color:var(--txt);border-bottom-color:var(--sig)}
@@ -262,7 +262,7 @@ h2,h3{font-family:var(--head);letter-spacing:-.2px}
 .ver{display:inline-flex!important;align-items:center;gap:9px}
 footer{font-family:var(--body)}
 body{font-variant-numeric:tabular-nums}.tema{font-size:13px;padding:4px 10px}
-:root[data-theme=light] .lang button.on,:root[data-theme=light] .ej .tg,:root[data-theme=light] .tog button.on,:root[data-theme=light] ::selection{color:#F5F1E8}
+:root[data-theme=light] .lang button.on,:root[data-theme=light] .ej .tg,:root[data-theme=light] .tog button.on,:root[data-theme=light] ::selection{color:#fff}
 
 /* ---------- tarjetas de ejemplo (estilo 12 ejes) */
 .stack{padding:22px 18px 14px}
@@ -305,3 +305,6 @@ body{font-variant-numeric:tabular-nums}.tema{font-size:13px;padding:4px 10px}
 @media(max-width:860px){.stack{max-width:440px;margin:0 auto}}
 @media(max-width:480px){.scg{grid-template-columns:33% 1fr;gap:8px}.sc{padding:14px 12px 12px}.sca{padding:10px 8px}.scr{grid-template-columns:20px minmax(0,1fr) 20px 30px;gap:5px;font-size:10.5px}.scr .ib{width:20px;height:20px}}
 .pt.h circle{fill:none;stroke:var(--gold);stroke-width:1.5}.chk2{display:flex!important;flex-direction:row!important;align-items:center;gap:8px;align-self:end;padding-bottom:8px;cursor:pointer}
+.lang button.on,.tog button.on,.ej .tg{color:#fff!important}
+.stack::before{background:#5b6472}.stack::after{background:var(--sig)}
+.pt.i circle{fill:#8b95a5;opacity:.75}

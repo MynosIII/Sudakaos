@@ -227,7 +227,7 @@ def figuras():
     out = {"_nota": "Codificación editorial inicial A REVISAR, a partir de programas, votaciones y declaraciones públicas. No es una medición de opinión. "
                     "0-100 por eje, mismos polos que ejes.json. Se arma con generar.py desde figuras_base.json (8 ejes + ajustes por persona).",
            "revision": "a revisar", "fecha": base.get("fecha", ""), "_nota_cargos": base.get("_nota_cargos", "")}
-    for grupo in ("latam", *PAISES):
+    for grupo in ("latam", "mundo", *PAISES):
         lst = []
         for f in base.get(grupo, []):
             pos = a12(f["pos"])
