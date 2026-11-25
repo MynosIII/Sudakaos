@@ -64,6 +64,8 @@ NARR = {k: rx([t.strip() for t in v]) for k, v in CONFIG["narrativas"].items()}
 RECLAMO = rx(CONFIG["marcadores_reclamo"])
 POS, NEG = rx(CONFIG["positivo"]), rx(CONFIG["negativo"])
 POLS = {k: rx_exact(v["alias"]) for k, v in CONFIG["politicos"].items()}
+# Alias ambiguos (apellidos con homónimos): cuentan solo si el texto o su video tienen contexto del municipio
+POLS_CTX = {k: rx_exact(v["alias_contexto"]) for k, v in CONFIG["politicos"].items() if v.get("alias_contexto")}
 SHOW_COMMENTS = CONFIG.get("textos_comentarios") == "extracto"  # "link" (default) o "extracto" sin autor
 INTEND = {k: rx_exact(v["alias"]) for k, v in CONFIG.get("intendentes", {}).items()}
 CTX = rx_exact(CONFIG["contexto"] + [a for v in CONFIG["localidades"].values() for a in v["alias"]])
@@ -144,6 +146,7 @@ def simplify(ring, step=0.0004):
 
 _EJ = CONFIG.get("ejido", {"nombre": "roca", "niveles": ["8", "7", "9"], "niveles_localidad": ["9", "10"]})
 EJ_NOMBRE, EJ_NIVELES, LOC_NIVELES = fold(_EJ["nombre"]), list(_EJ["niveles"]), set(_EJ["niveles_localidad"])
+IGNORAR_OSM = {fold(x) for x in CONFIG.get("ignorar_lugares_osm", [])}
 GENERIC = {"barrio", "centro", "norte", "sur", "este", "oeste", "chacra", "chacras", "zona", "loteo", "plan", "viviendas"}
 
 
@@ -191,7 +194,7 @@ def build_geo():
                 hit["fuente_geo"] = "OSM"
             continue
         # Lugar con nombre en OSM que no estaba en la lista: se suma con alias seguros ("barrio X" o nombre largo)
-        if not in_ejido or len(nf) < 5 or nf in GENERIC:
+        if not in_ejido or len(nf) < 5 or nf in GENERIC or nf in IGNORAR_OSM:
             continue
         alias = [f"barrio {nf}"] + ([nf] if (" " in nf and len(nf) >= 10) or re.search(r"\d", nf) else [])
         locs[p["name"]] = {"nombre": p["name"], "alias": alias, "centro": [p["lat"], p["lon"]], "fuente_geo": "OSM", "osm_extra": True}
@@ -258,19 +261,25 @@ def main():
     items = dedup
     texts = [i for i in items if i["kind"] != "video"]
     vinfo = {i["video_id"]: i for i in items if i["kind"] == "video"}
+    vtext = {v: i.get("text", "") for v, i in vinfo.items()}
     label_tone(texts)
 
     for r in texts:
         t = fold(r.get("text", ""))
         r["_f"] = t
         r["pols"] = [k for k, p in POLS.items() if p.search(t)]
+        if POLS_CTX:
+            ctx_ok = bool(CTX.search(t)) or (r["kind"] == "comment" and CTX.search(fold(vtext.get(r.get("video_id"), ""))))
+            r["pols"] += [k for k, p in POLS_CTX.items() if k not in r["pols"] and ctx_ok and p.search(t)]
         r["narr"] = [k for k, p in NARR.items() if p.search(" " + t + " ")]
         r["temas"] = [k for k, p in TEMAS.items() if p.search(t)]
         pos, neg = len(POS.findall(t)), len(NEG.findall(t))
         marker = bool(RECLAMO.search(t))
         r["reclamo"] = bool(r["temas"]) and ((marker or neg >= pos) if r["kind"] == "comment" else (marker or neg > pos or r["tono"] == "NEG"))
     # Comentarios heredan el político y el contexto del video cuando el video es sobre uno solo
-    vpols = {v: [k for k, p in POLS.items() if p.search(fold(i.get("text", "")))] for v, i in vinfo.items()}
+    vpols = {v: [k for k, p in POLS.items() if p.search(fold(i.get("text", "")))
+                 or (k in POLS_CTX and POLS_CTX[k].search(fold(i.get("text", ""))) and CTX.search(fold(i.get("text", ""))))]
+             for v, i in vinfo.items()}
     vctx = {v: bool(CTX.search(fold(i.get("text", "")))) for v, i in vinfo.items()}
     for r in texts:
         if r["kind"] == "comment" and not r["pols"] and len(vpols.get(r.get("video_id"), [])) == 1:
@@ -311,7 +320,7 @@ def main():
             return {t: pct(sum(1 for r in rs if r["tono"] == t) / len(rs)) for t in ("NEG", "NEU", "POS")} if rs else None
         emo = [r["emocion"] for r in tone_src if r["emocion"] in EMOS]
         # Narrativas sin contar el propio nombre (si no, "Weretilneck" siempre cae en "Relación con la Provincia")
-        own = POLS[k]
+        own = rx_exact(meta["alias"] + meta.get("alias_contexto", []))
         narr_m = [[n for n, p in NARR.items() if p.search(" " + own.sub(" ", r["_f"]) + " ")] for r in m]
         narr = Counter(n for ns in narr_m for n in ns)
         nn = sum(1 for ns in narr_m if ns) or 1

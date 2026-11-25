@@ -45,6 +45,9 @@
    "foco": true,
    "wiki": [
     "Fernando Moreira"
+   ],
+   "alias_contexto": [
+    "moreira"
    ]
   },
   "Gabriel Katopodis": {
@@ -67,6 +70,9 @@
    "cargo": "Dirigente del Evita en San Martín, exdiputado nacional",
    "wiki": [
     "Leonardo Grosso"
+   ],
+   "alias_contexto": [
+    "grosso"
    ]
   },
   "Mauricio D'Alessandro": {
@@ -80,6 +86,11 @@
    "cargo": "Segundo en la elección de intendente 2023 (27,1%)",
    "wiki": [
     "Mauricio D'Alessandro"
+   ],
+   "alias_contexto": [
+    "d'alessandro",
+    "d’alessandro",
+    "dalessandro"
    ]
   },
   "Santiago López Medrano": {
@@ -326,6 +337,10 @@
    "alias": [
     "villa ballester",
     "ballester centro"
+   ],
+   "centro": [
+    -34.547,
+    -58.556
    ]
   },
   "José León Suárez": {
@@ -334,11 +349,19 @@
     "jose leon suarez",
     "león suárez",
     "leon suarez"
+   ],
+   "centro": [
+    -34.533,
+    -58.579
    ]
   },
   "Billinghurst": {
    "alias": [
     "billinghurst"
+   ],
+   "centro": [
+    -34.574,
+    -58.577
    ]
   },
   "Villa Lynch": {
@@ -354,6 +377,10 @@
     "san andres de san martin",
     "localidad de san andrés",
     "localidad de san andres"
+   ],
+   "centro": [
+    -34.564,
+    -58.536
    ]
   },
   "Villa Maipú": {
@@ -1088,5 +1115,10 @@
   "provincia",
   "conurbano"
  ],
- "textos_comentarios": "extracto"
+ "textos_comentarios": "extracto",
+ "ignorar_lugares_osm": [
+  "San Martín",
+  "General San Martín",
+  "San Martin"
+ ]
 }
