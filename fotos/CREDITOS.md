@@ -14,6 +14,7 @@ Generado por `fotos/bajar.py`. Fotos de Wikimedia Commons (licencia libre, se re
 | Ariel Sujarchuk | `eb122fa2` | GestionAplicada | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Ariel_Sujarchuk.jpg |
 | Axel Kicillof | `80316a5a` | Fotografía oficial de la Presidencia de Colombia | Public domain | https://commons.wikimedia.org/wiki/File:20260417_Barcelona_Reuni%C3%B3n_Petro_Kicillof_1_(cropped).jpg |
 | Beatriz Ávila | `5bb20f27` | Instagram @beatrizavilaok | perfil público | https://www.instagram.com/beatrizavilaok/ |
+| Carlos Melconian | `4d37f717` | Todo Noticias | CC BY 3.0 | https://commons.wikimedia.org/wiki/File:Melconian.png |
 | Carolina Píparo | `db74f78f` | Cámara de Diputados de la Nación Argentina | Public domain | https://commons.wikimedia.org/wiki/File:Carolina_P%C3%ADparo.png |
 | Christian Gribaudo | `71568745` | Legislatura de la Ciudad de Buenos Aires | CC0 | https://commons.wikimedia.org/wiki/File:Christian_Gribaudo.jpg |
 | Claudio Tapia | `5c80e68b` | Ministerio de Cultura de la Nación | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Chiqui_Tapia_2020.png |
@@ -47,6 +48,7 @@ Generado por `fotos/bajar.py`. Fotos de Wikimedia Commons (licencia libre, se re
 | Gustavo Posse | `7930a140` | Matiastozzi | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Angel_Gustavo_Posse.jpg |
 | Gustavo Valdés | `ff6caf03` | Sergio Fernández Dos Santos | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Gustavo_Vald%C3%A9s.jpg |
 | Héctor Rodríguez | `0a8532db` | YVKE Radio Mundial | GPL | https://commons.wikimedia.org/wiki/File:Hector_Rodr%C3%ADguez.png |
+| Hernán Letcher | `5ef4d4dc` | Instagram @hernanletcher | perfil público | https://www.instagram.com/hernanletcher/ |
 | Horacio Rodríguez Larreta | `c0422b90` | Unknown authorUnknown author | CC BY 2.5 ar | https://commons.wikimedia.org/wiki/File:Conferencia_de_prensa_hrl_1-12-203_(cropped).jpg |
 | Jair Bolsonaro | `6fd6c2ca` | Palácio do Planalto | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Jair_Bolsonaro_2022_(cropped).jpg |
 | Javier Milei | `0d1f5c4a` | Gobierno de Argentina | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Retrato_oficial_Presidente_Milei.png |
@@ -135,6 +137,7 @@ Generado por `fotos/bajar.py`. Fotos de Wikimedia Commons (licencia libre, se re
 - Claudio Polich
 - Danann
 - El Presto
+- Emmanuel Álvarez Agis
 - Esteban Sanzio
 - Federico Otermin
 - Florencia Arietto
