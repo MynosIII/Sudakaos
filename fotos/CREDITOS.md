@@ -36,7 +36,9 @@ Generado por `fotos/bajar.py`. Fotos de Wikimedia Commons (licencia libre, se re
 | Federico Sturzenegger | `efedcee9` | [argentina.gob.ar Gobierno argentino] | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:FedericoSturzeneggerOficial.jpg |
 | Fernanda Raverta | `de7e838d` | Presidencia de la Nación Argentina | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Fernanda_Raverta_designada_titular_de_ANSES_2020.jpg |
 | Fernando Haddad | `d30336c8` | Ricardo Stuckert | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Fernando_Haddad_posse_min._da_Fazenda.jpg |
+| Fernando Moreira | `f83ce8ef` | Mrociodiaz90 | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Fernando_Moreira.jpg |
 | Flávio Bolsonaro | `2c391249` | Agência Senado | Attribution | https://commons.wikimedia.org/wiki/File:Foto_oficial_do_senador_Fl%C3%A1vio_Bolsonaro_(v._AgSen)_(3x4).jpg |
+| Gabriel Katopodis | `a4b2c1b5` | Presidencia de la Nación Argentina | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Ministro_Gabriel_Katopodis_-_2020.jpg |
 | Geraldo Alckmin | `c54389fc` | Ricardo Stuckert | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:08.08.2026_-_FOTOS_OFICIAIS_-_55450293534.jpg |
 | Germán Alfaro | `131b4916` | Honorable Cámara de Diputados de la Nación Argentina | Public domain | https://commons.wikimedia.org/wiki/File:Germ%C3%A1n_Enrique_Alfaro.jpg |
 | Germán Braillard | `2f224b58` | Instagram @german.braillard | perfil público | https://www.instagram.com/german.braillard/ |
@@ -64,10 +66,13 @@ Generado por `fotos/bajar.py`. Fotos de Wikimedia Commons (licencia libre, se re
 | Karina Milei | `f909be45` | [argentina.gob.ar Gobierno argentino] | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Karina_Milei.jpg |
 | Leandro Paredes | `1e0261f6` | Bryan Berlin | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg |
 | Leandro Santoro | `ab81060c` | Pboffi | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Santoro54372_(cropped).jpg |
+| Leonardo Grosso | `07d4f372` | Honorable Cámara de Diputados de la Nación Argentina | Public domain | https://commons.wikimedia.org/wiki/File:Sesi%C3%B3n_13-06-2018_Diputado_Grosso.jpg |
+| Leonardo Nardini | `d06bf9ca` | Leonelcord | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Leo_Nardini_en_su_despacho.jpg |
 | Lilia Lemoine | `0771043f` | Sitio web oficial del gobierno argentino (enlace) | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:LemoinePaP.jpg |
 | Lisandro Almirón | `f6b9fe7d` | Cámara de Diputados de la Nación Argentina. | Public domain | https://commons.wikimedia.org/wiki/File:Lisandro_Almir%C3%B3n.png |
 | Lisandro Catalán | `e14bd981` | Argentina.gob.ar | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Lisandro-catalan-2024.jpg |
 | Lorena Villaverde | `7108d78a` | Cámara de Diputados de la Nación Argentina. | Public domain | https://commons.wikimedia.org/wiki/File:Lorena_Villaverde.png |
+| Lucas Ghi | `cabbd779` | Juan Compol | CC0 | https://commons.wikimedia.org/wiki/File:Lucasghi.2025.jpg |
 | Luis Caputo | `26e4511c` | Gobierno argentino | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Luis_Caputo_-_Retrato_Oficial_2024.png |
 | Luiz Inácio Lula | `c6a6dd38` | Palácio do Planalto from Brasilia, Brasil | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Foto_oficial_de_Luiz_In%C3%A1cio_Lula_da_Silva_(estreita).jpg |
 | Malena Galmarini | `e7f47f1f` | TitiNicola | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Malena_Malgarini_nosotras_movemos_el_mundo_2022_tti_nicola_(cropped).jpg |
@@ -87,6 +92,7 @@ Generado por `fotos/bajar.py`. Fotos de Wikimedia Commons (licencia libre, se re
 | Martín Lousteau | `b236879e` | Equipo de Campaña | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:MartinLousteau.jpg |
 | Martín Menem | `bf82f558` | Cámara de Diputados de la Nación | Public domain | https://commons.wikimedia.org/wiki/File:MenemArmenia_(cropped).jpg |
 | Martín Soria | `d8c79840` | Gobierno de la Nación Argentina. | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Ministro_Mart%C3%ADn_Soria_2021.jpg |
+| Mauricio D'Alessandro | `34a79928` | Maumau50 | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Mauricio_dalessandro_actualizada_(cropped).jpg |
 | Mauricio Macri | `9bf40962` | Casa Rosada | CC BY 2.5 ar | https://commons.wikimedia.org/wiki/File:Retrato_oficial_del_Presidente_Mauricio_Macri.jpg |
 | Mauricio Serna | `61d9b62b` | https://www.youtube.com/c/metrocuadrado | CC BY 3.0 | https://commons.wikimedia.org/wiki/File:Chicho_Serna.jpg |
 | Maximiliano Pullaro | `1155d74e` | Juan Giovacchini | CC0 | https://commons.wikimedia.org/wiki/File:Maximiliano_Pullaro,_gobernador_de_Santa_Fe.jpg |
@@ -112,6 +118,7 @@ Generado por `fotos/bajar.py`. Fotos de Wikimedia Commons (licencia libre, se re
 | Roxana Reyes | `b4c655a0` | HCDN | Public domain | https://commons.wikimedia.org/wiki/File:Roxana_Reyes_2021.png |
 | Sandra Pettovello | `9693dddc` | Gobierno argentino | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Sandra_Pettovello_-_Retrato_Oficial_2024.png |
 | Sergio Massa | `9cb4bbc9` | Ministerio de Cultura de la Nación | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Sergio_Massa_-_Presentaci%C3%B3n_nueva_l%C3%ADnea_de_financiamiento_para_la_producci%C3%B3n_de_contenidos_audiovisuales_(cropped2).jpg |
+| Soledad Martínez | `88216907` | Mediosedicion | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Foto_perfil_sole.jpg |
 | Stella Lugo | `c17508ad` | Oficina Regional de Informacion - Gobernacion del Estado Falcon | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Stella_Lugo_de_montilla.jpg |
 | Tarcísio de Freitas | `d4d47fe6` | Ciete Silvério/Governo do Estado de SP | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Governador_do_Estado_de_S%C3%A3o_Paulo,_Tarc%C3%ADsio_de_Freitas_-_Foto_Oficial.jpg |
 | Verónica Magario | `eb7016fa` | Embajada de EEUU en Argentina | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Marc_Stanley_y_Ver%C3%B3nica_Magario_(cropped).jpg |
@@ -134,6 +141,7 @@ Generado por `fotos/bajar.py`. Fotos de Wikimedia Commons (licencia libre, se re
 - Gordo Dan
 - Henry Hernández
 - Horacio Paolini
+- Jaime Méndez
 - Jairo Guzmán
 - Javier Belloni
 - Javier Rehl
@@ -145,6 +153,8 @@ Generado por `fotos/bajar.py`. Fotos de Wikimedia Commons (licencia libre, se re
 - Marcial Peralta
 - Pablo González
 - Roberto Sánchez
+- Rodrigo Aybar
+- Santiago López Medrano
 - Vilma Baragiola
 - Walter Cortés
 - Yanira León
