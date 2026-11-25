@@ -717,5 +717,8 @@
   "strada",
   "julia"
  ],
- "textos_comentarios": "extracto"
+ "textos_comentarios": "extracto",
+ "excluir_textos": [
+  "letcher"
+ ]
 }
