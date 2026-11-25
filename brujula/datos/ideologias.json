@@ -1920,6 +1920,2118 @@
     "ipe": 75,
     "uni": 30
    }
+  },
+  {
+   "id": "anarcocomunismo",
+   "pos": [
+    5,
+    5,
+    10,
+    90,
+    95,
+    0,
+    5,
+    10,
+    85,
+    5,
+    45,
+    50
+   ],
+   "es": {
+    "nombre": "Anarcocomunismo",
+    "desc": "Sin Estado, sin dinero y sin propiedad privada: cada uno según su capacidad y a cada uno según su necesidad."
+   },
+   "pt": {
+    "nombre": "Anarcocomunismo",
+    "desc": "Sem Estado, sem dinheiro e sem propriedade privada: de cada um segundo sua capacidade, a cada um segundo sua necessidade."
+   },
+   "en": {
+    "nombre": "Anarcho-communism",
+    "desc": "No state, no money and no private property: from each according to ability, to each according to need."
+   },
+   "pos2": {
+    "ecl": 30,
+    "dis": 0,
+    "bie": 5,
+    "epi": 35,
+    "ges": 95,
+    "tra": 95,
+    "idc": 70,
+    "pen": 10,
+    "lab": 0,
+    "eti": 40,
+    "tem": 55,
+    "fut": 45,
+    "ind": 40,
+    "mon": 30,
+    "inf": 5,
+    "ipe": 55,
+    "uni": 10
+   }
+  },
+  {
+   "id": "anarcofeminismo",
+   "pos": [
+    10,
+    5,
+    10,
+    90,
+    95,
+    15,
+    5,
+    5,
+    90,
+    20,
+    50,
+    50
+   ],
+   "es": {
+    "nombre": "Anarcofeminismo",
+    "desc": "El patriarcado y el Estado como dos caras de la misma dominación."
+   },
+   "pt": {
+    "nombre": "Anarcofeminismo",
+    "desc": "O patriarcado e o Estado como duas faces da mesma dominação."
+   },
+   "en": {
+    "nombre": "Anarcha-feminism",
+    "desc": "Patriarchy and the state as two sides of the same domination."
+   },
+   "pos2": {
+    "ecl": 30,
+    "dis": 10,
+    "bie": 15,
+    "epi": 30,
+    "ges": 90,
+    "tra": 85,
+    "idc": 50,
+    "pen": 5,
+    "lab": 10,
+    "eti": 40,
+    "tem": 60,
+    "fut": 40,
+    "ind": 45,
+    "mon": 35,
+    "inf": 5,
+    "ipe": 55,
+    "uni": 5
+   }
+  },
+  {
+   "id": "anarcoprimitivismo",
+   "pos": [
+    0,
+    10,
+    40,
+    80,
+    90,
+    25,
+    20,
+    40,
+    60,
+    30,
+    15,
+    100
+   ],
+   "es": {
+    "nombre": "Anarcoprimitivismo",
+    "desc": "Rechazo de la civilización industrial y vuelta a comunidades pequeñas y cercanas a la naturaleza."
+   },
+   "pt": {
+    "nombre": "Anarcoprimitivismo",
+    "desc": "Rejeição da civilização industrial e volta a comunidades pequenas e próximas da natureza."
+   },
+   "en": {
+    "nombre": "Anarcho-primitivism",
+    "desc": "Rejecting industrial civilisation for small communities close to nature."
+   },
+   "pos2": {
+    "ecl": 0,
+    "dis": 20,
+    "bie": 40,
+    "epi": 60,
+    "ges": 85,
+    "tra": 100,
+    "idc": 80,
+    "pen": 20,
+    "lab": 5,
+    "eti": 60,
+    "tem": 70,
+    "fut": 10,
+    "ind": 50,
+    "mon": 40,
+    "inf": 10,
+    "ipe": 30,
+    "uni": 40
+   }
+  },
+  {
+   "id": "mutualismo",
+   "pos": [
+    10,
+    10,
+    20,
+    80,
+    90,
+    45,
+    15,
+    25,
+    75,
+    45,
+    55,
+    40
+   ],
+   "es": {
+    "nombre": "Mutualismo",
+    "desc": "Mercado sin capitalismo: cooperativas, crédito mutuo y propiedad de quien usa la tierra o la herramienta."
+   },
+   "pt": {
+    "nombre": "Mutualismo",
+    "desc": "Mercado sem capitalismo: cooperativas, crédito mútuo e propriedade de quem usa a terra ou a ferramenta."
+   },
+   "en": {
+    "nombre": "Mutualism",
+    "desc": "Markets without capitalism: co-ops, mutual credit and ownership by whoever uses the land or tool."
+   },
+   "pos2": {
+    "ecl": 40,
+    "dis": 40,
+    "bie": 45,
+    "epi": 30,
+    "ges": 85,
+    "tra": 60,
+    "idc": 45,
+    "pen": 20,
+    "lab": 10,
+    "eti": 45,
+    "tem": 55,
+    "fut": 45,
+    "ind": 55,
+    "mon": 40,
+    "inf": 10,
+    "ipe": 55,
+    "uni": 20
+   }
+  },
+  {
+   "id": "agorismo",
+   "pos": [
+    5,
+    5,
+    40,
+    70,
+    95,
+    90,
+    30,
+    45,
+    60,
+    95,
+    95,
+    20
+   ],
+   "es": {
+    "nombre": "Agorismo",
+    "desc": "Dejar atrás al Estado haciendo crecer una economía paralela por fuera de sus reglas."
+   },
+   "pt": {
+    "nombre": "Agorismo",
+    "desc": "Deixar o Estado para trás fazendo crescer uma economia paralela fora das suas regras."
+   },
+   "en": {
+    "nombre": "Agorism",
+    "desc": "Leaving the state behind by growing a parallel economy outside its rules."
+   },
+   "pos2": {
+    "ecl": 75,
+    "dis": 90,
+    "bie": 95,
+    "epi": 40,
+    "ges": 70,
+    "tra": 85,
+    "idc": 15,
+    "pen": 30,
+    "lab": 85,
+    "eti": 70,
+    "tem": 50,
+    "fut": 65,
+    "ind": 90,
+    "mon": 100,
+    "inf": 5,
+    "ipe": 40,
+    "uni": 35
+   }
+  },
+  {
+   "id": "minarquismo",
+   "pos": [
+    30,
+    25,
+    50,
+    55,
+    90,
+    92,
+    35,
+    50,
+    55,
+    95,
+    95,
+    20
+   ],
+   "es": {
+    "nombre": "Minarquismo",
+    "desc": "Un Estado mínimo que solo se ocupe de la seguridad, la justicia y la defensa."
+   },
+   "pt": {
+    "nombre": "Minarquismo",
+    "desc": "Um Estado mínimo que só cuide da segurança, da justiça e da defesa."
+   },
+   "en": {
+    "nombre": "Minarchism",
+    "desc": "A minimal state limited to security, courts and defence."
+   },
+   "pos2": {
+    "ecl": 75,
+    "dis": 90,
+    "bie": 95,
+    "epi": 35,
+    "ges": 50,
+    "tra": 40,
+    "idc": 10,
+    "pen": 50,
+    "lab": 90,
+    "eti": 65,
+    "tem": 60,
+    "fut": 60,
+    "ind": 90,
+    "mon": 95,
+    "inf": 10,
+    "ipe": 70,
+    "uni": 35
+   }
+  },
+  {
+   "id": "paleolibertarismo",
+   "pos": [
+    25,
+    35,
+    70,
+    55,
+    75,
+    90,
+    70,
+    80,
+    25,
+    90,
+    80,
+    40
+   ],
+   "es": {
+    "nombre": "Paleolibertarismo",
+    "desc": "Libre mercado radical junto con valores culturales tradicionales y desconfianza de la inmigración."
+   },
+   "pt": {
+    "nombre": "Paleolibertarianismo",
+    "desc": "Livre mercado radical junto com valores culturais tradicionais e desconfiança da imigração."
+   },
+   "en": {
+    "nombre": "Paleolibertarianism",
+    "desc": "Radical free markets combined with traditional cultural values and wariness of immigration."
+   },
+   "pos2": {
+    "ecl": 80,
+    "dis": 90,
+    "bie": 90,
+    "epi": 70,
+    "ges": 50,
+    "tra": 60,
+    "idc": 60,
+    "pen": 70,
+    "lab": 85,
+    "eti": 80,
+    "tem": 55,
+    "fut": 60,
+    "ind": 80,
+    "mon": 95,
+    "inf": 25,
+    "ipe": 40,
+    "uni": 70
+   }
+  },
+  {
+   "id": "georgismo",
+   "pos": [
+    40,
+    25,
+    30,
+    60,
+    75,
+    55,
+    25,
+    35,
+    65,
+    65,
+    85,
+    30
+   ],
+   "es": {
+    "nombre": "Georgismo",
+    "desc": "Libre comercio y un impuesto único sobre el valor de la tierra, que es de todos."
+   },
+   "pt": {
+    "nombre": "Georgismo",
+    "desc": "Livre comércio e um imposto único sobre o valor da terra, que é de todos."
+   },
+   "en": {
+    "nombre": "Georgism",
+    "desc": "Free trade and a single tax on land value, which belongs to everyone."
+   },
+   "pos2": {
+    "ecl": 45,
+    "dis": 50,
+    "bie": 40,
+    "epi": 25,
+    "ges": 50,
+    "tra": 30,
+    "idc": 30,
+    "pen": 35,
+    "lab": 60,
+    "eti": 45,
+    "tem": 70,
+    "fut": 45,
+    "ind": 75,
+    "mon": 70,
+    "inf": 20,
+    "ipe": 80,
+    "uni": 25
+   }
+  },
+  {
+   "id": "ordoliberalismo",
+   "pos": [
+    45,
+    30,
+    35,
+    55,
+    60,
+    75,
+    45,
+    55,
+    50,
+    70,
+    80,
+    25
+   ],
+   "es": {
+    "nombre": "Ordoliberalismo",
+    "desc": "Economía social de mercado: competencia libre, pero con reglas firmes y un Banco Central independiente."
+   },
+   "pt": {
+    "nombre": "Ordoliberalismo",
+    "desc": "Economia social de mercado: livre concorrência, mas com regras firmes e um Banco Central independente."
+   },
+   "en": {
+    "nombre": "Ordoliberalism",
+    "desc": "Social market economy: free competition under firm rules and an independent central bank."
+   },
+   "pos2": {
+    "ecl": 60,
+    "dis": 70,
+    "bie": 60,
+    "epi": 30,
+    "ges": 30,
+    "tra": 10,
+    "idc": 40,
+    "pen": 55,
+    "lab": 65,
+    "eti": 55,
+    "tem": 75,
+    "fut": 45,
+    "ind": 70,
+    "mon": 95,
+    "inf": 25,
+    "ipe": 95,
+    "uni": 35
+   }
+  },
+  {
+   "id": "libertarismo_izquierda",
+   "pos": [
+    20,
+    10,
+    15,
+    80,
+    95,
+    45,
+    10,
+    10,
+    85,
+    55,
+    75,
+    30
+   ],
+   "es": {
+    "nombre": "Libertarismo de izquierda",
+    "desc": "Máxima libertad personal, pero los recursos naturales son de todos y la riqueza se reparte."
+   },
+   "pt": {
+    "nombre": "Libertarianismo de esquerda",
+    "desc": "Máxima liberdade pessoal, mas os recursos naturais são de todos e a riqueza é repartida."
+   },
+   "en": {
+    "nombre": "Left-libertarianism",
+    "desc": "Maximum personal freedom, but natural resources belong to all and wealth is shared."
+   },
+   "pos2": {
+    "ecl": 35,
+    "dis": 30,
+    "bie": 35,
+    "epi": 25,
+    "ges": 75,
+    "tra": 50,
+    "idc": 20,
+    "pen": 15,
+    "lab": 40,
+    "eti": 45,
+    "tem": 60,
+    "fut": 40,
+    "ind": 65,
+    "mon": 60,
+    "inf": 5,
+    "ipe": 60,
+    "uni": 10
+   }
+  },
+  {
+   "id": "republicanismo",
+   "pos": [
+    45,
+    20,
+    40,
+    55,
+    65,
+    60,
+    30,
+    45,
+    50,
+    60,
+    60,
+    30
+   ],
+   "es": {
+    "nombre": "Republicanismo",
+    "desc": "Virtud cívica, división de poderes y ninguna persona por encima de la ley."
+   },
+   "pt": {
+    "nombre": "Republicanismo",
+    "desc": "Virtude cívica, separação de poderes e ninguém acima da lei."
+   },
+   "en": {
+    "nombre": "Republicanism",
+    "desc": "Civic virtue, separation of powers and no one above the law."
+   },
+   "pos2": {
+    "ecl": 55,
+    "dis": 55,
+    "bie": 50,
+    "epi": 30,
+    "ges": 55,
+    "tra": 20,
+    "idc": 50,
+    "pen": 50,
+    "lab": 60,
+    "eti": 55,
+    "tem": 70,
+    "fut": 45,
+    "ind": 55,
+    "mon": 75,
+    "inf": 20,
+    "ipe": 95,
+    "uni": 40
+   }
+  },
+  {
+   "id": "radicalismo",
+   "pos": [
+    35,
+    20,
+    40,
+    60,
+    70,
+    50,
+    25,
+    35,
+    60,
+    45,
+    55,
+    35
+   ],
+   "es": {
+    "nombre": "Radicalismo",
+    "desc": "Sufragio, educación pública laica, instituciones fuertes y un Estado que modera al mercado."
+   },
+   "pt": {
+    "nombre": "Radicalismo",
+    "desc": "Sufrágio, educação pública laica, instituições fortes e um Estado que modera o mercado."
+   },
+   "en": {
+    "nombre": "Radicalism",
+    "desc": "Suffrage, secular public schools, strong institutions and a state that tempers the market."
+   },
+   "pos2": {
+    "ecl": 55,
+    "dis": 45,
+    "bie": 35,
+    "epi": 30,
+    "ges": 50,
+    "tra": 20,
+    "idc": 45,
+    "pen": 40,
+    "lab": 50,
+    "eti": 50,
+    "tem": 65,
+    "fut": 45,
+    "ind": 45,
+    "mon": 60,
+    "inf": 20,
+    "ipe": 90,
+    "uni": 35
+   }
+  },
+  {
+   "id": "confederalismo_democratico",
+   "pos": [
+    0,
+    5,
+    15,
+    85,
+    90,
+    20,
+    10,
+    10,
+    85,
+    25,
+    45,
+    60
+   ],
+   "es": {
+    "nombre": "Confederalismo democrático",
+    "desc": "Asambleas locales federadas, ecología y feminismo en lugar del Estado nación."
+   },
+   "pt": {
+    "nombre": "Confederalismo democrático",
+    "desc": "Assembleias locais federadas, ecologia e feminismo no lugar do Estado-nação."
+   },
+   "en": {
+    "nombre": "Democratic confederalism",
+    "desc": "Federated local assemblies, ecology and feminism instead of the nation-state."
+   },
+   "pos2": {
+    "ecl": 15,
+    "dis": 15,
+    "bie": 20,
+    "epi": 30,
+    "ges": 100,
+    "tra": 70,
+    "idc": 60,
+    "pen": 15,
+    "lab": 10,
+    "eti": 40,
+    "tem": 70,
+    "fut": 30,
+    "ind": 45,
+    "mon": 40,
+    "inf": 10,
+    "ipe": 60,
+    "uni": 15
+   }
+  },
+  {
+   "id": "eurocomunismo",
+   "pos": [
+    50,
+    25,
+    25,
+    70,
+    70,
+    15,
+    15,
+    20,
+    75,
+    20,
+    40,
+    35
+   ],
+   "es": {
+    "nombre": "Eurocomunismo",
+    "desc": "Comunismo que acepta la democracia parlamentaria y el pluralismo."
+   },
+   "pt": {
+    "nombre": "Eurocomunismo",
+    "desc": "Comunismo que aceita a democracia parlamentar e o pluralismo."
+   },
+   "en": {
+    "nombre": "Eurocommunism",
+    "desc": "Communism that accepts parliamentary democracy and pluralism."
+   },
+   "pos2": {
+    "ecl": 45,
+    "dis": 15,
+    "bie": 10,
+    "epi": 35,
+    "ges": 60,
+    "tra": 40,
+    "idc": 60,
+    "pen": 30,
+    "lab": 20,
+    "eti": 40,
+    "tem": 65,
+    "fut": 45,
+    "ind": 35,
+    "mon": 40,
+    "inf": 30,
+    "ipe": 70,
+    "uni": 25
+   }
+  },
+  {
+   "id": "maoismo",
+   "pos": [
+    75,
+    85,
+    70,
+    35,
+    20,
+    0,
+    5,
+    30,
+    45,
+    0,
+    15,
+    35
+   ],
+   "es": {
+    "nombre": "Maoísmo",
+    "desc": "Revolución campesina, guerra popular y movilización permanente de las masas."
+   },
+   "pt": {
+    "nombre": "Maoísmo",
+    "desc": "Revolução camponesa, guerra popular e mobilização permanente das massas."
+   },
+   "en": {
+    "nombre": "Maoism",
+    "desc": "Peasant revolution, people's war and permanent mass mobilisation."
+   },
+   "pos2": {
+    "ecl": 70,
+    "dis": 0,
+    "bie": 5,
+    "epi": 85,
+    "ges": 60,
+    "tra": 100,
+    "idc": 90,
+    "pen": 75,
+    "lab": 15,
+    "eti": 30,
+    "tem": 70,
+    "fut": 50,
+    "ind": 15,
+    "mon": 10,
+    "inf": 95,
+    "ipe": 5,
+    "uni": 55
+   }
+  },
+  {
+   "id": "juche",
+   "pos": [
+    95,
+    100,
+    100,
+    10,
+    5,
+    0,
+    40,
+    80,
+    5,
+    0,
+    0,
+    40
+   ],
+   "es": {
+    "nombre": "Juche",
+    "desc": "Autosuficiencia nacional total, un líder supremo y un Estado que controla todo."
+   },
+   "pt": {
+    "nombre": "Juche",
+    "desc": "Autossuficiência nacional total, um líder supremo e um Estado que controla tudo."
+   },
+   "en": {
+    "nombre": "Juche",
+    "desc": "Total national self-reliance, a supreme leader and a state that controls everything."
+   },
+   "pos2": {
+    "ecl": 85,
+    "dis": 20,
+    "bie": 20,
+    "epi": 100,
+    "ges": 5,
+    "tra": 40,
+    "idc": 100,
+    "pen": 100,
+    "lab": 60,
+    "eti": 60,
+    "tem": 75,
+    "fut": 50,
+    "ind": 0,
+    "mon": 10,
+    "inf": 100,
+    "ipe": 0,
+    "uni": 100
+   }
+  },
+  {
+   "id": "consejismo",
+   "pos": [
+    25,
+    10,
+    15,
+    75,
+    80,
+    0,
+    10,
+    15,
+    75,
+    5,
+    40,
+    45
+   ],
+   "es": {
+    "nombre": "Comunismo de consejos",
+    "desc": "Los consejos obreros, y no un partido, deben dirigir la economía y la sociedad."
+   },
+   "pt": {
+    "nombre": "Comunismo de conselhos",
+    "desc": "Os conselhos operários, e não um partido, devem dirigir a economia e a sociedade."
+   },
+   "en": {
+    "nombre": "Council communism",
+    "desc": "Workers' councils, not a party, should run the economy and society."
+   },
+   "pos2": {
+    "ecl": 45,
+    "dis": 5,
+    "bie": 10,
+    "epi": 40,
+    "ges": 95,
+    "tra": 90,
+    "idc": 65,
+    "pen": 20,
+    "lab": 0,
+    "eti": 40,
+    "tem": 60,
+    "fut": 45,
+    "ind": 40,
+    "mon": 30,
+    "inf": 15,
+    "ipe": 55,
+    "uni": 15
+   }
+  },
+  {
+   "id": "socialismo_mercado",
+   "pos": [
+    45,
+    25,
+    30,
+    65,
+    70,
+    25,
+    20,
+    25,
+    70,
+    50,
+    60,
+    35
+   ],
+   "es": {
+    "nombre": "Socialismo de mercado",
+    "desc": "Empresas de los trabajadores o públicas que compiten en un mercado."
+   },
+   "pt": {
+    "nombre": "Socialismo de mercado",
+    "desc": "Empresas dos trabalhadores ou públicas competindo num mercado."
+   },
+   "en": {
+    "nombre": "Market socialism",
+    "desc": "Worker-owned or public firms competing in a market."
+   },
+   "pos2": {
+    "ecl": 50,
+    "dis": 25,
+    "bie": 20,
+    "epi": 25,
+    "ges": 60,
+    "tra": 35,
+    "idc": 50,
+    "pen": 30,
+    "lab": 10,
+    "eti": 40,
+    "tem": 65,
+    "fut": 45,
+    "ind": 55,
+    "mon": 55,
+    "inf": 25,
+    "ipe": 70,
+    "uni": 25
+   }
+  },
+  {
+   "id": "socialismo_cristiano",
+   "pos": [
+    40,
+    25,
+    30,
+    70,
+    60,
+    20,
+    75,
+    50,
+    60,
+    25,
+    40,
+    50
+   ],
+   "es": {
+    "nombre": "Socialismo cristiano",
+    "desc": "La justicia social como mandato de la fe: igualdad y solidaridad desde el Evangelio."
+   },
+   "pt": {
+    "nombre": "Socialismo cristão",
+    "desc": "A justiça social como mandato da fé: igualdade e solidariedade a partir do Evangelho."
+   },
+   "en": {
+    "nombre": "Christian socialism",
+    "desc": "Social justice as a command of faith: equality and solidarity from the Gospel."
+   },
+   "pos2": {
+    "ecl": 40,
+    "dis": 20,
+    "bie": 15,
+    "epi": 55,
+    "ges": 65,
+    "tra": 35,
+    "idc": 75,
+    "pen": 30,
+    "lab": 25,
+    "eti": 70,
+    "tem": 65,
+    "fut": 45,
+    "ind": 35,
+    "mon": 45,
+    "inf": 35,
+    "ipe": 70,
+    "uni": 30
+   }
+  },
+  {
+   "id": "teologia_liberacion",
+   "pos": [
+    35,
+    25,
+    25,
+    75,
+    65,
+    15,
+    85,
+    40,
+    70,
+    20,
+    30,
+    55
+   ],
+   "es": {
+    "nombre": "Teología de la liberación",
+    "desc": "La Iglesia del lado de los pobres, contra la injusticia y la dependencia."
+   },
+   "pt": {
+    "nombre": "Teologia da libertação",
+    "desc": "A Igreja do lado dos pobres, contra a injustiça e a dependência."
+   },
+   "en": {
+    "nombre": "Liberation theology",
+    "desc": "The Church on the side of the poor, against injustice and dependency."
+   },
+   "pos2": {
+    "ecl": 40,
+    "dis": 10,
+    "bie": 10,
+    "epi": 50,
+    "ges": 75,
+    "tra": 60,
+    "idc": 75,
+    "pen": 25,
+    "lab": 20,
+    "eti": 65,
+    "tem": 60,
+    "fut": 50,
+    "ind": 30,
+    "mon": 35,
+    "inf": 30,
+    "ipe": 55,
+    "uni": 25
+   }
+  },
+  {
+   "id": "nacionalbolchevismo",
+   "pos": [
+    80,
+    90,
+    95,
+    20,
+    10,
+    20,
+    55,
+    80,
+    15,
+    15,
+    15,
+    40
+   ],
+   "es": {
+    "nombre": "Nacional-bolchevismo",
+    "desc": "Economía estatal de izquierda unida a nacionalismo extremo y valores tradicionales."
+   },
+   "pt": {
+    "nombre": "Nacional-bolchevismo",
+    "desc": "Economia estatal de esquerda unida a nacionalismo extremo e valores tradicionais."
+   },
+   "en": {
+    "nombre": "National Bolshevism",
+    "desc": "Left-wing state economics combined with extreme nationalism and traditional values."
+   },
+   "pos2": {
+    "ecl": 70,
+    "dis": 25,
+    "bie": 25,
+    "epi": 80,
+    "ges": 30,
+    "tra": 85,
+    "idc": 95,
+    "pen": 90,
+    "lab": 40,
+    "eti": 60,
+    "tem": 50,
+    "fut": 60,
+    "ind": 10,
+    "mon": 15,
+    "inf": 90,
+    "ipe": 10,
+    "uni": 95
+   }
+  },
+  {
+   "id": "tercera_posicion",
+   "pos": [
+    70,
+    80,
+    90,
+    25,
+    20,
+    40,
+    60,
+    85,
+    10,
+    30,
+    15,
+    45
+   ],
+   "es": {
+    "nombre": "Tercera posición",
+    "desc": "Ni capitalismo ni comunismo: nacionalismo radical con economía dirigida."
+   },
+   "pt": {
+    "nombre": "Terceira posição",
+    "desc": "Nem capitalismo nem comunismo: nacionalismo radical com economia dirigida."
+   },
+   "en": {
+    "nombre": "Third Position",
+    "desc": "Neither capitalism nor communism: radical nationalism with a directed economy."
+   },
+   "pos2": {
+    "ecl": 70,
+    "dis": 45,
+    "bie": 40,
+    "epi": 80,
+    "ges": 35,
+    "tra": 80,
+    "idc": 95,
+    "pen": 90,
+    "lab": 55,
+    "eti": 65,
+    "tem": 55,
+    "fut": 60,
+    "ind": 10,
+    "mon": 20,
+    "inf": 90,
+    "ipe": 10,
+    "uni": 95
+   }
+  },
+  {
+   "id": "nacionalismo_civico",
+   "pos": [
+    55,
+    45,
+    70,
+    45,
+    50,
+    55,
+    45,
+    55,
+    30,
+    50,
+    45,
+    35
+   ],
+   "es": {
+    "nombre": "Nacionalismo cívico",
+    "desc": "La nación como comunidad de ciudadanos que comparten leyes e instituciones, no un origen."
+   },
+   "pt": {
+    "nombre": "Nacionalismo cívico",
+    "desc": "A nação como comunidade de cidadãos que compartilham leis e instituições, não uma origem."
+   },
+   "en": {
+    "nombre": "Civic nationalism",
+    "desc": "The nation as a community of citizens sharing laws and institutions, not ancestry."
+   },
+   "pos2": {
+    "ecl": 65,
+    "dis": 55,
+    "bie": 50,
+    "epi": 45,
+    "ges": 45,
+    "tra": 25,
+    "idc": 60,
+    "pen": 60,
+    "lab": 60,
+    "eti": 55,
+    "tem": 60,
+    "fut": 55,
+    "ind": 40,
+    "mon": 60,
+    "inf": 45,
+    "ipe": 65,
+    "uni": 70
+   }
+  },
+  {
+   "id": "etnonacionalismo",
+   "pos": [
+    70,
+    75,
+    95,
+    25,
+    25,
+    55,
+    65,
+    85,
+    0,
+    50,
+    30,
+    45
+   ],
+   "es": {
+    "nombre": "Etnonacionalismo",
+    "desc": "La nación definida por el origen étnico, la lengua y la sangre."
+   },
+   "pt": {
+    "nombre": "Etnonacionalismo",
+    "desc": "A nação definida pela origem étnica, pela língua e pelo sangue."
+   },
+   "en": {
+    "nombre": "Ethnic nationalism",
+    "desc": "The nation defined by ethnicity, language and descent."
+   },
+   "pos2": {
+    "ecl": 70,
+    "dis": 55,
+    "bie": 50,
+    "epi": 80,
+    "ges": 40,
+    "tra": 60,
+    "idc": 95,
+    "pen": 90,
+    "lab": 65,
+    "eti": 70,
+    "tem": 55,
+    "fut": 60,
+    "ind": 25,
+    "mon": 45,
+    "inf": 80,
+    "ipe": 25,
+    "uni": 100
+   }
+  },
+  {
+   "id": "soberanismo",
+   "pos": [
+    60,
+    50,
+    90,
+    40,
+    45,
+    55,
+    50,
+    65,
+    25,
+    50,
+    30,
+    45
+   ],
+   "es": {
+    "nombre": "Soberanismo",
+    "desc": "Recuperar decisiones cedidas a organismos y bloques internacionales."
+   },
+   "pt": {
+    "nombre": "Soberanismo",
+    "desc": "Recuperar decisões cedidas a organismos e blocos internacionais."
+   },
+   "en": {
+    "nombre": "Sovereigntism",
+    "desc": "Reclaiming powers handed to international bodies and blocs."
+   },
+   "pos2": {
+    "ecl": 65,
+    "dis": 55,
+    "bie": 50,
+    "epi": 55,
+    "ges": 60,
+    "tra": 45,
+    "idc": 70,
+    "pen": 70,
+    "lab": 60,
+    "eti": 60,
+    "tem": 50,
+    "fut": 60,
+    "ind": 30,
+    "mon": 45,
+    "inf": 55,
+    "ipe": 40,
+    "uni": 85
+   }
+  },
+  {
+   "id": "monarquismo",
+   "pos": [
+    70,
+    75,
+    65,
+    35,
+    30,
+    65,
+    80,
+    95,
+    25,
+    55,
+    45,
+    60
+   ],
+   "es": {
+    "nombre": "Monarquismo",
+    "desc": "Un rey o una reina como jefe de Estado, símbolo de continuidad y tradición."
+   },
+   "pt": {
+    "nombre": "Monarquismo",
+    "desc": "Um rei ou uma rainha como chefe de Estado, símbolo de continuidade e tradição."
+   },
+   "en": {
+    "nombre": "Monarchism",
+    "desc": "A king or queen as head of state, a symbol of continuity and tradition."
+   },
+   "pos2": {
+    "ecl": 60,
+    "dis": 70,
+    "bie": 60,
+    "epi": 85,
+    "ges": 15,
+    "tra": 30,
+    "idc": 85,
+    "pen": 80,
+    "lab": 75,
+    "eti": 85,
+    "tem": 85,
+    "fut": 45,
+    "ind": 45,
+    "mon": 70,
+    "inf": 65,
+    "ipe": 40,
+    "uni": 75
+   }
+  },
+  {
+   "id": "paleoconservadurismo",
+   "pos": [
+    40,
+    50,
+    85,
+    45,
+    35,
+    65,
+    80,
+    90,
+    10,
+    50,
+    20,
+    60
+   ],
+   "es": {
+    "nombre": "Paleoconservadurismo",
+    "desc": "Tradición, religión, proteccionismo y no intervenir en guerras ajenas."
+   },
+   "pt": {
+    "nombre": "Paleoconservadorismo",
+    "desc": "Tradição, religião, protecionismo e não intervir em guerras alheias."
+   },
+   "en": {
+    "nombre": "Paleoconservatism",
+    "desc": "Tradition, religion, protectionism and staying out of foreign wars."
+   },
+   "pos2": {
+    "ecl": 60,
+    "dis": 65,
+    "bie": 60,
+    "epi": 80,
+    "ges": 45,
+    "tra": 40,
+    "idc": 90,
+    "pen": 85,
+    "lab": 70,
+    "eti": 85,
+    "tem": 65,
+    "fut": 55,
+    "ind": 25,
+    "mon": 70,
+    "inf": 60,
+    "ipe": 50,
+    "uni": 90
+   }
+  },
+  {
+   "id": "conservadurismo_fiscal",
+   "pos": [
+    45,
+    35,
+    50,
+    50,
+    55,
+    80,
+    50,
+    55,
+    45,
+    85,
+    75,
+    30
+   ],
+   "es": {
+    "nombre": "Conservadurismo fiscal",
+    "desc": "Gasto bajo, déficit cero y pocos impuestos."
+   },
+   "pt": {
+    "nombre": "Conservadorismo fiscal",
+    "desc": "Gasto baixo, déficit zero e poucos impostos."
+   },
+   "en": {
+    "nombre": "Fiscal conservatism",
+    "desc": "Low spending, balanced budgets and low taxes."
+   },
+   "pos2": {
+    "ecl": 75,
+    "dis": 80,
+    "bie": 85,
+    "epi": 45,
+    "ges": 40,
+    "tra": 20,
+    "idc": 45,
+    "pen": 60,
+    "lab": 80,
+    "eti": 65,
+    "tem": 70,
+    "fut": 55,
+    "ind": 75,
+    "mon": 95,
+    "inf": 30,
+    "ipe": 80,
+    "uni": 55
+   }
+  },
+  {
+   "id": "conservadurismo_social",
+   "pos": [
+    55,
+    40,
+    55,
+    45,
+    45,
+    55,
+    70,
+    75,
+    35,
+    40,
+    40,
+    50
+   ],
+   "es": {
+    "nombre": "Conservadurismo social",
+    "desc": "Familia, religión y comunidad, con un Estado que protege a los más débiles."
+   },
+   "pt": {
+    "nombre": "Conservadorismo social",
+    "desc": "Família, religião e comunidade, com um Estado que protege os mais fracos."
+   },
+   "en": {
+    "nombre": "Social conservatism",
+    "desc": "Family, faith and community, with a state that protects the vulnerable."
+   },
+   "pos2": {
+    "ecl": 60,
+    "dis": 50,
+    "bie": 40,
+    "epi": 60,
+    "ges": 40,
+    "tra": 15,
+    "idc": 80,
+    "pen": 70,
+    "lab": 60,
+    "eti": 75,
+    "tem": 70,
+    "fut": 50,
+    "ind": 40,
+    "mon": 65,
+    "inf": 45,
+    "ipe": 75,
+    "uni": 60
+   }
+  },
+  {
+   "id": "teocracia",
+   "pos": [
+    80,
+    95,
+    80,
+    30,
+    10,
+    55,
+    100,
+    100,
+    10,
+    45,
+    35,
+    75
+   ],
+   "es": {
+    "nombre": "Teocracia",
+    "desc": "Gobiernan las autoridades religiosas y la ley sale de los textos sagrados."
+   },
+   "pt": {
+    "nombre": "Teocracia",
+    "desc": "Governam as autoridades religiosas e a lei vem dos textos sagrados."
+   },
+   "en": {
+    "nombre": "Theocracy",
+    "desc": "Religious authorities rule and law comes from sacred texts."
+   },
+   "pos2": {
+    "ecl": 60,
+    "dis": 60,
+    "bie": 55,
+    "epi": 100,
+    "ges": 10,
+    "tra": 50,
+    "idc": 100,
+    "pen": 95,
+    "lab": 70,
+    "eti": 100,
+    "tem": 60,
+    "fut": 55,
+    "ind": 45,
+    "mon": 55,
+    "inf": 100,
+    "ipe": 30,
+    "uni": 90
+   }
+  },
+  {
+   "id": "ecologia_profunda",
+   "pos": [
+    10,
+    15,
+    20,
+    90,
+    80,
+    30,
+    30,
+    30,
+    70,
+    25,
+    30,
+    95
+   ],
+   "es": {
+    "nombre": "Ecología profunda",
+    "desc": "Toda forma de vida vale por sí misma, no por lo que le sirve al ser humano."
+   },
+   "pt": {
+    "nombre": "Ecologia profunda",
+    "desc": "Toda forma de vida vale por si mesma, não pelo que serve ao ser humano."
+   },
+   "en": {
+    "nombre": "Deep ecology",
+    "desc": "All life has value in itself, not for what it does for humans."
+   },
+   "pos2": {
+    "ecl": 0,
+    "dis": 25,
+    "bie": 30,
+    "epi": 55,
+    "ges": 80,
+    "tra": 70,
+    "idc": 65,
+    "pen": 25,
+    "lab": 25,
+    "eti": 70,
+    "tem": 100,
+    "fut": 0,
+    "ind": 45,
+    "mon": 45,
+    "inf": 20,
+    "ipe": 55,
+    "uni": 20
+   }
+  },
+  {
+   "id": "ecomodernismo",
+   "pos": [
+    45,
+    30,
+    20,
+    60,
+    70,
+    60,
+    15,
+    30,
+    65,
+    60,
+    70,
+    0
+   ],
+   "es": {
+    "nombre": "Ecomodernismo",
+    "desc": "Cuidar el planeta con más tecnología: energía nuclear, ciudades densas y agricultura intensiva."
+   },
+   "pt": {
+    "nombre": "Ecomodernismo",
+    "desc": "Cuidar do planeta com mais tecnologia: energia nuclear, cidades densas e agricultura intensiva."
+   },
+   "en": {
+    "nombre": "Ecomodernism",
+    "desc": "Protect the planet with more technology: nuclear power, dense cities and intensive farming."
+   },
+   "pos2": {
+    "ecl": 70,
+    "dis": 55,
+    "bie": 45,
+    "epi": 5,
+    "ges": 20,
+    "tra": 20,
+    "idc": 30,
+    "pen": 35,
+    "lab": 60,
+    "eti": 30,
+    "tem": 90,
+    "fut": 25,
+    "ind": 55,
+    "mon": 70,
+    "inf": 20,
+    "ipe": 85,
+    "uni": 25
+   }
+  },
+  {
+   "id": "decrecentismo",
+   "pos": [
+    15,
+    15,
+    25,
+    85,
+    80,
+    20,
+    20,
+    20,
+    75,
+    20,
+    25,
+    90
+   ],
+   "es": {
+    "nombre": "Decrecentismo",
+    "desc": "Producir y consumir menos para vivir mejor dentro de los límites del planeta."
+   },
+   "pt": {
+    "nombre": "Decrescimento",
+    "desc": "Produzir e consumir menos para viver melhor dentro dos limites do planeta."
+   },
+   "en": {
+    "nombre": "Degrowth",
+    "desc": "Produce and consume less to live better within planetary limits."
+   },
+   "pos2": {
+    "ecl": 0,
+    "dis": 10,
+    "bie": 10,
+    "epi": 30,
+    "ges": 85,
+    "tra": 65,
+    "idc": 70,
+    "pen": 20,
+    "lab": 15,
+    "eti": 45,
+    "tem": 95,
+    "fut": 5,
+    "ind": 30,
+    "mon": 40,
+    "inf": 15,
+    "ipe": 60,
+    "uni": 15
+   }
+  },
+  {
+   "id": "feminismo_liberal",
+   "pos": [
+    40,
+    20,
+    20,
+    65,
+    85,
+    60,
+    10,
+    5,
+    80,
+    60,
+    70,
+    25
+   ],
+   "es": {
+    "nombre": "Feminismo liberal",
+    "desc": "Igualdad entre mujeres y hombres a través de leyes y derechos individuales."
+   },
+   "pt": {
+    "nombre": "Feminismo liberal",
+    "desc": "Igualdade entre mulheres e homens por meio de leis e direitos individuais."
+   },
+   "en": {
+    "nombre": "Liberal feminism",
+    "desc": "Equality between women and men through laws and individual rights."
+   },
+   "pos2": {
+    "ecl": 45,
+    "dis": 55,
+    "bie": 45,
+    "epi": 20,
+    "ges": 50,
+    "tra": 20,
+    "idc": 15,
+    "pen": 25,
+    "lab": 55,
+    "eti": 40,
+    "tem": 60,
+    "fut": 40,
+    "ind": 65,
+    "mon": 70,
+    "inf": 10,
+    "ipe": 85,
+    "uni": 10
+   }
+  },
+  {
+   "id": "feminismo_radical",
+   "pos": [
+    40,
+    30,
+    30,
+    75,
+    60,
+    25,
+    10,
+    10,
+    70,
+    30,
+    45,
+    40
+   ],
+   "es": {
+    "nombre": "Feminismo radical",
+    "desc": "Ir a la raíz del patriarcado y transformar toda la sociedad, no solo las leyes."
+   },
+   "pt": {
+    "nombre": "Feminismo radical",
+    "desc": "Ir à raiz do patriarcado e transformar toda a sociedade, não só as leis."
+   },
+   "en": {
+    "nombre": "Radical feminism",
+    "desc": "Uproot patriarchy and transform society as a whole, not just the law."
+   },
+   "pos2": {
+    "ecl": 35,
+    "dis": 15,
+    "bie": 15,
+    "epi": 50,
+    "ges": 65,
+    "tra": 70,
+    "idc": 45,
+    "pen": 30,
+    "lab": 25,
+    "eti": 55,
+    "tem": 60,
+    "fut": 45,
+    "ind": 45,
+    "mon": 40,
+    "inf": 45,
+    "ipe": 55,
+    "uni": 20
+   }
+  },
+  {
+   "id": "transhumanismo",
+   "pos": [
+    40,
+    35,
+    15,
+    60,
+    85,
+    65,
+    0,
+    15,
+    75,
+    65,
+    80,
+    0
+   ],
+   "es": {
+    "nombre": "Transhumanismo",
+    "desc": "Usar la ciencia para superar los límites humanos: vivir más, pensar mejor, enfermar menos."
+   },
+   "pt": {
+    "nombre": "Transumanismo",
+    "desc": "Usar a ciência para superar os limites humanos: viver mais, pensar melhor, adoecer menos."
+   },
+   "en": {
+    "nombre": "Transhumanism",
+    "desc": "Using science to overcome human limits: longer lives, sharper minds, less disease."
+   },
+   "pos2": {
+    "ecl": 75,
+    "dis": 60,
+    "bie": 55,
+    "epi": 0,
+    "ges": 25,
+    "tra": 40,
+    "idc": 10,
+    "pen": 25,
+    "lab": 55,
+    "eti": 20,
+    "tem": 95,
+    "fut": 20,
+    "ind": 70,
+    "mon": 70,
+    "inf": 15,
+    "ipe": 70,
+    "uni": 10
+   }
+  },
+  {
+   "id": "cosmopolitismo",
+   "pos": [
+    40,
+    25,
+    0,
+    75,
+    80,
+    55,
+    15,
+    20,
+    95,
+    55,
+    90,
+    25
+   ],
+   "es": {
+    "nombre": "Cosmopolitismo",
+    "desc": "Todos somos ciudadanos del mundo: fronteras abiertas e instituciones globales."
+   },
+   "pt": {
+    "nombre": "Cosmopolitismo",
+    "desc": "Somos todos cidadãos do mundo: fronteiras abertas e instituições globais."
+   },
+   "en": {
+    "nombre": "Cosmopolitanism",
+    "desc": "We are all citizens of the world: open borders and global institutions."
+   },
+   "pos2": {
+    "ecl": 40,
+    "dis": 45,
+    "bie": 35,
+    "epi": 20,
+    "ges": 40,
+    "tra": 25,
+    "idc": 15,
+    "pen": 25,
+    "lab": 50,
+    "eti": 40,
+    "tem": 75,
+    "fut": 35,
+    "ind": 85,
+    "mon": 70,
+    "inf": 10,
+    "ipe": 85,
+    "uni": 0
+   }
+  },
+  {
+   "id": "pacifismo",
+   "pos": [
+    35,
+    15,
+    20,
+    100,
+    85,
+    35,
+    40,
+    30,
+    75,
+    35,
+    50,
+    50
+   ],
+   "es": {
+    "nombre": "Pacifismo",
+    "desc": "Ninguna guerra se justifica: los conflictos se resuelven sin violencia."
+   },
+   "pt": {
+    "nombre": "Pacifismo",
+    "desc": "Nenhuma guerra se justifica: os conflitos se resolvem sem violência."
+   },
+   "en": {
+    "nombre": "Pacifism",
+    "desc": "No war is justified: conflicts are resolved without violence."
+   },
+   "pos2": {
+    "ecl": 30,
+    "dis": 30,
+    "bie": 25,
+    "epi": 40,
+    "ges": 70,
+    "tra": 30,
+    "idc": 50,
+    "pen": 5,
+    "lab": 35,
+    "eti": 75,
+    "tem": 70,
+    "fut": 35,
+    "ind": 50,
+    "mon": 50,
+    "inf": 15,
+    "ipe": 70,
+    "uni": 10
+   }
+  },
+  {
+   "id": "indigenismo",
+   "pos": [
+    15,
+    20,
+    60,
+    70,
+    60,
+    25,
+    40,
+    55,
+    95,
+    30,
+    25,
+    70
+   ],
+   "es": {
+    "nombre": "Indigenismo",
+    "desc": "Autonomía, tierras y derechos para los pueblos originarios y sus formas de vida."
+   },
+   "pt": {
+    "nombre": "Indigenismo",
+    "desc": "Autonomia, terras e direitos para os povos originários e suas formas de vida."
+   },
+   "en": {
+    "nombre": "Indigenism",
+    "desc": "Autonomy, land and rights for Indigenous peoples and their ways of life."
+   },
+   "pos2": {
+    "ecl": 10,
+    "dis": 20,
+    "bie": 20,
+    "epi": 55,
+    "ges": 80,
+    "tra": 70,
+    "idc": 85,
+    "pen": 30,
+    "lab": 20,
+    "eti": 55,
+    "tem": 80,
+    "fut": 25,
+    "ind": 30,
+    "mon": 35,
+    "inf": 30,
+    "ipe": 40,
+    "uni": 70
+   }
+  },
+  {
+   "id": "laborismo",
+   "pos": [
+    50,
+    25,
+    40,
+    60,
+    60,
+    30,
+    40,
+    45,
+    55,
+    25,
+    30,
+    40
+   ],
+   "es": {
+    "nombre": "Laborismo",
+    "desc": "Los sindicatos y los trabajadores como centro del proyecto político."
+   },
+   "pt": {
+    "nombre": "Trabalhismo",
+    "desc": "Os sindicatos e os trabalhadores como centro do projeto político."
+   },
+   "en": {
+    "nombre": "Labourism",
+    "desc": "Unions and workers at the heart of the political project."
+   },
+   "pos2": {
+    "ecl": 55,
+    "dis": 30,
+    "bie": 20,
+    "epi": 45,
+    "ges": 55,
+    "tra": 25,
+    "idc": 65,
+    "pen": 45,
+    "lab": 30,
+    "eti": 50,
+    "tem": 55,
+    "fut": 60,
+    "ind": 25,
+    "mon": 35,
+    "inf": 35,
+    "ipe": 60,
+    "uni": 45
+   }
+  },
+  {
+   "id": "bonapartismo",
+   "pos": [
+    85,
+    90,
+    75,
+    20,
+    20,
+    60,
+    55,
+    70,
+    25,
+    45,
+    40,
+    30
+   ],
+   "es": {
+    "nombre": "Bonapartismo",
+    "desc": "Un líder fuerte que gobierna por encima de los partidos, apoyado en plebiscitos."
+   },
+   "pt": {
+    "nombre": "Bonapartismo",
+    "desc": "Um líder forte que governa acima dos partidos, apoiado em plebiscitos."
+   },
+   "en": {
+    "nombre": "Bonapartism",
+    "desc": "A strong leader ruling above parties, backed by plebiscites."
+   },
+   "pos2": {
+    "ecl": 75,
+    "dis": 55,
+    "bie": 55,
+    "epi": 60,
+    "ges": 20,
+    "tra": 40,
+    "idc": 70,
+    "pen": 90,
+    "lab": 70,
+    "eti": 45,
+    "tem": 50,
+    "fut": 55,
+    "ind": 35,
+    "mon": 30,
+    "inf": 85,
+    "ipe": 0,
+    "uni": 75
+   }
+  },
+  {
+   "id": "corporativismo",
+   "pos": [
+    70,
+    75,
+    70,
+    35,
+    30,
+    50,
+    70,
+    75,
+    25,
+    30,
+    30,
+    40
+   ],
+   "es": {
+    "nombre": "Corporativismo",
+    "desc": "La sociedad organizada por sectores (empresarios, trabajadores, profesiones) que negocian con el Estado."
+   },
+   "pt": {
+    "nombre": "Corporativismo",
+    "desc": "A sociedade organizada por setores (empresários, trabalhadores, profissões) que negociam com o Estado."
+   },
+   "en": {
+    "nombre": "Corporatism",
+    "desc": "Society organised by sectors (employers, workers, professions) that bargain with the state."
+   },
+   "pos2": {
+    "ecl": 70,
+    "dis": 45,
+    "bie": 40,
+    "epi": 65,
+    "ges": 25,
+    "tra": 30,
+    "idc": 90,
+    "pen": 75,
+    "lab": 55,
+    "eti": 70,
+    "tem": 65,
+    "fut": 55,
+    "ind": 20,
+    "mon": 30,
+    "inf": 75,
+    "ipe": 30,
+    "uni": 75
+   }
+  },
+  {
+   "id": "comunitarismo",
+   "pos": [
+    30,
+    30,
+    50,
+    55,
+    50,
+    45,
+    55,
+    60,
+    40,
+    40,
+    45,
+    45
+   ],
+   "es": {
+    "nombre": "Comunitarismo",
+    "desc": "La comunidad y el bien común por encima del individuo aislado."
+   },
+   "pt": {
+    "nombre": "Comunitarismo",
+    "desc": "A comunidade e o bem comum acima do indivíduo isolado."
+   },
+   "en": {
+    "nombre": "Communitarianism",
+    "desc": "The community and the common good above the isolated individual."
+   },
+   "pos2": {
+    "ecl": 50,
+    "dis": 40,
+    "bie": 35,
+    "epi": 50,
+    "ges": 70,
+    "tra": 20,
+    "idc": 95,
+    "pen": 50,
+    "lab": 45,
+    "eti": 65,
+    "tem": 70,
+    "fut": 50,
+    "ind": 40,
+    "mon": 55,
+    "inf": 35,
+    "ipe": 65,
+    "uni": 55
+   }
+  },
+  {
+   "id": "liberalismo_igualitario",
+   "pos": [
+    40,
+    15,
+    20,
+    65,
+    85,
+    35,
+    10,
+    20,
+    80,
+    35,
+    60,
+    30
+   ],
+   "es": {
+    "nombre": "Liberalismo igualitario",
+    "desc": "Libertades amplias y reglas justas que favorezcan a los que menos tienen."
+   },
+   "pt": {
+    "nombre": "Liberalismo igualitário",
+    "desc": "Liberdades amplas e regras justas que favoreçam os que têm menos."
+   },
+   "en": {
+    "nombre": "Egalitarian liberalism",
+    "desc": "Broad liberties and fair rules that favour the least well-off."
+   },
+   "pos2": {
+    "ecl": 45,
+    "dis": 20,
+    "bie": 15,
+    "epi": 20,
+    "ges": 55,
+    "tra": 20,
+    "idc": 25,
+    "pen": 25,
+    "lab": 40,
+    "eti": 55,
+    "tem": 70,
+    "fut": 40,
+    "ind": 50,
+    "mon": 55,
+    "inf": 10,
+    "ipe": 90,
+    "uni": 5
+   }
   }
  ]
 }

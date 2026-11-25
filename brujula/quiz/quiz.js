@@ -268,6 +268,7 @@
     populismo_izquierda: ['#2563eb', '#0b1f4d'], distributismo: ['#5b6472', '#1b1f26'], liberalismo_social: ['#3b82c4', '#0e2a44'], progresismo: ['#3b82c4', '#0e2a44'],
     conservadurismo_moderado: ['#5b6472', '#1b1f26'], reaccionarismo: ['#1e40af', '#0a1433'], fascismo: ['#33363e', '#111316'], neoliberalismo: ['#2563eb', '#0b1f4d'],
     capitalismo_autoritario: ['#1e40af', '#0a1433'], capitalismo_estado: ['#5b6472', '#1b1f26'], neoconservadurismo: ['#1e40af', '#0a1433'], objetivismo: ['#3b82c4', '#0e2a44'] };
+  const IDEO_PAL = [['#2563eb', '#0b1f4d'], ['#1e40af', '#0a1433'], ['#3b82c4', '#0e2a44'], ['#5b6472', '#1b1f26']];
   const EJ_NOMBRES = ['Javier Milei', 'Luiz Inácio Lula da Silva', 'Axel Kicillof', 'Nayib Bukele', 'Gabriel Boric', 'Mauricio Macri'];
   let EJ_I = 0, EJ_T = null;
   function ejemplos() {
@@ -279,7 +280,7 @@
       const f = lista[EJ_I % lista.length], sc = {};
       Object.keys(f.pos).forEach(k => { sc[k] = Math.round(f.pos[k] * 0.85 + 50 * 0.15) });
       const id = S.ideo.map(i => ({ i, af: afinidad(sc, Object.fromEntries(S.ejes.ejes.map((e, j) => [e.id, i.pos[j]]))) })).sort((a, b) => b.af - a.af)[0];
-      const [c1, c2] = IDEO_COL[id.i.id] || ['#4a4e58', '#33363e'], pc = afinidad(sc, f.pos);
+      const [c1, c2] = IDEO_COL[id.i.id] || IDEO_PAL[[...id.i.id].reduce((h, c) => h + c.charCodeAt(0), 0) % IDEO_PAL.length], pc = afinidad(sc, f.pos);
       el.style.setProperty('--c1', `color-mix(in srgb,${c1} 68%,${c2})`); el.style.setProperty('--c2', c2);
       el.innerHTML = `<div class="sch"><b><svg class="rose" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14.5"/><circle cx="16" cy="16" r="9"/><path d="M16 2v28M2 16h28"/><path class="n" d="M16 5l3 11h-6z"/><path class="s" d="M16 27l-3-11h6z"/></svg>${esc(t.sub)}</b><i></i><span>${esc(t.ej_tag)}</span></div>
         <div class="sct">${esc(t.ej_af)}</div><h3>${esc(ideoNom(id.i))}</h3>
@@ -740,7 +741,8 @@
     const t = T();
     $('#ideo').innerHTML = `<div class="lst">${rk.ideo.slice(0, 5).map(({ i, pos, af }, j) => `<div class="it${j ? '' : ' first'}"><i>${String(j + 1).padStart(2, '0')}</i><b>${esc(ideoNom(i))}</b><span class="pc">${af}%</span>
       <p>${esc(ideoDesc(i))}</p><span class="bar"><i style="width:${af}%"></i></span><small>${esc(t.coinc)}: ${esc(lista(cercanos(sc, pos, 3)))}</small></div>`).join('')}</div>
-      <div class="lejos">${esc(t.lejos_i)} ${rk.ideo.slice(-3).reverse().map(x => `<span>${esc(ideoNom(x.i))} · ${x.af}%</span>`).join('')}</div>`;
+      <div class="lejos">${esc(t.lejos_i)} ${rk.ideo.slice(-3).reverse().map(x => `<span>${esc(ideoNom(x.i))} · ${x.af}%</span>`).join('')}</div>
+      <details class="todas"><summary>${esc(t.todas_i(rk.ideo.length))}</summary><ol>${rk.ideo.map(x => `<li title="${esc(ideoDesc(x.i))}"><b>${esc(ideoNom(x.i))}</b><span>${x.af}%</span><small>${esc(ideoDesc(x.i))}</small></li>`).join('')}</ol></details>`;
   }
   function dirigentes(sc, cert, rk, ver) {
     const t = T(), F = rk.figs;
