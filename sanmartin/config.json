@@ -1,0 +1,1124 @@
+{
+ "municipio": "General San Martín",
+ "provincia": "Buenos Aires",
+ "foco": "Fernando Moreira",
+ "window_days": 365,
+ "conversacion_dias": 180,
+ "centro": [
+  -34.5745,
+  -58.537
+ ],
+ "bbox_osm": "-34.620,-58.635,-34.505,-58.485",
+ "ejido": {
+  "nombre": "general san martin",
+  "niveles": [
+   "5",
+   "6"
+  ],
+  "niveles_localidad": [
+   "7",
+   "8",
+   "9",
+   "10"
+  ]
+ },
+ "politicos": {
+  "Fernando Moreira": {
+   "alias": [
+    "fernando moreira",
+    "fernando adrián moreira",
+    "fernando adrian moreira",
+    "intendente moreira",
+    "intendente fernando moreira",
+    "moreira intendente",
+    "gestión moreira",
+    "gestion moreira",
+    "gestión de moreira",
+    "gestion de moreira",
+    "intendente de san martín",
+    "intendente de san martin",
+    "intendente de general san martín",
+    "intendente de general san martin"
+   ],
+   "espacio": "PJ · Fuerza Patria",
+   "cargo": "Intendente de General San Martín (desde 2019, reelecto 2023 con 46,8%)",
+   "foco": true,
+   "wiki": [
+    "Fernando Moreira"
+   ],
+   "alias_contexto": [
+    "moreira"
+   ]
+  },
+  "Gabriel Katopodis": {
+   "alias": [
+    "katopodis",
+    "gabriel katopodis"
+   ],
+   "espacio": "PJ · Fuerza Patria",
+   "cargo": "Ministro de Infraestructura bonaerense; exintendente de San Martín, padrino político de Moreira",
+   "wiki": [
+    "Gabriel Katopodis"
+   ]
+  },
+  "Leonardo Grosso": {
+   "alias": [
+    "leonardo grosso",
+    "leo grosso"
+   ],
+   "espacio": "Movimiento Evita · Fuerza Patria",
+   "cargo": "Dirigente del Evita en San Martín, exdiputado nacional",
+   "wiki": [
+    "Leonardo Grosso"
+   ],
+   "alias_contexto": [
+    "grosso"
+   ]
+  },
+  "Mauricio D'Alessandro": {
+   "alias": [
+    "mauricio d'alessandro",
+    "mauricio d’alessandro",
+    "mauricio dalessandro",
+    "mauricio d alessandro"
+   ],
+   "espacio": "Oposición (ex Juntos por el Cambio)",
+   "cargo": "Segundo en la elección de intendente 2023 (27,1%)",
+   "wiki": [
+    "Mauricio D'Alessandro"
+   ],
+   "alias_contexto": [
+    "d'alessandro",
+    "d’alessandro",
+    "dalessandro"
+   ]
+  },
+  "Santiago López Medrano": {
+   "alias": [
+    "lópez medrano",
+    "lopez medrano"
+   ],
+   "espacio": "PRO / LLA",
+   "cargo": "Exministro bonaerense de Desarrollo Social; precandidato a intendente en 2023",
+   "wiki": [
+    "Santiago López Medrano"
+   ]
+  },
+  "Axel Kicillof": {
+   "alias": [
+    "kicillof"
+   ],
+   "espacio": "PJ · Fuerza Patria",
+   "cargo": "Gobernador de Buenos Aires",
+   "wiki": [
+    "Axel Kicillof"
+   ]
+  },
+  "Javier Milei": {
+   "alias": [
+    "milei"
+   ],
+   "espacio": "La Libertad Avanza",
+   "cargo": "Presidente de la Nación",
+   "wiki": [
+    "Javier Milei"
+   ]
+  }
+ },
+ "posiciones": {
+  "escala": {
+   "eco": "0 = Estado interventor · 100 = libre mercado",
+   "soc": "0 = progresista · 100 = conservador",
+   "pol": "0 = antisistema / outsider · 100 = institucionalista / establishment"
+  },
+  "metodo": "Codificación editorial inicial a partir de declaraciones y trayectoria pública, para revisar con el cliente. No es una medición de opinión.",
+  "excluidos": {},
+  "puntos": {
+   "Fernando Moreira": {
+    "eco": 25,
+    "soc": 40,
+    "pol": 80,
+    "nota": "Defiende la presencia del Estado municipal (comedores, salud, obras) frente al ajuste nacional; perfil de gestión y continuidad del proyecto Katopodis."
+   },
+   "Gabriel Katopodis": {
+    "eco": 25,
+    "soc": 35,
+    "pol": 80,
+    "nota": "Exministro de Obras Públicas de la Nación y hoy de Infraestructura bonaerense; peronismo de gestión, cercano a Kicillof."
+   },
+   "Leonardo Grosso": {
+    "eco": 10,
+    "soc": 20,
+    "pol": 50,
+    "nota": "Movimiento Evita y economía popular; agenda social y de derechos, con base territorial en barrios populares."
+   },
+   "Mauricio D'Alessandro": {
+    "eco": 70,
+    "soc": 60,
+    "pol": 40,
+    "nota": "Abogado mediático; discurso anticorrupción y de seguridad, opositor al peronismo local."
+   },
+   "Santiago López Medrano": {
+    "eco": 70,
+    "soc": 60,
+    "pol": 70,
+    "nota": "Exfuncionario de Vidal, perfil técnico de centroderecha, alineado con Bullrich."
+   },
+   "Axel Kicillof": {
+    "eco": 15,
+    "soc": 25,
+    "pol": 75,
+    "nota": "Gobernador; Estado presente y confrontación con el programa de Milei. Referencia provincial."
+   },
+   "Javier Milei": {
+    "eco": 95,
+    "soc": 75,
+    "pol": 15,
+    "nota": "Déficit cero, desregulación y apertura; llegó como outsider contra 'la casta'. Referencia nacional."
+   }
+  }
+ },
+ "narrativas": {
+  "Gestión y obra pública": [
+   "obra",
+   "obras",
+   "asfalt",
+   "pavimen",
+   "cloaca",
+   "inaugur",
+   "licitaci",
+   "plaza",
+   "luminaria",
+   "paso bajo nivel",
+   "centro de transbordo",
+   "peatonal",
+   "gestión municipal",
+   "gestion municipal"
+  ],
+  "Confrontación con Milei": [
+   "milei",
+   "gobierno nacional",
+   "motosierra",
+   "ajuste",
+   "recorte",
+   "libertari",
+   "nación",
+   "transferencias"
+  ],
+  "Industria y pymes": [
+   "pyme",
+   "pymes",
+   "industria",
+   "fábrica",
+   "fabrica",
+   "emergencia pyme",
+   "cierre de",
+   "despidos",
+   "parque industrial",
+   "capacidad instalada"
+  ],
+  "Asistencia social": [
+   "comedor",
+   "comedores",
+   "merendero",
+   "bolsas de alimentos",
+   "asistencia alimentaria",
+   "protección social",
+   "proteccion social",
+   "emergencia alimentaria"
+  ],
+  "Seguridad": [
+   "insegur",
+   "robo",
+   "policía",
+   "policia",
+   "delito",
+   "homicid",
+   "crimen",
+   "narco",
+   "patrullero",
+   "monitoreo"
+  ],
+  "Reconquista y barrios populares": [
+   "reconquista",
+   "barrio libertador",
+   "villa hidalgo",
+   "costa esperanza",
+   "la cárcova",
+   "la carcova",
+   "8 de mayo",
+   "13 de julio",
+   "urbanizaci",
+   "barrio popular",
+   "barrios populares",
+   "parques escuela",
+   "parque escuela"
+  ],
+  "Basura y CEAMSE": [
+   "ceamse",
+   "relleno sanitario",
+   "basural",
+   "camino del buen ayre",
+   "quema",
+   "residuos"
+  ],
+  "Inundaciones y zanjones": [
+   "inund",
+   "zanjón",
+   "zanjon",
+   "güemes",
+   "guemes",
+   "desagüe",
+   "desague",
+   "pluvial",
+   "arroyo"
+  ],
+  "Interna peronista y 2027": [
+   "peronismo",
+   "peronista",
+   "justicialista",
+   "pj",
+   "interna",
+   "fuerza patria",
+   "2027",
+   "candidat",
+   "kicillof",
+   "cristina",
+   "katopodis",
+   "sucesi"
+  ],
+  "Relación con la Provincia": [
+   "kicillof",
+   "gobierno bonaerense",
+   "provincia",
+   "legislatura",
+   "fondos provinciales"
+  ],
+  "Salud y educación": [
+   "hospital",
+   "salud",
+   "efector",
+   "centro de salud",
+   "escuela",
+   "jardín",
+   "jardin",
+   "unsam",
+   "universidad"
+  ],
+  "Denuncias y justicia": [
+   "denuncia",
+   "causa judicial",
+   "justicia",
+   "irregular",
+   "corrupci",
+   "fiscalia",
+   "fiscalía",
+   "imputad",
+   "allanamiento"
+  ]
+ },
+ "localidades": {
+  "San Martín centro": {
+   "alias": [
+    "centro de san martín",
+    "centro de san martin",
+    "san martín centro",
+    "san martin centro",
+    "peatonal belgrano",
+    "casco céntrico de san martín",
+    "casco centrico de san martin"
+   ],
+   "centro": [
+    -34.5745,
+    -58.537
+   ]
+  },
+  "Villa Ballester": {
+   "alias": [
+    "villa ballester",
+    "ballester centro"
+   ],
+   "centro": [
+    -34.547,
+    -58.556
+   ]
+  },
+  "José León Suárez": {
+   "alias": [
+    "josé león suárez",
+    "jose leon suarez",
+    "león suárez",
+    "leon suarez"
+   ],
+   "centro": [
+    -34.533,
+    -58.579
+   ]
+  },
+  "Billinghurst": {
+   "alias": [
+    "billinghurst"
+   ],
+   "centro": [
+    -34.574,
+    -58.577
+   ]
+  },
+  "Villa Lynch": {
+   "alias": [
+    "villa lynch"
+   ]
+  },
+  "San Andrés": {
+   "alias": [
+    "barrio san andrés",
+    "barrio san andres",
+    "san andrés de san martín",
+    "san andres de san martin",
+    "localidad de san andrés",
+    "localidad de san andres"
+   ],
+   "centro": [
+    -34.564,
+    -58.536
+   ]
+  },
+  "Villa Maipú": {
+   "alias": [
+    "villa maipú",
+    "villa maipu"
+   ]
+  },
+  "Villa Chacabuco": {
+   "alias": [
+    "villa chacabuco"
+   ]
+  },
+  "Villa Libertad": {
+   "alias": [
+    "villa libertad"
+   ]
+  },
+  "Loma Hermosa": {
+   "alias": [
+    "loma hermosa"
+   ]
+  },
+  "Villa Bernardo Monteagudo": {
+   "alias": [
+    "villa monteagudo",
+    "villa bernardo monteagudo"
+   ]
+  },
+  "Villa Godoy Cruz": {
+   "alias": [
+    "villa godoy cruz"
+   ]
+  },
+  "Villa Zapiola": {
+   "alias": [
+    "villa zapiola",
+    "villa coronel zapiola",
+    "villa coronel josé m. zapiola"
+   ]
+  },
+  "Villa Zagala": {
+   "alias": [
+    "villa zagala"
+   ]
+  },
+  "Villa Yapeyú": {
+   "alias": [
+    "villa yapeyú",
+    "villa yapeyu"
+   ]
+  },
+  "Villa Ayacucho": {
+   "alias": [
+    "villa ayacucho"
+   ]
+  },
+  "Villa Las Heras": {
+   "alias": [
+    "villa las heras",
+    "villa general juan g. las heras"
+   ]
+  },
+  "Villa Granaderos": {
+   "alias": [
+    "villa granaderos",
+    "villa granaderos de san martín",
+    "villa granaderos de san martin"
+   ]
+  },
+  "Villa Pueyrredón (San Martín)": {
+   "alias": [
+    "villa juan martín de pueyrredón",
+    "villa juan martin de pueyrredon"
+   ]
+  },
+  "Villa Coronel Remedios de Escalada": {
+   "alias": [
+    "villa maría irene de los remedios de escalada",
+    "villa remedios de escalada"
+   ]
+  },
+  "Barrio Parque General San Martín": {
+   "alias": [
+    "barrio parque general san martín",
+    "barrio parque general san martin",
+    "barrio parque san martín",
+    "barrio parque san martin"
+   ]
+  },
+  "Tropezón": {
+   "alias": [
+    "tropezón",
+    "tropezon"
+   ]
+  },
+  "Área Reconquista": {
+   "alias": [
+    "área reconquista",
+    "area reconquista",
+    "cuenca reconquista",
+    "barrios del reconquista"
+   ]
+  },
+  "Barrio Libertador": {
+   "alias": [
+    "barrio libertador"
+   ]
+  },
+  "La Cárcova": {
+   "alias": [
+    "la cárcova",
+    "la carcova",
+    "barrio cárcova",
+    "barrio carcova"
+   ]
+  },
+  "Villa Hidalgo": {
+   "alias": [
+    "villa hidalgo"
+   ]
+  },
+  "Costa Esperanza": {
+   "alias": [
+    "costa esperanza"
+   ]
+  },
+  "Barrio Independencia": {
+   "alias": [
+    "barrio independencia"
+   ]
+  },
+  "8 de Mayo": {
+   "alias": [
+    "barrio 8 de mayo",
+    "barrio ocho de mayo"
+   ]
+  },
+  "13 de Julio": {
+   "alias": [
+    "barrio 13 de julio"
+   ]
+  },
+  "9 de Julio": {
+   "alias": [
+    "barrio 9 de julio",
+    "villa 9 de julio"
+   ]
+  },
+  "Villa Curita": {
+   "alias": [
+    "villa curita"
+   ]
+  },
+  "Villa Corea": {
+   "alias": [
+    "villa corea"
+   ]
+  },
+  "Villa 18": {
+   "alias": [
+    "villa 18",
+    "barrio villa 18"
+   ]
+  },
+  "Barrio Sarmiento": {
+   "alias": [
+    "barrio sarmiento"
+   ]
+  }
+ },
+ "contexto": [
+  "general san martín",
+  "general san martin",
+  "gral. san martín",
+  "gral. san martin",
+  "gral san martin",
+  "partido de san martín",
+  "partido de san martin",
+  "municipio de san martín",
+  "municipio de san martin",
+  "municipalidad de san martín",
+  "municipalidad de san martin",
+  "sanmartinense",
+  "sanmartinenses",
+  "unsam",
+  "ceamse",
+  "camino del buen ayre",
+  "río reconquista",
+  "rio reconquista",
+  "fernando moreira",
+  "katopodis"
+ ],
+ "temas": {
+  "Inseguridad": [
+   "insegur",
+   "robo",
+   "robaron",
+   "roban",
+   "asalt",
+   "delinc",
+   "motochorr",
+   "entradera",
+   "tiroteo",
+   "balacera",
+   "baleado",
+   "arrebat",
+   "policía",
+   "policia",
+   "narco",
+   "droga",
+   "homicid"
+  ],
+  "Agua potable": [
+   "sin agua",
+   "falta de agua",
+   "falta agua",
+   "baja presión",
+   "baja presion",
+   "aysa",
+   "corte de agua",
+   "cortes de agua",
+   "agua potable",
+   "red de agua"
+  ],
+  "Luz y alumbrado": [
+   "corte de luz",
+   "cortes de luz",
+   "sin luz",
+   "edenor",
+   "alumbrado",
+   "luminaria",
+   "a oscuras"
+  ],
+  "Gas": [
+   "sin gas",
+   "red de gas",
+   "naturgy",
+   "garrafa",
+   "pérdida de gas",
+   "perdida de gas"
+  ],
+  "Tránsito y transporte": [
+   "tránsito",
+   "transito",
+   "colectivo",
+   "pasaje",
+   "semáforo",
+   "semaforo",
+   "accidente",
+   "choque",
+   "lomo de burro",
+   "velocidad",
+   "picada",
+   "estacionam",
+   "ruta 8",
+   "ruta 4",
+   "camino de cintura",
+   "general paz",
+   "tren mitre",
+   "tren urquiza",
+   "belgrano norte",
+   "barrera",
+   "paso bajo nivel"
+  ],
+  "Tierras, tomas y vivienda": [
+   "toma de tierra",
+   "tomas de tierra",
+   "una toma",
+   "la toma",
+   "usurpa",
+   "lotes sociales",
+   "loteo",
+   "terrenos",
+   "vivienda",
+   "viviendas",
+   "alquiler",
+   "desalojo",
+   "asentamiento"
+  ],
+  "Salud": [
+   "hospital",
+   "salita",
+   "centro de salud",
+   "guardia",
+   "turno",
+   "médico",
+   "medico",
+   "ambulancia",
+   "hospital castex",
+   "hospital thompson",
+   "hospital belgrano"
+  ],
+  "Educación": [
+   "escuela",
+   "colegio",
+   "jardín",
+   "jardin",
+   "docente",
+   "aula",
+   "vacante",
+   "comedor escolar"
+  ],
+  "Espacios verdes y arbolado": [
+   "plaza",
+   "árbol",
+   "arbol",
+   "árboles",
+   "arboles",
+   "álamo",
+   "alamo",
+   "poda",
+   "espacio verde",
+   "costanera",
+   "parque"
+  ],
+  "Situación social y empleo": [
+   "situación de calle",
+   "situacion de calle",
+   "comedor",
+   "olla popular",
+   "hambre",
+   "pobreza",
+   "desocup",
+   "despido",
+   "trabajo"
+  ],
+  "Tasas y municipio": [
+   "tasa",
+   "tasas",
+   "impuesto",
+   "aumento",
+   "boleta",
+   "municipales",
+   "paritaria",
+   "concejo deliberante"
+  ],
+  "Perros y convivencia": [
+   "perros sueltos",
+   "jauría",
+   "jauria",
+   "mordedura",
+   "ruido",
+   "fiesta clandestina",
+   "boliche",
+   "picadas"
+  ],
+  "Cloacas e inundaciones": [
+   "cloaca",
+   "desagüe",
+   "desague",
+   "pluvial",
+   "inund",
+   "anegad",
+   "líquidos cloacales",
+   "liquidos cloacales",
+   "pozo ciego",
+   "zanjón",
+   "zanjon",
+   "arroyo",
+   "se inunda",
+   "agua en las casas"
+  ],
+  "Basura, CEAMSE y basurales": [
+   "basura",
+   "residuo",
+   "recolecci",
+   "microbasural",
+   "basural",
+   "contenedo",
+   "escombro",
+   "limpieza",
+   "ceamse",
+   "relleno",
+   "quema de basura",
+   "olor"
+  ],
+  "Calles y asfalto": [
+   "bache",
+   "pozo",
+   "asfalt",
+   "pavimen",
+   "calle de tierra",
+   "calles de tierra",
+   "cordón cuneta",
+   "cordon cuneta",
+   "vereda"
+  ],
+  "Industria, pymes y empleo": [
+   "pyme",
+   "pymes",
+   "fábrica",
+   "fabrica",
+   "industria",
+   "cierre",
+   "cerró",
+   "cerro",
+   "suspensiones",
+   "despido",
+   "despidos"
+  ]
+ },
+ "marcadores_reclamo": [
+  "reclam",
+  "queja",
+  "quej",
+  "denunci",
+  "nadie hace",
+  "nadie viene",
+  "abandon",
+  "vergüenza",
+  "verguenza",
+  "desastre",
+  "harto",
+  "harta",
+  "cansad",
+  "no hacen nada",
+  "no aparece",
+  "olvidad",
+  "peligro",
+  "inseguro",
+  "insegura",
+  "pésimo",
+  "pesimo",
+  "horrible",
+  "mal estado",
+  "roto",
+  "rota",
+  "rotas",
+  "rotos",
+  "falta",
+  "faltan",
+  "sin respuesta",
+  "pedimos",
+  "exigimos",
+  "piden",
+  "reclaman",
+  "vecinos denuncian",
+  "un asco",
+  "no da más",
+  "no da mas",
+  "terrible",
+  "basta",
+  "otra vez",
+  "de nuevo",
+  "cada vez peor",
+  "inaceptable",
+  "lamentable",
+  "preocupa",
+  "sufren",
+  "padecen"
+ ],
+ "positivo": [
+  "gracias",
+  "excelente",
+  "bien hecho",
+  "muy bien",
+  "mejoró",
+  "mejoro",
+  "felicit",
+  "impecable",
+  "genial",
+  "bravo",
+  "buenísimo",
+  "buenisimo",
+  "por fin",
+  "aplaudo",
+  "orgullo",
+  "gran gestión",
+  "gran gestion",
+  "inaugur"
+ ],
+ "negativo": [
+  "chorro",
+  "corrupt",
+  "inútil",
+  "inutil",
+  "mentiroso",
+  "mentirosa",
+  "verso",
+  "vergüenza",
+  "verguenza",
+  "desastre",
+  "basura",
+  "ladr",
+  "nefasto",
+  "patético",
+  "patetico",
+  "fuera",
+  "vende humo",
+  "no hace nada",
+  "no hacen nada",
+  "abandon",
+  "peor",
+  "kirchnerista",
+  "kukas",
+  "kuka"
+ ],
+ "youtube": {
+  "region": "AR",
+  "language": "es",
+  "videos_per_query": 10,
+  "comments_per_video": 100,
+  "queries": [
+   "Fernando Moreira intendente",
+   "Fernando Moreira San Martín",
+   "intendente de San Martín Moreira",
+   "General San Martín vecinos reclamo",
+   "San Martín provincia de Buenos Aires inseguridad",
+   "José León Suárez vecinos",
+   "Villa Ballester vecinos",
+   "Billinghurst vecinos",
+   "Villa Lynch vecinos",
+   "Barrio Libertador San Martín",
+   "Villa Hidalgo San Martín",
+   "La Cárcova José León Suárez",
+   "CEAMSE José León Suárez",
+   "Reconquista San Martín inundación",
+   "Katopodis San Martín",
+   "Katopodis Moreira"
+  ],
+  "contexto": [
+   "san martín",
+   "san martin",
+   "moreira",
+   "katopodis",
+   "ballester",
+   "suárez",
+   "suarez",
+   "billinghurst",
+   "villa lynch",
+   "reconquista",
+   "ceamse",
+   "unsam",
+   "conurbano",
+   "zona norte",
+   "provincia de buenos aires",
+   "cárcova",
+   "carcova",
+   "villa hidalgo"
+  ],
+  "excluir": [
+   "mendoza",
+   "san juan",
+   "jujuy",
+   "chile",
+   "perú",
+   "peru",
+   "colombia",
+   "méxico",
+   "mexico",
+   "españa",
+   "libertador general san martín",
+   "libertador gral. san martín",
+   "prócer",
+   "procer",
+   "cruce de los andes"
+  ]
+ },
+ "google_news": {
+  "queries": [
+   "\"Fernando Moreira\"",
+   "\"Fernando Moreira\" San Martín",
+   "\"Moreira\" intendente \"San Martín\"",
+   "\"Moreira\" Katopodis",
+   "\"Moreira\" Kicillof",
+   "\"Moreira\" Milei San Martín",
+   "\"General San Martín\" municipio",
+   "\"General San Martín\" vecinos reclamo",
+   "\"General San Martín\" vecinos",
+   "\"San Martín\" conurbano vecinos",
+   "\"General San Martín\" inseguridad",
+   "\"San Martín\" \"José León Suárez\"",
+   "\"José León Suárez\"",
+   "\"Villa Ballester\"",
+   "Billinghurst vecinos",
+   "\"Villa Lynch\"",
+   "\"Villa Maipú\" San Martín",
+   "\"Loma Hermosa\"",
+   "\"Barrio Libertador\" San Martín",
+   "\"Villa Hidalgo\" San Martín",
+   "\"La Cárcova\"",
+   "\"Costa Esperanza\"",
+   "CEAMSE \"José León Suárez\"",
+   "\"Camino del Buen Ayre\" basural",
+   "\"río Reconquista\" San Martín",
+   "\"General San Martín\" inundaciones",
+   "\"Zanjón Güemes\"",
+   "\"General San Martín\" pymes",
+   "\"General San Martín\" Concejo Deliberante",
+   "\"San Martín\" Edenor cortes",
+   "\"San Martín\" AySA vecinos",
+   "\"Gabriel Katopodis\"",
+   "\"Leonardo Grosso\"",
+   "\"Mauricio D'Alessandro\"",
+   "\"López Medrano\"",
+   "\"Primera Sección\" electoral 2027",
+   "\"Rodrigo Aybar\"",
+   "\"Soledad Martínez\" Vicente López",
+   "\"Leonardo Nardini\"",
+   "\"Jaime Méndez\" San Miguel",
+   "\"Lucas Ghi\""
+  ],
+  "sites": [
+   "zonanortediario.com.ar",
+   "smnoticias.com",
+   "infoban.com.ar",
+   "lanoticia1.com",
+   "politicar.com.ar",
+   "letrap.com.ar",
+   "infocielo.com",
+   "lapoliticaonline.com",
+   "minutouno.com",
+   "clarin.com",
+   "lanacion.com.ar",
+   "pagina12.com.ar",
+   "infobae.com",
+   "noticias.unsam.edu.ar"
+  ],
+  "site_terms": [
+   "\"San Martín\" Moreira",
+   "\"José León Suárez\"",
+   "\"Villa Ballester\""
+  ]
+ },
+ "rss": [
+  {
+   "name": "Zona Norte Diario",
+   "url": "https://www.zonanortediario.com.ar/feed/"
+  },
+  {
+   "name": "InfoBAN",
+   "url": "https://www.infoban.com.ar/feed/"
+  },
+  {
+   "name": "SM Noticias",
+   "url": "https://www.smnoticias.com/rss"
+  }
+ ],
+ "intendentes": {
+  "Fernando Moreira": {
+   "ciudad": "General San Martín",
+   "espacio": "Fuerza Patria (PJ)",
+   "alias": [
+    "fernando moreira",
+    "fernando adrián moreira",
+    "fernando adrian moreira",
+    "intendente moreira",
+    "intendente fernando moreira",
+    "moreira intendente",
+    "gestión moreira",
+    "gestion moreira",
+    "gestión de moreira",
+    "gestion de moreira",
+    "intendente de san martín",
+    "intendente de san martin",
+    "intendente de general san martín",
+    "intendente de general san martin"
+   ],
+   "foco": true
+  },
+  "Rodrigo Aybar": {
+   "ciudad": "Tres de Febrero",
+   "espacio": "Fuerza Patria (PJ)",
+   "alias": [
+    "rodrigo aybar",
+    "intendente aybar"
+   ],
+   "wiki": [
+    "Rodrigo Aybar"
+   ]
+  },
+  "Soledad Martínez": {
+   "ciudad": "Vicente López",
+   "espacio": "PRO",
+   "alias": [
+    "soledad martínez",
+    "soledad martinez",
+    "soledad martínez vicente lópez"
+   ],
+   "wiki": [
+    "Soledad Martínez"
+   ]
+  },
+  "Leonardo Nardini": {
+   "ciudad": "Malvinas Argentinas",
+   "espacio": "Fuerza Patria (PJ)",
+   "alias": [
+    "leonardo nardini",
+    "nardini"
+   ],
+   "wiki": [
+    "Leonardo Nardini"
+   ]
+  },
+  "Jaime Méndez": {
+   "ciudad": "San Miguel",
+   "espacio": "Somos San Miguel · ex PRO",
+   "alias": [
+    "jaime méndez",
+    "jaime mendez"
+   ],
+   "wiki": [
+    "Jaime Méndez"
+   ]
+  },
+  "Lucas Ghi": {
+   "ciudad": "Morón",
+   "espacio": "Fuerza Patria (PJ)",
+   "alias": [
+    "lucas ghi"
+   ],
+   "wiki": [
+    "Lucas Ghi"
+   ]
+  }
+ },
+ "wiki_municipio": [
+  "Partido de General San Martín",
+  "General San Martín (Buenos Aires)"
+ ],
+ "stop_extra": [
+  "general",
+  "san",
+  "martin",
+  "martín",
+  "fernando",
+  "moreira",
+  "katopodis",
+  "buenos",
+  "aires",
+  "provincia",
+  "conurbano"
+ ],
+ "textos_comentarios": "extracto",
+ "ignorar_lugares_osm": [
+  "San Martín",
+  "General San Martín",
+  "San Martin"
+ ]
+}

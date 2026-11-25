@@ -35,7 +35,7 @@ INDICE = re.sub(r"[^A-Za-z0-9_-]", "", SECRET)
 PUB = {"nacional": "nacional", "boca": "boca", "roca": "soria", "santacruz": "santacruz", "sanisidro": "sanisidro",
        "pagano": "pagano", "casielles": "casielles", "braillard": "braillard", "clark": "clark",
        "raverta": "raverta", "otermin": "otermin", "rehl": "rehl", "ramos": "ramos", "avila": "avila", "akirchner": "alicia", "zicarelli": "zicarelli", "presto": "presto", "danann": "danann",
-       "brujula": "brujula"}
+       "brujula": "brujula", "sanmartin": "moreira"}
 
 
 def carpeta(nombre):
@@ -96,7 +96,7 @@ editar(n / "radar" / "index.html", ('href="../dashboard.html"', 'href="../"'))
 editar(n / "index.html", ('massa/panel.js"', f'massa/panel.js?v={SHA}"'), ('resumen.js"', f'resumen.js?v={SHA}"'))
 
 # Tableros de cliente: cada uno con sus datos y su reporte de Instagram adentro
-for b in ("boca", "roca", "santacruz", "sanisidro"):
+for b in ("boca", "roca", "santacruz", "sanisidro", "sanmartin"):
     d = carpeta(b)
     tableros[b] = d
     cp(f"{b}/index.html", d / "index.html")
@@ -104,8 +104,9 @@ for b in ("boca", "roca", "santacruz", "sanisidro"):
     if (REPO / "ig" / "data" / f"{b}.json").exists():
         cp(f"ig/data/{b}.json", d / "ig.json")
     editar(d / "index.html", (f"'../ig/data/{b}.json'", "'ig.json'"))
-cp("radar/data/positions.json", tableros["roca"] / "positions.json")
-editar(tableros["roca"] / "index.html", ("'../radar/data/positions.json'", "'positions.json'"))
+for b in ("roca", "sanmartin"):
+    cp("radar/data/positions.json", tableros[b] / "positions.json")
+    editar(tableros[b] / "index.html", ("'../radar/data/positions.json'", "'positions.json'"))
 
 DIRIGENTES = ("pagano", "casielles", "braillard", "clark",
               "raverta", "otermin", "rehl", "ramos", "avila", "akirchner", "zicarelli", "presto", "danann")
@@ -163,7 +164,7 @@ for nombre, d in tableros.items():
             s = s.replace("<head>", "<head>" + og, 1)
         if 'name="robots"' not in s:
             s = s.replace("<head>", '<head>\n<meta name="robots" content="noindex,nofollow">\n<meta name="referrer" content="no-referrer">', 1)
-        for b in ("boca", "roca", "santacruz", "sanisidro", "pagano", "casielles", "braillard", "clark", *DIRIGENTES[4:], "trump", "dirigentes", "radar", "web"):
+        for b in ("boca", "roca", "santacruz", "sanisidro", "sanmartin", "pagano", "casielles", "braillard", "clark", *DIRIGENTES[4:], "trump", "dirigentes", "radar", "web"):
             if b == nombre or (nombre == "nacional" and b == "radar"):
                 continue
             if re.search(rf'href="(\.\./)+{b}/?"', s):

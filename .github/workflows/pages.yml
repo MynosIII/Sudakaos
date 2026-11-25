@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   # Los workflows de datos hacen commit con el token de Actions, que no dispara "push": se publica al terminar
   workflow_run:
-    workflows: ['Radar social listening', 'San Isidro reclamos', 'General Roca monitor', 'Massa Galmarini monitor', 'Boca monitor', 'Santa Cruz monitor', 'Meta dirigentes', 'Dirigentes monitor', 'Instagram tableros', 'X tableros', 'Landing datos', 'Trump monitor', 'Brujula opinion y conversacion']
+    workflows: ['Radar social listening', 'San Isidro reclamos', 'General Roca monitor', 'General San Martín monitor', 'Massa Galmarini monitor', 'Boca monitor', 'Santa Cruz monitor', 'Meta dirigentes', 'Dirigentes monitor', 'Instagram tableros', 'X tableros', 'Landing datos', 'Trump monitor', 'Brujula opinion y conversacion']
     types: [completed]
 
 permissions:
