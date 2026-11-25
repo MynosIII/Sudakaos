@@ -269,7 +269,10 @@ def main():
         r["_f"] = t
         r["pols"] = [k for k, p in POLS.items() if p.search(t)]
         if POLS_CTX:
-            ctx_ok = bool(CTX.search(t)) or (r["kind"] == "comment" and CTX.search(fold(vtext.get(r.get("video_id"), ""))))
+            q = fold(r.get("query", ""))
+            ctx_ok = (bool(CTX.search(t)) or bool(CTX.search(q))
+                      or any(p.search(q) for p in POLS_CTX.values())  # búsqueda dirigida a esa persona en el municipio
+                      or (r["kind"] == "comment" and CTX.search(fold(vtext.get(r.get("video_id"), "")))))
             r["pols"] += [k for k, p in POLS_CTX.items() if k not in r["pols"] and ctx_ok and p.search(t)]
         r["narr"] = [k for k, p in NARR.items() if p.search(" " + t + " ")]
         r["temas"] = [k for k, p in TEMAS.items() if p.search(t)]
