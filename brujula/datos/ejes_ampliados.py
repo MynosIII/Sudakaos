@@ -108,3 +108,23 @@ NUEVAS = [
     ("n19", "Los pueblos originarios deberían tener derecho a su propia lengua, educación y formas de organización.", "Os povos indígenas deveriam ter direito à própria língua, educação e formas de organização.",
      "Indigenous peoples should have the right to their own language, education and forms of organization.", {"mig": 1, "idc": 0.5}, 2, True),
 ]
+
+# Correlaciones por defecto: cuánto empuja cada eje principal a los complementarios (mismo signo = hacia el polo b).
+# Se aplican a las frases que no tienen pesos complementarios propios (SEC, SEC_AR o frases nuevas), con un peso
+# de CORR_W por unidad del eje principal. Así todas las frases aportan a los 29 ejes, pero los pesos
+# escritos a mano siguen mandando.
+CORR_W = 0.4
+CORR = {
+    "fed": {"ges": -1, "ipe": 0.5},
+    "dem": {"ges": -1, "ipe": -1, "inf": 1},
+    "int": {"uni": 1, "ind": -1},
+    "mil": {"pen": -1, "tem": 0.5},
+    "lib": {"pen": -1, "inf": -1, "ipe": 0.5},
+    "col": {"dis": 1, "lab": 1, "bie": 1},
+    "rel": {"epi": 1, "eti": 1, "idc": 0.5},
+    "pro": {"idc": 1, "eti": 1, "tra": -0.5},
+    "mig": {"uni": -1, "idc": -0.5},
+    "pla": {"bie": 1, "mon": 1, "dis": 1},
+    "glo": {"ind": 1, "mon": 0.5},
+    "tec": {"ecl": -1, "fut": -1, "tem": 1, "epi": 0.5},
+}

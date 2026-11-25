@@ -16,7 +16,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from base_ampliada import AMPLIADA  # noqa: E402
 from base_argentina import AR_EXTRA  # noqa: E402
-from ejes_ampliados import EJES2, NUEVAS, SEC  # noqa: E402
+from ejes_ampliados import CORR, CORR_W, EJES2, NUEVAS, SEC  # noqa: E402
 
 D = Path(__file__).resolve().parent
 PAISES = ["ar", "br", "py", "pe", "cl", "co", "uy"]
@@ -211,6 +211,16 @@ def preguntas():
         if rap:
             d["rap"] = 1
         qs.append(d)
+    # el resto de las frases aporta a los complementarios por correlación con su eje principal
+    comp = {t[0] for t in EJES2}
+    for q in qs:
+        if any(k in comp for k in q["e"]):
+            continue
+        extra = {}
+        for k, w in q["e"].items():
+            for k2, c in CORR.get(k, {}).items():
+                extra[k2] = extra.get(k2, 0) + CORR_W * c * w
+        q["e"].update({k2: round(max(-1, min(1, v)) * 20) / 20 for k2, v in extra.items() if abs(v) >= 0.05})
     return qs
 
 
@@ -251,6 +261,9 @@ def a12(p):
     }
 
 
+ORDEN12 = ("fed", "dem", "int", "mil", "lib", "col", "rel", "pro", "mig", "pla", "glo", "tec")
+
+
 def a2(p, d12):
     """Posición estimada en los ejes complementarios que se pueden derivar de los 8 ejes editoriales.
     Quedan afuera los que no se infieren de ahí (epi, ges, eti, tem, fut) y 'cer' (es del usuario)."""
@@ -272,8 +285,32 @@ def a2(p, d12):
     }
 
 
+def ideo_cercana(pos12, ideos):
+    """Familia ideológica más cercana en los 12 ejes principales."""
+    return min(ideos, key=lambda i: sum(abs(pos12[k] - v) for k, v in zip(ORDEN12, i["pos"])))
+
+
+def completar2(p, pos12, ideos):
+    """Posición en los 17 complementarios: mezcla lo que se deriva de la codificación de la persona con la posición
+    de su familia ideológica más cercana. Los 5 ejes que no salen de la codificación (epi, ges, eti, tem, fut)
+    combinan esa familia con indicios de sus ejes principales."""
+    d = a2(p, pos12)
+    fam = ideo_cercana(pos12, ideos)["pos2"]
+    out = {k: clip(0.65 * v + 0.35 * fam[k]) for k, v in d.items()}
+    ind = {
+        "epi": 0.5 * pos12["rel"] + 0.5 * pos12["pro"],
+        "ges": 100 - pos12["dem"],
+        "eti": 0.5 * pos12["rel"] + 0.5 * pos12["pro"],
+        "tem": 50 + 0.4 * (out["ipe"] - 50),
+        "fut": out["ecl"],
+    }
+    out.update({k: clip(0.5 * fam[k] + 0.5 * v) for k, v in ind.items()})
+    return {k: out[k] for k in fam}
+
+
 def figuras():
     base = json.loads((D / "figuras_base.json").read_text(encoding="utf8"))
+    ideos = json.loads((D / "ideologias.json").read_text(encoding="utf8"))["ideologias"]
     out = {"_nota": "Codificación editorial inicial A REVISAR, a partir de programas, votaciones y declaraciones públicas. No es una medición de opinión. "
                     "0-100 por eje, mismos polos que ejes.json. Se arma con generar.py desde figuras_base.json (8 ejes + ajustes por persona).",
            "revision": "a revisar", "fecha": base.get("fecha", ""), "_nota_cargos": base.get("_nota_cargos", "")}
@@ -282,7 +319,7 @@ def figuras():
         for f in base.get(grupo, []):
             pos = a12(f["pos"])
             pos.update({k: v for k, v in f.get("ajuste", {}).items() if k in pos})
-            pos2 = a2(f["pos"], pos)
+            pos2 = completar2(f["pos"], pos, ideos)
             pos2.update({k: v for k, v in f.get("ajuste", {}).items() if k not in pos})
             g = {k: v for k, v in f.items() if k not in ("pos", "ajuste")}
             g["pos"] = pos

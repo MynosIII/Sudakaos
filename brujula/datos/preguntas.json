@@ -7,7 +7,9 @@
    "t_pt": "As leis estaduais e municipais deveriam estar acima das leis federais.",
    "t_en": "State and local laws should take precedence over national laws.",
    "e": {
-    "fed": -1
+    "fed": -1,
+    "ges": 0.4,
+    "ipe": -0.2
    },
    "nivel": 3,
    "v": [
@@ -27,7 +29,9 @@
    "t_pt": "Os governos locais entendem melhor seus cidadãos do que o governo federal.",
    "t_en": "Local governments understand their citizens better than the national government.",
    "e": {
-    "fed": -1
+    "fed": -1,
+    "ges": 0.4,
+    "ipe": -0.2
    },
    "nivel": 1,
    "v": [
@@ -47,7 +51,9 @@
    "t_pt": "Há muitos temas que não faz sentido resolver no nível estadual ou local.",
    "t_en": "There are many issues that make no sense to address at a local level.",
    "e": {
-    "fed": 1
+    "fed": 1,
+    "ges": -0.4,
+    "ipe": 0.2
    },
    "nivel": 1,
    "v": [
@@ -67,7 +73,9 @@
    "t_pt": "Um governo federal forte é indispensável para proteger todos os cidadãos.",
    "t_en": "A strong national government is essential to protect all citizens.",
    "e": {
-    "fed": 1
+    "fed": 1,
+    "ges": -0.4,
+    "ipe": 0.2
    },
    "nivel": 3,
    "v": [
@@ -108,7 +116,10 @@
    "t_pt": "O povo tem que poder escolher seus governantes, sempre.",
    "t_en": "People must always be able to choose their leaders.",
    "e": {
-    "dem": -1
+    "dem": -1,
+    "ges": 0.4,
+    "ipe": 0.4,
+    "inf": -0.4
    },
    "nivel": 1,
    "v": [
@@ -191,7 +202,9 @@
    "t_pt": "Os países deveriam cooperar sempre que isso beneficie os dois.",
    "t_en": "Nations should cooperate whenever it benefits them both.",
    "e": {
-    "int": -1
+    "int": -1,
+    "uni": -0.4,
+    "ind": 0.4
    },
    "nivel": 1,
    "v": [
@@ -211,7 +224,9 @@
    "t_pt": "Manter a soberania nacional é mais importante do que qualquer acordo internacional.",
    "t_en": "National sovereignty matters more than any international agreement.",
    "e": {
-    "int": 1
+    "int": 1,
+    "uni": 0.4,
+    "ind": -0.4
    },
    "nivel": 1,
    "v": [
@@ -252,7 +267,9 @@
    "t_pt": "Deveria haver serviço militar obrigatório.",
    "t_en": "There should be compulsory military service.",
    "e": {
-    "mil": -1
+    "mil": -1,
+    "pen": 0.4,
+    "tem": -0.2
    },
    "nivel": 3,
    "v": [
@@ -272,7 +289,9 @@
    "t_pt": "Um país precisa manter Forças Armadas fortes para se defender.",
    "t_en": "A country must maintain strong armed forces to defend itself.",
    "e": {
-    "mil": -1
+    "mil": -1,
+    "pen": 0.4,
+    "tem": -0.2
    },
    "nivel": 1,
    "v": [
@@ -292,7 +311,9 @@
    "t_pt": "Sempre é preciso esgotar a via diplomática antes de pensar em usar a força.",
    "t_en": "Diplomacy should always be exhausted before force is even considered.",
    "e": {
-    "mil": 1
+    "mil": 1,
+    "pen": -0.4,
+    "tem": 0.2
    },
    "nivel": 1,
    "v": [
@@ -312,7 +333,9 @@
    "t_pt": "O gasto militar é um desperdício de dinheiro.",
    "t_en": "Military spending is a waste of money.",
    "e": {
-    "mil": 1
+    "mil": 1,
+    "pen": -0.4,
+    "tem": 0.2
    },
    "nivel": 3,
    "v": [
@@ -353,7 +376,10 @@
    "t_pt": "É preciso abrir mão de alguma liberdade para que as pessoas estejam mais seguras.",
    "t_en": "Some freedom must be given up to keep people safe.",
    "e": {
-    "lib": -1
+    "lib": -1,
+    "pen": 0.4,
+    "inf": 0.4,
+    "ipe": -0.2
    },
    "nivel": 1,
    "v": [
@@ -479,7 +505,10 @@
    "t_pt": "Quanto mais livre o mercado, mais livres as pessoas.",
    "t_en": "The freer the market, the freer the people.",
    "e": {
-    "col": 1
+    "col": 1,
+    "dis": 0.4,
+    "lab": 0.4,
+    "bie": 0.4
    },
    "nivel": 3,
    "v": [
@@ -499,7 +528,10 @@
    "t_pt": "Não existe nenhum deus nem poder superior.",
    "t_en": "There is no god or higher power.",
    "e": {
-    "rel": -1
+    "rel": -1,
+    "epi": -0.4,
+    "eti": -0.4,
+    "idc": -0.2
    },
    "nivel": 3,
    "v": [
@@ -519,7 +551,10 @@
    "t_pt": "As leis não deveriam se basear na religião.",
    "t_en": "Laws should not be based on religion.",
    "e": {
-    "rel": -1
+    "rel": -1,
+    "epi": -0.4,
+    "eti": -0.4,
+    "idc": -0.2
    },
    "nivel": 1,
    "v": [
@@ -539,7 +574,10 @@
    "t_pt": "A religião faz bem para a sociedade.",
    "t_en": "Religion is beneficial for society.",
    "e": {
-    "rel": 1
+    "rel": 1,
+    "epi": 0.4,
+    "eti": 0.4,
+    "idc": 0.2
    },
    "nivel": 1,
    "v": [
@@ -580,7 +618,10 @@
    "t_pt": "O gênero é uma construção social.",
    "t_en": "Gender is a social construct.",
    "e": {
-    "pro": -1
+    "pro": -1,
+    "idc": -0.4,
+    "eti": -0.4,
+    "tra": 0.2
    },
    "nivel": 3,
    "v": [
@@ -600,7 +641,10 @@
    "t_pt": "O casamento entre pessoas do mesmo sexo está certo.",
    "t_en": "Same-sex marriage is fine.",
    "e": {
-    "pro": -1
+    "pro": -1,
+    "idc": -0.4,
+    "eti": -0.4,
+    "tra": 0.2
    },
    "nivel": 1,
    "v": [
@@ -641,7 +685,10 @@
    "t_pt": "A sociedade ficou progressista demais.",
    "t_en": "Society has become too progressive.",
    "e": {
-    "pro": 1
+    "pro": 1,
+    "idc": 0.4,
+    "eti": 0.4,
+    "tra": -0.2
    },
    "nivel": 3,
    "v": [
@@ -661,7 +708,9 @@
    "t_pt": "Só deveriam poder entrar no país imigrantes muito qualificados.",
    "t_en": "Only highly skilled immigrants, if any, should be allowed into the country.",
    "e": {
-    "mig": -1
+    "mig": -1,
+    "uni": 0.4,
+    "idc": 0.2
    },
    "nivel": 3,
    "v": [
@@ -681,7 +730,9 @@
    "t_pt": "Controlar as fronteiras é importante.",
    "t_en": "Border control is important.",
    "e": {
-    "mig": -1
+    "mig": -1,
+    "uni": 0.4,
+    "idc": 0.2
    },
    "nivel": 1,
    "v": [
@@ -701,7 +752,9 @@
    "t_pt": "Os imigrantes trazem ao país mais do que custam.",
    "t_en": "Immigrants give the country more than they cost.",
    "e": {
-    "mig": 1
+    "mig": 1,
+    "uni": -0.4,
+    "idc": -0.2
    },
    "nivel": 1,
    "v": [
@@ -721,7 +774,9 @@
    "t_pt": "Nossa cultura seria melhor se se misturasse mais com outras.",
    "t_en": "Our culture would be better if mixed more with others.",
    "e": {
-    "mig": 1
+    "mig": 1,
+    "uni": -0.4,
+    "idc": -0.2
    },
    "nivel": 3,
    "v": [
@@ -741,7 +796,10 @@
    "t_pt": "O planejamento econômico do Estado garante mais prosperidade.",
    "t_en": "Government economic planning ensures greater prosperity.",
    "e": {
-    "pla": -1
+    "pla": -1,
+    "bie": -0.4,
+    "mon": -0.4,
+    "dis": -0.4
    },
    "nivel": 3,
    "v": [
@@ -782,7 +840,10 @@
    "t_pt": "Intervenção demais do Estado é uma ameaça para a economia.",
    "t_en": "Excessive government intervention is a threat to the economy.",
    "e": {
-    "pla": 1
+    "pla": 1,
+    "bie": 0.4,
+    "mon": 0.4,
+    "dis": 0.4
    },
    "nivel": 1,
    "v": [
@@ -802,7 +863,10 @@
    "t_pt": "O Estado deveria intervir no mercado o mínimo possível.",
    "t_en": "The government should intervene in the market as little as possible.",
    "e": {
-    "pla": 1
+    "pla": 1,
+    "bie": 0.4,
+    "mon": 0.4,
+    "dis": 0.4
    },
    "nivel": 3,
    "v": [
@@ -864,7 +928,9 @@
    "t_pt": "O comércio internacional costuma beneficiar os dois lados.",
    "t_en": "International trade usually benefits both sides.",
    "e": {
-    "glo": 1
+    "glo": 1,
+    "ind": 0.4,
+    "mon": 0.2
    },
    "nivel": 1,
    "v": [
@@ -968,7 +1034,11 @@
    "t_pt": "A sociedade era melhor muitos anos atrás do que hoje.",
    "t_en": "Society was better many years ago than it is now.",
    "e": {
-    "tec": 1
+    "tec": 1,
+    "ecl": -0.4,
+    "fut": -0.4,
+    "tem": 0.4,
+    "epi": 0.2
    },
    "nivel": 3,
    "v": [
@@ -988,7 +1058,9 @@
    "t_pt": "Não é preciso um governo federal.",
    "t_en": "There is no need for a national government.",
    "e": {
-    "fed": -1
+    "fed": -1,
+    "ges": 0.4,
+    "ipe": -0.2
    },
    "nivel": 4,
    "v": [
@@ -1009,7 +1081,9 @@
    "t_pt": "As pessoas deveriam se sentir mais do seu estado do que do seu país.",
    "t_en": "People should feel more loyal to their province or state than to their country.",
    "e": {
-    "fed": -1
+    "fed": -1,
+    "ges": 0.4,
+    "ipe": -0.2
    },
    "nivel": 3,
    "v": [
@@ -1030,7 +1104,9 @@
    "t_pt": "Os estados e os municípios deveriam ter mais poder do que têm hoje.",
    "t_en": "Local governments should have more power than they currently do.",
    "e": {
-    "fed": -1
+    "fed": -1,
+    "ges": 0.4,
+    "ipe": -0.2
    },
    "nivel": 2,
    "v": [
@@ -1051,7 +1127,9 @@
    "t_pt": "É boa ideia testar uma política em um estado antes de aplicá-la no país inteiro.",
    "t_en": "It's a good idea to test a policy in one province before implementing it nationwide.",
    "e": {
-    "fed": -1
+    "fed": -1,
+    "ges": 0.4,
+    "ipe": -0.2
    },
    "nivel": 2,
    "v": [
@@ -1072,7 +1150,9 @@
    "t_pt": "Os governos locais cuidam de temas que o governo federal nunca tocaria.",
    "t_en": "Local governments address issues the national government would never touch.",
    "e": {
-    "fed": -1
+    "fed": -1,
+    "ges": 0.4,
+    "ipe": -0.2
    },
    "nivel": 1,
    "v": [
@@ -1093,7 +1173,9 @@
    "t_pt": "O governo federal protege melhor as minorias do que alguns governos estaduais.",
    "t_en": "The national government protects minorities better than some local governments do.",
    "e": {
-    "fed": 1
+    "fed": 1,
+    "ges": -0.4,
+    "ipe": 0.2
    },
    "nivel": 1,
    "v": [
@@ -1114,7 +1196,9 @@
    "t_pt": "O governo federal precisa de mais poder.",
    "t_en": "The national government needs more power.",
    "e": {
-    "fed": 1
+    "fed": 1,
+    "ges": -0.4,
+    "ipe": 0.2
    },
    "nivel": 2,
    "v": [
@@ -1135,7 +1219,9 @@
    "t_pt": "Os estados não deveriam poder ficar isentos das leis federais.",
    "t_en": "Provinces should not be able to exempt themselves from national laws.",
    "e": {
-    "fed": 1
+    "fed": 1,
+    "ges": -0.4,
+    "ipe": 0.2
    },
    "nivel": 2,
    "v": [
@@ -1156,7 +1242,9 @@
    "t_pt": "Um país sem um governo federal forte é apenas uma aliança de estados.",
    "t_en": "A group of provinces without a strong national government is merely an alliance, not a nation.",
    "e": {
-    "fed": 1
+    "fed": 1,
+    "ges": -0.4,
+    "ipe": 0.2
    },
    "nivel": 3,
    "v": [
@@ -1177,7 +1265,9 @@
    "t_pt": "As leis deveriam ser exatamente iguais em todas as regiões do país.",
    "t_en": "Laws should be completely consistent across all regions of a nation.",
    "e": {
-    "fed": 1
+    "fed": 1,
+    "ges": -0.4,
+    "ipe": 0.2
    },
    "nivel": 4,
    "v": [
@@ -1242,7 +1332,10 @@
    "t_pt": "As eleições são uma boa forma de mostrar se um governo tem apoio.",
    "t_en": "Elections are an effective way of showing government approval.",
    "e": {
-    "dem": -1
+    "dem": -1,
+    "ges": 0.4,
+    "ipe": 0.4,
+    "inf": -0.4
    },
    "nivel": 2,
    "v": [
@@ -1263,7 +1356,10 @@
    "t_pt": "Cada pessoa deveria ter um voto, e todos deveriam valer o mesmo.",
    "t_en": "Each person should have one vote, each equal to every other.",
    "e": {
-    "dem": -1
+    "dem": -1,
+    "ges": 0.4,
+    "ipe": 0.4,
+    "inf": -0.4
    },
    "nivel": 2,
    "v": [
@@ -1306,7 +1402,10 @@
    "t_pt": "A opinião da maioria nem sempre tem razão.",
    "t_en": "Popular opinion is not always right.",
    "e": {
-    "dem": 1
+    "dem": 1,
+    "ges": -0.4,
+    "ipe": -0.4,
+    "inf": 0.4
    },
    "nivel": 1,
    "v": [
@@ -1438,7 +1537,9 @@
    "t_pt": "As Nações Unidas deveriam ter forças próprias para fazer cumprir suas resoluções.",
    "t_en": "The United Nations should have a military to enforce its resolutions.",
    "e": {
-    "int": -1
+    "int": -1,
+    "uni": -0.4,
+    "ind": 0.4
    },
    "nivel": 3,
    "v": [
@@ -1459,7 +1560,9 @@
    "t_pt": "Apoio uniões regionais com instituições comuns, como a União Europeia.",
    "t_en": "I support regional unions with shared institutions, such as the European Union.",
    "e": {
-    "int": -1
+    "int": -1,
+    "uni": -0.4,
+    "ind": 0.4
    },
    "nivel": 2,
    "v": [
@@ -1480,7 +1583,9 @@
    "t_pt": "Os governos deveriam prestar contas à comunidade internacional.",
    "t_en": "Governments should be accountable to the international community.",
    "e": {
-    "int": -1
+    "int": -1,
+    "uni": -0.4,
+    "ind": 0.4
    },
    "nivel": 2,
    "v": [
@@ -1501,7 +1606,9 @@
    "t_pt": "As alianças com outros países são importantes para proteger uma nação.",
    "t_en": "Alliances are important for protecting a nation.",
    "e": {
-    "int": -1
+    "int": -1,
+    "uni": -0.4,
+    "ind": 0.4
    },
    "nivel": 1,
    "v": [
@@ -1522,7 +1629,9 @@
    "t_pt": "Um país deveria se manter neutro nos conflitos dos outros.",
    "t_en": "A nation should mostly stay neutral in foreign affairs.",
    "e": {
-    "int": 1
+    "int": 1,
+    "uni": 0.4,
+    "ind": -0.4
    },
    "nivel": 1,
    "v": [
@@ -1543,7 +1652,9 @@
    "t_pt": "A ajuda internacional quase sempre é dinheiro jogado fora.",
    "t_en": "International aid is a waste of money most of the time.",
    "e": {
-    "int": 1
+    "int": 1,
+    "uni": 0.4,
+    "ind": -0.4
    },
    "nivel": 2,
    "v": [
@@ -1564,7 +1675,9 @@
    "t_pt": "As alianças internacionais podem pôr a soberania em risco.",
    "t_en": "Alliances can pose a threat to a nation's sovereignty.",
    "e": {
-    "int": 1
+    "int": 1,
+    "uni": 0.4,
+    "ind": -0.4
    },
    "nivel": 2,
    "v": [
@@ -1585,7 +1698,9 @@
    "t_pt": "Nosso país deveria sair das Nações Unidas.",
    "t_en": "Our country should leave the United Nations.",
    "e": {
-    "int": 1
+    "int": 1,
+    "uni": 0.4,
+    "ind": -0.4
    },
    "nivel": 3,
    "v": [
@@ -1628,7 +1743,9 @@
    "t_pt": "A guerra é necessária para que uma economia prospere.",
    "t_en": "War is needed to make an economy thrive.",
    "e": {
-    "mil": -1
+    "mil": -1,
+    "pen": 0.4,
+    "tem": -0.2
    },
    "nivel": 4,
    "v": [
@@ -1671,7 +1788,9 @@
    "t_pt": "A opção militar sempre deveria estar sobre a mesa.",
    "t_en": "A military option should always be considered.",
    "e": {
-    "mil": -1
+    "mil": -1,
+    "pen": 0.4,
+    "tem": -0.2
    },
    "nivel": 2,
    "v": [
@@ -1692,7 +1811,9 @@
    "t_pt": "Às vezes a ação militar é necessária para proteger o país.",
    "t_en": "Military action is sometimes necessary to protect the nation.",
    "e": {
-    "mil": -1
+    "mil": -1,
+    "pen": 0.4,
+    "tem": -0.2
    },
    "nivel": 2,
    "v": [
@@ -1713,7 +1834,9 @@
    "t_pt": "É preciso respeitar e reconhecer quem serviu nas Forças Armadas.",
    "t_en": "We should respect those who have served in the military.",
    "e": {
-    "mil": -1
+    "mil": -1,
+    "pen": 0.4,
+    "tem": -0.2
    },
    "nivel": 1,
    "v": [
@@ -1734,7 +1857,9 @@
    "t_pt": "A paz é preferível à guerra sempre que possível.",
    "t_en": "Peace is preferable to war whenever possible.",
    "e": {
-    "mil": 1
+    "mil": 1,
+    "pen": -0.4,
+    "tem": 0.2
    },
    "nivel": 1,
    "v": [
@@ -1755,7 +1880,9 @@
    "t_pt": "A paz duradoura traz prosperidade.",
    "t_en": "Lasting peace leads to prosperity.",
    "e": {
-    "mil": 1
+    "mil": 1,
+    "pen": -0.4,
+    "tem": 0.2
    },
    "nivel": 2,
    "v": [
@@ -1776,7 +1903,9 @@
    "t_pt": "Meu país gasta demais com defesa.",
    "t_en": "My country spends too much on the military.",
    "e": {
-    "mil": 1
+    "mil": 1,
+    "pen": -0.4,
+    "tem": 0.2
    },
    "nivel": 2,
    "v": [
@@ -1797,7 +1926,9 @@
    "t_pt": "Nenhum país tem o direito de intervir militarmente em outro.",
    "t_en": "No country has the right to intervene militarily in another.",
    "e": {
-    "mil": 1
+    "mil": 1,
+    "pen": -0.4,
+    "tem": 0.2
    },
    "nivel": 3,
    "v": [
@@ -1818,7 +1949,9 @@
    "t_pt": "Os países não deveriam ter Forças Armadas.",
    "t_en": "Nations should not maintain a military.",
    "e": {
-    "mil": 1
+    "mil": 1,
+    "pen": -0.4,
+    "tem": 0.2
    },
    "nivel": 4,
    "v": [
@@ -1905,7 +2038,10 @@
    "t_pt": "As câmeras e a vigilância do Estado são necessárias no mundo de hoje.",
    "t_en": "Government surveillance is necessary in the modern world.",
    "e": {
-    "lib": -1
+    "lib": -1,
+    "pen": 0.4,
+    "inf": 0.4,
+    "ipe": -0.2
    },
    "nivel": 2,
    "v": [
@@ -1926,7 +2062,10 @@
    "t_pt": "A justiça deveria poder ler as mensagens de suspeitos de crimes graves.",
    "t_en": "Authorities should have access to the messages of people suspected of serious crimes.",
    "e": {
-    "lib": -1
+    "lib": -1,
+    "pen": 0.4,
+    "inf": 0.4,
+    "ipe": -0.2
    },
    "nivel": 1,
    "v": [
@@ -1947,7 +2086,10 @@
    "t_pt": "A maconha deveria ser legal.",
    "t_en": "Marijuana should be legal.",
    "e": {
-    "lib": 1
+    "lib": 1,
+    "pen": -0.4,
+    "inf": -0.4,
+    "ipe": 0.2
    },
    "nivel": 1,
    "v": [
@@ -2169,7 +2311,10 @@
    "t_pt": "Sem capitalismo, uma economia acaba colapsando.",
    "t_en": "Economies without any capitalism will collapse.",
    "e": {
-    "col": 1
+    "col": 1,
+    "dis": 0.4,
+    "lab": 0.4,
+    "bie": 0.4
    },
    "nivel": 1,
    "v": [
@@ -2279,7 +2424,10 @@
    "t_pt": "A religião precisa perder peso para que a sociedade progrida.",
    "t_en": "Religion must decline for society to progress.",
    "e": {
-    "rel": -1
+    "rel": -1,
+    "epi": -0.4,
+    "eti": -0.4,
+    "idc": -0.2
    },
    "nivel": 4,
    "v": [
@@ -2300,7 +2448,10 @@
    "t_pt": "O Estado não deveria financiar nenhuma religião de forma alguma.",
    "t_en": "The government should not fund any religious organization in any way.",
    "e": {
-    "rel": -1
+    "rel": -1,
+    "epi": -0.4,
+    "eti": -0.4,
+    "idc": -0.2
    },
    "nivel": 3,
    "v": [
@@ -2343,7 +2494,10 @@
    "t_pt": "A maioria das religiões organizadas se contradiz.",
    "t_en": "Most organized religions contradict themselves.",
    "e": {
-    "rel": -1
+    "rel": -1,
+    "epi": -0.4,
+    "eti": -0.4,
+    "idc": -0.2
    },
    "nivel": 2,
    "v": [
@@ -2364,7 +2518,10 @@
    "t_pt": "Tem que haver uma separação clara entre Igreja e Estado.",
    "t_en": "There must be a separation between church and state.",
    "e": {
-    "rel": -1
+    "rel": -1,
+    "epi": -0.4,
+    "eti": -0.4,
+    "idc": -0.2
    },
    "nivel": 1,
    "v": [
@@ -2385,7 +2542,10 @@
    "t_pt": "Acredito que há algo depois da morte.",
    "t_en": "I believe there is something after death.",
    "e": {
-    "rel": 1
+    "rel": 1,
+    "epi": 0.4,
+    "eti": 0.4,
+    "idc": 0.2
    },
    "nivel": 1,
    "v": [
@@ -2406,7 +2566,10 @@
    "t_pt": "Acredito em Deus ou em um poder superior.",
    "t_en": "I believe in God or a higher power.",
    "e": {
-    "rel": 1
+    "rel": 1,
+    "epi": 0.4,
+    "eti": 0.4,
+    "idc": 0.2
    },
    "nivel": 2,
    "v": [
@@ -2427,7 +2590,10 @@
    "t_pt": "As crianças deveriam ser educadas em valores religiosos.",
    "t_en": "Children should be educated in religious values.",
    "e": {
-    "rel": 1
+    "rel": 1,
+    "epi": 0.4,
+    "eti": 0.4,
+    "idc": 0.2
    },
    "nivel": 2,
    "v": [
@@ -2448,7 +2614,10 @@
    "t_pt": "A religião é fundamental para a sociedade.",
    "t_en": "Religion is essential to society.",
    "e": {
-    "rel": 1
+    "rel": 1,
+    "epi": 0.4,
+    "eti": 0.4,
+    "idc": 0.2
    },
    "nivel": 3,
    "v": [
@@ -2513,7 +2682,10 @@
    "t_pt": "As políticas de cotas para grupos historicamente discriminados são positivas.",
    "t_en": "Affirmative action for historically discriminated groups is mostly beneficial.",
    "e": {
-    "pro": -1
+    "pro": -1,
+    "idc": -0.4,
+    "eti": -0.4,
+    "tra": 0.2
    },
    "nivel": 3,
    "v": [
@@ -2534,7 +2706,10 @@
    "t_pt": "Apoio o movimento LGBTQ+.",
    "t_en": "I support the LGBTQ+ movement.",
    "e": {
-    "pro": -1
+    "pro": -1,
+    "idc": -0.4,
+    "eti": -0.4,
+    "tra": 0.2
    },
    "nivel": 2,
    "v": [
@@ -2555,7 +2730,10 @@
    "t_pt": "Alguns monumentos a figuras históricas deveriam ser retirados.",
    "t_en": "Statues of certain historical figures should be taken down.",
    "e": {
-    "pro": -1
+    "pro": -1,
+    "idc": -0.4,
+    "eti": -0.4,
+    "tra": 0.2
    },
    "nivel": 2,
    "v": [
@@ -2576,7 +2754,10 @@
    "t_pt": "Os movimentos antirracistas têm razão em suas reivindicações.",
    "t_en": "Anti-racism movements are right in their demands.",
    "e": {
-    "pro": -1
+    "pro": -1,
+    "idc": -0.4,
+    "eti": -0.4,
+    "tra": 0.2
    },
    "nivel": 1,
    "v": [
@@ -2641,7 +2822,10 @@
    "t_pt": "Relações sexuais antes do casamento são erradas.",
    "t_en": "Sex before marriage is immoral.",
    "e": {
-    "pro": 1
+    "pro": 1,
+    "idc": 0.4,
+    "eti": 0.4,
+    "tra": -0.2
    },
    "nivel": 2,
    "v": [
@@ -2685,7 +2869,10 @@
    "t_pt": "A homossexualidade deveria ser proibida.",
    "t_en": "Homosexuality should be criminalized.",
    "e": {
-    "pro": 1
+    "pro": 1,
+    "idc": 0.4,
+    "eti": 0.4,
+    "tra": -0.2
    },
    "nivel": 4,
    "v": [
@@ -2706,7 +2893,9 @@
    "t_pt": "Não deveríamos receber refugiados.",
    "t_en": "We should not allow any refugees.",
    "e": {
-    "mig": -1
+    "mig": -1,
+    "uni": 0.4,
+    "idc": 0.2
    },
    "nivel": 4,
    "v": [
@@ -2727,7 +2916,9 @@
    "t_pt": "Se aceitarmos imigrantes, eles têm que adotar nossa cultura.",
    "t_en": "If we accept migrants at all, they must assimilate into our culture.",
    "e": {
-    "mig": -1
+    "mig": -1,
+    "uni": 0.4,
+    "idc": 0.2
    },
    "nivel": 3,
    "v": [
@@ -2748,7 +2939,9 @@
    "t_pt": "Os imigrantes em situação irregular não trazem nenhum benefício ao país.",
    "t_en": "Undocumented immigrants do not benefit the host country.",
    "e": {
-    "mig": -1
+    "mig": -1,
+    "uni": 0.4,
+    "idc": 0.2
    },
    "nivel": 2,
    "v": [
@@ -2791,7 +2984,9 @@
    "t_pt": "Os imigrantes deveriam aprender a língua do país.",
    "t_en": "Immigrants should be expected to learn the country's language.",
    "e": {
-    "mig": -1
+    "mig": -1,
+    "uni": 0.4,
+    "idc": 0.2
    },
    "nivel": 1,
    "v": [
@@ -2812,7 +3007,9 @@
    "t_pt": "Deveríamos receber mais refugiados.",
    "t_en": "We should take in more refugees.",
    "e": {
-    "mig": 1
+    "mig": 1,
+    "uni": -0.4,
+    "idc": -0.2
    },
    "nivel": 1,
    "v": [
@@ -2855,7 +3052,9 @@
    "t_pt": "Todas as sociedades são uma mistura de culturas.",
    "t_en": "All societies are a blend of cultures.",
    "e": {
-    "mig": 1
+    "mig": 1,
+    "uni": -0.4,
+    "idc": -0.2
    },
    "nivel": 2,
    "v": [
@@ -2898,7 +3097,9 @@
    "t_pt": "Qualquer pessoa que queira entrar no país deveria poder.",
    "t_en": "Anybody who wants to enter the country should be able to.",
    "e": {
-    "mig": 1
+    "mig": 1,
+    "uni": -0.4,
+    "idc": -0.2
    },
    "nivel": 4,
    "v": [
@@ -2919,7 +3120,10 @@
    "t_pt": "A maioria das empresas deveria ser do Estado.",
    "t_en": "Most, if not all, businesses should be owned by the government.",
    "e": {
-    "pla": -1
+    "pla": -1,
+    "bie": -0.4,
+    "mon": -0.4,
+    "dis": -0.4
    },
    "nivel": 4,
    "v": [
@@ -2940,7 +3144,10 @@
    "t_pt": "Uma economia muito regulada é boa para o país.",
    "t_en": "High levels of economic regulation are good for the country.",
    "e": {
-    "pla": -1
+    "pla": -1,
+    "bie": -0.4,
+    "mon": -0.4,
+    "dis": -0.4
    },
    "nivel": 3,
    "v": [
@@ -2961,7 +3168,10 @@
    "t_pt": "O Estado tem que intervir na economia para proteger os consumidores.",
    "t_en": "The government must intervene in the economy to protect consumers.",
    "e": {
-    "pla": -1
+    "pla": -1,
+    "bie": -0.4,
+    "mon": -0.4,
+    "dis": -0.4
    },
    "nivel": 2,
    "v": [
@@ -2982,7 +3192,10 @@
    "t_pt": "O Estado tem que desmontar os monopólios para garantir concorrência justa.",
    "t_en": "The government must break up monopolies to ensure fair competition.",
    "e": {
-    "pla": -1
+    "pla": -1,
+    "bie": -0.4,
+    "mon": -0.4,
+    "dis": -0.4
    },
    "nivel": 2,
    "v": [
@@ -3003,7 +3216,10 @@
    "t_pt": "Sem regulação, os monopólios acabam dominando todo o mercado.",
    "t_en": "Without economic regulation, monopolies will dominate the entire market.",
    "e": {
-    "pla": -1
+    "pla": -1,
+    "bie": -0.4,
+    "mon": -0.4,
+    "dis": -0.4
    },
    "nivel": 1,
    "v": [
@@ -3024,7 +3240,10 @@
    "t_pt": "É preciso baixar os impostos da classe média e dos mais pobres.",
    "t_en": "Taxes on the middle and lower classes should be lowered.",
    "e": {
-    "pla": 1
+    "pla": 1,
+    "bie": 0.4,
+    "mon": 0.4,
+    "dis": 0.4
    },
    "nivel": 1,
    "v": [
@@ -3045,7 +3264,10 @@
    "t_pt": "A regulação econômica faz mais mal do que bem.",
    "t_en": "Economic regulation causes more harm than good.",
    "e": {
-    "pla": 1
+    "pla": 1,
+    "bie": 0.4,
+    "mon": 0.4,
+    "dis": 0.4
    },
    "nivel": 2,
    "v": [
@@ -3066,7 +3288,10 @@
    "t_pt": "Os impostos são complicados demais e deveriam ser simplificados.",
    "t_en": "Taxes are too complex and should be simplified.",
    "e": {
-    "pla": 1
+    "pla": 1,
+    "bie": 0.4,
+    "mon": 0.4,
+    "dis": 0.4
    },
    "nivel": 2,
    "v": [
@@ -3131,7 +3356,9 @@
    "t_pt": "Os produtos importados deveriam ser proibidos ou muito restringidos.",
    "t_en": "Foreign products should be banned or heavily restricted.",
    "e": {
-    "glo": -1
+    "glo": -1,
+    "ind": -0.4,
+    "mon": -0.2
    },
    "nivel": 4,
    "v": [
@@ -3196,7 +3423,9 @@
    "t_pt": "O conhecimento técnico e científico do país precisa ser protegido de outros países.",
    "t_en": "Technical and scientific knowledge should be protected from other countries.",
    "e": {
-    "glo": -1
+    "glo": -1,
+    "ind": -0.4,
+    "mon": -0.2
    },
    "nivel": 2,
    "v": [
@@ -3217,7 +3446,9 @@
    "t_pt": "A globalização econômica trouxe mais prejuízos do que benefícios.",
    "t_en": "Economic globalization has caused more harm than good.",
    "e": {
-    "glo": -1
+    "glo": -1,
+    "ind": -0.4,
+    "mon": -0.2
    },
    "nivel": 1,
    "v": [
@@ -3238,7 +3469,9 @@
    "t_pt": "A cooperação econômica global costuma dar bons resultados.",
    "t_en": "Global economic cooperation generally leads to positive outcomes.",
    "e": {
-    "glo": 1
+    "glo": 1,
+    "ind": 0.4,
+    "mon": 0.2
    },
    "nivel": 1,
    "v": [
@@ -3259,7 +3492,9 @@
    "t_pt": "As tarifas de importação deveriam baixar.",
    "t_en": "Tariffs should be lowered.",
    "e": {
-    "glo": 1
+    "glo": 1,
+    "ind": 0.4,
+    "mon": 0.2
    },
    "nivel": 2,
    "v": [
@@ -3280,7 +3515,9 @@
    "t_pt": "As restrições ao comércio fazem mal à economia.",
    "t_en": "Restrictions on trade are bad for the economy.",
    "e": {
-    "glo": 1
+    "glo": 1,
+    "ind": 0.4,
+    "mon": 0.2
    },
    "nivel": 2,
    "v": [
@@ -3367,7 +3604,11 @@
    "t_pt": "A modificação genética é positiva, inclusive em seres humanos.",
    "t_en": "Genetic modification is a force for good, even in humans.",
    "e": {
-    "tec": -1
+    "tec": -1,
+    "ecl": 0.4,
+    "fut": 0.4,
+    "tem": -0.4,
+    "epi": -0.2
    },
    "nivel": 3,
    "v": [
@@ -3410,7 +3651,11 @@
    "t_pt": "O progresso tecnológico quase sempre é bom.",
    "t_en": "Technological progress is usually good.",
    "e": {
-    "tec": -1
+    "tec": -1,
+    "ecl": 0.4,
+    "fut": 0.4,
+    "tem": -0.4,
+    "epi": -0.2
    },
    "nivel": 2,
    "v": [
@@ -3453,7 +3698,11 @@
    "t_pt": "A tecnologia está deixando gente sem emprego, e isso é prejudicial.",
    "t_en": "Technology is costing people their jobs, and that is harmful.",
    "e": {
-    "tec": 1
+    "tec": 1,
+    "ecl": -0.4,
+    "fut": -0.4,
+    "tem": 0.4,
+    "epi": 0.2
    },
    "nivel": 1,
    "v": [
@@ -3474,7 +3723,11 @@
    "t_pt": "Sou contra a modificação genética de seres humanos.",
    "t_en": "I oppose human genetic modification.",
    "e": {
-    "tec": 1
+    "tec": 1,
+    "ecl": -0.4,
+    "fut": -0.4,
+    "tem": 0.4,
+    "epi": 0.2
    },
    "nivel": 2,
    "v": [
@@ -3495,7 +3748,11 @@
    "t_pt": "O risco de as máquinas dominarem a humanidade é real.",
    "t_en": "The threat of machines taking over humanity is very real.",
    "e": {
-    "tec": 1
+    "tec": 1,
+    "ecl": -0.4,
+    "fut": -0.4,
+    "tem": 0.4,
+    "epi": 0.2
    },
    "nivel": 2,
    "v": [
@@ -3516,7 +3773,11 @@
    "t_pt": "A tecnologia e a vida moderna deixaram a vida vazia e chata.",
    "t_en": "Modern technology and lifestyles have made life meaningless and dull.",
    "e": {
-    "tec": 1
+    "tec": 1,
+    "ecl": -0.4,
+    "fut": -0.4,
+    "tem": 0.4,
+    "epi": 0.2
    },
    "nivel": 3,
    "v": [
@@ -3581,7 +3842,11 @@
    "t_en": "Abortion should be legal, safe and free.",
    "e": {
     "pro": -2,
-    "rel": -0.5
+    "rel": -0.5,
+    "idc": -0.9,
+    "eti": -1.0,
+    "tra": 0.4,
+    "epi": -0.2
    },
    "v": [
     "general",
@@ -3641,7 +3906,9 @@
    "t_pt": "Fortalecer o Mercosul e a integração latino-americana deveria ser prioridade.",
    "t_en": "Strengthening Mercosur and Latin American integration should be a priority.",
    "e": {
-    "int": -1
+    "int": -1,
+    "uni": -0.4,
+    "ind": 0.4
    },
    "v": [
     "general",
@@ -3661,7 +3928,10 @@
    "t_en": "China is as valid a partner as the United States.",
    "e": {
     "int": -0.5,
-    "glo": 0.5
+    "glo": 0.5,
+    "uni": -0.2,
+    "ind": 0.4,
+    "mon": 0.1
    },
    "v": [
     "general",
@@ -3720,7 +3990,12 @@
    "e": {
     "pla": 1,
     "col": 0.5,
-    "glo": 0.5
+    "glo": 0.5,
+    "bie": 0.6,
+    "mon": 0.5,
+    "dis": 0.6,
+    "lab": 0.2,
+    "ind": 0.2
    },
    "v": [
     "ar"
@@ -3733,7 +4008,11 @@
    "t": "La motosierra sobre el gasto público era necesaria aunque tuviera costos sociales.",
    "e": {
     "pla": 2,
-    "col": 1.0
+    "col": 1.0,
+    "bie": 1.0,
+    "mon": 0.8,
+    "dis": 1.0,
+    "lab": 0.4
    },
    "v": [
     "ar"
@@ -3746,7 +4025,11 @@
    "t": "Las universidades nacionales deberían recibir más presupuesto aunque eso implique déficit.",
    "e": {
     "pla": -1,
-    "col": -0.5
+    "col": -0.5,
+    "bie": -0.6,
+    "mon": -0.4,
+    "dis": -0.6,
+    "lab": -0.2
    },
    "v": [
     "ar"
@@ -3759,7 +4042,13 @@
    "t": "El RIGI (régimen de incentivo a grandes inversiones) es bueno para el país.",
    "e": {
     "glo": 1,
-    "tec": -0.5
+    "tec": -0.5,
+    "ind": 0.4,
+    "mon": 0.2,
+    "ecl": 0.2,
+    "fut": 0.2,
+    "tem": -0.2,
+    "epi": -0.1
    },
    "v": [
     "ar"
@@ -3773,7 +4062,12 @@
    "e": {
     "pla": -1,
     "col": -0.5,
-    "glo": -0.5
+    "glo": -0.5,
+    "bie": -0.6,
+    "mon": -0.5,
+    "dis": -0.6,
+    "lab": -0.2,
+    "ind": -0.2
    },
    "v": [
     "ar"
@@ -3785,7 +4079,9 @@
    "id": "ar06",
    "t": "La coparticipación federal reparte injustamente los recursos entre provincias.",
    "e": {
-    "fed": -1
+    "fed": -1,
+    "ges": 0.4,
+    "ipe": -0.2
    },
    "v": [
     "ar"
@@ -3798,7 +4094,13 @@
    "t": "Los juicios por delitos de lesa humanidad de la última dictadura tienen que seguir adelante.",
    "e": {
     "lib": 1,
-    "pro": -1
+    "pro": -1,
+    "pen": -0.4,
+    "inf": -0.4,
+    "ipe": 0.2,
+    "idc": -0.4,
+    "eti": -0.4,
+    "tra": 0.2
    },
    "v": [
     "ar"
@@ -3811,7 +4113,13 @@
    "t": "Sobre los años 70 hay que hablar de 'memoria completa', incluyendo a las víctimas de la guerrilla.",
    "e": {
     "pro": 1,
-    "lib": -1
+    "lib": -1,
+    "idc": 0.4,
+    "eti": 0.4,
+    "tra": -0.2,
+    "pen": 0.4,
+    "inf": 0.4,
+    "ipe": -0.2
    },
    "v": [
     "ar"
@@ -3823,7 +4131,10 @@
    "id": "ar09",
    "t": "El protocolo antipiquetes es una medida correcta.",
    "e": {
-    "lib": -1
+    "lib": -1,
+    "pen": 0.4,
+    "inf": 0.4,
+    "ipe": -0.2
    },
    "v": [
     "ar"
@@ -3835,7 +4146,9 @@
    "id": "ar10",
    "t": "Argentina debería reclamar activamente por Malvinas en todos los foros internacionales.",
    "e": {
-    "int": 1
+    "int": 1,
+    "uni": 0.4,
+    "ind": -0.4
    },
    "v": [
     "ar"
@@ -3848,7 +4161,11 @@
    "t": "Los sindicatos tienen demasiado poder en Argentina.",
    "e": {
     "pla": 1,
-    "col": 0.5
+    "col": 0.5,
+    "bie": 0.6,
+    "mon": 0.4,
+    "dis": 0.6,
+    "lab": 0.2
    },
    "v": [
     "ar"
@@ -3860,7 +4177,11 @@
    "id": "ar12",
    "t": "La Ley de Glaciares debería modificarse para permitir más minería.",
    "e": {
-    "tec": -2
+    "tec": -2,
+    "ecl": 0.8,
+    "fut": 0.8,
+    "tem": -0.8,
+    "epi": -0.4
    },
    "v": [
     "ar"
@@ -3872,7 +4193,10 @@
    "id": "ar13",
    "t": "El Congreso debería poder frenar los DNU con más facilidad.",
    "e": {
-    "dem": -1
+    "dem": -1,
+    "ges": 0.4,
+    "ipe": 0.4,
+    "inf": -0.4
    },
    "v": [
     "ar"
@@ -3885,7 +4209,10 @@
    "t": "La relación con Estados Unidos debería ser la prioridad absoluta de la política exterior argentina.",
    "e": {
     "int": -1,
-    "glo": 0.5
+    "glo": 0.5,
+    "uni": -0.4,
+    "ind": 0.6,
+    "mon": 0.1
    },
    "v": [
     "ar"
@@ -3898,7 +4225,11 @@
    "t": "La amnistía a los condenados por el 8 de enero debería aprobarse.",
    "e": {
     "dem": 1,
-    "lib": 0.5
+    "lib": 0.5,
+    "ges": -0.4,
+    "ipe": -0.3,
+    "inf": 0.2,
+    "pen": -0.2
    },
    "v": [
     "br"
@@ -3910,7 +4241,10 @@
    "id": "br02",
    "t": "El Supremo Tribunal Federal tiene demasiado poder y el Congreso debería limitarlo.",
    "e": {
-    "dem": 1
+    "dem": 1,
+    "ges": -0.4,
+    "ipe": -0.4,
+    "inf": 0.4
    },
    "v": [
     "br"
@@ -3923,7 +4257,11 @@
    "t": "Es justo eximir del impuesto a las ganancias a quien gana hasta R$ 5.000, pagado por los más ricos.",
    "e": {
     "pla": -1,
-    "col": -0.5
+    "col": -0.5,
+    "bie": -0.6,
+    "mon": -0.4,
+    "dis": -0.6,
+    "lab": -0.2
    },
    "v": [
     "br"
@@ -3936,7 +4274,11 @@
    "t": "La jornada laboral 6x1 debería terminarse.",
    "e": {
     "pla": -1,
-    "col": -0.5
+    "col": -0.5,
+    "bie": -0.6,
+    "mon": -0.4,
+    "dis": -0.6,
+    "lab": -0.2
    },
    "v": [
     "br"
@@ -3950,7 +4292,12 @@
    "e": {
     "pla": 1,
     "col": 0.5,
-    "glo": 0.5
+    "glo": 0.5,
+    "bie": 0.6,
+    "mon": 0.5,
+    "dis": 0.6,
+    "lab": 0.2,
+    "ind": 0.2
    },
    "v": [
     "br"
@@ -3963,7 +4310,13 @@
    "t": "Debería facilitarse la portación de armas para ciudadanos comunes.",
    "e": {
     "lib": 1,
-    "pro": 0.5
+    "pro": 0.5,
+    "pen": -0.4,
+    "inf": -0.4,
+    "ipe": 0.2,
+    "idc": 0.2,
+    "eti": 0.2,
+    "tra": -0.1
    },
    "v": [
     "br"
@@ -3976,7 +4329,10 @@
    "t": "Las redes sociales y las big tech necesitan una regulación más dura contra la desinformación.",
    "e": {
     "lib": -1,
-    "dem": -0.5
+    "dem": -0.5,
+    "pen": 0.4,
+    "inf": 0.2,
+    "ges": 0.2
    },
    "v": [
     "br"
@@ -3989,7 +4345,14 @@
    "t": "El 'marco temporal' para las tierras indígenas es justo.",
    "e": {
     "tec": -1,
-    "pro": 0.5
+    "pro": 0.5,
+    "ecl": 0.4,
+    "fut": 0.4,
+    "tem": -0.4,
+    "epi": -0.2,
+    "idc": 0.2,
+    "eti": 0.2,
+    "tra": -0.1
    },
    "v": [
     "br"
@@ -4001,7 +4364,11 @@
    "id": "br09",
    "t": "Debería liberarse la explotación de petróleo en la desembocadura del Amazonas.",
    "e": {
-    "tec": -2
+    "tec": -2,
+    "ecl": 0.8,
+    "fut": 0.8,
+    "tem": -0.8,
+    "epi": -0.4
    },
    "v": [
     "br"
@@ -4014,7 +4381,11 @@
    "t": "Las cuotas raciales en las universidades deben continuar.",
    "e": {
     "pro": -1,
-    "mig": 0.5
+    "mig": 0.5,
+    "idc": -0.5,
+    "eti": -0.4,
+    "tra": 0.2,
+    "uni": -0.2
    },
    "v": [
     "br"
@@ -4027,7 +4398,10 @@
    "t": "Ante los aranceles de Trump, Brasil debería negociar y acercarse a EE. UU. en lugar de reforzar los BRICS.",
    "e": {
     "int": -0.5,
-    "glo": 1
+    "glo": 1,
+    "uni": -0.2,
+    "ind": 0.6,
+    "mon": 0.2
    },
    "v": [
     "br"
@@ -4039,7 +4413,9 @@
    "id": "br12",
    "t": "El 'impuesto a las blusitas' sobre compras internacionales chicas protege a la industria y debe seguir.",
    "e": {
-    "glo": -1
+    "glo": -1,
+    "ind": -0.4,
+    "mon": -0.2
    },
    "v": [
     "br"
@@ -4052,7 +4428,10 @@
    "t": "El Anexo C de Itaipú debería renegociarse para que Paraguay venda su energía a precio de mercado.",
    "e": {
     "int": 1,
-    "glo": 0.5
+    "glo": 0.5,
+    "uni": 0.4,
+    "ind": -0.2,
+    "mon": 0.1
    },
    "v": [
     "py"
@@ -4065,7 +4444,11 @@
    "t": "La ANDE debería abrirse a la inversión privada.",
    "e": {
     "pla": 1,
-    "col": 0.5
+    "col": 0.5,
+    "bie": 0.6,
+    "mon": 0.4,
+    "dis": 0.6,
+    "lab": 0.2
    },
    "v": [
     "py"
@@ -4078,7 +4461,12 @@
    "t": "La ley de control de las ONG con fondos extranjeros fue una buena medida.",
    "e": {
     "int": 1,
-    "lib": -0.5
+    "lib": -0.5,
+    "uni": 0.4,
+    "ind": -0.4,
+    "pen": 0.2,
+    "inf": 0.2,
+    "ipe": -0.1
    },
    "v": [
     "py"
@@ -4091,7 +4479,10 @@
    "t": "Paraguay debe mantener su relación con Taiwán aunque eso le cierre el mercado chino.",
    "e": {
     "glo": -0.5,
-    "int": 0.5
+    "int": 0.5,
+    "ind": -0.4,
+    "mon": -0.1,
+    "uni": 0.2
    },
    "v": [
     "py"
@@ -4105,7 +4496,14 @@
    "e": {
     "lib": -1,
     "pla": 0.5,
-    "col": 0.25
+    "col": 0.25,
+    "pen": 0.4,
+    "inf": 0.4,
+    "ipe": -0.2,
+    "bie": 0.3,
+    "mon": 0.2,
+    "dis": 0.3,
+    "lab": 0.1
    },
    "v": [
     "py"
@@ -4118,7 +4516,11 @@
    "t": "Hace falta una reforma agraria que reparta la tierra de los grandes latifundios.",
    "e": {
     "pla": -1,
-    "col": -0.5
+    "col": -0.5,
+    "bie": -0.6,
+    "mon": -0.4,
+    "dis": -0.6,
+    "lab": -0.2
    },
    "v": [
     "py"
@@ -4130,7 +4532,11 @@
    "id": "py07",
    "t": "La soja y la ganadería deberían tener más límites ambientales, sobre todo en el Chaco.",
    "e": {
-    "tec": 1
+    "tec": 1,
+    "ecl": -0.4,
+    "fut": -0.4,
+    "tem": 0.4,
+    "epi": 0.2
    },
    "v": [
     "py"
@@ -4143,7 +4549,11 @@
    "t": "La reforma de la Caja Fiscal es necesaria aunque afecte a docentes y funcionarios.",
    "e": {
     "pla": 1,
-    "col": 0.5
+    "col": 0.5,
+    "bie": 0.6,
+    "mon": 0.4,
+    "dis": 0.6,
+    "lab": 0.2
    },
    "v": [
     "py"
@@ -4155,7 +4565,10 @@
    "id": "py09",
    "t": "El Partido Colorado lleva demasiado tiempo en el poder y eso le hace mal a la democracia.",
    "e": {
-    "dem": -1
+    "dem": -1,
+    "ges": 0.4,
+    "ipe": 0.4,
+    "inf": -0.4
    },
    "v": [
     "py"
@@ -4167,7 +4580,10 @@
    "id": "py10",
    "t": "La 'ideología de género' debería prohibirse en las escuelas.",
    "e": {
-    "pro": 2
+    "pro": 2,
+    "idc": 0.8,
+    "eti": 0.8,
+    "tra": -0.4
    },
    "v": [
     "py"
@@ -4179,7 +4595,9 @@
    "id": "py11",
    "t": "Los departamentos del interior deberían recibir una parte mayor de los royalties de Itaipú y Yacyretá.",
    "e": {
-    "fed": -1
+    "fed": -1,
+    "ges": 0.4,
+    "ipe": -0.2
    },
    "v": [
     "py"
@@ -4192,7 +4610,11 @@
    "t": "El salario mínimo debería subir por encima de la inflación todos los años.",
    "e": {
     "pla": -1,
-    "col": -0.5
+    "col": -0.5,
+    "bie": -0.6,
+    "mon": -0.4,
+    "dis": -0.6,
+    "lab": -0.2
    },
    "v": [
     "py"
@@ -4205,7 +4627,12 @@
    "t": "El Perú debería salir de la Corte Interamericana de Derechos Humanos.",
    "e": {
     "int": 1,
-    "lib": -1
+    "lib": -1,
+    "uni": 0.4,
+    "ind": -0.4,
+    "pen": 0.4,
+    "inf": 0.4,
+    "ipe": -0.2
    },
    "v": [
     "pe"
@@ -4217,7 +4644,10 @@
    "id": "pe02",
    "t": "La pena de muerte para violadores de menores debería aplicarse.",
    "e": {
-    "lib": -2
+    "lib": -2,
+    "pen": 0.8,
+    "inf": 0.8,
+    "ipe": -0.4
    },
    "v": [
     "pe"
@@ -4230,7 +4660,11 @@
    "t": "La ley de amnistía para militares y policías por el conflicto interno fue justa.",
    "e": {
     "lib": -1,
-    "mil": -0.5
+    "mil": -0.5,
+    "pen": 0.6,
+    "inf": 0.4,
+    "ipe": -0.2,
+    "tem": -0.1
    },
    "v": [
     "pe"
@@ -4243,7 +4677,11 @@
    "t": "Hace falta una Asamblea Constituyente para cambiar la Constitución de 1993.",
    "e": {
     "pla": -1,
-    "col": -0.5
+    "col": -0.5,
+    "bie": -0.6,
+    "mon": -0.4,
+    "dis": -0.6,
+    "lab": -0.2
    },
    "v": [
     "pe"
@@ -4256,7 +4694,14 @@
    "t": "La minería informal debería formalizarse antes que reprimirse.",
    "e": {
     "tec": -1,
-    "lib": 0.5
+    "lib": 0.5,
+    "ecl": 0.4,
+    "fut": 0.4,
+    "tem": -0.4,
+    "epi": -0.2,
+    "pen": -0.2,
+    "inf": -0.2,
+    "ipe": 0.1
    },
    "v": [
     "pe"
@@ -4269,7 +4714,13 @@
    "t": "Proyectos mineros como Tía María deben avanzar aunque haya rechazo local.",
    "e": {
     "tec": -1,
-    "fed": 1
+    "fed": 1,
+    "ecl": 0.4,
+    "fut": 0.4,
+    "tem": -0.4,
+    "epi": -0.2,
+    "ges": -0.4,
+    "ipe": 0.2
    },
    "v": [
     "pe"
@@ -4282,7 +4733,11 @@
    "t": "Petroperú debería privatizarse en lugar de seguir recibiendo rescates.",
    "e": {
     "pla": 1,
-    "col": 0.5
+    "col": 0.5,
+    "bie": 0.6,
+    "mon": 0.4,
+    "dis": 0.6,
+    "lab": 0.2
    },
    "v": [
     "pe"
@@ -4295,7 +4750,11 @@
    "t": "El estado de emergencia con militares en las calles es la respuesta correcta a las extorsiones.",
    "e": {
     "lib": -1,
-    "mil": -0.5
+    "mil": -0.5,
+    "pen": 0.6,
+    "inf": 0.4,
+    "ipe": -0.2,
+    "tem": -0.1
    },
    "v": [
     "pe"
@@ -4307,7 +4766,10 @@
    "id": "pe09",
    "t": "El Congreso actual protege sus privilegios más que el interés del país.",
    "e": {
-    "dem": 1
+    "dem": 1,
+    "ges": -0.4,
+    "ipe": -0.4,
+    "inf": 0.4
    },
    "v": [
     "pe"
@@ -4319,7 +4781,9 @@
    "id": "pe10",
    "t": "El puerto de Chancay muestra que China es el socio que más le conviene al Perú.",
    "e": {
-    "int": 1
+    "int": 1,
+    "uni": 0.4,
+    "ind": -0.4
    },
    "v": [
     "pe"
@@ -4331,7 +4795,9 @@
    "id": "pe11",
    "t": "Las regiones deberían recibir más canon minero y decidir en qué gastarlo.",
    "e": {
-    "fed": -1
+    "fed": -1,
+    "ges": 0.4,
+    "ipe": -0.2
    },
    "v": [
     "pe"
@@ -4343,7 +4809,10 @@
    "id": "pe12",
    "t": "El enfoque de género en el currículo escolar debería eliminarse.",
    "e": {
-    "pro": 2
+    "pro": 2,
+    "idc": 0.8,
+    "eti": 0.8,
+    "tra": -0.4
    },
    "v": [
     "pe"
@@ -4356,7 +4825,11 @@
    "t": "Las AFP deberían reemplazarse por un sistema público de reparto.",
    "e": {
     "pla": -2,
-    "col": -1.0
+    "col": -1.0,
+    "bie": -1.0,
+    "mon": -0.8,
+    "dis": -1.0,
+    "lab": -0.4
    },
    "v": [
     "cl"
@@ -4368,7 +4841,9 @@
    "id": "cl02",
    "t": "Hay que expulsar a todos los migrantes en situación irregular, aunque sea costoso.",
    "e": {
-    "mig": -2
+    "mig": -2,
+    "uni": 0.8,
+    "idc": 0.4
    },
    "v": [
     "cl"
@@ -4381,7 +4856,11 @@
    "t": "En la Macrozona Sur hace falta un estado de excepción permanente con militares.",
    "e": {
     "lib": -1,
-    "mil": -1
+    "mil": -1,
+    "pen": 0.8,
+    "inf": 0.4,
+    "ipe": -0.2,
+    "tem": -0.2
    },
    "v": [
     "cl"
@@ -4393,7 +4872,10 @@
    "id": "cl04",
    "t": "El aborto debería ser libre, no solo en tres causales.",
    "e": {
-    "pro": -1
+    "pro": -1,
+    "idc": -0.4,
+    "eti": -0.4,
+    "tra": 0.2
    },
    "v": [
     "cl"
@@ -4407,7 +4889,12 @@
    "e": {
     "pla": -1,
     "col": -0.5,
-    "glo": -0.5
+    "glo": -0.5,
+    "bie": -0.6,
+    "mon": -0.5,
+    "dis": -0.6,
+    "lab": -0.2,
+    "ind": -0.2
    },
    "v": [
     "cl"
@@ -4420,7 +4907,11 @@
    "t": "El CAE (crédito universitario) debería condonarse.",
    "e": {
     "pla": -1,
-    "col": -0.5
+    "col": -0.5,
+    "bie": -0.6,
+    "mon": -0.4,
+    "dis": -0.6,
+    "lab": -0.2
    },
    "v": [
     "cl"
@@ -4433,7 +4924,11 @@
    "t": "Las isapres deberían desaparecer y la salud ser un sistema único público.",
    "e": {
     "pla": -1,
-    "col": -0.5
+    "col": -0.5,
+    "bie": -0.6,
+    "mon": -0.4,
+    "dis": -0.6,
+    "lab": -0.2
    },
    "v": [
     "cl"
@@ -4445,7 +4940,10 @@
    "id": "cl08",
    "t": "Los carabineros procesados por el estallido de 2019 deberían ser indultados.",
    "e": {
-    "lib": -1
+    "lib": -1,
+    "pen": 0.4,
+    "inf": 0.4,
+    "ipe": -0.2
    },
    "v": [
     "cl"
@@ -4459,7 +4957,14 @@
    "e": {
     "pla": -0.5,
     "col": -0.25,
-    "pro": -0.5
+    "pro": -0.5,
+    "bie": -0.3,
+    "mon": -0.2,
+    "dis": -0.3,
+    "lab": -0.1,
+    "idc": -0.2,
+    "eti": -0.2,
+    "tra": 0.1
    },
    "v": [
     "cl"
@@ -4472,7 +4977,11 @@
    "t": "El royalty a la gran minería debería subir.",
    "e": {
     "pla": -1,
-    "col": -0.5
+    "col": -0.5,
+    "bie": -0.6,
+    "mon": -0.4,
+    "dis": -0.6,
+    "lab": -0.2
    },
    "v": [
     "cl"
@@ -4484,7 +4993,9 @@
    "id": "cl11",
    "t": "Las regiones deberían decidir y financiar más cosas sin depender de Santiago.",
    "e": {
-    "fed": -1
+    "fed": -1,
+    "ges": 0.4,
+    "ipe": -0.2
    },
    "v": [
     "cl"
@@ -4497,7 +5008,13 @@
    "t": "El golpe de 1973 fue inevitable dada la situación del país.",
    "e": {
     "dem": 1,
-    "pro": 0.5
+    "pro": 0.5,
+    "ges": -0.4,
+    "ipe": -0.4,
+    "inf": 0.4,
+    "idc": 0.2,
+    "eti": 0.2,
+    "tra": -0.1
    },
    "v": [
     "cl"
@@ -4510,7 +5027,11 @@
    "t": "La 'paz total' con los grupos armados fue un error.",
    "e": {
     "mil": -1,
-    "lib": -0.5
+    "lib": -0.5,
+    "pen": 0.6,
+    "tem": -0.2,
+    "inf": 0.2,
+    "ipe": -0.1
    },
    "v": [
     "co"
@@ -4523,7 +5044,14 @@
    "t": "Hay que volver a fumigar los cultivos de coca con glifosato.",
    "e": {
     "lib": -1,
-    "tec": -1
+    "tec": -1,
+    "pen": 0.4,
+    "inf": 0.4,
+    "ipe": -0.2,
+    "ecl": 0.4,
+    "fut": 0.4,
+    "tem": -0.4,
+    "epi": -0.2
    },
    "v": [
     "co"
@@ -4535,7 +5063,11 @@
    "id": "co03",
    "t": "Colombia debería prohibir el fracking y no firmar nuevos contratos de exploración petrolera.",
    "e": {
-    "tec": 2
+    "tec": 2,
+    "ecl": -0.8,
+    "fut": -0.8,
+    "tem": 0.8,
+    "epi": 0.4
    },
    "v": [
     "co"
@@ -4548,7 +5080,11 @@
    "t": "La reforma a la salud que saca a las EPS de la intermediación es necesaria.",
    "e": {
     "pla": -1,
-    "col": -0.5
+    "col": -0.5,
+    "bie": -0.6,
+    "mon": -0.4,
+    "dis": -0.6,
+    "lab": -0.2
    },
    "v": [
     "co"
@@ -4561,7 +5097,11 @@
    "t": "La reforma laboral de 2025, con más recargos nocturnos y dominicales, fue un avance.",
    "e": {
     "pla": -1,
-    "col": -0.5
+    "col": -0.5,
+    "bie": -0.6,
+    "mon": -0.4,
+    "dis": -0.6,
+    "lab": -0.2
    },
    "v": [
     "co"
@@ -4575,7 +5115,14 @@
    "e": {
     "dem": 1,
     "pla": -0.5,
-    "col": -0.25
+    "col": -0.25,
+    "ges": -0.4,
+    "ipe": -0.4,
+    "inf": 0.4,
+    "bie": -0.3,
+    "mon": -0.2,
+    "dis": -0.3,
+    "lab": -0.1
    },
    "v": [
     "co"
@@ -4587,7 +5134,10 @@
    "id": "co07",
    "t": "La JEP (justicia transicional) debería eliminarse o reformarse a fondo.",
    "e": {
-    "lib": -1
+    "lib": -1,
+    "pen": 0.4,
+    "inf": 0.4,
+    "ipe": -0.2
    },
    "v": [
     "co"
@@ -4600,7 +5150,12 @@
    "t": "La extradición de narcotraficantes a Estados Unidos debe mantenerse.",
    "e": {
     "int": -0.5,
-    "lib": -0.5
+    "lib": -0.5,
+    "uni": -0.2,
+    "ind": 0.2,
+    "pen": 0.2,
+    "inf": 0.2,
+    "ipe": -0.1
    },
    "v": [
     "co"
@@ -4612,7 +5167,10 @@
    "id": "co09",
    "t": "El aborto libre hasta la semana 24 debería mantenerse.",
    "e": {
-    "pro": -1
+    "pro": -1,
+    "idc": -0.4,
+    "eti": -0.4,
+    "tra": 0.2
    },
    "v": [
     "co"
@@ -4624,7 +5182,9 @@
    "id": "co10",
    "t": "Los departamentos deberían manejar más regalías y más presupuesto propio.",
    "e": {
-    "fed": -1
+    "fed": -1,
+    "ges": 0.4,
+    "ipe": -0.2
    },
    "v": [
     "co"
@@ -4636,7 +5196,9 @@
    "id": "co11",
    "t": "Colombia debería restablecer una relación plena con el gobierno de Venezuela.",
    "e": {
-    "int": 1
+    "int": 1,
+    "uni": 0.4,
+    "ind": -0.4
    },
    "v": [
     "co"
@@ -4648,7 +5210,10 @@
    "id": "co12",
    "t": "Los bloqueos de vías en protestas deberían tratarse como delitos.",
    "e": {
-    "lib": -1
+    "lib": -1,
+    "pen": 0.4,
+    "inf": 0.4,
+    "ipe": -0.2
    },
    "v": [
     "co"
@@ -4661,7 +5226,11 @@
    "t": "Hay que poner un impuesto al 1% más rico para financiar programas contra la pobreza infantil.",
    "e": {
     "pla": -1,
-    "col": -0.5
+    "col": -0.5,
+    "bie": -0.6,
+    "mon": -0.4,
+    "dis": -0.6,
+    "lab": -0.2
    },
    "v": [
     "uy"
@@ -4674,7 +5243,11 @@
    "t": "La edad de retiro debería volver a 60 años.",
    "e": {
     "pla": -1,
-    "col": -0.5
+    "col": -0.5,
+    "bie": -0.6,
+    "mon": -0.4,
+    "dis": -0.6,
+    "lab": -0.2
    },
    "v": [
     "uy"
@@ -4686,7 +5259,10 @@
    "id": "uy03",
    "t": "La LUC (Ley de Urgente Consideración) mejoró la seguridad.",
    "e": {
-    "lib": -1
+    "lib": -1,
+    "pen": 0.4,
+    "inf": 0.4,
+    "ipe": -0.2
    },
    "v": [
     "uy"
@@ -4699,7 +5275,11 @@
    "t": "La ley de eutanasia aprobada en 2025 fue un avance.",
    "e": {
     "pro": -1,
-    "rel": -1
+    "rel": -1,
+    "idc": -0.6,
+    "eti": -0.8,
+    "tra": 0.2,
+    "epi": -0.4
    },
    "v": [
     "uy"
@@ -4712,7 +5292,13 @@
    "t": "La regulación del cannabis por el Estado funcionó y debe ampliarse.",
    "e": {
     "lib": 1,
-    "pro": -0.5
+    "pro": -0.5,
+    "pen": -0.4,
+    "inf": -0.4,
+    "ipe": 0.2,
+    "idc": -0.2,
+    "eti": -0.2,
+    "tra": 0.1
    },
    "v": [
     "uy"
@@ -4724,7 +5310,9 @@
    "id": "uy06",
    "t": "Uruguay debería firmar un TLC con China aunque eso tense el Mercosur.",
    "e": {
-    "glo": 1
+    "glo": 1,
+    "ind": 0.4,
+    "mon": 0.2
    },
    "v": [
     "uy"
@@ -4736,7 +5324,9 @@
    "id": "uy07",
    "t": "El acuerdo Mercosur-Unión Europea es bueno para Uruguay.",
    "e": {
-    "glo": 1
+    "glo": 1,
+    "ind": 0.4,
+    "mon": 0.2
    },
    "v": [
     "uy"
@@ -4749,7 +5339,13 @@
    "t": "Inversiones como UPM traen más beneficios que costos ambientales.",
    "e": {
     "tec": -1,
-    "glo": 0.5
+    "glo": 0.5,
+    "ecl": 0.4,
+    "fut": 0.4,
+    "tem": -0.4,
+    "epi": -0.2,
+    "ind": 0.2,
+    "mon": 0.1
    },
    "v": [
     "uy"
@@ -4762,7 +5358,11 @@
    "t": "Los sindicatos y el PIT-CNT tienen demasiada influencia en el gobierno.",
    "e": {
     "pla": 1,
-    "col": 0.5
+    "col": 0.5,
+    "bie": 0.6,
+    "mon": 0.4,
+    "dis": 0.6,
+    "lab": 0.2
    },
    "v": [
     "uy"
@@ -4774,7 +5374,10 @@
    "id": "uy10",
    "t": "Las cárceles necesitan más mano dura y menos programas de rehabilitación.",
    "e": {
-    "lib": -1
+    "lib": -1,
+    "pen": 0.4,
+    "inf": 0.4,
+    "ipe": -0.2
    },
    "v": [
     "uy"
@@ -4786,7 +5389,9 @@
    "id": "uy11",
    "t": "Los departamentos del interior deberían tener más autonomía y recursos frente a Montevideo.",
    "e": {
-    "fed": -1
+    "fed": -1,
+    "ges": 0.4,
+    "ipe": -0.2
    },
    "v": [
     "uy"
@@ -4798,7 +5403,9 @@
    "id": "uy12",
    "t": "Uruguay debería tener una postura más dura con el gobierno de Venezuela.",
    "e": {
-    "int": -1
+    "int": -1,
+    "uni": -0.4,
+    "ind": 0.4
    },
    "v": [
     "uy"
@@ -4812,7 +5419,10 @@
    "t_pt": "A YPF deveria continuar majoritariamente estatal.",
    "t_en": "YPF should remain mostly state-owned.",
    "e": {
-    "pla": -1
+    "pla": -1,
+    "bie": -0.4,
+    "mon": -0.4,
+    "dis": -0.4
    },
    "v": [
     "ar"
@@ -4824,7 +5434,10 @@
    "t_pt": "A Aerolíneas Argentinas deveria ser privatizada mesmo perdendo rotas pouco rentáveis.",
    "t_en": "Aerolíneas Argentinas should be privatized even if unprofitable routes are lost.",
    "e": {
-    "pla": 1
+    "pla": 1,
+    "bie": 0.4,
+    "mon": 0.4,
+    "dis": 0.4
    },
    "v": [
     "ar"
@@ -4863,7 +5476,11 @@
    "t_en": "There are too many public employees and the state payroll should shrink.",
    "e": {
     "pla": 1,
-    "col": 0.5
+    "col": 0.5,
+    "bie": 0.6,
+    "mon": 0.4,
+    "dis": 0.6,
+    "lab": 0.2
    },
    "v": [
     "ar"
@@ -4914,7 +5531,10 @@
    "t_pt": "As greves gerais da CGT fazem mais mal do que bem.",
    "t_en": "General strikes by the CGT do more harm than good.",
    "e": {
-    "col": 1
+    "col": 1,
+    "dis": 0.4,
+    "lab": 0.4,
+    "bie": 0.4
    },
    "v": [
     "ar"
@@ -4991,7 +5611,9 @@
    "t_pt": "Comprar do exterior pela internet deveria ter menos entraves e tarifas.",
    "t_en": "Buying from abroad online should face fewer hurdles and tariffs.",
    "e": {
-    "glo": 1
+    "glo": 1,
+    "ind": 0.4,
+    "mon": 0.2
    },
    "v": [
     "ar"
@@ -5043,7 +5665,10 @@
    "t_pt": "A cédula única de papel melhora a transparência das eleições.",
    "t_en": "The single paper ballot makes elections more transparent.",
    "e": {
-    "dem": -1
+    "dem": -1,
+    "ges": 0.4,
+    "ipe": 0.4,
+    "inf": -0.4
    },
    "v": [
     "ar"
@@ -5070,7 +5695,11 @@
    "t_en": "The government should be able to clear road blockades without waiting for a judge.",
    "e": {
     "lib": -1,
-    "dem": 0.5
+    "dem": 0.5,
+    "pen": 0.4,
+    "inf": 0.6,
+    "ipe": -0.4,
+    "ges": -0.2
    },
    "v": [
     "ar"
@@ -5123,7 +5752,13 @@
    "t_en": "It should be easier to own a gun for self-defense.",
    "e": {
     "lib": 1,
-    "col": 0.5
+    "col": 0.5,
+    "pen": -0.4,
+    "inf": -0.4,
+    "ipe": 0.2,
+    "dis": 0.2,
+    "lab": 0.2,
+    "bie": 0.2
    },
    "v": [
     "ar"
@@ -5136,7 +5771,11 @@
    "t_en": "The legal abortion law was a step forward.",
    "e": {
     "pro": -1,
-    "rel": -0.5
+    "rel": -0.5,
+    "idc": -0.5,
+    "eti": -0.6,
+    "tra": 0.2,
+    "epi": -0.2
    },
    "v": [
     "ar"
@@ -5148,7 +5787,10 @@
    "t_pt": "A linguagem neutra não deveria ser usada em escolas nem em documentos oficiais.",
    "t_en": "Gender-neutral language should not be used in schools or official documents.",
    "e": {
-    "pro": 1
+    "pro": 1,
+    "idc": 0.4,
+    "eti": 0.4,
+    "tra": -0.2
    },
    "v": [
     "ar"
@@ -5160,7 +5802,10 @@
    "t_pt": "A educação sexual integral deveria ser dada em todas as escolas.",
    "t_en": "Comprehensive sex education should be taught in every school.",
    "e": {
-    "pro": -1
+    "pro": -1,
+    "idc": -0.4,
+    "eti": -0.4,
+    "tra": 0.2
    },
    "v": [
     "ar"
@@ -5173,7 +5818,13 @@
    "t_en": "Regulating personal cannabis use is the right path.",
    "e": {
     "pro": -0.5,
-    "lib": 1
+    "lib": 1,
+    "idc": -0.2,
+    "eti": -0.2,
+    "tra": 0.1,
+    "pen": -0.4,
+    "inf": -0.4,
+    "ipe": 0.2
    },
    "v": [
     "ar"
@@ -5185,7 +5836,9 @@
    "t_pt": "Buenos Aires concentra poder demais e o interior paga as consequências.",
    "t_en": "Buenos Aires concentrates too much power and the provinces pay the price.",
    "e": {
-    "fed": -1
+    "fed": -1,
+    "ges": 0.4,
+    "ipe": -0.2
    },
    "v": [
     "ar"
@@ -5197,7 +5850,9 @@
    "t_pt": "As províncias com petróleo ou lítio deveriam ficar com mais do que geram.",
    "t_en": "Provinces with oil or lithium should keep more of what those resources generate.",
    "e": {
-    "fed": -1
+    "fed": -1,
+    "ges": 0.4,
+    "ipe": -0.2
    },
    "v": [
     "ar"
@@ -5210,7 +5865,10 @@
    "t_en": "Funds for the provinces should follow fixed rules, not discretion.",
    "e": {
     "fed": -0.5,
-    "dem": -0.5
+    "dem": -0.5,
+    "ges": 0.4,
+    "ipe": 0.1,
+    "inf": -0.2
    },
    "v": [
     "ar"
@@ -5222,7 +5880,9 @@
    "t_pt": "A reivindicação das Malvinas deve ser uma prioridade permanente.",
    "t_en": "The Falklands/Malvinas claim must be a permanent priority.",
    "e": {
-    "int": 1
+    "int": 1,
+    "uni": 0.4,
+    "ind": -0.4
    },
    "v": [
     "ar"
@@ -5235,7 +5895,10 @@
    "t_en": "Argentina should align with the United States on foreign policy.",
    "e": {
     "int": -0.5,
-    "glo": 0.5
+    "glo": 0.5,
+    "uni": -0.2,
+    "ind": 0.4,
+    "mon": 0.1
    },
    "v": [
     "ar"
