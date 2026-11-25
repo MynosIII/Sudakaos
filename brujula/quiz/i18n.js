@@ -438,3 +438,6 @@ Object.assign(window.BRUJULA_I18N.pt, { ej_af: 'Afinidade principal', ej_cerca: 
 Object.assign(window.BRUJULA_I18N.en, { ej_af: 'Top match', ej_cerca: 'Most compatible', ej_ejes: 'Your 12 axes', priv_k: 'Your data',
   priv_lead: 'The quiz is anonymous. Here is what happens with your answers.',
   priv_t: ['We do not ask for your name, email or phone.', 'Your answers are only stored if you tick the box at the end; otherwise they stay in your browser.', 'We only publish totals for large groups, never individual answers.', 'If you are under 16, nothing is stored.', 'Politician positions are an editorial estimate and may change.'] });
+Object.assign(window.BRUJULA_I18N.es, { hist_k: 'Figuras históricas más cercanas', hist_check: 'Incluir históricos', hist_grp: 'Históricos', act_grp: 'Actuales' });
+Object.assign(window.BRUJULA_I18N.pt, { hist_k: 'Figuras históricas mais próximas', hist_check: 'Incluir históricos', hist_grp: 'Históricos', act_grp: 'Atuais' });
+Object.assign(window.BRUJULA_I18N.en, { hist_k: 'Closest historical figures', hist_check: 'Include historical figures', hist_grp: 'Historical', act_grp: 'Current' });
