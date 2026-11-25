@@ -28,6 +28,27 @@
     glo: '<path d="M3 15h18l-2 5H5z"/><path d="M6 15V9h5v6M11 11h5v4"/>',
     tec: '<rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/>'
   };
+  Object.assign(COLOR, { ecl: '#5fae7a', dis: '#e07a7a', bie: '#e8a05c', epi: '#5aa9e6', ges: '#9aa7b8', tra: '#d9776a', idc: '#d6b25e', pen: '#6fb8ad',
+    lab: '#8f9be0', eti: '#63c1cf', tem: '#ef8f6a', fut: '#86c98a', ind: '#b39278', mon: '#b98ad0', inf: '#c2c8d0', ipe: '#9a7fd0', uni: '#6aa8e8' });
+  Object.assign(ICON, {
+    ecl: '<path d="M5 19c0-8 6-14 14-14 0 8-6 14-14 14z"/><path d="M5 19l8-8"/>',
+    dis: '<path d="M12 4v16M7 20h10M4 8h16"/><path d="M4 8l-2 5h4zM20 8l-2 5h4z"/>',
+    bie: '<path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/>',
+    epi: '<circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5"/>',
+    ges: '<circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/>',
+    tra: '<path d="M20 12a8 8 0 1 1-2.3-5.7"/><path d="M20 4v5h-5"/>',
+    idc: '<circle cx="8" cy="9" r="3"/><circle cx="16" cy="9" r="3"/><path d="M3 20c0-3 2.2-5 5-5s5 2 5 5M11 20c0-3 2.2-5 5-5s5 2 5 5"/>',
+    pen: '<path d="M14 4l6 6M10.5 7.5l6 6M12 6l-5 5M3 21l7-7"/>',
+    lab: '<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2M3 13h18"/>',
+    eti: '<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9V16h7v-2.1A6 6 0 0 0 12 3z"/>',
+    tem: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/>',
+    fut: '<path d="M6 3h12M6 21h12M7 3c0 6 10 6 10 9s-10 3-10 9M17 3c0 6-10 6-10 9s10 3 10 9"/>',
+    ind: '<path d="M3 20V10l6 4V10l6 4V6h4v14z"/>',
+    mon: '<circle cx="12" cy="12" r="8"/><path d="M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.5 0-2.5.8-2.5 2s1 1.6 2.5 2 2.5.8 2.5 2-1 2-2.5 2c-1 0-2-.5-2.5-1.5M12 6.5v11"/>',
+    inf: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 9h10M7 13h6M7 16h8"/>',
+    ipe: '<path d="M3 9l9-5 9 5M5 9v9M10 9v9M14 9v9M19 9v9M3 20h18"/>',
+    uni: '<circle cx="12" cy="12" r="8"/><circle cx="12" cy="5" r="1.6"/><circle cx="18.5" cy="15" r="1.6"/><circle cx="5.5" cy="15" r="1.6"/>'
+  });
   const ic = k => `<svg class="ic" viewBox="0 0 24 24" aria-hidden="true">${ICON[k] || ''}</svg>`;
   const icb = k => `<span class="icb" style="color:${COLOR[k]}">${ic(k)}</span>`;
   const DIMS = { d_pol: ['dem', 'lib', 'fed', 'mil'], d_soc: ['pro', 'rel', 'mig', 'int'], d_eco: ['pla', 'col', 'glo', 'tec'] };
@@ -36,18 +57,20 @@
   const S = { ejes: null, preg: null, fig: null, ideo: [], ver: null, modo: 'completa', qs: [], ans: [], i: 0, t0: 0, scores: null, cert: null, nresp: null, dist: null, lang: 'es', langElegido: false };
   const T = () => I18N[S.lang];
   const IDS = () => S.ejes.ejes.map(e => e.id);
+  const IDS2 = () => (S.ejes.ejes2 || []).map(e => e.id);
 
   // ------------------------------------------------------------ cálculo (mismo criterio que procesar.py)
   /* Posición: 50 + 50 × Σ(respuesta × peso) / Σ(2 × |peso|). 0 = polo a, 100 = polo b.
      Certeza (0-100) = decisión × coherencia. Decisión: neutral 0, de acuerdo 0,75, muy de acuerdo 1.
      Coherencia (modelo acumulativo, como 12axes): una frase de nivel L (1 moderada … 4 extrema) la aceptan quienes están del
      lado de su polo al menos (L - 1) × 12,5 puntos más allá del centro; cada respuesta que coincide con eso suma y la que no, resta. */
-  function calcular(qs, ans) {
-    const ids = IDS(), Sm = {}, M = {}, D = {}, W = {}, sc = {}, cert = {};
+  function calcular(qs, ans, idsElegidos) {
+    const ids = idsElegidos || IDS(), Sm = {}, M = {}, D = {}, W = {}, sc = {}, cert = {};
     ids.forEach(k => { Sm[k] = 0; M[k] = 0; D[k] = 0; W[k] = 0 });
     qs.forEach((q, i) => {
       const a = ans[i] ?? 0;
       for (const [k, w] of Object.entries(q.e)) {
+        if (!(k in Sm)) continue;
         Sm[k] += a * w; M[k] += 2 * Math.abs(w); W[k] += Math.abs(w);
         D[k] += Math.abs(w) * (a === 0 ? 0 : Math.abs(a) === 1 ? .75 : 1);
       }
@@ -80,7 +103,8 @@
   const media = o => Math.round(Object.values(o).reduce((s, v) => s + v, 0) / Object.values(o).length);
   function eje(e) { const t = e[S.lang] || {}; return { id: e.id, nombre: t.nombre || e.nombre, a: t.a || e.a, b: t.b || e.b } }
   const EJES = () => S.ejes.ejes.map(eje);
-  const ejeK = k => eje(S.ejes.ejes.find(e => e.id === k));
+  const EJES2 = () => (S.ejes.ejes2 || []).map(eje);
+  const ejeK = k => eje(S.ejes.ejes.find(e => e.id === k) || (S.ejes.ejes2 || []).find(e => e.id === k));
   const polo = (e, s) => s < 50 ? e.a : e.b;
   function lectura(e, s) { // "Equilibrado" o "72% Mercado"
     if (Math.abs(s - 50) < 10) return T().equilibrado;
@@ -268,10 +292,13 @@
       const sel = new Set([...orig, ...out]);
       base.push(...del.filter(q => sel.has(q)));
     });
-    const pais = todas.filter(q => q.id[0] !== 'x' && q.id[0] !== 'g'), gen = todas.filter(q => q.id[0] === 'g'), loc = [];
+    const pais = todas.filter(q => q.id[0] !== 'x' && q.id[0] !== 'g' && !q.nueva), gen = todas.filter(q => q.id[0] === 'g'), loc = [];
     for (let j = 0; loc.length < nLoc && (pais[2 * j] || pais[2 * j + 1] || gen[j]); j++) {
       [pais[2 * j], pais[2 * j + 1], gen[j]].forEach(q => { if (q && loc.length < nLoc) loc.push(q) });
     }
+    // frases de los ejes complementarios (en Express, sólo las marcadas), mezcladas parejo con las locales
+    const nuevas = todas.filter(q => q.nueva && (modo !== 'rapida' || q.rap)), locs = loc.splice(0);
+    for (let j = 0; j < Math.max(locs.length, nuevas.length); j++) { if (locs[j]) loc.push(locs[j]); if (nuevas[j]) loc.push(nuevas[j]) }
     const out = [], paso = base.length / (loc.length + 1);
     let k = 0;
     base.forEach((q, j) => { out.push(q); while (k < loc.length && j + 1 >= Math.round(paso * (k + 1))) out.push(loc[k++]) });
@@ -365,9 +392,10 @@
   }
   function demograficas() {
     const r = calcular(S.qs, S.ans); S.scores = r.sc; S.cert = r.cert;
+    const r2 = calcular(S.qs, S.ans, IDS2()); S.scores2 = r2.sc; S.cert2 = r2.cert;
     // respuestas por eje y distribución (para el análisis)
-    S.nresp = {}; IDS().forEach(k => { S.nresp[k] = 0 });
-    S.qs.forEach((q, i) => { if (S.ans[i] !== null) Object.keys(q.e).forEach(k => { if (q.e[k]) S.nresp[k]++ }) });
+    S.nresp = {}; [...IDS(), ...IDS2()].forEach(k => { S.nresp[k] = 0 });
+    S.qs.forEach((q, i) => { if (S.ans[i] !== null) Object.keys(q.e).forEach(k => { if (q.e[k] && k in S.nresp) S.nresp[k]++ }) });
     S.dist = [2, 1, 0, -1, -2].map(v => S.ans.filter(a => (a ?? 0) === v).length);
     if (!CFG.endpoint) { resultado(false); return } // sin destino configurado no tiene sentido pedir datos
     opcionesDemo();
@@ -416,9 +444,13 @@
     ideologias(sc, rk);
     dirigentes(sc, cert, rk, ver);
     analisis(sc, cert, rk, E);
-    // compartir: versión, idioma, 12 posiciones y 12 certezas
-    const ids = IDS();
-    const url = location.origin + location.pathname + '#r=' + [ver, S.lang, ...ids.map(k => sc[k]), ...ids.map(k => cert[k])].join('-');
+    complementarios();
+    valoresYBandera();
+    sobremesa();
+    // compartir: versión, idioma, 12 posiciones y 12 certezas (+ los complementarios medidos, si hay)
+    const ids = IDS(), ids2 = IDS2(), sc2 = S.scores2, ce2 = S.cert2;
+    const ext = sc2 && ids2.every(k => sc2[k] != null) ? ['x', ...ids2.map(k => sc2[k]), ...ids2.map(k => ce2[k])] : [];
+    const url = location.origin + location.pathname + '#r=' + [ver, S.lang, ...ids.map(k => sc[k]), ...ids.map(k => cert[k]), ...ext].join('-');
     const top = rk.figs[0];
     const txt = top ? t.share(top.af, top.f.nombre) : t.titulo;
     $('#share-wa').href = 'https://wa.me/?text=' + encodeURIComponent(txt + ' ' + url);
@@ -433,11 +465,179 @@
     $('#sent').textContent = enviado === true ? t.gracias : enviado === 'menor' ? t.menor : '';
     $('#again').textContent = desdeLink ? t.hacer : t.de_nuevo;
     $('#again').onclick = () => { history.replaceState(null, '', location.pathname + location.search + '#/'); show('s-inicio'); nav('quiz') };
-    if (!desdeLink) { try { localStorage.setItem('brujula_res', JSON.stringify({ ver, sc, cert, n: S.nresp, dist: S.dist })) } catch (e) { } }
+    if (!desdeLink) { try { localStorage.setItem('brujula_res', JSON.stringify({ ver, sc, cert, sc2: S.scores2, cert2: S.cert2, n: S.nresp, dist: S.dist })) } catch (e) { } }
     show('s-res'); nav('quiz');
     fotos($('#s-res'));
     tarjeta();
   }
+  // ------------------------------------------------------------ ejes complementarios, valores, bandera y sobremesa
+  const L3 = o => o[S.lang] || o.es;
+  // Posición de cualquier eje (12 principales o complementarios); null si no se midió.
+  const pos = k => (S.scores && S.scores[k] != null) ? S.scores[k] : (S.scores2 && S.scores2[k] != null && (!S.nresp || S.nresp[k]) ? S.scores2[k] : null);
+  const certK = k => (S.cert && S.cert[k] != null) ? S.cert[k] : (S.cert2 && S.cert2[k] != null ? S.cert2[k] : 0);
+  const medidos2 = () => S.scores2 ? EJES2().filter(e => S.scores2[e.id] != null && (!S.nresp || S.nresp[e.id])) : [];
+
+  function filaEje(e, s, c, n) {
+    const t = T(), hw = (100 - c) / 4, lo = Math.max(0, s - hw), hi = Math.min(100, s + hw), col = COLOR[e.id] || 'var(--sig)';
+    return `<div class="ec"><div class="h">${icb(e.id)}<b>${esc(e.nombre)}</b><small>${s}/100</small></div>
+      <div class="pp"><span>${esc(e.a)}</span><span>${esc(e.b)}</span></div>
+      <div class="trk" title="${esc(e.nombre)} · ${esc(t.certeza)} ${c}%"><span class="band" style="left:${lo}%;width:${hi - lo}%;background:${col}"></span>
+        <span class="fill" style="left:${Math.min(s, 50)}%;width:${Math.abs(s - 50)}%;background:${col}"></span><span class="dot" style="left:${s}%;background:${col}"></span></div>
+      <div class="ft"><span>${esc(lectura(e, s))}</span><span>${esc(t.certeza.toLowerCase())} ${c}%${n ? ' · ' + esc(t.resp(n)) : ''}</span></div></div>`;
+  }
+  function complementarios() {
+    const t = T(), E2 = medidos2(), n = S._link ? null : S.nresp;
+    $('#r-mas').hidden = !E2.length && !!S._link;
+    $('#toc a[href="#r-mas"]').hidden = $('#r-mas').hidden;
+    $('#ejes3').innerHTML = E2.length ? E2.map(e => filaEje(e, S.scores2[e.id], S.cert2[e.id], n && n[e.id])).join('')
+      : `<p class="sub">${esc(t.mas_vacio)}</p>`;
+  }
+
+  // Polos más marcados de los 29 ejes (fuerza = distancia al centro, ponderada por certeza)
+  function polosFuertes(min) {
+    // los complementarios cuentan sólo con 2 o más respuestas y pesan un poco menos que los 12 principales
+    const comp = new Set(IDS2()), ok = e => !comp.has(e.id) || !S.nresp || (S.nresp[e.id] || 0) >= 2;
+    const todos = [...EJES(), ...EJES2()].filter(ok).map(e => ({ e, s: pos(e.id) })).filter(x => x.s != null);
+    return todos.map(x => ({ ...x, lado: x.s < 50 ? 0 : 1, f: Math.abs(x.s - 50) * (0.5 + certK(x.e.id) / 200) * (comp.has(x.e.id) ? 0.85 : 1) }))
+      .filter(x => Math.abs(x.s - 50) >= (min ?? 12)).sort((a, b) => b.f - a.f);
+  }
+
+  // Valores por tema: promedio con signo de varios ejes (positivo = el polo que nombra el primer rótulo)
+  const TEMAS = [
+    { k: { es: 'Política', pt: 'Política', en: 'Politics' }, ic: 'dem', ejes: [['dem', 1], ['ipe', -1], ['ges', -0.5]],
+      r: { es: ['Mano firme en el poder', 'Liderazgo fuerte', 'Equilibrio de poderes', 'República con controles', 'Democracia participativa'],
+           pt: ['Mão firme no poder', 'Liderança forte', 'Equilíbrio de poderes', 'República com controles', 'Democracia participativa'],
+           en: ['Firm hand in power', 'Strong leadership', 'Balance of powers', 'Republic with checks', 'Participatory democracy'] } },
+    { k: { es: 'Economía', pt: 'Economia', en: 'Economy' }, ic: 'pla', ejes: [['pla', 1], ['col', 1], ['dis', 0.5], ['bie', 0.5]],
+      r: { es: ['Libre mercado', 'Mercado con reglas', 'Economía mixta', 'Estado presente', 'Economía planificada'],
+           pt: ['Livre mercado', 'Mercado com regras', 'Economia mista', 'Estado presente', 'Economia planejada'],
+           en: ['Free market', 'Market with rules', 'Mixed economy', 'Active state', 'Planned economy'] } },
+    { k: { es: 'Mundo', pt: 'Mundo', en: 'World' }, ic: 'int', ejes: [['int', 1], ['glo', -1], ['uni', 0.5]],
+      r: { es: ['Soberanismo', 'La nación primero', 'Pragmatismo exterior', 'Cooperación', 'Ciudadanía global'],
+           pt: ['Soberanismo', 'A nação primeiro', 'Pragmatismo externo', 'Cooperação', 'Cidadania global'],
+           en: ['Sovereigntism', 'Nation first', 'Pragmatic foreign policy', 'Cooperation', 'Global citizenship'] } },
+    { k: { es: 'Sociedad', pt: 'Sociedade', en: 'Society' }, ic: 'pro', ejes: [['pro', 1], ['rel', 0.5], ['idc', 0.5]],
+      r: { es: ['Muy tradicional', 'Tradicional', 'Moderado', 'Progresista', 'Muy progresista'],
+           pt: ['Muito tradicional', 'Tradicional', 'Moderado', 'Progressista', 'Muito progressista'],
+           en: ['Very traditional', 'Traditional', 'Moderate', 'Progressive', 'Very progressive'] } },
+    { k: { es: 'Cultura y migración', pt: 'Cultura e migração', en: 'Culture & migration' }, ic: 'mig', ejes: [['mig', 1], ['uni', -0.5]],
+      r: { es: ['Diversidad plena', 'Apertura', 'Balance', 'Integración selectiva', 'Asimilación'],
+           pt: ['Diversidade plena', 'Abertura', 'Equilíbrio', 'Integração seletiva', 'Assimilação'],
+           en: ['Full diversity', 'Openness', 'Balance', 'Selective integration', 'Assimilation'] } },
+    { k: { es: 'Justicia', pt: 'Justiça', en: 'Justice' }, ic: 'lib', ejes: [['lib', -1], ['pen', 1]],
+      r: { es: ['Mano dura', 'El orden primero', 'Equilibrio', 'Las garantías primero', 'Libertades y reinserción'],
+           pt: ['Mão dura', 'A ordem primeiro', 'Equilíbrio', 'As garantias primeiro', 'Liberdades e reintegração'],
+           en: ['Tough on crime', 'Order first', 'Balance', 'Rights first', 'Liberties and rehabilitation'] } },
+    { k: { es: 'Ambiente', pt: 'Ambiente', en: 'Environment' }, ic: 'tec', ejes: [['ecl', 1], ['tec', -1]],
+      r: { es: ['Producir primero', 'Desarrollo con cuidado', 'Equilibrio', 'El ambiente primero', 'Ecologismo profundo'],
+           pt: ['Produzir primeiro', 'Desenvolvimento com cuidado', 'Equilíbrio', 'O ambiente primeiro', 'Ecologia profunda'],
+           en: ['Production first', 'Careful development', 'Balance', 'Environment first', 'Deep ecology'] } },
+    { k: { es: 'Forma de pensar', pt: 'Forma de pensar', en: 'Way of thinking' }, ic: 'epi', ejes: [['epi', 1], ['eti', 1]],
+      r: { es: ['Convicciones firmes', 'Principios ante todo', 'Balance', 'Pragmatismo', 'Evidencia y resultados'],
+           pt: ['Convicções firmes', 'Princípios acima de tudo', 'Equilíbrio', 'Pragmatismo', 'Evidência e resultados'],
+           en: ['Firm convictions', 'Principles above all', 'Balance', 'Pragmatism', 'Evidence and results'] } },
+  ];
+  function temaVal(tm) {
+    let num = 0, den = 0;
+    tm.ejes.forEach(([k, w]) => { const s = pos(k); if (s != null) { num += w * (s - 50); den += Math.abs(w) } });
+    if (!den) return null;
+    const v = num / den, r = L3(tm.r);
+    return { v, txt: v >= 30 ? r[0] : v >= 10 ? r[1] : v > -10 ? r[2] : v > -30 ? r[3] : r[4] };
+  }
+
+  // Bandera: colores de tus tres polos más marcados, diseño según el tema que más te define y escudo según tu polo principal.
+  const PCOL = { fed: ['#2e7d4f', '#1f3f8f'], dem: ['#5aa0e6', '#2a2d33'], int: ['#3a7bd5', '#b03a2e'], mil: ['#5d6b3a', '#f4f4f4'], lib: ['#22355e', '#f0c419'],
+    col: ['#c0392b', '#d4a52a'], rel: ['#a8b3bf', '#6b3fa0'], pro: ['#e0559a', '#7b4a2a'], mig: ['#7f8c8d', '#f39c12'], pla: ['#b71c1c', '#1e88e5'],
+    glo: ['#8d6e63', '#26a69a'], tec: ['#00acc1', '#558b2f'], ecl: ['#2e7d32', '#616161'], dis: ['#d32f2f', '#ffb300'], bie: ['#ef6c00', '#455a64'],
+    epi: ['#0288d1', '#4a148c'], ges: ['#37474f', '#fbc02d'], tra: ['#1565c0', '#c62828'], idc: ['#ffca28', '#6d4c41'], pen: ['#4db6ac', '#263238'],
+    lab: ['#e53935', '#283593'], eti: ['#26c6da', '#5d4037'], tem: ['#ff7043', '#3949ab'], fut: ['#66bb6a', '#ffa726'], ind: ['#795548', '#29b6f6'],
+    mon: ['#ab47bc', '#1a237e'], inf: ['#f5f5f5', '#212121'], ipe: ['#8e24aa', '#1565c0'], uni: ['#42a5f5', '#8d1d1d'] };
+  const PEMB = { fed: ['ring', 'star'], dem: ['ring', 'shield'], int: ['ring', 'star'], mil: ['shield', 'leaf'], lib: ['shield', 'sun'], col: ['gear', 'chevron'],
+    rel: ['sun', 'cross'], pro: ['sun', 'cross'], mig: ['star', 'ring'], pla: ['gear', 'chevron'], glo: ['star', 'ring'], tec: ['sun', 'leaf'], ecl: ['leaf', 'gear'],
+    dis: ['scale', 'chevron'], bie: ['ring', 'chevron'], epi: ['sun', 'cross'], ges: ['gear', 'ring'], tra: ['scale', 'star'], idc: ['chevron', 'ring'],
+    pen: ['scale', 'shield'], lab: ['ring', 'chevron'], eti: ['scale', 'cross'], tem: ['star', 'sun'], fut: ['leaf', 'sun'], ind: ['gear', 'ring'],
+    mon: ['star', 'scale'], inf: ['ring', 'shield'], ipe: ['star', 'scale'], uni: ['ring', 'star'] };
+  const FAM = { eco: ['pla', 'col', 'dis', 'bie', 'lab', 'mon', 'ind', 'glo'], pod: ['dem', 'ipe', 'ges', 'lib', 'inf', 'pen'], nac: ['int', 'uni', 'mil', 'fed'],
+    val: ['pro', 'rel', 'idc', 'mig'], ide: ['tec', 'ecl', 'epi', 'eti', 'tem', 'fut', 'tra'] };
+  function luz(hex) { const n = parseInt(hex.slice(1), 16); return (0.299 * (n >> 16) + 0.587 * (n >> 8 & 255) + 0.114 * (n & 255)) / 255 }
+  function emblema(tipo, cx, cy, r, col) {
+    const st = `fill="${col}"`, sk = `fill="none" stroke="${col}" stroke-width="${r * 0.16}" stroke-linecap="round" stroke-linejoin="round"`;
+    const pt = (n, R, rot) => Array.from({ length: n }, (_, i) => { const a = rot + i * 2 * Math.PI / n; return [cx + R * Math.cos(a), cy + R * Math.sin(a)] });
+    switch (tipo) {
+      case 'star': return `<polygon ${st} points="${pt(10, r, -Math.PI / 2).map(([x, y], i) => i % 2 ? [cx + (x - cx) * 0.42, cy + (y - cy) * 0.42] : [x, y]).map(p => p.map(v => v.toFixed(1)).join(',')).join(' ')}"/>`;
+      case 'sun': return `<circle cx="${cx}" cy="${cy}" r="${r * 0.45}" ${st}/>` + pt(12, r, 0).map(([x, y]) => `<line x1="${(cx + (x - cx) * 0.6).toFixed(1)}" y1="${(cy + (y - cy) * 0.6).toFixed(1)}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" ${sk}/>`).join('');
+      case 'gear': return `<circle cx="${cx}" cy="${cy}" r="${r * 0.62}" ${sk}/><circle cx="${cx}" cy="${cy}" r="${r * 0.22}" ${st}/>` + pt(8, r, 0).map(([x, y]) => `<line x1="${(cx + (x - cx) * 0.66).toFixed(1)}" y1="${(cy + (y - cy) * 0.66).toFixed(1)}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" ${sk}/>`).join('');
+      case 'leaf': return `<path ${st} d="M${cx - r * 0.8} ${cy + r * 0.8}C${cx - r * 0.8} ${cy - r * 0.3} ${cx - r * 0.1} ${cy - r} ${cx + r * 0.85} ${cy - r * 0.85}C${cx + r} ${cy + r * 0.1} ${cx + r * 0.3} ${cy + r * 0.8} ${cx - r * 0.8} ${cy + r * 0.8}z"/>`;
+      case 'scale': return `<g ${sk}><line x1="${cx}" y1="${cy - r}" x2="${cx}" y2="${cy + r}"/><line x1="${cx - r}" y1="${cy - r * 0.55}" x2="${cx + r}" y2="${cy - r * 0.55}"/><line x1="${cx - r * 0.5}" y1="${cy + r}" x2="${cx + r * 0.5}" y2="${cy + r}"/><path d="M${cx - r} ${cy - r * 0.55}l-${r * 0.35} ${r * 0.75}h${r * 0.7}zM${cx + r} ${cy - r * 0.55}l-${r * 0.35} ${r * 0.75}h${r * 0.7}z"/></g>`;
+      case 'cross': return `<g ${st}><rect x="${cx - r * 0.16}" y="${cy - r}" width="${r * 0.32}" height="${r * 2}"/><rect x="${cx - r * 0.65}" y="${cy - r * 0.5}" width="${r * 1.3}" height="${r * 0.32}"/></g>`;
+      case 'shield': return `<path ${st} d="M${cx} ${cy - r}L${cx + r * 0.8} ${cy - r * 0.65}V${cy}C${cx + r * 0.8} ${cy + r * 0.55} ${cx + r * 0.4} ${cy + r * 0.85} ${cx} ${cy + r}C${cx - r * 0.4} ${cy + r * 0.85} ${cx - r * 0.8} ${cy + r * 0.55} ${cx - r * 0.8} ${cy}V${cy - r * 0.65}z"/>`;
+      case 'chevron': return `<path ${sk} d="M${cx - r * 0.8} ${cy + r * 0.2}L${cx} ${cy - r * 0.6}L${cx + r * 0.8} ${cy + r * 0.2}M${cx - r * 0.8} ${cy + r * 0.8}L${cx} ${cy}L${cx + r * 0.8} ${cy + r * 0.8}"/>`;
+      default: return pt(8, r * 0.78, 0).map(([x, y]) => `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r * 0.17}" ${st}/>`).join('') + `<circle cx="${cx}" cy="${cy}" r="${r * 0.3}" ${st}/>`;
+    }
+  }
+  function banderaPersonal(fuertes) {
+    const W = 300, H = 200, top = fuertes.slice(0, 3), cols = [];
+    top.forEach(x => { const c = PCOL[x.e.id][x.lado]; if (!cols.includes(c)) cols.push(c) });
+    while (cols.length < 3) cols.push(['#4f8ff7', '#e9edf2', '#2a2f37'][cols.length]);
+    const [c1, c2, c3] = cols, p0 = top[0], fam = p0 ? Object.keys(FAM).find(f => FAM[f].includes(p0.e.id)) : 'val';
+    const emb = p0 ? PEMB[p0.e.id][p0.lado] : 'ring';
+    const conEmb = (bg, cx, cy, r) => emblema(emb, cx, cy, r, luz(bg) > 0.6 ? '#1b1f26' : '#ffffff');
+    let g = '';
+    if (fam === 'eco') g = `<rect width="${W}" height="${H}" fill="${c1}"/><rect y="${H / 3}" width="${W}" height="${H / 3}" fill="${c2}"/><rect y="${2 * H / 3}" width="${W}" height="${H / 3}" fill="${c3}"/>${conEmb(c2, W / 2, H / 2, 26)}`;
+    else if (fam === 'pod') g = `<rect width="${W}" height="${H}" fill="${c2}"/><rect y="${H / 2}" width="${W}" height="${H / 2}" fill="${c3}"/><rect width="${W * 0.42}" height="${H / 2}" fill="${c1}"/>${conEmb(c1, W * 0.21, H / 4, 30)}`;
+    else if (fam === 'nac') g = `<rect width="${W}" height="${H}" fill="${c1}"/><rect x="${W * 0.3}" width="${W * 0.16}" height="${H}" fill="${c2}"/><rect y="${H * 0.42}" width="${W}" height="${H * 0.16}" fill="${c2}"/><rect x="${W * 0.34}" width="${W * 0.08}" height="${H}" fill="${c3}"/><rect y="${H * 0.46}" width="${W}" height="${H * 0.08}" fill="${c3}"/>${conEmb(c1, W * 0.15, H * 0.21, 22)}`;
+    else if (fam === 'ide') g = `<rect width="${W}" height="${H}" fill="${c1}"/><path d="M${W} 0V${H}H0z" fill="${c2}"/><path d="M${W} ${H * 0.45}V${H}H${W * 0.32}z" fill="${c3}"/>${conEmb(c1, W * 0.27, H * 0.33, 30)}`;
+    else g = `<rect width="${W}" height="${H}" fill="${c1}"/><rect x="${W / 3}" width="${W / 3}" height="${H}" fill="${c2}"/><rect x="${2 * W / 3}" width="${W / 3}" height="${H}" fill="${c3}"/>${conEmb(c2, W / 2, H / 2, 32)}`;
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${esc(T().band_k)}">${g}<rect width="${W}" height="${H}" fill="none" stroke="rgba(0,0,0,.18)" stroke-width="2"/></svg>`;
+  }
+  function descargarBandera() {
+    const svg = $('#bandera svg'); if (!svg) return;
+    const im = new Image(), url = URL.createObjectURL(new Blob([svg.outerHTML], { type: 'image/svg+xml' }));
+    im.onload = () => {
+      const cv = document.createElement('canvas'); cv.width = 1200; cv.height = 800;
+      cv.getContext('2d').drawImage(im, 0, 0, 1200, 800); URL.revokeObjectURL(url);
+      cv.toBlob(b => { const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = 'mi-bandera-brujula.png'; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 4000) }, 'image/png');
+    };
+    im.src = url;
+  }
+  function valoresYBandera() {
+    const t = T(), f = polosFuertes(), top = f.slice(0, 5);
+    const lema = f.slice(0, 3).map(x => x.lado ? x.e.b : x.e.a);
+    $('#bandera').innerHTML = banderaPersonal(f) + `<p class="lema-b">${esc(lema.join(' · ') || t.equilibrado)}</p>`;
+    $('#band-dl').textContent = t.band_dl; $('#band-dl').onclick = descargarBandera;
+    $('#valoras').innerHTML = top.length ? top.map(x => `<span class="vchip">${icb(x.e.id)}<b>${esc(x.lado ? x.e.b : x.e.a)}</b><small>${Math.round(x.lado ? x.s : 100 - x.s)}%</small></span>`).join('')
+      : `<p class="sub">${esc(t.centro)}</p>`;
+    $('#temas').innerHTML = TEMAS.map(tm => { const r = temaVal(tm); return r ? `<div class="vt">${icb(tm.ic)}<small>${esc(L3(tm.k))}</small><b>${esc(r.txt)}</b></div>` : '' }).join('');
+  }
+
+  // Modo sobremesa: humor, no mide nada.
+  const SOB = [
+    { k: { es: 'Cuando llega la cuenta', pt: 'Quando chega a conta', en: 'When the bill comes' }, f: () => (pos('pla') ?? 50) - 50,
+      r: { es: ['Cada uno paga lo suyo, con centavos', 'Se divide, pero el que pidió de más pone más', 'Partes iguales y no se habla más'],
+           pt: ['Cada um paga o seu, com centavos', 'Divide, mas quem pediu mais paga mais', 'Partes iguais e assunto encerrado'],
+           en: ['Everyone pays their own, to the cent', 'Split it, but whoever ordered more pays more', 'Equal shares, end of story'] } },
+    { k: { es: 'En el grupo de la familia', pt: 'No grupo da família', en: 'In the family group chat' }, f: () => (pos('dem') ?? 50) - 50,
+      r: { es: ['Sos admin y ponés las reglas', 'Opinás, pero sin armar lío', 'Proponés una encuesta para todo'],
+           pt: ['Você é admin e dita as regras', 'Opina, mas sem criar confusão', 'Propõe enquete para tudo'],
+           en: ['You are the admin and set the rules', 'You chime in without starting a fight', 'You propose a poll for everything'] } },
+    { k: { es: 'Con el control remoto', pt: 'Com o controle remoto', en: 'With the remote' }, f: () => (pos('pro') ?? 50) - 50,
+      r: { es: ['El mismo canal de siempre', 'Un clásico y algo nuevo', 'La serie que salió ayer'],
+           pt: ['O mesmo canal de sempre', 'Um clássico e algo novo', 'A série que saiu ontem'],
+           en: ['The same old channel', 'A classic and something new', 'The show that came out yesterday'] } },
+    { k: { es: 'De vacaciones', pt: 'Nas férias', en: 'On holiday' }, f: () => (pos('int') ?? 50) - 50,
+      r: { es: ['Recorrer el país, que hay mucho por ver', 'Un año acá, otro afuera', 'Pasaporte en mano y a conocer el mundo'],
+           pt: ['Rodar o país, tem muito para ver', 'Um ano aqui, outro fora', 'Passaporte na mão e o mundo pela frente'],
+           en: ['See your own country first', 'One year here, one abroad', 'Passport ready, the world awaits'] } },
+  ];
+  function sobremesa() {
+    const t = T(), vals = Object.values(S.scores), cert = Object.values(S.cert);
+    const conv = vals.reduce((a, v) => a + Math.abs(v - 50), 0) / vals.length, coh = cert.reduce((a, c) => a + c, 0) / cert.length;
+    const T1 = conv >= 25 ? t.sat_c[0] : conv >= 16 ? t.sat_c[1] : conv >= 9 ? t.sat_c[2] : t.sat_c[3];
+    const T2 = coh >= 65 ? t.sat_h[0] : coh >= 45 ? t.sat_h[1] : coh >= 25 ? t.sat_h[2] : t.sat_h[3];
+    $('#sob').innerHTML = `<div class="sat"><div><small>${esc(t.sat_ck)}</small><b>${esc(T1)}</b></div><div><small>${esc(t.sat_hk)}</small><b>${esc(T2)}</b></div></div>
+      <div class="vg">${SOB.map(x => { const v = x.f(), r = L3(x.r); return `<div class="vt"><small>${esc(L3(x.k))}</small><b>${esc(v > 12 ? r[0] : v < -12 ? r[2] : r[1])}</b></div>` }).join('')}</div>`;
+  }
+
   async function copiar(s) { try { await navigator.clipboard.writeText(s); $('#copiar').textContent = T().copiado } catch (e) { } }
 
   function perfil(sc, cert, rk, desdeLink) {
@@ -740,7 +940,7 @@
     if (RUTAS[r]) { show(RUTAS[r][0]); RUTAS[r][1](arg ? decodeURIComponent(arg) : undefined); nav(r); return }
     if (r === 'mimapa') {
       const g = guardado();
-      if (g) { S.ver = g.ver; S.scores = g.sc; S.cert = g.cert; S.nresp = g.n || null; S.dist = g.dist || null; resultado(null, false); nav('mimapa') } else { show('s-vacio'); nav('mimapa') }
+      if (g) { S.ver = g.ver; S.scores = g.sc; S.cert = g.cert; S.scores2 = g.sc2 || null; S.cert2 = g.cert2 || null; S.nresp = g.n || null; S.dist = g.dist || null; resultado(null, false); nav('mimapa') } else { show('s-vacio'); nav('mimapa') }
       return;
     }
     nav('quiz');
@@ -816,11 +1016,13 @@
     };
   }
   function desdeHash() {
-    const m = location.hash.match(/^#r=([a-z]+)-(es|pt|en)((?:-\d{1,3}){24})$/);
+    const m = location.hash.match(/^#r=([a-z]+)-(es|pt|en)((?:-\d{1,3}){24})(?:-x((?:-\d{1,3})+))?$/);
     if (!m || !S.ejes.versiones[m[1]] || !S.ejes.versiones[m[1]].activa) return false;
     const v = m[3].slice(1).split('-').map(Number), ids = IDS(), cl = x => Math.max(0, Math.min(100, x));
-    S.ver = m[1]; S.scores = {}; S.cert = {}; S.nresp = null; S.dist = null;
+    S.ver = m[1]; S.scores = {}; S.cert = {}; S.nresp = null; S.dist = null; S.scores2 = null; S.cert2 = null;
     ids.forEach((k, i) => { S.scores[k] = cl(v[i]); S.cert[k] = cl(v[i + ids.length]) });
+    const ids2 = IDS2(), v2 = m[4] ? m[4].slice(1).split('-').map(Number) : [];
+    if (v2.length === 2 * ids2.length) { S.scores2 = {}; S.cert2 = {}; ids2.forEach((k, i) => { S.scores2[k] = cl(v2[i]); S.cert2[k] = cl(v2[i + ids2.length]) }) }
     if (!S.langElegido) setLang(m[2], false);
     resultado(null, true);
     return true;

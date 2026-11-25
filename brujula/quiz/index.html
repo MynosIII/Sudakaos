@@ -89,8 +89,8 @@
       <p class="err" id="demo-err"></p>
       <div class="row">
         <button class="btn" type="submit" data-i18n="enviar">Enviar y ver resultado</button>
-        <button class="btn ghost" type="button" id="skip" data-i18n="saltar">Ver resultado sin enviar</button>
       </div>
+      <button class="skip" type="button" id="skip" data-i18n="saltar">prefiero no enviar mis respuestas</button>
     </form>
   </section>
 
@@ -98,18 +98,24 @@
   <section id="s-res" class="screen">
     <div class="resw">
       <nav class="toc" id="toc">
-        <a href="#r-perfil" data-i18n="t_perfil">Perfil</a><a href="#r-ejes" data-i18n="t_ejes">12 ejes</a><a href="#r-brujula" data-i18n="t_brujula">Brújula</a>
-        <a href="#r-ideo" data-i18n="t_ideo">Ideologías</a><a href="#r-dir" data-i18n="t_dir">Dirigentes</a><a href="#r-anal" data-i18n="t_anal">Análisis</a><a href="#r-comp" data-i18n="t_comp">Compartir</a>
+        <a href="#r-perfil" data-i18n="t_perfil">Perfil</a><a href="#r-val" data-i18n="t_val">Valores</a><a href="#r-ejes" data-i18n="t_ejes">12 ejes</a><a href="#r-mas" data-i18n="t_mas">Más ejes</a><a href="#r-brujula" data-i18n="t_brujula">Brújula</a>
+        <a href="#r-ideo" data-i18n="t_ideo">Ideologías</a><a href="#r-dir" data-i18n="t_dir">Dirigentes</a><a href="#r-anal" data-i18n="t_anal">Análisis</a><a href="#r-sob" data-i18n="t_sob">Sobremesa</a><a href="#r-comp" data-i18n="t_comp">Compartir</a>
       </nav>
       <div>
         <div class="sec perfil" id="r-perfil"></div>
+        <div class="sec" id="r-val"><h3><span data-i18n="t_val2">Tu bandera y tus valores</span></h3><p class="sub" data-i18n="val_sub"></p>
+          <div class="valw"><div class="bandw"><div id="bandera" class="bandera"></div><button class="btn ghost sm" id="band-dl" type="button"></button></div>
+            <div><div class="k" data-i18n="valoras_k">Lo que más valorás</div><div id="valoras" class="valoras"></div>
+              <div class="k" data-i18n="temas_k">Tus valores por tema</div><div id="temas" class="vg"></div></div></div></div>
         <div class="sec" id="r-ejes"><h3><span data-i18n="t_ejes2">Tus 12 ejes</span></h3><p class="sub" data-i18n="cert_nota"></p>
           <div class="tog" id="ejes-tog"><button data-v="barras" class="on" data-i18n="barras">Barras</button><button data-v="radar" data-i18n="radar">Radar</button></div>
           <div id="ejes" class="ejes2"></div><div id="radar" class="radar" hidden></div></div>
+        <div class="sec" id="r-mas"><h3><span data-i18n="t_mas2">Ejes complementarios</span></h3><p class="sub" data-i18n="mas_sub"></p><div id="ejes3" class="ejes2"></div></div>
         <div class="sec" id="r-brujula"><h3><span data-i18n="t_brujula2">Brújula 2D</span></h3><p class="sub" data-i18n="bru_sub"></p><div class="bru" id="bru"></div></div>
         <div class="sec" id="r-ideo"><h3><span data-i18n="t_ideo2">Ideologías más cercanas</span></h3><p class="sub" data-i18n="ideo_sub"></p><div id="ideo"></div></div>
         <div class="sec" id="r-dir"><h3><span data-i18n="cerca">Dirigentes más cercanos</span></h3><p class="sub" id="dir-sub"></p><div id="dir"></div></div>
         <div class="sec" id="r-anal"><h3><span data-i18n="t_anal2">Análisis</span></h3><p class="sub" data-i18n="anal_sub"></p><div id="anal"></div></div>
+        <div class="sec" id="r-sob"><h3><span data-i18n="t_sob2">Modo sobremesa</span></h3><p class="sub" data-i18n="sob_nota"></p><div id="sob"></div></div>
         <div class="sec" id="r-comp"><h3><span data-i18n="t_comp2">Tu tarjeta</span></h3><p class="sub" data-i18n="comp_sub"></p>
           <div class="card-prev"><canvas id="tarjeta" width="1080" height="1920"></canvas>
             <div><div class="row"><button class="btn" id="descargar" data-i18n="descargar">Descargar tarjeta</button><button class="btn ghost" id="share" data-i18n="compartir">Compartir resultado</button></div>
