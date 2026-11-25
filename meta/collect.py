@@ -296,6 +296,39 @@ def main():
                                "ig_error": None if ok else next((r.get("ig_error") for r in out if r.get("ig_error")), None), "diagnostico": diag,
                                "dirigentes": out}, ensure_ascii=False, indent=1), encoding="utf8")
     print(f"Instagram ok: {ok}/{len(out)}")
+    pauta_tableros(now, {r["name"]: r["ads"] for r in out})
+
+
+def pauta_tableros(now, cache):
+    """Pestaña "Pauta en Meta" de los tableros del módulo dirigentes: avisos del dirigente y de su competencia.
+    Escribe dirigentes/<slug>/data/meta.json para cada slug de "tableros_dirigentes" (meta/config.json)."""
+    root = HERE.parent / "dirigentes"
+    days = CFG.get("ads_days", 90)
+    for slug in CFG.get("tableros_dirigentes", []):
+        try:
+            tcfg = json.loads((root / slug / "config.json").read_text(encoding="utf8"))
+        except Exception as e:
+            print(f"Pauta {slug}: sin config ({e})")
+            continue
+        figs = tcfg.get("focos", [])[:1] + [r for r in tcfg.get("rivales", []) if r not in tcfg.get("focos", [])]
+        rows, err = [], None
+        for name in figs:
+            if name not in cache:
+                terms = (tcfg.get("figuras", {}).get(name, {}).get("ads")) or [name]
+                cache[name] = ads(terms, name, days)
+                time.sleep(1)
+            a = cache[name]
+            err = err or a.get("error")
+            rows.append({"name": name, "foco": name in tcfg.get("focos", []), "ads": a})
+        path = root / slug / "data" / "meta.json"
+        if err and all(not r["ads"].get("n") for r in rows) and path.exists():
+            print(f"Pauta {slug}: error de Meta ({str(err)[:80]}), se mantienen los datos anteriores")
+            continue
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps({"updated_at": now.isoformat(timespec="minutes"), "ads_days": days,
+                                    "estado": "error" if err else "ok", "error": str(err)[:200] if err else None,
+                                    "figuras": rows}, ensure_ascii=False, indent=1) + "\n", encoding="utf8")
+        print(f"Pauta {slug}: " + ", ".join(f"{r['name']} {r['ads'].get('n')}" for r in rows))
 
 
 if __name__ == "__main__":
