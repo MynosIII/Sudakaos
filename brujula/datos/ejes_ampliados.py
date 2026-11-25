@@ -1,6 +1,6 @@
-"""Ejes complementarios (13 a 30 de la lista de Matías). Con los 12 principales suman 30.
-'Migración' (política migratoria) se mide con las frases de cultura e inmigración, que puntúan a la vez en
-'Cultura' (multiculturalismo, endógeno o no) y en 'Migración'.
+"""Ejes complementarios (13 a 30). Con los 12 principales suman 30.
+Las frases de inmigración puntúan en 'Cultura' (multiculturalismo, endógeno o no). El eje 30 es 'Certeza':
+el promedio de la certeza en los otros 29, calculado en el navegador.
 
 Se miden con las mismas frases del quiz, que ahora pueden puntuar en varios ejes a la vez (SEC),
 más 19 frases nuevas (NUEVAS). Convención de pesos igual que preguntas.json: negativo = estar de acuerdo
@@ -41,10 +41,11 @@ EJES2 = [
      ("Informação", "Pluralismo informativo", "Controle informativo"), ("Information", "Media pluralism", "Information control")),
     ("ipe", "Instituciones", "Personalismo", "Institucionalismo", "Lo que importa es quién conduce.", "Lo que importa son las reglas y las instituciones.",
      ("Instituições", "Personalismo", "Institucionalismo"), ("Institutions", "Personalism", "Institutionalism")),
-    ("mpo", "Migración", "Fronteras abiertas", "Fronteras restrictivas", "Recibir a quien quiera venir y facilitar que se quede.", "Controlar quién entra y poner condiciones para quedarse.",
-     ("Migração", "Fronteiras abertas", "Fronteiras restritivas"), ("Migration", "Open borders", "Restrictive borders")),
     ("uni", "Sociedad", "Universalismo", "Particularismo", "Los mismos derechos y la misma vara para todos los seres humanos.", "Primero los nuestros: la propia nación, el propio grupo.",
      ("Sociedade", "Universalismo", "Particularismo"), ("Society", "Universalism", "Particularism")),
+    # Eje 30: no se mide con frases; es el promedio de la certeza en los otros 29 (lo calcula quiz.js).
+    ("cer", "Certeza", "Dudas", "Convicción", "Respuestas tibias o que se contradicen entre sí.", "Respuestas firmes y coherentes en casi todos los temas.",
+     ("Certeza", "Dúvidas", "Convicção"), ("Certainty", "Doubt", "Conviction")),
 ]
 
 # Pesos secundarios para frases que ya existen (se suman a su eje principal).
@@ -64,7 +65,6 @@ SEC = {
     "x46": {"epi": -0.5}, "x111": {"epi": -0.5}, "x28": {"epi": 0.5}, "x118": {"epi": 0.5}, "x168": {"epi": 1},
     "x124": {"tra": -0.5}, "x119": {"tra": 0.5}, "x161": {"tem": 0.5}, "x80": {"eti": -0.5}, "x96": {"eti": 0.5},
     "g01": {"mon": 0.5},
-    "x33": {"mpo": 1}, "x34": {"mpo": 1}, "x35": {"mpo": -0.5}, "x129": {"mpo": 1}, "x131": {"mpo": 0.5}, "x134": {"mpo": -1}, "x138": {"mpo": -1},
 }
 
 # Frases nuevas: (id, es, pt, en, e, nivel, va en Express)

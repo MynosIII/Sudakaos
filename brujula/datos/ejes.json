@@ -1,5 +1,5 @@
 {
- "_nota": "30 ejes: 12 principales (mecánica de 12axes, politicaltests, MIT) + 18 complementarios (ejes2), con certeza. Cada eje va de 0 (polo a) a 100 (polo b).",
+ "_nota": "30 ejes: 12 principales (mecánica de 12axes, politicaltests, MIT) + 17 complementarios + Certeza (ejes2; 'cer' tiene calc y es el promedio de certeza de los otros 29). Cada eje va de 0 (polo a) a 100 (polo b).",
  "ejes": [
   {
    "id": "fed",
@@ -544,24 +544,6 @@
    }
   },
   {
-   "id": "mpo",
-   "nombre": "Migración",
-   "a": "Fronteras abiertas",
-   "b": "Fronteras restrictivas",
-   "a_desc": "Recibir a quien quiera venir y facilitar que se quede.",
-   "b_desc": "Controlar quién entra y poner condiciones para quedarse.",
-   "pt": {
-    "nombre": "Migração",
-    "a": "Fronteiras abertas",
-    "b": "Fronteiras restritivas"
-   },
-   "en": {
-    "nombre": "Migration",
-    "a": "Open borders",
-    "b": "Restrictive borders"
-   }
-  },
-  {
    "id": "uni",
    "nombre": "Sociedad",
    "a": "Universalismo",
@@ -578,6 +560,25 @@
     "a": "Universalism",
     "b": "Particularism"
    }
+  },
+  {
+   "id": "cer",
+   "nombre": "Certeza",
+   "a": "Dudas",
+   "b": "Convicción",
+   "a_desc": "Respuestas tibias o que se contradicen entre sí.",
+   "b_desc": "Respuestas firmes y coherentes en casi todos los temas.",
+   "pt": {
+    "nombre": "Certeza",
+    "a": "Dúvidas",
+    "b": "Convicção"
+   },
+   "en": {
+    "nombre": "Certainty",
+    "a": "Doubt",
+    "b": "Conviction"
+   },
+   "calc": "certeza"
   }
  ],
  "versiones": {

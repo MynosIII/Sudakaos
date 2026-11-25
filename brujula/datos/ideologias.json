@@ -1,69 +1,1157 @@
 {
-  "_nota": "Posiciones de referencia de cada familia ideológica en los 12 ejes (0 = polo a, 100 = polo b). Codificación editorial a revisar, misma escala que figuras.json. Orden de ejes: fed dem int mil lib col rel pro mig pla glo tec.",
-  "ideologias": [
-    {"id": "libertarismo", "pos": [30,35,55,55,85,95,40,55,50,95,95,20],
-     "es": {"nombre": "Libertarismo", "desc": "Mercado sin trabas, Estado mínimo y máxima libertad individual."},
-     "pt": {"nombre": "Libertarianismo", "desc": "Mercado sem amarras, Estado mínimo e máxima liberdade individual."},
-     "en": {"nombre": "Libertarianism", "desc": "Unfettered markets, a minimal state and maximum individual freedom."}},
-    {"id": "lib_conservador", "pos": [45,30,40,40,55,80,60,65,35,78,80,30],
-     "es": {"nombre": "Liberalismo conservador", "desc": "Economía de mercado con valores tradicionales y orden."},
-     "pt": {"nombre": "Liberalismo conservador", "desc": "Economia de mercado com valores tradicionais e ordem."},
-     "en": {"nombre": "Conservative liberalism", "desc": "Market economics with traditional values and order."}},
-    {"id": "lib_progresista", "pos": [40,20,25,65,85,70,15,25,75,70,80,20],
-     "es": {"nombre": "Liberalismo progresista", "desc": "Mercado abierto y derechos civiles amplios, en un mundo integrado."},
-     "pt": {"nombre": "Liberalismo progressista", "desc": "Mercado aberto e direitos civis amplos, num mundo integrado."},
-     "en": {"nombre": "Progressive liberalism", "desc": "Open markets and broad civil rights in an integrated world."}},
-    {"id": "socialdemocracia", "pos": [45,15,30,65,70,35,25,30,70,30,50,35],
-     "es": {"nombre": "Socialdemocracia", "desc": "Mercado regulado, Estado de bienestar fuerte y democracia plena."},
-     "pt": {"nombre": "Social-democracia", "desc": "Mercado regulado, Estado de bem-estar forte e democracia plena."},
-     "en": {"nombre": "Social democracy", "desc": "Regulated markets, a strong welfare state and full democracy."}},
-    {"id": "socialismo_dem", "pos": [50,20,30,75,70,20,20,20,75,15,35,45],
-     "es": {"nombre": "Socialismo democrático", "desc": "Propiedad colectiva de lo esencial, por la vía de las urnas."},
-     "pt": {"nombre": "Socialismo democrático", "desc": "Propriedade coletiva do essencial, pela via eleitoral."},
-     "en": {"nombre": "Democratic socialism", "desc": "Collective ownership of essentials, through the ballot box."}},
-    {"id": "comunismo", "pos": [70,70,25,40,35,5,10,25,60,5,25,35],
-     "es": {"nombre": "Comunismo", "desc": "Fin de la propiedad privada y planificación central de la economía."},
-     "pt": {"nombre": "Comunismo", "desc": "Fim da propriedade privada e planejamento central da economia."},
-     "en": {"nombre": "Communism", "desc": "An end to private property and central planning of the economy."}},
-    {"id": "nacional_popular", "pos": [55,55,75,45,50,35,45,40,55,25,20,40],
-     "es": {"nombre": "Nacional-popular", "desc": "Soberanía, industria nacional y un Estado que reparte."},
-     "pt": {"nombre": "Nacional-popular", "desc": "Soberania, indústria nacional e um Estado que redistribui."},
-     "en": {"nombre": "National-popular", "desc": "Sovereignty, national industry and a redistributive state."}},
-    {"id": "desarrollismo", "pos": [50,40,55,45,50,60,45,50,50,45,40,15],
-     "es": {"nombre": "Desarrollismo", "desc": "Industrialización e inversión guiadas por el Estado junto a privados."},
-     "pt": {"nombre": "Desenvolvimentismo", "desc": "Industrialização e investimento guiados pelo Estado junto com o setor privado."},
-     "en": {"nombre": "Developmentalism", "desc": "State-guided industrialization and investment alongside private capital."}},
-    {"id": "centrismo", "pos": [45,30,45,55,55,55,45,50,50,50,55,35],
-     "es": {"nombre": "Centrismo moderado", "desc": "Pragmatismo, instituciones y cambios graduales."},
-     "pt": {"nombre": "Centrismo moderado", "desc": "Pragmatismo, instituições e mudanças graduais."},
-     "en": {"nombre": "Moderate centrism", "desc": "Pragmatism, institutions and gradual change."}},
-    {"id": "democracia_cristiana", "pos": [45,25,35,60,55,55,75,65,50,45,55,50],
-     "es": {"nombre": "Democracia cristiana", "desc": "Valores cristianos, economía social de mercado y comunidad."},
-     "pt": {"nombre": "Democracia cristã", "desc": "Valores cristãos, economia social de mercado e comunidade."},
-     "en": {"nombre": "Christian democracy", "desc": "Christian values, a social market economy and community."}},
-    {"id": "conservadurismo", "pos": [55,55,70,35,35,70,85,90,25,60,45,55],
-     "es": {"nombre": "Conservadurismo tradicional", "desc": "Familia, religión, orden y desconfianza del cambio rápido."},
-     "pt": {"nombre": "Conservadorismo tradicional", "desc": "Família, religião, ordem e desconfiança da mudança rápida."},
-     "en": {"nombre": "Traditional conservatism", "desc": "Family, religion, order and wariness of rapid change."}},
-    {"id": "derecha_nacionalista", "pos": [65,75,90,20,20,70,75,85,10,60,35,45],
-     "es": {"nombre": "Derecha nacionalista", "desc": "Nación primero, mano dura, fronteras cerradas y líder fuerte."},
-     "pt": {"nombre": "Direita nacionalista", "desc": "Nação em primeiro lugar, mão firme, fronteiras fechadas e líder forte."},
-     "en": {"nombre": "Nationalist right", "desc": "Nation first, a tough hand, closed borders and a strong leader."}},
-    {"id": "ecologismo", "pos": [25,20,20,85,75,35,20,20,75,30,40,85],
-     "es": {"nombre": "Ecologismo político", "desc": "El ambiente por encima del crecimiento, con democracia local."},
-     "pt": {"nombre": "Ecologismo político", "desc": "O meio ambiente acima do crescimento, com democracia local."},
-     "en": {"nombre": "Green politics", "desc": "The environment before growth, with local democracy."}},
-    {"id": "federalismo", "pos": [10,35,55,50,50,55,50,55,45,50,45,45],
-     "es": {"nombre": "Federalismo provincial", "desc": "Poder y recursos para las provincias, lejos de la capital."},
-     "pt": {"nombre": "Federalismo regional", "desc": "Poder e recursos para os estados, longe da capital."},
-     "en": {"nombre": "Regional federalism", "desc": "Power and resources for provinces, away from the capital."}},
-    {"id": "anarquismo", "pos": [5,5,10,95,95,20,5,10,85,20,60,55],
-     "es": {"nombre": "Anarquismo", "desc": "Sin Estado ni jerarquías: autogestión y cooperación voluntaria."},
-     "pt": {"nombre": "Anarquismo", "desc": "Sem Estado nem hierarquias: autogestão e cooperação voluntária."},
-     "en": {"nombre": "Anarchism", "desc": "No state and no hierarchies: self-management and voluntary cooperation."}},
-    {"id": "tecnocracia", "pos": [60,60,35,45,45,60,25,40,55,55,70,5],
-     "es": {"nombre": "Tecnocracia", "desc": "Que decidan los expertos, con datos, ciencia y eficiencia."},
-     "pt": {"nombre": "Tecnocracia", "desc": "Que decidam os especialistas, com dados, ciência e eficiência."},
-     "en": {"nombre": "Technocracy", "desc": "Let experts decide, with data, science and efficiency."}}
-  ]
+ "_nota": "Posiciones de referencia de cada familia ideológica en los 12 ejes (0 = polo a, 100 = polo b). Codificación editorial a revisar, misma escala que figuras.json. Orden de ejes: fed dem int mil lib col rel pro mig pla glo tec. pos2: posición en los ejes complementarios (ids de ejes2), misma escala; entra en la afinidad con menos peso.",
+ "ideologias": [
+  {
+   "id": "libertarismo",
+   "pos": [
+    30,
+    35,
+    55,
+    55,
+    85,
+    95,
+    40,
+    55,
+    50,
+    95,
+    95,
+    20
+   ],
+   "es": {
+    "nombre": "Libertarismo",
+    "desc": "Mercado sin trabas, Estado mínimo y máxima libertad individual."
+   },
+   "pt": {
+    "nombre": "Libertarianismo",
+    "desc": "Mercado sem amarras, Estado mínimo e máxima liberdade individual."
+   },
+   "en": {
+    "nombre": "Libertarianism",
+    "desc": "Unfettered markets, a minimal state and maximum individual freedom."
+   },
+   "pos2": {
+    "ecl": 70,
+    "dis": 95,
+    "bie": 95,
+    "epi": 40,
+    "ges": 50,
+    "tra": 50,
+    "idc": 10,
+    "pen": 50,
+    "lab": 90,
+    "eti": 60,
+    "tem": 50,
+    "fut": 60,
+    "ind": 90,
+    "mon": 90,
+    "inf": 15,
+    "ipe": 70,
+    "uni": 40
+   }
+  },
+  {
+   "id": "lib_conservador",
+   "pos": [
+    45,
+    30,
+    40,
+    40,
+    55,
+    80,
+    60,
+    65,
+    35,
+    78,
+    80,
+    30
+   ],
+   "es": {
+    "nombre": "Liberalismo conservador",
+    "desc": "Economía de mercado con valores tradicionales y orden."
+   },
+   "pt": {
+    "nombre": "Liberalismo conservador",
+    "desc": "Economia de mercado com valores tradicionais e ordem."
+   },
+   "en": {
+    "nombre": "Conservative liberalism",
+    "desc": "Market economics with traditional values and order."
+   },
+   "pos2": {
+    "ecl": 70,
+    "dis": 80,
+    "bie": 75,
+    "epi": 50,
+    "ges": 45,
+    "tra": 25,
+    "idc": 40,
+    "pen": 65,
+    "lab": 80,
+    "eti": 60,
+    "tem": 60,
+    "fut": 55,
+    "ind": 70,
+    "mon": 85,
+    "inf": 35,
+    "ipe": 75,
+    "uni": 55
+   }
+  },
+  {
+   "id": "lib_progresista",
+   "pos": [
+    40,
+    20,
+    25,
+    65,
+    85,
+    70,
+    15,
+    25,
+    75,
+    70,
+    80,
+    20
+   ],
+   "es": {
+    "nombre": "Liberalismo progresista",
+    "desc": "Mercado abierto y derechos civiles amplios, en un mundo integrado."
+   },
+   "pt": {
+    "nombre": "Liberalismo progressista",
+    "desc": "Mercado aberto e direitos civis amplos, num mundo integrado."
+   },
+   "en": {
+    "nombre": "Progressive liberalism",
+    "desc": "Open markets and broad civil rights in an integrated world."
+   },
+   "pos2": {
+    "ecl": 45,
+    "dis": 65,
+    "bie": 55,
+    "epi": 25,
+    "ges": 45,
+    "tra": 20,
+    "idc": 20,
+    "pen": 30,
+    "lab": 65,
+    "eti": 40,
+    "tem": 60,
+    "fut": 40,
+    "ind": 70,
+    "mon": 80,
+    "inf": 15,
+    "ipe": 85,
+    "uni": 20
+   }
+  },
+  {
+   "id": "socialdemocracia",
+   "pos": [
+    45,
+    15,
+    30,
+    65,
+    70,
+    35,
+    25,
+    30,
+    70,
+    30,
+    50,
+    35
+   ],
+   "es": {
+    "nombre": "Socialdemocracia",
+    "desc": "Mercado regulado, Estado de bienestar fuerte y democracia plena."
+   },
+   "pt": {
+    "nombre": "Social-democracia",
+    "desc": "Mercado regulado, Estado de bem-estar forte e democracia plena."
+   },
+   "en": {
+    "nombre": "Social democracy",
+    "desc": "Regulated markets, a strong welfare state and full democracy."
+   },
+   "pos2": {
+    "ecl": 40,
+    "dis": 30,
+    "bie": 20,
+    "epi": 30,
+    "ges": 50,
+    "tra": 20,
+    "idc": 50,
+    "pen": 35,
+    "lab": 45,
+    "eti": 45,
+    "tem": 65,
+    "fut": 40,
+    "ind": 45,
+    "mon": 55,
+    "inf": 25,
+    "ipe": 80,
+    "uni": 25
+   }
+  },
+  {
+   "id": "socialismo_dem",
+   "pos": [
+    50,
+    20,
+    30,
+    75,
+    70,
+    20,
+    20,
+    20,
+    75,
+    15,
+    35,
+    45
+   ],
+   "es": {
+    "nombre": "Socialismo democrático",
+    "desc": "Propiedad colectiva de lo esencial, por la vía de las urnas."
+   },
+   "pt": {
+    "nombre": "Socialismo democrático",
+    "desc": "Propriedade coletiva do essencial, pela via eleitoral."
+   },
+   "en": {
+    "nombre": "Democratic socialism",
+    "desc": "Collective ownership of essentials, through the ballot box."
+   },
+   "pos2": {
+    "ecl": 35,
+    "dis": 20,
+    "bie": 15,
+    "epi": 30,
+    "ges": 65,
+    "tra": 40,
+    "idc": 60,
+    "pen": 30,
+    "lab": 25,
+    "eti": 45,
+    "tem": 60,
+    "fut": 45,
+    "ind": 35,
+    "mon": 40,
+    "inf": 30,
+    "ipe": 70,
+    "uni": 25
+   }
+  },
+  {
+   "id": "comunismo",
+   "pos": [
+    70,
+    70,
+    25,
+    40,
+    35,
+    5,
+    10,
+    25,
+    60,
+    5,
+    25,
+    35
+   ],
+   "es": {
+    "nombre": "Comunismo",
+    "desc": "Fin de la propiedad privada y planificación central de la economía."
+   },
+   "pt": {
+    "nombre": "Comunismo",
+    "desc": "Fim da propriedade privada e planejamento central da economia."
+   },
+   "en": {
+    "nombre": "Communism",
+    "desc": "An end to private property and central planning of the economy."
+   },
+   "pos2": {
+    "ecl": 60,
+    "dis": 5,
+    "bie": 10,
+    "epi": 65,
+    "ges": 40,
+    "tra": 90,
+    "idc": 85,
+    "pen": 50,
+    "lab": 10,
+    "eti": 35,
+    "tem": 70,
+    "fut": 50,
+    "ind": 15,
+    "mon": 20,
+    "inf": 85,
+    "ipe": 30,
+    "uni": 40
+   }
+  },
+  {
+   "id": "nacional_popular",
+   "pos": [
+    55,
+    55,
+    75,
+    45,
+    50,
+    35,
+    45,
+    40,
+    55,
+    25,
+    20,
+    40
+   ],
+   "es": {
+    "nombre": "Nacional-popular",
+    "desc": "Soberanía, industria nacional y un Estado que reparte."
+   },
+   "pt": {
+    "nombre": "Nacional-popular",
+    "desc": "Soberania, indústria nacional e um Estado que redistribui."
+   },
+   "en": {
+    "nombre": "National-popular",
+    "desc": "Sovereignty, national industry and a redistributive state."
+   },
+   "pos2": {
+    "ecl": 65,
+    "dis": 30,
+    "bie": 25,
+    "epi": 50,
+    "ges": 55,
+    "tra": 45,
+    "idc": 75,
+    "pen": 50,
+    "lab": 40,
+    "eti": 40,
+    "tem": 40,
+    "fut": 70,
+    "ind": 15,
+    "mon": 15,
+    "inf": 60,
+    "ipe": 25,
+    "uni": 70
+   }
+  },
+  {
+   "id": "desarrollismo",
+   "pos": [
+    50,
+    40,
+    55,
+    45,
+    50,
+    60,
+    45,
+    50,
+    50,
+    45,
+    40,
+    15
+   ],
+   "es": {
+    "nombre": "Desarrollismo",
+    "desc": "Industrialización e inversión guiadas por el Estado junto a privados."
+   },
+   "pt": {
+    "nombre": "Desenvolvimentismo",
+    "desc": "Industrialização e investimento guiados pelo Estado junto com o setor privado."
+   },
+   "en": {
+    "nombre": "Developmentalism",
+    "desc": "State-guided industrialization and investment alongside private capital."
+   },
+   "pos2": {
+    "ecl": 80,
+    "dis": 50,
+    "bie": 45,
+    "epi": 30,
+    "ges": 30,
+    "tra": 25,
+    "idc": 55,
+    "pen": 55,
+    "lab": 55,
+    "eti": 35,
+    "tem": 80,
+    "fut": 35,
+    "ind": 10,
+    "mon": 40,
+    "inf": 45,
+    "ipe": 50,
+    "uni": 60
+   }
+  },
+  {
+   "id": "centrismo",
+   "pos": [
+    45,
+    30,
+    45,
+    55,
+    55,
+    55,
+    45,
+    50,
+    50,
+    50,
+    55,
+    35
+   ],
+   "es": {
+    "nombre": "Centrismo moderado",
+    "desc": "Pragmatismo, instituciones y cambios graduales."
+   },
+   "pt": {
+    "nombre": "Centrismo moderado",
+    "desc": "Pragmatismo, instituições e mudanças graduais."
+   },
+   "en": {
+    "nombre": "Moderate centrism",
+    "desc": "Pragmatism, institutions and gradual change."
+   },
+   "pos2": {
+    "ecl": 55,
+    "dis": 55,
+    "bie": 50,
+    "epi": 35,
+    "ges": 40,
+    "tra": 10,
+    "idc": 45,
+    "pen": 50,
+    "lab": 60,
+    "eti": 45,
+    "tem": 60,
+    "fut": 50,
+    "ind": 50,
+    "mon": 65,
+    "inf": 30,
+    "ipe": 80,
+    "uni": 45
+   }
+  },
+  {
+   "id": "democracia_cristiana",
+   "pos": [
+    45,
+    25,
+    35,
+    60,
+    55,
+    55,
+    75,
+    65,
+    50,
+    45,
+    55,
+    50
+   ],
+   "es": {
+    "nombre": "Democracia cristiana",
+    "desc": "Valores cristianos, economía social de mercado y comunidad."
+   },
+   "pt": {
+    "nombre": "Democracia cristã",
+    "desc": "Valores cristãos, economia social de mercado e comunidade."
+   },
+   "en": {
+    "nombre": "Christian democracy",
+    "desc": "Christian values, a social market economy and community."
+   },
+   "pos2": {
+    "ecl": 45,
+    "dis": 45,
+    "bie": 40,
+    "epi": 60,
+    "ges": 50,
+    "tra": 15,
+    "idc": 75,
+    "pen": 45,
+    "lab": 50,
+    "eti": 70,
+    "tem": 65,
+    "fut": 45,
+    "ind": 40,
+    "mon": 60,
+    "inf": 35,
+    "ipe": 75,
+    "uni": 45
+   }
+  },
+  {
+   "id": "conservadurismo",
+   "pos": [
+    55,
+    55,
+    70,
+    35,
+    35,
+    70,
+    85,
+    90,
+    25,
+    60,
+    45,
+    55
+   ],
+   "es": {
+    "nombre": "Conservadurismo tradicional",
+    "desc": "Familia, religión, orden y desconfianza del cambio rápido."
+   },
+   "pt": {
+    "nombre": "Conservadorismo tradicional",
+    "desc": "Família, religião, ordem e desconfiança da mudança rápida."
+   },
+   "en": {
+    "nombre": "Traditional conservatism",
+    "desc": "Family, religion, order and wariness of rapid change."
+   },
+   "pos2": {
+    "ecl": 65,
+    "dis": 70,
+    "bie": 65,
+    "epi": 75,
+    "ges": 40,
+    "tra": 15,
+    "idc": 85,
+    "pen": 80,
+    "lab": 70,
+    "eti": 85,
+    "tem": 60,
+    "fut": 55,
+    "ind": 45,
+    "mon": 70,
+    "inf": 55,
+    "ipe": 65,
+    "uni": 75
+   }
+  },
+  {
+   "id": "derecha_nacionalista",
+   "pos": [
+    65,
+    75,
+    90,
+    20,
+    20,
+    70,
+    75,
+    85,
+    10,
+    60,
+    35,
+    45
+   ],
+   "es": {
+    "nombre": "Derecha nacionalista",
+    "desc": "Nación primero, mano dura, fronteras cerradas y líder fuerte."
+   },
+   "pt": {
+    "nombre": "Direita nacionalista",
+    "desc": "Nação em primeiro lugar, mão firme, fronteiras fechadas e líder forte."
+   },
+   "en": {
+    "nombre": "Nationalist right",
+    "desc": "Nation first, a tough hand, closed borders and a strong leader."
+   },
+   "pos2": {
+    "ecl": 70,
+    "dis": 65,
+    "bie": 55,
+    "epi": 75,
+    "ges": 35,
+    "tra": 60,
+    "idc": 85,
+    "pen": 90,
+    "lab": 70,
+    "eti": 70,
+    "tem": 50,
+    "fut": 60,
+    "ind": 25,
+    "mon": 45,
+    "inf": 75,
+    "ipe": 25,
+    "uni": 90
+   }
+  },
+  {
+   "id": "ecologismo",
+   "pos": [
+    25,
+    20,
+    20,
+    85,
+    75,
+    35,
+    20,
+    20,
+    75,
+    30,
+    40,
+    85
+   ],
+   "es": {
+    "nombre": "Ecologismo político",
+    "desc": "El ambiente por encima del crecimiento, con democracia local."
+   },
+   "pt": {
+    "nombre": "Ecologismo político",
+    "desc": "O meio ambiente acima do crescimento, com democracia local."
+   },
+   "en": {
+    "nombre": "Green politics",
+    "desc": "The environment before growth, with local democracy."
+   },
+   "pos2": {
+    "ecl": 10,
+    "dis": 30,
+    "bie": 25,
+    "epi": 30,
+    "ges": 70,
+    "tra": 45,
+    "idc": 60,
+    "pen": 30,
+    "lab": 35,
+    "eti": 40,
+    "tem": 90,
+    "fut": 15,
+    "ind": 40,
+    "mon": 50,
+    "inf": 20,
+    "ipe": 70,
+    "uni": 20
+   }
+  },
+  {
+   "id": "federalismo",
+   "pos": [
+    10,
+    35,
+    55,
+    50,
+    50,
+    55,
+    50,
+    55,
+    45,
+    50,
+    45,
+    45
+   ],
+   "es": {
+    "nombre": "Federalismo provincial",
+    "desc": "Poder y recursos para las provincias, lejos de la capital."
+   },
+   "pt": {
+    "nombre": "Federalismo regional",
+    "desc": "Poder e recursos para os estados, longe da capital."
+   },
+   "en": {
+    "nombre": "Regional federalism",
+    "desc": "Power and resources for provinces, away from the capital."
+   },
+   "pos2": {
+    "ecl": 55,
+    "dis": 50,
+    "bie": 45,
+    "epi": 45,
+    "ges": 65,
+    "tra": 25,
+    "idc": 65,
+    "pen": 50,
+    "lab": 55,
+    "eti": 45,
+    "tem": 55,
+    "fut": 50,
+    "ind": 45,
+    "mon": 55,
+    "inf": 30,
+    "ipe": 70,
+    "uni": 50
+   }
+  },
+  {
+   "id": "anarquismo",
+   "pos": [
+    5,
+    5,
+    10,
+    95,
+    95,
+    20,
+    5,
+    10,
+    85,
+    20,
+    60,
+    55
+   ],
+   "es": {
+    "nombre": "Anarquismo",
+    "desc": "Sin Estado ni jerarquías: autogestión y cooperación voluntaria."
+   },
+   "pt": {
+    "nombre": "Anarquismo",
+    "desc": "Sem Estado nem hierarquias: autogestão e cooperação voluntária."
+   },
+   "en": {
+    "nombre": "Anarchism",
+    "desc": "No state and no hierarchies: self-management and voluntary cooperation."
+   },
+   "pos2": {
+    "ecl": 25,
+    "dis": 10,
+    "bie": 30,
+    "epi": 35,
+    "ges": 95,
+    "tra": 90,
+    "idc": 55,
+    "pen": 10,
+    "lab": 5,
+    "eti": 40,
+    "tem": 50,
+    "fut": 45,
+    "ind": 50,
+    "mon": 30,
+    "inf": 5,
+    "ipe": 60,
+    "uni": 15
+   }
+  },
+  {
+   "id": "tecnocracia",
+   "pos": [
+    60,
+    60,
+    35,
+    45,
+    45,
+    60,
+    25,
+    40,
+    55,
+    55,
+    70,
+    5
+   ],
+   "es": {
+    "nombre": "Tecnocracia",
+    "desc": "Que decidan los expertos, con datos, ciencia y eficiencia."
+   },
+   "pt": {
+    "nombre": "Tecnocracia",
+    "desc": "Que decidam os especialistas, com dados, ciência e eficiência."
+   },
+   "en": {
+    "nombre": "Technocracy",
+    "desc": "Let experts decide, with data, science and efficiency."
+   },
+   "pos2": {
+    "ecl": 75,
+    "dis": 75,
+    "bie": 55,
+    "epi": 10,
+    "ges": 5,
+    "tra": 20,
+    "idc": 35,
+    "pen": 55,
+    "lab": 70,
+    "eti": 25,
+    "tem": 85,
+    "fut": 30,
+    "ind": 55,
+    "mon": 80,
+    "inf": 50,
+    "ipe": 80,
+    "uni": 45
+   }
+  },
+  {
+   "id": "anarcocapitalismo",
+   "pos": [
+    15,
+    10,
+    50,
+    70,
+    98,
+    100,
+    35,
+    50,
+    60,
+    100,
+    100,
+    15
+   ],
+   "es": {
+    "nombre": "Anarcocapitalismo",
+    "desc": "Sin Estado: propiedad privada, contratos y mercado para todo, hasta la seguridad y la justicia."
+   },
+   "pt": {
+    "nombre": "Anarcocapitalismo",
+    "desc": "Sem Estado: propriedade privada, contratos e mercado para tudo, até segurança e justiça."
+   },
+   "en": {
+    "nombre": "Anarcho-capitalism",
+    "desc": "No state: private property, contracts and markets for everything, even security and courts."
+   },
+   "pos2": {
+    "ecl": 80,
+    "dis": 100,
+    "bie": 100,
+    "epi": 45,
+    "ges": 55,
+    "tra": 70,
+    "idc": 5,
+    "pen": 40,
+    "lab": 95,
+    "eti": 65,
+    "tem": 50,
+    "fut": 65,
+    "ind": 100,
+    "mon": 100,
+    "inf": 5,
+    "ipe": 50,
+    "uni": 40
+   }
+  },
+  {
+   "id": "liberalismo_clasico",
+   "pos": [
+    35,
+    30,
+    45,
+    55,
+    80,
+    85,
+    35,
+    50,
+    50,
+    85,
+    90,
+    25
+   ],
+   "es": {
+    "nombre": "Liberalismo clásico",
+    "desc": "República, división de poderes, libre comercio y un Estado limitado a lo esencial."
+   },
+   "pt": {
+    "nombre": "Liberalismo clássico",
+    "desc": "República, separação de poderes, livre comércio e um Estado limitado ao essencial."
+   },
+   "en": {
+    "nombre": "Classical liberalism",
+    "desc": "Republic, separation of powers, free trade and a state limited to the essentials."
+   },
+   "pos2": {
+    "ecl": 70,
+    "dis": 85,
+    "bie": 80,
+    "epi": 35,
+    "ges": 45,
+    "tra": 20,
+    "idc": 20,
+    "pen": 45,
+    "lab": 80,
+    "eti": 60,
+    "tem": 65,
+    "fut": 50,
+    "ind": 85,
+    "mon": 90,
+    "inf": 15,
+    "ipe": 90,
+    "uni": 30
+   }
+  },
+  {
+   "id": "tercera_via",
+   "pos": [
+    45,
+    30,
+    25,
+    55,
+    60,
+    55,
+    30,
+    35,
+    65,
+    55,
+    70,
+    30
+   ],
+   "es": {
+    "nombre": "Tercera vía",
+    "desc": "Centroizquierda que acepta el mercado y la globalización, con políticas sociales focalizadas."
+   },
+   "pt": {
+    "nombre": "Terceira via",
+    "desc": "Centro-esquerda que aceita o mercado e a globalização, com políticas sociais focalizadas."
+   },
+   "en": {
+    "nombre": "Third Way",
+    "desc": "Centre-left that embraces markets and globalisation, with targeted social policy."
+   },
+   "pos2": {
+    "ecl": 55,
+    "dis": 60,
+    "bie": 45,
+    "epi": 25,
+    "ges": 40,
+    "tra": 10,
+    "idc": 40,
+    "pen": 50,
+    "lab": 60,
+    "eti": 40,
+    "tem": 60,
+    "fut": 45,
+    "ind": 60,
+    "mon": 75,
+    "inf": 25,
+    "ipe": 85,
+    "uni": 30
+   }
+  },
+  {
+   "id": "socialismo_xxi",
+   "pos": [
+    70,
+    70,
+    85,
+    35,
+    35,
+    15,
+    40,
+    45,
+    50,
+    10,
+    25,
+    35
+   ],
+   "es": {
+    "nombre": "Socialismo del siglo XXI",
+    "desc": "Estado fuerte en la economía, liderazgo carismático, antiimperialismo y control de recursos estratégicos."
+   },
+   "pt": {
+    "nombre": "Socialismo do século XXI",
+    "desc": "Estado forte na economia, liderança carismática, anti-imperialismo e controle de recursos estratégicos."
+   },
+   "en": {
+    "nombre": "21st-century socialism",
+    "desc": "A strong state in the economy, charismatic leadership, anti-imperialism and control of key resources."
+   },
+   "pos2": {
+    "ecl": 70,
+    "dis": 15,
+    "bie": 15,
+    "epi": 70,
+    "ges": 60,
+    "tra": 75,
+    "idc": 80,
+    "pen": 55,
+    "lab": 30,
+    "eti": 30,
+    "tem": 35,
+    "fut": 75,
+    "ind": 15,
+    "mon": 5,
+    "inf": 80,
+    "ipe": 10,
+    "uni": 75
+   }
+  },
+  {
+   "id": "izquierda_revolucionaria",
+   "pos": [
+    50,
+    40,
+    30,
+    70,
+    75,
+    3,
+    5,
+    10,
+    80,
+    5,
+    30,
+    40
+   ],
+   "es": {
+    "nombre": "Izquierda revolucionaria",
+    "desc": "Trotskismo y afines: abolir el capitalismo con la movilización de los trabajadores, no con reformas."
+   },
+   "pt": {
+    "nombre": "Esquerda revolucionária",
+    "desc": "Trotskismo e afins: abolir o capitalismo pela mobilização dos trabalhadores, não por reformas."
+   },
+   "en": {
+    "nombre": "Revolutionary left",
+    "desc": "Trotskyism and kin: abolish capitalism through workers' mobilisation, not reforms."
+   },
+   "pos2": {
+    "ecl": 50,
+    "dis": 5,
+    "bie": 5,
+    "epi": 55,
+    "ges": 75,
+    "tra": 95,
+    "idc": 70,
+    "pen": 20,
+    "lab": 5,
+    "eti": 40,
+    "tem": 55,
+    "fut": 45,
+    "ind": 25,
+    "mon": 25,
+    "inf": 55,
+    "ipe": 40,
+    "uni": 15
+   }
+  },
+  {
+   "id": "ecosocialismo",
+   "pos": [
+    30,
+    25,
+    25,
+    80,
+    70,
+    15,
+    15,
+    15,
+    80,
+    15,
+    30,
+    90
+   ],
+   "es": {
+    "nombre": "Ecosocialismo",
+    "desc": "La crisis ambiental como crisis del capitalismo: planificar la economía dentro de los límites del planeta."
+   },
+   "pt": {
+    "nombre": "Ecossocialismo",
+    "desc": "A crise ambiental como crise do capitalismo: planejar a economia dentro dos limites do planeta."
+   },
+   "en": {
+    "nombre": "Eco-socialism",
+    "desc": "The environmental crisis as a crisis of capitalism: plan the economy within planetary limits."
+   },
+   "pos2": {
+    "ecl": 5,
+    "dis": 10,
+    "bie": 10,
+    "epi": 30,
+    "ges": 75,
+    "tra": 60,
+    "idc": 70,
+    "pen": 25,
+    "lab": 15,
+    "eti": 40,
+    "tem": 90,
+    "fut": 10,
+    "ind": 35,
+    "mon": 40,
+    "inf": 30,
+    "ipe": 60,
+    "uni": 15
+   }
+  },
+  {
+   "id": "populismo_derecha",
+   "pos": [
+    60,
+    75,
+    85,
+    30,
+    25,
+    70,
+    65,
+    80,
+    10,
+    65,
+    35,
+    45
+   ],
+   "es": {
+    "nombre": "Populismo de derecha",
+    "desc": "El pueblo contra las élites, mano dura, soberanía nacional y valores tradicionales."
+   },
+   "pt": {
+    "nombre": "Populismo de direita",
+    "desc": "O povo contra as elites, mão firme, soberania nacional e valores tradicionais."
+   },
+   "en": {
+    "nombre": "Right-wing populism",
+    "desc": "The people against the elites, tough on crime, national sovereignty and traditional values."
+   },
+   "pos2": {
+    "ecl": 75,
+    "dis": 70,
+    "bie": 60,
+    "epi": 70,
+    "ges": 60,
+    "tra": 55,
+    "idc": 70,
+    "pen": 90,
+    "lab": 65,
+    "eti": 60,
+    "tem": 35,
+    "fut": 75,
+    "ind": 40,
+    "mon": 30,
+    "inf": 70,
+    "ipe": 15,
+    "uni": 90
+   }
+  },
+  {
+   "id": "integrismo_religioso",
+   "pos": [
+    60,
+    70,
+    70,
+    40,
+    30,
+    60,
+    98,
+    98,
+    20,
+    50,
+    40,
+    70
+   ],
+   "es": {
+    "nombre": "Integrismo religioso",
+    "desc": "Las leyes y la vida pública deben seguir los preceptos de la fe."
+   },
+   "pt": {
+    "nombre": "Integrismo religioso",
+    "desc": "As leis e a vida pública devem seguir os preceitos da fé."
+   },
+   "en": {
+    "nombre": "Religious integralism",
+    "desc": "Laws and public life should follow the precepts of the faith."
+   },
+   "pos2": {
+    "ecl": 55,
+    "dis": 60,
+    "bie": 55,
+    "epi": 95,
+    "ges": 30,
+    "tra": 45,
+    "idc": 95,
+    "pen": 85,
+    "lab": 65,
+    "eti": 95,
+    "tem": 55,
+    "fut": 55,
+    "ind": 45,
+    "mon": 55,
+    "inf": 85,
+    "ipe": 45,
+    "uni": 85
+   }
+  }
+ ]
 }
