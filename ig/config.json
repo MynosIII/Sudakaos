@@ -730,6 +730,39 @@
      "name": "Karina Milei"
     }
    ]
+  },
+  "sanmartin": {
+   "titulo": "Monitor General San Martín",
+   "figuras": [
+    {
+     "name": "Fernando Moreira",
+     "ig": [
+      "fmoreiraok",
+      "fernandomoreiraok",
+      "fernandomoreira.sm"
+     ]
+    },
+    {
+     "name": "Gabriel Katopodis",
+     "ig": [
+      "gkatopodis",
+      "gabrielkatopodis"
+     ]
+    },
+    {
+     "name": "Leonardo Grosso",
+     "ig": [
+      "leonardogrosso",
+      "leogrosso"
+     ]
+    },
+    {
+     "name": "Axel Kicillof",
+     "ig": [
+      "kicillofok"
+     ]
+    }
+   ]
   }
  }
 }
