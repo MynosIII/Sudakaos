@@ -39,9 +39,9 @@ EJES = [
      ("Religião", "Laicismo", "Religiosidade")),
     ("pro", "Valores", "Progresismo", "Tradición", "Ampliación de derechos y cambio cultural.", "Familia, costumbres y tradición.",
      ("Valores", "Progressismo", "Tradição")),
-    ("mig", "Cultura y migración", "Asimilación", "Multiculturalismo", "Una cultura común: fronteras controladas y que quien llega se adapte.",
+    ("mig", "Cultura", "Asimilación", "Multiculturalismo", "Una cultura común a la que se adapta quien llega.",
      "Diversidad cultural, la de quienes llegan y la de los pueblos originarios.",
-     ("Cultura e migração", "Assimilação", "Multiculturalismo")),
+     ("Cultura", "Assimilação", "Multiculturalismo")),
     ("pla", "Economía", "Planificación", "Mercado", "Estado que regula, planifica y cobra más a los ricos.", "Mercado libre, menos impuestos y menos regulación.",
      ("Economia", "Planejamento", "Mercado")),
     ("glo", "Comercio", "Proteccionismo", "Apertura", "Aranceles y producción nacional.", "Libre comercio y apertura al mundo.",
@@ -54,7 +54,7 @@ EN_EJES = {"fed": {"nombre": "Territory", "a": "Federal", "b": "Unitary"}, "dem"
            "int": {"nombre": "World", "a": "Internationalism", "b": "Nationalism"}, "mil": {"nombre": "Defense", "a": "Militarism", "b": "Pacifism"},
            "lib": {"nombre": "Security", "a": "Order", "b": "Liberties"}, "col": {"nombre": "Property", "a": "Collectivism", "b": "Private property"},
            "rel": {"nombre": "Religion", "a": "Secularism", "b": "Religiosity"}, "pro": {"nombre": "Values", "a": "Progressivism", "b": "Tradition"},
-           "mig": {"nombre": "Culture & migration", "a": "Assimilation", "b": "Multiculturalism"}, "pla": {"nombre": "Economy", "a": "Planning", "b": "Markets"},
+           "mig": {"nombre": "Culture", "a": "Assimilation", "b": "Multiculturalism"}, "pla": {"nombre": "Economy", "a": "Planning", "b": "Markets"},
            "glo": {"nombre": "Trade", "a": "Protectionism", "b": "Openness"}, "tec": {"nombre": "Technology & environment", "a": "Technology", "b": "Bioconservatism"}}
 
 # (id, eje, nivel firmado: + polo a / - polo b, texto es, texto pt)
@@ -275,7 +275,7 @@ def ejes():
            for v, n in nombres.items()}
     ver["mx"] = {"nombre": "México", "activa": False}
     return {
-        "_nota": "12 ejes (mecánica de 12axes, politicaltests, MIT) + certeza. Cada eje va de 0 (polo a) a 100 (polo b).",
+        "_nota": "30 ejes: 12 principales (mecánica de 12axes, politicaltests, MIT) + 18 complementarios (ejes2), con certeza. Cada eje va de 0 (polo a) a 100 (polo b).",
         "ejes": [{"id": i, "nombre": n, "a": a, "b": b, "a_desc": ad, "b_desc": bd, "pt": {"nombre": pt[0], "a": pt[1], "b": pt[2]}, "en": EN_EJES[i]}
                  for i, n, a, b, ad, bd, pt in EJES],
         "respuestas": [{"v": 2, "t": "Muy de acuerdo"}, {"v": 1, "t": "De acuerdo"}, {"v": 0, "t": "Neutral / no sé"},

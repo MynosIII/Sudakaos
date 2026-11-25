@@ -339,3 +339,4 @@ body{font-variant-numeric:tabular-nums}.tema{font-size:13px;padding:4px 10px}
 .resw .sec h3{font-size:22px}
 @media (max-width:760px){.valw{grid-template-columns:1fr}.bandw{max-width:320px}.sat{grid-template-columns:1fr}}
 @media (max-width:520px){.vg{grid-template-columns:1fr 1fr}.vt{padding:10px 12px}.vt b{font-size:14px}}
+.ejesg .gk{grid-column:1/-1;margin-top:18px}
