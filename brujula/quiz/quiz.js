@@ -102,7 +102,7 @@
     return Math.max(0, Math.round(100 - 2 * num / den));
   }
   // Afinidad con los 29 ejes: los 12 principales más los complementarios medidos (2+ respuestas, o del link) que la figura
-  // o ideología tenga codificados (pos2). Los complementarios pesan la mitad. 'cer' no es una postura y no entra.
+  // o ideología tenga codificados (pos2), con el mismo peso (ajustado por certeza). 'cer' no es una postura y no entra.
   function comps() {
     if (!S.scores2) return [];
     return IDS2().filter(k => k !== 'cer' && S.scores2[k] != null && (!S.nresp || (S.nresp[k] || 0) >= 2));
@@ -112,7 +112,7 @@
     for (const k of IDS()) { const c = 0.3 + 0.7 * ((cert && cert[k] != null ? cert[k] : 50) / 100); num += c * Math.abs(sc[k] - pos[k]); den += c }
     if (pos2) for (const k of ks2) {
       if (pos2[k] == null) continue;
-      const c = 0.5 * (0.3 + 0.7 * ((S.cert2[k] != null ? S.cert2[k] : 50) / 100)); num += c * Math.abs(S.scores2[k] - pos2[k]); den += c;
+      const c = (0.3 + 0.7 * ((S.cert2[k] != null ? S.cert2[k] : 50) / 100)); num += c * Math.abs(S.scores2[k] - pos2[k]); den += c;
     }
     return Math.max(0, Math.round(100 - 2 * num / den));
   }
@@ -263,7 +263,11 @@
     desarrollismo: ['#5b6472', '#1b1f26'], centrismo: ['#5b6472', '#1b1f26'], democracia_cristiana: ['#3b82c4', '#0e2a44'], conservadurismo: ['#5b6472', '#1b1f26'],
     derecha_nacionalista: ['#1e40af', '#0a1433'], ecologismo: ['#3b82c4', '#0e2a44'], federalismo: ['#5b6472', '#1b1f26'], anarquismo: ['#5b6472', '#1b1f26'], tecnocracia: ['#2563eb', '#0b1f4d'],
     anarcocapitalismo: ['#1e40af', '#0a1433'], liberalismo_clasico: ['#3b82c4', '#0e2a44'], tercera_via: ['#5b6472', '#1b1f26'], socialismo_xxi: ['#2563eb', '#0b1f4d'],
-    izquierda_revolucionaria: ['#1e40af', '#0a1433'], ecosocialismo: ['#3b82c4', '#0e2a44'], populismo_derecha: ['#2563eb', '#0b1f4d'], integrismo_religioso: ['#5b6472', '#1b1f26'] };
+    izquierda_revolucionaria: ['#1e40af', '#0a1433'], ecosocialismo: ['#3b82c4', '#0e2a44'], populismo_derecha: ['#2563eb', '#0b1f4d'], integrismo_religioso: ['#5b6472', '#1b1f26'],
+    marxismo_leninismo: ['#1e40af', '#0a1433'], anarcosindicalismo: ['#5b6472', '#1b1f26'], socialismo_libertario: ['#3b82c4', '#0e2a44'], socialismo_estado: ['#2563eb', '#0b1f4d'],
+    populismo_izquierda: ['#2563eb', '#0b1f4d'], distributismo: ['#5b6472', '#1b1f26'], liberalismo_social: ['#3b82c4', '#0e2a44'], progresismo: ['#3b82c4', '#0e2a44'],
+    conservadurismo_moderado: ['#5b6472', '#1b1f26'], reaccionarismo: ['#1e40af', '#0a1433'], fascismo: ['#33363e', '#111316'], neoliberalismo: ['#2563eb', '#0b1f4d'],
+    capitalismo_autoritario: ['#1e40af', '#0a1433'], capitalismo_estado: ['#5b6472', '#1b1f26'], neoconservadurismo: ['#1e40af', '#0a1433'], objetivismo: ['#3b82c4', '#0e2a44'] };
   const EJ_NOMBRES = ['Javier Milei', 'Luiz Inácio Lula da Silva', 'Axel Kicillof', 'Nayib Bukele', 'Gabriel Boric', 'Mauricio Macri'];
   let EJ_I = 0, EJ_T = null;
   function ejemplos() {

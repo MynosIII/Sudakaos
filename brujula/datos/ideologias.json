@@ -1,5 +1,5 @@
 {
- "_nota": "Posiciones de referencia de cada familia ideológica en los 12 ejes (0 = polo a, 100 = polo b). Codificación editorial a revisar, misma escala que figuras.json. Orden de ejes: fed dem int mil lib col rel pro mig pla glo tec. pos2: posición en los ejes complementarios (ids de ejes2), misma escala; entra en la afinidad con menos peso.",
+ "_nota": "Posiciones de referencia de cada familia ideológica en los 12 ejes (0 = polo a, 100 = polo b). Codificación editorial a revisar, misma escala que figuras.json. Orden de ejes: fed dem int mil lib col rel pro mig pla glo tec. pos2: posición en los ejes complementarios (ids de ejes2), misma escala; entra en la afinidad con el mismo peso que los 12.",
  "ideologias": [
   {
    "id": "libertarismo",
@@ -1151,6 +1151,774 @@
     "inf": 85,
     "ipe": 45,
     "uni": 85
+   }
+  },
+  {
+   "id": "marxismo_leninismo",
+   "pos": [
+    80,
+    85,
+    30,
+    30,
+    20,
+    3,
+    5,
+    30,
+    45,
+    3,
+    25,
+    25
+   ],
+   "es": {
+    "nombre": "Marxismo-leninismo",
+    "desc": "Partido único de vanguardia, economía planificada y propiedad estatal de los medios de producción."
+   },
+   "pt": {
+    "nombre": "Marxismo-leninismo",
+    "desc": "Partido único de vanguarda, economia planejada e propriedade estatal dos meios de produção."
+   },
+   "en": {
+    "nombre": "Marxism-Leninism",
+    "desc": "A single vanguard party, a planned economy and state ownership of the means of production."
+   },
+   "pos2": {
+    "ecl": 75,
+    "dis": 5,
+    "bie": 5,
+    "epi": 70,
+    "ges": 20,
+    "tra": 90,
+    "idc": 85,
+    "pen": 70,
+    "lab": 15,
+    "eti": 30,
+    "tem": 80,
+    "fut": 40,
+    "ind": 10,
+    "mon": 10,
+    "inf": 95,
+    "ipe": 25,
+    "uni": 45
+   }
+  },
+  {
+   "id": "anarcosindicalismo",
+   "pos": [
+    5,
+    5,
+    15,
+    85,
+    90,
+    5,
+    5,
+    15,
+    80,
+    15,
+    45,
+    50
+   ],
+   "es": {
+    "nombre": "Anarcosindicalismo",
+    "desc": "Los sindicatos como herramienta para abolir el Estado y que los trabajadores gestionen la economía."
+   },
+   "pt": {
+    "nombre": "Anarcossindicalismo",
+    "desc": "Os sindicatos como ferramenta para abolir o Estado e os trabalhadores gerirem a economia."
+   },
+   "en": {
+    "nombre": "Anarcho-syndicalism",
+    "desc": "Unions as the tool to abolish the state and put workers in charge of the economy."
+   },
+   "pos2": {
+    "ecl": 40,
+    "dis": 5,
+    "bie": 15,
+    "epi": 40,
+    "ges": 95,
+    "tra": 90,
+    "idc": 65,
+    "pen": 15,
+    "lab": 0,
+    "eti": 45,
+    "tem": 55,
+    "fut": 45,
+    "ind": 35,
+    "mon": 30,
+    "inf": 10,
+    "ipe": 55,
+    "uni": 15
+   }
+  },
+  {
+   "id": "socialismo_libertario",
+   "pos": [
+    15,
+    10,
+    15,
+    85,
+    90,
+    15,
+    10,
+    10,
+    85,
+    20,
+    45,
+    45
+   ],
+   "es": {
+    "nombre": "Socialismo libertario",
+    "desc": "Socialismo sin Estado autoritario: cooperativas, consejos y democracia desde abajo."
+   },
+   "pt": {
+    "nombre": "Socialismo libertário",
+    "desc": "Socialismo sem Estado autoritário: cooperativas, conselhos e democracia de baixo para cima."
+   },
+   "en": {
+    "nombre": "Libertarian socialism",
+    "desc": "Socialism without an authoritarian state: co-ops, councils and democracy from below."
+   },
+   "pos2": {
+    "ecl": 30,
+    "dis": 10,
+    "bie": 15,
+    "epi": 30,
+    "ges": 90,
+    "tra": 70,
+    "idc": 55,
+    "pen": 15,
+    "lab": 5,
+    "eti": 40,
+    "tem": 60,
+    "fut": 40,
+    "ind": 40,
+    "mon": 35,
+    "inf": 10,
+    "ipe": 60,
+    "uni": 10
+   }
+  },
+  {
+   "id": "socialismo_estado",
+   "pos": [
+    75,
+    70,
+    55,
+    40,
+    35,
+    10,
+    20,
+    40,
+    45,
+    5,
+    25,
+    25
+   ],
+   "es": {
+    "nombre": "Socialismo de Estado",
+    "desc": "El Estado es dueño de las empresas clave y dirige la economía."
+   },
+   "pt": {
+    "nombre": "Socialismo de Estado",
+    "desc": "O Estado é dono das empresas-chave e dirige a economia."
+   },
+   "en": {
+    "nombre": "State socialism",
+    "desc": "The state owns key industries and runs the economy."
+   },
+   "pos2": {
+    "ecl": 75,
+    "dis": 15,
+    "bie": 10,
+    "epi": 45,
+    "ges": 20,
+    "tra": 45,
+    "idc": 70,
+    "pen": 60,
+    "lab": 20,
+    "eti": 35,
+    "tem": 80,
+    "fut": 45,
+    "ind": 10,
+    "mon": 10,
+    "inf": 70,
+    "ipe": 45,
+    "uni": 55
+   }
+  },
+  {
+   "id": "populismo_izquierda",
+   "pos": [
+    55,
+    55,
+    70,
+    55,
+    55,
+    25,
+    35,
+    35,
+    65,
+    20,
+    25,
+    40
+   ],
+   "es": {
+    "nombre": "Populismo de izquierda",
+    "desc": "El pueblo contra las élites económicas: redistribución, movilización y liderazgo fuerte."
+   },
+   "pt": {
+    "nombre": "Populismo de esquerda",
+    "desc": "O povo contra as elites econômicas: redistribuição, mobilização e liderança forte."
+   },
+   "en": {
+    "nombre": "Left-wing populism",
+    "desc": "The people against economic elites: redistribution, mobilisation and strong leadership."
+   },
+   "pos2": {
+    "ecl": 60,
+    "dis": 20,
+    "bie": 15,
+    "epi": 50,
+    "ges": 75,
+    "tra": 55,
+    "idc": 70,
+    "pen": 40,
+    "lab": 30,
+    "eti": 40,
+    "tem": 35,
+    "fut": 75,
+    "ind": 15,
+    "mon": 15,
+    "inf": 55,
+    "ipe": 20,
+    "uni": 50
+   }
+  },
+  {
+   "id": "distributismo",
+   "pos": [
+    25,
+    35,
+    55,
+    55,
+    50,
+    50,
+    85,
+    75,
+    40,
+    35,
+    35,
+    60
+   ],
+   "es": {
+    "nombre": "Distributismo",
+    "desc": "Inspirado en la doctrina social católica: propiedad repartida entre muchos pequeños dueños, familias y cooperativas."
+   },
+   "pt": {
+    "nombre": "Distributismo",
+    "desc": "Inspirado na doutrina social católica: propriedade repartida entre muitos pequenos donos, famílias e cooperativas."
+   },
+   "en": {
+    "nombre": "Distributism",
+    "desc": "Rooted in Catholic social teaching: property spread among many small owners, families and co-ops."
+   },
+   "pos2": {
+    "ecl": 45,
+    "dis": 35,
+    "bie": 35,
+    "epi": 65,
+    "ges": 65,
+    "tra": 30,
+    "idc": 85,
+    "pen": 50,
+    "lab": 30,
+    "eti": 80,
+    "tem": 70,
+    "fut": 45,
+    "ind": 30,
+    "mon": 50,
+    "inf": 40,
+    "ipe": 65,
+    "uni": 55
+   }
+  },
+  {
+   "id": "liberalismo_social",
+   "pos": [
+    40,
+    20,
+    25,
+    60,
+    80,
+    55,
+    20,
+    25,
+    70,
+    45,
+    65,
+    25
+   ],
+   "es": {
+    "nombre": "Liberalismo social",
+    "desc": "Libertades individuales y mercado, con un Estado que garantiza igualdad de oportunidades."
+   },
+   "pt": {
+    "nombre": "Liberalismo social",
+    "desc": "Liberdades individuais e mercado, com um Estado que garante igualdade de oportunidades."
+   },
+   "en": {
+    "nombre": "Social liberalism",
+    "desc": "Individual freedoms and markets, with a state that guarantees equal opportunity."
+   },
+   "pos2": {
+    "ecl": 45,
+    "dis": 45,
+    "bie": 30,
+    "epi": 25,
+    "ges": 50,
+    "tra": 15,
+    "idc": 30,
+    "pen": 30,
+    "lab": 50,
+    "eti": 45,
+    "tem": 65,
+    "fut": 40,
+    "ind": 55,
+    "mon": 70,
+    "inf": 15,
+    "ipe": 85,
+    "uni": 20
+   }
+  },
+  {
+   "id": "progresismo",
+   "pos": [
+    45,
+    25,
+    25,
+    65,
+    80,
+    40,
+    10,
+    5,
+    85,
+    35,
+    55,
+    30
+   ],
+   "es": {
+    "nombre": "Progresismo",
+    "desc": "Ampliar derechos, igualdad de género y diversidad, con un Estado activo."
+   },
+   "pt": {
+    "nombre": "Progressismo",
+    "desc": "Ampliar direitos, igualdade de gênero e diversidade, com um Estado ativo."
+   },
+   "en": {
+    "nombre": "Progressivism",
+    "desc": "Expanding rights, gender equality and diversity, with an active state."
+   },
+   "pos2": {
+    "ecl": 35,
+    "dis": 30,
+    "bie": 20,
+    "epi": 25,
+    "ges": 60,
+    "tra": 40,
+    "idc": 35,
+    "pen": 25,
+    "lab": 40,
+    "eti": 35,
+    "tem": 65,
+    "fut": 35,
+    "ind": 45,
+    "mon": 50,
+    "inf": 30,
+    "ipe": 70,
+    "uni": 15
+   }
+  },
+  {
+   "id": "conservadurismo_moderado",
+   "pos": [
+    50,
+    40,
+    55,
+    45,
+    45,
+    70,
+    65,
+    70,
+    35,
+    65,
+    60,
+    45
+   ],
+   "es": {
+    "nombre": "Conservadurismo moderado",
+    "desc": "Cuidar las tradiciones y las instituciones, con cambios lentos y economía de mercado."
+   },
+   "pt": {
+    "nombre": "Conservadorismo moderado",
+    "desc": "Cuidar das tradições e das instituições, com mudanças lentas e economia de mercado."
+   },
+   "en": {
+    "nombre": "Moderate conservatism",
+    "desc": "Preserve traditions and institutions, with slow change and a market economy."
+   },
+   "pos2": {
+    "ecl": 65,
+    "dis": 70,
+    "bie": 65,
+    "epi": 55,
+    "ges": 40,
+    "tra": 10,
+    "idc": 65,
+    "pen": 65,
+    "lab": 70,
+    "eti": 65,
+    "tem": 65,
+    "fut": 55,
+    "ind": 55,
+    "mon": 80,
+    "inf": 35,
+    "ipe": 80,
+    "uni": 60
+   }
+  },
+  {
+   "id": "reaccionarismo",
+   "pos": [
+    70,
+    85,
+    85,
+    25,
+    15,
+    60,
+    95,
+    100,
+    5,
+    50,
+    30,
+    80
+   ],
+   "es": {
+    "nombre": "Reaccionarismo",
+    "desc": "Volver a un orden social anterior, jerárquico y religioso."
+   },
+   "pt": {
+    "nombre": "Reacionarismo",
+    "desc": "Voltar a uma ordem social anterior, hierárquica e religiosa."
+   },
+   "en": {
+    "nombre": "Reactionism",
+    "desc": "A return to an earlier hierarchical and religious social order."
+   },
+   "pos2": {
+    "ecl": 60,
+    "dis": 70,
+    "bie": 60,
+    "epi": 90,
+    "ges": 15,
+    "tra": 80,
+    "idc": 95,
+    "pen": 95,
+    "lab": 85,
+    "eti": 90,
+    "tem": 60,
+    "fut": 60,
+    "ind": 35,
+    "mon": 55,
+    "inf": 90,
+    "ipe": 20,
+    "uni": 95
+   }
+  },
+  {
+   "id": "fascismo",
+   "pos": [
+    90,
+    95,
+    100,
+    5,
+    5,
+    50,
+    60,
+    85,
+    0,
+    30,
+    15,
+    40
+   ],
+   "es": {
+    "nombre": "Fascismo",
+    "desc": "Estado total, líder único, nacionalismo extremo y supresión de la oposición."
+   },
+   "pt": {
+    "nombre": "Fascismo",
+    "desc": "Estado total, líder único, nacionalismo extremo e supressão da oposição."
+   },
+   "en": {
+    "nombre": "Fascism",
+    "desc": "A total state, a single leader, extreme nationalism and suppression of opposition."
+   },
+   "pos2": {
+    "ecl": 80,
+    "dis": 55,
+    "bie": 50,
+    "epi": 85,
+    "ges": 15,
+    "tra": 85,
+    "idc": 100,
+    "pen": 100,
+    "lab": 80,
+    "eti": 60,
+    "tem": 50,
+    "fut": 60,
+    "ind": 5,
+    "mon": 20,
+    "inf": 100,
+    "ipe": 0,
+    "uni": 100
+   }
+  },
+  {
+   "id": "neoliberalismo",
+   "pos": [
+    45,
+    40,
+    30,
+    50,
+    60,
+    85,
+    40,
+    50,
+    55,
+    90,
+    95,
+    15
+   ],
+   "es": {
+    "nombre": "Neoliberalismo",
+    "desc": "Privatizar, desregular, abrir la economía y mantener la estabilidad monetaria."
+   },
+   "pt": {
+    "nombre": "Neoliberalismo",
+    "desc": "Privatizar, desregular, abrir a economia e manter a estabilidade monetária."
+   },
+   "en": {
+    "nombre": "Neoliberalism",
+    "desc": "Privatise, deregulate, open the economy and keep money stable."
+   },
+   "pos2": {
+    "ecl": 80,
+    "dis": 85,
+    "bie": 80,
+    "epi": 30,
+    "ges": 10,
+    "tra": 30,
+    "idc": 25,
+    "pen": 60,
+    "lab": 85,
+    "eti": 30,
+    "tem": 60,
+    "fut": 60,
+    "ind": 95,
+    "mon": 95,
+    "inf": 30,
+    "ipe": 75,
+    "uni": 35
+   }
+  },
+  {
+   "id": "capitalismo_autoritario",
+   "pos": [
+    75,
+    90,
+    75,
+    25,
+    10,
+    85,
+    55,
+    70,
+    25,
+    85,
+    70,
+    25
+   ],
+   "es": {
+    "nombre": "Capitalismo autoritario",
+    "desc": "Libre mercado sin libertades políticas: crecimiento económico con mano de hierro."
+   },
+   "pt": {
+    "nombre": "Capitalismo autoritário",
+    "desc": "Livre mercado sem liberdades políticas: crescimento econômico com mão de ferro."
+   },
+   "en": {
+    "nombre": "Authoritarian capitalism",
+    "desc": "Free markets without political freedom: economic growth under an iron fist."
+   },
+   "pos2": {
+    "ecl": 85,
+    "dis": 85,
+    "bie": 85,
+    "epi": 60,
+    "ges": 10,
+    "tra": 40,
+    "idc": 60,
+    "pen": 95,
+    "lab": 95,
+    "eti": 30,
+    "tem": 60,
+    "fut": 60,
+    "ind": 70,
+    "mon": 70,
+    "inf": 90,
+    "ipe": 15,
+    "uni": 75
+   }
+  },
+  {
+   "id": "capitalismo_estado",
+   "pos": [
+    75,
+    75,
+    65,
+    40,
+    35,
+    45,
+    35,
+    55,
+    40,
+    45,
+    40,
+    15
+   ],
+   "es": {
+    "nombre": "Capitalismo de Estado",
+    "desc": "Empresas que compiten en el mercado, pero con el Estado como dueño o socio principal."
+   },
+   "pt": {
+    "nombre": "Capitalismo de Estado",
+    "desc": "Empresas que competem no mercado, mas com o Estado como dono ou sócio principal."
+   },
+   "en": {
+    "nombre": "State capitalism",
+    "desc": "Firms compete in markets, but with the state as owner or main partner."
+   },
+   "pos2": {
+    "ecl": 85,
+    "dis": 60,
+    "bie": 50,
+    "epi": 35,
+    "ges": 5,
+    "tra": 25,
+    "idc": 60,
+    "pen": 70,
+    "lab": 80,
+    "eti": 25,
+    "tem": 90,
+    "fut": 35,
+    "ind": 10,
+    "mon": 30,
+    "inf": 85,
+    "ipe": 45,
+    "uni": 70
+   }
+  },
+  {
+   "id": "neoconservadurismo",
+   "pos": [
+    55,
+    50,
+    40,
+    10,
+    35,
+    80,
+    65,
+    70,
+    40,
+    75,
+    70,
+    30
+   ],
+   "es": {
+    "nombre": "Neoconservadurismo",
+    "desc": "Mercado, valores tradicionales y una política exterior intervencionista para exportar la democracia."
+   },
+   "pt": {
+    "nombre": "Neoconservadorismo",
+    "desc": "Mercado, valores tradicionais e uma política externa intervencionista para exportar a democracia."
+   },
+   "en": {
+    "nombre": "Neoconservatism",
+    "desc": "Markets, traditional values and an interventionist foreign policy to spread democracy."
+   },
+   "pos2": {
+    "ecl": 80,
+    "dis": 75,
+    "bie": 70,
+    "epi": 65,
+    "ges": 35,
+    "tra": 30,
+    "idc": 55,
+    "pen": 80,
+    "lab": 80,
+    "eti": 70,
+    "tem": 60,
+    "fut": 55,
+    "ind": 65,
+    "mon": 80,
+    "inf": 55,
+    "ipe": 70,
+    "uni": 70
+   }
+  },
+  {
+   "id": "objetivismo",
+   "pos": [
+    30,
+    30,
+    45,
+    50,
+    85,
+    100,
+    0,
+    40,
+    50,
+    100,
+    100,
+    5
+   ],
+   "es": {
+    "nombre": "Objetivismo",
+    "desc": "El interés propio racional como virtud: capitalismo puro, razón y nada de religión en la política."
+   },
+   "pt": {
+    "nombre": "Objetivismo",
+    "desc": "O interesse próprio racional como virtude: capitalismo puro, razão e nada de religião na política."
+   },
+   "en": {
+    "nombre": "Objectivism",
+    "desc": "Rational self-interest as a virtue: pure capitalism, reason and no religion in politics."
+   },
+   "pos2": {
+    "ecl": 95,
+    "dis": 100,
+    "bie": 100,
+    "epi": 25,
+    "ges": 40,
+    "tra": 40,
+    "idc": 0,
+    "pen": 50,
+    "lab": 95,
+    "eti": 80,
+    "tem": 60,
+    "fut": 65,
+    "ind": 100,
+    "mon": 100,
+    "inf": 5,
+    "ipe": 75,
+    "uni": 30
    }
   }
  ]
