@@ -764,5 +764,33 @@
     }
    ]
   }
+ },
+ "dirigentes-strada": {
+  "titulo": "Julia Strada",
+  "figuras": [
+   {
+    "name": "Julia Strada",
+    "ig": [
+     "juliastrada",
+     "julia.strada",
+     "juliastradaok",
+     "stradajulia"
+    ]
+   },
+   {
+    "name": "Luis Caputo"
+   },
+   {
+    "name": "José Luis Espert",
+    "ig": [
+     "jlespert",
+     "joseluisespert",
+     "espert"
+    ]
+   },
+   {
+    "name": "Federico Sturzenegger"
+   }
+  ]
  }
 }

@@ -35,7 +35,8 @@ INDICE = re.sub(r"[^A-Za-z0-9_-]", "", SECRET)
 PUB = {"nacional": "nacional", "boca": "boca", "roca": "soria", "santacruz": "santacruz", "sanisidro": "sanisidro",
        "pagano": "pagano", "casielles": "casielles", "braillard": "braillard", "clark": "clark",
        "raverta": "raverta", "otermin": "otermin", "rehl": "rehl", "ramos": "ramos", "avila": "avila", "akirchner": "alicia", "zicarelli": "zicarelli", "presto": "presto", "danann": "danann",
-       "brujula": "brujula", "sanmartin": "moreira"}
+       "brujula": "brujula", "sanmartin": "moreira",
+       "strada": "strada"}
 
 
 def carpeta(nombre):
@@ -109,7 +110,8 @@ for b in ("roca", "sanmartin"):
     editar(tableros[b] / "index.html", ("'../radar/data/positions.json'", "'positions.json'"))
 
 DIRIGENTES = ("pagano", "casielles", "braillard", "clark",
-              "raverta", "otermin", "rehl", "ramos", "avila", "akirchner", "zicarelli", "presto", "danann")
+              "raverta", "otermin", "rehl", "ramos", "avila", "akirchner", "zicarelli", "presto", "danann",
+              "strada")
 # Dirigentes del módulo dirigentes: build_page.py arma cada uno nombrando solo a su dirigente
 for slug in DIRIGENTES:
     d = carpeta(slug)
