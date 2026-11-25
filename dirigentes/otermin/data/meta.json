@@ -1,39 +1,94 @@
 {
- "updated_at": "2026-11-25T12:50-03:00",
+ "updated_at": "2026-11-25T13:46-03:00",
  "ads_days": 90,
- "estado": "error",
- "error": "4: límite de llamadas de la app (salteado en esta corrida)",
+ "estado": "ok",
+ "error": null,
  "figuras": [
   {
    "name": "Federico Otermin",
    "foco": true,
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 15,
+    "activos": 2,
+    "gasto": [
+     3170000,
+     3694985
+    ],
+    "impresiones": [
+     6245000,
+     6884987
+    ],
+    "moneda": "ARS",
+    "regiones": {
+     "Buenos Aires": 97.2,
+     "Ciudad Autónoma de Buenos Aires": 2.0,
+     "Río Negro": 0.5,
+     "Santa Fe": 0.2,
+     "La Pampa": 0.2,
+     "Chaco": 0.0,
+     "Entre Rios": 0.0,
+     "Formosa": 0.0
+    },
+    "edades": {
+     "25-34": 32.6,
+     "18-24": 29.5,
+     "35-44": 15.6,
+     "45-54": 10.1,
+     "55-64": 6.7,
+     "65+": 5.4,
+     "Unknown": 0.0
+    },
+    "genero": {
+     "male": 50.3,
+     "female": 49.3,
+     "unknown": 0.4
+    },
+    "plataformas": {
+     "facebook": 15,
+     "instagram": 15,
+     "threads": 15
+    },
+    "paginas": {
+     "Federico Otermín": 15
+    },
+    "avisos": [
+     {
+      "t": "Amamos la provincia de Buenos Aires y nos encanta recorrerla ☀️🌊 Estuvimos en San Miguel del Monte caminando por la costanera y disfrutando ",
+      "d": "2026-10-05",
+      "u": "https://www.facebook.com/ads/library/?id=3239403966244804"
+     },
+     {
+      "t": "Amamos la Provincia y nos encanta recorrerla. Estuvimos en Lincoln ❤️.",
+      "d": "2026-09-27",
+      "u": "https://www.facebook.com/ads/library/?id=1420597022920492"
+     },
+     {
+      "t": "Amamos la Provincia de Buenos Aires y nos encanta recorrerla. Visitamos Exaltación de la Cruz junto a @diegoenanni y el intendente @luismama",
+      "d": "2026-09-05",
+      "u": "https://www.facebook.com/ads/library/?id=2112181476841933"
+     }
+    ]
    }
   },
   {
    "name": "Diego Santilli",
    "foco": false,
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 0
    }
   },
   {
    "name": "Jorge Ferraresi",
    "foco": false,
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 0
    }
   },
   {
    "name": "Máximo Kirchner",
    "foco": false,
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 0
    }
   }
  ]

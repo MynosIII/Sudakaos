@@ -1,39 +1,35 @@
 {
- "updated_at": "2026-11-25T12:50-03:00",
+ "updated_at": "2026-11-25T13:46-03:00",
  "ads_days": 90,
- "estado": "error",
- "error": "4: límite de llamadas de la app (salteado en esta corrida)",
+ "estado": "ok",
+ "error": null,
  "figuras": [
   {
    "name": "Álvaro Zicarelli",
    "foco": true,
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 0
    }
   },
   {
    "name": "Ramiro Marra",
    "foco": false,
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 0
    }
   },
   {
    "name": "Lilia Lemoine",
    "foco": false,
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 0
    }
   },
   {
    "name": "Gordo Dan",
    "foco": false,
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 0
    }
   }
  ]

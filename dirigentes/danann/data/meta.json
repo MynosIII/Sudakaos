@@ -1,39 +1,80 @@
 {
- "updated_at": "2026-11-25T12:50-03:00",
+ "updated_at": "2026-11-25T13:46-03:00",
  "ads_days": 90,
- "estado": "error",
- "error": "4: límite de llamadas de la app (salteado en esta corrida)",
+ "estado": "ok",
+ "error": null,
  "figuras": [
   {
    "name": "Danann",
    "foco": true,
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 0
    }
   },
   {
    "name": "Lilia Lemoine",
    "foco": false,
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 0
    }
   },
   {
    "name": "Gordo Dan",
    "foco": false,
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 0
    }
   },
   {
    "name": "Karina Milei",
    "foco": false,
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 2,
+    "activos": 0,
+    "gasto": [
+     18000,
+     19998
+    ],
+    "impresiones": [
+     5000,
+     6998
+    ],
+    "moneda": "ARS",
+    "regiones": {
+     "Río Negro": 100.0
+    },
+    "edades": {
+     "65+": 24.9,
+     "55-64": 19.5,
+     "45-54": 16.4,
+     "18-24": 14.4,
+     "25-34": 14.0,
+     "35-44": 10.7
+    },
+    "genero": {
+     "male": 51.5,
+     "female": 48.1,
+     "unknown": 0.3
+    },
+    "plataformas": {
+     "facebook": 2,
+     "instagram": 2
+    },
+    "paginas": {
+     "Yo estoy con Milei": 2
+    },
+    "avisos": [
+     {
+      "t": "🇦🇷 El senador rionegrino Enzo Fullone se refirió al escenario electoral y al trabajo que viene realizando La Libertad Avanza de cara a las p",
+      "d": "2026-09-18",
+      "u": "https://www.facebook.com/ads/library/?id=1068622222752498"
+     },
+     {
+      "t": "🇦🇷 El senador rionegrino Enzo Fullone se refirió al escenario electoral y al trabajo que viene realizando La Libertad Avanza de cara a las p",
+      "d": "2026-09-18",
+      "u": "https://www.facebook.com/ads/library/?id=1469385918353554"
+     }
+    ]
    }
   }
  ]

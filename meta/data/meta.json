@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-25T12:50-03:00",
+ "updated_at": "2026-11-25T13:46-03:00",
  "grupos": [
   "País",
   "Boca",
@@ -8,14 +8,22 @@
   "San Isidro"
  ],
  "estado": "ok",
- "ads_error": "4: límite de llamadas de la app (salteado en esta corrida)",
+ "ads_error": null,
  "ig_ok": 18,
  "ig_error": null,
  "diagnostico": {
-  "permisos": null,
-  "permisos_error": "4: (#4) Application request limit reached",
-  "cuenta_ig_ok": false,
-  "cuenta_ig_error": "4: límite de llamadas de la app (salteado en esta corrida)",
+  "permisos": [
+   "ads_read",
+   "business_management",
+   "instagram_basic",
+   "instagram_manage_insights",
+   "pages_read_engagement",
+   "pages_show_list",
+   "public_profile"
+  ],
+  "permisos_error": null,
+  "cuenta_ig_ok": true,
+  "cuenta_ig_error": null,
   "faltan_permisos": []
  },
  "dirigentes": [
@@ -27,7 +35,7 @@
    "ig": {
     "usuario": "sergiomassaok",
     "nombre": "Sergio Massa",
-    "followers": 462341,
+    "followers": 462328,
     "follows": 1121,
     "media_count": 955,
     "posts_30d": 3,
@@ -49,7 +57,7 @@
      },
      "Foto": {
       "n": 11,
-      "inter_med": 7842,
+      "inter_med": 7841,
       "er": 1.696
      }
     },
@@ -57,21 +65,21 @@
     "mejor_dia": "sáb",
     "mejor_franja": 21,
     "franjas": {
-     "00-03": 17114,
-     "06-09": 24712,
-     "09-12": 5964,
+     "00-03": 17112,
+     "06-09": 24704,
+     "09-12": 5962,
      "12-15": 14378,
      "15-18": 9701,
-     "18-21": 8591,
+     "18-21": 8587,
      "21-24": 28406
     },
     "dias": {
-     "lun": 21315,
-     "mar": 9350,
-     "mié": 5964,
+     "lun": 21311,
+     "mar": 9347,
+     "mié": 5962,
      "jue": 20626,
-     "vie": 11171,
-     "sáb": 45724,
+     "vie": 11167,
+     "sáb": 45721,
      "dom": 10768
     },
     "temas": [
@@ -101,48 +109,48 @@
       "t": "Hace 27 años que MalenaGalmarini y yo decidimos empezar este proyecto de vida, nuestro mayor compromiso, nuestra mayor r",
       "u": "https://www.instagram.com/p/Czywa9cLQjc/",
       "f": "Foto",
-      "i": 152852,
+      "i": 152850,
       "d": "2023-11-18"
      },
      {
       "t": "🇦🇷Voté acompañado de mi familia, con mucho amor por la Argentina y con el orgullo que da fortalecer la democracia. Les p",
       "u": "https://www.instagram.com/p/Cz1Wwq_r3eK/",
       "f": "Carrusel",
-      "i": 147248,
+      "i": 147247,
       "d": "2023-11-19"
      },
      {
       "t": "El amor y la esperanza siempre le ganan al odio, a la bronca y a la violencia❤️🇦🇷. Gracias!",
       "u": "https://www.instagram.com/reel/CzubVnwMHwl/",
       "f": "Reel",
-      "i": 129038,
+      "i": 129037,
       "d": "2023-11-16"
      }
     ],
     "serie": [
      {
       "d": "2023-11-16",
-      "i": 58438,
+      "i": 58435,
       "f": "Reel"
      },
      {
       "d": "2023-11-16",
-      "i": 129038,
+      "i": 129037,
       "f": "Reel"
      },
      {
       "d": "2023-11-18",
-      "i": 152852,
+      "i": 152850,
       "f": "Foto"
      },
      {
       "d": "2023-11-19",
-      "i": 147248,
+      "i": 147247,
       "f": "Carrusel"
      },
      {
       "d": "2023-11-19",
-      "i": 118744,
+      "i": 118741,
       "f": "Foto"
      },
      {
@@ -167,7 +175,7 @@
      },
      {
       "d": "2024-10-02",
-      "i": 27067,
+      "i": 27066,
       "f": "Reel"
      },
      {
@@ -177,42 +185,42 @@
      },
      {
       "d": "2025-02-28",
-      "i": 39604,
+      "i": 39595,
       "f": "Carrusel"
      },
      {
       "d": "2025-03-15",
-      "i": 59898,
+      "i": 59879,
       "f": "Reel"
      },
      {
       "d": "2025-04-21",
-      "i": 24712,
+      "i": 24704,
       "f": "Carrusel"
      },
      {
       "d": "2025-04-30",
-      "i": 5964,
+      "i": 5962,
       "f": "Carrusel"
      },
      {
       "d": "2025-05-05",
-      "i": 21315,
+      "i": 21311,
       "f": "Carrusel"
      },
      {
       "d": "2025-05-13",
-      "i": 9716,
+      "i": 9715,
       "f": "Foto"
      },
      {
       "d": "2025-06-18",
-      "i": 20365,
+      "i": 20362,
       "f": "Carrusel"
      },
      {
       "d": "2025-06-20",
-      "i": 6340,
+      "i": 6339,
       "f": "Reel"
      },
      {
@@ -222,12 +230,12 @@
      },
      {
       "d": "2025-07-11",
-      "i": 10213,
+      "i": 10212,
       "f": "Reel"
      },
      {
       "d": "2025-07-27",
-      "i": 7842,
+      "i": 7841,
       "f": "Foto"
      },
      {
@@ -257,7 +265,7 @@
      },
      {
       "d": "2025-10-14",
-      "i": 22191,
+      "i": 22190,
       "f": "Reel"
      },
      {
@@ -302,12 +310,12 @@
      },
      {
       "d": "2026-05-05",
-      "i": 17114,
+      "i": 17112,
       "f": "Carrusel"
      },
      {
       "d": "2026-05-12",
-      "i": 8199,
+      "i": 8194,
       "f": "Carrusel"
      },
      {
@@ -317,12 +325,12 @@
      },
      {
       "d": "2026-06-05",
-      "i": 12129,
+      "i": 12122,
       "f": "Foto"
      },
      {
       "d": "2026-06-06",
-      "i": 6922,
+      "i": 6920,
       "f": "Carrusel"
      },
      {
@@ -332,7 +340,7 @@
      },
      {
       "d": "2026-06-07",
-      "i": 5795,
+      "i": 5788,
       "f": "Carrusel"
      },
      {
@@ -342,37 +350,37 @@
      },
      {
       "d": "2026-06-17",
-      "i": 3553,
+      "i": 3551,
       "f": "Carrusel"
      },
      {
       "d": "2026-07-04",
-      "i": 7560,
+      "i": 7559,
       "f": "Reel"
      },
      {
       "d": "2026-07-07",
-      "i": 4141,
+      "i": 4139,
       "f": "Foto"
      },
      {
       "d": "2026-07-12",
-      "i": 5520,
+      "i": 5516,
       "f": "Carrusel"
      },
      {
       "d": "2026-07-15",
-      "i": 6824,
+      "i": 6812,
       "f": "Carrusel"
      },
      {
       "d": "2026-07-18",
-      "i": 45724,
+      "i": 45721,
       "f": "Reel"
      },
      {
       "d": "2026-07-19",
-      "i": 8174,
+      "i": 8170,
       "f": "Carrusel"
      },
      {
@@ -387,12 +395,12 @@
      },
      {
       "d": "2026-09-09",
-      "i": 4714,
+      "i": 4712,
       "f": "Foto"
      },
      {
       "d": "2026-09-11",
-      "i": 4259,
+      "i": 4258,
       "f": "Foto"
      },
      {
@@ -407,24 +415,23 @@
      },
      {
       "d": "2026-10-27",
-      "i": 8984,
+      "i": 8980,
       "f": "Foto"
      },
      {
       "d": "2026-11-11",
-      "i": 4980,
+      "i": 4979,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-19",
-      "i": 2139,
+      "i": 2147,
       "f": "Reel"
      }
     ],
-    "delta7": 1,
+    "delta7": -81,
     "delta30": null
    },
-   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -457,11 +464,14 @@
     {
      "d": "2026-11-24",
      "f": 462341
+    },
+    {
+     "d": "2026-11-25",
+     "f": 462328
     }
    ],
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 0
    }
   },
   {
@@ -472,46 +482,46 @@
    "ig": {
     "usuario": "javiermilei",
     "nombre": "Javier Milei",
-    "followers": 6448370,
+    "followers": 6447396,
     "follows": 1816,
-    "media_count": 12632,
-    "posts_30d": 54,
-    "posts_semana": 12.6,
-    "inter_med": 48643,
-    "likes_med": 47248,
-    "com_med": 3523,
-    "er": 0.754,
+    "media_count": 12633,
+    "posts_30d": 55,
+    "posts_semana": 12.8,
+    "inter_med": 48545,
+    "likes_med": 47108,
+    "com_med": 3410,
+    "er": 0.753,
     "formatos": {
      "Foto": {
-      "n": 41,
-      "inter_med": 46623,
-      "er": 0.723
+      "n": 42,
+      "inter_med": 45053,
+      "er": 0.699
      },
      "Reel": {
       "n": 13,
-      "inter_med": 84219,
-      "er": 1.306
+      "inter_med": 84361,
+      "er": 1.308
      }
     },
     "mejor_formato": "Reel",
     "mejor_dia": "jue",
     "mejor_franja": 21,
     "franjas": {
-     "06-09": 39171,
-     "09-12": 61318,
-     "12-15": 76358,
-     "15-18": 83791,
-     "18-21": 41697,
-     "21-24": 87916
+     "06-09": 39172,
+     "09-12": 57288,
+     "12-15": 76404,
+     "15-18": 83938,
+     "18-21": 41702,
+     "21-24": 87919
     },
     "dias": {
-     "lun": 76913,
-     "mar": 31372,
-     "mié": 80366,
-     "jue": 90669,
-     "vie": 87916,
+     "lun": 79426,
+     "mar": 31652,
+     "mié": 60794,
+     "jue": 90667,
+     "vie": 87919,
      "sáb": 60439,
-     "dom": 44822
+     "dom": 44828
     },
     "temas": [
      "vllc",
@@ -533,33 +543,33 @@
       "t": "",
       "u": "https://www.instagram.com/reel/DfnDa5ETXxB/",
       "f": "Reel",
-      "i": 202022,
+      "i": 202061,
       "d": "2026-11-11"
      },
      {
       "t": "",
       "u": "https://www.instagram.com/reel/DfflKkQz0Sg/",
       "f": "Reel",
-      "i": 199451,
+      "i": 199455,
       "d": "2026-11-08"
      },
      {
       "t": "",
       "u": "https://www.instagram.com/reel/Df5WL9rzuTy/",
       "f": "Reel",
-      "i": 175756,
+      "i": 176178,
       "d": "2026-11-18"
      }
     ],
     "serie": [
      {
       "d": "2026-10-27",
-      "i": 44996,
+      "i": 44999,
       "f": "Reel"
      },
      {
       "d": "2026-10-28",
-      "i": 39171,
+      "i": 39172,
       "f": "Foto"
      },
      {
@@ -569,27 +579,27 @@
      },
      {
       "d": "2026-10-29",
-      "i": 90669,
+      "i": 90667,
       "f": "Foto"
      },
      {
       "d": "2026-10-30",
-      "i": 160145,
+      "i": 160144,
       "f": "Foto"
      },
      {
       "d": "2026-10-30",
-      "i": 108253,
+      "i": 108251,
       "f": "Foto"
      },
      {
       "d": "2026-10-30",
-      "i": 145323,
+      "i": 145322,
       "f": "Foto"
      },
      {
       "d": "2026-10-30",
-      "i": 87916,
+      "i": 87919,
       "f": "Reel"
      },
      {
@@ -599,234 +609,238 @@
      },
      {
       "d": "2026-11-02",
-      "i": 154805,
+      "i": 154822,
       "f": "Foto"
      },
      {
       "d": "2026-11-03",
-      "i": 52634,
+      "i": 52633,
       "f": "Foto"
      },
      {
       "d": "2026-11-03",
-      "i": 136132,
+      "i": 136145,
       "f": "Foto"
      },
      {
       "d": "2026-11-04",
-      "i": 80366,
+      "i": 80391,
       "f": "Foto"
      },
      {
       "d": "2026-11-05",
-      "i": 48748,
+      "i": 48754,
       "f": "Reel"
      },
      {
       "d": "2026-11-05",
-      "i": 119122,
+      "i": 119153,
       "f": "Foto"
      },
      {
       "d": "2026-11-06",
-      "i": 7658,
+      "i": 7661,
       "f": "Foto"
      },
      {
       "d": "2026-11-06",
-      "i": 29031,
+      "i": 29033,
       "f": "Foto"
      },
      {
       "d": "2026-11-07",
-      "i": 118268,
+      "i": 118295,
       "f": "Foto"
      },
      {
       "d": "2026-11-08",
-      "i": 47956,
+      "i": 47957,
       "f": "Foto"
      },
      {
       "d": "2026-11-08",
-      "i": 199451,
+      "i": 199455,
       "f": "Reel"
      },
      {
       "d": "2026-11-08",
-      "i": 48538,
+      "i": 48545,
       "f": "Foto"
      },
      {
       "d": "2026-11-08",
-      "i": 11723,
+      "i": 11731,
       "f": "Foto"
      },
      {
       "d": "2026-11-08",
-      "i": 16178,
+      "i": 16183,
       "f": "Foto"
      },
      {
       "d": "2026-11-08",
-      "i": 47947,
+      "i": 47955,
       "f": "Foto"
      },
      {
       "d": "2026-11-08",
-      "i": 23486,
+      "i": 23491,
       "f": "Foto"
      },
      {
       "d": "2026-11-08",
-      "i": 41697,
+      "i": 41702,
       "f": "Foto"
      },
      {
       "d": "2026-11-08",
-      "i": 88243,
+      "i": 88247,
       "f": "Foto"
      },
      {
       "d": "2026-11-09",
-      "i": 120577,
+      "i": 120576,
       "f": "Reel"
      },
      {
       "d": "2026-11-10",
-      "i": 42143,
+      "i": 42151,
       "f": "Foto"
      },
      {
       "d": "2026-11-11",
-      "i": 154238,
+      "i": 154403,
       "f": "Foto"
      },
      {
       "d": "2026-11-11",
-      "i": 32139,
+      "i": 32232,
       "f": "Foto"
      },
      {
       "d": "2026-11-11",
-      "i": 141681,
+      "i": 141743,
       "f": "Foto"
      },
      {
       "d": "2026-11-11",
-      "i": 202022,
+      "i": 202061,
       "f": "Reel"
      },
      {
       "d": "2026-11-11",
-      "i": 41103,
+      "i": 41198,
       "f": "Foto"
      },
      {
       "d": "2026-11-11",
-      "i": 84219,
+      "i": 84361,
       "f": "Reel"
      },
      {
       "d": "2026-11-12",
-      "i": 114406,
+      "i": 114547,
       "f": "Foto"
      },
      {
       "d": "2026-11-15",
-      "i": 96675,
+      "i": 97053,
       "f": "Foto"
      },
      {
       "d": "2026-11-16",
-      "i": 24967,
+      "i": 25359,
       "f": "Foto"
      },
      {
       "d": "2026-11-16",
-      "i": 76913,
+      "i": 77210,
       "f": "Reel"
      },
      {
       "d": "2026-11-17",
-      "i": 31372,
+      "i": 31652,
       "f": "Foto"
      },
      {
       "d": "2026-11-17",
-      "i": 13082,
+      "i": 13261,
       "f": "Foto"
      },
      {
       "d": "2026-11-18",
-      "i": 14086,
+      "i": 14305,
       "f": "Foto"
      },
      {
       "d": "2026-11-18",
-      "i": 175756,
+      "i": 176178,
       "f": "Reel"
      },
      {
       "d": "2026-11-19",
-      "i": 61318,
+      "i": 61943,
       "f": "Foto"
      },
      {
       "d": "2026-11-20",
-      "i": 109457,
+      "i": 110060,
       "f": "Reel"
      },
      {
       "d": "2026-11-20",
-      "i": 46623,
+      "i": 48073,
       "f": "Foto"
      },
      {
       "d": "2026-11-20",
-      "i": 23425,
+      "i": 23558,
       "f": "Reel"
      },
      {
       "d": "2026-11-21",
-      "i": 38189,
+      "i": 39739,
       "f": "Foto"
      },
      {
       "d": "2026-11-22",
-      "i": 8124,
+      "i": 8476,
       "f": "Foto"
      },
      {
       "d": "2026-11-22",
-      "i": 32717,
+      "i": 34096,
       "f": "Foto"
      },
      {
       "d": "2026-11-23",
-      "i": 74203,
+      "i": 79426,
       "f": "Foto"
      },
      {
       "d": "2026-11-24",
-      "i": 15632,
+      "i": 20145,
       "f": "Foto"
      },
      {
       "d": "2026-11-24",
-      "i": 5346,
+      "i": 16157,
       "f": "Foto"
      },
      {
       "d": "2026-11-24",
-      "i": 1189,
+      "i": 7233,
+      "f": "Foto"
+     },
+     {
+      "d": "2026-11-25",
+      "i": 19202,
       "f": "Foto"
      }
     ],
-    "delta7": -5809,
+    "delta7": -5782,
     "delta30": null
    },
-   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -859,11 +873,74 @@
     {
      "d": "2026-11-24",
      "f": 6448370
+    },
+    {
+     "d": "2026-11-25",
+     "f": 6447396
     }
    ],
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 15,
+    "activos": 0,
+    "gasto": [
+     127000,
+     165485
+    ],
+    "impresiones": [
+     77000,
+     99985
+    ],
+    "moneda": "ARS",
+    "regiones": {
+     "Misiones": 59.1,
+     "Río Negro": 15.3,
+     "Buenos Aires": 5.4,
+     "Santa Fe": 2.4,
+     "Chaco": 2.2,
+     "Córdoba": 1.7,
+     "Tucuman": 1.6,
+     "Entre Rios": 1.6
+    },
+    "edades": {
+     "65+": 21.2,
+     "18-24": 18.4,
+     "55-64": 17.7,
+     "25-34": 16.5,
+     "45-54": 13.9,
+     "35-44": 12.3,
+     "Unknown": 0.0
+    },
+    "genero": {
+     "male": 58.1,
+     "female": 41.6,
+     "unknown": 0.3
+    },
+    "plataformas": {
+     "facebook": 12,
+     "instagram": 11,
+     "threads": 7
+    },
+    "paginas": {
+     "Yo estoy con Milei": 14,
+     "Yo banco a Milei": 1
+    },
+    "avisos": [
+     {
+      "t": "🗳️ Adrián Núñez se reunió con el embajador argentino ante la OEA, Carlos Cherniak, y con Carmen Lucía de la Pava Abad, jefa de gabinete del ",
+      "d": "2026-11-06",
+      "u": "https://www.facebook.com/ads/library/?id=1772636561537901"
+     },
+     {
+      "t": "🦁 Las ideas de la libertad siguen creciendo en cada rincón de Misiones. En Oberá, más de 700 misioneros participaron de una nueva jornada de",
+      "d": "2026-10-08",
+      "u": "https://www.facebook.com/ads/library/?id=1634447598468110"
+     },
+     {
+      "t": "🗳️ Más transparencia, más libertad para elegir. En Misiones seguimos impulsando una reforma electoral que termine con la Ley de Lemas y avan",
+      "d": "2026-10-08",
+      "u": "https://www.facebook.com/ads/library/?id=29219178691020668"
+     }
+    ]
    }
   },
   {
@@ -874,65 +951,61 @@
    "ig": {
     "usuario": "cristinafkirchner",
     "nombre": "Cristina Kirchner",
-    "followers": 1728211,
+    "followers": 1728165,
     "follows": 67,
     "media_count": 1382,
     "posts_30d": 0,
-    "posts_semana": 0.7,
-    "inter_med": 69046,
-    "likes_med": 65250,
-    "com_med": 2537,
-    "er": 3.995,
+    "posts_semana": 0.5,
+    "inter_med": 41757,
+    "likes_med": 39189,
+    "com_med": 2103,
+    "er": 2.416,
     "formatos": {
      "Foto": {
-      "n": 21,
-      "inter_med": 35552,
-      "er": 2.057
-     },
-     "Carrusel": {
-      "n": 24,
-      "inter_med": 85105,
-      "er": 4.924
+      "n": 4,
+      "inter_med": 113774,
+      "er": 6.584
      },
      "Reel": {
-      "n": 15,
-      "inter_med": 62962,
-      "er": 3.643
+      "n": 56,
+      "inter_med": 40800,
+      "er": 2.361
      }
     },
-    "mejor_formato": "Carrusel",
-    "mejor_dia": "mié",
+    "mejor_formato": "Foto",
+    "mejor_dia": "sáb",
     "mejor_franja": 6,
     "franjas": {
-     "06-09": 104686,
-     "09-12": 47642,
-     "12-15": 35552,
-     "15-18": 74420,
-     "18-21": 55644,
-     "21-24": 91185
+     "00-03": 35254,
+     "06-09": 77021,
+     "09-12": 60517,
+     "12-15": 35562,
+     "15-18": 31274,
+     "18-21": 47074,
+     "21-24": 34898
     },
     "dias": {
-     "lun": 74420,
-     "mar": 98901,
-     "mié": 104686,
-     "jue": 34394,
-     "vie": 76250,
-     "sáb": 66603,
-     "dom": 66772
+     "lun": 35562,
+     "mar": 35089,
+     "mié": 45160,
+     "jue": 37316,
+     "vie": 48105,
+     "sáb": 68268,
+     "dom": 55388
     },
     "temas": [
-     "jose",
-     "pais",
-     "cuando",
+     "estan",
      "argentina",
-     "anos",
-     "historia",
-     "ayer",
-     "tambien",
-     "patria",
-     "nacional",
      "siempre",
-     "poder"
+     "cuando",
+     "argentinos",
+     "ustedes",
+     "milei",
+     "poder",
+     "tenemos",
+     "mejor",
+     "donde",
+     "estado"
     ],
     "hashtags": [
      "nestorvive"
@@ -942,64 +1015,234 @@
       "t": "Vivir solo cuesta vida.",
       "u": "https://www.instagram.com/p/DZNwV1BttEO/",
       "f": "Foto",
-      "i": 313591,
+      "i": 313598,
       "d": "2026-06-05"
      },
      {
-      "t": "HOY RECIBIMOS AL COMPAÑERO lulaoficial en mi casa, donde estoy bajo detención domiciliaria por decisión de un Poder Judi",
-      "u": "https://www.instagram.com/p/DLp294wMEqs/",
-      "f": "Carrusel",
-      "i": 270286,
-      "d": "2025-07-03"
+      "t": "#NestorVive",
+      "u": "https://www.instagram.com/reel/DP7hhSMjGya/",
+      "f": "Reel",
+      "i": 159818,
+      "d": "2025-10-17"
      },
      {
-      "t": "Ahora, bastó que hace una semana anunciáramos la candidatura para que se desataran los demonios. Porque este modelo tien",
-      "u": "https://www.instagram.com/p/DKs4AAasblj/",
-      "f": "Carrusel",
-      "i": 215308,
-      "d": "2025-06-09"
+      "t": "A la militancia peronista y a los ciudadanos y ciudadanas de la provincia de Buenos Aires.",
+      "u": "https://www.instagram.com/reel/DOMXgCrkrDo/",
+      "f": "Reel",
+      "i": 149563,
+      "d": "2025-09-04"
      }
     ],
     "serie": [
      {
-      "d": "2025-02-21",
-      "i": 44365,
-      "f": "Carrusel"
+      "d": "2024-08-15",
+      "i": 41743,
+      "f": "Reel"
      },
      {
-      "d": "2025-02-25",
-      "i": 98901,
-      "f": "Carrusel"
+      "d": "2024-09-14",
+      "i": 74902,
+      "f": "Reel"
      },
      {
-      "d": "2025-02-27",
-      "i": 28554,
-      "f": "Carrusel"
+      "d": "2024-09-18",
+      "i": 130300,
+      "f": "Reel"
      },
      {
-      "d": "2025-03-19",
-      "i": 31292,
-      "f": "Foto"
+      "d": "2024-09-18",
+      "i": 29703,
+      "f": "Reel"
      },
      {
-      "d": "2025-03-20",
-      "i": 30042,
-      "f": "Foto"
+      "d": "2024-09-19",
+      "i": 37316,
+      "f": "Reel"
      },
      {
-      "d": "2025-03-20",
-      "i": 28542,
-      "f": "Foto"
+      "d": "2024-10-01",
+      "i": 120393,
+      "f": "Reel"
      },
      {
-      "d": "2025-03-20",
-      "i": 23923,
-      "f": "Foto"
+      "d": "2024-10-01",
+      "i": 127655,
+      "f": "Reel"
      },
      {
-      "d": "2025-03-22",
-      "i": 77367,
-      "f": "Carrusel"
+      "d": "2024-10-08",
+      "i": 88393,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-10-17",
+      "i": 62575,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-10-17",
+      "i": 56909,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-10-17",
+      "i": 23814,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-10-21",
+      "i": 128302,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-10-24",
+      "i": 35254,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-10-25",
+      "i": 30428,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-10-25",
+      "i": 47074,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-10-25",
+      "i": 98670,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-11-05",
+      "i": 17582,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-11-05",
+      "i": 11600,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-11-06",
+      "i": 27767,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-11-08",
+      "i": 11829,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-11-08",
+      "i": 49136,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-11-08",
+      "i": 29623,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-11-09",
+      "i": 78965,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-11-09",
+      "i": 31274,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-11-12",
+      "i": 34154,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-11-13",
+      "i": 136077,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-11-13",
+      "i": 39858,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-11-13",
+      "i": 39778,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-11-18",
+      "i": 22591,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-11-18",
+      "i": 37869,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-11-19",
+      "i": 36025,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-11-19",
+      "i": 19476,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-11-22",
+      "i": 27021,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-11-23",
+      "i": 26017,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-11-23",
+      "i": 27366,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-11-24",
+      "i": 32481,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-11-27",
+      "i": 16304,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-11-28",
+      "i": 20225,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-12-12",
+      "i": 26702,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-12-12",
+      "i": 17167,
+      "f": "Reel"
+     },
+     {
+      "d": "2024-12-13",
+      "i": 41772,
+      "f": "Reel"
+     },
+     {
+      "d": "2025-01-22",
+      "i": 52138,
+      "f": "Reel"
      },
      {
       "d": "2025-03-22",
@@ -1007,28 +1250,13 @@
       "f": "Reel"
      },
      {
-      "d": "2025-03-24",
-      "i": 75129,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2025-03-25",
-      "i": 28256,
-      "f": "Carrusel"
-     },
-     {
       "d": "2025-04-02",
       "i": 45160,
       "f": "Reel"
      },
      {
-      "d": "2025-04-21",
-      "i": 164850,
-      "f": "Carrusel"
-     },
-     {
       "d": "2025-04-28",
-      "i": 28276,
+      "i": 28277,
       "f": "Reel"
      },
      {
@@ -1037,63 +1265,18 @@
       "f": "Reel"
      },
      {
-      "d": "2025-05-08",
-      "i": 141780,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-05-13",
-      "i": 105511,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-05-22",
-      "i": 32577,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-05-25",
-      "i": 60222,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2025-05-25",
-      "i": 155428,
-      "f": "Carrusel"
-     },
-     {
       "d": "2025-05-25",
       "i": 62962,
       "f": "Reel"
      },
      {
       "d": "2025-05-30",
-      "i": 51105,
+      "i": 51106,
       "f": "Reel"
      },
      {
       "d": "2025-06-07",
-      "i": 32451,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2025-06-07",
-      "i": 81030,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2025-06-07",
-      "i": 89181,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2025-06-07",
-      "i": 200368,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-06-07",
-      "i": 68265,
+      "i": 68268,
       "f": "Reel"
      },
      {
@@ -1102,170 +1285,59 @@
       "f": "Reel"
      },
      {
-      "d": "2025-06-09",
-      "i": 93190,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2025-06-09",
-      "i": 215308,
-      "f": "Carrusel"
-     },
-     {
       "d": "2025-06-19",
-      "i": 83345,
+      "i": 83342,
       "f": "Reel"
-     },
-     {
-      "d": "2025-07-03",
-      "i": 270286,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2025-08-02",
-      "i": 64941,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2025-08-25",
-      "i": 73711,
-      "f": "Foto"
      },
      {
       "d": "2025-09-04",
-      "i": 149564,
+      "i": 149563,
       "f": "Reel"
-     },
-     {
-      "d": "2025-09-16",
-      "i": 137954,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2025-09-17",
-      "i": 119813,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2025-09-17",
-      "i": 142781,
-      "f": "Reel"
-     },
-     {
-      "d": "2025-09-20",
-      "i": 60183,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2025-09-21",
-      "i": 70583,
-      "f": "Carrusel"
      },
      {
       "d": "2025-09-26",
-      "i": 58458,
+      "i": 58460,
       "f": "Reel"
      },
      {
-      "d": "2025-10-03",
-      "i": 50124,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-10-04",
-      "i": 55284,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-10-10",
-      "i": 114520,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2025-10-14",
-      "i": 29700,
-      "f": "Foto"
-     },
-     {
       "d": "2025-10-17",
-      "i": 126592,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2025-10-17",
-      "i": 94042,
-      "f": "Carrusel"
-     },
-     {
-      "d": "2025-10-17",
-      "i": 159816,
+      "i": 159818,
       "f": "Reel"
-     },
-     {
-      "d": "2025-10-22",
-      "i": 117031,
-      "f": "Foto"
      },
      {
       "d": "2025-10-23",
-      "i": 107914,
+      "i": 107919,
       "f": "Reel"
      },
      {
       "d": "2025-11-05",
-      "i": 49339,
+      "i": 49343,
       "f": "Reel"
      },
      {
-      "d": "2025-11-13",
-      "i": 26653,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-11-14",
-      "i": 30878,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-11-15",
-      "i": 18822,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-11-17",
-      "i": 28118,
-      "f": "Foto"
-     },
-     {
-      "d": "2025-12-13",
-      "i": 30817,
-      "f": "Carrusel"
-     },
-     {
       "d": "2026-06-05",
-      "i": 313591,
+      "i": 313598,
       "f": "Foto"
      },
      {
       "d": "2026-06-14",
-      "i": 122846,
+      "i": 122850,
       "f": "Foto"
      },
      {
       "d": "2026-07-29",
-      "i": 104686,
+      "i": 104699,
       "f": "Foto"
      },
      {
       "d": "2026-09-07",
-      "i": 35552,
+      "i": 35562,
       "f": "Foto"
      }
     ],
-    "delta7": -338,
+    "delta7": -406,
     "delta30": null
    },
-   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -1298,11 +1370,14 @@
     {
      "d": "2026-11-24",
      "f": 1728211
+    },
+    {
+     "d": "2026-11-25",
+     "f": 1728165
     }
    ],
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 0
    }
   },
   {
@@ -1313,24 +1388,29 @@
    "ig": {
     "usuario": "kicillofok",
     "nombre": "Axel Kicillof",
-    "followers": 1203780,
+    "followers": 1203827,
     "follows": 323,
-    "media_count": 2827,
+    "media_count": 2828,
     "posts_30d": 23,
     "posts_semana": 5.4,
-    "inter_med": 9366,
-    "likes_med": 9037,
-    "com_med": 301,
-    "er": 0.778,
+    "inter_med": 8466,
+    "likes_med": 8251,
+    "com_med": 276,
+    "er": 0.703,
     "formatos": {
+     "Foto": {
+      "n": 1,
+      "inter_med": 3449,
+      "er": 0.287
+     },
      "Carrusel": {
-      "n": 16,
-      "inter_med": 9664,
-      "er": 0.803
+      "n": 15,
+      "inter_med": 9475,
+      "er": 0.787
      },
      "Reel": {
       "n": 7,
-      "inter_med": 5101,
+      "inter_med": 5110,
       "er": 0.424
      }
     },
@@ -1338,35 +1418,35 @@
     "mejor_dia": "lun",
     "mejor_franja": 12,
     "franjas": {
-     "00-03": 3451,
-     "09-12": 9366,
-     "12-15": 15938,
-     "15-18": 9963,
-     "18-21": 3892,
-     "21-24": 11487
+     "00-03": 3540,
+     "09-12": 9475,
+     "12-15": 13578,
+     "15-18": 9965,
+     "18-21": 3897,
+     "21-24": 8466
     },
     "dias": {
-     "lun": 38466,
-     "mar": 10300,
-     "mié": 11121,
-     "jue": 13052,
-     "vie": 8463,
-     "sáb": 3012,
-     "dom": 6025
+     "lun": 38467,
+     "mar": 10302,
+     "mié": 10738,
+     "jue": 13578,
+     "vie": 8466,
+     "sáb": 3013,
+     "dom": 2685
     },
     "temas": [
      "leon",
-     "futuro",
      "papa",
-     "mejor",
-     "camino",
+     "futuro",
+     "pueblo",
      "bonaerenses",
      "esperanza",
-     "pueblo",
+     "mejor",
      "adelante",
+     "camino",
      "jujuy",
-     "aniversario",
-     "plata"
+     "memoria",
+     "aniversario"
     ],
     "hashtags": [
      "elpapaenargentina",
@@ -1375,148 +1455,147 @@
     ],
     "top": [
      {
-      "t": "UNA NOCHE HISTÓRICA, UN FUTURO MEJOR 🇧🇷❤️ Lula ganó las elecciones, dejando una lección: nunca hay que rendirse. No hay ",
-      "u": "https://www.instagram.com/p/De7-zixkQz6/",
-      "f": "Carrusel",
-      "i": 144204,
-      "d": "2026-10-25"
-     },
-     {
       "t": "León, los bonaerenses y los argentinos guardaremos para siempre en nuestros corazones su visita. Gracias por hablarle a ",
       "u": "https://www.instagram.com/p/Dfm6UqSkfw-/",
       "f": "Carrusel",
-      "i": 89042,
+      "i": 89069,
       "d": "2026-11-11"
      },
      {
       "t": "Como dijo el Papa León, el progreso de una Nación también se mide por su acompañamiento a las personas con discapacidad.",
       "u": "https://www.instagram.com/p/DfhpzM3kQXf/",
       "f": "Carrusel",
-      "i": 75987,
+      "i": 75989,
       "d": "2026-11-09"
+     },
+     {
+      "t": "¡Impresionantes los festejos por el aniversario de La Plata, la capital de todas y todos los bonaerenses! ¡Felicidades!",
+      "u": "https://www.instagram.com/p/Df8g7KgETRh/",
+      "f": "Carrusel",
+      "i": 26618,
+      "d": "2026-11-19"
      }
     ],
     "serie": [
      {
-      "d": "2026-10-25",
-      "i": 144204,
-      "f": "Carrusel"
-     },
-     {
       "d": "2026-10-27",
-      "i": 6088,
+      "i": 6089,
       "f": "Carrusel"
      },
      {
       "d": "2026-10-30",
-      "i": 9963,
+      "i": 9965,
       "f": "Carrusel"
      },
      {
       "d": "2026-10-30",
-      "i": 8463,
+      "i": 8466,
       "f": "Carrusel"
      },
      {
       "d": "2026-10-31",
-      "i": 3012,
+      "i": 3013,
       "f": "Reel"
      },
      {
       "d": "2026-11-01",
-      "i": 2684,
+      "i": 2685,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-02",
-      "i": 945,
+      "i": 946,
       "f": "Reel"
      },
      {
       "d": "2026-11-04",
-      "i": 11508,
+      "i": 11510,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-04",
-      "i": 10735,
+      "i": 10738,
       "f": "Reel"
      },
      {
       "d": "2026-11-05",
-      "i": 18824,
+      "i": 18835,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-05",
-      "i": 6427,
+      "i": 6429,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-06",
-      "i": 3918,
+      "i": 3919,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-09",
-      "i": 75987,
+      "i": 75989,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-10",
-      "i": 15014,
+      "i": 15015,
       "f": "Reel"
      },
      {
       "d": "2026-11-10",
-      "i": 14512,
+      "i": 14515,
       "f": "Reel"
      },
      {
       "d": "2026-11-11",
-      "i": 89042,
+      "i": 89069,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-11",
-      "i": 5101,
+      "i": 5110,
       "f": "Reel"
      },
      {
       "d": "2026-11-15",
-      "i": 9366,
+      "i": 9475,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-15",
-      "i": 2443,
+      "i": 2446,
       "f": "Reel"
      },
      {
       "d": "2026-11-17",
-      "i": 4830,
+      "i": 4855,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-19",
-      "i": 3451,
+      "i": 3540,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-19",
-      "i": 13052,
+      "i": 13578,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-19",
-      "i": 26468,
+      "i": 26618,
       "f": "Carrusel"
+     },
+     {
+      "d": "2026-11-25",
+      "i": 3449,
+      "f": "Foto"
      }
     ],
-    "delta7": 615,
+    "delta7": 512,
     "delta30": null
    },
-   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -1549,11 +1628,14 @@
     {
      "d": "2026-11-24",
      "f": 1203780
+    },
+    {
+     "d": "2026-11-25",
+     "f": 1203827
     }
    ],
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 0
    }
   },
   {
@@ -1564,14 +1646,14 @@
    "ig": {
     "usuario": "patobullrich",
     "nombre": "Patricia Bullrich",
-    "followers": 1111524,
-    "follows": 1727,
+    "followers": 1111521,
+    "follows": 1726,
     "media_count": 6132,
     "posts_30d": 25,
     "posts_semana": 5.8,
     "inter_med": 4915,
     "likes_med": 4040,
-    "com_med": 317,
+    "com_med": 318,
     "er": 0.442,
     "formatos": {
      "Reel": {
@@ -1581,33 +1663,33 @@
      },
      "Carrusel": {
       "n": 8,
-      "inter_med": 6225,
-      "er": 0.56
+      "inter_med": 6243,
+      "er": 0.562
      },
      "Foto": {
       "n": 2,
-      "inter_med": 8535,
+      "inter_med": 8536,
       "er": 0.768
      }
     },
     "mejor_formato": "Foto",
-    "mejor_dia": "mié",
+    "mejor_dia": "dom",
     "mejor_franja": 21,
     "franjas": {
      "06-09": 4657,
      "09-12": 3742,
      "12-15": 9225,
-     "15-18": 5635,
-     "18-21": 5250,
-     "21-24": 5847
+     "15-18": 5668,
+     "18-21": 5266,
+     "21-24": 5866
     },
     "dias": {
      "lun": 5553,
-     "mar": 5635,
-     "mié": 6816,
-     "jue": 2690,
+     "mar": 5668,
+     "mié": 6819,
+     "jue": 2715,
      "vie": 6133,
-     "dom": 6663
+     "dom": 6839
     },
     "temas": [
      "papa",
@@ -1629,21 +1711,21 @@
       "t": "Music Sessions #10/11 || PATRICIA BULLRICH & ??? 🔜",
       "u": "https://www.instagram.com/reel/Df90n6uRAAE/",
       "f": "Reel",
-      "i": 35214,
+      "i": 35372,
       "d": "2026-11-20"
      },
      {
       "t": "Hoy vivimos el inicio de un recorrido histórico y emocionante para la Argentina. Recibimos al Papa León XIV junto al Pre",
       "u": "https://www.instagram.com/p/DfgKdRTMvSf/",
       "f": "Foto",
-      "i": 13083,
+      "i": 13085,
       "d": "2026-11-08"
      },
      {
       "t": "Tenemos media sanción a la Ley de Salud Mental: Juan Roza Alconada.",
       "u": "https://www.instagram.com/reel/DfHXqf3R3N5/",
       "f": "Reel",
-      "i": 12120,
+      "i": 12130,
       "d": "2026-10-30"
      }
     ],
@@ -1665,7 +1747,7 @@
      },
      {
       "d": "2026-10-30",
-      "i": 12120,
+      "i": 12130,
       "f": "Reel"
      },
      {
@@ -1685,7 +1767,7 @@
      },
      {
       "d": "2026-11-03",
-      "i": 2688,
+      "i": 2690,
       "f": "Reel"
      },
      {
@@ -1700,12 +1782,12 @@
      },
      {
       "d": "2026-11-04",
-      "i": 6816,
+      "i": 6819,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-05",
-      "i": 820,
+      "i": 821,
       "f": "Carrusel"
      },
      {
@@ -1720,64 +1802,63 @@
      },
      {
       "d": "2026-11-08",
-      "i": 13083,
+      "i": 13085,
       "f": "Foto"
      },
      {
       "d": "2026-11-09",
-      "i": 8924,
+      "i": 8925,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-10",
-      "i": 9333,
+      "i": 9340,
       "f": "Reel"
      },
      {
       "d": "2026-11-17",
-      "i": 5635,
+      "i": 5668,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-17",
-      "i": 5847,
+      "i": 5866,
       "f": "Reel"
      },
      {
       "d": "2026-11-18",
-      "i": 7414,
+      "i": 7480,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-19",
-      "i": 1695,
+      "i": 1716,
       "f": "Reel"
      },
      {
       "d": "2026-11-19",
-      "i": 3685,
+      "i": 3714,
       "f": "Reel"
      },
      {
       "d": "2026-11-20",
-      "i": 35214,
+      "i": 35372,
       "f": "Reel"
      },
      {
       "d": "2026-11-22",
-      "i": 6,
+      "i": 8,
       "f": "Reel"
      },
      {
       "d": "2026-11-22",
-      "i": 6663,
+      "i": 6839,
       "f": "Reel"
      }
     ],
-    "delta7": 829,
+    "delta7": 777,
     "delta30": null
    },
-   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -1810,11 +1891,14 @@
     {
      "d": "2026-11-24",
      "f": 1111524
+    },
+    {
+     "d": "2026-11-25",
+     "f": 1111521
     }
    ],
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 0
    }
   },
   {
@@ -1825,24 +1909,24 @@
    "ig": {
     "usuario": "victoria.villarruel",
     "nombre": "Victoria Villarruel | Vicepresidente de Argentina",
-    "followers": 1302537,
+    "followers": 1302408,
     "follows": 94,
-    "media_count": 666,
-    "posts_30d": 6,
-    "posts_semana": 1.4,
-    "inter_med": 12636,
-    "likes_med": 12104,
-    "com_med": 539,
-    "er": 0.97,
+    "media_count": 667,
+    "posts_30d": 7,
+    "posts_semana": 1.6,
+    "inter_med": 8251,
+    "likes_med": 8006,
+    "com_med": 533,
+    "er": 0.634,
     "formatos": {
      "Carrusel": {
-      "n": 5,
-      "inter_med": 17023,
-      "er": 1.307
+      "n": 6,
+      "inter_med": 12783,
+      "er": 0.981
      },
      "Foto": {
       "n": 1,
-      "inter_med": 2251,
+      "inter_med": 2252,
       "er": 0.173
      }
     },
@@ -1850,27 +1934,28 @@
     "mejor_dia": "dom",
     "mejor_franja": 21,
     "franjas": {
-     "18-21": 6344,
-     "21-24": 17023
+     "18-21": 6364,
+     "21-24": 12783
     },
     "dias": {
-     "jue": 12636,
-     "vie": 17026,
-     "dom": 18269
+     "mar": 2983,
+     "jue": 12783,
+     "vie": 17028,
+     "dom": 18280
     },
     "temas": [
      "senado",
      "nacion",
      "trabajadores",
+     "argentina",
+     "historia",
+     "patrimonio",
+     "tambien",
+     "argentinos",
      "sesion",
      "nueva",
      "trabajo",
-     "noche",
-     "casa",
-     "parte",
-     "institucional",
-     "pais",
-     "visitantes"
+     "noche"
     ],
     "hashtags": [],
     "top": [
@@ -1878,60 +1963,64 @@
       "t": "Visité Reciclar, una empresa argentina con 32 años de trayectoria y 400 empleados, que recupera y procesa 30.000 tonelad",
       "u": "https://www.instagram.com/p/DfIgyvpmgb7/",
       "f": "Carrusel",
-      "i": 31802,
+      "i": 31805,
       "d": "2026-10-30"
      },
      {
       "t": "Bienvenido Su Santidad León XIV a la República Argentina. Que sus palabras se hagan carne y realidad para todos los arge",
       "u": "https://www.instagram.com/p/DfgJ8MnjfiQ/",
       "f": "Carrusel",
-      "i": 30194,
+      "i": 30197,
       "d": "2026-11-08"
      },
      {
       "t": "Hoy sesión en el Senado de la Nación con una agenda que incluye temas de relevancia institucional y legislativa. Se apro",
       "u": "https://www.instagram.com/p/Df8eHtVDcVe/",
       "f": "Carrusel",
-      "i": 17023,
+      "i": 17315,
       "d": "2026-11-19"
      }
     ],
     "serie": [
      {
       "d": "2026-10-29",
-      "i": 8250,
+      "i": 8251,
       "f": "Carrusel"
      },
      {
       "d": "2026-10-30",
-      "i": 31802,
+      "i": 31805,
       "f": "Carrusel"
      },
      {
       "d": "2026-10-30",
-      "i": 2251,
+      "i": 2252,
       "f": "Foto"
      },
      {
       "d": "2026-11-08",
-      "i": 30194,
+      "i": 30197,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-15",
-      "i": 6344,
+      "i": 6364,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-19",
-      "i": 17023,
+      "i": 17315,
+      "f": "Carrusel"
+     },
+     {
+      "d": "2026-11-24",
+      "i": 2983,
       "f": "Carrusel"
      }
     ],
-    "delta7": -1160,
+    "delta7": -1136,
     "delta30": null
    },
-   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -1964,11 +2053,14 @@
     {
      "d": "2026-11-24",
      "f": 1302537
+    },
+    {
+     "d": "2026-11-25",
+     "f": 1302408
     }
    ],
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 0
    }
   },
   {
@@ -1979,24 +2071,24 @@
    "ig": {
     "usuario": "todosobreroman10",
     "nombre": "Juan Román Riquelme",
-    "followers": 592825,
+    "followers": 592824,
     "follows": 31,
     "media_count": 155,
     "posts_30d": 0,
     "posts_semana": 0.3,
-    "inter_med": 32257,
-    "likes_med": 30485,
+    "inter_med": 32255,
+    "likes_med": 30483,
     "com_med": 554,
     "er": 5.441,
     "formatos": {
      "Carrusel": {
       "n": 13,
-      "inter_med": 89983,
+      "inter_med": 89982,
       "er": 15.179
      },
      "Foto": {
       "n": 14,
-      "inter_med": 44780,
+      "inter_med": 44779,
       "er": 7.554
      },
      "Reel": {
@@ -2010,20 +2102,20 @@
     "mejor_franja": 18,
     "franjas": {
      "00-03": 32721,
-     "09-12": 30584,
+     "09-12": 30582,
      "12-15": 22849,
-     "15-18": 50024,
-     "18-21": 51460,
-     "21-24": 44780
+     "15-18": 50034,
+     "18-21": 51462,
+     "21-24": 44779
     },
     "dias": {
      "lun": 25557,
-     "mar": 35671,
-     "mié": 50116,
-     "jue": 32257,
+     "mar": 35670,
+     "mié": 50117,
+     "jue": 32255,
      "vie": 19572,
      "sáb": 37715,
-     "dom": 44780
+     "dom": 44779
     },
     "temas": [
      "roman",
@@ -2050,93 +2142,93 @@
       "t": "Un partido para toda la vida 💙💛💙 📸 panchomonti",
       "u": "https://www.instagram.com/p/Ct9wpgiOBiY/",
       "f": "Carrusel",
-      "i": 331331,
+      "i": 331314,
       "d": "2023-06-26"
      },
      {
       "t": "En La Bombonera y para toda la vida 🤩 📸 micaelarostom",
       "u": "https://www.instagram.com/p/Ct-higQrVu2/",
       "f": "Carrusel",
-      "i": 261491,
+      "i": 261478,
       "d": "2023-06-26"
      },
      {
       "t": "Un domingo inolvidable 🤩 📸 chinasanjuann",
       "u": "https://www.instagram.com/p/CuAXHDsu24m/",
       "f": "Carrusel",
-      "i": 237406,
+      "i": 237394,
       "d": "2023-06-27"
      }
     ],
     "serie": [
      {
       "d": "2022-10-22",
-      "i": 92774,
+      "i": 92772,
       "f": "Carrusel"
      },
      {
       "d": "2023-03-07",
-      "i": 57180,
+      "i": 57179,
       "f": "Reel"
      },
      {
       "d": "2023-05-14",
-      "i": 90531,
+      "i": 90530,
       "f": "Carrusel"
      },
      {
       "d": "2023-05-15",
-      "i": 54117,
+      "i": 54115,
       "f": "Foto"
      },
      {
       "d": "2023-06-14",
-      "i": 149712,
+      "i": 149701,
       "f": "Foto"
      },
      {
       "d": "2023-06-14",
-      "i": 202146,
+      "i": 202137,
       "f": "Carrusel"
      },
      {
       "d": "2023-06-15",
-      "i": 84587,
+      "i": 84585,
       "f": "Reel"
      },
      {
       "d": "2023-06-26",
-      "i": 331331,
+      "i": 331314,
       "f": "Carrusel"
      },
      {
       "d": "2023-06-26",
-      "i": 261491,
+      "i": 261478,
       "f": "Carrusel"
      },
      {
       "d": "2023-06-27",
-      "i": 237406,
+      "i": 237394,
       "f": "Carrusel"
      },
      {
       "d": "2023-06-27",
-      "i": 192118,
+      "i": 192108,
       "f": "Reel"
      },
      {
       "d": "2023-06-29",
-      "i": 33026,
+      "i": 33023,
       "f": "Carrusel"
      },
      {
       "d": "2023-07-05",
-      "i": 60985,
+      "i": 60981,
       "f": "Reel"
      },
      {
       "d": "2023-07-12",
-      "i": 78095,
+      "i": 78088,
       "f": "Reel"
      },
      {
@@ -2181,7 +2273,7 @@
      },
      {
       "d": "2023-11-24",
-      "i": 18239,
+      "i": 18238,
       "f": "Reel"
      },
      {
@@ -2216,7 +2308,7 @@
      },
      {
       "d": "2023-11-29",
-      "i": 49722,
+      "i": 49723,
       "f": "Foto"
      },
      {
@@ -2231,42 +2323,42 @@
      },
      {
       "d": "2023-11-29",
-      "i": 12789,
+      "i": 12788,
       "f": "Foto"
      },
      {
       "d": "2023-12-01",
-      "i": 27518,
+      "i": 27517,
       "f": "Reel"
      },
      {
       "d": "2023-12-02",
-      "i": 30667,
+      "i": 30668,
       "f": "Reel"
      },
      {
       "d": "2023-12-03",
-      "i": 64916,
+      "i": 64915,
       "f": "Reel"
      },
      {
       "d": "2023-12-03",
-      "i": 67857,
+      "i": 67855,
       "f": "Reel"
      },
      {
       "d": "2023-12-03",
-      "i": 45485,
+      "i": 45484,
       "f": "Foto"
      },
      {
       "d": "2023-12-04",
-      "i": 30584,
+      "i": 30582,
       "f": "Carrusel"
      },
      {
       "d": "2023-12-13",
-      "i": 15428,
+      "i": 15429,
       "f": "Reel"
      },
      {
@@ -2281,12 +2373,12 @@
      },
      {
       "d": "2023-12-17",
-      "i": 56620,
+      "i": 56619,
       "f": "Reel"
      },
      {
       "d": "2023-12-17",
-      "i": 44076,
+      "i": 44075,
       "f": "Foto"
      },
      {
@@ -2296,84 +2388,83 @@
      },
      {
       "d": "2024-01-04",
-      "i": 31488,
+      "i": 31487,
       "f": "Carrusel"
      },
      {
       "d": "2024-02-15",
-      "i": 57186,
+      "i": 57184,
       "f": "Foto"
      },
      {
       "d": "2024-08-28",
-      "i": 50511,
+      "i": 50512,
       "f": "Reel"
      },
      {
       "d": "2024-09-03",
-      "i": 47663,
+      "i": 47661,
       "f": "Foto"
      },
      {
       "d": "2024-09-04",
-      "i": 56732,
+      "i": 56728,
       "f": "Carrusel"
      },
      {
       "d": "2024-09-11",
-      "i": 36919,
+      "i": 36920,
       "f": "Reel"
      },
      {
       "d": "2025-05-15",
-      "i": 15438,
+      "i": 15440,
       "f": "Foto"
      },
      {
       "d": "2025-06-13",
-      "i": 7966,
+      "i": 7967,
       "f": "Foto"
      },
      {
       "d": "2025-06-15",
-      "i": 14803,
+      "i": 14805,
       "f": "Foto"
      },
      {
       "d": "2025-06-15",
-      "i": 13818,
+      "i": 13821,
       "f": "Reel"
      },
      {
       "d": "2025-06-16",
-      "i": 89983,
+      "i": 89982,
       "f": "Carrusel"
      },
      {
       "d": "2025-06-17",
-      "i": 12998,
+      "i": 13000,
       "f": "Foto"
      },
      {
       "d": "2025-06-17",
-      "i": 22155,
+      "i": 22157,
       "f": "Carrusel"
      },
      {
       "d": "2025-06-19",
-      "i": 49537,
+      "i": 49557,
       "f": "Foto"
      },
      {
       "d": "2025-07-13",
-      "i": 41936,
+      "i": 41944,
       "f": "Carrusel"
      }
     ],
-    "delta7": 3199,
+    "delta7": 3284,
     "delta30": null
    },
-   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -2406,11 +2497,14 @@
     {
      "d": "2026-11-24",
      "f": 592825
+    },
+    {
+     "d": "2026-11-25",
+     "f": 592824
     }
    ],
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 0
    }
   },
   {
@@ -2421,48 +2515,48 @@
    "ig": {
     "usuario": "mauriciomacri",
     "nombre": "Mauricio Macri",
-    "followers": 1212526,
+    "followers": 1212387,
     "follows": 138,
     "media_count": 2690,
     "posts_30d": 2,
     "posts_semana": 1.1,
-    "inter_med": 18535,
-    "likes_med": 17236,
+    "inter_med": 18534,
+    "likes_med": 17235,
     "com_med": 774,
     "er": 1.529,
     "formatos": {
      "Carrusel": {
       "n": 15,
-      "inter_med": 19267,
+      "inter_med": 19266,
       "er": 1.589
      },
      "Foto": {
       "n": 33,
-      "inter_med": 20309,
+      "inter_med": 20310,
       "er": 1.675
      },
      "Reel": {
       "n": 12,
       "inter_med": 16992,
-      "er": 1.401
+      "er": 1.402
      }
     },
     "mejor_formato": "Foto",
     "mejor_dia": "mié",
     "mejor_franja": 21,
     "franjas": {
-     "00-03": 116246,
-     "09-12": 11799,
-     "12-15": 20309,
-     "15-18": 17040,
-     "18-21": 17937,
-     "21-24": 43020
+     "00-03": 116245,
+     "09-12": 11800,
+     "12-15": 20310,
+     "15-18": 17038,
+     "18-21": 17936,
+     "21-24": 43019
     },
     "dias": {
-     "lun": 27139,
-     "mar": 13647,
-     "mié": 38443,
-     "jue": 16310,
+     "lun": 27136,
+     "mar": 13648,
+     "mié": 38444,
+     "jue": 16309,
      "vie": 11492,
      "sáb": 15466,
      "dom": 26722
@@ -2487,43 +2581,43 @@
       "t": "En Nueva York esperando la final con Vozinha, con quien acordamos hacer un programa de fútbol y educación digital a trav",
       "u": "https://www.instagram.com/p/Da3VfevpuoP/",
       "f": "Foto",
-      "i": 248600,
+      "i": 248592,
       "d": "2026-07-16"
      },
      {
       "t": "Antes y después del casi infarto, desatando la alegría. Más que analizar cómo jugamos, hay que decirle GRACIAS a este gr",
       "u": "https://www.instagram.com/p/Dard2H7loap/",
       "f": "Carrusel",
-      "i": 116246,
+      "i": 116245,
       "d": "2026-07-12"
      },
      {
       "t": "Este fin de semana, el 7 de marzo, celebramos en la quinta el casamiento de mi sobrino Rodrigo con Emily, en el mismo lu",
       "u": "https://www.instagram.com/p/DVrc58eCRxh/",
       "f": "Foto",
-      "i": 115337,
+      "i": 115335,
       "d": "2026-03-09"
      }
     ],
     "serie": [
      {
       "d": "2025-10-21",
-      "i": 14581,
+      "i": 14580,
       "f": "Foto"
      },
      {
       "d": "2025-10-22",
-      "i": 31452,
+      "i": 31450,
       "f": "Foto"
      },
      {
       "d": "2025-10-26",
-      "i": 39798,
+      "i": 39797,
       "f": "Foto"
      },
      {
       "d": "2025-10-26",
-      "i": 60925,
+      "i": 60923,
       "f": "Foto"
      },
      {
@@ -2533,22 +2627,22 @@
      },
      {
       "d": "2025-11-13",
-      "i": 12532,
+      "i": 12533,
       "f": "Carrusel"
      },
      {
       "d": "2025-11-15",
-      "i": 11799,
+      "i": 11800,
       "f": "Foto"
      },
      {
       "d": "2025-11-17",
-      "i": 9872,
+      "i": 9873,
       "f": "Foto"
      },
      {
       "d": "2025-11-18",
-      "i": 13647,
+      "i": 13648,
       "f": "Foto"
      },
      {
@@ -2558,27 +2652,27 @@
      },
      {
       "d": "2025-11-28",
-      "i": 17675,
+      "i": 17676,
       "f": "Reel"
      },
      {
       "d": "2025-11-28",
-      "i": 58469,
+      "i": 58470,
       "f": "Reel"
      },
      {
       "d": "2025-11-29",
-      "i": 10438,
+      "i": 10439,
       "f": "Reel"
      },
      {
       "d": "2025-11-29",
-      "i": 25586,
+      "i": 25587,
       "f": "Reel"
      },
      {
       "d": "2025-11-29",
-      "i": 6972,
+      "i": 6973,
       "f": "Reel"
      },
      {
@@ -2588,17 +2682,17 @@
      },
      {
       "d": "2025-11-30",
-      "i": 11756,
+      "i": 11757,
       "f": "Reel"
      },
      {
       "d": "2025-11-30",
-      "i": 11542,
+      "i": 11543,
       "f": "Reel"
      },
      {
       "d": "2025-11-30",
-      "i": 19782,
+      "i": 19783,
       "f": "Reel"
      },
      {
@@ -2613,7 +2707,7 @@
      },
      {
       "d": "2025-12-20",
-      "i": 5677,
+      "i": 5678,
       "f": "Foto"
      },
      {
@@ -2623,7 +2717,7 @@
      },
      {
       "d": "2025-12-24",
-      "i": 40235,
+      "i": 40234,
       "f": "Foto"
      },
      {
@@ -2643,12 +2737,12 @@
      },
      {
       "d": "2026-02-26",
-      "i": 16310,
+      "i": 16309,
       "f": "Reel"
      },
      {
       "d": "2026-03-09",
-      "i": 115337,
+      "i": 115335,
       "f": "Foto"
      },
      {
@@ -2668,7 +2762,7 @@
      },
      {
       "d": "2026-06-05",
-      "i": 19267,
+      "i": 19266,
       "f": "Carrusel"
      },
      {
@@ -2678,12 +2772,12 @@
      },
      {
       "d": "2026-06-17",
-      "i": 15045,
+      "i": 15044,
       "f": "Foto"
      },
      {
       "d": "2026-06-18",
-      "i": 11038,
+      "i": 11037,
       "f": "Foto"
      },
      {
@@ -2693,32 +2787,32 @@
      },
      {
       "d": "2026-07-05",
-      "i": 20309,
+      "i": 20310,
       "f": "Foto"
      },
      {
       "d": "2026-07-08",
-      "i": 38443,
+      "i": 38444,
       "f": "Foto"
      },
      {
       "d": "2026-07-11",
-      "i": 20985,
+      "i": 20984,
       "f": "Foto"
      },
      {
       "d": "2026-07-12",
-      "i": 116246,
+      "i": 116245,
       "f": "Carrusel"
      },
      {
       "d": "2026-07-15",
-      "i": 57825,
+      "i": 57824,
       "f": "Foto"
      },
      {
       "d": "2026-07-16",
-      "i": 248600,
+      "i": 248592,
       "f": "Foto"
      },
      {
@@ -2728,17 +2822,17 @@
      },
      {
       "d": "2026-07-20",
-      "i": 27139,
+      "i": 27136,
       "f": "Foto"
      },
      {
       "d": "2026-08-21",
-      "i": 17937,
+      "i": 17936,
       "f": "Foto"
      },
      {
       "d": "2026-08-31",
-      "i": 33085,
+      "i": 33086,
       "f": "Foto"
      },
      {
@@ -2748,12 +2842,12 @@
      },
      {
       "d": "2026-09-12",
-      "i": 62991,
+      "i": 62990,
       "f": "Reel"
      },
      {
       "d": "2026-09-17",
-      "i": 13095,
+      "i": 13093,
       "f": "Carrusel"
      },
      {
@@ -2763,27 +2857,27 @@
      },
      {
       "d": "2026-09-20",
-      "i": 97736,
+      "i": 97726,
       "f": "Foto"
      },
      {
       "d": "2026-09-25",
-      "i": 6859,
+      "i": 6860,
       "f": "Foto"
      },
      {
       "d": "2026-09-25",
-      "i": 10073,
+      "i": 10072,
       "f": "Carrusel"
      },
      {
       "d": "2026-09-25",
-      "i": 5537,
+      "i": 5539,
       "f": "Foto"
      },
      {
       "d": "2026-10-10",
-      "i": 89930,
+      "i": 89924,
       "f": "Carrusel"
      },
      {
@@ -2793,24 +2887,23 @@
      },
      {
       "d": "2026-10-24",
-      "i": 67386,
+      "i": 67389,
       "f": "Foto"
      },
      {
       "d": "2026-11-13",
-      "i": 27648,
+      "i": 27787,
       "f": "Foto"
      },
      {
       "d": "2026-11-20",
-      "i": 8170,
+      "i": 8285,
       "f": "Carrusel"
      }
     ],
-    "delta7": -1029,
+    "delta7": -1063,
     "delta30": null
    },
-   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -2843,11 +2936,14 @@
     {
      "d": "2026-11-24",
      "f": 1212526
+    },
+    {
+     "d": "2026-11-25",
+     "f": 1212387
     }
    ],
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 0
    }
   },
   {
@@ -2858,15 +2954,15 @@
    "ig": {
     "usuario": "andreshibarra",
     "nombre": "Andrés Ibarra",
-    "followers": 19651,
+    "followers": 19650,
     "follows": 407,
     "media_count": 551,
     "posts_30d": 6,
     "posts_semana": 1.4,
-    "inter_med": 438,
-    "likes_med": 387,
+    "inter_med": 443,
+    "likes_med": 391,
     "com_med": 29,
-    "er": 2.231,
+    "er": 2.254,
     "formatos": {
      "Foto": {
       "n": 5,
@@ -2875,21 +2971,21 @@
      },
      "Carrusel": {
       "n": 1,
-      "inter_med": 851,
-      "er": 4.331
+      "inter_med": 861,
+      "er": 4.382
      }
     },
     "mejor_formato": "Carrusel",
     "mejor_dia": "sáb",
-    "mejor_franja": 18,
+    "mejor_franja": 21,
     "franjas": {
-     "09-12": 851,
+     "09-12": 861,
      "12-15": 3,
-     "18-21": 440,
-     "21-24": 438
+     "18-21": 441,
+     "21-24": 443
     },
     "dias": {
-     "sáb": 488,
+     "sáb": 497,
      "dom": 261
     },
     "temas": [
@@ -2912,21 +3008,21 @@
       "t": "Feliz cumpleaños al gran goleador y a una enorme persona. Tantos goles, tantas alegrías y tantos momentos que van a qued",
       "u": "https://www.instagram.com/p/DfcWegMmxJF/",
       "f": "Carrusel",
-      "i": 851,
+      "i": 861,
       "d": "2026-11-07"
      },
      {
       "t": "ASÍ SE JUEGAN UNAS SEMIS. Excelente Boca, identidad de juego, ganando como se debe ganar. Partidazo. A la final 💙💛💙",
       "u": "https://www.instagram.com/p/DfvbXVNMsXp/",
       "f": "Foto",
-      "i": 620,
+      "i": 621,
       "d": "2026-11-14"
      },
      {
       "t": "CAMPEONES DE PUNTA A PUNTA. Así se juegan las finales. Excelente BOCA QUERIDO. Gracias por esta enorme alegría. Otra vez",
       "u": "https://www.instagram.com/p/DgBmtSGsgzC/",
       "f": "Foto",
-      "i": 488,
+      "i": 497,
       "d": "2026-11-21"
      }
     ],
@@ -2938,7 +3034,7 @@
      },
      {
       "d": "2026-11-07",
-      "i": 851,
+      "i": 861,
       "f": "Carrusel"
      },
      {
@@ -2948,7 +3044,7 @@
      },
      {
       "d": "2026-11-14",
-      "i": 620,
+      "i": 621,
       "f": "Foto"
      },
      {
@@ -2958,14 +3054,13 @@
      },
      {
       "d": "2026-11-21",
-      "i": 488,
+      "i": 497,
       "f": "Foto"
      }
     ],
-    "delta7": -31,
+    "delta7": -29,
     "delta30": null
    },
-   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -2998,11 +3093,14 @@
     {
      "d": "2026-11-24",
      "f": 19651
+    },
+    {
+     "d": "2026-11-25",
+     "f": 19650
     }
    ],
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 0
    }
   },
   {
@@ -3013,7 +3111,7 @@
    "ig": {
     "usuario": "diegosantilliok",
     "nombre": "Diego Santilli",
-    "followers": 230842,
+    "followers": 230836,
     "follows": 68,
     "media_count": 2771,
     "posts_30d": 0,
@@ -3043,17 +3141,17 @@
     "mejor_dia": "dom",
     "mejor_franja": 0,
     "franjas": {
-     "00-03": 52986,
+     "00-03": 52985,
      "06-09": 2861,
-     "09-12": 3853,
+     "09-12": 3852,
      "12-15": 5915,
-     "15-18": 3506,
-     "18-21": 3779,
+     "15-18": 3505,
+     "18-21": 3778,
      "21-24": 7254
     },
     "dias": {
      "lun": 9707,
-     "mar": 4679,
+     "mar": 4678,
      "mié": 2113,
      "jue": 2359,
      "vie": 3382,
@@ -3082,7 +3180,7 @@
       "t": "¡GANAMOS LA PROVINCIA DE BUENOS AIRES! VAMOS CARAJO QUE OTRA PROVINCIA ES POSIBLE.",
       "u": "https://www.instagram.com/reel/DQTCkpsEQKm/",
       "f": "Reel",
-      "i": 97517,
+      "i": 97514,
       "d": "2025-10-27"
      },
      {
@@ -3096,7 +3194,7 @@
       "t": "Con mi amor, mis hijos y mi familia, los que siempre están bancando. Hoy, en un nuevo desafío y una responsabilidad que ",
       "u": "https://www.instagram.com/p/DQ8EPgwkVO9/",
       "f": "Carrusel",
-      "i": 42226,
+      "i": 42225,
       "d": "2025-11-11"
      }
     ],
@@ -3148,7 +3246,7 @@
      },
      {
       "d": "2025-10-07",
-      "i": 3323,
+      "i": 3322,
       "f": "Reel"
      },
      {
@@ -3158,7 +3256,7 @@
      },
      {
       "d": "2025-10-08",
-      "i": 7621,
+      "i": 7620,
       "f": "Foto"
      },
      {
@@ -3183,12 +3281,12 @@
      },
      {
       "d": "2025-10-16",
-      "i": 4539,
+      "i": 4538,
       "f": "Reel"
      },
      {
       "d": "2025-10-16",
-      "i": 10557,
+      "i": 10555,
       "f": "Foto"
      },
      {
@@ -3213,7 +3311,7 @@
      },
      {
       "d": "2025-10-19",
-      "i": 3592,
+      "i": 3591,
       "f": "Reel"
      },
      {
@@ -3228,7 +3326,7 @@
      },
      {
       "d": "2025-10-21",
-      "i": 4327,
+      "i": 4326,
       "f": "Reel"
      },
      {
@@ -3303,7 +3401,7 @@
      },
      {
       "d": "2025-10-27",
-      "i": 97517,
+      "i": 97514,
       "f": "Reel"
      },
      {
@@ -3333,7 +3431,7 @@
      },
      {
       "d": "2025-11-11",
-      "i": 42226,
+      "i": 42225,
       "f": "Carrusel"
      },
      {
@@ -3358,7 +3456,7 @@
      },
      {
       "d": "2026-01-03",
-      "i": 10435,
+      "i": 10434,
       "f": "Reel"
      },
      {
@@ -3398,14 +3496,13 @@
      },
      {
       "d": "2026-06-30",
-      "i": 5834,
+      "i": 5833,
       "f": "Reel"
      }
     ],
-    "delta7": -84,
+    "delta7": -73,
     "delta30": null
    },
-   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -3438,11 +3535,14 @@
     {
      "d": "2026-11-24",
      "f": 230842
+    },
+    {
+     "d": "2026-11-25",
+     "f": 230836
     }
    ],
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 0
    }
   },
   {
@@ -3453,15 +3553,15 @@
    "ig": {
     "usuario": "veronicamagario",
     "nombre": "Verónica Magario",
-    "followers": 216646,
-    "follows": 167,
+    "followers": 216645,
+    "follows": 168,
     "media_count": 3768,
     "posts_30d": 14,
     "posts_semana": 3.3,
-    "inter_med": 483,
-    "likes_med": 453,
-    "com_med": 30,
-    "er": 0.223,
+    "inter_med": 486,
+    "likes_med": 456,
+    "com_med": 31,
+    "er": 0.224,
     "formatos": {
      "Reel": {
       "n": 6,
@@ -3470,26 +3570,26 @@
      },
      "Carrusel": {
       "n": 8,
-      "inter_med": 544,
-      "er": 0.251
+      "inter_med": 546,
+      "er": 0.252
      }
     },
     "mejor_formato": "Carrusel",
     "mejor_dia": "jue",
     "mejor_franja": 15,
     "franjas": {
-     "09-12": 2372,
-     "12-15": 266,
+     "09-12": 2373,
+     "12-15": 268,
      "15-18": 586,
-     "18-21": 483
+     "18-21": 486
     },
     "dias": {
      "lun": 438,
      "mar": 586,
-     "mié": 364,
-     "jue": 717,
-     "vie": 639,
-     "sáb": 436
+     "mié": 368,
+     "jue": 719,
+     "vie": 645,
+     "sáb": 437
     },
     "temas": [
      "desarrollo",
@@ -3515,33 +3615,33 @@
       "t": "Es posible soñar por un país más justo. Néstor nos lo demostró trabajando con coraje, compromiso y decisión política, ll",
       "u": "https://www.instagram.com/reel/De_7FVrS-za/",
       "f": "Reel",
-      "i": 2372,
+      "i": 2373,
       "d": "2026-10-27"
      },
      {
       "t": "Gracias Papa León XIV por llenar nuestros corazones de fe y esperanza, por escuchar a los excluidos, por reconocer la so",
       "u": "https://www.instagram.com/p/DfnMwypnylT/",
       "f": "Carrusel",
-      "i": 1359,
+      "i": 1363,
       "d": "2026-11-11"
      },
      {
       "t": "Nuestro país tiene mucha gente que quiere trabajar, estudiar y tener una vida digna, pero el modelo nacional los empobre",
       "u": "https://www.instagram.com/p/Df71dA4nxvI/",
       "f": "Carrusel",
-      "i": 1006,
+      "i": 1031,
       "d": "2026-11-19"
      }
     ],
     "serie": [
      {
       "d": "2026-10-27",
-      "i": 2372,
+      "i": 2373,
       "f": "Reel"
      },
      {
       "d": "2026-10-29",
-      "i": 970,
+      "i": 973,
       "f": "Reel"
      },
      {
@@ -3561,17 +3661,17 @@
      },
      {
       "d": "2026-11-11",
-      "i": 1359,
+      "i": 1363,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-13",
-      "i": 639,
+      "i": 645,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-14",
-      "i": 436,
+      "i": 437,
       "f": "Reel"
      },
      {
@@ -3581,34 +3681,33 @@
      },
      {
       "d": "2026-11-18",
-      "i": 96,
+      "i": 99,
       "f": "Reel"
      },
      {
       "d": "2026-11-18",
-      "i": 502,
+      "i": 507,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-18",
-      "i": 227,
+      "i": 229,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-19",
-      "i": 1006,
+      "i": 1031,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-24",
-      "i": 144,
+      "i": 292,
       "f": "Reel"
      }
     ],
-    "delta7": -38,
+    "delta7": -40,
     "delta30": null
    },
-   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -3641,11 +3740,14 @@
     {
      "d": "2026-11-24",
      "f": 216646
+    },
+    {
+     "d": "2026-11-25",
+     "f": 216645
     }
    ],
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 0
    }
   },
   {
@@ -3656,15 +3758,15 @@
    "ig": {
     "usuario": "zamora.julio",
     "nombre": "Julio Zamora",
-    "followers": 59554,
+    "followers": 59566,
     "follows": 159,
-    "media_count": 3997,
+    "media_count": 3998,
     "posts_30d": 28,
     "posts_semana": 6.5,
-    "inter_med": 173,
-    "likes_med": 169,
-    "com_med": 5,
-    "er": 0.291,
+    "inter_med": 166,
+    "likes_med": 164,
+    "com_med": 4,
+    "er": 0.28,
     "formatos": {
      "Reel": {
       "n": 23,
@@ -3682,33 +3784,33 @@
     "mejor_franja": 12,
     "franjas": {
      "09-12": 93,
-     "12-15": 320,
+     "12-15": 325,
      "15-18": 118,
-     "18-21": 195,
-     "21-24": 196
+     "18-21": 187,
+     "21-24": 171
     },
     "dias": {
      "lun": 189,
-     "mar": 101,
+     "mar": 97,
      "mié": 356,
      "jue": 224,
-     "vie": 173,
-     "sáb": 537,
-     "dom": 178
+     "vie": 174,
+     "sáb": 547,
+     "dom": 162
     },
     "temas": [
      "distrito",
      "comunidad",
      "tigremunicipio",
-     "mira",
-     "hicimos",
-     "semana",
      "compromiso",
      "aniversario",
      "encuentro",
      "jovenes",
      "chicos",
-     "chicas"
+     "chicas",
+     "mira",
+     "hicimos",
+     "semana"
     ],
     "hashtags": [
      "tigreesmivida",
@@ -3725,7 +3827,7 @@
       "t": "En las últimas horas se han difundido noticias falsas acerca de intervenciones del servicio local de infancia y de niños",
       "u": "https://www.instagram.com/reel/DfapUJqKi6z/",
       "f": "Reel",
-      "i": 1347,
+      "i": 1349,
       "d": "2026-11-06"
      },
      {
@@ -3745,13 +3847,8 @@
     ],
     "serie": [
      {
-      "d": "2026-10-25",
-      "i": 195,
-      "f": "Reel"
-     },
-     {
       "d": "2026-10-26",
-      "i": 451,
+      "i": 452,
       "f": "Reel"
      },
      {
@@ -3761,7 +3858,7 @@
      },
      {
       "d": "2026-10-30",
-      "i": 176,
+      "i": 177,
       "f": "Reel"
      },
      {
@@ -3801,7 +3898,7 @@
      },
      {
       "d": "2026-11-06",
-      "i": 1347,
+      "i": 1349,
       "f": "Reel"
      },
      {
@@ -3846,7 +3943,7 @@
      },
      {
       "d": "2026-11-16",
-      "i": 157,
+      "i": 158,
       "f": "Foto"
      },
      {
@@ -3861,34 +3958,38 @@
      },
      {
       "d": "2026-11-20",
-      "i": 57,
+      "i": 58,
       "f": "Foto"
      },
      {
       "d": "2026-11-21",
-      "i": 537,
+      "i": 547,
       "f": "Reel"
      },
      {
       "d": "2026-11-22",
-      "i": 40,
+      "i": 41,
       "f": "Foto"
      },
      {
       "d": "2026-11-22",
-      "i": 146,
+      "i": 147,
       "f": "Reel"
      },
      {
       "d": "2026-11-23",
-      "i": 131,
+      "i": 141,
+      "f": "Reel"
+     },
+     {
+      "d": "2026-11-24",
+      "i": 46,
       "f": "Reel"
      }
     ],
-    "delta7": 63,
+    "delta7": 69,
     "delta30": null
    },
-   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -3921,11 +4022,65 @@
     {
      "d": "2026-11-24",
      "f": 59554
+    },
+    {
+     "d": "2026-11-25",
+     "f": 59566
     }
    ],
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 6,
+    "activos": 0,
+    "gasto": [
+     72500,
+     93494
+    ],
+    "impresiones": [
+     135000,
+     161994
+    ],
+    "moneda": "ARS",
+    "regiones": {
+     "Buenos Aires": 100.0
+    },
+    "edades": {
+     "25-34": 31.2,
+     "18-24": 26.0,
+     "35-44": 14.2,
+     "45-54": 11.5,
+     "55-64": 9.8,
+     "65+": 7.2,
+     "Unknown": 0.0
+    },
+    "genero": {
+     "male": 50.5,
+     "female": 49.1,
+     "unknown": 0.4
+    },
+    "plataformas": {
+     "facebook": 4,
+     "instagram": 2
+    },
+    "paginas": {
+     "Julio Zamora": 6
+    },
+    "avisos": [
+     {
+      "t": "This ad ran without a required disclaimer.",
+      "d": "2026-09-14",
+      "u": "https://www.facebook.com/ads/library/?id=1786466802385593"
+     },
+     {
+      "t": "This ad ran without a required disclaimer.",
+      "d": "2026-09-14",
+      "u": "https://www.facebook.com/ads/library/?id=2129770151278764"
+     },
+     {
+      "t": "This ad ran without a required disclaimer.",
+      "d": "2026-08-27",
+      "u": "https://www.facebook.com/ads/library/?id=1567074414367857"
+     }
+    ]
    }
   },
   {
@@ -3936,49 +4091,49 @@
    "ig": {
     "usuario": "malenagalmarini",
     "nombre": "Malena Galmarini",
-    "followers": 113682,
-    "follows": 1560,
-    "media_count": 2044,
-    "posts_30d": 1,
+    "followers": 113690,
+    "follows": 1561,
+    "media_count": 2045,
+    "posts_30d": 2,
     "posts_semana": 0.6,
     "inter_med": 1675,
     "likes_med": 1589,
-    "com_med": 66,
-    "er": 1.474,
+    "com_med": 69,
+    "er": 1.473,
     "formatos": {
-     "Carrusel": {
-      "n": 12,
-      "inter_med": 2114,
-      "er": 1.86
-     },
      "Reel": {
       "n": 42,
-      "inter_med": 1507,
-      "er": 1.326
+      "inter_med": 1508,
+      "er": 1.327
+     },
+     "Carrusel": {
+      "n": 12,
+      "inter_med": 2113,
+      "er": 1.859
      },
      "Foto": {
       "n": 6,
       "inter_med": 1710,
-      "er": 1.504
+      "er": 1.505
      }
     },
     "mejor_formato": "Carrusel",
-    "mejor_dia": "jue",
+    "mejor_dia": "vie",
     "mejor_franja": 0,
     "franjas": {
      "00-03": 2516,
-     "09-12": 1687,
-     "12-15": 1453,
-     "15-18": 2341,
-     "18-21": 1664,
+     "09-12": 1686,
+     "12-15": 1587,
+     "15-18": 2340,
+     "18-21": 1601,
      "21-24": 1141
     },
     "dias": {
      "lun": 1764,
-     "mar": 2043,
+     "mar": 1855,
      "mié": 1693,
      "jue": 2225,
-     "vie": 2027,
+     "vie": 2516,
      "sáb": 820,
      "dom": 1320
     },
@@ -4030,11 +4185,6 @@
      }
     ],
     "serie": [
-     {
-      "d": "2024-12-06",
-      "i": 363,
-      "f": "Reel"
-     },
      {
       "d": "2024-12-20",
       "i": 5382,
@@ -4112,17 +4262,17 @@
      },
      {
       "d": "2025-04-04",
-      "i": 791,
+      "i": 790,
       "f": "Reel"
      },
      {
       "d": "2025-04-15",
-      "i": 3186,
+      "i": 3187,
       "f": "Reel"
      },
      {
       "d": "2025-04-16",
-      "i": 2217,
+      "i": 2218,
       "f": "Reel"
      },
      {
@@ -4132,12 +4282,12 @@
      },
      {
       "d": "2025-06-20",
-      "i": 1539,
+      "i": 1538,
       "f": "Foto"
      },
      {
       "d": "2025-07-11",
-      "i": 3408,
+      "i": 3407,
       "f": "Carrusel"
      },
      {
@@ -4147,7 +4297,7 @@
      },
      {
       "d": "2025-08-05",
-      "i": 1856,
+      "i": 1855,
       "f": "Reel"
      },
      {
@@ -4202,12 +4352,12 @@
      },
      {
       "d": "2026-02-26",
-      "i": 2763,
+      "i": 2764,
       "f": "Reel"
      },
      {
       "d": "2026-03-01",
-      "i": 431,
+      "i": 432,
       "f": "Reel"
      },
      {
@@ -4222,7 +4372,7 @@
      },
      {
       "d": "2026-04-02",
-      "i": 1687,
+      "i": 1686,
       "f": "Reel"
      },
      {
@@ -4232,7 +4382,7 @@
      },
      {
       "d": "2026-05-12",
-      "i": 3531,
+      "i": 3530,
       "f": "Reel"
      },
      {
@@ -4262,7 +4412,7 @@
      },
      {
       "d": "2026-06-16",
-      "i": 1019,
+      "i": 1020,
       "f": "Carrusel"
      },
      {
@@ -4272,17 +4422,17 @@
      },
      {
       "d": "2026-06-29",
-      "i": 1311,
+      "i": 1312,
       "f": "Reel"
      },
      {
       "d": "2026-07-26",
-      "i": 1586,
+      "i": 1587,
       "f": "Foto"
      },
      {
       "d": "2026-08-04",
-      "i": 2465,
+      "i": 2463,
       "f": "Carrusel"
      },
      {
@@ -4292,12 +4442,12 @@
      },
      {
       "d": "2026-08-06",
-      "i": 2943,
+      "i": 2942,
       "f": "Reel"
      },
      {
       "d": "2026-08-08",
-      "i": 2871,
+      "i": 2870,
       "f": "Reel"
      },
      {
@@ -4307,12 +4457,12 @@
      },
      {
       "d": "2026-09-22",
-      "i": 1514,
+      "i": 1516,
       "f": "Reel"
      },
      {
       "d": "2026-10-07",
-      "i": 1257,
+      "i": 1258,
       "f": "Carrusel"
      },
      {
@@ -4327,14 +4477,18 @@
      },
      {
       "d": "2026-11-13",
-      "i": 561,
+      "i": 564,
       "f": "Carrusel"
+     },
+     {
+      "d": "2026-11-24",
+      "i": 1265,
+      "f": "Reel"
      }
     ],
-    "delta7": -11,
+    "delta7": -9,
     "delta30": null
    },
-   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -4367,11 +4521,14 @@
     {
      "d": "2026-11-24",
      "f": 113682
+    },
+    {
+     "d": "2026-11-25",
+     "f": 113690
     }
    ],
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 0
    }
   },
   {
@@ -4382,51 +4539,51 @@
    "ig": {
     "usuario": "jorgemacri",
     "nombre": "Jorge Macri",
-    "followers": 273405,
+    "followers": 273544,
     "follows": 679,
     "media_count": 4353,
     "posts_30d": 52,
     "posts_semana": 12.1,
-    "inter_med": 4452,
-    "likes_med": 3952,
-    "com_med": 364,
-    "er": 1.629,
+    "inter_med": 4476,
+    "likes_med": 3963,
+    "com_med": 393,
+    "er": 1.636,
     "formatos": {
      "Reel": {
       "n": 31,
-      "inter_med": 5403,
+      "inter_med": 5404,
       "er": 1.976
      },
      "Carrusel": {
       "n": 12,
-      "inter_med": 3435,
+      "inter_med": 3438,
       "er": 1.257
      },
      "Foto": {
       "n": 9,
-      "inter_med": 4047,
-      "er": 1.48
+      "inter_med": 4249,
+      "er": 1.553
      }
     },
     "mejor_formato": "Reel",
     "mejor_dia": "dom",
     "mejor_franja": 6,
     "franjas": {
-     "00-03": 18648,
-     "06-09": 7530,
-     "09-12": 7347,
-     "12-15": 2244,
-     "15-18": 5002,
-     "18-21": 4722,
-     "21-24": 6813
+     "00-03": 18652,
+     "06-09": 7531,
+     "09-12": 7360,
+     "12-15": 2246,
+     "15-18": 5099,
+     "18-21": 4842,
+     "21-24": 6817
     },
     "dias": {
-     "lun": 11894,
-     "mar": 4699,
-     "mié": 2431,
-     "jue": 4047,
+     "lun": 11897,
+     "mar": 4703,
+     "mié": 2433,
+     "jue": 4249,
      "vie": 1627,
-     "sáb": 7913,
+     "sáb": 7967,
      "dom": 14637
     },
     "temas": [
@@ -4449,22 +4606,22 @@
       "t": "Qué honor que me putee un trapito. Un gran indicio de que vamos por el buen camino. Ley y orden.",
       "u": "https://www.instagram.com/reel/DfUwwtExAtW/",
       "f": "Reel",
-      "i": 47697,
+      "i": 48180,
       "d": "2026-11-04"
      },
      {
       "t": "EMOCIONANTE!! Más de 2 millones de personas en la Ciudad recibiendo al Papa León XIV.",
       "u": "https://www.instagram.com/reel/Dfhvv-1xDw0/",
       "f": "Reel",
-      "i": 43476,
+      "i": 43480,
       "d": "2026-11-09"
      },
      {
-      "t": "Vito en la Santa Misa ❤️❤️❤️",
-      "u": "https://www.instagram.com/reel/DfhzucUxIA9/",
+      "t": "Si sos trapito, vas preso. Ley y orden.",
+      "u": "https://www.instagram.com/reel/DgH-TGox32k/",
       "f": "Reel",
-      "i": 28514,
-      "d": "2026-11-09"
+      "i": 35107,
+      "d": "2026-11-24"
      }
     ],
     "serie": [
@@ -4475,7 +4632,7 @@
      },
      {
       "d": "2026-10-28",
-      "i": 2266,
+      "i": 2267,
       "f": "Reel"
      },
      {
@@ -4485,22 +4642,22 @@
      },
      {
       "d": "2026-10-28",
-      "i": 8449,
+      "i": 8451,
       "f": "Foto"
      },
      {
       "d": "2026-10-28",
-      "i": 2482,
+      "i": 2484,
       "f": "Reel"
      },
      {
       "d": "2026-10-29",
-      "i": 2095,
+      "i": 2097,
       "f": "Reel"
      },
      {
       "d": "2026-10-29",
-      "i": 6538,
+      "i": 6541,
       "f": "Carrusel"
      },
      {
@@ -4520,42 +4677,42 @@
      },
      {
       "d": "2026-11-02",
-      "i": 10489,
+      "i": 10493,
       "f": "Foto"
      },
      {
       "d": "2026-11-02",
-      "i": 5960,
+      "i": 5961,
       "f": "Reel"
      },
      {
       "d": "2026-11-03",
-      "i": 4699,
+      "i": 4703,
       "f": "Reel"
      },
      {
       "d": "2026-11-03",
-      "i": 12170,
+      "i": 12182,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-04",
-      "i": 47697,
+      "i": 48180,
       "f": "Reel"
      },
      {
       "d": "2026-11-06",
-      "i": 1846,
+      "i": 1848,
       "f": "Foto"
      },
      {
       "d": "2026-11-06",
-      "i": 4049,
+      "i": 4054,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-08",
-      "i": 2244,
+      "i": 2246,
       "f": "Foto"
      },
      {
@@ -4565,32 +4722,32 @@
      },
      {
       "d": "2026-11-08",
-      "i": 15766,
+      "i": 15767,
       "f": "Foto"
      },
      {
       "d": "2026-11-08",
-      "i": 16735,
+      "i": 16736,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-08",
-      "i": 5403,
+      "i": 5404,
       "f": "Reel"
      },
      {
       "d": "2026-11-08",
-      "i": 12286,
+      "i": 12287,
       "f": "Reel"
      },
      {
       "d": "2026-11-09",
-      "i": 13299,
+      "i": 13301,
       "f": "Reel"
      },
      {
       "d": "2026-11-09",
-      "i": 43476,
+      "i": 43480,
       "f": "Reel"
      },
      {
@@ -4600,139 +4757,138 @@
      },
      {
       "d": "2026-11-09",
-      "i": 28514,
+      "i": 28521,
       "f": "Reel"
      },
      {
       "d": "2026-11-09",
-      "i": 1494,
+      "i": 1496,
       "f": "Foto"
      },
      {
       "d": "2026-11-09",
-      "i": 25015,
+      "i": 25024,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-09",
-      "i": 4063,
+      "i": 4064,
       "f": "Reel"
      },
      {
       "d": "2026-11-11",
-      "i": 2380,
+      "i": 2382,
       "f": "Reel"
      },
      {
       "d": "2026-11-12",
-      "i": 1657,
+      "i": 1667,
       "f": "Reel"
      },
      {
       "d": "2026-11-14",
-      "i": 8224,
+      "i": 8230,
       "f": "Reel"
      },
      {
       "d": "2026-11-15",
-      "i": 18648,
+      "i": 18652,
       "f": "Reel"
      },
      {
       "d": "2026-11-16",
-      "i": 4206,
+      "i": 4228,
       "f": "Reel"
      },
      {
       "d": "2026-11-17",
-      "i": 1152,
+      "i": 1156,
       "f": "Reel"
      },
      {
       "d": "2026-11-17",
-      "i": 8626,
+      "i": 8694,
       "f": "Reel"
      },
      {
       "d": "2026-11-18",
-      "i": 13794,
+      "i": 14197,
       "f": "Reel"
      },
      {
       "d": "2026-11-18",
-      "i": 1914,
+      "i": 1928,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-18",
-      "i": 9240,
+      "i": 9407,
       "f": "Reel"
      },
      {
       "d": "2026-11-19",
-      "i": 2987,
+      "i": 3022,
       "f": "Reel"
      },
      {
       "d": "2026-11-19",
-      "i": 5306,
+      "i": 5495,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-19",
-      "i": 4047,
+      "i": 4249,
       "f": "Foto"
      },
      {
       "d": "2026-11-19",
-      "i": 5382,
+      "i": 5435,
       "f": "Foto"
      },
      {
       "d": "2026-11-20",
-      "i": 2308,
+      "i": 2331,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-20",
-      "i": 262,
+      "i": 265,
       "f": "Reel"
      },
      {
       "d": "2026-11-20",
-      "i": 1138,
+      "i": 1162,
       "f": "Foto"
      },
      {
       "d": "2026-11-20",
-      "i": 1310,
+      "i": 1361,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-21",
-      "i": 7602,
+      "i": 7705,
       "f": "Reel"
      },
      {
       "d": "2026-11-24",
-      "i": 27853,
+      "i": 35107,
       "f": "Reel"
      },
      {
       "d": "2026-11-24",
-      "i": 929,
+      "i": 1535,
       "f": "Carrusel"
      },
      {
       "d": "2026-11-24",
-      "i": 756,
+      "i": 2545,
       "f": "Reel"
      }
     ],
-    "delta7": 959,
+    "delta7": 1000,
     "delta30": null
    },
-   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -4765,11 +4921,41 @@
     {
      "d": "2026-11-24",
      "f": 273405
+    },
+    {
+     "d": "2026-11-25",
+     "f": 273544
     }
    ],
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 1,
+    "activos": 0,
+    "gasto": [
+     200,
+     299
+    ],
+    "impresiones": [
+     0,
+     99
+    ],
+    "moneda": "ARS",
+    "regiones": {},
+    "edades": {},
+    "genero": {},
+    "plataformas": {
+     "facebook": 1,
+     "instagram": 1
+    },
+    "paginas": {
+     "Jorge Macri FANS": 1
+    },
+    "avisos": [
+     {
+      "t": "This ad ran without a required disclaimer.",
+      "d": "2026-08-27",
+      "u": "https://www.facebook.com/ads/library/?id=1075401625033145"
+     }
+    ]
    }
   },
   {
@@ -4780,57 +4966,57 @@
    "ig": {
     "usuario": "leandrosantorook",
     "nombre": "Leandro Santoro",
-    "followers": 650526,
-    "follows": 686,
+    "followers": 651881,
+    "follows": 687,
     "media_count": 932,
-    "posts_30d": 14,
-    "posts_semana": 3.3,
-    "inter_med": 26439,
-    "likes_med": 24560,
-    "com_med": 1054,
-    "er": 4.064,
+    "posts_30d": 12,
+    "posts_semana": 2.8,
+    "inter_med": 24833,
+    "likes_med": 23504,
+    "com_med": 1329,
+    "er": 3.81,
     "formatos": {
      "Reel": {
-      "n": 12,
-      "inter_med": 26669,
-      "er": 4.1
+      "n": 11,
+      "inter_med": 26031,
+      "er": 3.993
      },
      "Foto": {
-      "n": 2,
-      "inter_med": 25365,
-      "er": 3.899
+      "n": 1,
+      "inter_med": 21485,
+      "er": 3.296
      }
     },
     "mejor_formato": "Reel",
     "mejor_dia": "jue",
     "mejor_franja": 18,
     "franjas": {
-     "12-15": 24426,
-     "15-18": 23632,
-     "18-21": 29707,
-     "21-24": 22105
+     "12-15": 7273,
+     "15-18": 23636,
+     "18-21": 30046,
+     "21-24": 14965
     },
     "dias": {
-     "lun": 24079,
-     "mar": 18224,
-     "mié": 23632,
-     "jue": 115216,
-     "sáb": 16650,
-     "dom": 29476
+     "lun": 7213,
+     "mar": 23758,
+     "mié": 23636,
+     "jue": 115668,
+     "sáb": 16658,
+     "dom": 30046
     },
     "temas": [
      "pobres",
      "carpa",
      "frente",
      "orgullo",
-     "lula",
      "recesion",
      "tienen",
      "cabeza",
      "argentina",
      "violeta",
      "macri",
-     "quiere"
+     "quiere",
+     "vean"
     ],
     "hashtags": [],
     "top": [
@@ -4838,100 +5024,89 @@
       "t": "Basta de VIOLENCIA y DISCRIMINACIÓN.",
       "u": "https://www.instagram.com/reel/DfX8P-SR6G5/",
       "f": "Reel",
-      "i": 182933,
+      "i": 183735,
       "d": "2026-11-05"
      },
      {
       "t": "Es ley!! Se acaba el acoso a los endeudados!",
       "u": "https://www.instagram.com/reel/DfF1JQ1xE2n/",
       "f": "Reel",
-      "i": 47499,
+      "i": 47601,
       "d": "2026-10-29"
      },
      {
       "t": "La Argentina Violeta.",
       "u": "https://www.instagram.com/reel/Df5iQC7x2Em/",
       "f": "Reel",
-      "i": 45738,
+      "i": 46065,
       "d": "2026-11-18"
      }
     ],
     "serie": [
      {
-      "d": "2026-10-25",
-      "i": 29246,
-      "f": "Foto"
-     },
-     {
-      "d": "2026-10-26",
-      "i": 41796,
-      "f": "Reel"
-     },
-     {
       "d": "2026-10-27",
-      "i": 21484,
+      "i": 21485,
       "f": "Foto"
      },
      {
       "d": "2026-10-29",
-      "i": 47499,
+      "i": 47601,
       "f": "Reel"
      },
      {
       "d": "2026-11-03",
-      "i": 14964,
+      "i": 14965,
       "f": "Reel"
      },
      {
       "d": "2026-11-04",
-      "i": 23632,
+      "i": 23636,
       "f": "Reel"
      },
      {
       "d": "2026-11-05",
-      "i": 182933,
+      "i": 183735,
       "f": "Reel"
      },
      {
       "d": "2026-11-07",
-      "i": 16650,
+      "i": 16658,
       "f": "Reel"
      },
      {
       "d": "2026-11-10",
-      "i": 31334,
+      "i": 31346,
       "f": "Reel"
      },
      {
       "d": "2026-11-15",
-      "i": 29707,
+      "i": 30046,
       "f": "Reel"
      },
      {
       "d": "2026-11-18",
-      "i": 7057,
+      "i": 7273,
       "f": "Reel"
      },
      {
       "d": "2026-11-18",
-      "i": 45738,
+      "i": 46065,
       "f": "Reel"
      },
      {
       "d": "2026-11-23",
-      "i": 6363,
+      "i": 7213,
       "f": "Reel"
      },
      {
       "d": "2026-11-24",
-      "i": 3079,
+      "i": 26031,
       "f": "Reel"
      }
     ],
-    "delta7": 1593,
+    "delta7": 2805,
     "delta30": null
    },
-   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -4964,11 +5139,14 @@
     {
      "d": "2026-11-24",
      "f": 650526
+    },
+    {
+     "d": "2026-11-25",
+     "f": 651881
     }
    ],
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 0
    }
   },
   {
@@ -4979,33 +5157,33 @@
    "ig": {
     "usuario": "ramonlanus",
     "nombre": "Ramón Lanús",
-    "followers": 37393,
-    "follows": 1959,
+    "followers": 37403,
+    "follows": 1960,
     "media_count": 2488,
     "posts_30d": 56,
     "posts_semana": 13.1,
-    "inter_med": 240,
+    "inter_med": 242,
     "likes_med": 207,
     "com_med": 35,
-    "er": 0.642,
+    "er": 0.647,
     "formatos": {
      "Reel": {
       "n": 48,
-      "inter_med": 241,
-      "er": 0.646
+      "inter_med": 242,
+      "er": 0.647
      },
      "Foto": {
       "n": 8,
-      "inter_med": 190,
-      "er": 0.509
+      "inter_med": 192,
+      "er": 0.515
      }
     },
     "mejor_formato": "Reel",
     "mejor_dia": "vie",
     "mejor_franja": 6,
     "franjas": {
-     "06-09": 788,
-     "09-12": 325,
+     "06-09": 789,
+     "09-12": 326,
      "12-15": 291,
      "15-18": 190,
      "18-21": 231
@@ -5013,10 +5191,10 @@
     "dias": {
      "lun": 235,
      "mar": 229,
-     "mié": 245,
+     "mié": 246,
      "jue": 215,
      "vie": 408,
-     "sáb": 241,
+     "sáb": 242,
      "dom": 211
     },
     "temas": [
@@ -5039,14 +5217,14 @@
       "t": "El horario para sacar la basura es de 18 a 20 h todos los días, excepto los sábados.",
       "u": "https://www.instagram.com/reel/Df-RH43OqDJ/",
       "f": "Reel",
-      "i": 3214,
+      "i": 3239,
       "d": "2026-11-20"
      },
      {
       "t": "Recuperamos el Golf de Boulogne para los vecinos de San Isidro. Revocamos el permiso del club por graves incumplimientos",
       "u": "https://www.instagram.com/reel/DfpQRt0O8gS/",
       "f": "Reel",
-      "i": 1728,
+      "i": 1730,
       "d": "2026-11-12"
      },
      {
@@ -5140,7 +5318,7 @@
      },
      {
       "d": "2026-11-03",
-      "i": 773,
+      "i": 774,
       "f": "Reel"
      },
      {
@@ -5175,7 +5353,7 @@
      },
      {
       "d": "2026-11-04",
-      "i": 647,
+      "i": 648,
       "f": "Reel"
      },
      {
@@ -5220,22 +5398,22 @@
      },
      {
       "d": "2026-11-11",
-      "i": 788,
+      "i": 789,
       "f": "Foto"
      },
      {
       "d": "2026-11-12",
-      "i": 1728,
+      "i": 1730,
       "f": "Reel"
      },
      {
       "d": "2026-11-12",
-      "i": 666,
+      "i": 674,
       "f": "Reel"
      },
      {
       "d": "2026-11-12",
-      "i": 465,
+      "i": 470,
       "f": "Reel"
      },
      {
@@ -5245,12 +5423,12 @@
      },
      {
       "d": "2026-11-14",
-      "i": 194,
+      "i": 195,
       "f": "Reel"
      },
      {
       "d": "2026-11-14",
-      "i": 276,
+      "i": 282,
       "f": "Reel"
      },
      {
@@ -5270,7 +5448,7 @@
      },
      {
       "d": "2026-11-16",
-      "i": 325,
+      "i": 326,
       "f": "Reel"
      },
      {
@@ -5280,12 +5458,12 @@
      },
      {
       "d": "2026-11-17",
-      "i": 547,
+      "i": 550,
       "f": "Reel"
      },
      {
       "d": "2026-11-17",
-      "i": 88,
+      "i": 89,
       "f": "Foto"
      },
      {
@@ -5300,12 +5478,12 @@
      },
      {
       "d": "2026-11-18",
-      "i": 239,
+      "i": 242,
       "f": "Reel"
      },
      {
       "d": "2026-11-19",
-      "i": 118,
+      "i": 119,
       "f": "Reel"
      },
      {
@@ -5315,34 +5493,33 @@
      },
      {
       "d": "2026-11-20",
-      "i": 3214,
+      "i": 3239,
       "f": "Reel"
      },
      {
       "d": "2026-11-21",
-      "i": 158,
+      "i": 161,
       "f": "Foto"
      },
      {
       "d": "2026-11-21",
-      "i": 241,
+      "i": 242,
       "f": "Reel"
      },
      {
       "d": "2026-11-22",
-      "i": 179,
+      "i": 183,
       "f": "Foto"
      },
      {
       "d": "2026-11-24",
-      "i": 131,
+      "i": 189,
       "f": "Reel"
      }
     ],
-    "delta7": 254,
+    "delta7": 200,
     "delta30": null
    },
-   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -5375,11 +5552,72 @@
     {
      "d": "2026-11-24",
      "f": 37393
+    },
+    {
+     "d": "2026-11-25",
+     "f": 37403
     }
    ],
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 61,
+    "activos": 4,
+    "gasto": [
+     4110400,
+     4790439
+    ],
+    "impresiones": [
+     4548100,
+     5345939
+    ],
+    "moneda": "ARS",
+    "regiones": {
+     "Buenos Aires": 99.9,
+     "Ciudad Autónoma de Buenos Aires": 0.1,
+     "Córdoba": 0.0,
+     "Entre Rios": 0.0,
+     "Santa Fe": 0.0,
+     "Misiones": 0.0,
+     "Río Negro": 0.0,
+     "San Juan": 0.0
+    },
+    "edades": {
+     "25-34": 25.6,
+     "35-44": 18.1,
+     "45-54": 17.5,
+     "18-24": 14.4,
+     "55-64": 12.7,
+     "65+": 11.8,
+     "Unknown": 0.0
+    },
+    "genero": {
+     "male": 52.9,
+     "female": 46.4,
+     "unknown": 0.6
+    },
+    "plataformas": {
+     "facebook": 61,
+     "instagram": 61
+    },
+    "paginas": {
+     "Ramón Lanús": 61
+    },
+    "avisos": [
+     {
+      "t": "La encargada de un comercio alertó a través de Ojos en Alerta sobre un hombre que pedía dinero y amenazaba a quienes estaban en el lugar. De",
+      "d": "2026-08-20",
+      "u": "https://www.facebook.com/ads/library/?id=2826760501032865"
+     },
+     {
+      "t": "En San Isidro nos gusta pasar la tarde en la costa y compartir unos mates al aire libre. Los espero el domingo 15 de noviembre, de 15 a 19 h",
+      "d": "2026-11-10",
+      "u": "https://www.facebook.com/ads/library/?id=1128443226607351"
+     },
+     {
+      "t": "Durante la madrugada, las cámaras de seguridad detectaron a un hombre que escondía una escalera. Desde el Centro de Monitoreo lo seguimos a ",
+      "d": "2026-09-29",
+      "u": "https://www.facebook.com/ads/library/?id=4423471327786030"
+     }
+    ]
    }
   },
   {
@@ -5390,20 +5628,20 @@
    "ig": {
     "usuario": "gustavo_posse",
     "nombre": "Gustavo Posse",
-    "followers": 33735,
+    "followers": 33740,
     "follows": 301,
     "media_count": 2047,
     "posts_30d": 14,
     "posts_semana": 3.3,
-    "inter_med": 516,
-    "likes_med": 486,
+    "inter_med": 523,
+    "likes_med": 493,
     "com_med": 43,
-    "er": 1.53,
+    "er": 1.552,
     "formatos": {
      "Carrusel": {
       "n": 1,
-      "inter_med": 526,
-      "er": 1.559
+      "inter_med": 541,
+      "er": 1.603
      },
      "Reel": {
       "n": 13,
@@ -5416,17 +5654,17 @@
     "mejor_franja": 15,
     "franjas": {
      "12-15": 376,
-     "15-18": 1913,
+     "15-18": 1917,
      "18-21": 402,
-     "21-24": 841
+     "21-24": 843
     },
     "dias": {
-     "mar": 841,
+     "mar": 843,
      "mié": 376,
      "jue": 776,
      "vie": 506,
      "sáb": 299,
-     "dom": 526
+     "dom": 541
     },
     "temas": [
      "isidro",
@@ -5448,14 +5686,14 @@
       "t": "Cada vez que estoy en Béccar me llevo muchas charlas y, sobre todo, un montón de cariño. Gracias por los saludos y las c",
       "u": "https://www.instagram.com/reel/DfvFpOcB8Fc/",
       "f": "Reel",
-      "i": 2232,
+      "i": 2240,
       "d": "2026-11-14"
      },
      {
       "t": "Caminar por San Isidro siempre tiene algo especial: cruzarme con ustedes, recibir un saludo, una sonrisa o simplemente c",
       "u": "https://www.instagram.com/reel/DffnoI8sHur/",
       "f": "Reel",
-      "i": 1594,
+      "i": 1595,
       "d": "2026-11-08"
      },
      {
@@ -5494,7 +5732,7 @@
      },
      {
       "d": "2026-11-08",
-      "i": 1594,
+      "i": 1595,
       "f": "Reel"
      },
      {
@@ -5504,17 +5742,17 @@
      },
      {
       "d": "2026-11-12",
-      "i": 790,
+      "i": 802,
       "f": "Reel"
      },
      {
       "d": "2026-11-14",
-      "i": 2232,
+      "i": 2240,
       "f": "Reel"
      },
      {
       "d": "2026-11-17",
-      "i": 841,
+      "i": 843,
       "f": "Reel"
      },
      {
@@ -5524,24 +5762,23 @@
      },
      {
       "d": "2026-11-19",
-      "i": 234,
+      "i": 238,
       "f": "Reel"
      },
      {
       "d": "2026-11-21",
-      "i": 63,
+      "i": 65,
       "f": "Reel"
      },
      {
       "d": "2026-11-22",
-      "i": 526,
+      "i": 541,
       "f": "Carrusel"
      }
     ],
-    "delta7": 118,
+    "delta7": 80,
     "delta30": null
    },
-   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -5574,11 +5811,54 @@
     {
      "d": "2026-11-24",
      "f": 33735
+    },
+    {
+     "d": "2026-11-25",
+     "f": 33740
     }
    ],
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 1,
+    "activos": 0,
+    "gasto": [
+     20000,
+     24999
+    ],
+    "impresiones": [
+     30000,
+     34999
+    ],
+    "moneda": "ARS",
+    "regiones": {
+     "Buenos Aires": 100.0
+    },
+    "edades": {
+     "25-34": 38.7,
+     "18-24": 37.4,
+     "35-44": 12.1,
+     "45-54": 6.6,
+     "55-64": 2.9,
+     "65+": 2.3,
+     "Unknown": 0.0
+    },
+    "genero": {
+     "male": 47.0,
+     "female": 43.4,
+     "unknown": 9.6
+    },
+    "plataformas": {
+     "instagram": 1
+    },
+    "paginas": {
+     "Gustavo Posse": 1
+    },
+    "avisos": [
+     {
+      "t": "Hay decisiones que, con el paso del tiempo, demuestran que mirar hacia adelante siempre fue el camino. En San Isidro hubo una forma de enten",
+      "d": "2026-09-23",
+      "u": "https://www.facebook.com/ads/library/?id=1737398145057397"
+     }
+    ]
    }
   },
   {
@@ -5589,7 +5869,7 @@
    "ig": {
     "usuario": "federico.meca",
     "nombre": "Fede Meca",
-    "followers": 13906,
+    "followers": 13904,
     "follows": 7886,
     "media_count": 386,
     "posts_30d": 5,
@@ -5616,11 +5896,11 @@
     "franjas": {
      "09-12": 31,
      "12-15": 93,
-     "18-21": 796
+     "18-21": 801
     },
     "dias": {
      "mié": 96,
-     "jue": 796,
+     "jue": 801,
      "vie": 28
     },
     "temas": [
@@ -5643,7 +5923,7 @@
       "t": "🗣️ «SHAN ISHIDRO». Parece que ahora tenemos clases de pronunciación en San Isidro. 🏥 Mientras tanto, faltan recursos par",
       "u": "https://www.instagram.com/reel/Df8BausNCda/",
       "f": "Reel",
-      "i": 796,
+      "i": 801,
       "d": "2026-11-19"
      },
      {
@@ -5684,14 +5964,13 @@
      },
      {
       "d": "2026-11-19",
-      "i": 796,
+      "i": 801,
       "f": "Reel"
      }
     ],
-    "delta7": 12,
+    "delta7": 10,
     "delta30": null
    },
-   "ig_viejo": true,
    "historia": [
     {
      "d": "2026-11-14",
@@ -5724,11 +6003,14 @@
     {
      "d": "2026-11-24",
      "f": 13906
+    },
+    {
+     "d": "2026-11-25",
+     "f": 13904
     }
    ],
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 0
    }
   }
  ]

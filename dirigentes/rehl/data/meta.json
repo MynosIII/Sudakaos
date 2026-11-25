@@ -1,31 +1,88 @@
 {
- "updated_at": "2026-11-25T12:50-03:00",
+ "updated_at": "2026-11-25T13:46-03:00",
  "ads_days": 90,
- "estado": "error",
- "error": "4: límite de llamadas de la app (salteado en esta corrida)",
+ "estado": "ok",
+ "error": null,
  "figuras": [
   {
    "name": "Javier Rehl",
    "foco": true,
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 0
    }
   },
   {
    "name": "Diego Santilli",
    "foco": false,
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 0
    }
   },
   {
    "name": "Javier Milei",
    "foco": false,
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 15,
+    "activos": 0,
+    "gasto": [
+     127000,
+     165485
+    ],
+    "impresiones": [
+     77000,
+     99985
+    ],
+    "moneda": "ARS",
+    "regiones": {
+     "Misiones": 59.1,
+     "Río Negro": 15.3,
+     "Buenos Aires": 5.4,
+     "Santa Fe": 2.4,
+     "Chaco": 2.2,
+     "Córdoba": 1.7,
+     "Tucuman": 1.6,
+     "Entre Rios": 1.6
+    },
+    "edades": {
+     "65+": 21.2,
+     "18-24": 18.4,
+     "55-64": 17.7,
+     "25-34": 16.5,
+     "45-54": 13.9,
+     "35-44": 12.3,
+     "Unknown": 0.0
+    },
+    "genero": {
+     "male": 58.1,
+     "female": 41.6,
+     "unknown": 0.3
+    },
+    "plataformas": {
+     "facebook": 12,
+     "instagram": 11,
+     "threads": 7
+    },
+    "paginas": {
+     "Yo estoy con Milei": 14,
+     "Yo banco a Milei": 1
+    },
+    "avisos": [
+     {
+      "t": "🗳️ Adrián Núñez se reunió con el embajador argentino ante la OEA, Carlos Cherniak, y con Carmen Lucía de la Pava Abad, jefa de gabinete del ",
+      "d": "2026-11-06",
+      "u": "https://www.facebook.com/ads/library/?id=1772636561537901"
+     },
+     {
+      "t": "🦁 Las ideas de la libertad siguen creciendo en cada rincón de Misiones. En Oberá, más de 700 misioneros participaron de una nueva jornada de",
+      "d": "2026-10-08",
+      "u": "https://www.facebook.com/ads/library/?id=1634447598468110"
+     },
+     {
+      "t": "🗳️ Más transparencia, más libertad para elegir. En Misiones seguimos impulsando una reforma electoral que termine con la Ley de Lemas y avan",
+      "d": "2026-10-08",
+      "u": "https://www.facebook.com/ads/library/?id=29219178691020668"
+     }
+    ]
    }
   }
  ]

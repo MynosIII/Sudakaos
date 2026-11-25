@@ -1,23 +1,71 @@
 {
- "updated_at": "2026-11-25T12:50-03:00",
+ "updated_at": "2026-11-25T13:46-03:00",
  "ads_days": 90,
- "estado": "error",
- "error": "4: límite de llamadas de la app (salteado en esta corrida)",
+ "estado": "ok",
+ "error": null,
  "figuras": [
   {
    "name": "Juan Ramos",
    "foco": true,
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 0
    }
   },
   {
    "name": "Esteban Sanzio",
    "foco": false,
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 2,
+    "activos": 0,
+    "gasto": [
+     100,
+     298
+    ],
+    "impresiones": [
+     100,
+     1098
+    ],
+    "moneda": "ARS",
+    "regiones": {
+     "Buenos Aires": 66.1,
+     "Ciudad Autónoma de Buenos Aires": 8.0,
+     "Córdoba": 7.1,
+     "San Juan": 3.6,
+     "Santa Fe": 3.6,
+     "Chaco": 2.7,
+     "Corrientes": 2.7,
+     "Tucuman": 1.8
+    },
+    "edades": {
+     "25-34": 32.1,
+     "35-44": 24.1,
+     "18-24": 19.6,
+     "65+": 9.8,
+     "55-64": 7.1,
+     "45-54": 7.1
+    },
+    "genero": {
+     "male": 70.5,
+     "female": 29.5
+    },
+    "plataformas": {
+     "instagram": 2
+    },
+    "paginas": {
+     "Esteban Sanzio": 2
+    },
+    "avisos": [
+     {
+      "t": "This ad ran without a required disclaimer.",
+      "d": "2026-09-02",
+      "u": "https://www.facebook.com/ads/library/?id=3424134011099977"
+     },
+     {
+      "t": "This ad ran without a required disclaimer.",
+      "d": "2026-09-02",
+      "u": "https://www.facebook.com/ads/library/?id=1863107907994646"
+     }
+    ]
    }
   }
  ]

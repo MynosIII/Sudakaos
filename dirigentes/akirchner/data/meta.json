@@ -1,39 +1,195 @@
 {
- "updated_at": "2026-11-25T12:50-03:00",
+ "updated_at": "2026-11-25T13:46-03:00",
  "ads_days": 90,
- "estado": "error",
- "error": "4: límite de llamadas de la app (salteado en esta corrida)",
+ "estado": "ok",
+ "error": null,
  "figuras": [
   {
    "name": "Alicia Kirchner",
    "foco": true,
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 0
    }
   },
   {
    "name": "Claudio Vidal",
    "foco": false,
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 4,
+    "activos": 0,
+    "gasto": [
+     22000,
+     28996
+    ],
+    "impresiones": [
+     31000,
+     42996
+    ],
+    "moneda": "ARS",
+    "regiones": {
+     "Buenos Aires": 26.5,
+     "Santa Cruz": 14.3,
+     "Córdoba": 6.2,
+     "Santa Fe": 5.8,
+     "Entre Rios": 4.0,
+     "Mendoza": 4.0,
+     "Chaco": 3.6,
+     "Tucuman": 3.3
+    },
+    "edades": {
+     "65+": 41.5,
+     "55-64": 27.8,
+     "45-54": 15.4,
+     "35-44": 8.6,
+     "25-34": 5.2,
+     "18-24": 1.3
+    },
+    "genero": {
+     "male": 75.6,
+     "female": 24.2,
+     "unknown": 0.2
+    },
+    "plataformas": {
+     "facebook": 4,
+     "instagram": 3,
+     "messenger": 2
+    },
+    "paginas": {
+     "Claudio Vidal": 4
+    },
+    "avisos": [
+     {
+      "t": "This ad ran without a required disclaimer.",
+      "d": "2026-09-20",
+      "u": "https://www.facebook.com/ads/library/?id=3280407322167174"
+     },
+     {
+      "t": "This ad ran without a required disclaimer.",
+      "d": "2026-09-05",
+      "u": "https://www.facebook.com/ads/library/?id=2832721560443592"
+     },
+     {
+      "t": "This ad ran without a required disclaimer.",
+      "d": "2026-08-27",
+      "u": "https://www.facebook.com/ads/library/?id=1552870716588227"
+     }
+    ]
    }
   },
   {
    "name": "Jairo Guzmán",
    "foco": false,
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 12,
+    "activos": 0,
+    "gasto": [
+     1979000,
+     2289988
+    ],
+    "impresiones": [
+     853000,
+     1013988
+    ],
+    "moneda": "ARS",
+    "regiones": {
+     "Santa Cruz": 99.6,
+     "Chubut": 0.3,
+     "Magallanes y la Antártica Chilena Region": 0.1,
+     "Aysén Region": 0.0
+    },
+    "edades": {
+     "35-44": 19.8,
+     "45-54": 19.8,
+     "65+": 19.5,
+     "55-64": 17.4,
+     "25-34": 16.8,
+     "18-24": 6.7,
+     "Unknown": 0.0
+    },
+    "genero": {
+     "male": 63.2,
+     "female": 36.4,
+     "unknown": 0.4
+    },
+    "plataformas": {
+     "facebook": 12,
+     "instagram": 12
+    },
+    "paginas": {
+     "Jairo Henoch Guzman": 12
+    },
+    "avisos": [
+     {
+      "t": "🇦🇷 SANTA CRUZ: AVANZAMOS HACIA LA REACTIVACIÓN DE LAS REPRESAS HIDROELÉCTRICAS La reactivación de las represas de Santa Cruz representa much",
+      "d": "2026-11-05",
+      "u": "https://www.facebook.com/ads/library/?id=991947663349814"
+     },
+     {
+      "t": "REPRESAS DE SANTA CRUZ: ¿CUÁNTO COSTÓ LA COMITIVA DEL GOBIERNO PROVINCIAL? La casta santacruceña Mientras se avanza en los acuerdos para rea",
+      "d": "2026-11-05",
+      "u": "https://www.facebook.com/ads/library/?id=1450632880545442"
+     },
+     {
+      "t": "UN PASO IMPORTANTE PARA LA REACTIVACIÓN DE LAS REPRESAS DE SANTA CRUZ 🇦🇷 Participé, en mi carácter de diputado nacional por Santa Cruz, de l",
+      "d": "2026-11-05",
+      "u": "https://www.facebook.com/ads/library/?id=1183580854102025"
+     }
+    ]
    }
   },
   {
    "name": "Pablo Grasso",
    "foco": false,
    "ads": {
-    "n": 0,
-    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+    "n": 2,
+    "activos": 0,
+    "gasto": [
+     450000,
+     549998
+    ],
+    "impresiones": [
+     325000,
+     399998
+    ],
+    "moneda": "ARS",
+    "regiones": {
+     "Santa Cruz": 98.6,
+     "Chubut": 1.4,
+     "Tucuman": 0.0
+    },
+    "edades": {
+     "25-34": 27.6,
+     "35-44": 21.6,
+     "45-54": 15.8,
+     "18-24": 15.0,
+     "55-64": 10.5,
+     "65+": 9.5,
+     "Unknown": 0.0
+    },
+    "genero": {
+     "male": 55.8,
+     "female": 43.6,
+     "unknown": 0.6
+    },
+    "plataformas": {
+     "facebook": 2,
+     "instagram": 2
+    },
+    "paginas": {
+     "Pablo Grasso": 2
+    },
+    "avisos": [
+     {
+      "t": "En el corazón de los barrios Bicentenario, Patagonia, Santa Cruz y Ayres Argentinos de Río Gallegos está nuestro querido Gimnasio Municipal ",
+      "d": "2026-09-02",
+      "u": "https://www.facebook.com/ads/library/?id=1733816721162044"
+     },
+     {
+      "t": "Si no hay medicamentos para los santacruceños, los vamos a venir a buscar al Congreso.",
+      "d": "2026-11-05",
+      "u": "https://www.facebook.com/ads/library/?id=1445490953656507"
+     }
+    ]
    }
   }
  ]
