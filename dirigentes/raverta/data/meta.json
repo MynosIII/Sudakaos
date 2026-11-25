@@ -1,0 +1,40 @@
+{
+ "updated_at": "2026-11-25T12:50-03:00",
+ "ads_days": 90,
+ "estado": "error",
+ "error": "4: límite de llamadas de la app (salteado en esta corrida)",
+ "figuras": [
+  {
+   "name": "Fernanda Raverta",
+   "foco": true,
+   "ads": {
+    "n": 0,
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+   }
+  },
+  {
+   "name": "Guillermo Montenegro",
+   "foco": false,
+   "ads": {
+    "n": 0,
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+   }
+  },
+  {
+   "name": "Vilma Baragiola",
+   "foco": false,
+   "ads": {
+    "n": 0,
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+   }
+  },
+  {
+   "name": "Alejandro Carrancio",
+   "foco": false,
+   "ads": {
+    "n": 0,
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+   }
+  }
+ ]
+}

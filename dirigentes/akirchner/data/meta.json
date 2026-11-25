@@ -1,0 +1,40 @@
+{
+ "updated_at": "2026-11-25T12:50-03:00",
+ "ads_days": 90,
+ "estado": "error",
+ "error": "4: límite de llamadas de la app (salteado en esta corrida)",
+ "figuras": [
+  {
+   "name": "Alicia Kirchner",
+   "foco": true,
+   "ads": {
+    "n": 0,
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+   }
+  },
+  {
+   "name": "Claudio Vidal",
+   "foco": false,
+   "ads": {
+    "n": 0,
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+   }
+  },
+  {
+   "name": "Jairo Guzmán",
+   "foco": false,
+   "ads": {
+    "n": 0,
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+   }
+  },
+  {
+   "name": "Pablo Grasso",
+   "foco": false,
+   "ads": {
+    "n": 0,
+    "error": "4: límite de llamadas de la app (salteado en esta corrida)"
+   }
+  }
+ ]
+}
