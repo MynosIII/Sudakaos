@@ -1,5 +1,5 @@
 {
- "_nota": "12 ejes (mecánica de 12axes, politicaltests, MIT) + certeza. Cada eje va de 0 (polo a) a 100 (polo b).",
+ "_nota": "30 ejes: 12 principales (mecánica de 12axes, politicaltests, MIT) + 18 complementarios (ejes2), con certeza. Cada eje va de 0 (polo a) a 100 (polo b).",
  "ejes": [
   {
    "id": "fed",
@@ -147,18 +147,18 @@
   },
   {
    "id": "mig",
-   "nombre": "Cultura y migración",
+   "nombre": "Cultura",
    "a": "Asimilación",
    "b": "Multiculturalismo",
-   "a_desc": "Una cultura común: fronteras controladas y que quien llega se adapte.",
+   "a_desc": "Una cultura común a la que se adapta quien llega.",
    "b_desc": "Diversidad cultural, la de quienes llegan y la de los pueblos originarios.",
    "pt": {
-    "nombre": "Cultura e migração",
+    "nombre": "Cultura",
     "a": "Assimilação",
     "b": "Multiculturalismo"
    },
    "en": {
-    "nombre": "Culture & migration",
+    "nombre": "Culture",
     "a": "Assimilation",
     "b": "Multiculturalism"
    }
@@ -541,6 +541,24 @@
     "nombre": "Institutions",
     "a": "Personalism",
     "b": "Institutionalism"
+   }
+  },
+  {
+   "id": "mpo",
+   "nombre": "Migración",
+   "a": "Fronteras abiertas",
+   "b": "Fronteras restrictivas",
+   "a_desc": "Recibir a quien quiera venir y facilitar que se quede.",
+   "b_desc": "Controlar quién entra y poner condiciones para quedarse.",
+   "pt": {
+    "nombre": "Migração",
+    "a": "Fronteiras abertas",
+    "b": "Fronteiras restritivas"
+   },
+   "en": {
+    "nombre": "Migration",
+    "a": "Open borders",
+    "b": "Restrictive borders"
    }
   },
   {

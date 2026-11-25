@@ -1,4 +1,4 @@
-/* Brújula política v2: quiz de 12 ejes (base 12axes, MIT) con certeza por eje, ideologías, dirigentes, análisis y tarjeta.
+/* Brújula política: quiz de 30 ejes (12 principales (base 12axes, MIT) con certeza por eje, ideologías, dirigentes, análisis y tarjeta.
    Datos en BRUJULA.datos (ejes.json, preguntas.json, figuras.json, ideologias.json); textos en i18n.js (es / pt / en).
    Si BRUJULA.endpoint está cargado y la persona acepta, envía sus respuestas anónimas al Apps Script (planilla privada).
    Nada se guarda si tiene menos de 16 años. El cálculo de posición y certeza es el mismo que procesar.py. */
@@ -29,7 +29,7 @@
     tec: '<rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/>'
   };
   Object.assign(COLOR, { ecl: '#5fae7a', dis: '#e07a7a', bie: '#e8a05c', epi: '#5aa9e6', ges: '#9aa7b8', tra: '#d9776a', idc: '#d6b25e', pen: '#6fb8ad',
-    lab: '#8f9be0', eti: '#63c1cf', tem: '#ef8f6a', fut: '#86c98a', ind: '#b39278', mon: '#b98ad0', inf: '#c2c8d0', ipe: '#9a7fd0', uni: '#6aa8e8' });
+    lab: '#8f9be0', eti: '#63c1cf', tem: '#ef8f6a', fut: '#86c98a', ind: '#b39278', mon: '#b98ad0', inf: '#c2c8d0', ipe: '#9a7fd0', uni: '#6aa8e8', mpo: '#5cc6c0' });
   Object.assign(ICON, {
     ecl: '<path d="M5 19c0-8 6-14 14-14 0 8-6 14-14 14z"/><path d="M5 19l8-8"/>',
     dis: '<path d="M12 4v16M7 20h10M4 8h16"/><path d="M4 8l-2 5h4zM20 8l-2 5h4z"/>',
@@ -47,6 +47,7 @@
     mon: '<circle cx="12" cy="12" r="8"/><path d="M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.5 0-2.5.8-2.5 2s1 1.6 2.5 2 2.5.8 2.5 2-1 2-2.5 2c-1 0-2-.5-2.5-1.5M12 6.5v11"/>',
     inf: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 9h10M7 13h6M7 16h8"/>',
     ipe: '<path d="M3 9l9-5 9 5M5 9v9M10 9v9M14 9v9M19 9v9M3 20h18"/>',
+    mpo: '<rect x="6" y="3" width="12" height="18" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M9 16h6"/>',
     uni: '<circle cx="12" cy="12" r="8"/><circle cx="12" cy="5" r="1.6"/><circle cx="18.5" cy="15" r="1.6"/><circle cx="5.5" cy="15" r="1.6"/>'
   });
   const ic = k => `<svg class="ic" viewBox="0 0 24 24" aria-hidden="true">${ICON[k] || ''}</svg>`;
@@ -227,7 +228,7 @@
     const E = EJES();
     ejemplos();
     $('#pasos').innerHTML = t.pasos.map(([h, p], j) => `<div><i>0${j + 1}</i><b>${esc(h)}</b>${esc(p)}</div>`).join('');
-    $('#ejlist').innerHTML = E.map(e => `<a href="#/ejes/${e.id}">${icb(e.id)}<span><b>${esc(e.nombre)}</b><small>${esc(e.a)} ↔ ${esc(e.b)}</small></span></a>`).join('');
+    $('#ejlist').innerHTML = [...E, ...EJES2()].map(e => `<a href="#/ejes/${e.id}">${icb(e.id)}<span><b>${esc(e.nombre)}</b><small>${esc(e.a)} ↔ ${esc(e.b)}</small></span></a>`).join('');
     versiones();
   }
   // Tarjetas de ejemplo (estilo 12 ejes): un perfil parecido al de un dirigente real, su ideología más cercana y sus 12 ejes.
@@ -520,7 +521,7 @@
       r: { es: ['Muy tradicional', 'Tradicional', 'Moderado', 'Progresista', 'Muy progresista'],
            pt: ['Muito tradicional', 'Tradicional', 'Moderado', 'Progressista', 'Muito progressista'],
            en: ['Very traditional', 'Traditional', 'Moderate', 'Progressive', 'Very progressive'] } },
-    { k: { es: 'Cultura y migración', pt: 'Cultura e migração', en: 'Culture & migration' }, ic: 'mig', ejes: [['mig', 1], ['uni', -0.5]],
+    { k: { es: 'Cultura y migración', pt: 'Cultura e migração', en: 'Culture & migration' }, ic: 'mig', ejes: [['mig', 1], ['mpo', -1], ['uni', -0.5]],
       r: { es: ['Diversidad plena', 'Apertura', 'Balance', 'Integración selectiva', 'Asimilación'],
            pt: ['Diversidade plena', 'Abertura', 'Equilíbrio', 'Integração seletiva', 'Assimilação'],
            en: ['Full diversity', 'Openness', 'Balance', 'Selective integration', 'Assimilation'] } },
@@ -551,13 +552,13 @@
     glo: ['#8d6e63', '#26a69a'], tec: ['#00acc1', '#558b2f'], ecl: ['#2e7d32', '#616161'], dis: ['#d32f2f', '#ffb300'], bie: ['#ef6c00', '#455a64'],
     epi: ['#0288d1', '#4a148c'], ges: ['#37474f', '#fbc02d'], tra: ['#1565c0', '#c62828'], idc: ['#ffca28', '#6d4c41'], pen: ['#4db6ac', '#263238'],
     lab: ['#e53935', '#283593'], eti: ['#26c6da', '#5d4037'], tem: ['#ff7043', '#3949ab'], fut: ['#66bb6a', '#ffa726'], ind: ['#795548', '#29b6f6'],
-    mon: ['#ab47bc', '#1a237e'], inf: ['#f5f5f5', '#212121'], ipe: ['#8e24aa', '#1565c0'], uni: ['#42a5f5', '#8d1d1d'] };
+    mon: ['#ab47bc', '#1a237e'], inf: ['#f5f5f5', '#212121'], ipe: ['#8e24aa', '#1565c0'], uni: ['#42a5f5', '#8d1d1d'], mpo: ['#26a69a', '#5d4037'] };
   const PEMB = { fed: ['ring', 'star'], dem: ['ring', 'shield'], int: ['ring', 'star'], mil: ['shield', 'leaf'], lib: ['shield', 'sun'], col: ['gear', 'chevron'],
     rel: ['sun', 'cross'], pro: ['sun', 'cross'], mig: ['star', 'ring'], pla: ['gear', 'chevron'], glo: ['star', 'ring'], tec: ['sun', 'leaf'], ecl: ['leaf', 'gear'],
     dis: ['scale', 'chevron'], bie: ['ring', 'chevron'], epi: ['sun', 'cross'], ges: ['gear', 'ring'], tra: ['scale', 'star'], idc: ['chevron', 'ring'],
     pen: ['scale', 'shield'], lab: ['ring', 'chevron'], eti: ['scale', 'cross'], tem: ['star', 'sun'], fut: ['leaf', 'sun'], ind: ['gear', 'ring'],
-    mon: ['star', 'scale'], inf: ['ring', 'shield'], ipe: ['star', 'scale'], uni: ['ring', 'star'] };
-  const FAM = { eco: ['pla', 'col', 'dis', 'bie', 'lab', 'mon', 'ind', 'glo'], pod: ['dem', 'ipe', 'ges', 'lib', 'inf', 'pen'], nac: ['int', 'uni', 'mil', 'fed'],
+    mon: ['star', 'scale'], inf: ['ring', 'shield'], ipe: ['star', 'scale'], uni: ['ring', 'star'], mpo: ['ring', 'shield'] };
+  const FAM = { eco: ['pla', 'col', 'dis', 'bie', 'lab', 'mon', 'ind', 'glo'], pod: ['dem', 'ipe', 'ges', 'lib', 'inf', 'pen'], nac: ['int', 'uni', 'mil', 'fed', 'mpo'],
     val: ['pro', 'rel', 'idc', 'mig'], ide: ['tec', 'ecl', 'epi', 'eti', 'tem', 'fut', 'tra'] };
   function luz(hex) { const n = parseInt(hex.slice(1), 16); return (0.299 * (n >> 16) + 0.587 * (n >> 8 & 255) + 0.114 * (n & 255)) / 255 }
   function emblema(tipo, cx, cy, r, col) {
@@ -867,6 +868,13 @@
         <div class="strip" style="background:linear-gradient(90deg,var(--s3),${COLOR[e.id]}55 50%,var(--s3))">${figs.map(f => `<i style="left:${f.pos[e.id]}%" title="${esc(f.nombre)} · ${f.pos[e.id]}"></i>`).join('')}${yo ? `<i class="yo" style="left:${yo[e.id]}%" title="${esc(T().vos)} · ${yo[e.id]}"></i>` : ''}</div>
         <div class="ext"><div>${ex(ord.slice(0, 3))}</div><div>${ex(ord.slice(-3).reverse())}</div></div></div>`;
     }).join('');
+    const yo2 = r && r.sc2;
+    $('#ejes-guia').insertAdjacentHTML('beforeend', `<div class="k gk">${esc(T().t_mas2)}</div>` + (S.ejes.ejes2 || []).map(e0 => {
+      const e = eje(e0), y = yo2 && yo2[e.id];
+      return `<div class="ejec" id="eje-${e.id}" style="border-top:3px solid ${COLOR[e.id]}"><div class="h">${icb(e.id)}<div><h3>${esc(e.nombre)}</h3><div class="k">${esc(e.a)} ↔ ${esc(e.b)}</div></div></div>
+        <div class="polos"><div><b>${esc(e.a)}</b>${esc(e0.a_desc || '')}</div><div><b>${esc(e.b)}</b>${esc(e0.b_desc || '')}</div></div>
+        ${y != null ? `<div class="strip" style="background:linear-gradient(90deg,var(--s3),${COLOR[e.id]}55 50%,var(--s3))"><i class="yo" style="left:${y}%" title="${esc(T().vos)} · ${y}"></i></div>` : ''}</div>`;
+    }).join(''));
     if (foco) { const el = $('#eje-' + foco); if (el) setTimeout(() => el.scrollIntoView({ block: 'start' }), 30) }
   }
   function mapaPagina() {

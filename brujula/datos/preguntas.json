@@ -661,7 +661,8 @@
    "t_pt": "Só deveriam poder entrar no país imigrantes muito qualificados.",
    "t_en": "Only highly skilled immigrants, if any, should be allowed into the country.",
    "e": {
-    "mig": -1
+    "mig": -1,
+    "mpo": 1
    },
    "nivel": 3,
    "v": [
@@ -681,7 +682,8 @@
    "t_pt": "Controlar as fronteiras é importante.",
    "t_en": "Border control is important.",
    "e": {
-    "mig": -1
+    "mig": -1,
+    "mpo": 1
    },
    "nivel": 1,
    "v": [
@@ -701,7 +703,8 @@
    "t_pt": "Os imigrantes trazem ao país mais do que custam.",
    "t_en": "Immigrants give the country more than they cost.",
    "e": {
-    "mig": 1
+    "mig": 1,
+    "mpo": -0.5
    },
    "nivel": 1,
    "v": [
@@ -2706,7 +2709,8 @@
    "t_pt": "Não deveríamos receber refugiados.",
    "t_en": "We should not allow any refugees.",
    "e": {
-    "mig": -1
+    "mig": -1,
+    "mpo": 1
    },
    "nivel": 4,
    "v": [
@@ -2748,7 +2752,8 @@
    "t_pt": "Os imigrantes em situação irregular não trazem nenhum benefício ao país.",
    "t_en": "Undocumented immigrants do not benefit the host country.",
    "e": {
-    "mig": -1
+    "mig": -1,
+    "mpo": 0.5
    },
    "nivel": 2,
    "v": [
@@ -2812,7 +2817,8 @@
    "t_pt": "Deveríamos receber mais refugiados.",
    "t_en": "We should take in more refugees.",
    "e": {
-    "mig": 1
+    "mig": 1,
+    "mpo": -1
    },
    "nivel": 1,
    "v": [
@@ -2898,7 +2904,8 @@
    "t_pt": "Qualquer pessoa que queira entrar no país deveria poder.",
    "t_en": "Anybody who wants to enter the country should be able to.",
    "e": {
-    "mig": 1
+    "mig": 1,
+    "mpo": -1
    },
    "nivel": 4,
    "v": [

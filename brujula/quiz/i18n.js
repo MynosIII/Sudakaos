@@ -1,8 +1,8 @@
 /* Textos de la interfaz del quiz en es / pt / en, y divisiones territoriales por país para la pregunta de residencia. */
 window.BRUJULA_I18N = {
   es: {
-    titulo: 'Brújula política', sub: '12 ejes', inicio_k: 'PAN-00 · INICIO', h1: '¿Dónde estás parado?',
-    lead: 'Respondé qué tan de acuerdo estás con cada frase. Al final ves tu posición en <b>12 ejes</b>, <b>qué tan firme</b> es cada una y <b>los dirigentes que más se parecen a vos</b>, de los más conocidos a los que casi nadie nombra.',
+    titulo: 'Brújula política', sub: '30 ejes', inicio_k: 'PAN-00 · INICIO', h1: '¿Dónde estás parado?',
+    lead: 'Respondé qué tan de acuerdo estás con cada frase. Al final ves tu posición en <b>30 ejes</b>, <b>qué tan firme</b> es cada una y <b>los dirigentes que más se parecen a vos</b>, de los más conocidos a los que casi nadie nombra.',
     elegi: 'ELEGÍ TU PAÍS', empezar: 'Empezar', minutos: n => `≈ ${n} minutos`, preguntas: 'preguntas', dirigentes: 'dirigentes', pronto: 'próximamente',
     anon: 'Anónimo.', volver: '← Volver', teclas: 'Teclas 1 a 5', preg: 'PREG',
     demo_k: 'PAN-02 · CASI LISTO', demo_h: 'Cinco datos (opcionales)', demo_lead: 'Nos ayudan a encontrar patrones. Podés saltearlos.',
@@ -25,8 +25,8 @@ window.BRUJULA_I18N = {
     pie: 'Brújula política', fuerte: 'fuerte', moderado: 'moderado', centro_l: 'Centro', menor: 'Tu resultado no se guardó porque tenés menos de 16.'
   },
   pt: {
-    titulo: 'Bússola política', sub: '12 eixos', inicio_k: 'PAN-00 · INÍCIO', h1: 'Onde você está?',
-    lead: 'Responda o quanto você concorda com cada frase. No final você vê sua posição em <b>12 eixos</b>, <b>o quão firme</b> é cada uma e <b>os políticos mais parecidos com você</b>, dos mais conhecidos aos que quase ninguém cita.',
+    titulo: 'Bússola política', sub: '30 eixos', inicio_k: 'PAN-00 · INÍCIO', h1: 'Onde você está?',
+    lead: 'Responda o quanto você concorda com cada frase. No final você vê sua posição em <b>30 eixos</b>, <b>o quão firme</b> é cada uma e <b>os políticos mais parecidos com você</b>, dos mais conhecidos aos que quase ninguém cita.',
     elegi: 'ESCOLHA SEU PAÍS', empezar: 'Começar', minutos: n => `≈ ${n} minutos`, preguntas: 'perguntas', dirigentes: 'políticos', pronto: 'em breve',
     anon: 'Anônimo.', volver: '← Voltar', teclas: 'Teclas 1 a 5', preg: 'PERG',
     demo_k: 'PAN-02 · QUASE PRONTO', demo_h: 'Cinco dados (opcionais)', demo_lead: 'Ajudam a encontrar padrões. Você pode pular.',
@@ -49,8 +49,8 @@ window.BRUJULA_I18N = {
     pie: 'Bússola política', fuerte: 'forte', moderado: 'moderado', centro_l: 'Centro', menor: 'Seu resultado não foi salvo porque você tem menos de 16 anos.'
   },
   en: {
-    titulo: 'Political compass', sub: '12 axes', inicio_k: 'PAN-00 · START', h1: 'Where do you stand?',
-    lead: 'Say how much you agree with each statement. At the end you see your position on <b>12 axes</b>, <b>how firm</b> each one is, and <b>the politicians most like you</b>, from household names to people almost nobody mentions.',
+    titulo: 'Political compass', sub: '30 axes', inicio_k: 'PAN-00 · START', h1: 'Where do you stand?',
+    lead: 'Say how much you agree with each statement. At the end you see your position on <b>30 axes</b>, <b>how firm</b> each one is, and <b>the politicians most like you</b>, from household names to people almost nobody mentions.',
     elegi: 'CHOOSE YOUR COUNTRY', empezar: 'Start', minutos: n => `≈ ${n} minutes`, preguntas: 'questions', dirigentes: 'politicians', pronto: 'coming soon',
     anon: 'Anonymous.', volver: '← Back', teclas: 'Keys 1 to 5', preg: 'Q',
     demo_k: 'PAN-02 · ALMOST DONE', demo_h: 'Five details (optional)', demo_lead: 'They help us find patterns. You can skip them.',
@@ -96,9 +96,9 @@ window.BRUJULA_PAISES = {
 window.BRUJULA_VER_PAIS = { ar: 'Argentina', br: 'Brasil', py: 'Paraguay', pe: 'Perú', cl: 'Chile', co: 'Colombia', uy: 'Uruguay' };
 // Navegación, modalidades, guía de ejes, mapa y cara a cara
 Object.assign(window.BRUJULA_I18N.es, {
-  nav_quiz: 'Quiz', nav_ejes: '12 ejes', nav_mapa: 'Mapa', nav_mimapa: 'Mi mapa', nav_cara: 'Cara a cara',
+  nav_quiz: 'Quiz', nav_ejes: '30 ejes', nav_mapa: 'Mapa', nav_mimapa: 'Mi mapa', nav_cara: 'Cara a cara',
   modo_k: 'MODALIDAD', rapida: 'Rápida', completa: 'Completa', modo_d: (n, m) => `${n} preguntas · ≈ ${m} min`,
-  ejes_k: 'GUÍA · LOS 12 EJES', ejes_h: 'Los 12 ejes', pais_l: 'País',
+  ejes_k: 'GUÍA · LOS 30 EJES', ejes_h: 'Los 30 ejes', pais_l: 'País',
   ejes_lead: 'Cada eje va de un polo a otro. Las rayitas son los dirigentes del país elegido; la marca naranja sos vos, si ya hiciste el quiz.',
   mas_a: 'Más cerca de este polo', mapa_k: 'MAPA · DIRIGENTES', mapa_h: 'El mapa',
   mapa_lead: 'Elegí dos ejes cualesquiera y mirá dónde queda cada dirigente. Si hiciste el quiz, aparecés vos.',
@@ -107,9 +107,9 @@ Object.assign(window.BRUJULA_I18N.es, {
   coinciden: 'Coinciden en', chocan: 'Chocan en', afin: 'Afinidad', vacio: 'Todavía no hiciste el quiz en este navegador. Hacelo y tu mapa queda guardado acá.'
 });
 Object.assign(window.BRUJULA_I18N.pt, {
-  nav_quiz: 'Teste', nav_ejes: '12 eixos', nav_mapa: 'Mapa', nav_mimapa: 'Meu mapa', nav_cara: 'Cara a cara',
+  nav_quiz: 'Teste', nav_ejes: '30 eixos', nav_mapa: 'Mapa', nav_mimapa: 'Meu mapa', nav_cara: 'Cara a cara',
   modo_k: 'MODALIDADE', rapida: 'Rápida', completa: 'Completa', modo_d: (n, m) => `${n} perguntas · ≈ ${m} min`,
-  ejes_k: 'GUIA · OS 12 EIXOS', ejes_h: 'Os 12 eixos', pais_l: 'País',
+  ejes_k: 'GUIA · OS 30 EIXOS', ejes_h: 'Os 30 eixos', pais_l: 'País',
   ejes_lead: 'Cada eixo vai de um polo a outro. Os traços são os políticos do país escolhido; a marca laranja é você, se já fez o teste.',
   mas_a: 'Mais perto deste polo', mapa_k: 'MAPA · POLÍTICOS', mapa_h: 'O mapa',
   mapa_lead: 'Escolha dois eixos quaisquer e veja onde fica cada político. Se você fez o teste, aparece também.',
@@ -118,9 +118,9 @@ Object.assign(window.BRUJULA_I18N.pt, {
   coinciden: 'Concordam em', chocan: 'Divergem em', afin: 'Afinidade', vacio: 'Você ainda não fez o teste neste navegador. Faça e seu mapa fica salvo aqui.'
 });
 Object.assign(window.BRUJULA_I18N.en, {
-  nav_quiz: 'Quiz', nav_ejes: '12 axes', nav_mapa: 'Map', nav_mimapa: 'My map', nav_cara: 'Head to head',
+  nav_quiz: 'Quiz', nav_ejes: '30 axes', nav_mapa: 'Map', nav_mimapa: 'My map', nav_cara: 'Head to head',
   modo_k: 'MODE', rapida: 'Quick', completa: 'Full', modo_d: (n, m) => `${n} questions · ≈ ${m} min`,
-  ejes_k: 'GUIDE · THE 12 AXES', ejes_h: 'The 12 axes', pais_l: 'Country',
+  ejes_k: 'GUIDE · THE 30 AXES', ejes_h: 'The 30 axes', pais_l: 'Country',
   ejes_lead: 'Each axis runs from one pole to the other. Ticks are the politicians of the chosen country; the orange mark is you, if you took the quiz.',
   mas_a: 'Closest to this pole', mapa_k: 'MAP · POLITICIANS', mapa_h: 'The map',
   mapa_lead: 'Pick any two axes and see where each politician lands. If you took the quiz, you show up too.',
@@ -131,14 +131,14 @@ Object.assign(window.BRUJULA_I18N.en, {
 // v2: home con ejemplo, tres modalidades, ayuda por pregunta, resultado ampliado, análisis y tarjeta
 Object.assign(window.BRUJULA_I18N.es, {
   h1: '¿Dónde estás <em>parado</em> en serio?', nav_mimapa: 'Mi resultado', nav_glos: 'Glosario',
-  lead: 'Respondé frases cortas y mirá tu posición en <b>12 ejes</b>, <b>qué tan firme</b> es cada una, la <b>ideología</b> que más se te parece y los <b>dirigentes de tu país</b> que piensan como vos.',
-  cta1: 'Descubrí tu perfil', cta2: 'Ver los 12 ejes', cta3: 'Explorar el mapa',
-  chips: (p, d) => ['12 ejes', `${p} países`, 'ES · PT · EN', `${d} dirigentes`, 'Anónimo'],
+  lead: 'Respondé frases cortas y mirá tu posición en <b>30 ejes</b>, <b>qué tan firme</b> es cada una, la <b>ideología</b> que más se te parece y los <b>dirigentes de tu país</b> que piensan como vos.',
+  cta1: 'Descubrí tu perfil', cta2: 'Ver los 30 ejes', cta3: 'Explorar el mapa',
+  chips: (p, d) => ['30 ejes', `${p} países`, 'ES · PT · EN', `${d} dirigentes`, 'Anónimo'],
   ej_tag: 'EJEMPLO', ej_af: 'Afinidad principal', ej_cerca: 'Dirigente más cercano', ej_nombre: 'Dirigente de ejemplo',
   como_k: 'CÓMO FUNCIONA', pasos: [['Respondés', 'Frases cortas, de muy de acuerdo a muy en desacuerdo. Si una palabra no se entiende, tiene ayuda.'],
     ['Medimos', 'Tu posición en cada eje y qué tan firme es, según lo decididas y coherentes que sean tus respuestas.'],
     ['Comparás', 'Con 16 ideologías y con los dirigentes de tu país. Descargás tu tarjeta y la compartís.']],
-  ejes_k2: 'LOS 12 EJES', rec: 'Recomendada', empezar: 'Empezar',
+  ejes_k2: 'LOS 30 EJES', rec: 'Recomendada', empezar: 'Empezar',
   rapida: 'Express', completa: 'Completa', exhaustiva: 'Exhaustiva',
   d_rapida: 'Dos frases por eje y lo más caliente de tu país. Para tener una idea rápida.',
   d_completa: 'Tres frases por eje: el mejor equilibrio entre tiempo y precisión.',
@@ -150,12 +150,12 @@ Object.assign(window.BRUJULA_I18N.es, {
   rev_info: (r, n) => `${r} de ${n} respondidas. Las que dejes sin responder cuentan como neutrales.`,
   lemas: ['No hay respuestas correctas: hay respuestas tuyas.', 'Si dudás, "neutral" también es una respuesta.', 'Nadie ve tus respuestas una por una.',
     'Pensá en lo que creés, no en lo que diría tu grupo.', 'Las frases extremas están a propósito.'],
-  t_perfil: 'Perfil', t_ejes: '12 ejes', t_brujula: 'Brújula', t_ideo: 'Ideologías', t_dir: 'Dirigentes', t_anal: 'Análisis', t_comp: 'Compartir',
-  t_ejes2: 'Tus 12 ejes', t_brujula2: 'Brújula 2D', t_ideo2: 'Ideologías más cercanas', t_anal2: 'Análisis', t_comp2: 'Tu tarjeta',
+  t_perfil: 'Perfil', t_ejes: 'Principales', t_brujula: 'Brújula', t_ideo: 'Ideologías', t_dir: 'Dirigentes', t_anal: 'Análisis', t_comp: 'Compartir',
+  t_ejes2: 'Tus 12 ejes principales', t_brujula2: 'Brújula 2D', t_ideo2: 'Ideologías más cercanas', t_anal2: 'Análisis', t_comp2: 'Tu tarjeta',
   barras: 'Barras', radar: 'Radar',
   cert_nota: 'El punto es tu posición; la sombra, el rango donde te movés según tu certeza.',
   bru_sub: 'Dos ejes compuestos: lo económico (Planificación + Colectivismo ↔ Mercado + Propiedad) y el poder (Democracia + Libertades ↔ Autoridad + Orden).',
-  ideo_sub: '16 familias ideológicas codificadas en los mismos 12 ejes. Es una referencia editorial, no una etiqueta.',
+  ideo_sub: '16 familias ideológicas codificadas en los mismos 12 ejes principales. Es una referencia editorial, no una etiqueta.',
   anal_sub: 'Lo que no se ve a simple vista: dónde estás firme, dónde dudás y qué combinaciones tuyas son poco habituales.',
   comp_sub: 'Una imagen vertical lista para historias. Se arma en tu celular: no se sube a ningún lado.',
   descargar: 'Descargar tarjeta', copiar: 'Copiar link',
@@ -181,20 +181,20 @@ Object.assign(window.BRUJULA_I18N.es, {
   a_dist: 'Cómo respondiste', a_dist_t: (d, n) => `${d}% de respuestas decididas (muy de acuerdo o muy en desacuerdo) y ${n}% neutrales.`,
   a_tabla: 'Tabla técnica', th: ['Eje', 'Posición', 'Certeza', 'Resp.', 'Lectura'], lect: ['Firme', 'Intermedia', 'Abierta'],
   sin_resp: 'Resultado compartido: no incluye el detalle de respuestas.',
-  card_af: 'MI AFINIDAD PRINCIPAL', card_dir: 'MI DIRIGENTE MÁS CERCANO', card_ejes: 'MIS 12 EJES', card_otros: 'TAMBIÉN CERCA', card_cta: 'Hacé el tuyo en',
+  card_af: 'MI AFINIDAD PRINCIPAL', card_dir: 'MI DIRIGENTE MÁS CERCANO', card_ejes: 'MIS 12 EJES PRINCIPALES', card_otros: 'TAMBIÉN CERCA', card_cta: 'Hacé el tuyo en',
   glos_k: 'GLOSARIO', glos_h: 'Glosario', glos_lead: 'Los términos que aparecen en las frases, explicados en una línea.',
   vacio: 'Todavía no hiciste el quiz en este navegador. Hacelo y tu resultado queda guardado acá.'
 });
 Object.assign(window.BRUJULA_I18N.pt, {
   h1: 'Onde você <em>está</em> de verdade?', nav_mimapa: 'Meu resultado', nav_glos: 'Glossário',
-  lead: 'Responda frases curtas e veja sua posição em <b>12 eixos</b>, <b>o quão firme</b> é cada uma, a <b>ideologia</b> mais parecida com você e os <b>políticos do seu país</b> que pensam como você.',
-  cta1: 'Descubra seu perfil', cta2: 'Ver os 12 eixos', cta3: 'Explorar o mapa',
-  chips: (p, d) => ['12 eixos', `${p} países`, 'ES · PT · EN', `${d} políticos`, 'Anônimo'],
+  lead: 'Responda frases curtas e veja sua posição em <b>30 eixos</b>, <b>o quão firme</b> é cada uma, a <b>ideologia</b> mais parecida com você e os <b>políticos do seu país</b> que pensam como você.',
+  cta1: 'Descubra seu perfil', cta2: 'Ver os 30 eixos', cta3: 'Explorar o mapa',
+  chips: (p, d) => ['30 eixos', `${p} países`, 'ES · PT · EN', `${d} políticos`, 'Anônimo'],
   ej_tag: 'EXEMPLO', ej_af: 'Afinidade principal', ej_cerca: 'Político mais próximo', ej_nombre: 'Político de exemplo',
   como_k: 'COMO FUNCIONA', pasos: [['Você responde', 'Frases curtas, de concordo totalmente a discordo totalmente. Se uma palavra não for clara, tem ajuda.'],
     ['Medimos', 'Sua posição em cada eixo e o quão firme ela é, conforme suas respostas sejam decididas e coerentes.'],
     ['Você compara', 'Com 16 ideologias e com os políticos do seu país. Baixe seu cartão e compartilhe.']],
-  ejes_k2: 'OS 12 EIXOS', rec: 'Recomendada', empezar: 'Começar',
+  ejes_k2: 'OS 30 EIXOS', rec: 'Recomendada', empezar: 'Começar',
   rapida: 'Express', completa: 'Completa', exhaustiva: 'Exaustiva',
   d_rapida: 'Duas frases por eixo e os temas mais quentes do seu país. Para ter uma ideia rápida.',
   d_completa: 'Três frases por eixo: o melhor equilíbrio entre tempo e precisão.',
@@ -206,12 +206,12 @@ Object.assign(window.BRUJULA_I18N.pt, {
   rev_info: (r, n) => `${r} de ${n} respondidas. As que ficarem sem resposta contam como neutras.`,
   lemas: ['Não há respostas certas: há respostas suas.', 'Na dúvida, "neutro" também é uma resposta.', 'Ninguém vê suas respostas uma por uma.',
     'Pense no que você acredita, não no que seu grupo diria.', 'As frases extremas estão aí de propósito.'],
-  t_perfil: 'Perfil', t_ejes: '12 eixos', t_brujula: 'Bússola', t_ideo: 'Ideologias', t_dir: 'Políticos', t_anal: 'Análise', t_comp: 'Compartilhar',
-  t_ejes2: 'Seus 12 eixos', t_brujula2: 'Bússola 2D', t_ideo2: 'Ideologias mais próximas', t_anal2: 'Análise', t_comp2: 'Seu cartão',
+  t_perfil: 'Perfil', t_ejes: 'Principais', t_brujula: 'Bússola', t_ideo: 'Ideologias', t_dir: 'Políticos', t_anal: 'Análise', t_comp: 'Compartilhar',
+  t_ejes2: 'Seus 12 eixos principais', t_brujula2: 'Bússola 2D', t_ideo2: 'Ideologias mais próximas', t_anal2: 'Análise', t_comp2: 'Seu cartão',
   barras: 'Barras', radar: 'Radar',
   cert_nota: 'O ponto é sua posição; a sombra, o intervalo onde você se move segundo sua certeza.',
   bru_sub: 'Dois eixos compostos: o econômico (Planejamento + Coletivismo ↔ Mercado + Propriedade) e o poder (Democracia + Liberdades ↔ Autoridade + Ordem).',
-  ideo_sub: '16 famílias ideológicas codificadas nos mesmos 12 eixos. É uma referência editorial, não um rótulo.',
+  ideo_sub: '16 famílias ideológicas codificadas nos mesmos 12 eixos principais. É uma referência editorial, não um rótulo.',
   anal_sub: 'O que não se vê à primeira vista: onde você é firme, onde tem dúvidas e quais combinações suas são pouco comuns.',
   comp_sub: 'Uma imagem vertical pronta para stories. É gerada no seu celular: não é enviada a lugar nenhum.',
   descargar: 'Baixar cartão', copiar: 'Copiar link',
@@ -237,20 +237,20 @@ Object.assign(window.BRUJULA_I18N.pt, {
   a_dist: 'Como você respondeu', a_dist_t: (d, n) => `${d}% de respostas decididas (concordo ou discordo totalmente) e ${n}% neutras.`,
   a_tabla: 'Tabela técnica', th: ['Eixo', 'Posição', 'Certeza', 'Resp.', 'Leitura'], lect: ['Firme', 'Intermediária', 'Aberta'],
   sin_resp: 'Resultado compartilhado: não inclui o detalhe das respostas.',
-  card_af: 'MINHA AFINIDADE PRINCIPAL', card_dir: 'MEU POLÍTICO MAIS PRÓXIMO', card_ejes: 'MEUS 12 EIXOS', card_otros: 'TAMBÉM PERTO', card_cta: 'Faça o seu em',
+  card_af: 'MINHA AFINIDADE PRINCIPAL', card_dir: 'MEU POLÍTICO MAIS PRÓXIMO', card_ejes: 'MEUS 12 EIXOS PRINCIPAIS', card_otros: 'TAMBÉM PERTO', card_cta: 'Faça o seu em',
   glos_k: 'GLOSSÁRIO', glos_h: 'Glossário', glos_lead: 'Os termos que aparecem nas frases, explicados em uma linha.',
   vacio: 'Você ainda não fez o teste neste navegador. Faça e seu resultado fica salvo aqui.'
 });
 Object.assign(window.BRUJULA_I18N.en, {
   h1: 'Where do you <em>really</em> stand?', nav_mimapa: 'My result', nav_glos: 'Glossary',
-  lead: 'Answer short statements and see your position on <b>12 axes</b>, <b>how firm</b> each one is, the <b>ideology</b> closest to you and the <b>politicians in your country</b> who think like you.',
-  cta1: 'Find your profile', cta2: 'See the 12 axes', cta3: 'Explore the map',
-  chips: (p, d) => ['12 axes', `${p} countries`, 'ES · PT · EN', `${d} politicians`, 'Anonymous'],
+  lead: 'Answer short statements and see your position on <b>30 axes</b>, <b>how firm</b> each one is, the <b>ideology</b> closest to you and the <b>politicians in your country</b> who think like you.',
+  cta1: 'Find your profile', cta2: 'See the 30 axes', cta3: 'Explore the map',
+  chips: (p, d) => ['30 axes', `${p} countries`, 'ES · PT · EN', `${d} politicians`, 'Anonymous'],
   ej_tag: 'SAMPLE', ej_af: 'Main affinity', ej_cerca: 'Closest politician', ej_nombre: 'Sample politician',
   como_k: 'HOW IT WORKS', pasos: [['You answer', 'Short statements, from strongly agree to strongly disagree. Unclear words come with help.'],
     ['We measure', 'Your position on each axis and how firm it is, based on how decisive and consistent your answers are.'],
     ['You compare', 'With 16 ideologies and with the politicians in your country. Download your card and share it.']],
-  ejes_k2: 'THE 12 AXES', rec: 'Recommended', empezar: 'Start',
+  ejes_k2: 'THE 30 AXES', rec: 'Recommended', empezar: 'Start',
   rapida: 'Express', completa: 'Full', exhaustiva: 'Exhaustive',
   d_rapida: 'Two statements per axis plus your country\'s hottest topics. For a quick read.',
   d_completa: 'Three statements per axis: the best balance of time and precision.',
@@ -262,12 +262,12 @@ Object.assign(window.BRUJULA_I18N.en, {
   rev_info: (r, n) => `${r} of ${n} answered. Unanswered ones count as neutral.`,
   lemas: ['There are no right answers, only yours.', 'If in doubt, "neutral" is an answer too.', 'Nobody sees your answers one by one.',
     'Think about what you believe, not what your group would say.', 'The extreme statements are there on purpose.'],
-  t_perfil: 'Profile', t_ejes: '12 axes', t_brujula: 'Compass', t_ideo: 'Ideologies', t_dir: 'Politicians', t_anal: 'Analysis', t_comp: 'Share',
-  t_ejes2: 'Your 12 axes', t_brujula2: '2D compass', t_ideo2: 'Closest ideologies', t_anal2: 'Analysis', t_comp2: 'Your card',
+  t_perfil: 'Profile', t_ejes: 'Main axes', t_brujula: 'Compass', t_ideo: 'Ideologies', t_dir: 'Politicians', t_anal: 'Analysis', t_comp: 'Share',
+  t_ejes2: 'Your 12 main axes', t_brujula2: '2D compass', t_ideo2: 'Closest ideologies', t_anal2: 'Analysis', t_comp2: 'Your card',
   barras: 'Bars', radar: 'Radar',
   cert_nota: 'The dot is your position; the shade is the range you move in, given your certainty.',
   bru_sub: 'Two composite axes: economics (Planning + Collectivism ↔ Markets + Property) and power (Democracy + Liberty ↔ Authority + Order).',
-  ideo_sub: '16 ideological families coded on the same 12 axes. An editorial reference, not a label.',
+  ideo_sub: '16 ideological families coded on the same 12 main axes. An editorial reference, not a label.',
   anal_sub: 'What is not obvious at first glance: where you are firm, where you hesitate, and which of your combinations are unusual.',
   comp_sub: 'A vertical image ready for stories. It is built on your phone: nothing is uploaded.',
   descargar: 'Download card', copiar: 'Copy link',
@@ -293,7 +293,7 @@ Object.assign(window.BRUJULA_I18N.en, {
   a_dist: 'How you answered', a_dist_t: (d, n) => `${d}% decisive answers (strongly agree or disagree) and ${n}% neutral.`,
   a_tabla: 'Technical table', th: ['Axis', 'Position', 'Certainty', 'Ans.', 'Reading'], lect: ['Firm', 'Middling', 'Open'],
   sin_resp: 'Shared result: answer details are not included.',
-  card_af: 'MY MAIN AFFINITY', card_dir: 'MY CLOSEST POLITICIAN', card_ejes: 'MY 12 AXES', card_otros: 'ALSO CLOSE', card_cta: 'Take yours at',
+  card_af: 'MY MAIN AFFINITY', card_dir: 'MY CLOSEST POLITICIAN', card_ejes: 'MY 12 MAIN AXES', card_otros: 'ALSO CLOSE', card_cta: 'Take yours at',
   glos_k: 'GLOSSARY', glos_h: 'Glossary', glos_lead: 'Terms that show up in the statements, explained in one line.',
   vacio: 'You have not taken the quiz in this browser yet. Take it and your result is saved here.'
 });
@@ -399,9 +399,9 @@ window.BRUJULA_GLOS = {
 // v3: textos más amigables, sin códigos de panel, más preguntas por modalidad
 Object.assign(window.BRUJULA_I18N.es, {
   inicio_k: 'Descubrimiento político', demo_k: 'Casi listo', res_k: 'Tu resultado', ejes_k: 'Guía', mapa_k: 'Mapa político', cara_k: 'Comparar', glos_k: 'Palabras clave',
-  como_k: 'Cómo funciona', ejes_k2: 'Los 12 ejes', modo_k: 'Elegí cuánto tiempo tenés', elegi: 'Elegí tu país',
+  como_k: 'Cómo funciona', ejes_k2: 'Los 30 ejes', modo_k: 'Elegí cuánto tiempo tenés', elegi: 'Elegí tu país',
   h1: '¿Conocés de verdad tu <em>ideología política</em>?', nav_mapa: 'Mapa político', nav_mimapa: 'Mi mapa', mapa_h: 'Mapa político',
-  lead: 'Puede que te estés etiquetando mal. Respondé frases cortas y descubrí tu perfil en <b>12 ejes</b>, la <b>ideología</b> que más se te parece y con qué <b>dirigentes de tu país</b> coincidís.',
+  lead: 'Puede que te estés etiquetando mal. Respondé frases cortas y descubrí tu perfil en <b>30 ejes</b>, la <b>ideología</b> que más se te parece y con qué <b>dirigentes de tu país</b> coincidís.',
   completa: 'Completa', exhaustiva: 'Exhaustiva',
   d_rapida: 'Cuatro frases por eje y lo más caliente de tu país. Para una primera idea.',
   d_completa: 'Siete frases por eje: el mejor equilibrio entre tiempo y precisión.',
@@ -410,9 +410,9 @@ Object.assign(window.BRUJULA_I18N.es, {
 });
 Object.assign(window.BRUJULA_I18N.pt, {
   inicio_k: 'Descoberta política', demo_k: 'Quase pronto', res_k: 'Seu resultado', ejes_k: 'Guia', mapa_k: 'Mapa político', cara_k: 'Comparar', glos_k: 'Palavras-chave',
-  como_k: 'Como funciona', ejes_k2: 'Os 12 eixos', modo_k: 'Escolha quanto tempo você tem', elegi: 'Escolha seu país',
+  como_k: 'Como funciona', ejes_k2: 'Os 30 eixos', modo_k: 'Escolha quanto tempo você tem', elegi: 'Escolha seu país',
   h1: 'Você conhece mesmo sua <em>ideologia política</em>?', nav_mapa: 'Mapa político', nav_mimapa: 'Meu mapa', mapa_h: 'Mapa político',
-  lead: 'Talvez você esteja se rotulando errado. Responda frases curtas e descubra seu perfil em <b>12 eixos</b>, a <b>ideologia</b> mais parecida com você e com quais <b>políticos do seu país</b> você concorda.',
+  lead: 'Talvez você esteja se rotulando errado. Responda frases curtas e descubra seu perfil em <b>30 eixos</b>, a <b>ideologia</b> mais parecida com você e com quais <b>políticos do seu país</b> você concorda.',
   d_rapida: 'Quatro frases por eixo e o mais quente do seu país. Para uma primeira ideia.',
   d_completa: 'Sete frases por eixo: o melhor equilíbrio entre tempo e precisão.',
   d_exhaustiva: 'Todas as frases, quase 200 (mais na Argentina). O resultado mais fino e uma certeza mais confiável.',
@@ -420,22 +420,22 @@ Object.assign(window.BRUJULA_I18N.pt, {
 });
 Object.assign(window.BRUJULA_I18N.en, {
   inicio_k: 'Political discovery', demo_k: 'Almost done', res_k: 'Your result', ejes_k: 'Guide', mapa_k: 'Political map', cara_k: 'Compare', glos_k: 'Key words',
-  como_k: 'How it works', ejes_k2: 'The 12 axes', modo_k: 'How much time do you have?', elegi: 'Pick your country',
+  como_k: 'How it works', ejes_k2: 'The 30 axes', modo_k: 'How much time do you have?', elegi: 'Pick your country',
   h1: 'Do you really know your <em>political ideology</em>?', nav_mapa: 'Political map', nav_mimapa: 'My map', mapa_h: 'Political map',
-  lead: 'You might be labeling yourself wrong. Answer short statements and find your profile on <b>12 axes</b>, the closest <b>ideology</b> and which <b>politicians in your country</b> you agree with.',
+  lead: 'You might be labeling yourself wrong. Answer short statements and find your profile on <b>30 axes</b>, the closest <b>ideology</b> and which <b>politicians in your country</b> you agree with.',
   d_rapida: 'Four statements per axis plus the hottest local issues. For a first idea.',
   d_completa: 'Seven statements per axis: the best balance between time and precision.',
   d_exhaustiva: 'Every statement, almost 200 (more for Argentina). The finest result and a more reliable certainty.',
   ejes_lead: 'Each axis runs from one pole to the other. Ticks are the politicians of the chosen country; the highlighted mark is you, if you took the quiz.'
 });
 // v3b: tarjetas de ejemplo y página de privacidad
-Object.assign(window.BRUJULA_I18N.es, { ej_af: 'Afinidad principal', ej_cerca: 'Más compatible', ej_ejes: 'Tus 12 ejes', priv_k: 'Tus datos',
+Object.assign(window.BRUJULA_I18N.es, { ej_af: 'Afinidad principal', ej_cerca: 'Más compatible', ej_ejes: 'Ejes principales', priv_k: 'Tus datos',
   priv_lead: 'El quiz es anónimo. Esto es lo que pasa con tus respuestas.',
   priv_t: ['No pedimos nombre, mail ni teléfono.', 'Tus respuestas se guardan solo si marcás la casilla al final; si no, quedan en tu navegador.', 'Solo se publican totales de grupos grandes, nunca respuestas individuales.', 'Si tenés menos de 16 años, no se guarda nada.', 'Las posiciones de los dirigentes son una estimación editorial y pueden cambiar.'] });
-Object.assign(window.BRUJULA_I18N.pt, { ej_af: 'Afinidade principal', ej_cerca: 'Mais compatível', ej_ejes: 'Seus 12 eixos', priv_k: 'Seus dados',
+Object.assign(window.BRUJULA_I18N.pt, { ej_af: 'Afinidade principal', ej_cerca: 'Mais compatível', ej_ejes: 'Eixos principais', priv_k: 'Seus dados',
   priv_lead: 'O teste é anônimo. Veja o que acontece com suas respostas.',
   priv_t: ['Não pedimos nome, e-mail nem telefone.', 'Suas respostas só são salvas se você marcar a caixa no final; senão, ficam no seu navegador.', 'Só publicamos totais de grupos grandes, nunca respostas individuais.', 'Se você tem menos de 16 anos, nada é salvo.', 'As posições dos políticos são uma estimativa editorial e podem mudar.'] });
-Object.assign(window.BRUJULA_I18N.en, { ej_af: 'Top match', ej_cerca: 'Most compatible', ej_ejes: 'Your 12 axes', priv_k: 'Your data',
+Object.assign(window.BRUJULA_I18N.en, { ej_af: 'Top match', ej_cerca: 'Most compatible', ej_ejes: 'Main axes', priv_k: 'Your data',
   priv_lead: 'The quiz is anonymous. Here is what happens with your answers.',
   priv_t: ['We do not ask for your name, email or phone.', 'Your answers are only stored if you tick the box at the end; otherwise they stay in your browser.', 'We only publish totals for large groups, never individual answers.', 'If you are under 16, nothing is stored.', 'Politician positions are an editorial estimate and may change.'] });
 Object.assign(window.BRUJULA_I18N.es, { hist_k: 'Figuras históricas más cercanas', hist_check: 'Incluir históricos', hist_grp: 'Históricos', act_grp: 'Actuales' });
@@ -449,7 +449,7 @@ Object.assign(window.BRUJULA_I18N.en, { int_k: 'Closest world figures', int_chec
 Object.assign(window.BRUJULA_I18N.es, { t_val: 'Valores', t_val2: 'Tu bandera y tus valores', t_mas: 'Más ejes', t_mas2: 'Ejes complementarios', t_sob: 'Sobremesa', t_sob2: 'Modo sobremesa',
   val_sub: 'Tu bandera se arma con tus posiciones más marcadas: los colores, el diseño y el escudo cambian con tu perfil.',
   valoras_k: 'Lo que más valorás', temas_k: 'Tus valores por tema', band_k: 'Tu bandera', band_dl: 'Descargar bandera',
-  mas_sub: 'Diecisiete ejes más, medidos con las mismas frases (muchas puntúan en varios ejes a la vez) y algunas nuevas. No cambian tu ideología ni tu afinidad con dirigentes.',
+  mas_sub: 'Dieciocho ejes más, medidos con las mismas frases (muchas puntúan en varios ejes a la vez) y algunas nuevas. No cambian tu ideología ni tu afinidad con dirigentes.',
   mas_vacio: 'Respondé más frases para ver estos ejes: la versión Completa o la Exhaustiva los miden mejor.',
   sob_nota: 'Juego de humor: no mide nada ni cambia tu resultado.', sat_ck: 'Nivel de convicción', sat_hk: 'Nivel de coherencia',
   sat_c: ['Barra brava de tus ideas', 'Militante de sobremesa', 'Opinólogo moderado', 'Veleta con buena onda'],
@@ -457,7 +457,7 @@ Object.assign(window.BRUJULA_I18N.es, { t_val: 'Valores', t_val2: 'Tu bandera y 
 Object.assign(window.BRUJULA_I18N.pt, { t_val: 'Valores', t_val2: 'Sua bandeira e seus valores', t_mas: 'Mais eixos', t_mas2: 'Eixos complementares', t_sob: 'Resenha', t_sob2: 'Modo resenha',
   val_sub: 'Sua bandeira é feita com suas posições mais marcadas: as cores, o desenho e o brasão mudam com seu perfil.',
   valoras_k: 'O que você mais valoriza', temas_k: 'Seus valores por tema', band_k: 'Sua bandeira', band_dl: 'Baixar bandeira',
-  mas_sub: 'Mais dezessete eixos, medidos com as mesmas frases (muitas pontuam em vários eixos ao mesmo tempo) e algumas novas. Não mudam sua ideologia nem sua afinidade com políticos.',
+  mas_sub: 'Mais dezoito eixos, medidos com as mesmas frases (muitas pontuam em vários eixos ao mesmo tempo) e algumas novas. Não mudam sua ideologia nem sua afinidade com políticos.',
   mas_vacio: 'Responda mais frases para ver estes eixos: as versões Completa ou Exaustiva medem melhor.',
   sob_nota: 'Brincadeira: não mede nada nem muda seu resultado.', sat_ck: 'Nível de convicção', sat_hk: 'Nível de coerência',
   sat_c: ['Torcida organizada das próprias ideias', 'Militante de churrasco', 'Palpiteiro moderado', 'Biruta de bem com a vida'],
@@ -465,7 +465,7 @@ Object.assign(window.BRUJULA_I18N.pt, { t_val: 'Valores', t_val2: 'Sua bandeira 
 Object.assign(window.BRUJULA_I18N.en, { t_val: 'Values', t_val2: 'Your flag and your values', t_mas: 'More axes', t_mas2: 'Additional axes', t_sob: 'Just for fun', t_sob2: 'Just for fun',
   val_sub: 'Your flag is built from your strongest positions: colors, layout and emblem change with your profile.',
   valoras_k: 'What you value most', temas_k: 'Your values by topic', band_k: 'Your flag', band_dl: 'Download flag',
-  mas_sub: 'Seventeen more axes, measured with the same statements (many count toward several axes at once) plus a few new ones. They do not change your ideology or your match with politicians.',
+  mas_sub: 'Eighteen more axes, measured with the same statements (many count toward several axes at once) plus a few new ones. They do not change your ideology or your match with politicians.',
   mas_vacio: 'Answer more statements to see these axes: the Complete or Exhaustive versions measure them better.',
   sob_nota: 'A joke: it measures nothing and does not change your result.', sat_ck: 'Conviction level', sat_hk: 'Consistency level',
   sat_c: ['Ultras of your own ideas', 'Dinner-table activist', 'Moderate pundit', 'Easygoing weathervane'],

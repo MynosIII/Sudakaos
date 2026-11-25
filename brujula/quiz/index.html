@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Brújula política</title>
-<meta name="description" content="12 ejes políticos, qué tan firme es cada posición, las ideologías y los dirigentes de tu país que más se parecen a vos. Argentina, Brasil, Chile, Colombia, Paraguay, Perú y Uruguay.">
+<meta name="description" content="30 ejes políticos, qué tan firme es cada posición, las ideologías y los dirigentes de tu país que más se parecen a vos. Argentina, Brasil, Chile, Colombia, Paraguay, Perú y Uruguay.">
 <meta property="og:title" content="Brújula política · Bússola política">
-<meta property="og:description" content="12 ejes, tu certeza en cada uno, tu ideología y los dirigentes que piensan como vos. ES · PT · EN.">
+<meta property="og:description" content="30 ejes, tu certeza en cada uno, tu ideología y los dirigentes que piensan como vos. ES · PT · EN.">
 <meta name="theme-color" content="#111316">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -16,14 +16,14 @@
 <header class="top">
   <div class="bar">
     <a class="logo" href="#/"><svg class="rose" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14.5"/><circle cx="16" cy="16" r="9"/><path d="M16 2v28M2 16h28"/><path class="n" d="M16 5l3 11h-6z"/><path class="s" d="M16 27l-3-11h6z"/></svg>
-      <span data-i18n="titulo">Brújula política</span><small id="hdr-ver">12 ejes</small></a>
+      <span data-i18n="titulo">Brújula política</span><small id="hdr-ver">30 ejes</small></a>
     <div class="clock">
       <button class="tema" id="tema" title="Tema claro / oscuro" aria-label="Tema">◐</button>
       <div class="lang" role="group" aria-label="Idioma / Language"><button data-l="es">ES</button><button data-l="pt">PT</button><button data-l="en">EN</button></div></div>
   </div>
 </header>
 <nav class="nav"><div class="in">
-  <a href="#/" data-r="quiz" data-i18n="nav_quiz">Quiz</a><a href="#/ejes" data-r="ejes" data-i18n="nav_ejes">12 ejes</a>
+  <a href="#/" data-r="quiz" data-i18n="nav_quiz">Quiz</a><a href="#/ejes" data-r="ejes" data-i18n="nav_ejes">30 ejes</a>
   <a href="#/mapa" data-r="mapa" data-i18n="nav_mapa">Mapa político</a><a href="#/mimapa" data-r="mimapa" data-i18n="nav_mimapa">Mi mapa</a>
   <a href="#/cara" data-r="cara" data-i18n="nav_cara">Cara a cara</a><a href="#/glosario" data-r="glosario" data-i18n="nav_glos">Glosario</a><a href="#/privacidad" data-r="privacidad" data-i18n="privacidad">Privacidad</a></div></nav>
 
@@ -35,7 +35,7 @@
         <div class="k" data-i18n="inicio_k">Descubrimiento político</div>
         <h1 data-i18n="h1">¿Dónde estás parado?</h1>
         <p class="lead" data-i18n="lead"></p>
-        <div class="row"><button class="btn" id="cta1" data-i18n="cta1">Descubrí tu perfil</button><a class="btn ghost" href="#/ejes" data-i18n="cta2">Ver los 12 ejes</a><a class="btn ghost" href="#/mapa" data-i18n="cta3">Explorar el mapa</a></div>
+        <div class="row"><button class="btn" id="cta1" data-i18n="cta1">Descubrí tu perfil</button><a class="btn ghost" href="#/ejes" data-i18n="cta2">Ver los 30 ejes</a><a class="btn ghost" href="#/mapa" data-i18n="cta3">Explorar el mapa</a></div>
       </div>
       <div class="stack"><div class="sc" id="ejemplo"></div></div>
     </div>
@@ -45,7 +45,7 @@
     <div id="versiones" class="vers"></div>
     <div class="k" data-i18n="modo_k">MODALIDAD</div>
     <div class="modos" id="modos"></div>
-    <div class="k" data-i18n="ejes_k2">LOS 12 EJES</div>
+    <div class="k" data-i18n="ejes_k2">LOS 30 EJES</div>
     <div class="ejlist" id="ejlist"></div>
   </section>
 
@@ -98,7 +98,7 @@
   <section id="s-res" class="screen">
     <div class="resw">
       <nav class="toc" id="toc">
-        <a href="#r-perfil" data-i18n="t_perfil">Perfil</a><a href="#r-val" data-i18n="t_val">Valores</a><a href="#r-ejes" data-i18n="t_ejes">12 ejes</a><a href="#r-mas" data-i18n="t_mas">Más ejes</a><a href="#r-brujula" data-i18n="t_brujula">Brújula</a>
+        <a href="#r-perfil" data-i18n="t_perfil">Perfil</a><a href="#r-val" data-i18n="t_val">Valores</a><a href="#r-ejes" data-i18n="t_ejes">Principales</a><a href="#r-mas" data-i18n="t_mas">Más ejes</a><a href="#r-brujula" data-i18n="t_brujula">Brújula</a>
         <a href="#r-ideo" data-i18n="t_ideo">Ideologías</a><a href="#r-dir" data-i18n="t_dir">Dirigentes</a><a href="#r-anal" data-i18n="t_anal">Análisis</a><a href="#r-sob" data-i18n="t_sob">Sobremesa</a><a href="#r-comp" data-i18n="t_comp">Compartir</a>
       </nav>
       <div>
@@ -107,7 +107,7 @@
           <div class="valw"><div class="bandw"><div id="bandera" class="bandera"></div><button class="btn ghost sm" id="band-dl" type="button"></button></div>
             <div><div class="k" data-i18n="valoras_k">Lo que más valorás</div><div id="valoras" class="valoras"></div>
               <div class="k" data-i18n="temas_k">Tus valores por tema</div><div id="temas" class="vg"></div></div></div></div>
-        <div class="sec" id="r-ejes"><h3><span data-i18n="t_ejes2">Tus 12 ejes</span></h3><p class="sub" data-i18n="cert_nota"></p>
+        <div class="sec" id="r-ejes"><h3><span data-i18n="t_ejes2">Tus 12 ejes principales</span></h3><p class="sub" data-i18n="cert_nota"></p>
           <div class="tog" id="ejes-tog"><button data-v="barras" class="on" data-i18n="barras">Barras</button><button data-v="radar" data-i18n="radar">Radar</button></div>
           <div id="ejes" class="ejes2"></div><div id="radar" class="radar" hidden></div></div>
         <div class="sec" id="r-mas"><h3><span data-i18n="t_mas2">Ejes complementarios</span></h3><p class="sub" data-i18n="mas_sub"></p><div id="ejes3" class="ejes2"></div></div>
@@ -129,8 +129,8 @@
 
   <!-- 5. Los 12 ejes -->
   <section id="s-ejes" class="screen">
-    <div class="k" data-i18n="ejes_k">GUÍA · LOS 12 EJES</div>
-    <h2 data-i18n="ejes_h">Los 12 ejes</h2>
+    <div class="k" data-i18n="ejes_k">GUÍA · LOS 30 EJES</div>
+    <h2 data-i18n="ejes_h">Los 30 ejes</h2>
     <p class="lead small" data-i18n="ejes_lead"></p>
     <div class="ctl"><label><span data-i18n="pais_l">País</span><select id="ej-ver"></select></label></div>
     <div class="ejesg" id="ejes-guia"></div>
