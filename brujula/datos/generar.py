@@ -251,6 +251,27 @@ def a12(p):
     }
 
 
+def a2(p, d12):
+    """Posición estimada en los ejes complementarios que se pueden derivar de los 8 ejes editoriales.
+    Quedan afuera los que no se infieren de ahí (epi, ges, eti, tem, fut) y 'cer' (es del usuario)."""
+    eco, com, soc, seg, ins, amb = (p[k] for k in ("eco", "com", "soc", "seg", "ins", "amb"))
+    radical = max(abs(eco - 50), abs(soc - 50), abs(ins - 50))
+    return {
+        "ecl": clip(amb),
+        "dis": clip(0.8 * eco + 0.2 * soc),
+        "bie": clip(0.85 * eco + 0.15 * soc),
+        "tra": clip(1.6 * radical - 20),
+        "idc": clip(0.6 * soc + 0.4 * (100 - eco)),
+        "pen": clip(seg),
+        "lab": clip(0.8 * eco + 0.2 * ins),
+        "ind": clip(0.75 * com + 0.25 * eco),
+        "mon": clip(0.6 * eco + 0.4 * (100 - ins)),
+        "inf": clip(0.7 * ins + 0.3 * seg),
+        "ipe": clip(100 - ins),
+        "uni": clip(0.8 * d12["int"] + 0.2 * soc),
+    }
+
+
 def figuras():
     base = json.loads((D / "figuras_base.json").read_text(encoding="utf8"))
     out = {"_nota": "Codificación editorial inicial A REVISAR, a partir de programas, votaciones y declaraciones públicas. No es una medición de opinión. "
@@ -260,9 +281,12 @@ def figuras():
         lst = []
         for f in base.get(grupo, []):
             pos = a12(f["pos"])
-            pos.update(f.get("ajuste", {}))
+            pos.update({k: v for k, v in f.get("ajuste", {}).items() if k in pos})
+            pos2 = a2(f["pos"], pos)
+            pos2.update({k: v for k, v in f.get("ajuste", {}).items() if k not in pos})
             g = {k: v for k, v in f.items() if k not in ("pos", "ajuste")}
             g["pos"] = pos
+            g["pos2"] = pos2
             lst.append(g)
         out[grupo] = lst
     return out
@@ -275,7 +299,7 @@ def ejes():
            for v, n in nombres.items()}
     ver["mx"] = {"nombre": "México", "activa": False}
     return {
-        "_nota": "30 ejes: 12 principales (mecánica de 12axes, politicaltests, MIT) + 18 complementarios (ejes2), con certeza. Cada eje va de 0 (polo a) a 100 (polo b).",
+        "_nota": "30 ejes: 12 principales (mecánica de 12axes, politicaltests, MIT) + 17 complementarios + Certeza (ejes2; 'cer' tiene calc y es el promedio de certeza de los otros 29). Cada eje va de 0 (polo a) a 100 (polo b).",
         "ejes": [{"id": i, "nombre": n, "a": a, "b": b, "a_desc": ad, "b_desc": bd, "pt": {"nombre": pt[0], "a": pt[1], "b": pt[2]}, "en": EN_EJES[i]}
                  for i, n, a, b, ad, bd, pt in EJES],
         "respuestas": [{"v": 2, "t": "Muy de acuerdo"}, {"v": 1, "t": "De acuerdo"}, {"v": 0, "t": "Neutral / no sé"},
@@ -283,7 +307,7 @@ def ejes():
         "respuestas_pt": ["Concordo totalmente", "Concordo", "Neutro / não sei", "Discordo", "Discordo totalmente"],
         "respuestas_en": ["Strongly agree", "Agree", "Neutral / unsure", "Disagree", "Strongly disagree"],
         "ejes2": [{"id": i, "nombre": n, "a": a, "b": b, "a_desc": ad, "b_desc": bd, "pt": {"nombre": pt[0], "a": pt[1], "b": pt[2]},
-                   "en": {"nombre": en[0], "a": en[1], "b": en[2]}} for i, n, a, b, ad, bd, pt, en in EJES2],
+                   "en": {"nombre": en[0], "a": en[1], "b": en[2]}, **({"calc": "certeza"} if i == "cer" else {})} for i, n, a, b, ad, bd, pt, en in EJES2],
         "versiones": ver,
         "creditos": "Preguntas base adaptadas de 12axes (politicaltests.github.io), licencia MIT, (c) 2020 8values (SapplyValues).",
     }

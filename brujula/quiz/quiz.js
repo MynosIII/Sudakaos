@@ -29,7 +29,7 @@
     tec: '<rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/>'
   };
   Object.assign(COLOR, { ecl: '#5fae7a', dis: '#e07a7a', bie: '#e8a05c', epi: '#5aa9e6', ges: '#9aa7b8', tra: '#d9776a', idc: '#d6b25e', pen: '#6fb8ad',
-    lab: '#8f9be0', eti: '#63c1cf', tem: '#ef8f6a', fut: '#86c98a', ind: '#b39278', mon: '#b98ad0', inf: '#c2c8d0', ipe: '#9a7fd0', uni: '#6aa8e8', mpo: '#5cc6c0' });
+    lab: '#8f9be0', eti: '#63c1cf', tem: '#ef8f6a', fut: '#86c98a', ind: '#b39278', mon: '#b98ad0', inf: '#c2c8d0', ipe: '#9a7fd0', uni: '#6aa8e8', cer: '#9aa6b8' });
   Object.assign(ICON, {
     ecl: '<path d="M5 19c0-8 6-14 14-14 0 8-6 14-14 14z"/><path d="M5 19l8-8"/>',
     dis: '<path d="M12 4v16M7 20h10M4 8h16"/><path d="M4 8l-2 5h4zM20 8l-2 5h4z"/>',
@@ -47,7 +47,7 @@
     mon: '<circle cx="12" cy="12" r="8"/><path d="M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.5 0-2.5.8-2.5 2s1 1.6 2.5 2 2.5.8 2.5 2-1 2-2.5 2c-1 0-2-.5-2.5-1.5M12 6.5v11"/>',
     inf: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 9h10M7 13h6M7 16h8"/>',
     ipe: '<path d="M3 9l9-5 9 5M5 9v9M10 9v9M14 9v9M19 9v9M3 20h18"/>',
-    mpo: '<rect x="6" y="3" width="12" height="18" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M9 16h6"/>',
+    cer: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/>',
     uni: '<circle cx="12" cy="12" r="8"/><circle cx="12" cy="5" r="1.6"/><circle cx="18.5" cy="15" r="1.6"/><circle cx="5.5" cy="15" r="1.6"/>'
   });
   const ic = k => `<svg class="ic" viewBox="0 0 24 24" aria-hidden="true">${ICON[k] || ''}</svg>`;
@@ -100,6 +100,31 @@
       num += c * Math.abs(sc[k] - pos[k]); den += c;
     }
     return Math.max(0, Math.round(100 - 2 * num / den));
+  }
+  // Afinidad con los 29 ejes: los 12 principales más los complementarios medidos (2+ respuestas, o del link) que la figura
+  // o ideología tenga codificados (pos2). Los complementarios pesan la mitad. 'cer' no es una postura y no entra.
+  function comps() {
+    if (!S.scores2) return [];
+    return IDS2().filter(k => k !== 'cer' && S.scores2[k] != null && (!S.nresp || (S.nresp[k] || 0) >= 2));
+  }
+  function afinidad29(sc, cert, pos, pos2, ks2) {
+    let num = 0, den = 0;
+    for (const k of IDS()) { const c = 0.3 + 0.7 * ((cert && cert[k] != null ? cert[k] : 50) / 100); num += c * Math.abs(sc[k] - pos[k]); den += c }
+    if (pos2) for (const k of ks2) {
+      if (pos2[k] == null) continue;
+      const c = 0.5 * (0.3 + 0.7 * ((S.cert2[k] != null ? S.cert2[k] : 50) / 100)); num += c * Math.abs(S.scores2[k] - pos2[k]); den += c;
+    }
+    return Math.max(0, Math.round(100 - 2 * num / den));
+  }
+  // Certeza (eje 30): promedio de la certeza en los 12 principales y en los complementarios medidos.
+  function fijarCerteza() {
+    if (!S.scores || !S.cert) return;
+    const ks2 = S.scores2 ? IDS2().filter(k => k !== 'cer' && S.cert2 && S.cert2[k] != null && (!S.nresp || S.nresp[k])) : [];
+    const v = [...IDS().map(k => S.cert[k]), ...ks2.map(k => S.cert2[k])].filter(x => x != null);
+    if (!v.length) return;
+    S.scores2 = S.scores2 || {}; S.cert2 = S.cert2 || {};
+    S.scores2.cer = Math.round(v.reduce((a, b) => a + b, 0) / v.length); S.cert2.cer = 100; S.nejes = v.length;
+    if (S.nresp) S.nresp.cer = v.length;
   }
   const media = o => Math.round(Object.values(o).reduce((s, v) => s + v, 0) / Object.values(o).length);
   function eje(e) { const t = e[S.lang] || {}; return { id: e.id, nombre: t.nombre || e.nombre, a: t.a || e.a, b: t.b || e.b } }
@@ -236,7 +261,9 @@
   const IDEO_COL = { libertarismo: ['#2563eb', '#0b1f4d'], lib_conservador: ['#1e40af', '#0a1433'], lib_progresista: ['#3b82c4', '#0e2a44'],
     socialdemocracia: ['#3b82c4', '#0e2a44'], socialismo_dem: ['#2563eb', '#0b1f4d'], comunismo: ['#1e40af', '#0a1433'], nacional_popular: ['#2563eb', '#0b1f4d'],
     desarrollismo: ['#5b6472', '#1b1f26'], centrismo: ['#5b6472', '#1b1f26'], democracia_cristiana: ['#3b82c4', '#0e2a44'], conservadurismo: ['#5b6472', '#1b1f26'],
-    derecha_nacionalista: ['#1e40af', '#0a1433'], ecologismo: ['#3b82c4', '#0e2a44'], federalismo: ['#5b6472', '#1b1f26'], anarquismo: ['#5b6472', '#1b1f26'], tecnocracia: ['#2563eb', '#0b1f4d'] };
+    derecha_nacionalista: ['#1e40af', '#0a1433'], ecologismo: ['#3b82c4', '#0e2a44'], federalismo: ['#5b6472', '#1b1f26'], anarquismo: ['#5b6472', '#1b1f26'], tecnocracia: ['#2563eb', '#0b1f4d'],
+    anarcocapitalismo: ['#1e40af', '#0a1433'], liberalismo_clasico: ['#3b82c4', '#0e2a44'], tercera_via: ['#5b6472', '#1b1f26'], socialismo_xxi: ['#2563eb', '#0b1f4d'],
+    izquierda_revolucionaria: ['#1e40af', '#0a1433'], ecosocialismo: ['#3b82c4', '#0e2a44'], populismo_derecha: ['#2563eb', '#0b1f4d'], integrismo_religioso: ['#5b6472', '#1b1f26'] };
   const EJ_NOMBRES = ['Javier Milei', 'Luiz Inácio Lula da Silva', 'Axel Kicillof', 'Nayib Bukele', 'Gabriel Boric', 'Mauricio Macri'];
   let EJ_I = 0, EJ_T = null;
   function ejemplos() {
@@ -425,16 +452,17 @@
 
   // ------------------------------------------------------------ resultado
   function ranking(sc, cert) {
-    const ids = IDS();
-    const figs = figuras(S.ver).map(f => ({ f, af: afinidad(sc, f.pos, cert) })).sort((a, b) => b.af - a.af);
-    S.hist = figurasH(S.ver).map(f => ({ f, af: afinidad(sc, f.pos, cert) })).sort((a, b) => b.af - a.af);
-    S.intl = figurasInt(S.ver).map(f => ({ f, af: afinidad(sc, f.pos, cert) })).sort((a, b) => b.af - a.af);
-    const ideo = S.ideo.map(i => { const pos = {}; ids.forEach((k, j) => { pos[k] = i.pos[j] }); return { i, pos, af: afinidad(sc, pos, cert) } }).sort((a, b) => b.af - a.af);
+    const ids = IDS(), ks2 = comps(), af = f => afinidad29(sc, cert, f.pos, f.pos2, ks2);
+    const figs = figuras(S.ver).map(f => ({ f, af: af(f) })).sort((a, b) => b.af - a.af);
+    S.hist = figurasH(S.ver).map(f => ({ f, af: af(f) })).sort((a, b) => b.af - a.af);
+    S.intl = figurasInt(S.ver).map(f => ({ f, af: af(f) })).sort((a, b) => b.af - a.af);
+    const ideo = S.ideo.map(i => { const pos = {}; ids.forEach((k, j) => { pos[k] = i.pos[j] }); return { i, pos, af: afinidad29(sc, cert, pos, i.pos2, ks2) } }).sort((a, b) => b.af - a.af);
     return { figs, ideo };
   }
   const cercanos = (sc, pos, n) => IDS().map(k => ({ k, d: Math.abs(sc[k] - pos[k]) })).sort((a, b) => a.d - b.d).slice(0, n).map(x => ejeK(x.k).nombre);
   function resultado(enviado, desdeLink) {
     S._enviado = enviado; S._link = desdeLink;
+    fijarCerteza();
     const t = T(), sc = S.scores, cert = S.cert, ver = S.ver, E = EJES(), rk = ranking(sc, cert);
     S.rk = rk;
     $('#hdr-ver').textContent = `${t.sub} · ${nombreVer(ver)}`;
@@ -450,7 +478,7 @@
     sobremesa();
     // compartir: versión, idioma, 12 posiciones y 12 certezas (+ los complementarios medidos, si hay)
     const ids = IDS(), ids2 = IDS2(), sc2 = S.scores2, ce2 = S.cert2;
-    const ext = sc2 && ids2.every(k => sc2[k] != null) ? ['x', ...ids2.map(k => sc2[k]), ...ids2.map(k => ce2[k])] : [];
+    const ext = sc2 && ids2.some(k => k !== 'cer' && sc2[k] != null) ? ['y', ...ids2.map(k => sc2[k] ?? 50), ...ids2.map(k => sc2[k] != null ? ce2[k] : 0)] : [];
     const url = location.origin + location.pathname + '#r=' + [ver, S.lang, ...ids.map(k => sc[k]), ...ids.map(k => cert[k]), ...ext].join('-');
     const top = rk.figs[0];
     const txt = top ? t.share(top.af, top.f.nombre) : t.titulo;
@@ -484,7 +512,7 @@
       <div class="pp"><span>${esc(e.a)}</span><span>${esc(e.b)}</span></div>
       <div class="trk" title="${esc(e.nombre)} · ${esc(t.certeza)} ${c}%"><span class="band" style="left:${lo}%;width:${hi - lo}%;background:${col}"></span>
         <span class="fill" style="left:${Math.min(s, 50)}%;width:${Math.abs(s - 50)}%;background:${col}"></span><span class="dot" style="left:${s}%;background:${col}"></span></div>
-      <div class="ft"><span>${esc(lectura(e, s))}</span><span>${esc(t.certeza.toLowerCase())} ${c}%${n ? ' · ' + esc(t.resp(n)) : ''}</span></div></div>`;
+      <div class="ft"><span>${esc(lectura(e, s))}</span><span>${e.id === 'cer' ? esc(t.cer_nota(S.nejes || 29)) : esc(t.certeza.toLowerCase()) + ' ' + c + '%' + (n ? ' · ' + esc(t.resp(n)) : '')}</span></div></div>`;
   }
   function complementarios() {
     const t = T(), E2 = medidos2(), n = S._link ? null : S.nresp;
@@ -498,7 +526,7 @@
   function polosFuertes(min) {
     // los complementarios cuentan sólo con 2 o más respuestas y pesan un poco menos que los 12 principales
     const comp = new Set(IDS2()), ok = e => !comp.has(e.id) || !S.nresp || (S.nresp[e.id] || 0) >= 2;
-    const todos = [...EJES(), ...EJES2()].filter(ok).map(e => ({ e, s: pos(e.id) })).filter(x => x.s != null);
+    const todos = [...EJES(), ...EJES2()].filter(e => e.id !== 'cer').filter(ok).map(e => ({ e, s: pos(e.id) })).filter(x => x.s != null);
     return todos.map(x => ({ ...x, lado: x.s < 50 ? 0 : 1, f: Math.abs(x.s - 50) * (0.5 + certK(x.e.id) / 200) * (comp.has(x.e.id) ? 0.85 : 1) }))
       .filter(x => Math.abs(x.s - 50) >= (min ?? 12)).sort((a, b) => b.f - a.f);
   }
@@ -521,7 +549,7 @@
       r: { es: ['Muy tradicional', 'Tradicional', 'Moderado', 'Progresista', 'Muy progresista'],
            pt: ['Muito tradicional', 'Tradicional', 'Moderado', 'Progressista', 'Muito progressista'],
            en: ['Very traditional', 'Traditional', 'Moderate', 'Progressive', 'Very progressive'] } },
-    { k: { es: 'Cultura y migración', pt: 'Cultura e migração', en: 'Culture & migration' }, ic: 'mig', ejes: [['mig', 1], ['mpo', -1], ['uni', -0.5]],
+    { k: { es: 'Cultura y migración', pt: 'Cultura e migração', en: 'Culture & migration' }, ic: 'mig', ejes: [['mig', 1], ['uni', -0.5]],
       r: { es: ['Diversidad plena', 'Apertura', 'Balance', 'Integración selectiva', 'Asimilación'],
            pt: ['Diversidade plena', 'Abertura', 'Equilíbrio', 'Integração seletiva', 'Assimilação'],
            en: ['Full diversity', 'Openness', 'Balance', 'Selective integration', 'Assimilation'] } },
@@ -552,13 +580,13 @@
     glo: ['#8d6e63', '#26a69a'], tec: ['#00acc1', '#558b2f'], ecl: ['#2e7d32', '#616161'], dis: ['#d32f2f', '#ffb300'], bie: ['#ef6c00', '#455a64'],
     epi: ['#0288d1', '#4a148c'], ges: ['#37474f', '#fbc02d'], tra: ['#1565c0', '#c62828'], idc: ['#ffca28', '#6d4c41'], pen: ['#4db6ac', '#263238'],
     lab: ['#e53935', '#283593'], eti: ['#26c6da', '#5d4037'], tem: ['#ff7043', '#3949ab'], fut: ['#66bb6a', '#ffa726'], ind: ['#795548', '#29b6f6'],
-    mon: ['#ab47bc', '#1a237e'], inf: ['#f5f5f5', '#212121'], ipe: ['#8e24aa', '#1565c0'], uni: ['#42a5f5', '#8d1d1d'], mpo: ['#26a69a', '#5d4037'] };
+    mon: ['#ab47bc', '#1a237e'], inf: ['#f5f5f5', '#212121'], ipe: ['#8e24aa', '#1565c0'], uni: ['#42a5f5', '#8d1d1d'] };
   const PEMB = { fed: ['ring', 'star'], dem: ['ring', 'shield'], int: ['ring', 'star'], mil: ['shield', 'leaf'], lib: ['shield', 'sun'], col: ['gear', 'chevron'],
     rel: ['sun', 'cross'], pro: ['sun', 'cross'], mig: ['star', 'ring'], pla: ['gear', 'chevron'], glo: ['star', 'ring'], tec: ['sun', 'leaf'], ecl: ['leaf', 'gear'],
     dis: ['scale', 'chevron'], bie: ['ring', 'chevron'], epi: ['sun', 'cross'], ges: ['gear', 'ring'], tra: ['scale', 'star'], idc: ['chevron', 'ring'],
     pen: ['scale', 'shield'], lab: ['ring', 'chevron'], eti: ['scale', 'cross'], tem: ['star', 'sun'], fut: ['leaf', 'sun'], ind: ['gear', 'ring'],
-    mon: ['star', 'scale'], inf: ['ring', 'shield'], ipe: ['star', 'scale'], uni: ['ring', 'star'], mpo: ['ring', 'shield'] };
-  const FAM = { eco: ['pla', 'col', 'dis', 'bie', 'lab', 'mon', 'ind', 'glo'], pod: ['dem', 'ipe', 'ges', 'lib', 'inf', 'pen'], nac: ['int', 'uni', 'mil', 'fed', 'mpo'],
+    mon: ['star', 'scale'], inf: ['ring', 'shield'], ipe: ['star', 'scale'], uni: ['ring', 'star'] };
+  const FAM = { eco: ['pla', 'col', 'dis', 'bie', 'lab', 'mon', 'ind', 'glo'], pod: ['dem', 'ipe', 'ges', 'lib', 'inf', 'pen'], nac: ['int', 'uni', 'mil', 'fed'],
     val: ['pro', 'rel', 'idc', 'mig'], ide: ['tec', 'ecl', 'epi', 'eti', 'tem', 'fut', 'tra'] };
   function luz(hex) { const n = parseInt(hex.slice(1), 16); return (0.299 * (n >> 16) + 0.587 * (n >> 8 & 255) + 0.114 * (n & 255)) / 255 }
   function emblema(tipo, cx, cy, r, col) {
@@ -870,10 +898,10 @@
     }).join('');
     const yo2 = r && r.sc2;
     $('#ejes-guia').insertAdjacentHTML('beforeend', `<div class="k gk">${esc(T().t_mas2)}</div>` + (S.ejes.ejes2 || []).map(e0 => {
-      const e = eje(e0), y = yo2 && yo2[e.id];
+      const e = eje(e0), y = yo2 && yo2[e.id], f2 = figs.filter(f => f.pos2 && f.pos2[e.id] != null);
       return `<div class="ejec" id="eje-${e.id}" style="border-top:3px solid ${COLOR[e.id]}"><div class="h">${icb(e.id)}<div><h3>${esc(e.nombre)}</h3><div class="k">${esc(e.a)} ↔ ${esc(e.b)}</div></div></div>
         <div class="polos"><div><b>${esc(e.a)}</b>${esc(e0.a_desc || '')}</div><div><b>${esc(e.b)}</b>${esc(e0.b_desc || '')}</div></div>
-        ${y != null ? `<div class="strip" style="background:linear-gradient(90deg,var(--s3),${COLOR[e.id]}55 50%,var(--s3))"><i class="yo" style="left:${y}%" title="${esc(T().vos)} · ${y}"></i></div>` : ''}</div>`;
+        ${y != null || f2.length ? `<div class="strip" style="background:linear-gradient(90deg,var(--s3),${COLOR[e.id]}55 50%,var(--s3))">${f2.map(f => `<i style="left:${f.pos2[e.id]}%" title="${esc(f.nombre)} · ${f.pos2[e.id]}"></i>`).join('')}${y != null ? `<i class="yo" style="left:${y}%" title="${esc(T().vos)} · ${y}"></i>` : ''}</div>` : ''}</div>`;
     }).join(''));
     if (foco) { const el = $('#eje-' + foco); if (el) setTimeout(() => el.scrollIntoView({ block: 'start' }), 30) }
   }
@@ -1024,13 +1052,13 @@
     };
   }
   function desdeHash() {
-    const m = location.hash.match(/^#r=([a-z]+)-(es|pt|en)((?:-\d{1,3}){24})(?:-x((?:-\d{1,3})+))?$/);
+    const m = location.hash.match(/^#r=([a-z]+)-(es|pt|en)((?:-\d{1,3}){24})(?:-([xy])((?:-\d{1,3})+))?$/);
     if (!m || !S.ejes.versiones[m[1]] || !S.ejes.versiones[m[1]].activa) return false;
     const v = m[3].slice(1).split('-').map(Number), ids = IDS(), cl = x => Math.max(0, Math.min(100, x));
     S.ver = m[1]; S.scores = {}; S.cert = {}; S.nresp = null; S.dist = null; S.scores2 = null; S.cert2 = null;
     ids.forEach((k, i) => { S.scores[k] = cl(v[i]); S.cert[k] = cl(v[i + ids.length]) });
-    const ids2 = IDS2(), v2 = m[4] ? m[4].slice(1).split('-').map(Number) : [];
-    if (v2.length === 2 * ids2.length) { S.scores2 = {}; S.cert2 = {}; ids2.forEach((k, i) => { S.scores2[k] = cl(v2[i]); S.cert2[k] = cl(v2[i + ids2.length]) }) }
+    const ids2 = IDS2(), v2 = m[4] === 'y' && m[5] ? m[5].slice(1).split('-').map(Number) : [];
+    if (v2.length === 2 * ids2.length) { S.scores2 = {}; S.cert2 = {}; ids2.forEach((k, i) => { const x = cl(v2[i]), c = cl(v2[i + ids2.length]); if (k !== 'cer' && x === 50 && c === 0) return; S.scores2[k] = x; S.cert2[k] = c }) } // 50 con certeza 0: eje sin respuestas
     if (!S.langElegido) setLang(m[2], false);
     resultado(null, true);
     return true;
