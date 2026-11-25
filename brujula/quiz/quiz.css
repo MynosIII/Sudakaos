@@ -304,3 +304,4 @@ body{font-variant-numeric:tabular-nums}.tema{font-size:13px;padding:4px 10px}
 .privl{max-width:680px;padding-left:20px;color:var(--muted);line-height:1.8}
 @media(max-width:860px){.stack{max-width:440px;margin:0 auto}}
 @media(max-width:480px){.scg{grid-template-columns:33% 1fr;gap:8px}.sc{padding:14px 12px 12px}.sca{padding:10px 8px}.scr{grid-template-columns:20px minmax(0,1fr) 20px 30px;gap:5px;font-size:10.5px}.scr .ib{width:20px;height:20px}}
+.pt.h circle{fill:none;stroke:var(--gold);stroke-width:1.5}.chk2{display:flex!important;flex-direction:row!important;align-items:center;gap:8px;align-self:end;padding-bottom:8px;cursor:pointer}

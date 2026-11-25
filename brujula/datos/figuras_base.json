@@ -1,5 +1,5 @@
 {
- "fecha": "2026-11-23",
+ "fecha": "2026-11-25",
  "_nota_cargos": "Cargos a noviembre de 2026, a revisar (Perú y Colombia tuvieron elecciones en 2026).",
  "_nota": "Posición editorial en 8 ejes de base (eco, com, fed, soc, seg, ins, ext, amb; 0-100) y 'ajuste' por persona en los 12 ejes. generar.py deriva los 12 ejes. A REVISAR.",
  "latam": [
@@ -1218,6 +1218,2172 @@
     "rel": 5,
     "mig": 85
    }
+  },
+  {
+   "nombre": "Sandra Pettovello",
+   "nivel": 2,
+   "espacio": "La Libertad Avanza",
+   "cargo": "Ministra de Capital Humano",
+   "pos": {
+    "eco": 88,
+    "com": 85,
+    "fed": 45,
+    "soc": 70,
+    "seg": 70,
+    "ins": 70,
+    "ext": 85,
+    "amb": 80
+   },
+   "alias": [
+    "sandra pettovello"
+   ]
+  },
+  {
+   "nombre": "Martín Menem",
+   "nivel": 2,
+   "espacio": "La Libertad Avanza",
+   "cargo": "Presidente de la Cámara de Diputados",
+   "pos": {
+    "eco": 85,
+    "com": 85,
+    "fed": 45,
+    "soc": 70,
+    "seg": 70,
+    "ins": 70,
+    "ext": 85,
+    "amb": 80
+   },
+   "alias": [
+    "martin menem"
+   ]
+  },
+  {
+   "nombre": "Luis Petri",
+   "nivel": 2,
+   "espacio": "La Libertad Avanza",
+   "cargo": "Ex ministro de Defensa",
+   "pos": {
+    "eco": 75,
+    "com": 75,
+    "fed": 45,
+    "soc": 60,
+    "seg": 88,
+    "ins": 65,
+    "ext": 90,
+    "amb": 75
+   },
+   "alias": [
+    "luis petri"
+   ]
+  },
+  {
+   "nombre": "Agustín Laje",
+   "nivel": 3,
+   "espacio": "Fundación Faro",
+   "cargo": "Escritor y activista",
+   "pos": {
+    "eco": 88,
+    "com": 85,
+    "fed": 45,
+    "soc": 92,
+    "seg": 80,
+    "ins": 70,
+    "ext": 90,
+    "amb": 80
+   },
+   "alias": [
+    "agustin laje"
+   ]
+  },
+  {
+   "nombre": "Nicolás Márquez",
+   "nivel": 3,
+   "espacio": "Independiente",
+   "cargo": "Escritor y activista",
+   "pos": {
+    "eco": 88,
+    "com": 85,
+    "fed": 45,
+    "soc": 92,
+    "seg": 85,
+    "ins": 75,
+    "ext": 90,
+    "amb": 80
+   },
+   "alias": [
+    "nicolas marquez"
+   ]
+  },
+  {
+   "nombre": "Alejandro Fantino",
+   "nivel": 3,
+   "espacio": "Neura",
+   "cargo": "Periodista y comunicador",
+   "pos": {
+    "eco": 80,
+    "com": 80,
+    "fed": 45,
+    "soc": 70,
+    "seg": 75,
+    "ins": 65,
+    "ext": 80,
+    "amb": 75
+   },
+   "alias": [
+    "alejandro fantino"
+   ]
+  },
+  {
+   "nombre": "Cristian Ritondo",
+   "nivel": 2,
+   "espacio": "PRO",
+   "cargo": "Diputado nacional",
+   "pos": {
+    "eco": 72,
+    "com": 72,
+    "fed": 45,
+    "soc": 60,
+    "seg": 80,
+    "ins": 55,
+    "ext": 75,
+    "amb": 70
+   },
+   "alias": [
+    "cristian ritondo"
+   ]
+  },
+  {
+   "nombre": "María Eugenia Vidal",
+   "nivel": 2,
+   "espacio": "PRO",
+   "cargo": "Ex gobernadora de Buenos Aires",
+   "pos": {
+    "eco": 68,
+    "com": 72,
+    "fed": 45,
+    "soc": 50,
+    "seg": 65,
+    "ins": 35,
+    "ext": 72,
+    "amb": 65
+   },
+   "alias": [
+    "maria eugenia vidal"
+   ]
+  },
+  {
+   "nombre": "Fernando de Andreis",
+   "nivel": 3,
+   "espacio": "PRO",
+   "cargo": "Dirigente del PRO",
+   "pos": {
+    "eco": 70,
+    "com": 72,
+    "fed": 45,
+    "soc": 55,
+    "seg": 65,
+    "ins": 45,
+    "ext": 72,
+    "amb": 65
+   },
+   "alias": [
+    "fernando de andreis"
+   ]
+  },
+  {
+   "nombre": "Hernán Lombardi",
+   "nivel": 3,
+   "espacio": "PRO",
+   "cargo": "Ex diputado nacional",
+   "pos": {
+    "eco": 68,
+    "com": 72,
+    "fed": 45,
+    "soc": 50,
+    "seg": 60,
+    "ins": 35,
+    "ext": 70,
+    "amb": 60
+   },
+   "alias": [
+    "hernan lombardi"
+   ]
+  },
+  {
+   "nombre": "Rogelio Frigerio",
+   "nivel": 2,
+   "espacio": "Provincias Unidas",
+   "cargo": "Gobernador de Entre Ríos",
+   "pos": {
+    "eco": 68,
+    "com": 70,
+    "fed": 65,
+    "soc": 55,
+    "seg": 60,
+    "ins": 35,
+    "ext": 68,
+    "amb": 72
+   },
+   "alias": [
+    "rogelio frigerio"
+   ]
+  },
+  {
+   "nombre": "Claudio Poggi",
+   "nivel": 2,
+   "espacio": "Provincias Unidas",
+   "cargo": "Gobernador de San Luis",
+   "pos": {
+    "eco": 62,
+    "com": 62,
+    "fed": 70,
+    "soc": 60,
+    "seg": 62,
+    "ins": 40,
+    "ext": 62,
+    "amb": 70
+   },
+   "alias": [
+    "claudio poggi"
+   ]
+  },
+  {
+   "nombre": "Carlos Sadir",
+   "nivel": 3,
+   "espacio": "UCR",
+   "cargo": "Gobernador de Jujuy",
+   "pos": {
+    "eco": 58,
+    "com": 60,
+    "fed": 70,
+    "soc": 55,
+    "seg": 62,
+    "ins": 40,
+    "ext": 60,
+    "amb": 72
+   },
+   "alias": [
+    "carlos sadir"
+   ]
+  },
+  {
+   "nombre": "Gustavo Valdés",
+   "nivel": 2,
+   "espacio": "UCR",
+   "cargo": "Ex gobernador de Corrientes",
+   "pos": {
+    "eco": 58,
+    "com": 60,
+    "fed": 70,
+    "soc": 55,
+    "seg": 60,
+    "ins": 40,
+    "ext": 60,
+    "amb": 68
+   },
+   "alias": [
+    "gustavo valdes"
+   ]
+  },
+  {
+   "nombre": "Leandro Zdero",
+   "nivel": 3,
+   "espacio": "UCR",
+   "cargo": "Gobernador del Chaco",
+   "pos": {
+    "eco": 62,
+    "com": 62,
+    "fed": 68,
+    "soc": 60,
+    "seg": 68,
+    "ins": 45,
+    "ext": 65,
+    "amb": 70
+   },
+   "alias": [
+    "leandro zdero"
+   ]
+  },
+  {
+   "nombre": "Martín Tetaz",
+   "nivel": 3,
+   "espacio": "UCR",
+   "cargo": "Ex diputado nacional",
+   "pos": {
+    "eco": 70,
+    "com": 75,
+    "fed": 50,
+    "soc": 35,
+    "seg": 50,
+    "ins": 30,
+    "ext": 70,
+    "amb": 55
+   },
+   "alias": [
+    "martin tetaz"
+   ]
+  },
+  {
+   "nombre": "Rodrigo de Loredo",
+   "nivel": 2,
+   "espacio": "UCR",
+   "cargo": "Ex diputado nacional",
+   "pos": {
+    "eco": 68,
+    "com": 70,
+    "fed": 55,
+    "soc": 45,
+    "seg": 62,
+    "ins": 40,
+    "ext": 70,
+    "amb": 62
+   },
+   "alias": [
+    "rodrigo de loredo"
+   ]
+  },
+  {
+   "nombre": "Facundo Suárez Lastra",
+   "nivel": 3,
+   "espacio": "UCR",
+   "cargo": "Dirigente radical",
+   "pos": {
+    "eco": 55,
+    "com": 60,
+    "fed": 50,
+    "soc": 40,
+    "seg": 45,
+    "ins": 25,
+    "ext": 60,
+    "amb": 55
+   },
+   "alias": [
+    "facundo suarez lastra"
+   ]
+  },
+  {
+   "nombre": "Juan Manuel Abal Medina",
+   "nivel": 3,
+   "espacio": "Peronismo",
+   "cargo": "Ex jefe de Gabinete",
+   "pos": {
+    "eco": 40,
+    "com": 45,
+    "fed": 50,
+    "soc": 40,
+    "seg": 45,
+    "ins": 40,
+    "ext": 40,
+    "amb": 55
+   },
+   "alias": [
+    "juan manuel abal medina"
+   ]
+  },
+  {
+   "nombre": "Eduardo de Pedro",
+   "nivel": 2,
+   "espacio": "Unión por la Patria",
+   "cargo": "Senador nacional",
+   "pos": {
+    "eco": 28,
+    "com": 35,
+    "fed": 55,
+    "soc": 35,
+    "seg": 40,
+    "ins": 50,
+    "ext": 30,
+    "amb": 55
+   },
+   "alias": [
+    "eduardo de pedro"
+   ]
+  },
+  {
+   "nombre": "Wado de Pedro",
+   "nivel": 3,
+   "espacio": "Unión por la Patria",
+   "cargo": "Dirigente de La Cámpora",
+   "pos": {
+    "eco": 28,
+    "com": 35,
+    "fed": 55,
+    "soc": 35,
+    "seg": 40,
+    "ins": 50,
+    "ext": 30,
+    "amb": 55
+   },
+   "alias": [
+    "wado de pedro"
+   ]
+  },
+  {
+   "nombre": "Jorge Capitanich",
+   "nivel": 2,
+   "espacio": "Unión por la Patria",
+   "cargo": "Ex gobernador del Chaco",
+   "pos": {
+    "eco": 30,
+    "com": 35,
+    "fed": 65,
+    "soc": 45,
+    "seg": 45,
+    "ins": 55,
+    "ext": 35,
+    "amb": 60
+   },
+   "alias": [
+    "jorge capitanich"
+   ]
+  },
+  {
+   "nombre": "Ricardo Quintela",
+   "nivel": 2,
+   "espacio": "Unión por la Patria",
+   "cargo": "Gobernador de La Rioja",
+   "pos": {
+    "eco": 30,
+    "com": 35,
+    "fed": 72,
+    "soc": 55,
+    "seg": 50,
+    "ins": 62,
+    "ext": 35,
+    "amb": 65
+   },
+   "alias": [
+    "ricardo quintela"
+   ]
+  },
+  {
+   "nombre": "Gildo Insfrán",
+   "nivel": 2,
+   "espacio": "Unión por la Patria",
+   "cargo": "Gobernador de Formosa",
+   "pos": {
+    "eco": 28,
+    "com": 30,
+    "fed": 72,
+    "soc": 60,
+    "seg": 60,
+    "ins": 80,
+    "ext": 35,
+    "amb": 60
+   },
+   "alias": [
+    "gildo insfran"
+   ]
+  },
+  {
+   "nombre": "Sergio Uñac",
+   "nivel": 3,
+   "espacio": "Unión por la Patria",
+   "cargo": "Senador nacional",
+   "pos": {
+    "eco": 45,
+    "com": 48,
+    "fed": 68,
+    "soc": 50,
+    "seg": 50,
+    "ins": 45,
+    "ext": 45,
+    "amb": 70
+   },
+   "alias": [
+    "sergio unac"
+   ]
+  },
+  {
+   "nombre": "Osvaldo Jaldo",
+   "nivel": 2,
+   "espacio": "Peronismo",
+   "cargo": "Gobernador de Tucumán",
+   "pos": {
+    "eco": 50,
+    "com": 50,
+    "fed": 68,
+    "soc": 58,
+    "seg": 60,
+    "ins": 50,
+    "ext": 55,
+    "amb": 65
+   },
+   "alias": [
+    "osvaldo jaldo"
+   ]
+  },
+  {
+   "nombre": "Raúl Jalil",
+   "nivel": 2,
+   "espacio": "Peronismo",
+   "cargo": "Gobernador de Catamarca",
+   "pos": {
+    "eco": 55,
+    "com": 55,
+    "fed": 70,
+    "soc": 55,
+    "seg": 55,
+    "ins": 50,
+    "ext": 58,
+    "amb": 78
+   },
+   "alias": [
+    "raul jalil"
+   ]
+  },
+  {
+   "nombre": "Gustavo Sáenz",
+   "nivel": 2,
+   "espacio": "Peronismo",
+   "cargo": "Gobernador de Salta",
+   "pos": {
+    "eco": 55,
+    "com": 55,
+    "fed": 72,
+    "soc": 58,
+    "seg": 60,
+    "ins": 50,
+    "ext": 58,
+    "amb": 75
+   },
+   "alias": [
+    "gustavo saenz"
+   ]
+  },
+  {
+   "nombre": "Hugo Passalacqua",
+   "nivel": 3,
+   "espacio": "Frente Renovador de la Concordia",
+   "cargo": "Gobernador de Misiones",
+   "pos": {
+    "eco": 50,
+    "com": 50,
+    "fed": 75,
+    "soc": 55,
+    "seg": 55,
+    "ins": 50,
+    "ext": 52,
+    "amb": 60
+   },
+   "alias": [
+    "hugo passalacqua"
+   ]
+  },
+  {
+   "nombre": "Alberto Weretilneck",
+   "nivel": 2,
+   "espacio": "Juntos Somos Río Negro",
+   "cargo": "Gobernador de Río Negro",
+   "pos": {
+    "eco": 58,
+    "com": 60,
+    "fed": 75,
+    "soc": 50,
+    "seg": 55,
+    "ins": 45,
+    "ext": 60,
+    "amb": 78
+   },
+   "alias": [
+    "alberto weretilneck"
+   ]
+  },
+  {
+   "nombre": "Rolando Figueroa",
+   "nivel": 2,
+   "espacio": "Comunidad",
+   "cargo": "Gobernador de Neuquén",
+   "pos": {
+    "eco": 60,
+    "com": 62,
+    "fed": 78,
+    "soc": 50,
+    "seg": 55,
+    "ins": 45,
+    "ext": 62,
+    "amb": 82
+   },
+   "alias": [
+    "rolando figueroa"
+   ]
+  },
+  {
+   "nombre": "Claudio Vidal",
+   "nivel": 3,
+   "espacio": "Por Santa Cruz",
+   "cargo": "Gobernador de Santa Cruz",
+   "pos": {
+    "eco": 50,
+    "com": 55,
+    "fed": 75,
+    "soc": 50,
+    "seg": 55,
+    "ins": 45,
+    "ext": 55,
+    "amb": 72
+   },
+   "alias": [
+    "claudio vidal"
+   ]
+  },
+  {
+   "nombre": "Gustavo Melella",
+   "nivel": 3,
+   "espacio": "Peronismo",
+   "cargo": "Gobernador de Tierra del Fuego",
+   "pos": {
+    "eco": 35,
+    "com": 30,
+    "fed": 72,
+    "soc": 40,
+    "seg": 45,
+    "ins": 45,
+    "ext": 35,
+    "amb": 55
+   },
+   "alias": [
+    "gustavo melella"
+   ]
+  },
+  {
+   "nombre": "Juan Manzur",
+   "nivel": 3,
+   "espacio": "Peronismo",
+   "cargo": "Ex jefe de Gabinete",
+   "pos": {
+    "eco": 42,
+    "com": 45,
+    "fed": 65,
+    "soc": 60,
+    "seg": 55,
+    "ins": 55,
+    "ext": 45,
+    "amb": 62
+   },
+   "alias": [
+    "juan manzur"
+   ]
+  },
+  {
+   "nombre": "Alberto Fernández",
+   "nivel": 2,
+   "espacio": "Peronismo",
+   "cargo": "Ex presidente",
+   "pos": {
+    "eco": 35,
+    "com": 40,
+    "fed": 55,
+    "soc": 35,
+    "seg": 40,
+    "ins": 40,
+    "ext": 40,
+    "amb": 55
+   },
+   "alias": [
+    "alberto fernandez"
+   ]
+  },
+  {
+   "nombre": "Daniel Scioli",
+   "nivel": 2,
+   "espacio": "La Libertad Avanza",
+   "cargo": "Secretario de Turismo, Ambiente y Deportes",
+   "pos": {
+    "eco": 62,
+    "com": 65,
+    "fed": 55,
+    "soc": 55,
+    "seg": 55,
+    "ins": 45,
+    "ext": 65,
+    "amb": 68
+   },
+   "alias": [
+    "daniel scioli"
+   ]
+  },
+  {
+   "nombre": "Julián Domínguez",
+   "nivel": 3,
+   "espacio": "Peronismo",
+   "cargo": "Ex ministro",
+   "pos": {
+    "eco": 40,
+    "com": 45,
+    "fed": 60,
+    "soc": 55,
+    "seg": 50,
+    "ins": 40,
+    "ext": 45,
+    "amb": 62
+   },
+   "alias": [
+    "julian dominguez"
+   ]
+  },
+  {
+   "nombre": "Hugo Moyano",
+   "nivel": 2,
+   "espacio": "Camioneros",
+   "cargo": "Dirigente sindical",
+   "pos": {
+    "eco": 25,
+    "com": 30,
+    "fed": 50,
+    "soc": 55,
+    "seg": 50,
+    "ins": 55,
+    "ext": 30,
+    "amb": 60
+   },
+   "alias": [
+    "hugo moyano"
+   ]
+  },
+  {
+   "nombre": "Pablo Moyano",
+   "nivel": 3,
+   "espacio": "Camioneros",
+   "cargo": "Dirigente sindical",
+   "pos": {
+    "eco": 20,
+    "com": 28,
+    "fed": 50,
+    "soc": 50,
+    "seg": 45,
+    "ins": 55,
+    "ext": 25,
+    "amb": 58
+   },
+   "alias": [
+    "pablo moyano"
+   ]
+  },
+  {
+   "nombre": "Héctor Daer",
+   "nivel": 3,
+   "espacio": "CGT",
+   "cargo": "Dirigente sindical",
+   "pos": {
+    "eco": 35,
+    "com": 38,
+    "fed": 50,
+    "soc": 55,
+    "seg": 50,
+    "ins": 45,
+    "ext": 40,
+    "amb": 58
+   },
+   "alias": [
+    "hector daer"
+   ]
+  },
+  {
+   "nombre": "Hugo Yasky",
+   "nivel": 3,
+   "espacio": "CTA",
+   "cargo": "Diputado y dirigente sindical",
+   "pos": {
+    "eco": 15,
+    "com": 25,
+    "fed": 50,
+    "soc": 30,
+    "seg": 30,
+    "ins": 40,
+    "ext": 20,
+    "amb": 50
+   },
+   "alias": [
+    "hugo yasky"
+   ]
+  },
+  {
+   "nombre": "Victoria Donda",
+   "nivel": 3,
+   "espacio": "Somos",
+   "cargo": "Ex diputada nacional",
+   "pos": {
+    "eco": 22,
+    "com": 35,
+    "fed": 50,
+    "soc": 15,
+    "seg": 25,
+    "ins": 35,
+    "ext": 25,
+    "amb": 45
+   },
+   "alias": [
+    "victoria donda"
+   ]
+  },
+  {
+   "nombre": "Itai Hagman",
+   "nivel": 3,
+   "espacio": "Patria Grande",
+   "cargo": "Diputado nacional",
+   "pos": {
+    "eco": 15,
+    "com": 30,
+    "fed": 50,
+    "soc": 15,
+    "seg": 25,
+    "ins": 35,
+    "ext": 20,
+    "amb": 40
+   },
+   "alias": [
+    "itai hagman"
+   ]
+  },
+  {
+   "nombre": "Fernando Gray",
+   "nivel": 3,
+   "espacio": "Peronismo",
+   "cargo": "Intendente de Esteban Echeverría",
+   "pos": {
+    "eco": 35,
+    "com": 40,
+    "fed": 55,
+    "soc": 45,
+    "seg": 50,
+    "ins": 45,
+    "ext": 40,
+    "amb": 58
+   },
+   "alias": [
+    "fernando gray"
+   ]
+  },
+  {
+   "nombre": "Jorge Ferraresi",
+   "nivel": 3,
+   "espacio": "Peronismo",
+   "cargo": "Intendente de Avellaneda",
+   "pos": {
+    "eco": 25,
+    "com": 30,
+    "fed": 50,
+    "soc": 40,
+    "seg": 45,
+    "ins": 50,
+    "ext": 30,
+    "amb": 55
+   },
+   "alias": [
+    "jorge ferraresi"
+   ]
+  },
+  {
+   "nombre": "Juan Pablo de Jesús",
+   "nivel": 3,
+   "espacio": "Peronismo",
+   "cargo": "Dirigente bonaerense",
+   "pos": {
+    "eco": 35,
+    "com": 40,
+    "fed": 55,
+    "soc": 45,
+    "seg": 50,
+    "ins": 45,
+    "ext": 40,
+    "amb": 55
+   },
+   "alias": [
+    "juan pablo de jesus"
+   ]
+  },
+  {
+   "nombre": "Romina Del Plá",
+   "nivel": 3,
+   "espacio": "Frente de Izquierda",
+   "cargo": "Dirigente del Partido Obrero",
+   "pos": {
+    "eco": 5,
+    "com": 20,
+    "fed": 50,
+    "soc": 10,
+    "seg": 15,
+    "ins": 40,
+    "ext": 5,
+    "amb": 35
+   },
+   "alias": [
+    "romina del pla"
+   ]
+  },
+  {
+   "nombre": "Christian Castillo",
+   "nivel": 3,
+   "espacio": "Frente de Izquierda",
+   "cargo": "Dirigente del PTS",
+   "pos": {
+    "eco": 5,
+    "com": 20,
+    "fed": 50,
+    "soc": 10,
+    "seg": 15,
+    "ins": 40,
+    "ext": 5,
+    "amb": 35
+   },
+   "alias": [
+    "christian castillo"
+   ]
+  },
+  {
+   "nombre": "Manuela Castañeira",
+   "nivel": 3,
+   "espacio": "Nuevo MAS",
+   "cargo": "Dirigente del Nuevo MAS",
+   "pos": {
+    "eco": 5,
+    "com": 20,
+    "fed": 50,
+    "soc": 8,
+    "seg": 15,
+    "ins": 40,
+    "ext": 5,
+    "amb": 30
+   },
+   "alias": [
+    "manuela castaneira"
+   ]
+  },
+  {
+   "nombre": "Luis Zamora",
+   "nivel": 3,
+   "espacio": "Autodeterminación y Libertad",
+   "cargo": "Dirigente de izquierda",
+   "pos": {
+    "eco": 10,
+    "com": 25,
+    "fed": 60,
+    "soc": 15,
+    "seg": 15,
+    "ins": 10,
+    "ext": 10,
+    "amb": 30
+   },
+   "alias": [
+    "luis zamora"
+   ]
+  },
+  {
+   "nombre": "Alejandro Biondini",
+   "nivel": 3,
+   "espacio": "Frente Patriota",
+   "cargo": "Dirigente nacionalista",
+   "pos": {
+    "eco": 40,
+    "com": 15,
+    "fed": 40,
+    "soc": 95,
+    "seg": 92,
+    "ins": 90,
+    "ext": 10,
+    "amb": 65
+   },
+   "alias": [
+    "alejandro biondini"
+   ]
+  },
+  {
+   "nombre": "Juan José Gómez Centurión",
+   "nivel": 3,
+   "espacio": "NOS",
+   "cargo": "Dirigente nacionalista",
+   "pos": {
+    "eco": 60,
+    "com": 40,
+    "fed": 45,
+    "soc": 90,
+    "seg": 90,
+    "ins": 70,
+    "ext": 55,
+    "amb": 70
+   },
+   "alias": [
+    "juan jose gomez centurion"
+   ]
+  },
+  {
+   "nombre": "Cynthia Hotton",
+   "nivel": 3,
+   "espacio": "Valores para mi País",
+   "cargo": "Dirigente evangélica",
+   "pos": {
+    "eco": 60,
+    "com": 55,
+    "fed": 50,
+    "soc": 92,
+    "seg": 75,
+    "ins": 55,
+    "ext": 65,
+    "amb": 65
+   },
+   "alias": [
+    "cynthia hotton"
+   ]
+  },
+  {
+   "nombre": "Bernardino Rivadavia",
+   "hist": 1,
+   "espacio": "Unitarios",
+   "cargo": "Presidente 1826–1827",
+   "pos": {
+    "eco": 65,
+    "com": 80,
+    "fed": 15,
+    "soc": 35,
+    "seg": 50,
+    "ins": 50,
+    "ext": 75,
+    "amb": 65
+   },
+   "alias": [
+    "bernardino rivadavia"
+   ]
+  },
+  {
+   "nombre": "Juan Manuel de Rosas",
+   "hist": 1,
+   "espacio": "Federales",
+   "cargo": "Gobernador de Buenos Aires 1829–1852",
+   "pos": {
+    "eco": 45,
+    "com": 25,
+    "fed": 55,
+    "soc": 90,
+    "seg": 95,
+    "ins": 95,
+    "ext": 20,
+    "amb": 60
+   },
+   "alias": [
+    "juan manuel de rosas"
+   ]
+  },
+  {
+   "nombre": "Justo José de Urquiza",
+   "hist": 1,
+   "espacio": "Federales",
+   "cargo": "Presidente 1854–1860",
+   "pos": {
+    "eco": 55,
+    "com": 60,
+    "fed": 75,
+    "soc": 70,
+    "seg": 70,
+    "ins": 70,
+    "ext": 55,
+    "amb": 65
+   },
+   "alias": [
+    "justo jose de urquiza"
+   ]
+  },
+  {
+   "nombre": "Bartolomé Mitre",
+   "hist": 1,
+   "espacio": "Liberales",
+   "cargo": "Presidente 1862–1868",
+   "pos": {
+    "eco": 70,
+    "com": 80,
+    "fed": 30,
+    "soc": 55,
+    "seg": 70,
+    "ins": 55,
+    "ext": 75,
+    "amb": 65
+   },
+   "alias": [
+    "bartolome mitre"
+   ]
+  },
+  {
+   "nombre": "Domingo Faustino Sarmiento",
+   "hist": 1,
+   "espacio": "Liberales",
+   "cargo": "Presidente 1868–1874",
+   "pos": {
+    "eco": 62,
+    "com": 78,
+    "fed": 30,
+    "soc": 30,
+    "seg": 70,
+    "ins": 50,
+    "ext": 80,
+    "amb": 70
+   },
+   "alias": [
+    "domingo faustino sarmiento"
+   ]
+  },
+  {
+   "nombre": "Nicolás Avellaneda",
+   "hist": 1,
+   "espacio": "PAN",
+   "cargo": "Presidente 1874–1880",
+   "pos": {
+    "eco": 62,
+    "com": 72,
+    "fed": 35,
+    "soc": 55,
+    "seg": 60,
+    "ins": 45,
+    "ext": 70,
+    "amb": 65
+   },
+   "alias": [
+    "nicolas avellaneda"
+   ]
+  },
+  {
+   "nombre": "Julio Argentino Roca",
+   "hist": 1,
+   "espacio": "PAN",
+   "cargo": "Presidente 1880–1886 y 1898–1904",
+   "pos": {
+    "eco": 70,
+    "com": 78,
+    "fed": 25,
+    "soc": 60,
+    "seg": 85,
+    "ins": 70,
+    "ext": 80,
+    "amb": 75
+   },
+   "alias": [
+    "julio argentino roca"
+   ]
+  },
+  {
+   "nombre": "Miguel Juárez Celman",
+   "hist": 1,
+   "espacio": "PAN",
+   "cargo": "Presidente 1886–1890",
+   "pos": {
+    "eco": 78,
+    "com": 80,
+    "fed": 30,
+    "soc": 45,
+    "seg": 60,
+    "ins": 65,
+    "ext": 80,
+    "amb": 70
+   },
+   "alias": [
+    "miguel juarez celman"
+   ]
+  },
+  {
+   "nombre": "Carlos Pellegrini",
+   "hist": 1,
+   "espacio": "PAN",
+   "cargo": "Presidente 1890–1892",
+   "pos": {
+    "eco": 62,
+    "com": 55,
+    "fed": 35,
+    "soc": 55,
+    "seg": 65,
+    "ins": 55,
+    "ext": 70,
+    "amb": 70
+   },
+   "alias": [
+    "carlos pellegrini"
+   ]
+  },
+  {
+   "nombre": "Leandro N. Alem",
+   "hist": 1,
+   "espacio": "UCR",
+   "cargo": "Fundador de la UCR",
+   "pos": {
+    "eco": 50,
+    "com": 55,
+    "fed": 55,
+    "soc": 50,
+    "seg": 45,
+    "ins": 35,
+    "ext": 55,
+    "amb": 55
+   },
+   "alias": [
+    "leandro n. alem"
+   ]
+  },
+  {
+   "nombre": "Roque Sáenz Peña",
+   "hist": 1,
+   "espacio": "PAN",
+   "cargo": "Presidente 1910–1914",
+   "pos": {
+    "eco": 65,
+    "com": 72,
+    "fed": 35,
+    "soc": 50,
+    "seg": 55,
+    "ins": 35,
+    "ext": 70,
+    "amb": 65
+   },
+   "alias": [
+    "roque saenz pena"
+   ]
+  },
+  {
+   "nombre": "Hipólito Yrigoyen",
+   "hist": 1,
+   "espacio": "UCR",
+   "cargo": "Presidente 1916–1922 y 1928–1930",
+   "pos": {
+    "eco": 40,
+    "com": 45,
+    "fed": 45,
+    "soc": 55,
+    "seg": 45,
+    "ins": 55,
+    "ext": 30,
+    "amb": 55
+   },
+   "alias": [
+    "hipolito yrigoyen"
+   ]
+  },
+  {
+   "nombre": "Marcelo Torcuato de Alvear",
+   "hist": 1,
+   "espacio": "UCR",
+   "cargo": "Presidente 1922–1928",
+   "pos": {
+    "eco": 60,
+    "com": 65,
+    "fed": 45,
+    "soc": 45,
+    "seg": 45,
+    "ins": 30,
+    "ext": 60,
+    "amb": 60
+   },
+   "alias": [
+    "marcelo torcuato de alvear"
+   ]
+  },
+  {
+   "nombre": "Lisandro de la Torre",
+   "hist": 1,
+   "espacio": "Partido Demócrata Progresista",
+   "cargo": "Senador",
+   "pos": {
+    "eco": 45,
+    "com": 40,
+    "fed": 75,
+    "soc": 30,
+    "seg": 35,
+    "ins": 20,
+    "ext": 45,
+    "amb": 45
+   },
+   "alias": [
+    "lisandro de la torre"
+   ]
+  },
+  {
+   "nombre": "Juan B. Justo",
+   "hist": 1,
+   "espacio": "Partido Socialista",
+   "cargo": "Fundador del Partido Socialista",
+   "pos": {
+    "eco": 30,
+    "com": 80,
+    "fed": 45,
+    "soc": 15,
+    "seg": 30,
+    "ins": 20,
+    "ext": 55,
+    "amb": 45
+   },
+   "alias": [
+    "juan b. justo"
+   ]
+  },
+  {
+   "nombre": "Alfredo Palacios",
+   "hist": 1,
+   "espacio": "Partido Socialista",
+   "cargo": "Senador",
+   "pos": {
+    "eco": 30,
+    "com": 60,
+    "fed": 45,
+    "soc": 25,
+    "seg": 30,
+    "ins": 20,
+    "ext": 45,
+    "amb": 45
+   },
+   "alias": [
+    "alfredo palacios"
+   ]
+  },
+  {
+   "nombre": "José Félix Uriburu",
+   "hist": 1,
+   "espacio": "Golpe de 1930",
+   "cargo": "Dictador 1930–1932",
+   "pos": {
+    "eco": 55,
+    "com": 40,
+    "fed": 25,
+    "soc": 85,
+    "seg": 95,
+    "ins": 95,
+    "ext": 45,
+    "amb": 60
+   },
+   "alias": [
+    "jose felix uriburu"
+   ]
+  },
+  {
+   "nombre": "Agustín Pedro Justo",
+   "hist": 1,
+   "espacio": "Concordancia",
+   "cargo": "Presidente 1932–1938",
+   "pos": {
+    "eco": 60,
+    "com": 55,
+    "fed": 35,
+    "soc": 65,
+    "seg": 70,
+    "ins": 70,
+    "ext": 65,
+    "amb": 65
+   },
+   "alias": [
+    "agustin pedro justo"
+   ]
+  },
+  {
+   "nombre": "Juan Domingo Perón",
+   "hist": 1,
+   "espacio": "Peronismo",
+   "cargo": "Presidente 1946–1955 y 1973–1974",
+   "pos": {
+    "eco": 25,
+    "com": 20,
+    "fed": 40,
+    "soc": 65,
+    "seg": 70,
+    "ins": 85,
+    "ext": 25,
+    "amb": 70
+   },
+   "alias": [
+    "juan domingo peron"
+   ]
+  },
+  {
+   "nombre": "Eva Perón",
+   "hist": 1,
+   "espacio": "Peronismo",
+   "cargo": "Primera dama y líder del peronismo",
+   "pos": {
+    "eco": 20,
+    "com": 25,
+    "fed": 45,
+    "soc": 55,
+    "seg": 60,
+    "ins": 80,
+    "ext": 20,
+    "amb": 60
+   },
+   "alias": [
+    "eva peron"
+   ]
+  },
+  {
+   "nombre": "Ricardo Balbín",
+   "hist": 1,
+   "espacio": "UCR",
+   "cargo": "Líder de la UCR",
+   "pos": {
+    "eco": 45,
+    "com": 50,
+    "fed": 50,
+    "soc": 50,
+    "seg": 45,
+    "ins": 25,
+    "ext": 50,
+    "amb": 55
+   },
+   "alias": [
+    "ricardo balbin"
+   ]
+  },
+  {
+   "nombre": "Arturo Frondizi",
+   "hist": 1,
+   "espacio": "UCRI / Desarrollismo",
+   "cargo": "Presidente 1958–1962",
+   "pos": {
+    "eco": 45,
+    "com": 60,
+    "fed": 45,
+    "soc": 50,
+    "seg": 55,
+    "ins": 40,
+    "ext": 60,
+    "amb": 85
+   },
+   "alias": [
+    "arturo frondizi"
+   ]
+  },
+  {
+   "nombre": "Arturo Illia",
+   "hist": 1,
+   "espacio": "UCRP",
+   "cargo": "Presidente 1963–1966",
+   "pos": {
+    "eco": 40,
+    "com": 40,
+    "fed": 55,
+    "soc": 45,
+    "seg": 35,
+    "ins": 15,
+    "ext": 40,
+    "amb": 55
+   },
+   "alias": [
+    "arturo illia"
+   ]
+  },
+  {
+   "nombre": "Juan Carlos Onganía",
+   "hist": 1,
+   "espacio": "Revolución Argentina",
+   "cargo": "Dictador 1966–1970",
+   "pos": {
+    "eco": 60,
+    "com": 55,
+    "fed": 20,
+    "soc": 90,
+    "seg": 95,
+    "ins": 95,
+    "ext": 75,
+    "amb": 70
+   },
+   "alias": [
+    "juan carlos ongania"
+   ]
+  },
+  {
+   "nombre": "Alejandro Lanusse",
+   "hist": 1,
+   "espacio": "Revolución Argentina",
+   "cargo": "Dictador 1971–1973",
+   "pos": {
+    "eco": 55,
+    "com": 55,
+    "fed": 25,
+    "soc": 65,
+    "seg": 85,
+    "ins": 90,
+    "ext": 65,
+    "amb": 65
+   },
+   "alias": [
+    "alejandro lanusse"
+   ]
+  },
+  {
+   "nombre": "Héctor José Cámpora",
+   "hist": 1,
+   "espacio": "Peronismo",
+   "cargo": "Presidente 1973",
+   "pos": {
+    "eco": 25,
+    "com": 25,
+    "fed": 45,
+    "soc": 40,
+    "seg": 30,
+    "ins": 50,
+    "ext": 15,
+    "amb": 60
+   },
+   "alias": [
+    "hector jose campora"
+   ]
+  },
+  {
+   "nombre": "Isabel Perón",
+   "hist": 1,
+   "espacio": "Peronismo",
+   "cargo": "Presidenta 1974–1976",
+   "pos": {
+    "eco": 40,
+    "com": 30,
+    "fed": 40,
+    "soc": 75,
+    "seg": 80,
+    "ins": 75,
+    "ext": 45,
+    "amb": 65
+   },
+   "alias": [
+    "isabel peron"
+   ]
+  },
+  {
+   "nombre": "José López Rega",
+   "hist": 1,
+   "espacio": "Peronismo",
+   "cargo": "Ministro de Bienestar Social",
+   "pos": {
+    "eco": 40,
+    "com": 25,
+    "fed": 35,
+    "soc": 85,
+    "seg": 95,
+    "ins": 90,
+    "ext": 40,
+    "amb": 60
+   },
+   "alias": [
+    "jose lopez rega"
+   ]
+  },
+  {
+   "nombre": "Jorge Rafael Videla",
+   "hist": 1,
+   "espacio": "Proceso de Reorganización Nacional",
+   "cargo": "Dictador 1976–1981",
+   "pos": {
+    "eco": 70,
+    "com": 65,
+    "fed": 20,
+    "soc": 90,
+    "seg": 100,
+    "ins": 100,
+    "ext": 75,
+    "amb": 70
+   },
+   "alias": [
+    "jorge rafael videla"
+   ]
+  },
+  {
+   "nombre": "José Alfredo Martínez de Hoz",
+   "hist": 1,
+   "espacio": "Proceso de Reorganización Nacional",
+   "cargo": "Ministro de Economía 1976–1981",
+   "pos": {
+    "eco": 88,
+    "com": 90,
+    "fed": 25,
+    "soc": 75,
+    "seg": 90,
+    "ins": 90,
+    "ext": 85,
+    "amb": 70
+   },
+   "alias": [
+    "jose alfredo martinez de hoz"
+   ]
+  },
+  {
+   "nombre": "Leopoldo Galtieri",
+   "hist": 1,
+   "espacio": "Proceso de Reorganización Nacional",
+   "cargo": "Dictador 1981–1982",
+   "pos": {
+    "eco": 65,
+    "com": 55,
+    "fed": 20,
+    "soc": 90,
+    "seg": 100,
+    "ins": 100,
+    "ext": 40,
+    "amb": 70
+   },
+   "alias": [
+    "leopoldo galtieri"
+   ]
+  },
+  {
+   "nombre": "Raúl Alfonsín",
+   "hist": 1,
+   "espacio": "UCR",
+   "cargo": "Presidente 1983–1989",
+   "pos": {
+    "eco": 40,
+    "com": 50,
+    "fed": 50,
+    "soc": 35,
+    "seg": 30,
+    "ins": 15,
+    "ext": 45,
+    "amb": 55
+   },
+   "alias": [
+    "raul alfonsin"
+   ]
+  },
+  {
+   "nombre": "Antonio Cafiero",
+   "hist": 1,
+   "espacio": "Peronismo renovador",
+   "cargo": "Gobernador de Buenos Aires 1987–1991",
+   "pos": {
+    "eco": 35,
+    "com": 40,
+    "fed": 55,
+    "soc": 50,
+    "seg": 45,
+    "ins": 35,
+    "ext": 40,
+    "amb": 60
+   },
+   "alias": [
+    "antonio cafiero"
+   ]
+  },
+  {
+   "nombre": "Carlos Menem",
+   "hist": 1,
+   "espacio": "Peronismo",
+   "cargo": "Presidente 1989–1999",
+   "pos": {
+    "eco": 85,
+    "com": 85,
+    "fed": 45,
+    "soc": 65,
+    "seg": 65,
+    "ins": 70,
+    "ext": 90,
+    "amb": 75
+   },
+   "alias": [
+    "carlos menem"
+   ]
+  },
+  {
+   "nombre": "Domingo Cavallo",
+   "hist": 1,
+   "espacio": "Acción por la República",
+   "cargo": "Ministro de Economía",
+   "pos": {
+    "eco": 85,
+    "com": 85,
+    "fed": 40,
+    "soc": 50,
+    "seg": 55,
+    "ins": 50,
+    "ext": 85,
+    "amb": 70
+   },
+   "alias": [
+    "domingo cavallo"
+   ]
+  },
+  {
+   "nombre": "Eduardo Duhalde",
+   "hist": 1,
+   "espacio": "Peronismo",
+   "cargo": "Presidente 2002–2003",
+   "pos": {
+    "eco": 40,
+    "com": 35,
+    "fed": 45,
+    "soc": 60,
+    "seg": 65,
+    "ins": 60,
+    "ext": 40,
+    "amb": 65
+   },
+   "alias": [
+    "eduardo duhalde"
+   ]
+  },
+  {
+   "nombre": "Fernando de la Rúa",
+   "hist": 1,
+   "espacio": "Alianza",
+   "cargo": "Presidente 1999–2001",
+   "pos": {
+    "eco": 65,
+    "com": 65,
+    "fed": 45,
+    "soc": 50,
+    "seg": 55,
+    "ins": 30,
+    "ext": 65,
+    "amb": 60
+   },
+   "alias": [
+    "fernando de la rua"
+   ]
+  },
+  {
+   "nombre": "Chacho Álvarez",
+   "hist": 1,
+   "espacio": "FREPASO",
+   "cargo": "Vicepresidente 1999–2000",
+   "pos": {
+    "eco": 40,
+    "com": 50,
+    "fed": 50,
+    "soc": 30,
+    "seg": 35,
+    "ins": 25,
+    "ext": 45,
+    "amb": 50
+   },
+   "alias": [
+    "chacho alvarez"
+   ]
+  },
+  {
+   "nombre": "Néstor Kirchner",
+   "hist": 1,
+   "espacio": "Frente para la Victoria",
+   "cargo": "Presidente 2003–2007",
+   "pos": {
+    "eco": 28,
+    "com": 35,
+    "fed": 50,
+    "soc": 35,
+    "seg": 40,
+    "ins": 60,
+    "ext": 25,
+    "amb": 62
+   },
+   "alias": [
+    "nestor kirchner"
+   ]
+  },
+  {
+   "nombre": "Hermes Binner",
+   "hist": 1,
+   "espacio": "Partido Socialista",
+   "cargo": "Gobernador de Santa Fe 2007–2011",
+   "pos": {
+    "eco": 35,
+    "com": 50,
+    "fed": 60,
+    "soc": 25,
+    "seg": 35,
+    "ins": 15,
+    "ext": 45,
+    "amb": 50
+   },
+   "alias": [
+    "hermes binner"
+   ]
+  },
+  {
+   "nombre": "Jorge Abelardo Ramos",
+   "hist": 1,
+   "espacio": "Izquierda nacional",
+   "cargo": "Fundador de la izquierda nacional",
+   "pos": {
+    "eco": 25,
+    "com": 15,
+    "fed": 45,
+    "soc": 55,
+    "seg": 55,
+    "ins": 65,
+    "ext": 10,
+    "amb": 65
+   },
+   "alias": [
+    "jorge abelardo ramos"
+   ]
+  },
+  {
+   "nombre": "Mario Roberto Santucho",
+   "hist": 1,
+   "espacio": "PRT-ERP",
+   "cargo": "Líder del PRT-ERP",
+   "pos": {
+    "eco": 0,
+    "com": 15,
+    "fed": 45,
+    "soc": 25,
+    "seg": 10,
+    "ins": 90,
+    "ext": 0,
+    "amb": 50
+   },
+   "alias": [
+    "mario roberto santucho"
+   ]
+  },
+  {
+   "nombre": "Mario Firmenich",
+   "hist": 1,
+   "espacio": "Montoneros",
+   "cargo": "Líder de Montoneros",
+   "pos": {
+    "eco": 10,
+    "com": 15,
+    "fed": 45,
+    "soc": 50,
+    "seg": 20,
+    "ins": 90,
+    "ext": 5,
+    "amb": 55
+   },
+   "alias": [
+    "mario firmenich"
+   ]
+  },
+  {
+   "nombre": "Agustín Tosco",
+   "hist": 1,
+   "espacio": "Sindicalismo clasista",
+   "cargo": "Dirigente sindical cordobés",
+   "pos": {
+    "eco": 10,
+    "com": 25,
+    "fed": 60,
+    "soc": 30,
+    "seg": 20,
+    "ins": 40,
+    "ext": 10,
+    "amb": 50
+   },
+   "alias": [
+    "agustin tosco"
+   ]
+  },
+  {
+   "nombre": "Augusto Vandor",
+   "hist": 1,
+   "espacio": "Sindicalismo peronista",
+   "cargo": "Dirigente de la UOM",
+   "pos": {
+    "eco": 30,
+    "com": 30,
+    "fed": 45,
+    "soc": 60,
+    "seg": 55,
+    "ins": 60,
+    "ext": 35,
+    "amb": 60
+   },
+   "alias": [
+    "augusto vandor"
+   ]
+  },
+  {
+   "nombre": "José Ignacio Rucci",
+   "hist": 1,
+   "espacio": "Sindicalismo peronista",
+   "cargo": "Secretario general de la CGT",
+   "pos": {
+    "eco": 30,
+    "com": 25,
+    "fed": 45,
+    "soc": 65,
+    "seg": 65,
+    "ins": 65,
+    "ext": 35,
+    "amb": 60
+   },
+   "alias": [
+    "jose ignacio rucci"
+   ]
+  },
+  {
+   "nombre": "Saúl Ubaldini",
+   "hist": 1,
+   "espacio": "Sindicalismo peronista",
+   "cargo": "Secretario general de la CGT",
+   "pos": {
+    "eco": 25,
+    "com": 30,
+    "fed": 45,
+    "soc": 60,
+    "seg": 45,
+    "ins": 50,
+    "ext": 30,
+    "amb": 60
+   },
+   "alias": [
+    "saul ubaldini"
+   ]
+  },
+  {
+   "nombre": "Álvaro Alsogaray",
+   "hist": 1,
+   "espacio": "UCeDé",
+   "cargo": "Ministro de Economía y fundador de la UCeDé",
+   "pos": {
+    "eco": 92,
+    "com": 92,
+    "fed": 40,
+    "soc": 65,
+    "seg": 70,
+    "ins": 50,
+    "ext": 90,
+    "amb": 70
+   },
+   "alias": [
+    "alvaro alsogaray"
+   ]
+  },
+  {
+   "nombre": "María Julia Alsogaray",
+   "hist": 1,
+   "espacio": "UCeDé",
+   "cargo": "Secretaria de Recursos Naturales",
+   "pos": {
+    "eco": 88,
+    "com": 90,
+    "fed": 40,
+    "soc": 60,
+    "seg": 65,
+    "ins": 55,
+    "ext": 88,
+    "amb": 75
+   },
+   "alias": [
+    "maria julia alsogaray"
+   ]
+  },
+  {
+   "nombre": "Oscar Alende",
+   "hist": 1,
+   "espacio": "Partido Intransigente",
+   "cargo": "Gobernador de Buenos Aires 1958–1962",
+   "pos": {
+    "eco": 30,
+    "com": 40,
+    "fed": 50,
+    "soc": 40,
+    "seg": 35,
+    "ins": 30,
+    "ext": 30,
+    "amb": 60
+   },
+   "alias": [
+    "oscar alende"
+   ]
+  },
+  {
+   "nombre": "Horacio Sueldo",
+   "hist": 1,
+   "espacio": "Democracia Cristiana",
+   "cargo": "Fundador de la democracia cristiana",
+   "pos": {
+    "eco": 40,
+    "com": 50,
+    "fed": 50,
+    "soc": 65,
+    "seg": 45,
+    "ins": 25,
+    "ext": 45,
+    "amb": 55
+   },
+   "alias": [
+    "horacio sueldo"
+   ]
+  },
+  {
+   "nombre": "Raúl Prebisch",
+   "hist": 1,
+   "espacio": "Desarrollismo",
+   "cargo": "Economista de la CEPAL",
+   "pos": {
+    "eco": 35,
+    "com": 40,
+    "fed": 45,
+    "soc": 45,
+    "seg": 45,
+    "ins": 30,
+    "ext": 45,
+    "amb": 80
+   },
+   "alias": [
+    "raul prebisch"
+   ]
+  },
+  {
+   "nombre": "Rogelio Julio Frigerio",
+   "hist": 1,
+   "espacio": "MID",
+   "cargo": "Ideólogo del desarrollismo",
+   "pos": {
+    "eco": 45,
+    "com": 55,
+    "fed": 45,
+    "soc": 50,
+    "seg": 55,
+    "ins": 40,
+    "ext": 60,
+    "amb": 88
+   },
+   "alias": [
+    "rogelio julio frigerio"
+   ]
+  },
+  {
+   "nombre": "Aldo Rico",
+   "hist": 1,
+   "espacio": "MODIN",
+   "cargo": "Líder carapintada",
+   "pos": {
+    "eco": 55,
+    "com": 35,
+    "fed": 45,
+    "soc": 85,
+    "seg": 92,
+    "ins": 85,
+    "ext": 40,
+    "amb": 65
+   },
+   "alias": [
+    "aldo rico"
+   ]
+  },
+  {
+   "nombre": "Rodolfo Walsh",
+   "hist": 1,
+   "espacio": "Montoneros",
+   "cargo": "Periodista y escritor",
+   "pos": {
+    "eco": 10,
+    "com": 20,
+    "fed": 45,
+    "soc": 25,
+    "seg": 25,
+    "ins": 60,
+    "ext": 5,
+    "amb": 50
+   },
+   "alias": [
+    "rodolfo walsh"
+   ]
+  },
+  {
+   "nombre": "Alicia Moreau de Justo",
+   "hist": 1,
+   "espacio": "Partido Socialista",
+   "cargo": "Dirigente socialista y feminista",
+   "pos": {
+    "eco": 30,
+    "com": 70,
+    "fed": 45,
+    "soc": 10,
+    "seg": 25,
+    "ins": 15,
+    "ext": 50,
+    "amb": 45
+   },
+   "alias": [
+    "alicia moreau de justo"
+   ]
+  },
+  {
+   "nombre": "Ricardo López Jordán",
+   "hist": 1,
+   "espacio": "Federales",
+   "cargo": "Caudillo entrerriano",
+   "pos": {
+    "eco": 40,
+    "com": 35,
+    "fed": 85,
+    "soc": 75,
+    "seg": 75,
+    "ins": 80,
+    "ext": 35,
+    "amb": 55
+   },
+   "alias": [
+    "ricardo lopez jordan"
+   ]
+  },
+  {
+   "nombre": "Facundo Quiroga",
+   "hist": 1,
+   "espacio": "Federales",
+   "cargo": "Caudillo riojano",
+   "pos": {
+    "eco": 40,
+    "com": 30,
+    "fed": 85,
+    "soc": 85,
+    "seg": 85,
+    "ins": 90,
+    "ext": 30,
+    "amb": 55
+   },
+   "alias": [
+    "facundo quiroga"
+   ]
+  },
+  {
+   "nombre": "Manuel Belgrano",
+   "hist": 1,
+   "espacio": "Patriotas",
+   "cargo": "Prócer de la independencia",
+   "pos": {
+    "eco": 50,
+    "com": 60,
+    "fed": 45,
+    "soc": 55,
+    "seg": 55,
+    "ins": 40,
+    "ext": 50,
+    "amb": 60
+   },
+   "alias": [
+    "manuel belgrano"
+   ]
+  },
+  {
+   "nombre": "Mariano Moreno",
+   "hist": 1,
+   "espacio": "Patriotas",
+   "cargo": "Secretario de la Primera Junta",
+   "pos": {
+    "eco": 50,
+    "com": 70,
+    "fed": 30,
+    "soc": 35,
+    "seg": 75,
+    "ins": 70,
+    "ext": 60,
+    "amb": 60
+   },
+   "alias": [
+    "mariano moreno"
+   ]
+  },
+  {
+   "nombre": "José de San Martín",
+   "hist": 1,
+   "espacio": "Patriotas",
+   "cargo": "Libertador",
+   "pos": {
+    "eco": 45,
+    "com": 55,
+    "fed": 45,
+    "soc": 60,
+    "seg": 80,
+    "ins": 75,
+    "ext": 45,
+    "amb": 60
+   },
+   "alias": [
+    "jose de san martin"
+   ]
   }
  ],
  "br": [
@@ -1689,6 +3855,1051 @@
    "alias": [
     "sergio moro"
    ]
+  },
+  {
+   "nombre": "Alexandre de Moraes",
+   "nivel": 2,
+   "espacio": "STF",
+   "cargo": "Ministro do Supremo Tribunal Federal",
+   "pos": {
+    "eco": 45,
+    "com": 50,
+    "fed": 40,
+    "soc": 40,
+    "seg": 70,
+    "ins": 60,
+    "ext": 50,
+    "amb": 55
+   },
+   "alias": [
+    "alexandre de moraes"
+   ]
+  },
+  {
+   "nombre": "Rui Costa",
+   "nivel": 3,
+   "espacio": "PT",
+   "cargo": "Ministro da Casa Civil",
+   "pos": {
+    "eco": 30,
+    "com": 40,
+    "fed": 45,
+    "soc": 40,
+    "seg": 50,
+    "ins": 45,
+    "ext": 35,
+    "amb": 65
+   },
+   "alias": [
+    "rui costa"
+   ]
+  },
+  {
+   "nombre": "Camilo Santana",
+   "nivel": 3,
+   "espacio": "PT",
+   "cargo": "Ministro da Educação",
+   "pos": {
+    "eco": 28,
+    "com": 38,
+    "fed": 50,
+    "soc": 40,
+    "seg": 45,
+    "ins": 40,
+    "ext": 35,
+    "amb": 60
+   },
+   "alias": [
+    "camilo santana"
+   ]
+  },
+  {
+   "nombre": "Jaques Wagner",
+   "nivel": 3,
+   "espacio": "PT",
+   "cargo": "Senador",
+   "pos": {
+    "eco": 30,
+    "com": 40,
+    "fed": 50,
+    "soc": 40,
+    "seg": 45,
+    "ins": 40,
+    "ext": 35,
+    "amb": 62
+   },
+   "alias": [
+    "jaques wagner"
+   ]
+  },
+  {
+   "nombre": "Lindbergh Farias",
+   "nivel": 3,
+   "espacio": "PT",
+   "cargo": "Deputado federal",
+   "pos": {
+    "eco": 18,
+    "com": 30,
+    "fed": 45,
+    "soc": 25,
+    "seg": 30,
+    "ins": 40,
+    "ext": 20,
+    "amb": 55
+   },
+   "alias": [
+    "lindbergh farias"
+   ]
+  },
+  {
+   "nombre": "Sâmia Bomfim",
+   "nivel": 3,
+   "espacio": "PSOL",
+   "cargo": "Deputada federal",
+   "pos": {
+    "eco": 8,
+    "com": 25,
+    "fed": 45,
+    "soc": 8,
+    "seg": 15,
+    "ins": 35,
+    "ext": 10,
+    "amb": 35
+   },
+   "alias": [
+    "samia bomfim"
+   ]
+  },
+  {
+   "nombre": "Manuela d'Ávila",
+   "nivel": 3,
+   "espacio": "PCdoB",
+   "cargo": "Ex deputada",
+   "pos": {
+    "eco": 15,
+    "com": 30,
+    "fed": 45,
+    "soc": 20,
+    "seg": 25,
+    "ins": 35,
+    "ext": 15,
+    "amb": 45
+   },
+   "alias": [
+    "manuela d'avila"
+   ]
+  },
+  {
+   "nombre": "Flávio Dino",
+   "nivel": 2,
+   "espacio": "STF",
+   "cargo": "Ministro do Supremo Tribunal Federal",
+   "pos": {
+    "eco": 25,
+    "com": 40,
+    "fed": 45,
+    "soc": 30,
+    "seg": 50,
+    "ins": 45,
+    "ext": 30,
+    "amb": 55
+   },
+   "alias": [
+    "flavio dino"
+   ]
+  },
+  {
+   "nombre": "Arthur Lira",
+   "nivel": 2,
+   "espacio": "PP",
+   "cargo": "Deputado federal",
+   "pos": {
+    "eco": 62,
+    "com": 60,
+    "fed": 50,
+    "soc": 70,
+    "seg": 65,
+    "ins": 55,
+    "ext": 60,
+    "amb": 72
+   },
+   "alias": [
+    "arthur lira"
+   ]
+  },
+  {
+   "nombre": "Hugo Motta",
+   "nivel": 2,
+   "espacio": "Republicanos",
+   "cargo": "Presidente da Câmara dos Deputados",
+   "pos": {
+    "eco": 62,
+    "com": 60,
+    "fed": 50,
+    "soc": 70,
+    "seg": 62,
+    "ins": 50,
+    "ext": 60,
+    "amb": 70
+   },
+   "alias": [
+    "hugo motta"
+   ]
+  },
+  {
+   "nombre": "Davi Alcolumbre",
+   "nivel": 2,
+   "espacio": "União Brasil",
+   "cargo": "Presidente do Senado",
+   "pos": {
+    "eco": 58,
+    "com": 58,
+    "fed": 55,
+    "soc": 65,
+    "seg": 60,
+    "ins": 50,
+    "ext": 58,
+    "amb": 70
+   },
+   "alias": [
+    "davi alcolumbre"
+   ]
+  },
+  {
+   "nombre": "Rodrigo Pacheco",
+   "nivel": 3,
+   "espacio": "PSD",
+   "cargo": "Senador",
+   "pos": {
+    "eco": 58,
+    "com": 62,
+    "fed": 50,
+    "soc": 55,
+    "seg": 55,
+    "ins": 40,
+    "ext": 60,
+    "amb": 65
+   },
+   "alias": [
+    "rodrigo pacheco"
+   ]
+  },
+  {
+   "nombre": "Gilberto Kassab",
+   "nivel": 3,
+   "espacio": "PSD",
+   "cargo": "Presidente do PSD",
+   "pos": {
+    "eco": 65,
+    "com": 65,
+    "fed": 50,
+    "soc": 60,
+    "seg": 60,
+    "ins": 45,
+    "ext": 62,
+    "amb": 70
+   },
+   "alias": [
+    "gilberto kassab"
+   ]
+  },
+  {
+   "nombre": "Valdemar Costa Neto",
+   "nivel": 3,
+   "espacio": "PL",
+   "cargo": "Presidente do PL",
+   "pos": {
+    "eco": 70,
+    "com": 65,
+    "fed": 50,
+    "soc": 80,
+    "seg": 80,
+    "ins": 70,
+    "ext": 75,
+    "amb": 78
+   },
+   "alias": [
+    "valdemar costa neto"
+   ]
+  },
+  {
+   "nombre": "Damares Alves",
+   "nivel": 3,
+   "espacio": "Republicanos",
+   "cargo": "Senadora",
+   "pos": {
+    "eco": 68,
+    "com": 60,
+    "fed": 50,
+    "soc": 95,
+    "seg": 80,
+    "ins": 65,
+    "ext": 75,
+    "amb": 75
+   },
+   "alias": [
+    "damares alves"
+   ]
+  },
+  {
+   "nombre": "Carla Zambelli",
+   "nivel": 3,
+   "espacio": "PL",
+   "cargo": "Ex deputada federal",
+   "pos": {
+    "eco": 80,
+    "com": 70,
+    "fed": 50,
+    "soc": 90,
+    "seg": 90,
+    "ins": 75,
+    "ext": 85,
+    "amb": 80
+   },
+   "alias": [
+    "carla zambelli"
+   ]
+  },
+  {
+   "nombre": "Kim Kataguiri",
+   "nivel": 3,
+   "espacio": "União Brasil",
+   "cargo": "Deputado federal",
+   "pos": {
+    "eco": 90,
+    "com": 90,
+    "fed": 50,
+    "soc": 65,
+    "seg": 70,
+    "ins": 45,
+    "ext": 85,
+    "amb": 75
+   },
+   "alias": [
+    "kim kataguiri"
+   ]
+  },
+  {
+   "nombre": "Renan Santos",
+   "nivel": 3,
+   "espacio": "Missão",
+   "cargo": "Dirigente do MBL",
+   "pos": {
+    "eco": 90,
+    "com": 90,
+    "fed": 50,
+    "soc": 60,
+    "seg": 75,
+    "ins": 50,
+    "ext": 85,
+    "amb": 75
+   },
+   "alias": [
+    "renan santos"
+   ]
+  },
+  {
+   "nombre": "Helder Barbalho",
+   "nivel": 3,
+   "espacio": "MDB",
+   "cargo": "Governador do Pará",
+   "pos": {
+    "eco": 50,
+    "com": 55,
+    "fed": 60,
+    "soc": 55,
+    "seg": 60,
+    "ins": 45,
+    "ext": 55,
+    "amb": 72
+   },
+   "alias": [
+    "helder barbalho"
+   ]
+  },
+  {
+   "nombre": "João Campos",
+   "nivel": 2,
+   "espacio": "PSB",
+   "cargo": "Prefeito do Recife",
+   "pos": {
+    "eco": 35,
+    "com": 50,
+    "fed": 55,
+    "soc": 35,
+    "seg": 45,
+    "ins": 35,
+    "ext": 45,
+    "amb": 55
+   },
+   "alias": [
+    "joao campos"
+   ]
+  },
+  {
+   "nombre": "Ricardo Nunes",
+   "nivel": 3,
+   "espacio": "MDB",
+   "cargo": "Prefeito de São Paulo",
+   "pos": {
+    "eco": 65,
+    "com": 65,
+    "fed": 50,
+    "soc": 70,
+    "seg": 70,
+    "ins": 50,
+    "ext": 65,
+    "amb": 70
+   },
+   "alias": [
+    "ricardo nunes"
+   ]
+  },
+  {
+   "nombre": "Eduardo Paes",
+   "nivel": 3,
+   "espacio": "PSD",
+   "cargo": "Prefeito do Rio de Janeiro",
+   "pos": {
+    "eco": 55,
+    "com": 65,
+    "fed": 50,
+    "soc": 45,
+    "seg": 60,
+    "ins": 40,
+    "ext": 60,
+    "amb": 62
+   },
+   "alias": [
+    "eduardo paes"
+   ]
+  },
+  {
+   "nombre": "Pedro II de Brasil",
+   "hist": 1,
+   "espacio": "Império",
+   "cargo": "Imperador 1840–1889",
+   "pos": {
+    "eco": 55,
+    "com": 60,
+    "fed": 25,
+    "soc": 75,
+    "seg": 65,
+    "ins": 85,
+    "ext": 60,
+    "amb": 65
+   },
+   "alias": [
+    "pedro ii de brasil"
+   ]
+  },
+  {
+   "nombre": "Getúlio Vargas",
+   "hist": 1,
+   "espacio": "Trabalhismo / Estado Novo",
+   "cargo": "Presidente 1930–1945 e 1951–1954",
+   "pos": {
+    "eco": 25,
+    "com": 20,
+    "fed": 20,
+    "soc": 65,
+    "seg": 80,
+    "ins": 95,
+    "ext": 40,
+    "amb": 75
+   },
+   "alias": [
+    "getulio vargas"
+   ]
+  },
+  {
+   "nombre": "Eurico Gaspar Dutra",
+   "hist": 1,
+   "espacio": "PSD",
+   "cargo": "Presidente 1946–1951",
+   "pos": {
+    "eco": 65,
+    "com": 65,
+    "fed": 35,
+    "soc": 75,
+    "seg": 80,
+    "ins": 60,
+    "ext": 80,
+    "amb": 70
+   },
+   "alias": [
+    "eurico gaspar dutra"
+   ]
+  },
+  {
+   "nombre": "Juscelino Kubitschek",
+   "hist": 1,
+   "espacio": "PSD",
+   "cargo": "Presidente 1956–1961",
+   "pos": {
+    "eco": 45,
+    "com": 60,
+    "fed": 40,
+    "soc": 50,
+    "seg": 55,
+    "ins": 35,
+    "ext": 60,
+    "amb": 90
+   },
+   "alias": [
+    "juscelino kubitschek"
+   ]
+  },
+  {
+   "nombre": "Jânio Quadros",
+   "hist": 1,
+   "espacio": "UDN / PTN",
+   "cargo": "Presidente 1961",
+   "pos": {
+    "eco": 55,
+    "com": 50,
+    "fed": 45,
+    "soc": 70,
+    "seg": 70,
+    "ins": 80,
+    "ext": 40,
+    "amb": 70
+   },
+   "alias": [
+    "janio quadros"
+   ]
+  },
+  {
+   "nombre": "João Goulart",
+   "hist": 1,
+   "espacio": "PTB",
+   "cargo": "Presidente 1961–1964",
+   "pos": {
+    "eco": 25,
+    "com": 35,
+    "fed": 45,
+    "soc": 45,
+    "seg": 40,
+    "ins": 45,
+    "ext": 20,
+    "amb": 65
+   },
+   "alias": [
+    "joao goulart"
+   ]
+  },
+  {
+   "nombre": "Leonel Brizola",
+   "hist": 1,
+   "espacio": "PDT",
+   "cargo": "Governador do Rio Grande do Sul e do Rio",
+   "pos": {
+    "eco": 20,
+    "com": 25,
+    "fed": 50,
+    "soc": 40,
+    "seg": 40,
+    "ins": 55,
+    "ext": 10,
+    "amb": 65
+   },
+   "alias": [
+    "leonel brizola"
+   ]
+  },
+  {
+   "nombre": "Carlos Lacerda",
+   "hist": 1,
+   "espacio": "UDN",
+   "cargo": "Governador da Guanabara",
+   "pos": {
+    "eco": 75,
+    "com": 75,
+    "fed": 45,
+    "soc": 75,
+    "seg": 80,
+    "ins": 60,
+    "ext": 85,
+    "amb": 70
+   },
+   "alias": [
+    "carlos lacerda"
+   ]
+  },
+  {
+   "nombre": "Humberto Castelo Branco",
+   "hist": 1,
+   "espacio": "Regime militar",
+   "cargo": "Presidente 1964–1967",
+   "pos": {
+    "eco": 70,
+    "com": 70,
+    "fed": 20,
+    "soc": 75,
+    "seg": 90,
+    "ins": 90,
+    "ext": 85,
+    "amb": 75
+   },
+   "alias": [
+    "humberto castelo branco"
+   ]
+  },
+  {
+   "nombre": "Emílio Garrastazu Médici",
+   "hist": 1,
+   "espacio": "Regime militar",
+   "cargo": "Presidente 1969–1974",
+   "pos": {
+    "eco": 55,
+    "com": 45,
+    "fed": 15,
+    "soc": 85,
+    "seg": 100,
+    "ins": 100,
+    "ext": 75,
+    "amb": 90
+   },
+   "alias": [
+    "emilio garrastazu medici"
+   ]
+  },
+  {
+   "nombre": "Ernesto Geisel",
+   "hist": 1,
+   "espacio": "Regime militar",
+   "cargo": "Presidente 1974–1979",
+   "pos": {
+    "eco": 40,
+    "com": 40,
+    "fed": 20,
+    "soc": 75,
+    "seg": 85,
+    "ins": 90,
+    "ext": 55,
+    "amb": 90
+   },
+   "alias": [
+    "ernesto geisel"
+   ]
+  },
+  {
+   "nombre": "João Figueiredo",
+   "hist": 1,
+   "espacio": "Regime militar",
+   "cargo": "Presidente 1979–1985",
+   "pos": {
+    "eco": 55,
+    "com": 55,
+    "fed": 25,
+    "soc": 70,
+    "seg": 80,
+    "ins": 85,
+    "ext": 70,
+    "amb": 80
+   },
+   "alias": [
+    "joao figueiredo"
+   ]
+  },
+  {
+   "nombre": "Tancredo Neves",
+   "hist": 1,
+   "espacio": "PMDB",
+   "cargo": "Presidente eleito 1985",
+   "pos": {
+    "eco": 50,
+    "com": 55,
+    "fed": 50,
+    "soc": 55,
+    "seg": 50,
+    "ins": 30,
+    "ext": 55,
+    "amb": 65
+   },
+   "alias": [
+    "tancredo neves"
+   ]
+  },
+  {
+   "nombre": "Ulysses Guimarães",
+   "hist": 1,
+   "espacio": "PMDB",
+   "cargo": "Presidente da Constituinte",
+   "pos": {
+    "eco": 40,
+    "com": 50,
+    "fed": 55,
+    "soc": 45,
+    "seg": 40,
+    "ins": 20,
+    "ext": 50,
+    "amb": 60
+   },
+   "alias": [
+    "ulysses guimaraes"
+   ]
+  },
+  {
+   "nombre": "José Sarney",
+   "hist": 1,
+   "espacio": "PMDB",
+   "cargo": "Presidente 1985–1990",
+   "pos": {
+    "eco": 45,
+    "com": 45,
+    "fed": 45,
+    "soc": 60,
+    "seg": 55,
+    "ins": 50,
+    "ext": 55,
+    "amb": 70
+   },
+   "alias": [
+    "jose sarney"
+   ]
+  },
+  {
+   "nombre": "Fernando Collor",
+   "hist": 1,
+   "espacio": "PRN",
+   "cargo": "Presidente 1990–1992",
+   "pos": {
+    "eco": 80,
+    "com": 85,
+    "fed": 45,
+    "soc": 60,
+    "seg": 60,
+    "ins": 75,
+    "ext": 80,
+    "amb": 70
+   },
+   "alias": [
+    "fernando collor"
+   ]
+  },
+  {
+   "nombre": "Itamar Franco",
+   "hist": 1,
+   "espacio": "PMDB",
+   "cargo": "Presidente 1992–1994",
+   "pos": {
+    "eco": 40,
+    "com": 45,
+    "fed": 50,
+    "soc": 55,
+    "seg": 50,
+    "ins": 40,
+    "ext": 45,
+    "amb": 65
+   },
+   "alias": [
+    "itamar franco"
+   ]
+  },
+  {
+   "nombre": "Fernando Henrique Cardoso",
+   "hist": 1,
+   "espacio": "PSDB",
+   "cargo": "Presidente 1995–2002",
+   "pos": {
+    "eco": 68,
+    "com": 78,
+    "fed": 45,
+    "soc": 40,
+    "seg": 50,
+    "ins": 30,
+    "ext": 70,
+    "amb": 62
+   },
+   "alias": [
+    "fernando henrique cardoso"
+   ]
+  },
+  {
+   "nombre": "José Serra",
+   "hist": 1,
+   "espacio": "PSDB",
+   "cargo": "Governador de São Paulo",
+   "pos": {
+    "eco": 60,
+    "com": 62,
+    "fed": 45,
+    "soc": 45,
+    "seg": 60,
+    "ins": 35,
+    "ext": 62,
+    "amb": 62
+   },
+   "alias": [
+    "jose serra"
+   ]
+  },
+  {
+   "nombre": "Aécio Neves",
+   "hist": 1,
+   "espacio": "PSDB",
+   "cargo": "Candidato presidencial 2014",
+   "pos": {
+    "eco": 68,
+    "com": 72,
+    "fed": 45,
+    "soc": 55,
+    "seg": 60,
+    "ins": 40,
+    "ext": 70,
+    "amb": 65
+   },
+   "alias": [
+    "aecio neves"
+   ]
+  },
+  {
+   "nombre": "Dilma Rousseff",
+   "hist": 1,
+   "espacio": "PT",
+   "cargo": "Presidente 2011–2016",
+   "pos": {
+    "eco": 25,
+    "com": 35,
+    "fed": 45,
+    "soc": 35,
+    "seg": 45,
+    "ins": 45,
+    "ext": 30,
+    "amb": 75
+   },
+   "alias": [
+    "dilma rousseff"
+   ]
+  },
+  {
+   "nombre": "José Dirceu",
+   "hist": 1,
+   "espacio": "PT",
+   "cargo": "Ministro-chefe da Casa Civil",
+   "pos": {
+    "eco": 20,
+    "com": 30,
+    "fed": 45,
+    "soc": 35,
+    "seg": 40,
+    "ins": 60,
+    "ext": 20,
+    "amb": 65
+   },
+   "alias": [
+    "jose dirceu"
+   ]
+  },
+  {
+   "nombre": "Luís Carlos Prestes",
+   "hist": 1,
+   "espacio": "PCB",
+   "cargo": "Líder do Partido Comunista",
+   "pos": {
+    "eco": 5,
+    "com": 20,
+    "fed": 45,
+    "soc": 40,
+    "seg": 30,
+    "ins": 90,
+    "ext": 5,
+    "amb": 70
+   },
+   "alias": [
+    "luis carlos prestes"
+   ]
+  },
+  {
+   "nombre": "Plínio Salgado",
+   "hist": 1,
+   "espacio": "AIB",
+   "cargo": "Líder do Integralismo",
+   "pos": {
+    "eco": 40,
+    "com": 25,
+    "fed": 35,
+    "soc": 95,
+    "seg": 95,
+    "ins": 95,
+    "ext": 40,
+    "amb": 70
+   },
+   "alias": [
+    "plinio salgado"
+   ]
+  },
+  {
+   "nombre": "Miguel Arraes",
+   "hist": 1,
+   "espacio": "PSB",
+   "cargo": "Governador de Pernambuco",
+   "pos": {
+    "eco": 20,
+    "com": 30,
+    "fed": 55,
+    "soc": 40,
+    "seg": 40,
+    "ins": 40,
+    "ext": 20,
+    "amb": 60
+   },
+   "alias": [
+    "miguel arraes"
+   ]
+  },
+  {
+   "nombre": "Darcy Ribeiro",
+   "hist": 1,
+   "espacio": "PDT",
+   "cargo": "Antropólogo e senador",
+   "pos": {
+    "eco": 20,
+    "com": 30,
+    "fed": 50,
+    "soc": 25,
+    "seg": 35,
+    "ins": 35,
+    "ext": 15,
+    "amb": 55
+   },
+   "alias": [
+    "darcy ribeiro"
+   ]
+  },
+  {
+   "nombre": "Chico Mendes",
+   "hist": 1,
+   "espacio": "Movimento seringueiro",
+   "cargo": "Seringueiro e ambientalista",
+   "pos": {
+    "eco": 15,
+    "com": 30,
+    "fed": 60,
+    "soc": 35,
+    "seg": 30,
+    "ins": 20,
+    "ext": 20,
+    "amb": 10
+   },
+   "alias": [
+    "chico mendes"
+   ]
+  },
+  {
+   "nombre": "Enéas Carneiro",
+   "hist": 1,
+   "espacio": "PRONA",
+   "cargo": "Fundador do PRONA",
+   "pos": {
+    "eco": 45,
+    "com": 25,
+    "fed": 35,
+    "soc": 85,
+    "seg": 90,
+    "ins": 80,
+    "ext": 30,
+    "amb": 80
+   },
+   "alias": [
+    "eneas carneiro"
+   ]
+  },
+  {
+   "nombre": "Paulo Maluf",
+   "hist": 1,
+   "espacio": "PP",
+   "cargo": "Governador e prefeito de São Paulo",
+   "pos": {
+    "eco": 70,
+    "com": 65,
+    "fed": 45,
+    "soc": 70,
+    "seg": 80,
+    "ins": 60,
+    "ext": 70,
+    "amb": 80
+   },
+   "alias": [
+    "paulo maluf"
+   ]
+  },
+  {
+   "nombre": "Antônio Carlos Magalhães",
+   "hist": 1,
+   "espacio": "PFL",
+   "cargo": "Governador da Bahia e senador",
+   "pos": {
+    "eco": 65,
+    "com": 60,
+    "fed": 50,
+    "soc": 70,
+    "seg": 75,
+    "ins": 70,
+    "ext": 65,
+    "amb": 75
+   },
+   "alias": [
+    "antonio carlos magalhaes"
+   ]
+  },
+  {
+   "nombre": "Marielle Franco",
+   "hist": 1,
+   "espacio": "PSOL",
+   "cargo": "Vereadora do Rio de Janeiro",
+   "pos": {
+    "eco": 10,
+    "com": 30,
+    "fed": 50,
+    "soc": 10,
+    "seg": 15,
+    "ins": 25,
+    "ext": 15,
+    "amb": 35
+   },
+   "alias": [
+    "marielle franco"
+   ]
+  },
+  {
+   "nombre": "Joaquim Nabuco",
+   "hist": 1,
+   "espacio": "Liberais",
+   "cargo": "Abolicionista",
+   "pos": {
+    "eco": 55,
+    "com": 70,
+    "fed": 40,
+    "soc": 30,
+    "seg": 40,
+    "ins": 30,
+    "ext": 70,
+    "amb": 60
+   },
+   "alias": [
+    "joaquim nabuco"
+   ]
+  },
+  {
+   "nombre": "Rui Barbosa",
+   "hist": 1,
+   "espacio": "Republicanos",
+   "cargo": "Jurista e senador",
+   "pos": {
+    "eco": 60,
+    "com": 70,
+    "fed": 55,
+    "soc": 45,
+    "seg": 45,
+    "ins": 20,
+    "ext": 70,
+    "amb": 60
+   },
+   "alias": [
+    "rui barbosa"
+   ]
   }
  ],
  "py": [
@@ -2032,6 +5243,500 @@
    "ajuste": {
     "rel": 20
    }
+  },
+  {
+   "nombre": "Beatriz Argüello",
+   "nivel": 3,
+   "espacio": "ANR",
+   "cargo": "Diputada",
+   "pos": {
+    "eco": 65,
+    "com": 60,
+    "fed": 50,
+    "soc": 80,
+    "seg": 70,
+    "ins": 55,
+    "ext": 72,
+    "amb": 72
+   },
+   "alias": [
+    "beatriz arguello"
+   ]
+  },
+  {
+   "nombre": "Bachi Núñez",
+   "nivel": 3,
+   "espacio": "ANR",
+   "cargo": "Senador",
+   "pos": {
+    "eco": 68,
+    "com": 62,
+    "fed": 50,
+    "soc": 82,
+    "seg": 72,
+    "ins": 60,
+    "ext": 72,
+    "amb": 75
+   },
+   "alias": [
+    "bachi nunez"
+   ]
+  },
+  {
+   "nombre": "Raúl Latorre",
+   "nivel": 3,
+   "espacio": "ANR",
+   "cargo": "Presidente de la Cámara de Diputados",
+   "pos": {
+    "eco": 68,
+    "com": 62,
+    "fed": 50,
+    "soc": 82,
+    "seg": 72,
+    "ins": 60,
+    "ext": 75,
+    "amb": 75
+   },
+   "alias": [
+    "raul latorre"
+   ]
+  },
+  {
+   "nombre": "Nicanor Duarte Frutos",
+   "nivel": 3,
+   "espacio": "ANR",
+   "cargo": "Ex presidente",
+   "pos": {
+    "eco": 50,
+    "com": 50,
+    "fed": 50,
+    "soc": 80,
+    "seg": 65,
+    "ins": 60,
+    "ext": 55,
+    "amb": 72
+   },
+   "alias": [
+    "nicanor duarte frutos"
+   ]
+  },
+  {
+   "nombre": "Celeste Amarilla",
+   "nivel": 3,
+   "espacio": "PLRA",
+   "cargo": "Senadora",
+   "pos": {
+    "eco": 55,
+    "com": 60,
+    "fed": 55,
+    "soc": 55,
+    "seg": 50,
+    "ins": 35,
+    "ext": 60,
+    "amb": 62
+   },
+   "alias": [
+    "celeste amarilla"
+   ]
+  },
+  {
+   "nombre": "Sixto Pereira",
+   "nivel": 3,
+   "espacio": "Frente Guasu",
+   "cargo": "Senador",
+   "pos": {
+    "eco": 15,
+    "com": 30,
+    "fed": 55,
+    "soc": 40,
+    "seg": 30,
+    "ins": 40,
+    "ext": 15,
+    "amb": 45
+   },
+   "alias": [
+    "sixto pereira"
+   ]
+  },
+  {
+   "nombre": "Payo Cubas",
+   "nivel": 3,
+   "espacio": "Cruzada Nacional",
+   "cargo": "Ex senador",
+   "pos": {
+    "eco": 60,
+    "com": 40,
+    "fed": 55,
+    "soc": 75,
+    "seg": 92,
+    "ins": 85,
+    "ext": 45,
+    "amb": 70
+   },
+   "alias": [
+    "payo cubas"
+   ]
+  },
+  {
+   "nombre": "Rocío Abed",
+   "nivel": 3,
+   "espacio": "PLRA",
+   "cargo": "Dirigente liberal",
+   "pos": {
+    "eco": 55,
+    "com": 60,
+    "fed": 55,
+    "soc": 50,
+    "seg": 50,
+    "ins": 35,
+    "ext": 60,
+    "amb": 60
+   },
+   "alias": [
+    "rocio abed"
+   ]
+  },
+  {
+   "nombre": "José Gaspar Rodríguez de Francia",
+   "hist": 1,
+   "espacio": "Independencia",
+   "cargo": "Dictador supremo 1814–1840",
+   "pos": {
+    "eco": 20,
+    "com": 5,
+    "fed": 15,
+    "soc": 70,
+    "seg": 95,
+    "ins": 100,
+    "ext": 10,
+    "amb": 60
+   },
+   "alias": [
+    "jose gaspar rodriguez de francia"
+   ]
+  },
+  {
+   "nombre": "Carlos Antonio López",
+   "hist": 1,
+   "espacio": "Gobierno de los López",
+   "cargo": "Presidente 1844–1862",
+   "pos": {
+    "eco": 30,
+    "com": 30,
+    "fed": 20,
+    "soc": 70,
+    "seg": 85,
+    "ins": 90,
+    "ext": 30,
+    "amb": 75
+   },
+   "alias": [
+    "carlos antonio lopez"
+   ]
+  },
+  {
+   "nombre": "Francisco Solano López",
+   "hist": 1,
+   "espacio": "Gobierno de los López",
+   "cargo": "Presidente 1862–1870",
+   "pos": {
+    "eco": 30,
+    "com": 20,
+    "fed": 15,
+    "soc": 75,
+    "seg": 95,
+    "ins": 100,
+    "ext": 15,
+    "amb": 70
+   },
+   "alias": [
+    "francisco solano lopez"
+   ]
+  },
+  {
+   "nombre": "Bernardino Caballero",
+   "hist": 1,
+   "espacio": "ANR",
+   "cargo": "Presidente 1880–1886, fundador de la ANR",
+   "pos": {
+    "eco": 60,
+    "com": 60,
+    "fed": 35,
+    "soc": 75,
+    "seg": 75,
+    "ins": 75,
+    "ext": 55,
+    "amb": 65
+   },
+   "alias": [
+    "bernardino caballero"
+   ]
+  },
+  {
+   "nombre": "Eusebio Ayala",
+   "hist": 1,
+   "espacio": "Partido Liberal",
+   "cargo": "Presidente 1932–1936",
+   "pos": {
+    "eco": 65,
+    "com": 70,
+    "fed": 45,
+    "soc": 50,
+    "seg": 60,
+    "ins": 40,
+    "ext": 65,
+    "amb": 60
+   },
+   "alias": [
+    "eusebio ayala"
+   ]
+  },
+  {
+   "nombre": "José Félix Estigarribia",
+   "hist": 1,
+   "espacio": "Partido Liberal",
+   "cargo": "Presidente 1939–1940",
+   "pos": {
+    "eco": 55,
+    "com": 55,
+    "fed": 30,
+    "soc": 60,
+    "seg": 75,
+    "ins": 80,
+    "ext": 60,
+    "amb": 65
+   },
+   "alias": [
+    "jose felix estigarribia"
+   ]
+  },
+  {
+   "nombre": "Rafael Franco",
+   "hist": 1,
+   "espacio": "Febrerismo",
+   "cargo": "Presidente 1936–1937",
+   "pos": {
+    "eco": 30,
+    "com": 35,
+    "fed": 40,
+    "soc": 55,
+    "seg": 65,
+    "ins": 75,
+    "ext": 30,
+    "amb": 65
+   },
+   "alias": [
+    "rafael franco"
+   ]
+  },
+  {
+   "nombre": "Higinio Morínigo",
+   "hist": 1,
+   "espacio": "Régimen militar",
+   "cargo": "Presidente 1940–1948",
+   "pos": {
+    "eco": 45,
+    "com": 40,
+    "fed": 25,
+    "soc": 80,
+    "seg": 90,
+    "ins": 95,
+    "ext": 55,
+    "amb": 65
+   },
+   "alias": [
+    "higinio morinigo"
+   ]
+  },
+  {
+   "nombre": "Alfredo Stroessner",
+   "hist": 1,
+   "espacio": "ANR",
+   "cargo": "Dictador 1954–1989",
+   "pos": {
+    "eco": 60,
+    "com": 55,
+    "fed": 20,
+    "soc": 85,
+    "seg": 100,
+    "ins": 100,
+    "ext": 80,
+    "amb": 85
+   },
+   "alias": [
+    "alfredo stroessner"
+   ]
+  },
+  {
+   "nombre": "Andrés Rodríguez",
+   "hist": 1,
+   "espacio": "ANR",
+   "cargo": "Presidente 1989–1993",
+   "pos": {
+    "eco": 60,
+    "com": 55,
+    "fed": 30,
+    "soc": 75,
+    "seg": 80,
+    "ins": 80,
+    "ext": 70,
+    "amb": 75
+   },
+   "alias": [
+    "andres rodriguez"
+   ]
+  },
+  {
+   "nombre": "Juan Carlos Wasmosy",
+   "hist": 1,
+   "espacio": "ANR",
+   "cargo": "Presidente 1993–1998",
+   "pos": {
+    "eco": 68,
+    "com": 68,
+    "fed": 35,
+    "soc": 70,
+    "seg": 65,
+    "ins": 55,
+    "ext": 70,
+    "amb": 75
+   },
+   "alias": [
+    "juan carlos wasmosy"
+   ]
+  },
+  {
+   "nombre": "Raúl Cubas Grau",
+   "hist": 1,
+   "espacio": "ANR",
+   "cargo": "Presidente 1998–1999",
+   "pos": {
+    "eco": 60,
+    "com": 55,
+    "fed": 35,
+    "soc": 70,
+    "seg": 70,
+    "ins": 65,
+    "ext": 60,
+    "amb": 70
+   },
+   "alias": [
+    "raul cubas grau"
+   ]
+  },
+  {
+   "nombre": "Lino Oviedo",
+   "hist": 1,
+   "espacio": "UNACE",
+   "cargo": "Líder de UNACE",
+   "pos": {
+    "eco": 50,
+    "com": 40,
+    "fed": 35,
+    "soc": 80,
+    "seg": 90,
+    "ins": 90,
+    "ext": 50,
+    "amb": 70
+   },
+   "alias": [
+    "lino oviedo"
+   ]
+  },
+  {
+   "nombre": "Luis María Argaña",
+   "hist": 1,
+   "espacio": "ANR",
+   "cargo": "Vicepresidente 1998–1999",
+   "pos": {
+    "eco": 55,
+    "com": 50,
+    "fed": 40,
+    "soc": 75,
+    "seg": 70,
+    "ins": 60,
+    "ext": 55,
+    "amb": 70
+   },
+   "alias": [
+    "luis maria argana"
+   ]
+  },
+  {
+   "nombre": "Luis Ángel González Macchi",
+   "hist": 1,
+   "espacio": "ANR",
+   "cargo": "Presidente 1999–2003",
+   "pos": {
+    "eco": 55,
+    "com": 55,
+    "fed": 35,
+    "soc": 70,
+    "seg": 65,
+    "ins": 55,
+    "ext": 60,
+    "amb": 70
+   },
+   "alias": [
+    "luis angel gonzalez macchi"
+   ]
+  },
+  {
+   "nombre": "Federico Franco",
+   "hist": 1,
+   "espacio": "PLRA",
+   "cargo": "Presidente 2012–2013",
+   "pos": {
+    "eco": 62,
+    "com": 62,
+    "fed": 45,
+    "soc": 70,
+    "seg": 65,
+    "ins": 45,
+    "ext": 65,
+    "amb": 70
+   },
+   "alias": [
+    "federico franco"
+   ]
+  },
+  {
+   "nombre": "Domingo Laíno",
+   "hist": 1,
+   "espacio": "PLRA",
+   "cargo": "Líder opositor a Stroessner",
+   "pos": {
+    "eco": 45,
+    "com": 55,
+    "fed": 50,
+    "soc": 55,
+    "seg": 40,
+    "ins": 20,
+    "ext": 50,
+    "amb": 60
+   },
+   "alias": [
+    "domingo laino"
+   ]
+  },
+  {
+   "nombre": "Óscar Creydt",
+   "hist": 1,
+   "espacio": "PCP",
+   "cargo": "Líder del Partido Comunista",
+   "pos": {
+    "eco": 5,
+    "com": 20,
+    "fed": 45,
+    "soc": 40,
+    "seg": 30,
+    "ins": 90,
+    "ext": 5,
+    "amb": 65
+   },
+   "alias": [
+    "oscar creydt"
+   ]
   }
  ],
  "pe": [
@@ -2350,6 +6055,614 @@
    },
    "alias": [
     "dina boluarte"
+   ]
+  },
+  {
+   "nombre": "Mario Vizcarra",
+   "nivel": 3,
+   "espacio": "Perú Primero",
+   "cargo": "Dirigente político",
+   "pos": {
+    "eco": 50,
+    "com": 55,
+    "fed": 55,
+    "soc": 50,
+    "seg": 62,
+    "ins": 55,
+    "ext": 55,
+    "amb": 62
+   },
+   "alias": [
+    "mario vizcarra"
+   ]
+  },
+  {
+   "nombre": "Fiorella Molinelli",
+   "nivel": 3,
+   "espacio": "Fuerza y Libertad",
+   "cargo": "Dirigente política",
+   "pos": {
+    "eco": 72,
+    "com": 75,
+    "fed": 45,
+    "soc": 60,
+    "seg": 70,
+    "ins": 50,
+    "ext": 72,
+    "amb": 70
+   },
+   "alias": [
+    "fiorella molinelli"
+   ]
+  },
+  {
+   "nombre": "Rafael Belaúnde",
+   "nivel": 3,
+   "espacio": "Libertad Popular",
+   "cargo": "Dirigente político",
+   "pos": {
+    "eco": 85,
+    "com": 88,
+    "fed": 50,
+    "soc": 60,
+    "seg": 70,
+    "ins": 45,
+    "ext": 80,
+    "amb": 72
+   },
+   "alias": [
+    "rafael belaunde"
+   ]
+  },
+  {
+   "nombre": "Luis Galarreta",
+   "nivel": 3,
+   "espacio": "Fuerza Popular",
+   "cargo": "Dirigente fujimorista",
+   "pos": {
+    "eco": 75,
+    "com": 72,
+    "fed": 45,
+    "soc": 78,
+    "seg": 80,
+    "ins": 60,
+    "ext": 75,
+    "amb": 75
+   },
+   "alias": [
+    "luis galarreta"
+   ]
+  },
+  {
+   "nombre": "Ricardo Belmont",
+   "nivel": 3,
+   "espacio": "Independiente",
+   "cargo": "Ex alcalde de Lima",
+   "pos": {
+    "eco": 45,
+    "com": 40,
+    "fed": 50,
+    "soc": 65,
+    "seg": 70,
+    "ins": 65,
+    "ext": 40,
+    "amb": 60
+   },
+   "alias": [
+    "ricardo belmont"
+   ]
+  },
+  {
+   "nombre": "Roberto Sánchez",
+   "nivel": 3,
+   "espacio": "Juntos por el Perú",
+   "cargo": "Dirigente de izquierda",
+   "pos": {
+    "eco": 20,
+    "com": 30,
+    "fed": 55,
+    "soc": 50,
+    "seg": 40,
+    "ins": 50,
+    "ext": 20,
+    "amb": 55
+   },
+   "alias": [
+    "roberto sanchez"
+   ]
+  },
+  {
+   "nombre": "Lucio Castro",
+   "nivel": 3,
+   "espacio": "Frente de la Esperanza",
+   "cargo": "Congresista",
+   "pos": {
+    "eco": 35,
+    "com": 40,
+    "fed": 55,
+    "soc": 55,
+    "seg": 55,
+    "ins": 50,
+    "ext": 35,
+    "amb": 58
+   },
+   "alias": [
+    "lucio castro"
+   ]
+  },
+  {
+   "nombre": "Ántero Flores-Aráoz",
+   "nivel": 3,
+   "espacio": "Partido Popular Cristiano",
+   "cargo": "Ex ministro",
+   "pos": {
+    "eco": 72,
+    "com": 72,
+    "fed": 45,
+    "soc": 85,
+    "seg": 75,
+    "ins": 45,
+    "ext": 75,
+    "amb": 70
+   },
+   "alias": [
+    "antero flores-araoz"
+   ]
+  },
+  {
+   "nombre": "Susel Paredes",
+   "nivel": 3,
+   "espacio": "Primero la Gente",
+   "cargo": "Congresista",
+   "pos": {
+    "eco": 40,
+    "com": 55,
+    "fed": 50,
+    "soc": 10,
+    "seg": 35,
+    "ins": 25,
+    "ext": 45,
+    "amb": 40
+   },
+   "alias": [
+    "susel paredes"
+   ]
+  },
+  {
+   "nombre": "Ollanta Humala",
+   "nivel": 3,
+   "espacio": "Partido Nacionalista",
+   "cargo": "Ex presidente",
+   "pos": {
+    "eco": 35,
+    "com": 40,
+    "fed": 50,
+    "soc": 60,
+    "seg": 60,
+    "ins": 60,
+    "ext": 35,
+    "amb": 60
+   },
+   "alias": [
+    "ollanta humala"
+   ]
+  },
+  {
+   "nombre": "Ramón Castilla",
+   "hist": 1,
+   "espacio": "Liberales",
+   "cargo": "Presidente 1845–1851 y 1855–1862",
+   "pos": {
+    "eco": 50,
+    "com": 55,
+    "fed": 35,
+    "soc": 55,
+    "seg": 70,
+    "ins": 75,
+    "ext": 50,
+    "amb": 70
+   },
+   "alias": [
+    "ramon castilla"
+   ]
+  },
+  {
+   "nombre": "Nicolás de Piérola",
+   "hist": 1,
+   "espacio": "Partido Demócrata",
+   "cargo": "Presidente 1895–1899",
+   "pos": {
+    "eco": 60,
+    "com": 60,
+    "fed": 45,
+    "soc": 75,
+    "seg": 65,
+    "ins": 70,
+    "ext": 60,
+    "amb": 65
+   },
+   "alias": [
+    "nicolas de pierola"
+   ]
+  },
+  {
+   "nombre": "Augusto B. Leguía",
+   "hist": 1,
+   "espacio": "Patria Nueva",
+   "cargo": "Presidente 1919–1930",
+   "pos": {
+    "eco": 70,
+    "com": 75,
+    "fed": 25,
+    "soc": 55,
+    "seg": 75,
+    "ins": 90,
+    "ext": 80,
+    "amb": 75
+   },
+   "alias": [
+    "augusto b. leguia"
+   ]
+  },
+  {
+   "nombre": "Víctor Raúl Haya de la Torre",
+   "hist": 1,
+   "espacio": "APRA",
+   "cargo": "Fundador del APRA",
+   "pos": {
+    "eco": 35,
+    "com": 35,
+    "fed": 45,
+    "soc": 45,
+    "seg": 45,
+    "ins": 60,
+    "ext": 20,
+    "amb": 65
+   },
+   "alias": [
+    "victor raul haya de la torre"
+   ]
+  },
+  {
+   "nombre": "José Carlos Mariátegui",
+   "hist": 1,
+   "espacio": "Partido Socialista",
+   "cargo": "Fundador del Partido Socialista",
+   "pos": {
+    "eco": 5,
+    "com": 25,
+    "fed": 55,
+    "soc": 40,
+    "seg": 30,
+    "ins": 60,
+    "ext": 5,
+    "amb": 55
+   },
+   "alias": [
+    "jose carlos mariategui"
+   ]
+  },
+  {
+   "nombre": "Luis Sánchez Cerro",
+   "hist": 1,
+   "espacio": "Unión Revolucionaria",
+   "cargo": "Presidente 1931–1933",
+   "pos": {
+    "eco": 50,
+    "com": 40,
+    "fed": 25,
+    "soc": 85,
+    "seg": 90,
+    "ins": 95,
+    "ext": 45,
+    "amb": 65
+   },
+   "alias": [
+    "luis sanchez cerro"
+   ]
+  },
+  {
+   "nombre": "Manuel Prado",
+   "hist": 1,
+   "espacio": "Movimiento Democrático Pradista",
+   "cargo": "Presidente 1939–1945 y 1956–1962",
+   "pos": {
+    "eco": 65,
+    "com": 65,
+    "fed": 40,
+    "soc": 65,
+    "seg": 60,
+    "ins": 45,
+    "ext": 70,
+    "amb": 65
+   },
+   "alias": [
+    "manuel prado"
+   ]
+  },
+  {
+   "nombre": "Manuel A. Odría",
+   "hist": 1,
+   "espacio": "Odriísmo",
+   "cargo": "Dictador 1948–1956",
+   "pos": {
+    "eco": 65,
+    "com": 65,
+    "fed": 25,
+    "soc": 75,
+    "seg": 90,
+    "ins": 95,
+    "ext": 75,
+    "amb": 70
+   },
+   "alias": [
+    "manuel a. odria"
+   ]
+  },
+  {
+   "nombre": "Fernando Belaúnde Terry",
+   "hist": 1,
+   "espacio": "Acción Popular",
+   "cargo": "Presidente 1963–1968 y 1980–1985",
+   "pos": {
+    "eco": 50,
+    "com": 55,
+    "fed": 50,
+    "soc": 55,
+    "seg": 50,
+    "ins": 25,
+    "ext": 60,
+    "amb": 80
+   },
+   "alias": [
+    "fernando belaunde terry"
+   ]
+  },
+  {
+   "nombre": "Juan Velasco Alvarado",
+   "hist": 1,
+   "espacio": "Gobierno Revolucionario",
+   "cargo": "Dictador 1968–1975",
+   "pos": {
+    "eco": 15,
+    "com": 15,
+    "fed": 20,
+    "soc": 55,
+    "seg": 80,
+    "ins": 95,
+    "ext": 20,
+    "amb": 75
+   },
+   "alias": [
+    "juan velasco alvarado"
+   ]
+  },
+  {
+   "nombre": "Francisco Morales Bermúdez",
+   "hist": 1,
+   "espacio": "Gobierno militar",
+   "cargo": "Dictador 1975–1980",
+   "pos": {
+    "eco": 50,
+    "com": 45,
+    "fed": 20,
+    "soc": 65,
+    "seg": 85,
+    "ins": 90,
+    "ext": 55,
+    "amb": 70
+   },
+   "alias": [
+    "francisco morales bermudez"
+   ]
+  },
+  {
+   "nombre": "Alan García",
+   "hist": 1,
+   "espacio": "APRA",
+   "cargo": "Presidente 1985–1990 y 2006–2011",
+   "pos": {
+    "eco": 45,
+    "com": 55,
+    "fed": 45,
+    "soc": 55,
+    "seg": 60,
+    "ins": 55,
+    "ext": 55,
+    "amb": 72
+   },
+   "alias": [
+    "alan garcia"
+   ]
+  },
+  {
+   "nombre": "Alberto Fujimori",
+   "hist": 1,
+   "espacio": "Cambio 90",
+   "cargo": "Presidente 1990–2000",
+   "pos": {
+    "eco": 80,
+    "com": 85,
+    "fed": 20,
+    "soc": 70,
+    "seg": 95,
+    "ins": 95,
+    "ext": 80,
+    "amb": 80
+   },
+   "alias": [
+    "alberto fujimori"
+   ]
+  },
+  {
+   "nombre": "Vladimiro Montesinos",
+   "hist": 1,
+   "espacio": "Fujimorismo",
+   "cargo": "Asesor de inteligencia",
+   "pos": {
+    "eco": 70,
+    "com": 70,
+    "fed": 20,
+    "soc": 70,
+    "seg": 100,
+    "ins": 100,
+    "ext": 75,
+    "amb": 75
+   },
+   "alias": [
+    "vladimiro montesinos"
+   ]
+  },
+  {
+   "nombre": "Valentín Paniagua",
+   "hist": 1,
+   "espacio": "Acción Popular",
+   "cargo": "Presidente 2000–2001",
+   "pos": {
+    "eco": 55,
+    "com": 60,
+    "fed": 50,
+    "soc": 50,
+    "seg": 45,
+    "ins": 15,
+    "ext": 60,
+    "amb": 60
+   },
+   "alias": [
+    "valentin paniagua"
+   ]
+  },
+  {
+   "nombre": "Alejandro Toledo",
+   "hist": 1,
+   "espacio": "Perú Posible",
+   "cargo": "Presidente 2001–2006",
+   "pos": {
+    "eco": 65,
+    "com": 72,
+    "fed": 50,
+    "soc": 45,
+    "seg": 50,
+    "ins": 40,
+    "ext": 70,
+    "amb": 65
+   },
+   "alias": [
+    "alejandro toledo"
+   ]
+  },
+  {
+   "nombre": "Pedro Pablo Kuczynski",
+   "hist": 1,
+   "espacio": "Peruanos por el Kambio",
+   "cargo": "Presidente 2016–2018",
+   "pos": {
+    "eco": 80,
+    "com": 85,
+    "fed": 45,
+    "soc": 45,
+    "seg": 55,
+    "ins": 30,
+    "ext": 80,
+    "amb": 72
+   },
+   "alias": [
+    "pedro pablo kuczynski"
+   ]
+  },
+  {
+   "nombre": "Mario Vargas Llosa",
+   "hist": 1,
+   "espacio": "FREDEMO",
+   "cargo": "Escritor y candidato presidencial 1990",
+   "pos": {
+    "eco": 90,
+    "com": 90,
+    "fed": 45,
+    "soc": 30,
+    "seg": 45,
+    "ins": 20,
+    "ext": 85,
+    "amb": 65
+   },
+   "alias": [
+    "mario vargas llosa"
+   ]
+  },
+  {
+   "nombre": "Abimael Guzmán",
+   "hist": 1,
+   "espacio": "Sendero Luminoso",
+   "cargo": "Líder de Sendero Luminoso",
+   "pos": {
+    "eco": 0,
+    "com": 10,
+    "fed": 35,
+    "soc": 50,
+    "seg": 30,
+    "ins": 100,
+    "ext": 0,
+    "amb": 60
+   },
+   "alias": [
+    "abimael guzman"
+   ]
+  },
+  {
+   "nombre": "Javier Pérez de Cuéllar",
+   "hist": 1,
+   "espacio": "Unión por el Perú",
+   "cargo": "Secretario general de la ONU y candidato 1995",
+   "pos": {
+    "eco": 55,
+    "com": 65,
+    "fed": 45,
+    "soc": 45,
+    "seg": 40,
+    "ins": 15,
+    "ext": 65,
+    "amb": 55
+   },
+   "alias": [
+    "javier perez de cuellar"
+   ]
+  },
+  {
+   "nombre": "Lourdes Flores",
+   "hist": 1,
+   "espacio": "Partido Popular Cristiano",
+   "cargo": "Candidata presidencial",
+   "pos": {
+    "eco": 72,
+    "com": 75,
+    "fed": 45,
+    "soc": 72,
+    "seg": 65,
+    "ins": 35,
+    "ext": 72,
+    "amb": 65
+   },
+   "alias": [
+    "lourdes flores"
+   ]
+  },
+  {
+   "nombre": "Luis Castañeda Lossio",
+   "hist": 1,
+   "espacio": "Solidaridad Nacional",
+   "cargo": "Alcalde de Lima",
+   "pos": {
+    "eco": 60,
+    "com": 60,
+    "fed": 40,
+    "soc": 60,
+    "seg": 65,
+    "ins": 55,
+    "ext": 60,
+    "amb": 72
+   },
+   "alias": [
+    "luis castaneda lossio"
    ]
   }
  ],
@@ -2685,6 +6998,557 @@
    },
    "alias": [
     "rodolfo carter"
+   ]
+  },
+  {
+   "nombre": "Vlado Mirosevic",
+   "nivel": 3,
+   "espacio": "Partido Liberal",
+   "cargo": "Diputado",
+   "pos": {
+    "eco": 55,
+    "com": 70,
+    "fed": 55,
+    "soc": 20,
+    "seg": 35,
+    "ins": 25,
+    "ext": 60,
+    "amb": 45
+   },
+   "alias": [
+    "vlado mirosevic"
+   ]
+  },
+  {
+   "nombre": "Camila Vallejo",
+   "nivel": 2,
+   "espacio": "Partido Comunista",
+   "cargo": "Exministra",
+   "pos": {
+    "eco": 12,
+    "com": 30,
+    "fed": 50,
+    "soc": 15,
+    "seg": 30,
+    "ins": 40,
+    "ext": 15,
+    "amb": 40
+   },
+   "alias": [
+    "camila vallejo"
+   ]
+  },
+  {
+   "nombre": "Giorgio Jackson",
+   "nivel": 3,
+   "espacio": "Frente Amplio",
+   "cargo": "Exministro",
+   "pos": {
+    "eco": 22,
+    "com": 40,
+    "fed": 50,
+    "soc": 10,
+    "seg": 30,
+    "ins": 30,
+    "ext": 30,
+    "amb": 35
+   },
+   "alias": [
+    "giorgio jackson"
+   ]
+  },
+  {
+   "nombre": "Izkia Siches",
+   "nivel": 3,
+   "espacio": "Independiente",
+   "cargo": "Exministra",
+   "pos": {
+    "eco": 28,
+    "com": 45,
+    "fed": 50,
+    "soc": 20,
+    "seg": 40,
+    "ins": 30,
+    "ext": 35,
+    "amb": 45
+   },
+   "alias": [
+    "izkia siches"
+   ]
+  },
+  {
+   "nombre": "Mario Desbordes",
+   "nivel": 3,
+   "espacio": "Renovación Nacional",
+   "cargo": "Alcalde de Santiago",
+   "pos": {
+    "eco": 62,
+    "com": 65,
+    "fed": 45,
+    "soc": 62,
+    "seg": 70,
+    "ins": 45,
+    "ext": 65,
+    "amb": 65
+   },
+   "alias": [
+    "mario desbordes"
+   ]
+  },
+  {
+   "nombre": "Javier Macaya",
+   "nivel": 3,
+   "espacio": "UDI",
+   "cargo": "Senador",
+   "pos": {
+    "eco": 75,
+    "com": 78,
+    "fed": 45,
+    "soc": 70,
+    "seg": 75,
+    "ins": 45,
+    "ext": 72,
+    "amb": 70
+   },
+   "alias": [
+    "javier macaya"
+   ]
+  },
+  {
+   "nombre": "Pamela Jiles",
+   "nivel": 3,
+   "espacio": "Partido de la Gente",
+   "cargo": "Diputada",
+   "pos": {
+    "eco": 35,
+    "com": 45,
+    "fed": 55,
+    "soc": 40,
+    "seg": 50,
+    "ins": 60,
+    "ext": 35,
+    "amb": 50
+   },
+   "alias": [
+    "pamela jiles"
+   ]
+  },
+  {
+   "nombre": "Ricardo Lagos",
+   "nivel": 3,
+   "espacio": "Partido Socialista / PPD",
+   "cargo": "Expresidente",
+   "pos": {
+    "eco": 50,
+    "com": 70,
+    "fed": 45,
+    "soc": 35,
+    "seg": 45,
+    "ins": 25,
+    "ext": 60,
+    "amb": 55
+   },
+   "alias": [
+    "ricardo lagos"
+   ]
+  },
+  {
+   "nombre": "Gloria Hutt",
+   "nivel": 3,
+   "espacio": "Evópoli",
+   "cargo": "Senadora",
+   "pos": {
+    "eco": 72,
+    "com": 80,
+    "fed": 45,
+    "soc": 45,
+    "seg": 55,
+    "ins": 30,
+    "ext": 70,
+    "amb": 62
+   },
+   "alias": [
+    "gloria hutt"
+   ]
+  },
+  {
+   "nombre": "Bernardo O'Higgins",
+   "hist": 1,
+   "espacio": "Patriotas",
+   "cargo": "Director Supremo 1817–1823",
+   "pos": {
+    "eco": 50,
+    "com": 55,
+    "fed": 25,
+    "soc": 60,
+    "seg": 80,
+    "ins": 85,
+    "ext": 50,
+    "amb": 60
+   },
+   "alias": [
+    "bernardo o'higgins"
+   ]
+  },
+  {
+   "nombre": "Diego Portales",
+   "hist": 1,
+   "espacio": "Conservadores",
+   "cargo": "Ministro y fundador del orden conservador",
+   "pos": {
+    "eco": 60,
+    "com": 60,
+    "fed": 15,
+    "soc": 75,
+    "seg": 90,
+    "ins": 85,
+    "ext": 60,
+    "amb": 65
+   },
+   "alias": [
+    "diego portales"
+   ]
+  },
+  {
+   "nombre": "José Manuel Balmaceda",
+   "hist": 1,
+   "espacio": "Liberales",
+   "cargo": "Presidente 1886–1891",
+   "pos": {
+    "eco": 40,
+    "com": 45,
+    "fed": 25,
+    "soc": 40,
+    "seg": 65,
+    "ins": 75,
+    "ext": 40,
+    "amb": 75
+   },
+   "alias": [
+    "jose manuel balmaceda"
+   ]
+  },
+  {
+   "nombre": "Arturo Alessandri",
+   "hist": 1,
+   "espacio": "Liberales",
+   "cargo": "Presidente 1920–1925 y 1932–1938",
+   "pos": {
+    "eco": 55,
+    "com": 55,
+    "fed": 35,
+    "soc": 50,
+    "seg": 60,
+    "ins": 60,
+    "ext": 60,
+    "amb": 65
+   },
+   "alias": [
+    "arturo alessandri"
+   ]
+  },
+  {
+   "nombre": "Carlos Ibáñez del Campo",
+   "hist": 1,
+   "espacio": "Ibañismo",
+   "cargo": "Presidente 1927–1931 y 1952–1958",
+   "pos": {
+    "eco": 45,
+    "com": 40,
+    "fed": 20,
+    "soc": 70,
+    "seg": 85,
+    "ins": 90,
+    "ext": 50,
+    "amb": 70
+   },
+   "alias": [
+    "carlos ibanez del campo"
+   ]
+  },
+  {
+   "nombre": "Pedro Aguirre Cerda",
+   "hist": 1,
+   "espacio": "Partido Radical",
+   "cargo": "Presidente 1938–1941",
+   "pos": {
+    "eco": 35,
+    "com": 40,
+    "fed": 35,
+    "soc": 40,
+    "seg": 45,
+    "ins": 35,
+    "ext": 45,
+    "amb": 75
+   },
+   "alias": [
+    "pedro aguirre cerda"
+   ]
+  },
+  {
+   "nombre": "Gabriel González Videla",
+   "hist": 1,
+   "espacio": "Partido Radical",
+   "cargo": "Presidente 1946–1952",
+   "pos": {
+    "eco": 50,
+    "com": 55,
+    "fed": 35,
+    "soc": 50,
+    "seg": 70,
+    "ins": 60,
+    "ext": 80,
+    "amb": 70
+   },
+   "alias": [
+    "gabriel gonzalez videla"
+   ]
+  },
+  {
+   "nombre": "Jorge Alessandri",
+   "hist": 1,
+   "espacio": "Independiente de derecha",
+   "cargo": "Presidente 1958–1964",
+   "pos": {
+    "eco": 75,
+    "com": 70,
+    "fed": 30,
+    "soc": 70,
+    "seg": 65,
+    "ins": 45,
+    "ext": 75,
+    "amb": 70
+   },
+   "alias": [
+    "jorge alessandri"
+   ]
+  },
+  {
+   "nombre": "Eduardo Frei Montalva",
+   "hist": 1,
+   "espacio": "Democracia Cristiana",
+   "cargo": "Presidente 1964–1970",
+   "pos": {
+    "eco": 40,
+    "com": 50,
+    "fed": 40,
+    "soc": 60,
+    "seg": 50,
+    "ins": 30,
+    "ext": 55,
+    "amb": 70
+   },
+   "alias": [
+    "eduardo frei montalva"
+   ]
+  },
+  {
+   "nombre": "Salvador Allende",
+   "hist": 1,
+   "espacio": "Unidad Popular",
+   "cargo": "Presidente 1970–1973",
+   "pos": {
+    "eco": 8,
+    "com": 30,
+    "fed": 40,
+    "soc": 30,
+    "seg": 30,
+    "ins": 45,
+    "ext": 5,
+    "amb": 65
+   },
+   "alias": [
+    "salvador allende"
+   ]
+  },
+  {
+   "nombre": "Augusto Pinochet",
+   "hist": 1,
+   "espacio": "Régimen militar",
+   "cargo": "Dictador 1973–1990",
+   "pos": {
+    "eco": 85,
+    "com": 90,
+    "fed": 15,
+    "soc": 85,
+    "seg": 100,
+    "ins": 100,
+    "ext": 85,
+    "amb": 75
+   },
+   "alias": [
+    "augusto pinochet"
+   ]
+  },
+  {
+   "nombre": "Jaime Guzmán",
+   "hist": 1,
+   "espacio": "UDI",
+   "cargo": "Ideólogo de la Constitución de 1980, fundador de la UDI",
+   "pos": {
+    "eco": 85,
+    "com": 85,
+    "fed": 25,
+    "soc": 90,
+    "seg": 85,
+    "ins": 75,
+    "ext": 85,
+    "amb": 70
+   },
+   "alias": [
+    "jaime guzman"
+   ]
+  },
+  {
+   "nombre": "Patricio Aylwin",
+   "hist": 1,
+   "espacio": "Democracia Cristiana",
+   "cargo": "Presidente 1990–1994",
+   "pos": {
+    "eco": 55,
+    "com": 65,
+    "fed": 40,
+    "soc": 55,
+    "seg": 45,
+    "ins": 20,
+    "ext": 60,
+    "amb": 60
+   },
+   "alias": [
+    "patricio aylwin"
+   ]
+  },
+  {
+   "nombre": "Eduardo Frei Ruiz-Tagle",
+   "hist": 1,
+   "espacio": "Democracia Cristiana",
+   "cargo": "Presidente 1994–2000",
+   "pos": {
+    "eco": 65,
+    "com": 75,
+    "fed": 40,
+    "soc": 55,
+    "seg": 55,
+    "ins": 25,
+    "ext": 65,
+    "amb": 70
+   },
+   "alias": [
+    "eduardo frei ruiz-tagle"
+   ]
+  },
+  {
+   "nombre": "Sebastián Piñera",
+   "hist": 1,
+   "espacio": "Renovación Nacional",
+   "cargo": "Presidente 2010–2014 y 2018–2022",
+   "pos": {
+    "eco": 75,
+    "com": 82,
+    "fed": 40,
+    "soc": 55,
+    "seg": 65,
+    "ins": 35,
+    "ext": 75,
+    "amb": 65
+   },
+   "alias": [
+    "sebastian pinera"
+   ]
+  },
+  {
+   "nombre": "Luis Emilio Recabarren",
+   "hist": 1,
+   "espacio": "Partido Comunista",
+   "cargo": "Fundador del Partido Comunista",
+   "pos": {
+    "eco": 5,
+    "com": 25,
+    "fed": 45,
+    "soc": 30,
+    "seg": 30,
+    "ins": 60,
+    "ext": 5,
+    "amb": 55
+   },
+   "alias": [
+    "luis emilio recabarren"
+   ]
+  },
+  {
+   "nombre": "Gladys Marín",
+   "hist": 1,
+   "espacio": "Partido Comunista",
+   "cargo": "Secretaria general del Partido Comunista",
+   "pos": {
+    "eco": 8,
+    "com": 25,
+    "fed": 45,
+    "soc": 25,
+    "seg": 25,
+    "ins": 55,
+    "ext": 5,
+    "amb": 50
+   },
+   "alias": [
+    "gladys marin"
+   ]
+  },
+  {
+   "nombre": "Miguel Enríquez",
+   "hist": 1,
+   "espacio": "MIR",
+   "cargo": "Líder del MIR",
+   "pos": {
+    "eco": 0,
+    "com": 15,
+    "fed": 45,
+    "soc": 25,
+    "seg": 15,
+    "ins": 85,
+    "ext": 0,
+    "amb": 50
+   },
+   "alias": [
+    "miguel enriquez"
+   ]
+  },
+  {
+   "nombre": "Joaquín Lavín",
+   "hist": 1,
+   "espacio": "UDI",
+   "cargo": "Alcalde de Santiago y candidato presidencial",
+   "pos": {
+    "eco": 75,
+    "com": 78,
+    "fed": 40,
+    "soc": 75,
+    "seg": 70,
+    "ins": 40,
+    "ext": 75,
+    "amb": 68
+   },
+   "alias": [
+    "joaquin lavin"
+   ]
+  },
+  {
+   "nombre": "Andrés Allamand",
+   "hist": 1,
+   "espacio": "Renovación Nacional",
+   "cargo": "Ministro y senador",
+   "pos": {
+    "eco": 72,
+    "com": 78,
+    "fed": 40,
+    "soc": 55,
+    "seg": 65,
+    "ins": 30,
+    "ext": 75,
+    "amb": 65
+   },
+   "alias": [
+    "andres allamand"
    ]
   }
  ],
@@ -3041,6 +7905,671 @@
    "alias": [
     "enrique peñalosa"
    ]
+  },
+  {
+   "nombre": "Juan Fernando Cristo",
+   "nivel": 3,
+   "espacio": "En Marcha",
+   "cargo": "Exministro del Interior",
+   "pos": {
+    "eco": 45,
+    "com": 55,
+    "fed": 55,
+    "soc": 40,
+    "seg": 45,
+    "ins": 30,
+    "ext": 55,
+    "amb": 50
+   },
+   "alias": [
+    "juan fernando cristo"
+   ]
+  },
+  {
+   "nombre": "Roy Barreras",
+   "nivel": 3,
+   "espacio": "La Fuerza de la Paz",
+   "cargo": "Dirigente político",
+   "pos": {
+    "eco": 40,
+    "com": 50,
+    "fed": 50,
+    "soc": 40,
+    "seg": 45,
+    "ins": 45,
+    "ext": 45,
+    "amb": 52
+   },
+   "alias": [
+    "roy barreras"
+   ]
+  },
+  {
+   "nombre": "David Luna",
+   "nivel": 3,
+   "espacio": "Cambio Radical",
+   "cargo": "Exsenador",
+   "pos": {
+    "eco": 68,
+    "com": 72,
+    "fed": 50,
+    "soc": 50,
+    "seg": 65,
+    "ins": 40,
+    "ext": 68,
+    "amb": 62
+   },
+   "alias": [
+    "david luna"
+   ]
+  },
+  {
+   "nombre": "Miguel Uribe Londoño",
+   "nivel": 3,
+   "espacio": "Centro Democrático",
+   "cargo": "Dirigente político",
+   "pos": {
+    "eco": 80,
+    "com": 75,
+    "fed": 45,
+    "soc": 80,
+    "seg": 85,
+    "ins": 60,
+    "ext": 80,
+    "amb": 75
+   },
+   "alias": [
+    "miguel uribe londono"
+   ]
+  },
+  {
+   "nombre": "María José Pizarro",
+   "nivel": 3,
+   "espacio": "Pacto Histórico",
+   "cargo": "Senadora",
+   "pos": {
+    "eco": 15,
+    "com": 30,
+    "fed": 55,
+    "soc": 15,
+    "seg": 25,
+    "ins": 40,
+    "ext": 15,
+    "amb": 35
+   },
+   "alias": [
+    "maria jose pizarro"
+   ]
+  },
+  {
+   "nombre": "Juan Manuel Galán",
+   "nivel": 3,
+   "espacio": "Nuevo Liberalismo",
+   "cargo": "Senador",
+   "pos": {
+    "eco": 55,
+    "com": 62,
+    "fed": 50,
+    "soc": 45,
+    "seg": 60,
+    "ins": 30,
+    "ext": 62,
+    "amb": 55
+   },
+   "alias": [
+    "juan manuel galan"
+   ]
+  },
+  {
+   "nombre": "Alejandro Gaviria",
+   "nivel": 3,
+   "espacio": "Independiente",
+   "cargo": "Exministro",
+   "pos": {
+    "eco": 55,
+    "com": 65,
+    "fed": 50,
+    "soc": 20,
+    "seg": 40,
+    "ins": 25,
+    "ext": 60,
+    "amb": 45
+   },
+   "alias": [
+    "alejandro gaviria"
+   ]
+  },
+  {
+   "nombre": "Federico Gutiérrez",
+   "nivel": 2,
+   "espacio": "Creemos",
+   "cargo": "Alcalde de Medellín",
+   "pos": {
+    "eco": 72,
+    "com": 70,
+    "fed": 55,
+    "soc": 65,
+    "seg": 85,
+    "ins": 50,
+    "ext": 75,
+    "amb": 68
+   },
+   "alias": [
+    "federico gutierrez"
+   ]
+  },
+  {
+   "nombre": "Carlos Fernando Galán",
+   "nivel": 3,
+   "espacio": "Nuevo Liberalismo",
+   "cargo": "Alcalde de Bogotá",
+   "pos": {
+    "eco": 55,
+    "com": 62,
+    "fed": 50,
+    "soc": 35,
+    "seg": 60,
+    "ins": 30,
+    "ext": 62,
+    "amb": 52
+   },
+   "alias": [
+    "carlos fernando galan"
+   ]
+  },
+  {
+   "nombre": "Juan Manuel Santos",
+   "nivel": 3,
+   "espacio": "Partido de la U",
+   "cargo": "Expresidente",
+   "pos": {
+    "eco": 62,
+    "com": 70,
+    "fed": 45,
+    "soc": 40,
+    "seg": 55,
+    "ins": 35,
+    "ext": 65,
+    "amb": 60
+   },
+   "alias": [
+    "juan manuel santos"
+   ]
+  },
+  {
+   "nombre": "Simón Bolívar",
+   "hist": 1,
+   "espacio": "Patriotas",
+   "cargo": "Libertador y presidente de la Gran Colombia",
+   "pos": {
+    "eco": 45,
+    "com": 50,
+    "fed": 15,
+    "soc": 55,
+    "seg": 80,
+    "ins": 85,
+    "ext": 40,
+    "amb": 60
+   },
+   "alias": [
+    "simon bolivar"
+   ]
+  },
+  {
+   "nombre": "Francisco de Paula Santander",
+   "hist": 1,
+   "espacio": "Liberales",
+   "cargo": "Vicepresidente y presidente de la Nueva Granada",
+   "pos": {
+    "eco": 55,
+    "com": 60,
+    "fed": 40,
+    "soc": 40,
+    "seg": 65,
+    "ins": 50,
+    "ext": 55,
+    "amb": 60
+   },
+   "alias": [
+    "francisco de paula santander"
+   ]
+  },
+  {
+   "nombre": "Rafael Núñez",
+   "hist": 1,
+   "espacio": "Regeneración",
+   "cargo": "Presidente y autor de la Constitución de 1886",
+   "pos": {
+    "eco": 50,
+    "com": 45,
+    "fed": 10,
+    "soc": 85,
+    "seg": 80,
+    "ins": 80,
+    "ext": 55,
+    "amb": 65
+   },
+   "alias": [
+    "rafael nunez"
+   ]
+  },
+  {
+   "nombre": "Rafael Uribe Uribe",
+   "hist": 1,
+   "espacio": "Partido Liberal",
+   "cargo": "Caudillo liberal",
+   "pos": {
+    "eco": 40,
+    "com": 55,
+    "fed": 55,
+    "soc": 35,
+    "seg": 55,
+    "ins": 50,
+    "ext": 50,
+    "amb": 60
+   },
+   "alias": [
+    "rafael uribe uribe"
+   ]
+  },
+  {
+   "nombre": "Alfonso López Pumarejo",
+   "hist": 1,
+   "espacio": "Partido Liberal",
+   "cargo": "Presidente 1934–1938 y 1942–1945",
+   "pos": {
+    "eco": 35,
+    "com": 45,
+    "fed": 40,
+    "soc": 35,
+    "seg": 45,
+    "ins": 40,
+    "ext": 45,
+    "amb": 65
+   },
+   "alias": [
+    "alfonso lopez pumarejo"
+   ]
+  },
+  {
+   "nombre": "Jorge Eliécer Gaitán",
+   "hist": 1,
+   "espacio": "Partido Liberal",
+   "cargo": "Líder liberal popular",
+   "pos": {
+    "eco": 25,
+    "com": 35,
+    "fed": 50,
+    "soc": 40,
+    "seg": 40,
+    "ins": 55,
+    "ext": 25,
+    "amb": 60
+   },
+   "alias": [
+    "jorge eliecer gaitan"
+   ]
+  },
+  {
+   "nombre": "Laureano Gómez",
+   "hist": 1,
+   "espacio": "Partido Conservador",
+   "cargo": "Presidente 1950–1951",
+   "pos": {
+    "eco": 65,
+    "com": 55,
+    "fed": 25,
+    "soc": 95,
+    "seg": 90,
+    "ins": 85,
+    "ext": 75,
+    "amb": 65
+   },
+   "alias": [
+    "laureano gomez"
+   ]
+  },
+  {
+   "nombre": "Gustavo Rojas Pinilla",
+   "hist": 1,
+   "espacio": "ANAPO",
+   "cargo": "Dictador 1953–1957",
+   "pos": {
+    "eco": 40,
+    "com": 40,
+    "fed": 20,
+    "soc": 75,
+    "seg": 90,
+    "ins": 95,
+    "ext": 55,
+    "amb": 70
+   },
+   "alias": [
+    "gustavo rojas pinilla"
+   ]
+  },
+  {
+   "nombre": "Alberto Lleras Camargo",
+   "hist": 1,
+   "espacio": "Partido Liberal",
+   "cargo": "Presidente 1945–1946 y 1958–1962",
+   "pos": {
+    "eco": 50,
+    "com": 60,
+    "fed": 40,
+    "soc": 45,
+    "seg": 50,
+    "ins": 25,
+    "ext": 65,
+    "amb": 60
+   },
+   "alias": [
+    "alberto lleras camargo"
+   ]
+  },
+  {
+   "nombre": "Misael Pastrana Borrero",
+   "hist": 1,
+   "espacio": "Partido Conservador",
+   "cargo": "Presidente 1970–1974",
+   "pos": {
+    "eco": 60,
+    "com": 60,
+    "fed": 35,
+    "soc": 70,
+    "seg": 65,
+    "ins": 40,
+    "ext": 65,
+    "amb": 70
+   },
+   "alias": [
+    "misael pastrana borrero"
+   ]
+  },
+  {
+   "nombre": "Alfonso López Michelsen",
+   "hist": 1,
+   "espacio": "Partido Liberal",
+   "cargo": "Presidente 1974–1978",
+   "pos": {
+    "eco": 50,
+    "com": 60,
+    "fed": 40,
+    "soc": 40,
+    "seg": 50,
+    "ins": 30,
+    "ext": 55,
+    "amb": 65
+   },
+   "alias": [
+    "alfonso lopez michelsen"
+   ]
+  },
+  {
+   "nombre": "Julio César Turbay",
+   "hist": 1,
+   "espacio": "Partido Liberal",
+   "cargo": "Presidente 1978–1982",
+   "pos": {
+    "eco": 60,
+    "com": 60,
+    "fed": 35,
+    "soc": 65,
+    "seg": 90,
+    "ins": 60,
+    "ext": 75,
+    "amb": 65
+   },
+   "alias": [
+    "julio cesar turbay"
+   ]
+  },
+  {
+   "nombre": "Belisario Betancur",
+   "hist": 1,
+   "espacio": "Partido Conservador",
+   "cargo": "Presidente 1982–1986",
+   "pos": {
+    "eco": 45,
+    "com": 55,
+    "fed": 45,
+    "soc": 65,
+    "seg": 45,
+    "ins": 30,
+    "ext": 45,
+    "amb": 60
+   },
+   "alias": [
+    "belisario betancur"
+   ]
+  },
+  {
+   "nombre": "Virgilio Barco",
+   "hist": 1,
+   "espacio": "Partido Liberal",
+   "cargo": "Presidente 1986–1990",
+   "pos": {
+    "eco": 55,
+    "com": 62,
+    "fed": 45,
+    "soc": 45,
+    "seg": 60,
+    "ins": 30,
+    "ext": 65,
+    "amb": 65
+   },
+   "alias": [
+    "virgilio barco"
+   ]
+  },
+  {
+   "nombre": "Luis Carlos Galán",
+   "hist": 1,
+   "espacio": "Nuevo Liberalismo",
+   "cargo": "Fundador del Nuevo Liberalismo",
+   "pos": {
+    "eco": 50,
+    "com": 60,
+    "fed": 50,
+    "soc": 40,
+    "seg": 60,
+    "ins": 20,
+    "ext": 60,
+    "amb": 58
+   },
+   "alias": [
+    "luis carlos galan"
+   ]
+  },
+  {
+   "nombre": "César Gaviria",
+   "hist": 1,
+   "espacio": "Partido Liberal",
+   "cargo": "Presidente 1990–1994",
+   "pos": {
+    "eco": 75,
+    "com": 85,
+    "fed": 55,
+    "soc": 40,
+    "seg": 60,
+    "ins": 30,
+    "ext": 75,
+    "amb": 65
+   },
+   "alias": [
+    "cesar gaviria"
+   ]
+  },
+  {
+   "nombre": "Ernesto Samper",
+   "hist": 1,
+   "espacio": "Partido Liberal",
+   "cargo": "Presidente 1994–1998",
+   "pos": {
+    "eco": 45,
+    "com": 55,
+    "fed": 45,
+    "soc": 45,
+    "seg": 50,
+    "ins": 40,
+    "ext": 40,
+    "amb": 62
+   },
+   "alias": [
+    "ernesto samper"
+   ]
+  },
+  {
+   "nombre": "Andrés Pastrana",
+   "hist": 1,
+   "espacio": "Partido Conservador",
+   "cargo": "Presidente 1998–2002",
+   "pos": {
+    "eco": 68,
+    "com": 72,
+    "fed": 45,
+    "soc": 65,
+    "seg": 55,
+    "ins": 35,
+    "ext": 80,
+    "amb": 65
+   },
+   "alias": [
+    "andres pastrana"
+   ]
+  },
+  {
+   "nombre": "Camilo Torres",
+   "hist": 1,
+   "espacio": "ELN",
+   "cargo": "Sacerdote y guerrillero",
+   "pos": {
+    "eco": 5,
+    "com": 20,
+    "fed": 50,
+    "soc": 55,
+    "seg": 20,
+    "ins": 80,
+    "ext": 0,
+    "amb": 55
+   },
+   "alias": [
+    "camilo torres"
+   ]
+  },
+  {
+   "nombre": "Manuel Marulanda",
+   "hist": 1,
+   "espacio": "FARC",
+   "cargo": "Líder de las FARC",
+   "pos": {
+    "eco": 5,
+    "com": 15,
+    "fed": 45,
+    "soc": 55,
+    "seg": 20,
+    "ins": 100,
+    "ext": 0,
+    "amb": 60
+   },
+   "alias": [
+    "manuel marulanda"
+   ]
+  },
+  {
+   "nombre": "Carlos Pizarro",
+   "hist": 1,
+   "espacio": "M-19",
+   "cargo": "Líder del M-19",
+   "pos": {
+    "eco": 20,
+    "com": 30,
+    "fed": 50,
+    "soc": 35,
+    "seg": 30,
+    "ins": 60,
+    "ext": 15,
+    "amb": 55
+   },
+   "alias": [
+    "carlos pizarro"
+   ]
+  },
+  {
+   "nombre": "Antonio Navarro Wolff",
+   "hist": 1,
+   "espacio": "Alianza Democrática M-19",
+   "cargo": "Líder del M-19 y gobernador de Nariño",
+   "pos": {
+    "eco": 30,
+    "com": 45,
+    "fed": 55,
+    "soc": 30,
+    "seg": 40,
+    "ins": 30,
+    "ext": 35,
+    "amb": 50
+   },
+   "alias": [
+    "antonio navarro wolff"
+   ]
+  },
+  {
+   "nombre": "Álvaro Gómez Hurtado",
+   "hist": 1,
+   "espacio": "Movimiento de Salvación Nacional",
+   "cargo": "Líder conservador",
+   "pos": {
+    "eco": 65,
+    "com": 60,
+    "fed": 40,
+    "soc": 80,
+    "seg": 80,
+    "ins": 50,
+    "ext": 70,
+    "amb": 68
+   },
+   "alias": [
+    "alvaro gomez hurtado"
+   ]
+  },
+  {
+   "nombre": "Antanas Mockus",
+   "hist": 1,
+   "espacio": "Partido Verde",
+   "cargo": "Alcalde de Bogotá",
+   "pos": {
+    "eco": 45,
+    "com": 60,
+    "fed": 55,
+    "soc": 25,
+    "seg": 45,
+    "ins": 15,
+    "ext": 55,
+    "amb": 35
+   },
+   "alias": [
+    "antanas mockus"
+   ]
+  },
+  {
+   "nombre": "Carlos Gaviria Díaz",
+   "hist": 1,
+   "espacio": "Polo Democrático",
+   "cargo": "Magistrado y candidato presidencial 2006",
+   "pos": {
+    "eco": 20,
+    "com": 35,
+    "fed": 55,
+    "soc": 15,
+    "seg": 25,
+    "ins": 15,
+    "ext": 20,
+    "amb": 40
+   },
+   "alias": [
+    "carlos gaviria diaz"
+   ]
   }
  ],
  "uy": [
@@ -3370,6 +8899,539 @@
     "tec": 90,
     "dem": 55
    }
+  },
+  {
+   "nombre": "José Mujica",
+   "nivel": 1,
+   "espacio": "Frente Amplio",
+   "cargo": "Expresidente",
+   "pos": {
+    "eco": 25,
+    "com": 45,
+    "fed": 50,
+    "soc": 30,
+    "seg": 40,
+    "ins": 25,
+    "ext": 30,
+    "amb": 45
+   },
+   "alias": [
+    "jose mujica"
+   ]
+  },
+  {
+   "nombre": "Lucía Topolansky",
+   "nivel": 3,
+   "espacio": "MPP",
+   "cargo": "Exvicepresidenta",
+   "pos": {
+    "eco": 22,
+    "com": 40,
+    "fed": 50,
+    "soc": 35,
+    "seg": 40,
+    "ins": 35,
+    "ext": 25,
+    "amb": 50
+   },
+   "alias": [
+    "lucia topolansky"
+   ]
+  },
+  {
+   "nombre": "Mario Bergara",
+   "nivel": 3,
+   "espacio": "Frente Amplio",
+   "cargo": "Senador",
+   "pos": {
+    "eco": 40,
+    "com": 60,
+    "fed": 50,
+    "soc": 25,
+    "seg": 40,
+    "ins": 25,
+    "ext": 45,
+    "amb": 50
+   },
+   "alias": [
+    "mario bergara"
+   ]
+  },
+  {
+   "nombre": "Óscar Andrade",
+   "nivel": 3,
+   "espacio": "Partido Comunista",
+   "cargo": "Senador",
+   "pos": {
+    "eco": 12,
+    "com": 30,
+    "fed": 50,
+    "soc": 25,
+    "seg": 30,
+    "ins": 40,
+    "ext": 15,
+    "amb": 45
+   },
+   "alias": [
+    "oscar andrade"
+   ]
+  },
+  {
+   "nombre": "Robert Silva",
+   "nivel": 3,
+   "espacio": "Partido Colorado",
+   "cargo": "Senador",
+   "pos": {
+    "eco": 65,
+    "com": 72,
+    "fed": 50,
+    "soc": 45,
+    "seg": 60,
+    "ins": 30,
+    "ext": 68,
+    "amb": 60
+   },
+   "alias": [
+    "robert silva"
+   ]
+  },
+  {
+   "nombre": "Gabriel Gurméndez",
+   "nivel": 3,
+   "espacio": "Partido Colorado",
+   "cargo": "Dirigente colorado",
+   "pos": {
+    "eco": 72,
+    "com": 75,
+    "fed": 50,
+    "soc": 55,
+    "seg": 65,
+    "ins": 35,
+    "ext": 70,
+    "amb": 62
+   },
+   "alias": [
+    "gabriel gurmendez"
+   ]
+  },
+  {
+   "nombre": "Beatriz Argimón",
+   "nivel": 3,
+   "espacio": "Partido Nacional",
+   "cargo": "Exvicepresidenta",
+   "pos": {
+    "eco": 62,
+    "com": 68,
+    "fed": 50,
+    "soc": 55,
+    "seg": 60,
+    "ins": 30,
+    "ext": 65,
+    "amb": 60
+   },
+   "alias": [
+    "beatriz argimon"
+   ]
+  },
+  {
+   "nombre": "Gonzalo Mujica",
+   "nivel": 3,
+   "espacio": "Partido Nacional",
+   "cargo": "Diputado",
+   "pos": {
+    "eco": 55,
+    "com": 62,
+    "fed": 50,
+    "soc": 55,
+    "seg": 62,
+    "ins": 35,
+    "ext": 62,
+    "amb": 60
+   },
+   "alias": [
+    "gonzalo mujica"
+   ]
+  },
+  {
+   "nombre": "José Gervasio Artigas",
+   "hist": 1,
+   "espacio": "Federales",
+   "cargo": "Prócer y caudillo de la independencia",
+   "pos": {
+    "eco": 35,
+    "com": 40,
+    "fed": 90,
+    "soc": 55,
+    "seg": 65,
+    "ins": 60,
+    "ext": 30,
+    "amb": 55
+   },
+   "alias": [
+    "jose gervasio artigas"
+   ]
+  },
+  {
+   "nombre": "Fructuoso Rivera",
+   "hist": 1,
+   "espacio": "Partido Colorado",
+   "cargo": "Primer presidente 1830–1834",
+   "pos": {
+    "eco": 55,
+    "com": 60,
+    "fed": 35,
+    "soc": 60,
+    "seg": 70,
+    "ins": 75,
+    "ext": 55,
+    "amb": 65
+   },
+   "alias": [
+    "fructuoso rivera"
+   ]
+  },
+  {
+   "nombre": "Manuel Oribe",
+   "hist": 1,
+   "espacio": "Partido Nacional",
+   "cargo": "Presidente 1835–1838",
+   "pos": {
+    "eco": 45,
+    "com": 35,
+    "fed": 55,
+    "soc": 75,
+    "seg": 75,
+    "ins": 75,
+    "ext": 35,
+    "amb": 60
+   },
+   "alias": [
+    "manuel oribe"
+   ]
+  },
+  {
+   "nombre": "José Batlle y Ordóñez",
+   "hist": 1,
+   "espacio": "Partido Colorado (batllismo)",
+   "cargo": "Presidente 1903–1907 y 1911–1915",
+   "pos": {
+    "eco": 25,
+    "com": 40,
+    "fed": 30,
+    "soc": 15,
+    "seg": 40,
+    "ins": 40,
+    "ext": 50,
+    "amb": 70
+   },
+   "alias": [
+    "jose batlle y ordonez"
+   ]
+  },
+  {
+   "nombre": "Aparicio Saravia",
+   "hist": 1,
+   "espacio": "Partido Nacional",
+   "cargo": "Caudillo blanco",
+   "pos": {
+    "eco": 50,
+    "com": 40,
+    "fed": 85,
+    "soc": 75,
+    "seg": 70,
+    "ins": 70,
+    "ext": 40,
+    "amb": 55
+   },
+   "alias": [
+    "aparicio saravia"
+   ]
+  },
+  {
+   "nombre": "Luis Alberto de Herrera",
+   "hist": 1,
+   "espacio": "Partido Nacional",
+   "cargo": "Líder del Partido Nacional",
+   "pos": {
+    "eco": 65,
+    "com": 50,
+    "fed": 55,
+    "soc": 75,
+    "seg": 65,
+    "ins": 55,
+    "ext": 30,
+    "amb": 60
+   },
+   "alias": [
+    "luis alberto de herrera"
+   ]
+  },
+  {
+   "nombre": "Gabriel Terra",
+   "hist": 1,
+   "espacio": "Partido Colorado",
+   "cargo": "Presidente 1931–1938",
+   "pos": {
+    "eco": 55,
+    "com": 50,
+    "fed": 25,
+    "soc": 65,
+    "seg": 80,
+    "ins": 85,
+    "ext": 55,
+    "amb": 65
+   },
+   "alias": [
+    "gabriel terra"
+   ]
+  },
+  {
+   "nombre": "Luis Batlle Berres",
+   "hist": 1,
+   "espacio": "Partido Colorado",
+   "cargo": "Presidente 1947–1951",
+   "pos": {
+    "eco": 35,
+    "com": 30,
+    "fed": 35,
+    "soc": 30,
+    "seg": 45,
+    "ins": 35,
+    "ext": 50,
+    "amb": 75
+   },
+   "alias": [
+    "luis batlle berres"
+   ]
+  },
+  {
+   "nombre": "Juan María Bordaberry",
+   "hist": 1,
+   "espacio": "Partido Colorado / régimen cívico-militar",
+   "cargo": "Presidente y dictador 1972–1976",
+   "pos": {
+    "eco": 70,
+    "com": 65,
+    "fed": 20,
+    "soc": 85,
+    "seg": 100,
+    "ins": 100,
+    "ext": 80,
+    "amb": 70
+   },
+   "alias": [
+    "juan maria bordaberry"
+   ]
+  },
+  {
+   "nombre": "Wilson Ferreira Aldunate",
+   "hist": 1,
+   "espacio": "Partido Nacional",
+   "cargo": "Líder del Partido Nacional",
+   "pos": {
+    "eco": 40,
+    "com": 45,
+    "fed": 55,
+    "soc": 50,
+    "seg": 40,
+    "ins": 25,
+    "ext": 45,
+    "amb": 60
+   },
+   "alias": [
+    "wilson ferreira aldunate"
+   ]
+  },
+  {
+   "nombre": "Líber Seregni",
+   "hist": 1,
+   "espacio": "Frente Amplio",
+   "cargo": "Fundador del Frente Amplio",
+   "pos": {
+    "eco": 25,
+    "com": 40,
+    "fed": 45,
+    "soc": 35,
+    "seg": 40,
+    "ins": 25,
+    "ext": 25,
+    "amb": 58
+   },
+   "alias": [
+    "liber seregni"
+   ]
+  },
+  {
+   "nombre": "Raúl Sendic",
+   "hist": 1,
+   "espacio": "MLN-Tupamaros",
+   "cargo": "Fundador del MLN-Tupamaros",
+   "pos": {
+    "eco": 5,
+    "com": 25,
+    "fed": 50,
+    "soc": 30,
+    "seg": 20,
+    "ins": 75,
+    "ext": 5,
+    "amb": 55
+   },
+   "alias": [
+    "raul sendic"
+   ]
+  },
+  {
+   "nombre": "Julio María Sanguinetti",
+   "hist": 1,
+   "espacio": "Partido Colorado",
+   "cargo": "Presidente 1985–1990 y 1995–2000",
+   "pos": {
+    "eco": 62,
+    "com": 72,
+    "fed": 40,
+    "soc": 40,
+    "seg": 55,
+    "ins": 25,
+    "ext": 65,
+    "amb": 62
+   },
+   "alias": [
+    "julio maria sanguinetti"
+   ]
+  },
+  {
+   "nombre": "Luis Alberto Lacalle",
+   "hist": 1,
+   "espacio": "Partido Nacional",
+   "cargo": "Presidente 1990–1995",
+   "pos": {
+    "eco": 78,
+    "com": 82,
+    "fed": 45,
+    "soc": 65,
+    "seg": 60,
+    "ins": 35,
+    "ext": 75,
+    "amb": 65
+   },
+   "alias": [
+    "luis alberto lacalle"
+   ]
+  },
+  {
+   "nombre": "Jorge Batlle",
+   "hist": 1,
+   "espacio": "Partido Colorado",
+   "cargo": "Presidente 2000–2005",
+   "pos": {
+    "eco": 82,
+    "com": 88,
+    "fed": 40,
+    "soc": 35,
+    "seg": 55,
+    "ins": 25,
+    "ext": 80,
+    "amb": 62
+   },
+   "alias": [
+    "jorge batlle"
+   ]
+  },
+  {
+   "nombre": "Tabaré Vázquez",
+   "hist": 1,
+   "espacio": "Frente Amplio",
+   "cargo": "Presidente 2005–2010 y 2015–2020",
+   "pos": {
+    "eco": 30,
+    "com": 50,
+    "fed": 45,
+    "soc": 45,
+    "seg": 45,
+    "ins": 30,
+    "ext": 40,
+    "amb": 60
+   },
+   "alias": [
+    "tabare vazquez"
+   ]
+  },
+  {
+   "nombre": "Danilo Astori",
+   "hist": 1,
+   "espacio": "Frente Amplio",
+   "cargo": "Ministro de Economía y vicepresidente",
+   "pos": {
+    "eco": 50,
+    "com": 70,
+    "fed": 45,
+    "soc": 35,
+    "seg": 45,
+    "ins": 25,
+    "ext": 55,
+    "amb": 58
+   },
+   "alias": [
+    "danilo astori"
+   ]
+  },
+  {
+   "nombre": "Rodney Arismendi",
+   "hist": 1,
+   "espacio": "Partido Comunista",
+   "cargo": "Líder del Partido Comunista",
+   "pos": {
+    "eco": 5,
+    "com": 20,
+    "fed": 45,
+    "soc": 40,
+    "seg": 30,
+    "ins": 80,
+    "ext": 5,
+    "amb": 60
+   },
+   "alias": [
+    "rodney arismendi"
+   ]
+  },
+  {
+   "nombre": "Hugo Batalla",
+   "hist": 1,
+   "espacio": "Partido por el Gobierno del Pueblo",
+   "cargo": "Vicepresidente 1995–1998",
+   "pos": {
+    "eco": 35,
+    "com": 50,
+    "fed": 45,
+    "soc": 30,
+    "seg": 40,
+    "ins": 20,
+    "ext": 45,
+    "amb": 55
+   },
+   "alias": [
+    "hugo batalla"
+   ]
+  },
+  {
+   "nombre": "Jorge Larrañaga",
+   "hist": 1,
+   "espacio": "Partido Nacional",
+   "cargo": "Ministro del Interior",
+   "pos": {
+    "eco": 60,
+    "com": 62,
+    "fed": 55,
+    "soc": 60,
+    "seg": 80,
+    "ins": 40,
+    "ext": 60,
+    "amb": 65
+   },
+   "alias": [
+    "jorge larranaga"
+   ]
   }
- ]
+ ],
+ "_nota_hist": "hist = figura histórica: se muestra aparte (resultado, mapa con casilla, cara a cara). Posición editorial aproximada de su época, A REVISAR."
 }

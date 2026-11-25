@@ -101,7 +101,8 @@
   };
   const bandera = id => BANDERA[id] ? `<span class="flag"><svg viewBox="0 0 30 20" aria-hidden="true">${BANDERA[id]}</svg></span>` : '';
   const nombreVer = id => (VER_NOMBRE[S.lang] || {})[id] || S.ejes.versiones[id].nombre;
-  function figuras(ver) { return S.fig[(S.ejes.versiones[ver] || {}).figuras || 'latam'] || [] }
+  function figuras(ver, conHist) { const l = S.fig[(S.ejes.versiones[ver] || {}).figuras || 'latam'] || []; return conHist ? l : l.filter(f => !f.hist) }
+  const figurasH = ver => figuras(ver, true).filter(f => f.hist);
   const ideoNom = i => (i[S.lang] || i.es).nombre, ideoDesc = i => (i[S.lang] || i.es).desc;
   const iniciales = n => n.split(/\s+/).filter(w => /^[A-ZÁÉÍÓÚÑ]/.test(w)).slice(0, 2).map(w => w[0]).join('') || n[0];
   const apellido = n => n.split(' ').slice(-1)[0];
@@ -117,7 +118,7 @@
   const FOTOS = new Map(), FCACHE = {};
   try { Object.assign(FCACHE, JSON.parse(sessionStorage.getItem('brujula_fotos') || '{}')) } catch (e) { }
   // Para no mostrar la foto de un homónimo, la página tiene que describir a alguien de la política.
-  const POLITICO = /pol[ií]tic|president|senador|diputad|deputad|gobernador|governador|ministr|alcalde|intendente|prefeit|vereador|congres|legislad|candidat|abogad|advogad|economist|activist|ativist|sindical|militar|jefe de gabinete|vocero|portavoz|porta-voz|politician|governor|mayor|senator/i;
+  const POLITICO = /pol[ií]tic|dictador|ditador|caudill|pr[oó]cer|libertador|escritor|guerriller|revolucion|imperador|emperador|jurista|abolicion|antrop[oó]log|ambientalist|sacerdote|sindicalist|periodista|ide[oó]log|l[ií]der|militante|president|senador|diputad|deputad|gobernador|governador|ministr|alcalde|intendente|prefeit|vereador|congres|legislad|candidat|abogad|advogad|economist|activist|ativist|sindical|militar|jefe de gabinete|vocero|portavoz|porta-voz|politician|governor|mayor|senator/i;
   function foto(nombre) {
     if (nombre in FCACHE) return Promise.resolve(FCACHE[nombre]);
     if (FOTOS.has(nombre)) return FOTOS.get(nombre);
@@ -380,6 +381,7 @@
   function ranking(sc, cert) {
     const ids = IDS();
     const figs = figuras(S.ver).map(f => ({ f, af: afinidad(sc, f.pos, cert) })).sort((a, b) => b.af - a.af);
+    S.hist = figurasH(S.ver).map(f => ({ f, af: afinidad(sc, f.pos, cert) })).sort((a, b) => b.af - a.af);
     const ideo = S.ideo.map(i => { const pos = {}; ids.forEach((k, j) => { pos[k] = i.pos[j] }); return { i, pos, af: afinidad(sc, pos, cert) } }).sort((a, b) => b.af - a.af);
     return { figs, ideo };
   }
@@ -502,7 +504,9 @@
         <p>${esc(t.coinc)}: ${esc(lista(cercanos(sc, top.f.pos, 3)))}</p><a href="${cmp(top.f)}">${esc(t.comparar)}</a></div>${ring(top.af)}</div>
       <div class="k" style="margin-top:16px">${esc(t.tambien)}</div><div class="dims">${dims}</div>
       <div class="fgrid">${F.slice(1, 9).map(({ f, af }) => `<div class="fc">${avatar(f)}<b>${esc(f.nombre)}</b><span class="pc">${af}%</span><small>${esc(f.cargo || f.pais || '')}${f.espacio ? ' · ' + esc(f.espacio) : ''}</small><a href="${cmp(f)}">${esc(t.comparar)}</a></div>`).join('')}</div>
-      <div class="lejos">${esc(t.lejos_d)} ${F.slice(-3).reverse().map(x => `<span>${esc(x.f.nombre)} · ${x.af}%</span>`).join('')}</div>`;
+      <div class="lejos">${esc(t.lejos_d)} ${F.slice(-3).reverse().map(x => `<span>${esc(x.f.nombre)} · ${x.af}%</span>`).join('')}</div>` +
+      ((S.hist || []).length ? `<div class="k" style="margin-top:18px">${esc(t.hist_k)}</div><div class="fgrid">${S.hist.slice(0, 6).map(({ f, af }) => `<div class="fc">${avatar(f)}<b>${esc(f.nombre)}</b><span class="pc">${af}%</span><small>${esc(f.cargo || '')}</small><a href="${cmp(f)}">${esc(t.comparar)}</a></div>`).join('')}</div>` : '');
+    fotos($('#dir'));
   }
   function analisis(sc, cert, rk, E) {
     const t = T(), n = S._link ? null : S.nresp;
@@ -655,7 +659,8 @@
       el.onchange = mapaPagina;
     });
     const sc = r && r.sc, cert = r && r.cert;
-    const rk = figuras(ver).map(f => ({ f, af: sc ? afinidad(sc, f.pos, cert) : null })).sort((a, b) => (b.af || 0) - (a.af || 0));
+    const rk = figuras(ver, $('#mp-hist').checked).map(f => ({ f, af: sc ? afinidad(sc, f.pos, cert) : null })).sort((a, b) => (b.af || 0) - (a.af || 0));
+    $('#mp-hist').onchange = mapaPagina;
     svgMapa('#mapa-g', '#mapa-g-info', rk, $('#mp-x').value, $('#mp-y').value, sc, new Set(sc ? rk.slice(0, 5).map(x => x.f.nombre) : rk.filter(x => x.f.nivel === 1).map(x => x.f.nombre)));
   }
   // Mapa de dos ejes cualesquiera: puntos = dirigentes, "vos" si hay resultado.
@@ -669,7 +674,7 @@
     g += `<text class="q" x="${P + 3}" y="${Yv(50) - 6}">◀ ${U(ex.a)}</text><text class="q" x="${W - P - 3}" y="${Yv(50) - 6}" text-anchor="end">${U(ex.b)} ▶</text>`;
     rk.forEach(({ f, af }) => {
       const tp = top.has(f.nombre), cx = X(f.pos[xk]), cy = Yv(f.pos[yk]);
-      g += `<g class="pt${tp ? ' top' : ''}"><title>${esc(f.nombre)}${af != null ? ' · ' + af + '%' : ''}${f.cargo ? ' · ' + esc(f.cargo) : ''}</title><circle cx="${cx}" cy="${cy}" r="${tp ? 5 : 3.5}"/>${tp ? `<text x="${cx + 7}" y="${cy + 3}">${esc(apellido(f.nombre))}</text>` : ''}</g>`;
+      g += `<g class="pt${tp ? ' top' : ''}${f.hist ? ' h' : ''}"><title>${esc(f.nombre)}${af != null ? ' · ' + af + '%' : ''}${f.cargo ? ' · ' + esc(f.cargo) : ''}</title><circle cx="${cx}" cy="${cy}" r="${tp ? 5 : 3.5}"/>${tp ? `<text x="${cx + 7}" y="${cy + 3}">${esc(apellido(f.nombre))}</text>` : ''}</g>`;
     });
     if (sc) {
       const yo = { es: 'VOS', pt: 'VOCÊ', en: 'YOU' }[S.lang];
@@ -679,12 +684,12 @@
     $(sel).onclick = ev => { const p = ev.target.closest('.pt'); if (p) $(info).textContent = p.querySelector('title').textContent };
   }
   function cara(preB) {
-    const ver = selVer('#cc-ver', () => { $('#cc-a').value = ''; $('#cc-b').value = ''; cara() }), figs = figuras(ver), r = guardado(), t = T();
+    const ver = selVer('#cc-ver', () => { $('#cc-a').value = ''; $('#cc-b').value = ''; cara() }), figs = figuras(ver, true), r = guardado(), t = T();
     if (!figs.length) { $('#cara-res').innerHTML = ''; return }
     const ok = preB && figs.some(f => f.nombre === preB);
     const ops = (sel, def, conVos, forzar) => {
       const el = $(sel), v = forzar || el.value || def;
-      el.innerHTML = (conVos && r ? `<option value="__vos">${esc(t.vos)}</option>` : '') + figs.map(f => `<option${f.nombre === v ? ' selected' : ''}>${esc(f.nombre)}</option>`).join('');
+      el.innerHTML = (conVos && r ? `<option value="__vos">${esc(t.vos)}</option>` : '') + [figs.filter(f => !f.hist), figs.filter(f => f.hist)].map((l, j) => l.length ? `<optgroup label="${esc(j ? t.hist_grp : t.act_grp)}">` + l.map(f => `<option${f.nombre === v ? ' selected' : ''}>${esc(f.nombre)}</option>`).join('') + '</optgroup>' : '').join('');
       if (v === '__vos' && r) el.value = '__vos';
       el.onchange = () => cara();
       return el.value;
