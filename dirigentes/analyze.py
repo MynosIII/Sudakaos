@@ -238,6 +238,14 @@ def main():
         seen.add(key)
         dedup.append(i)
     items = dedup
+    # Textos que nombran a otro cliente (cada tablero se vende a una sola persona): afuera, también los videos y sus comentarios
+    FUERA = [fold(x) for x in CONFIG.get("excluir_textos", [])]
+    if FUERA:
+        def ajeno(i):
+            t = fold(" ".join(str(i.get(k, "")) for k in ("text", "title", "video_title")))
+            return any(re.search(rf"\b{re.escape(x)}\b", t) for x in FUERA)
+        vid_fuera = {i["video_id"] for i in items if i["kind"] == "video" and ajeno(i)}
+        items = [i for i in items if not ajeno(i) and i.get("video_id") not in vid_fuera]
     vinfo = {i["video_id"]: i for i in items if i["kind"] == "video"}
     texts = [i for i in items if i["kind"] != "video"]
     # Notas: solo las que tienen contexto del distrito o nombran a una figura del distrito (Google News trae ruido con apellidos comunes)
