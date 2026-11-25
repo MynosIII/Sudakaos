@@ -1,0 +1,724 @@
+{
+ "nombre": "Monitor Julia Strada",
+ "slug": "strada",
+ "color": "#d9534f",
+ "distrito": "Diputados de la Nación (Provincia de Buenos Aires)",
+ "perfil": {
+  "nombre": "Julia Strada",
+  "corto": "Strada",
+  "cargo": "Diputada nacional por la Provincia de Buenos Aires (Unión por la Patria, 2023-2027); economista",
+  "resumen": "Economista de la UBA, investigadora del Centro de Economía Política Argentina (CEPA), ex directora del Banco Nación (2020-2023) y columnista habitual de radio y TV. Desde diciembre de 2023 es diputada nacional por la Provincia de Buenos Aires y una de las voces económicas más visibles de la oposición al gobierno de Milei: ajuste, deuda, consumo, salarios y Vaca Muerta. En 2026 quedó expuesta por un crédito hipotecario del Banco Nación que la oposición libertaria le salió a cuestionar.",
+  "objetivo": "Consolidarse como la voz económica del peronismo rumbo a 2027, cuando vence su banca de diputada.",
+  "fuentes": [
+   "https://en.wikipedia.org/wiki/Julia_Strada",
+   "https://www3.hcdn.gob.ar/diputados/jstrada/pdfs/INFORME_DE_GESTION_JS_2024-2025.pdf",
+   "https://www.lacapital.com.ar/politica/julia-strada-y-el-credito-el-banco-nacion-no-existe-ningun-tipo-arbitrariedad-el-tramite-n10253067.html",
+   "https://elintransigente.com/2026/05/julia-strada-pidio-acelerar-el-debate-interno-en-el-peronismo-frente-al-desgaste-del-gobierno/"
+  ]
+ },
+ "focos": [
+  "Julia Strada"
+ ],
+ "rivales": [
+  "Luis Caputo",
+  "José Luis Espert",
+  "Federico Sturzenegger"
+ ],
+ "co_clave": [
+  "Javier Milei",
+  "Luis Caputo",
+  "Axel Kicillof",
+  "Cristina Kirchner"
+ ],
+ "window_days": 365,
+ "conversacion_dias": 365,
+ "eleccion": "2027-10-24",
+ "eleccion_nota": "Fecha de referencia: generales nacionales de octubre de 2027, cuando vence su banca de diputada.",
+ "tema_elecciones": "Elecciones 2027 y candidaturas",
+ "figuras": {
+  "Julia Strada": {
+   "alias": [
+    "julia strada",
+    "diputada strada",
+    "strada"
+   ],
+   "bando": "Peronismo",
+   "cargo": "Diputada nacional (UxP, PBA 2023-2027); economista del CEPA",
+   "foco": true,
+   "wiki": [
+    "Julia Strada"
+   ],
+   "trends": "Julia Strada"
+  },
+  "Luis Caputo": {
+   "alias": [
+    "luis caputo",
+    "toto caputo",
+    "ministro caputo",
+    "caputo"
+   ],
+   "bando": "La Libertad Avanza",
+   "cargo": "Ministro de Economía; blanco principal de sus críticas",
+   "wiki": [
+    "Luis Caputo"
+   ],
+   "trends": "Luis Caputo"
+  },
+  "José Luis Espert": {
+   "alias": [
+    "josé luis espert",
+    "jose luis espert",
+    "espert"
+   ],
+   "bando": "La Libertad Avanza",
+   "cargo": "Economista liberal; ex presidente de la comisión de Presupuesto",
+   "wiki": [
+    "José Luis Espert"
+   ],
+   "trends": "José Luis Espert"
+  },
+  "Federico Sturzenegger": {
+   "alias": [
+    "federico sturzenegger",
+    "sturzenegger"
+   ],
+   "bando": "La Libertad Avanza",
+   "cargo": "Ministro de Desregulación",
+   "wiki": [
+    "Federico Sturzenegger"
+   ],
+   "trends": "Federico Sturzenegger"
+  },
+  "Axel Kicillof": {
+   "alias": [
+    "axel kicillof",
+    "kicillof"
+   ],
+   "bando": "Peronismo",
+   "cargo": "Gobernador de Buenos Aires",
+   "wiki": [
+    "Axel Kicillof"
+   ]
+  },
+  "Javier Milei": {
+   "alias": [
+    "javier milei",
+    "milei"
+   ],
+   "bando": "Nacional",
+   "cargo": "Presidente",
+   "wiki": [
+    "Javier Milei"
+   ]
+  },
+  "Cristina Kirchner": {
+   "alias": [
+    "cristina kirchner",
+    "cristina fernández",
+    "cristina fernandez",
+    "cfk"
+   ],
+   "bando": "Nacional",
+   "cargo": "Expresidenta, conducción del PJ",
+   "wiki": [
+    "Cristina Fernández de Kirchner"
+   ]
+  }
+ },
+ "obj_fig": {
+  "strada": "Strada",
+  "caputo": "Caputo",
+  "espert": "Espert",
+  "sturzenegger": "Sturzenegger",
+  "kicillof": "Kicillof",
+  "milei": "Milei",
+  "kirchner": "Kirchner"
+ },
+ "mapa_poder": {
+  "metodo": "Codificación editorial inicial, a revisar con el cliente. Eje horizontal: 0 = peronismo, 100 = Milei/LLA orgánico. Eje vertical: peso propio (cargo, aparato, votos o audiencia). El tamaño de cada punto sale de las menciones medidas.",
+  "eje_x": "← peronismo · · · centro · · · LLA →",
+  "anot": [
+   [
+    6,
+    "PERONISMO",
+    "#5fb3c9"
+   ],
+   [
+    45,
+    "CENTRO",
+    "#f2b705"
+   ],
+   [
+    94,
+    "LLA",
+    "#9085e9"
+   ]
+  ],
+  "puntos": {
+   "Julia Strada": {
+    "alineamiento": 12,
+    "peso": 40,
+    "nota": "Economista y diputada; voz económica opositora con mucha presencia en medios."
+   },
+   "Luis Caputo": {
+    "alineamiento": 88,
+    "peso": 90,
+    "nota": "Ministro de Economía; con quien más se cruza."
+   },
+   "José Luis Espert": {
+    "alineamiento": 92,
+    "peso": 30,
+    "nota": "Economista liberal, golpeado por el caso Fred Machado."
+   },
+   "Federico Sturzenegger": {
+    "alineamiento": 95,
+    "peso": 65,
+    "nota": "Ministro de Desregulación; cara de la motosierra."
+   },
+   "Axel Kicillof": {
+    "alineamiento": 10,
+    "peso": 85,
+    "nota": "Gobernador; referencia económica del peronismo."
+   }
+  }
+ },
+ "intenciones": {
+  "quiere": [
+   "queremos",
+   "quiero",
+   "hay que",
+   "necesitamos",
+   "necesita",
+   "necesitan",
+   "hace falta",
+   "falta de",
+   "que se vaya",
+   "que se vayan",
+   "se tiene que ir",
+   "que renuncie",
+   "fuera",
+   "pedimos",
+   "exigimos",
+   "reclamamos",
+   "que pongan",
+   "que arreglen",
+   "que paguen",
+   "aumento",
+   "trabajo genuino",
+   "que vuelva",
+   "que gobierne",
+   "que se presente",
+   "candidato ya",
+   "que investiguen",
+   "que expliquen",
+   "que devuelvan"
+  ],
+  "espera": [
+   "ojalá",
+   "ojala",
+   "espero",
+   "esperamos",
+   "a ver si",
+   "tengo fe",
+   "fe en",
+   "confío",
+   "confio",
+   "confiamos",
+   "se viene",
+   "se vienen",
+   "en 2027",
+   "el año que viene",
+   "vamos a ganar",
+   "vamos a volver",
+   "volver a gobernar",
+   "recuperar la provincia",
+   "ilusión",
+   "ilusion",
+   "esperanza",
+   "sueño",
+   "próximo gobierno",
+   "proximo gobierno",
+   "que gane",
+   "ojalá sea",
+   "ojala sea"
+  ],
+  "critica": [
+   "vergüenza",
+   "verguenza",
+   "desastre",
+   "fracaso",
+   "horrible",
+   "inútil",
+   "inutil",
+   "no sabe",
+   "no saben",
+   "mediocre",
+   "culpa",
+   "culpable",
+   "pésimo",
+   "pesimo",
+   "un asco",
+   "basta",
+   "lamentable",
+   "patético",
+   "patetico",
+   "ridículo",
+   "ridiculo",
+   "nefasto",
+   "incapaz",
+   "chanta",
+   "mentiroso",
+   "mentira",
+   "se robó",
+   "se robo",
+   "chorro",
+   "chorros",
+   "ladrón",
+   "ladron",
+   "corrupto",
+   "corruptos",
+   "corrupción",
+   "corrupcion",
+   "kukas",
+   "kuka",
+   "caradura",
+   "decepción",
+   "decepcion",
+   "hipócrita",
+   "hipocrita",
+   "traidor",
+   "oportunista",
+   "cínico",
+   "cinico",
+   "peor",
+   "fundieron",
+   "destruyeron",
+   "nunca más",
+   "nunca mas"
+  ],
+  "apoya": [
+   "gracias",
+   "excelente",
+   "bien ahí",
+   "bien ahi",
+   "acierto",
+   "felicitaciones",
+   "bravo",
+   "aplausos",
+   "el mejor",
+   "impecable",
+   "lo banco",
+   "bancamos",
+   "todos con",
+   "gran persona",
+   "gran tipo",
+   "un lujo",
+   "coherente",
+   "honesto",
+   "buena gestión",
+   "buena gestion",
+   "orgullo",
+   "genio",
+   "capo",
+   "querido",
+   "sí se puede",
+   "si se puede",
+   "mi voto",
+   "tiene mi voto",
+   "lo voto",
+   "la voto",
+   "valiente",
+   "la única",
+   "la unica",
+   "el único",
+   "el unico",
+   "gran trabajo",
+   "buen trabajo",
+   "tiene razón",
+   "tiene razon",
+   "dice la verdad"
+  ]
+ },
+ "temas": {
+  "Economía y bolsillo": [
+   "inflación",
+   "inflacion",
+   "precios",
+   "salario",
+   "salarios",
+   "sueldo",
+   "sueldos",
+   "jubilad",
+   "dólar",
+   "dolar",
+   "ajuste",
+   "tarifas",
+   "desempleo",
+   "empleo",
+   "pobreza",
+   "comercio",
+   "comercios",
+   "pymes",
+   "pyme",
+   "fábrica",
+   "fabrica",
+   "despidos"
+  ],
+  "Salud y educación": [
+   "hospital",
+   "hospitales",
+   "salud",
+   "guardia",
+   "escuela",
+   "escuelas",
+   "docentes",
+   "educación",
+   "educacion",
+   "universidad"
+  ],
+  "Gobierno de Milei": [
+   "milei",
+   "gobierno nacional",
+   "casa rosada",
+   "motosierra",
+   "libertad avanza",
+   "karina"
+  ],
+  "Corrupción y transparencia": [
+   "corrupción",
+   "corrupcion",
+   "coima",
+   "coimas",
+   "enriquecimiento",
+   "denuncia",
+   "causa",
+   "juzgado",
+   "fiscal",
+   "transparencia",
+   "declaración jurada",
+   "declaracion jurada"
+  ],
+  "Elecciones 2027 y candidaturas": [
+   "2027",
+   "candidato",
+   "candidata",
+   "candidatura",
+   "elecciones",
+   "encuesta",
+   "lista",
+   "listas",
+   "alianza",
+   "votos",
+   "votar",
+   "intendente",
+   "intendenta",
+   "gobernador",
+   "gobernación",
+   "gobernacion",
+   "senado"
+  ],
+  "Deuda, FMI y dólar": [
+   "deuda",
+   "fmi",
+   "fondo monetario",
+   "dólar",
+   "dolar",
+   "reservas",
+   "bonos",
+   "riesgo país",
+   "riesgo pais",
+   "bcra",
+   "banco central",
+   "cepo",
+   "devaluación",
+   "devaluacion"
+  ],
+  "Consumo y salarios": [
+   "consumo",
+   "salario",
+   "salarios",
+   "sueldo",
+   "sueldos",
+   "paritaria",
+   "jubilad",
+   "changuito",
+   "supermercado",
+   "ventas",
+   "endeudamiento",
+   "tarjeta"
+  ],
+  "Presupuesto y Congreso": [
+   "presupuesto",
+   "sesión",
+   "sesion",
+   "diputados",
+   "congreso",
+   "comisión",
+   "comision",
+   "veto",
+   "ley"
+  ],
+  "Banco Nación y crédito": [
+   "banco nación",
+   "banco nacion",
+   "hipotecario",
+   "hipotecarios",
+   "crédito",
+   "credito",
+   "préstamo",
+   "prestamo"
+  ],
+  "Energía y Vaca Muerta": [
+   "vaca muerta",
+   "petróleo",
+   "petroleo",
+   "ypf",
+   "energía",
+   "energia",
+   "nuclear",
+   "nucleoeléctrica",
+   "nucleoelectrica",
+   "tarifas"
+  ]
+ },
+ "narrativas": {
+  "Crítica al ajuste": [
+   "ajuste",
+   "motosierra",
+   "la gente no llega",
+   "bolsillo",
+   "changuito",
+   "despidos",
+   "cierre"
+  ],
+  "Economista con datos": [
+   "datos",
+   "informe",
+   "cepa",
+   "números",
+   "numeros",
+   "según",
+   "estadística",
+   "indec"
+  ],
+  "Polémica del crédito": [
+   "crédito",
+   "credito",
+   "hipotecario",
+   "banco nación",
+   "banco nacion",
+   "200 mil"
+  ],
+  "Deuda y FMI": [
+   "fmi",
+   "deuda",
+   "bonos",
+   "dólares",
+   "dolares"
+  ],
+  "Peronismo y 2027": [
+   "2027",
+   "peronismo",
+   "unidad",
+   "candidat",
+   "interna",
+   "alternativa"
+  ]
+ },
+ "positivo": [
+  "gracias",
+  "excelente",
+  "bien hecho",
+  "muy bien",
+  "felicit",
+  "impecable",
+  "genial",
+  "bravo",
+  "gran persona",
+  "orgullo",
+  "el mejor",
+  "esperanza",
+  "honesto",
+  "coherente"
+ ],
+ "negativo": [
+  "vergüenza",
+  "verguenza",
+  "desastre",
+  "fracaso",
+  "inútil",
+  "inutil",
+  "mentiroso",
+  "chorro",
+  "corrupto",
+  "mediocre",
+  "basta",
+  "patético",
+  "patetico",
+  "horrible",
+  "peor",
+  "nefasto",
+  "kuka",
+  "traidora",
+  "traidor",
+  "panquequ",
+  "operadora",
+  "operador",
+  "hipotecario vip",
+  "privilegio",
+  "casta"
+ ],
+ "contexto": [
+  "julia strada",
+  "diputada strada",
+  "cepa",
+  "banco nación",
+  "banco nacion",
+  "unión por la patria",
+  "union por la patria",
+  "fuerza patria"
+ ],
+ "excluir_frases": [
+  "la strada",
+  "della strada",
+  "di strada",
+  "sulla strada",
+  "strada statale"
+ ],
+ "medios_locales": [
+  "c5n",
+  "página/12",
+  "pagina/12",
+  "el destape",
+  "radio 10",
+  "futurock"
+ ],
+ "sitios_locales": [
+  "c5n.com",
+  "pagina12.com.ar",
+  "eldestapeweb.com",
+  "parlamentario.com"
+ ],
+ "rss": [
+  {
+   "name": "Parlamentario",
+   "url": "https://www.parlamentario.com/feed/",
+   "local": true
+  },
+  {
+   "name": "El Destape",
+   "url": "https://www.eldestapeweb.com/rss",
+   "local": true
+  },
+  {
+   "name": "Página/12",
+   "url": "https://www.pagina12.com.ar/rss/portada",
+   "local": true
+  },
+  {
+   "name": "Letra P",
+   "url": "https://www.letrap.com.ar/rss/home.xml"
+  },
+  {
+   "name": "Ámbito",
+   "url": "https://www.ambito.com/rss/pages/economia.xml"
+  },
+  {
+   "name": "Infobae",
+   "url": "https://www.infobae.com/arc/outboundfeeds/rss/"
+  },
+  {
+   "name": "Clarín",
+   "url": "https://www.clarin.com/rss/politica/"
+  },
+  {
+   "name": "Perfil",
+   "url": "https://www.perfil.com/feed/politica"
+  }
+ ],
+ "google_news": {
+  "queries": [
+   "\"Julia Strada\"",
+   "\"Strada\" diputada",
+   "\"Strada\" Caputo",
+   "\"Strada\" Banco Nación crédito",
+   "\"Strada\" presupuesto",
+   "\"Strada\" FMI deuda",
+   "\"Strada\" Vaca Muerta"
+  ],
+  "sites": [
+   "ambito.com",
+   "c5n.com",
+   "clarin.com",
+   "cronista.com",
+   "eldestapeweb.com",
+   "infobae.com",
+   "lacapital.com.ar",
+   "lanacion.com.ar",
+   "lapoliticaonline.com",
+   "letrap.com.ar",
+   "pagina12.com.ar",
+   "parlamentario.com",
+   "perfil.com",
+   "tiempoar.com.ar"
+  ],
+  "site_terms": [
+   "Strada"
+  ]
+ },
+ "youtube": {
+  "region": "AR",
+  "language": "es",
+  "videos_per_query": 8,
+  "comments_per_video": 100,
+  "queries": [
+   "Julia Strada",
+   "Julia Strada entrevista",
+   "Julia Strada Caputo",
+   "Julia Strada diputados sesión",
+   "Julia Strada economía Milei",
+   "Julia Strada crédito Banco Nación",
+   "Julia Strada C5N",
+   "Julia Strada presupuesto 2027"
+  ],
+  "contexto": [
+   "strada",
+   "diputad",
+   "congreso",
+   "milei",
+   "caputo",
+   "economía",
+   "economia",
+   "ajuste",
+   "peronismo"
+  ],
+  "excluir": [
+   "la strada",
+   "fellini"
+  ]
+ },
+ "trends": {
+  "terminos": [
+   "Julia Strada",
+   "Luis Caputo",
+   "José Luis Espert",
+   "Federico Sturzenegger"
+  ],
+  "geos": {
+   "AR": "Argentina",
+   "AR-B": "Provincia de Buenos Aires"
+  },
+  "geo_local": "AR"
+ },
+ "wiki_provincia": [
+  "Provincia de Buenos Aires"
+ ],
+ "stop_extra": [
+  "strada",
+  "julia"
+ ],
+ "textos_comentarios": "extracto",
+ "excluir_textos": [
+  "letcher"
+ ]
+}

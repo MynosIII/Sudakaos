@@ -53,6 +53,8 @@ def calcular(ids, ans):
     Sm, M, D, W = defaultdict(float), defaultdict(float), defaultdict(float), defaultdict(float)
     for q, a in qs:
         for k, w in q["e"].items():
+            if k not in K:  # ejes complementarios: el agregado público usa los 12 principales
+                continue
             Sm[k] += a * w
             M[k] += 2 * abs(w)
             D[k] += abs(w) * (0 if a == 0 else .75 if abs(a) == 1 else 1)
@@ -134,7 +136,7 @@ def simular(n, seed=7):
         firmeza = rnd.uniform(.5, 1.5)
         ans = []
         for q in ids_v[ver]:
-            s_ = sum(w * lat[k] for k, w in PREG[q]["e"].items()) * firmeza
+            s_ = sum(w * lat.get(k, 0) for k, w in PREG[q]["e"].items()) * firmeza
             ans.append(max(-2, min(2, round(s_ + rnd.gauss(0, .9)))))
         red = rnd.choices(["Instagram", "X (Twitter)", "TikTok", "YouTube", "Facebook", "WhatsApp / Telegram", "Ninguna: medios tradicionales"],
                           [30, 15, 18, 12, 12, 8, 5] if joven else [18, 10, 4, 12, 30, 16, 10])[0]

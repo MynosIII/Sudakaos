@@ -87,7 +87,8 @@
    "t_pt": "Quanto mais gente participa de uma decisão, maior a chance de ela ser a certa.",
    "t_en": "The more people take part in a decision, the better the chance it is right.",
    "e": {
-    "dem": -1
+    "dem": -1,
+    "ges": 0.5
    },
    "nivel": 3,
    "v": [
@@ -127,7 +128,8 @@
    "t_pt": "A democracia é ineficiente e lenta.",
    "t_en": "Democracy is inefficient and slow.",
    "e": {
-    "dem": 1
+    "dem": 1,
+    "ges": -0.5
    },
    "nivel": 1,
    "v": [
@@ -147,7 +149,8 @@
    "t_pt": "A maioria das pessoas toma más decisões políticas.",
    "t_en": "Most people make poor political decisions.",
    "e": {
-    "dem": 1
+    "dem": 1,
+    "ges": -0.5
    },
    "nivel": 3,
    "v": [
@@ -167,7 +170,8 @@
    "t_pt": "As Nações Unidas deveriam ter mais poder sobre os países.",
    "t_en": "The United Nations should have more power over countries.",
    "e": {
-    "int": -1
+    "int": -1,
+    "uni": -0.5
    },
    "nivel": 3,
    "v": [
@@ -227,7 +231,8 @@
    "t_pt": "Em outros países ninguém leva em conta os nossos interesses.",
    "t_en": "Nobody in other countries has our best interests in mind.",
    "e": {
-    "int": 1
+    "int": 1,
+    "uni": 0.5
    },
    "nivel": 3,
    "v": [
@@ -327,7 +332,8 @@
    "t_pt": "A polícia precisa de mais poder e mais proteção legal.",
    "t_en": "Police need more power and legal protection.",
    "e": {
-    "lib": -1
+    "lib": -1,
+    "pen": 0.5
    },
    "nivel": 3,
    "v": [
@@ -367,7 +373,8 @@
    "t_pt": "O Estado não tem por que se meter na vida privada das pessoas.",
    "t_en": "The government has no business in people's private lives.",
    "e": {
-    "lib": 1
+    "lib": 1,
+    "idc": -0.5
    },
    "nivel": 1,
    "v": [
@@ -387,7 +394,8 @@
    "t_pt": "Crimes sem vítimas, como usar drogas, não deveriam ser crime.",
    "t_en": "Victimless crimes, such as drug use, should not be crimes at all.",
    "e": {
-    "lib": 1
+    "lib": 1,
+    "pen": -0.5
    },
    "nivel": 3,
    "v": [
@@ -407,7 +415,9 @@
    "t_pt": "As classes sociais não deveriam existir.",
    "t_en": "Social classes should not exist.",
    "e": {
-    "col": -1
+    "col": -1,
+    "dis": -1,
+    "tra": 0.5
    },
    "nivel": 3,
    "v": [
@@ -427,7 +437,8 @@
    "t_pt": "Os ricos têm muito mais do que precisam.",
    "t_en": "The wealthy have far more than they need.",
    "e": {
-    "col": -1
+    "col": -1,
+    "dis": -0.5
    },
    "nivel": 1,
    "v": [
@@ -447,7 +458,8 @@
    "t_pt": "As pessoas têm direito de deixar toda a sua riqueza para os filhos.",
    "t_en": "People should have the right to leave all their wealth to their children.",
    "e": {
-    "col": 1
+    "col": 1,
+    "dis": 0.5
    },
    "nivel": 1,
    "v": [
@@ -547,7 +559,8 @@
    "t_pt": "Os valores da minha religião deveriam ser difundidos o máximo possível.",
    "t_en": "My religious values should be spread as much as possible.",
    "e": {
-    "rel": 1
+    "rel": 1,
+    "epi": 0.5
    },
    "nivel": 3,
    "v": [
@@ -607,7 +620,8 @@
    "t_pt": "As tradições são importantes e precisam ser preservadas.",
    "t_en": "Traditions are important and must be preserved.",
    "e": {
-    "pro": 1
+    "pro": 1,
+    "idc": 0.5
    },
    "nivel": 1,
    "v": [
@@ -747,7 +761,8 @@
    "t_pt": "Os ricos deveriam pagar mais impostos do que hoje.",
    "t_en": "The rich should pay more taxes than they do now.",
    "e": {
-    "pla": -1
+    "pla": -1,
+    "dis": -0.5
    },
    "nivel": 1,
    "v": [
@@ -807,7 +822,8 @@
    "t_pt": "Sem tarifas de importação, a economia do nosso país desabaria.",
    "t_en": "Without tariffs, our country's economy would collapse.",
    "e": {
-    "glo": -1
+    "glo": -1,
+    "ind": -0.5
    },
    "nivel": 3,
    "v": [
@@ -827,7 +843,8 @@
    "t_pt": "O governo deveria incentivar a produção e o consumo local.",
    "t_en": "The government should encourage local production and consumption.",
    "e": {
-    "glo": -1
+    "glo": -1,
+    "ind": -0.5
    },
    "nivel": 1,
    "v": [
@@ -867,7 +884,8 @@
    "t_pt": "As tarifas de importação deveriam ser eliminadas.",
    "t_en": "Import tariffs should be eliminated.",
    "e": {
-    "glo": 1
+    "glo": 1,
+    "ind": 0.5
    },
    "nivel": 3,
    "v": [
@@ -887,7 +905,8 @@
    "t_pt": "O progresso tecnológico não pode nem deve ser freado.",
    "t_en": "Technological progress cannot and should not be stopped.",
    "e": {
-    "tec": -1
+    "tec": -1,
+    "ecl": 0.5
    },
    "nivel": 3,
    "v": [
@@ -907,7 +926,8 @@
    "t_pt": "Um mundo melhor virá da ciência, da tecnologia e da automação.",
    "t_en": "A better world will come from science, technology and automation.",
    "e": {
-    "tec": -1
+    "tec": -1,
+    "epi": -0.5
    },
    "nivel": 1,
    "v": [
@@ -927,7 +947,8 @@
    "t_pt": "É preciso frear algumas tecnologias para proteger o meio ambiente.",
    "t_en": "Some technologies must be slowed down to protect the environment.",
    "e": {
-    "tec": 1
+    "tec": 1,
+    "ecl": -1
    },
    "nivel": 1,
    "v": [
@@ -1177,7 +1198,8 @@
    "t_pt": "A democracia direta é a melhor forma de governo.",
    "t_en": "Direct democracy is the best form of government.",
    "e": {
-    "dem": -1
+    "dem": -1,
+    "ges": 0.5
    },
    "nivel": 4,
    "v": [
@@ -1198,7 +1220,8 @@
    "t_pt": "As pessoas deveriam votar cada tema importante, não só seus representantes.",
    "t_en": "People should vote on major issues themselves, not just for representatives.",
    "e": {
-    "dem": -1
+    "dem": -1,
+    "ges": 0.5
    },
    "nivel": 3,
    "v": [
@@ -1261,7 +1284,8 @@
    "t_pt": "O governo tem que ser do povo e para o povo.",
    "t_en": "Government must be by the people, for the people.",
    "e": {
-    "dem": -1
+    "dem": -1,
+    "ges": 0.5
    },
    "nivel": 1,
    "v": [
@@ -1303,7 +1327,9 @@
    "t_pt": "Uma sociedade não funciona sem líderes que mandam e pessoas que obedecem.",
    "t_en": "Society could not function without leaders and followers.",
    "e": {
-    "dem": 1
+    "dem": 1,
+    "ipe": -0.5,
+    "lab": 0.5
    },
    "nivel": 2,
    "v": [
@@ -1324,7 +1350,8 @@
    "t_pt": "A opinião pública muda demais com as emoções para guiar as políticas.",
    "t_en": "Public opinion swings too much with emotional events to guide policy.",
    "e": {
-    "dem": 1
+    "dem": 1,
+    "ges": -0.5
    },
    "nivel": 2,
    "v": [
@@ -1345,7 +1372,8 @@
    "t_pt": "Um governo forte que não dependa de eleições seria melhor do que uma democracia liberal.",
    "t_en": "A strong government that does not depend on elections would be better than a liberal democracy.",
    "e": {
-    "dem": 1
+    "dem": 1,
+    "ipe": -0.5
    },
    "nivel": 3,
    "v": [
@@ -1366,7 +1394,8 @@
    "t_pt": "Um país tem que obedecer a seus líderes sem questioná-los.",
    "t_en": "A nation must obey its leadership without question.",
    "e": {
-    "dem": 1
+    "dem": 1,
+    "ipe": -0.5
    },
    "nivel": 4,
    "v": [
@@ -1387,7 +1416,8 @@
    "t_pt": "Um governo mundial unificado seria bom para a humanidade.",
    "t_en": "A united world government would be beneficial to mankind.",
    "e": {
-    "int": -1
+    "int": -1,
+    "uni": -0.5
    },
    "nivel": 4,
    "v": [
@@ -1576,7 +1606,8 @@
    "t_pt": "Meu país é melhor do que todos os outros.",
    "t_en": "My nation is better than all other nations.",
    "e": {
-    "int": 1
+    "int": 1,
+    "uni": 1
    },
    "nivel": 4,
    "v": [
@@ -1618,7 +1649,8 @@
    "t_pt": "Os governos estrangeiros que atentam contra nossos interesses deveriam ser derrubados.",
    "t_en": "Foreign governments that act against our interests should be toppled.",
    "e": {
-    "mil": -1
+    "mil": -1,
+    "eti": -0.5
    },
    "nivel": 3,
    "v": [
@@ -1807,7 +1839,8 @@
    "t_pt": "O Estado deveria vigiar todos os cidadãos para combater o crime e o terrorismo.",
    "t_en": "The government should monitor all citizens to fight crime and terrorism.",
    "e": {
-    "lib": -1
+    "lib": -1,
+    "inf": 0.5
    },
    "nivel": 4,
    "v": [
@@ -1828,7 +1861,8 @@
    "t_pt": "Manter a lei e a ordem é o mais importante.",
    "t_en": "Maintaining law and order is what matters most.",
    "e": {
-    "lib": -1
+    "lib": -1,
+    "pen": 0.5
    },
    "nivel": 3,
    "v": [
@@ -1849,7 +1883,8 @@
    "t_pt": "Quem não tem nada a esconder não tem nada a temer.",
    "t_en": "If you have nothing to hide, you have nothing to fear.",
    "e": {
-    "lib": -1
+    "lib": -1,
+    "inf": 0.5
    },
    "nivel": 2,
    "v": [
@@ -1933,7 +1968,8 @@
    "t_pt": "Nenhuma autoridade deveria ficar livre de questionamento.",
    "t_en": "No authority should be left unquestioned.",
    "e": {
-    "lib": 1
+    "lib": 1,
+    "inf": -0.5
    },
    "nivel": 2,
    "v": [
@@ -1954,7 +1990,8 @@
    "t_pt": "Quem abre mão da liberdade em troca de segurança acaba sem nenhuma das duas.",
    "t_en": "Those who give up liberty for safety end up with neither.",
    "e": {
-    "lib": 1
+    "lib": 1,
+    "eti": 0.5
    },
    "nivel": 2,
    "v": [
@@ -1975,7 +2012,8 @@
    "t_pt": "Quem vaza abusos do poder faz um bem à sociedade.",
    "t_en": "Whistleblowers are good for society.",
    "e": {
-    "lib": 1
+    "lib": 1,
+    "inf": -0.5
    },
    "nivel": 3,
    "v": [
@@ -1996,7 +2034,8 @@
    "t_pt": "A liberdade das pessoas não deveria ter nenhum limite.",
    "t_en": "People's freedom should have no limits.",
    "e": {
-    "lib": 1
+    "lib": 1,
+    "idc": -0.5
    },
    "nivel": 4,
    "v": [
@@ -2017,7 +2056,9 @@
    "t_pt": "O comunismo, bem aplicado, seria um bom sistema econômico.",
    "t_en": "Communism, if implemented correctly, would be a good economic system.",
    "e": {
-    "col": -1
+    "col": -1,
+    "tra": 0.5,
+    "lab": -0.5
    },
    "nivel": 4,
    "v": [
@@ -2038,7 +2079,9 @@
    "t_pt": "A propriedade privada das grandes empresas deveria ser abolida.",
    "t_en": "Private ownership of large companies should be abolished.",
    "e": {
-    "col": -1
+    "col": -1,
+    "lab": -1,
+    "tra": 0.5
    },
    "nivel": 3,
    "v": [
@@ -2059,7 +2102,8 @@
    "t_pt": "Prefiro o coletivo ao individual.",
    "t_en": "I prefer collectivism over individualism.",
    "e": {
-    "col": -1
+    "col": -1,
+    "idc": 1
    },
    "nivel": 2,
    "v": [
@@ -2080,7 +2124,9 @@
    "t_pt": "A luta de classes é um problema real e importante.",
    "t_en": "Class struggle is a real and important issue.",
    "e": {
-    "col": -1
+    "col": -1,
+    "dis": -0.5,
+    "tra": 0.5
    },
    "nivel": 2,
    "v": [
@@ -2101,7 +2147,8 @@
    "t_pt": "Os serviços básicos, como água e luz, deveriam ser públicos.",
    "t_en": "Basic services such as water and electricity should be publicly owned.",
    "e": {
-    "col": -1
+    "col": -1,
+    "bie": -0.5
    },
    "nivel": 1,
    "v": [
@@ -2143,7 +2190,8 @@
    "t_pt": "O capitalismo é melhor do que qualquer alternativa que exista.",
    "t_en": "Capitalism is better than any existing alternative.",
    "e": {
-    "col": 1
+    "col": 1,
+    "lab": 0.5
    },
    "nivel": 2,
    "v": [
@@ -2164,7 +2212,8 @@
    "t_pt": "As diferenças entre classes sociais são inevitáveis.",
    "t_en": "Economic classes are inevitable.",
    "e": {
-    "col": 1
+    "col": 1,
+    "dis": 0.5
    },
    "nivel": 2,
    "v": [
@@ -2185,7 +2234,9 @@
    "t_pt": "Cada um deveria conquistar com seu trabalho tudo o que tem.",
    "t_en": "People should have to work for everything they get.",
    "e": {
-    "col": 1
+    "col": 1,
+    "dis": 1,
+    "bie": 0.5
    },
    "nivel": 3,
    "v": [
@@ -2206,7 +2257,8 @@
    "t_pt": "A caridade privada ajuda os pobres melhor do que os programas sociais do Estado.",
    "t_en": "Private charity helps the poor better than public welfare.",
    "e": {
-    "col": 1
+    "col": 1,
+    "bie": 1
    },
    "nivel": 4,
    "v": [
@@ -2269,7 +2321,8 @@
    "t_pt": "A humanidade já não precisa da religião.",
    "t_en": "Humanity has moved beyond the need for religion.",
    "e": {
-    "rel": -1
+    "rel": -1,
+    "epi": -0.5
    },
    "nivel": 2,
    "v": [
@@ -2416,7 +2469,8 @@
    "t_pt": "Muitos dos males do mundo vêm de termos nos afastado da religião.",
    "t_en": "Most bad things in the world come from turning away from religion.",
    "e": {
-    "rel": 1
+    "rel": 1,
+    "epi": 0.5
    },
    "nivel": 4,
    "v": [
@@ -2437,7 +2491,8 @@
    "t_pt": "As tradições só atrasam o progresso da humanidade.",
    "t_en": "Tradition just hinders the progress of humanity.",
    "e": {
-    "pro": -1
+    "pro": -1,
+    "tra": 0.5
    },
    "nivel": 4,
    "v": [
@@ -2542,7 +2597,8 @@
    "t_pt": "Perseguir o progresso a qualquer custo é perigoso.",
    "t_en": "Chasing progress at all costs is dangerous.",
    "e": {
-    "pro": 1
+    "pro": 1,
+    "tra": -0.5
    },
    "nivel": 1,
    "v": [
@@ -2563,7 +2619,8 @@
    "t_pt": "Manter os valores familiares é fundamental.",
    "t_en": "Maintaining family values is essential.",
    "e": {
-    "pro": 1
+    "pro": 1,
+    "idc": 0.5
    },
    "nivel": 2,
    "v": [
@@ -2605,7 +2662,9 @@
    "t_pt": "Os mais velhos sabem melhor que ninguém o caminho certo para a sociedade.",
    "t_en": "The elders in society know the best path for it.",
    "e": {
-    "pro": 1
+    "pro": 1,
+    "idc": 0.5,
+    "epi": 0.5
    },
    "nivel": 3,
    "v": [
@@ -2710,7 +2769,8 @@
    "t_pt": "A cultura nacional precisa ser protegida.",
    "t_en": "A nation's culture is important to protect.",
    "e": {
-    "mig": -1
+    "mig": -1,
+    "uni": 0.5
    },
    "nivel": 2,
    "v": [
@@ -2773,7 +2833,8 @@
    "t_pt": "Nenhuma cultura é superior a outra.",
    "t_en": "No culture is superior to others.",
    "e": {
-    "mig": 1
+    "mig": 1,
+    "uni": -0.5
    },
    "nivel": 2,
    "v": [
@@ -2815,7 +2876,8 @@
    "t_pt": "Todos os seres humanos compartilham uma identidade comum.",
    "t_en": "All humans share a common identity.",
    "e": {
-    "mig": 1
+    "mig": 1,
+    "uni": -1
    },
    "nivel": 3,
    "v": [
@@ -3025,7 +3087,8 @@
    "t_pt": "A saúde privada funciona melhor do que um sistema público único.",
    "t_en": "Private healthcare works better than a single public system.",
    "e": {
-    "pla": 1
+    "pla": 1,
+    "bie": 1
    },
    "nivel": 3,
    "v": [
@@ -3046,7 +3109,8 @@
    "t_pt": "Impostos são roubo.",
    "t_en": "Taxation is theft.",
    "e": {
-    "pla": 1
+    "pla": 1,
+    "bie": 0.5
    },
    "nivel": 4,
    "v": [
@@ -3088,7 +3152,8 @@
    "t_pt": "São necessárias tarifas altas para proteger a indústria nacional.",
    "t_en": "High tariffs are needed to protect local industries.",
    "e": {
-    "glo": -1
+    "glo": -1,
+    "ind": -1
    },
    "nivel": 3,
    "v": [
@@ -3109,7 +3174,8 @@
    "t_pt": "O Estado deveria subsidiar as exportações para proteger a indústria local.",
    "t_en": "Export subsidies should be used to protect local industries.",
    "e": {
-    "glo": -1
+    "glo": -1,
+    "ind": -1
    },
    "nivel": 2,
    "v": [
@@ -3235,7 +3301,8 @@
    "t_pt": "Os produtos importados são tão bons quanto os nacionais.",
    "t_en": "Foreign products are as good as local products.",
    "e": {
-    "glo": 1
+    "glo": 1,
+    "ind": 0.5
    },
    "nivel": 3,
    "v": [
@@ -3256,7 +3323,8 @@
    "t_pt": "O protecionismo é uma ideia desnecessária e pouco realista.",
    "t_en": "Protectionism is an unnecessary and unrealistic idea.",
    "e": {
-    "glo": 1
+    "glo": 1,
+    "ind": 0.5
    },
    "nivel": 4,
    "v": [
@@ -3277,7 +3345,8 @@
    "t_pt": "Se uma inteligência artificial governasse melhor que os humanos, deveria governar.",
    "t_en": "If AI could rule more effectively than humans, AI should rule.",
    "e": {
-    "tec": -1
+    "tec": -1,
+    "ges": -1
    },
    "nivel": 4,
    "v": [
@@ -3319,7 +3388,8 @@
    "t_pt": "Deveríamos investir para levar uma pessoa a Marte nos próximos anos.",
    "t_en": "We should invest in getting a person to Mars in the near future.",
    "e": {
-    "tec": -1
+    "tec": -1,
+    "tem": 0.5
    },
    "nivel": 2,
    "v": [
@@ -3361,7 +3431,8 @@
    "t_pt": "Desenvolver novas tecnologias ajuda mais o meio ambiente do que impor regulações.",
    "t_en": "Developing new technology helps the environment more than regulation does.",
    "e": {
-    "tec": -1
+    "tec": -1,
+    "ecl": 0.5
    },
    "nivel": 1,
    "v": [
@@ -3466,7 +3537,8 @@
    "t_pt": "Os remédios tradicionais costumam ser mais eficazes do que os modernos.",
    "t_en": "Traditional medicines are often more effective than modern ones.",
    "e": {
-    "tec": 1
+    "tec": 1,
+    "epi": 1
    },
    "nivel": 4,
    "v": [
@@ -3488,7 +3560,8 @@
    "t_en": "Anyone should be able to buy US dollars without restrictions.",
    "e": {
     "glo": 1,
-    "pla": 0.5
+    "pla": 0.5,
+    "mon": 0.5
    },
    "v": [
     "general",
@@ -3527,7 +3600,8 @@
    "t_pt": "Reduzir a maioridade penal ajudaria a diminuir o crime.",
    "t_en": "Lowering the age of criminal responsibility would help reduce crime.",
    "e": {
-    "lib": -1
+    "lib": -1,
+    "pen": 1
    },
    "v": [
     "general",
@@ -3547,7 +3621,8 @@
    "t_en": "The armed forces should take part in fighting drug trafficking.",
    "e": {
     "mil": -1,
-    "lib": -0.5
+    "lib": -0.5,
+    "pen": 0.5
    },
    "v": [
     "general",
@@ -3605,7 +3680,8 @@
    "t_pt": "A mineração em grande escala é uma oportunidade que precisa ser aproveitada.",
    "t_en": "Large-scale mining is an opportunity we must seize.",
    "e": {
-    "tec": -1
+    "tec": -1,
+    "ecl": 1
    },
    "v": [
     "general",
@@ -3624,7 +3700,8 @@
    "t_pt": "Um líder forte que não dependa dos partidos seria bom para o país.",
    "t_en": "A strong leader who doesn't depend on parties would be good for the country.",
    "e": {
-    "dem": 1
+    "dem": 1,
+    "ipe": -1
    },
    "v": [
     "general",
@@ -4759,7 +4836,8 @@
    "t_pt": "O Banco Central não deveria intervir no preço do dólar.",
    "t_en": "The Central Bank should not intervene in the dollar exchange rate.",
    "e": {
-    "pla": 1
+    "pla": 1,
+    "mon": 1
    },
    "v": [
     "ar"
@@ -4771,7 +4849,8 @@
    "t_pt": "Os controles de preços, como o Precios Justos, ajudam a frear a inflação.",
    "t_en": "Price controls such as 'Precios Justos' help curb inflation.",
    "e": {
-    "pla": -1
+    "pla": -1,
+    "mon": -0.5
    },
    "v": [
     "ar"
@@ -4796,7 +4875,8 @@
    "t_pt": "O transporte público deve continuar subsidiado mesmo custando caro ao Estado.",
    "t_en": "Public transport should stay subsidized even if it costs the state money.",
    "e": {
-    "pla": -1
+    "pla": -1,
+    "bie": -0.5
    },
    "v": [
     "ar"
@@ -4808,7 +4888,8 @@
    "t_pt": "É preciso reformar a lei trabalhista para que contratar seja mais fácil.",
    "t_en": "Labor law should be reformed to make hiring easier.",
    "e": {
-    "col": 1
+    "col": 1,
+    "lab": 0.5
    },
    "v": [
     "ar"
@@ -4820,7 +4901,8 @@
    "t_pt": "Os entregadores de aplicativo deveriam ser empregados formais dessas empresas.",
    "t_en": "App delivery riders should be formal employees of those companies.",
    "e": {
-    "col": -1
+    "col": -1,
+    "lab": -0.5
    },
    "v": [
     "ar"
@@ -4844,7 +4926,8 @@
    "t_pt": "A AUH e os programas sociais são necessários para que ninguém fique de fora.",
    "t_en": "Child allowances and social programs are needed so nobody is left behind.",
    "e": {
-    "col": -1
+    "col": -1,
+    "bie": -1
    },
    "v": [
     "ar"
@@ -4856,7 +4939,8 @@
    "t_pt": "Quem recebe um programa social deveria dar algo em troca com trabalho comunitário.",
    "t_en": "People on welfare should give something back through community work.",
    "e": {
-    "col": 1
+    "col": 1,
+    "bie": 0.5
    },
    "v": [
     "ar"
@@ -4868,7 +4952,8 @@
    "t_pt": "Um imposto sobre grandes fortunas é justo.",
    "t_en": "A tax on large fortunes is fair.",
    "e": {
-    "col": -1
+    "col": -1,
+    "dis": -1
    },
    "v": [
     "ar"
@@ -4880,7 +4965,8 @@
    "t_pt": "O lítio deveria ser industrializado aqui e não exportado bruto.",
    "t_en": "Lithium should be processed here rather than exported raw.",
    "e": {
-    "glo": -1
+    "glo": -1,
+    "ind": -1
    },
    "v": [
     "ar"
@@ -4892,7 +4978,8 @@
    "t_pt": "O acordo Mercosul-União Europeia é uma oportunidade para o país.",
    "t_en": "The Mercosur-EU trade deal is an opportunity for the country.",
    "e": {
-    "glo": 1
+    "glo": 1,
+    "ind": 0.5
    },
    "v": [
     "ar"
@@ -4916,7 +5003,8 @@
    "t_pt": "Os decretos de necessidade e urgência deveriam ser usados muito menos.",
    "t_en": "Emergency decrees should be used much less.",
    "e": {
-    "dem": -1
+    "dem": -1,
+    "ipe": 1
    },
    "v": [
     "ar"
@@ -4928,7 +5016,8 @@
    "t_pt": "Às vezes o Congresso atrapalha mais do que ajuda a governar.",
    "t_en": "Congress sometimes gets in the way of governing more than it helps.",
    "e": {
-    "dem": 1
+    "dem": 1,
+    "ipe": -0.5
    },
    "v": [
     "ar"
@@ -4941,7 +5030,8 @@
    "t_en": "Anyone convicted of corruption should be barred from running for office.",
    "e": {
     "dem": -0.5,
-    "lib": -0.5
+    "lib": -0.5,
+    "ipe": 0.5
    },
    "v": [
     "ar"
@@ -4966,7 +5056,8 @@
    "t_en": "Public TV should be independent from whoever is in government.",
    "e": {
     "dem": -1,
-    "lib": 0.5
+    "lib": 0.5,
+    "inf": -1
    },
    "v": [
     "ar"
@@ -4991,7 +5082,8 @@
    "t_pt": "É preciso reduzir a maioridade penal.",
    "t_en": "The age of criminal responsibility should be lowered.",
    "e": {
-    "lib": -1
+    "lib": -1,
+    "pen": 1
    },
    "v": [
     "ar"
@@ -5004,7 +5096,8 @@
    "t_en": "The armed forces should help fight drug trafficking in cities like Rosario.",
    "e": {
     "lib": -1,
-    "mil": -0.5
+    "mil": -0.5,
+    "pen": 0.5
    },
    "v": [
     "ar"
@@ -5016,7 +5109,8 @@
    "t_pt": "A prisão preventiva é usada demais e deveria ser a exceção.",
    "t_en": "Pretrial detention is overused and should be the exception.",
    "e": {
-    "lib": 1
+    "lib": 1,
+    "pen": -1
    },
    "v": [
     "ar"
@@ -5154,7 +5248,9 @@
    "t_en": "The country should build its own satellites and reactors, like INVAP and ARSAT, even if it costs more.",
    "e": {
     "tec": -1,
-    "glo": -0.5
+    "glo": -0.5,
+    "ind": -1,
+    "tem": 0.5
    },
    "v": [
     "ar"
@@ -5167,11 +5263,431 @@
    "t_en": "CONICET and public science deserve more funding.",
    "e": {
     "tec": -1,
-    "pla": -0.5
+    "pla": -0.5,
+    "epi": -0.5,
+    "tem": 0.5
    },
    "v": [
     "ar"
    ]
+  },
+  {
+   "id": "n01",
+   "t": "Las políticas públicas tienen que basarse en datos, aunque contradigan lo que uno cree.",
+   "t_pt": "As políticas públicas devem se basear em dados, mesmo que contrariem o que a gente acredita.",
+   "t_en": "Public policy should be based on data, even when it contradicts what we believe.",
+   "e": {
+    "epi": -1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "nueva": 1,
+   "rap": 1
+  },
+  {
+   "id": "n02",
+   "t": "Hay verdades que no necesitan ser comprobadas con datos.",
+   "t_pt": "Há verdades que não precisam ser comprovadas com dados.",
+   "t_en": "Some truths don't need to be proven with data.",
+   "e": {
+    "epi": 1
+   },
+   "nivel": 3,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "nueva": 1
+  },
+  {
+   "id": "n03",
+   "t": "Si una medida salva muchas vidas, se justifica aunque rompa algunas reglas.",
+   "t_pt": "Se uma medida salva muitas vidas, ela se justifica mesmo quebrando algumas regras.",
+   "t_en": "If a measure saves many lives, it is justified even if it breaks some rules.",
+   "e": {
+    "eti": -1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "nueva": 1,
+   "rap": 1
+  },
+  {
+   "id": "n04",
+   "t": "Hay cosas que están mal siempre, sin importar las consecuencias.",
+   "t_pt": "Há coisas que são erradas sempre, não importam as consequências.",
+   "t_en": "Some things are always wrong, no matter the consequences.",
+   "e": {
+    "eti": 1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "nueva": 1,
+   "rap": 1
+  },
+  {
+   "id": "n05",
+   "t": "Mentir está bien si así se evita un daño mayor.",
+   "t_pt": "Mentir é aceitável se isso evita um dano maior.",
+   "t_en": "Lying is fine if it prevents a greater harm.",
+   "e": {
+    "eti": -1
+   },
+   "nivel": 3,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "nueva": 1
+  },
+  {
+   "id": "n06",
+   "t": "Un buen gobierno tiene que mostrar resultados rápido, aunque después haya que corregir.",
+   "t_pt": "Um bom governo precisa mostrar resultados rápido, mesmo que depois tenha que corrigir.",
+   "t_en": "A good government must show results quickly, even if it has to correct course later.",
+   "e": {
+    "tem": -1,
+    "fut": 0.5
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "nueva": 1
+  },
+  {
+   "id": "n07",
+   "t": "Las grandes políticas de Estado deberían acordarse a veinte años, gane quien gane.",
+   "t_pt": "As grandes políticas de Estado deveriam ser pactuadas por vinte anos, ganhe quem ganhar.",
+   "t_en": "Major state policies should be agreed for twenty years, whoever wins elections.",
+   "e": {
+    "tem": 1,
+    "ipe": 0.5
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "nueva": 1,
+   "rap": 1
+  },
+  {
+   "id": "n08",
+   "t": "Vale la pena hacer sacrificios hoy para que las próximas generaciones vivan mejor.",
+   "t_pt": "Vale a pena fazer sacrifícios hoje para que as próximas gerações vivam melhor.",
+   "t_en": "It is worth making sacrifices today so that future generations live better.",
+   "e": {
+    "fut": -1,
+    "tem": 0.5
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "nueva": 1,
+   "rap": 1
+  },
+  {
+   "id": "n09",
+   "t": "No es justo pedirle a quien hoy la pasa mal que se sacrifique por el futuro.",
+   "t_pt": "Não é justo pedir a quem hoje passa dificuldade que se sacrifique pelo futuro.",
+   "t_en": "It isn't fair to ask people who are struggling today to sacrifice for the future.",
+   "e": {
+    "fut": 1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "nueva": 1
+  },
+  {
+   "id": "n10",
+   "t": "El Banco Central debería seguir reglas fijas y no decidir según la coyuntura.",
+   "t_pt": "O Banco Central deveria seguir regras fixas e não decidir conforme a conjuntura.",
+   "t_en": "The Central Bank should follow fixed rules rather than decide case by case.",
+   "e": {
+    "mon": 1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "nueva": 1,
+   "rap": 1
+  },
+  {
+   "id": "n11",
+   "t": "Emitir dinero para sostener la actividad está bien en una crisis.",
+   "t_pt": "Emitir dinheiro para sustentar a atividade econômica é aceitável numa crise.",
+   "t_en": "Printing money to sustain economic activity is fine during a crisis.",
+   "e": {
+    "mon": -1,
+    "pla": -0.5
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "nueva": 1
+  },
+  {
+   "id": "n12",
+   "t": "El Estado debería poder sacar de circulación las noticias que considere falsas.",
+   "t_pt": "O Estado deveria poder tirar de circulação as notícias que considere falsas.",
+   "t_en": "The state should be able to take down news it considers false.",
+   "e": {
+    "inf": 1,
+    "lib": -0.5
+   },
+   "nivel": 3,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "nueva": 1,
+   "rap": 1
+  },
+  {
+   "id": "n13",
+   "t": "Es sano que haya muchos medios, aunque algunos digan cosas que me parecen terribles.",
+   "t_pt": "É saudável haver muitos meios de comunicação, mesmo que alguns digam coisas que acho terríveis.",
+   "t_en": "It's healthy to have many media outlets, even if some say things I find terrible.",
+   "e": {
+    "inf": -1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "nueva": 1
+  },
+  {
+   "id": "n14",
+   "t": "Los cambios profundos se logran de a poco y dentro de las reglas, no con rupturas.",
+   "t_pt": "Mudanças profundas se conquistam aos poucos e dentro das regras, não com rupturas.",
+   "t_en": "Deep change comes gradually and within the rules, not through ruptures.",
+   "e": {
+    "tra": -1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "nueva": 1
+  },
+  {
+   "id": "n15",
+   "t": "Las empresas funcionarían mejor si los trabajadores participaran en las decisiones.",
+   "t_pt": "As empresas funcionariam melhor se os trabalhadores participassem das decisões.",
+   "t_en": "Companies would work better if workers took part in decisions.",
+   "e": {
+    "lab": -1,
+    "col": -0.5
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "nueva": 1
+  },
+  {
+   "id": "n16",
+   "t": "Las instituciones importan más que quién esté al frente del gobierno.",
+   "t_pt": "As instituições importam mais do que quem está à frente do governo.",
+   "t_en": "Institutions matter more than who is leading the government.",
+   "e": {
+    "ipe": 1
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "nueva": 1,
+   "rap": 1
+  },
+  {
+   "id": "n17",
+   "t": "Las cárceles deberían enfocarse en reinsertar a los presos más que en castigarlos.",
+   "t_pt": "As prisões deveriam se concentrar em reintegrar os presos mais do que em puni-los.",
+   "t_en": "Prisons should focus on rehabilitating inmates rather than punishing them.",
+   "e": {
+    "pen": -1,
+    "lib": 0.5
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "nueva": 1,
+   "rap": 1
+  },
+  {
+   "id": "n18",
+   "t": "La naturaleza tiene valor propio, más allá de lo que le sirva a la gente.",
+   "t_pt": "A natureza tem valor próprio, além do que serve às pessoas.",
+   "t_en": "Nature has value in itself, beyond its usefulness to people.",
+   "e": {
+    "ecl": -1,
+    "tec": 0.5
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "nueva": 1
+  },
+  {
+   "id": "n19",
+   "t": "Los pueblos originarios deberían tener derecho a su propia lengua, educación y formas de organización.",
+   "t_pt": "Os povos indígenas deveriam ter direito à própria língua, educação e formas de organização.",
+   "t_en": "Indigenous peoples should have the right to their own language, education and forms of organization.",
+   "e": {
+    "mig": 1,
+    "idc": 0.5
+   },
+   "nivel": 2,
+   "v": [
+    "general",
+    "ar",
+    "br",
+    "py",
+    "pe",
+    "cl",
+    "co",
+    "uy"
+   ],
+   "nueva": 1,
+   "rap": 1
   }
  ]
 }

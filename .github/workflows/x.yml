@@ -74,6 +74,14 @@ jobs:
             dirigentes/danann/.store
           key: dirigentes2-store-${{ github.run_id }}
           restore-keys: dirigentes2-store-
+      - name: Restore store (tableros 2026-11-25)
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            dirigentes/letcher/.store
+            dirigentes/strada/.store
+          key: dirigentes3-store-${{ github.run_id }}
+          restore-keys: dirigentes3-store-
       - name: Collect X and analyze
         run: |
           python dirigentes/collect.py "$TABLERO" --solo x
@@ -105,6 +113,14 @@ jobs:
             dirigentes/presto/.store
             dirigentes/danann/.store
           key: dirigentes2-store-${{ github.run_id }}
+      - name: Save store (tableros 2026-11-25)
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            dirigentes/letcher/.store
+            dirigentes/strada/.store
+          key: dirigentes3-store-${{ github.run_id }}
       - name: Commit
         run: |
           git config user.name 'github-actions[bot]'

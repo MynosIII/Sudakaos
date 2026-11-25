@@ -16,6 +16,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from base_ampliada import AMPLIADA  # noqa: E402
 from base_argentina import AR_EXTRA  # noqa: E402
+from ejes_ampliados import EJES2, NUEVAS, SEC  # noqa: E402
 
 D = Path(__file__).resolve().parent
 PAISES = ["ar", "br", "py", "pe", "cl", "co", "uy"]
@@ -38,8 +39,9 @@ EJES = [
      ("Religião", "Laicismo", "Religiosidade")),
     ("pro", "Valores", "Progresismo", "Tradición", "Ampliación de derechos y cambio cultural.", "Familia, costumbres y tradición.",
      ("Valores", "Progressismo", "Tradição")),
-    ("mig", "Migración", "Asimilación", "Multiculturalismo", "Fronteras controladas y que el inmigrante se adapte.", "Apertura a la inmigración y mezcla de culturas.",
-     ("Migração", "Assimilação", "Multiculturalismo")),
+    ("mig", "Cultura y migración", "Asimilación", "Multiculturalismo", "Una cultura común: fronteras controladas y que quien llega se adapte.",
+     "Diversidad cultural, la de quienes llegan y la de los pueblos originarios.",
+     ("Cultura e migração", "Assimilação", "Multiculturalismo")),
     ("pla", "Economía", "Planificación", "Mercado", "Estado que regula, planifica y cobra más a los ricos.", "Mercado libre, menos impuestos y menos regulación.",
      ("Economia", "Planejamento", "Mercado")),
     ("glo", "Comercio", "Proteccionismo", "Apertura", "Aranceles y producción nacional.", "Libre comercio y apertura al mundo.",
@@ -52,7 +54,7 @@ EN_EJES = {"fed": {"nombre": "Territory", "a": "Federal", "b": "Unitary"}, "dem"
            "int": {"nombre": "World", "a": "Internationalism", "b": "Nationalism"}, "mil": {"nombre": "Defense", "a": "Militarism", "b": "Pacifism"},
            "lib": {"nombre": "Security", "a": "Order", "b": "Liberties"}, "col": {"nombre": "Property", "a": "Collectivism", "b": "Private property"},
            "rel": {"nombre": "Religion", "a": "Secularism", "b": "Religiosity"}, "pro": {"nombre": "Values", "a": "Progressivism", "b": "Tradition"},
-           "mig": {"nombre": "Migration", "a": "Assimilation", "b": "Multiculturalism"}, "pla": {"nombre": "Economy", "a": "Planning", "b": "Markets"},
+           "mig": {"nombre": "Culture & migration", "a": "Assimilation", "b": "Multiculturalism"}, "pla": {"nombre": "Economy", "a": "Planning", "b": "Markets"},
            "glo": {"nombre": "Trade", "a": "Protectionism", "b": "Openness"}, "tec": {"nombre": "Technology & environment", "a": "Technology", "b": "Bioconservatism"}}
 
 # (id, eje, nivel firmado: + polo a / - polo b, texto es, texto pt)
@@ -195,8 +197,35 @@ def preguntas():
                     d[lg] = q[lg]
             qs.append(d)
     for i, (t, tpt, ten, e) in enumerate(AR_EXTRA, len(LOCAL["ar"]) + 1):
+        e = dict(e)
+        for pref, extra in SEC_AR.items():
+            if t.startswith(pref):
+                e.update(extra)
         qs.append({"id": f"ar{i:02d}", "t": t, "t_pt": tpt, "t_en": ten, "e": e, "v": ["ar"]})
+    # ejes complementarios: pesos secundarios en frases existentes y frases nuevas
+    for q in qs:
+        if q["id"] in SEC:
+            q["e"] = {**q["e"], **SEC[q["id"]]}
+    for qid, t, tpt, ten, e, nivel, rap in NUEVAS:
+        d = {"id": qid, "t": t, "t_pt": tpt, "t_en": ten, "e": e, "nivel": nivel, "v": TODAS, "nueva": 1}
+        if rap:
+            d["rap"] = 1
+        qs.append(d)
     return qs
+
+
+# Pesos secundarios para las frases argentinas (por comienzo del texto)
+SEC_AR = {
+    "El Banco Central no debería intervenir": {"mon": 1}, "Los controles de precios": {"mon": -0.5},
+    "El transporte público tiene que seguir": {"bie": -0.5}, "Hay que reformar la ley de contrato": {"lab": 0.5},
+    "Los repartidores de aplicaciones": {"lab": -0.5}, "La AUH y los planes sociales": {"bie": -1},
+    "Quien cobra un plan social": {"bie": 0.5}, "Un impuesto a las grandes fortunas": {"dis": -1},
+    "El litio tendría que": {"ind": -1}, "El acuerdo Mercosur": {"ind": 0.5},
+    "Los decretos de necesidad": {"ipe": 1}, "A veces el Congreso": {"ipe": -0.5}, "Quien fue condenado": {"ipe": 0.5},
+    "La TV Pública debería": {"inf": -1}, "Hay que bajar la edad": {"pen": 1}, "La prisión preventiva": {"pen": -1},
+    "Las Fuerzas Armadas deberían ayudar": {"pen": 0.5}, "El país tiene que desarrollar": {"ind": -1, "tem": 0.5},
+    "El Conicet": {"epi": -0.5, "tem": 0.5},
+}
 
 
 # ---------------------------------------------------------------- dirigentes: 8 ejes editoriales -> 12 ejes
@@ -227,7 +256,7 @@ def figuras():
     out = {"_nota": "Codificación editorial inicial A REVISAR, a partir de programas, votaciones y declaraciones públicas. No es una medición de opinión. "
                     "0-100 por eje, mismos polos que ejes.json. Se arma con generar.py desde figuras_base.json (8 ejes + ajustes por persona).",
            "revision": "a revisar", "fecha": base.get("fecha", ""), "_nota_cargos": base.get("_nota_cargos", "")}
-    for grupo in ("latam", *PAISES):
+    for grupo in ("latam", "mundo", *PAISES):
         lst = []
         for f in base.get(grupo, []):
             pos = a12(f["pos"])
@@ -253,6 +282,8 @@ def ejes():
                        {"v": -1, "t": "En desacuerdo"}, {"v": -2, "t": "Muy en desacuerdo"}],
         "respuestas_pt": ["Concordo totalmente", "Concordo", "Neutro / não sei", "Discordo", "Discordo totalmente"],
         "respuestas_en": ["Strongly agree", "Agree", "Neutral / unsure", "Disagree", "Strongly disagree"],
+        "ejes2": [{"id": i, "nombre": n, "a": a, "b": b, "a_desc": ad, "b_desc": bd, "pt": {"nombre": pt[0], "a": pt[1], "b": pt[2]},
+                   "en": {"nombre": en[0], "a": en[1], "b": en[2]}} for i, n, a, b, ad, bd, pt, en in EJES2],
         "versiones": ver,
         "creditos": "Preguntas base adaptadas de 12axes (politicaltests.github.io), licencia MIT, (c) 2020 8values (SapplyValues).",
     }

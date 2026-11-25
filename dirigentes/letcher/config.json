@@ -1,0 +1,643 @@
+{
+ "nombre": "Monitor Hernán Letcher",
+ "slug": "letcher",
+ "color": "#2bb39a",
+ "distrito": "Argentina",
+ "perfil": {
+  "nombre": "Hernán Letcher",
+  "corto": "Letcher",
+  "cargo": "Economista, director del Centro de Economía Política Argentina (CEPA)",
+  "resumen": "Economista y director del CEPA. Es una de las voces críticas del programa económico de Milei y Caputo: sus informes sobre actividad, salarios, endeudamiento de las familias y cierre de empresas circulan en medios y redes, y es invitado habitual en radio, televisión y streaming.",
+  "objetivo": "Consolidarse como la referencia económica de la oposición y ganar peso propio en la discusión rumbo a 2027.",
+  "fuentes": [
+   "https://www.perfil.com/modo-fontevecchia/hernan-letcher-se-buscan-explicaciones-monetarias-pero-el-problema-es-la-caida-de-la-actividad-a70nO7P68NZR",
+   "https://elintransigente.com/2026/06/hernan-letcher-cuestiono-la-reforma-laboral-de-milei-se-aceleraron-los-cierres-de-empresas/"
+  ]
+ },
+ "focos": [
+  "Hernán Letcher"
+ ],
+ "rivales": [
+  "Luis Caputo",
+  "Carlos Melconian",
+  "Emmanuel Álvarez Agis"
+ ],
+ "co_clave": [
+  "Javier Milei",
+  "Luis Caputo",
+  "Axel Kicillof"
+ ],
+ "window_days": 365,
+ "conversacion_dias": 365,
+ "eleccion": "2027-10-24",
+ "eleccion_nota": "Fecha de referencia: generales de octubre de 2027, cuando el programa económico se plebiscita.",
+ "tema_elecciones": "Elecciones 2027 y candidaturas",
+ "figuras": {
+  "Hernán Letcher": {
+   "alias": [
+    "hernán letcher",
+    "hernan letcher",
+    "letcher",
+    "@hernanletcher"
+   ],
+   "bando": "Economistas heterodoxos",
+   "cargo": "Economista, director del CEPA",
+   "foco": true,
+   "wiki": [
+    "Hernán Letcher"
+   ],
+   "trends": "Hernán Letcher"
+  },
+  "Luis Caputo": {
+   "alias": [
+    "luis caputo",
+    "toto caputo",
+    "caputo"
+   ],
+   "bando": "Gobierno",
+   "cargo": "Ministro de Economía",
+   "wiki": [
+    "Luis Caputo"
+   ],
+   "trends": "Luis Caputo"
+  },
+  "Carlos Melconian": {
+   "alias": [
+    "carlos melconian",
+    "melconian"
+   ],
+   "bando": "Economistas ortodoxos",
+   "cargo": "Economista, ex presidente del Banco Nación",
+   "wiki": [
+    "Carlos Melconian"
+   ],
+   "trends": "Melconian"
+  },
+  "Emmanuel Álvarez Agis": {
+   "alias": [
+    "emmanuel álvarez agis",
+    "emmanuel alvarez agis",
+    "álvarez agis",
+    "alvarez agis"
+   ],
+   "bando": "Economistas heterodoxos",
+   "cargo": "Economista, director de PxQ; ex viceministro de Economía",
+   "wiki": [
+    "Emmanuel Álvarez Agis"
+   ],
+   "trends": "Alvarez Agis"
+  },
+  "Javier Milei": {
+   "alias": [
+    "javier milei",
+    "milei"
+   ],
+   "bando": "Nacional",
+   "cargo": "Presidente",
+   "wiki": [
+    "Javier Milei"
+   ]
+  },
+  "Axel Kicillof": {
+   "alias": [
+    "axel kicillof",
+    "kicillof"
+   ],
+   "bando": "Nacional",
+   "cargo": "Gobernador de Buenos Aires",
+   "wiki": [
+    "Axel Kicillof"
+   ]
+  }
+ },
+ "obj_fig": {
+  "letcher": "Letcher",
+  "caputo": "Caputo",
+  "melconian": "Melconian",
+  "agis": "Álvarez Agis",
+  "milei": "Milei",
+  "kicillof": "Kicillof"
+ },
+ "mapa_poder": {
+  "metodo": "Codificación editorial inicial, a revisar con el cliente. Eje horizontal: 0 = heterodoxia / peronismo, 100 = programa de Milei. Eje vertical: peso propio en la discusión económica (cargo, audiencia, llegada a medios). El tamaño de cada punto sale de las menciones medidas.",
+  "eje_x": "← heterodoxia · · · centro · · · programa Milei →",
+  "anot": [
+   [
+    6,
+    "HETERODOXIA",
+    "#5fb3c9"
+   ],
+   [
+    45,
+    "CENTRO",
+    "#f2b705"
+   ],
+   [
+    94,
+    "GOBIERNO",
+    "#9085e9"
+   ]
+  ],
+  "puntos": {
+   "Hernán Letcher": {
+    "alineamiento": 12,
+    "peso": 40,
+    "nota": "Director del CEPA; crítico frontal del programa económico."
+   },
+   "Emmanuel Álvarez Agis": {
+    "alineamiento": 30,
+    "peso": 45,
+    "nota": "Heterodoxo con llegada al mercado y a medios de todo el arco."
+   },
+   "Carlos Melconian": {
+    "alineamiento": 65,
+    "peso": 55,
+    "nota": "Ortodoxo crítico del esquema cambiario, con mucha pantalla."
+   },
+   "Luis Caputo": {
+    "alineamiento": 96,
+    "peso": 90,
+    "nota": "Ministro de Economía; blanco principal de las críticas."
+   },
+   "Axel Kicillof": {
+    "alineamiento": 8,
+    "peso": 85,
+    "nota": "Principal referencia política del campo heterodoxo."
+   }
+  }
+ },
+ "intenciones": {
+  "quiere": [
+   "queremos",
+   "quiero",
+   "hay que",
+   "necesitamos",
+   "necesita",
+   "necesitan",
+   "hace falta",
+   "falta de",
+   "que se vaya",
+   "que se vayan",
+   "se tiene que ir",
+   "que renuncie",
+   "fuera",
+   "pedimos",
+   "exigimos",
+   "reclamamos",
+   "que pongan",
+   "que arreglen",
+   "que paguen",
+   "aumento",
+   "trabajo genuino",
+   "que vuelva",
+   "que gobierne",
+   "que se presente",
+   "candidato ya",
+   "que investiguen",
+   "que expliquen",
+   "que devuelvan"
+  ],
+  "espera": [
+   "ojalá",
+   "ojala",
+   "espero",
+   "esperamos",
+   "a ver si",
+   "tengo fe",
+   "fe en",
+   "confío",
+   "confio",
+   "confiamos",
+   "se viene",
+   "se vienen",
+   "en 2027",
+   "el año que viene",
+   "vamos a ganar",
+   "vamos a volver",
+   "volver a gobernar",
+   "recuperar la provincia",
+   "ilusión",
+   "ilusion",
+   "esperanza",
+   "sueño",
+   "próximo gobierno",
+   "proximo gobierno",
+   "que gane",
+   "ojalá sea",
+   "ojala sea"
+  ],
+  "critica": [
+   "vergüenza",
+   "verguenza",
+   "desastre",
+   "fracaso",
+   "horrible",
+   "inútil",
+   "inutil",
+   "no sabe",
+   "no saben",
+   "mediocre",
+   "culpa",
+   "culpable",
+   "pésimo",
+   "pesimo",
+   "un asco",
+   "basta",
+   "lamentable",
+   "patético",
+   "patetico",
+   "ridículo",
+   "ridiculo",
+   "nefasto",
+   "incapaz",
+   "chanta",
+   "mentiroso",
+   "mentira",
+   "se robó",
+   "se robo",
+   "chorro",
+   "chorros",
+   "ladrón",
+   "ladron",
+   "corrupto",
+   "corruptos",
+   "corrupción",
+   "corrupcion",
+   "kukas",
+   "kuka",
+   "caradura",
+   "decepción",
+   "decepcion",
+   "hipócrita",
+   "hipocrita",
+   "traidor",
+   "oportunista",
+   "cínico",
+   "cinico",
+   "peor",
+   "fundieron",
+   "destruyeron",
+   "nunca más",
+   "nunca mas"
+  ],
+  "apoya": [
+   "gracias",
+   "excelente",
+   "bien ahí",
+   "bien ahi",
+   "acierto",
+   "felicitaciones",
+   "bravo",
+   "aplausos",
+   "el mejor",
+   "impecable",
+   "lo banco",
+   "bancamos",
+   "todos con",
+   "gran persona",
+   "gran tipo",
+   "un lujo",
+   "coherente",
+   "honesto",
+   "buena gestión",
+   "buena gestion",
+   "orgullo",
+   "genio",
+   "capo",
+   "querido",
+   "sí se puede",
+   "si se puede",
+   "mi voto",
+   "tiene mi voto",
+   "lo voto",
+   "la voto",
+   "valiente",
+   "la única",
+   "la unica",
+   "el único",
+   "el unico",
+   "gran trabajo",
+   "buen trabajo",
+   "tiene razón",
+   "tiene razon",
+   "dice la verdad"
+  ]
+ },
+ "temas": {
+  "Actividad e industria": [
+   "actividad",
+   "industria",
+   "industrial",
+   "pymes",
+   "pyme",
+   "cierre de empresas",
+   "cierres",
+   "fábrica",
+   "fabrica",
+   "construcción",
+   "construccion",
+   "emae",
+   "recesión",
+   "recesion",
+   "caída",
+   "caida"
+  ],
+  "Salarios, empleo y consumo": [
+   "salario",
+   "salarios",
+   "sueldo",
+   "sueldos",
+   "empleo",
+   "desempleo",
+   "despidos",
+   "reforma laboral",
+   "consumo",
+   "changuito",
+   "poder adquisitivo",
+   "paritaria",
+   "paritarias"
+  ],
+  "Inflación y precios": [
+   "inflación",
+   "inflacion",
+   "precios",
+   "ipc",
+   "indec",
+   "tarifas",
+   "alquiler",
+   "alquileres"
+  ],
+  "Dólar, reservas y deuda": [
+   "dólar",
+   "dolar",
+   "reservas",
+   "cepo",
+   "bcra",
+   "banco central",
+   "fmi",
+   "deuda",
+   "bonos",
+   "riesgo país",
+   "riesgo pais",
+   "tipo de cambio",
+   "devaluación",
+   "devaluacion"
+  ],
+  "Endeudamiento de las familias": [
+   "endeudamiento",
+   "morosidad",
+   "tarjeta",
+   "tarjetas",
+   "préstamo",
+   "prestamo",
+   "créditos",
+   "creditos",
+   "deudas de las familias",
+   "billeteras"
+  ],
+  "Jubilaciones y pobreza": [
+   "jubilad",
+   "jubilación",
+   "jubilacion",
+   "pobreza",
+   "indigencia",
+   "auh",
+   "anses",
+   "haberes"
+  ],
+  "Gobierno de Milei": [
+   "milei",
+   "caputo",
+   "gobierno nacional",
+   "casa rosada",
+   "motosierra",
+   "libertad avanza",
+   "ajuste"
+  ],
+  "Elecciones 2027 y candidaturas": [
+   "2027",
+   "candidato",
+   "candidatura",
+   "elecciones",
+   "encuesta",
+   "oposición",
+   "oposicion",
+   "peronismo",
+   "programa económico",
+   "programa economico"
+  ]
+ },
+ "narrativas": {
+  "El modelo no cierra": [
+   "no cierra",
+   "modelo",
+   "ajuste",
+   "motosierra",
+   "caída de la actividad",
+   "caida de la actividad",
+   "recesión",
+   "recesion"
+  ],
+  "Datos contra el relato": [
+   "informe",
+   "datos",
+   "cepa",
+   "indec",
+   "números",
+   "numeros",
+   "estadística",
+   "estadistica",
+   "mide"
+  ],
+  "Bolsillo y deudas": [
+   "no llegan",
+   "bolsillo",
+   "endeudamiento",
+   "morosidad",
+   "salario",
+   "jubilad"
+  ],
+  "Kirchnerismo / K": [
+   "kirchnerista",
+   "kirchnerismo",
+   "kuka",
+   "kukas",
+   "cristina",
+   "kicillof"
+  ],
+  "Alternativa económica 2027": [
+   "alternativa",
+   "programa",
+   "propuesta",
+   "2027",
+   "plan económico",
+   "plan economico"
+  ]
+ },
+ "positivo": [
+  "gracias",
+  "excelente",
+  "bien hecho",
+  "muy bien",
+  "felicit",
+  "impecable",
+  "genial",
+  "bravo",
+  "gran persona",
+  "orgullo",
+  "el mejor",
+  "esperanza",
+  "honesto",
+  "coherente",
+  "claro",
+  "explica bien",
+  "clarísimo",
+  "clarisimo",
+  "crack"
+ ],
+ "negativo": [
+  "vergüenza",
+  "verguenza",
+  "desastre",
+  "fracaso",
+  "inútil",
+  "inutil",
+  "mentiroso",
+  "chorro",
+  "corrupto",
+  "mediocre",
+  "basta",
+  "patético",
+  "patetico",
+  "horrible",
+  "peor",
+  "nefasto",
+  "kuka",
+  "traidora",
+  "traidor",
+  "panquequ",
+  "operador",
+  "ensobrado",
+  "militante",
+  "relato"
+ ],
+ "contexto": [
+  "cepa",
+  "economista",
+  "economía",
+  "economia",
+  "milei",
+  "caputo",
+  "inflación",
+  "inflacion",
+  "salarios"
+ ],
+ "excluir_frases": [],
+ "medios_locales": [],
+ "sitios_locales": [],
+ "rss": [
+  {
+   "name": "Letra P",
+   "url": "https://www.letrap.com.ar/rss/home.xml"
+  },
+  {
+   "name": "Página/12",
+   "url": "https://www.pagina12.com.ar/rss/portada"
+  },
+  {
+   "name": "Infobae",
+   "url": "https://www.infobae.com/arc/outboundfeeds/rss/"
+  },
+  {
+   "name": "Clarín",
+   "url": "https://www.clarin.com/rss/politica/"
+  },
+  {
+   "name": "Perfil",
+   "url": "https://www.perfil.com/feed/politica"
+  },
+  {
+   "name": "La Política Online",
+   "url": "https://www.lapoliticaonline.com/rss/"
+  },
+  {
+   "name": "El Destape",
+   "url": "https://www.eldestapeweb.com/rss/"
+  },
+  {
+   "name": "Ámbito",
+   "url": "https://www.ambito.com/rss/pages/economia.xml"
+  }
+ ],
+ "google_news": {
+  "queries": [
+   "\"Hernán Letcher\"",
+   "\"Letcher\" CEPA",
+   "\"Letcher\" Milei",
+   "\"Letcher\" Caputo",
+   "\"Centro de Economía Política Argentina\"",
+   "\"Letcher\" economista"
+  ],
+  "sites": [
+   "ambito.com",
+   "c5n.com",
+   "clarin.com",
+   "cronista.com",
+   "eldestapeweb.com",
+   "elintransigente.com",
+   "infobae.com",
+   "lanacion.com.ar",
+   "lapoliticaonline.com",
+   "letrap.com.ar",
+   "pagina12.com.ar",
+   "perfil.com",
+   "tiempoar.com.ar"
+  ],
+  "site_terms": [
+   "Letcher"
+  ]
+ },
+ "youtube": {
+  "region": "AR",
+  "language": "es",
+  "videos_per_query": 6,
+  "comments_per_video": 100,
+  "queries": [
+   "Hernán Letcher",
+   "Hernán Letcher entrevista",
+   "Letcher economía Milei",
+   "Letcher Caputo"
+  ],
+  "contexto": [
+   "letcher",
+   "cepa",
+   "economía",
+   "economia",
+   "milei",
+   "caputo",
+   "inflación",
+   "inflacion",
+   "salario"
+  ],
+  "excluir": []
+ },
+ "trends": {
+  "terminos": [
+   "Hernán Letcher",
+   "Carlos Melconian",
+   "Luis Caputo"
+  ],
+  "geos": {
+   "AR": "Argentina"
+  },
+  "geo_local": "AR"
+ },
+ "wiki_provincia": [],
+ "stop_extra": [
+  "letcher",
+  "hernán",
+  "hernan",
+  "cepa"
+ ],
+ "textos_comentarios": "extracto"
+}
