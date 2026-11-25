@@ -78,9 +78,23 @@ jobs:
             dirigentes/danann/.store
           key: dirigentes2-store-${{ github.run_id }}
           restore-keys: dirigentes2-store-
+      - name: Restore store (tableros 2026-11-25)
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            dirigentes/letcher/.store
+          key: dirigentes3-store-${{ github.run_id }}
+          restore-keys: dirigentes3-store-
       - name: Collect and analyze
         run: |
-          for d in pagano casielles braillard clark raverta otermin rehl ramos avila akirchner zicarelli presto danann; do
+          TODOS="pagano casielles braillard clark raverta otermin rehl ramos avila akirchner zicarelli presto danann letcher"
+          # Push en una rama (tablero nuevo): correr solo los tableros cuya config difiere de main, no los 14
+          if [ "${{ github.event_name }}" = push ] && [ "${GITHUB_REF_NAME}" != main ] && git fetch -q --depth=1 origin main; then
+            SOLO=$(git diff --name-only FETCH_HEAD HEAD -- 'dirigentes/*/config.json' | cut -d/ -f2 | sort -u | while read -r s; do [ -f "dirigentes/$s/config.json" ] && echo "$s"; done | tr '\n' ' ')
+            [ -n "${SOLO// }" ] && TODOS="$SOLO"
+          fi
+          echo "Tableros: $TODOS"
+          for d in $TODOS; do
             echo "::group::$d"
             timeout 1200 python dirigentes/collect.py "$d" || echo "recolección de $d cortada por tiempo"
             python dirigentes/analyze.py "$d"
@@ -112,6 +126,13 @@ jobs:
             dirigentes/presto/.store
             dirigentes/danann/.store
           key: dirigentes2-store-${{ github.run_id }}
+      - name: Save store (tableros 2026-11-25)
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            dirigentes/letcher/.store
+          key: dirigentes3-store-${{ github.run_id }}
       - name: Commit aggregates
         run: |
           git config user.name 'github-actions[bot]'
