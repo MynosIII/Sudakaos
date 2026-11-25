@@ -104,7 +104,10 @@ jobs:
           if [ -n "$SOLO" ]; then
             case "$SOLO" in *[!a-z]*) echo "tablero inválido"; exit 1;; esac
             LISTA="$SOLO"
-          elif [ "$EVENTO" = push ] && CAMBIOS=$(git diff --name-only "$ANTES" "$GITHUB_SHA" 2>/dev/null) && [ -n "$CAMBIOS" ]; then
+          elif [ "$EVENTO" = push ]; then
+            # Rama nueva: no hay "antes", se compara con el commit anterior
+            case "$ANTES" in ''|0000000000000000000000000000000000000000) ANTES="$GITHUB_SHA~1";; esac
+            CAMBIOS=$(git diff --name-only "$ANTES" "$GITHUB_SHA" 2>/dev/null || true)
             CFG=$(echo "$CAMBIOS" | sed -n 's#^dirigentes/\([a-z]*\)/config.json$#\1#p' | tr '\n' ' ')
             if [ -n "$CFG" ] && ! echo "$CAMBIOS" | grep -q '^dirigentes/[a-z_]*\.py$\|^x/'; then
               LISTA="$CFG"
