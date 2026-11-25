@@ -1,61 +1,60 @@
 {
- "updated_at": "2026-11-25T14:50:38Z",
+ "updated_at": "2026-11-25T15:11:08Z",
  "status": {
   "google_news": {
    "ok": true,
-   "items": 10069,
-   "new": 1309,
-   "at": "2026-11-25T14:44:11Z"
+   "items": 9944,
+   "new": 595,
+   "at": "2026-11-25T15:03:37Z"
   },
   "youtube": {
    "ok": true,
-   "items": 1154,
-   "new": 4,
-   "at": "2026-11-25T14:44:11Z"
+   "items": 1132,
+   "new": 110,
+   "at": "2026-11-25T15:03:37Z"
   },
   "meta_ads": {
    "ok": false,
    "error": "Meta Ad Library 400: <!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <title>4xx Client Error</title>\n  <meta charset=\"utf-8\">\n  <meta http-equiv=\"cache-control\" content=\"no-cache\">\n  <meta http-equiv=\"cache",
-   "at": "2026-11-25T14:44:11Z",
+   "at": "2026-11-25T15:03:37Z",
    "ultimo_ok": null
   }
  },
  "totales": {
-  "textos": 15056,
+  "textos": 15741,
   "por_plataforma": {
-   "Medios": 13715,
-   "YouTube": 1341
+   "Medios": 14291,
+   "YouTube": 1450
   },
   "por_tipo": {
-   "nota": 13715,
-   "comentario": 1227,
-   "video": 114
+   "nota": 14291,
+   "comentario": 1331,
+   "video": 119
   },
   "desde": "2026-07-29",
   "hasta": "2026-11-25",
   "metodo_nlp": {
-   "modelo": 12736,
-   "lexico": 2320
+   "modelo": 15741
   }
  },
  "ejes": {
   "fed": {
-   "n": 853,
+   "n": 888,
    "tono": {
-    "n": 853,
-    "pos": 5.5,
-    "neu": 83.1,
-    "neg": 11.4,
-    "agresivo": 9.8,
-    "neto": -5.9
+    "n": 888,
+    "pos": 4.8,
+    "neu": 82.4,
+    "neg": 12.7,
+    "agresivo": 0.3,
+    "neto": -7.9
    },
    "encuadre": {
-    "a": 168,
+    "a": 175,
     "b": 0,
     "b_pct": 0.0
    },
    "plataformas": {
-    "Medios": 829,
+    "Medios": 864,
     "YouTube": 24
    },
    "semanas": {
@@ -66,13 +65,19 @@
     "2026-10-05": 3,
     "2026-10-12": 5,
     "2026-10-19": 1,
-    "2026-10-26": 134,
-    "2026-11-02": 196,
-    "2026-11-09": 109,
-    "2026-11-16": 276,
-    "2026-11-23": 122
+    "2026-10-26": 135,
+    "2026-11-02": 202,
+    "2026-11-09": 115,
+    "2026-11-16": 289,
+    "2026-11-23": 131
    },
    "titulares": [
+    {
+     "t": "Coparticipación: “No vamos a asumir compromisos financieros que no podamos cumplir”, afirmó Melella - Actualidad TDF",
+     "medio": "Actualidad TDF",
+     "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPOVROdVQyYkFNQTY2a2FnbUVFZXZKbklMdzJXWHZCNEZwbG4zYWVQZUdKbnZQWlZ5b1Y0ekhaYmdYMTEtbHlsSTBxX3lNOXFjWGlodkpaTy1fTHB5eG5fdjJ1R1RZSHFfR1p1c2FjMjFkQ3JndUU2VzdSMXVNQ1U2bzZfamYzLWFZMDVTR0xHaTdaYjdQUUNoMGVzb1RjQlc5dHB2MU1wdmd4eWVCNXllMFIxVzVZOEJKLUtGRVdxcWRiTHRwbzFIUg?oc=5",
+     "f": "2026-11-25"
+    },
     {
      "t": "Polémica en Santa Cruz: el gobernador autorizó la venta de tierras frente al Perito Moreno a un magnate emiratí para construir un hotel - TN",
      "medio": "TN",
@@ -102,34 +107,28 @@
      "medio": "Infobae",
      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOMm9oSTEzRFlDZlQyay12S2Q0RnZlY05UR0VxWk1VMlRQZTB2QUw5MkdLVzRWeGg5WTdHekhwZ1YtVUVUV2VWYUNsN1ZsTXBFRFNmRzBFZERzUjFzUENGeGJGOGlQOU1PQ1pLNnV0Ny1iYmltT0hsNDJCd3luaVZzSkZWTjFXdlVxSy05SW16UUg5cnJVejJMTkRTMmpxNVh4M2Q1bklYTVhCYTRNNXpmM3BtLWJ6T3BfaWtIZUxfM2JkM1dwVzI5Tl92WDEwSHd6UlJFYlhWdjZOZFhPd2dKU1MwLVowSHVIWmxEaHlaMlRQZ9IBjAJBVV95cUxQYTE1aGJKdGZBYTU3bVNXWFUxVVNITFlZNVNmNEN2MVJPLWNPYXM4bEp2MjVnd2hqMDd3WTQ5VFVIMVZydTdqUWIyeXpDM0p6dzRzcE1wZ0xWTFIxLVZhX2huTWVBMXp5RUFlcVlBMDBGSlFtVVgtTTExN2JQWUhicWtTNWVxRFc3clY4b01lRzJyUnk3U2ZoTm80SjJNYUhsNXhaNTBxMDgwTl9RYWNNYmpjbEhRMVBScnY1aFVtLXM0RHFoX0lYLUpjbVktdWEydFdDcVVmNUhFeTczNEstc2cyaFR1RW5lNGthb0pHeHB3ektYVENCWUhDRDlCUE9Za1lhUWt5TjlyV2FC?oc=5",
      "f": "2026-11-25"
-    },
-    {
-     "t": "HOSPITAL URQUIZA INCORPORÓ UN NUEVO TERMOTANQUE PARA EL SISTEMA DE CALDERAS - Federal Al Día",
-     "medio": "Federal Al Día",
-     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNckl0Rld5QTNmM1pfNFg5T1BIam8zb3c5OVFlOFlQYnNVOFBFNTJsRGstYU5EUFZwOEkzVjNfdTRGVEhCb2JXNG9WdmF3a21uU2ZMaW9sbGZhRE9YdmpmSDI1dXhkejZOc0dBYWJiTWktRlk2S2lHMFJNZ3pXbHNPNkZCLXptTGRfSER5bXk1cFc1NjI3QVF2SUZGZFcxU3N5clAyeVV4MURUSmFtS2F5TVlkU1ZSdw?oc=5",
-     "f": "2026-11-25"
     }
    ],
    "share": 11.7
   },
   "dem": {
-   "n": 491,
+   "n": 520,
    "tono": {
-    "n": 491,
-    "pos": 3.9,
-    "neu": 77.6,
-    "neg": 18.5,
-    "agresivo": 8.6,
-    "neto": -14.6
+    "n": 520,
+    "pos": 3.1,
+    "neu": 78.7,
+    "neg": 18.3,
+    "agresivo": 1.3,
+    "neto": -15.2
    },
    "encuadre": {
-    "a": 101,
-    "b": 55,
-    "b_pct": 35.3
+    "a": 103,
+    "b": 56,
+    "b_pct": 35.2
    },
    "plataformas": {
-    "Medios": 465,
-    "YouTube": 26
+    "Medios": 488,
+    "YouTube": 32
    },
    "semanas": {
     "2026-08-10": 1,
@@ -137,22 +136,34 @@
     "2026-08-31": 3,
     "2026-09-07": 1,
     "2026-09-14": 2,
-    "2026-09-21": 1,
+    "2026-09-21": 7,
     "2026-09-28": 1,
     "2026-10-05": 2,
     "2026-10-12": 6,
     "2026-10-19": 13,
-    "2026-10-26": 72,
-    "2026-11-02": 67,
-    "2026-11-09": 51,
-    "2026-11-16": 188,
-    "2026-11-23": 80
+    "2026-10-26": 79,
+    "2026-11-02": 71,
+    "2026-11-09": 55,
+    "2026-11-16": 189,
+    "2026-11-23": 87
    },
    "titulares": [
+    {
+     "t": "Puerto Eva Perón continúa mejorando las instalaciones de sus instituciones - Diario Primera Linea",
+     "medio": "Diario Primera Linea",
+     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNRWxkTWVTR2FuNlhKX0FwV2R2em9JTFZPNXhDQk1WMVdaMTBGWTVKY2lsMUk5STlnUGVYaWFXWmpjS0x6QkUyS1FnN1UxN0tVb1lmSnBlZmV1WndaR29Sd25wSlpXOWZlWjMzV0x0U0FlRU1Ha3NWYlRNcjc5RjRacE9YTXhjZkJScGVNWmhncmxaRXZmcmllOVFGdnY4NnE2amN3NGYzdC1zWkxuVUE?oc=5",
+     "f": "2026-11-25"
+    },
     {
      "t": "Santilli va hoy al Congreso por primera vez: debía asistir 5 veces y está entre los jefes de Gabinete con menor cumplimiento - Chequeado",
      "medio": "Chequeado",
      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQRWVxT0lEQTBQWE9OX0NMcWZRVGtrS1I0T1lIeGpodWlTeHo0Y2VCQzhQZWRKYnpkeDVub0wwNWJFMDBCNkxPNFNmNWRzRVM0TFR4MUdlcWk2NjRxbEtvLUYyTTBjXzREeW5mOWh4b0RoRmhCcnoyckpjOE9xN3RPYnpkOGxlRHFfODRhUk9KbXloZFNubmtmTUY3dlRYTm9mZ1NNNGowRl9GdjBHcEhnSkRkRlVoTHhEQ2RKUDM1UDNhNUp6Q01WSllWZTdNT1laeXRtMWJ6U1pzN1RzQzhGRHZwR1BRM0JsM1R5aEhkalR0QQ?oc=5",
+     "f": "2026-11-25"
+    },
+    {
+     "t": "Un decreto de Claudio Vidal habilitó un millonario negocio inmobiliario para un grupo árabe frente al glaciar Perito Moreno – Editorial RN - Editorial RN",
+     "medio": "Editorial RN",
+     "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNemh0eGlHa0VPQ3hmSHBQWHplTDhXVXZjSjZJcWxxbGw3NzEyUVNiTGR0djIzOUxDaGdqV1FxRlRZZ2EwdkxOTnVPZURNd1JMNGJDSy1mS09mS2h1bi1ha3lMel9INzdHXzRmbTNXR0Rma0NaQndPcHZhVGtCdHRuTkhRRVFXVzI4ZkpwVkljbjMySzEydElkS2JiQkszNnBhdTYyNDRlbXh3bkdFODFDeE5DRkdVT3V4SEp6Nk8tSE1zbzNUOWdKQ3VUcEhadzB5Nll2NzB1VVFzMURKdDlTM3Z5aFJvdw?oc=5",
      "f": "2026-11-25"
     },
     {
@@ -172,39 +183,27 @@
      "medio": "LA17",
      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPOVFjbTFyZWsyc2p1QlFGQlNrQU9fQllSb3VBMHhWYzNoUkh5YjJ3ZEltMXpDWVBZQ29Wc0FBNllsbEFGX0FNM3MzQVhGY1BQSnAybmZlbTVVTnZRX0VxRGtKclc0bmg0SGNsZHNodUc0SmtyY2V4REwxanpKMm84dnNUSWZVRWtMbThNTHphaERRS1h0NDlhZV9KQUJkQjdxUjFXMTdfdlh6Mk5RdmIxT0g4Y2pzVFI3UEhtMzdmQ1g0WXEtYTYyWVF0WQ?oc=5",
      "f": "2026-11-25"
-    },
-    {
-     "t": "La violenta vida de Santucho y por qué el homenaje que no fue desconocía el consenso democrático - TN",
-     "medio": "TN",
-     "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxObmVES2h4VmRTbEdSV1QzX2FURzNHeWNVcWxwX2dQcjAyMFJWVm5aQnNaRW5KTTFDRDA1Vjd1ejdaMFdwUVVqMVlhMHJqSlpScW52dloyVGc0NVVDai0zaUdIRGJSV2p2WHEzMXExUFB3b3lHcnhSbE5EOTBiYVRlSE9HYWNFQkJXbkhzTXE4MlR1SngzdU9MQnpPTUhWd0s0WVlJaXhqRW5tMnFBeWZhSWI0ZWVtQWpvajZxYnR2Rm9waEwyTTRacEgwSkxubk1m0gHkAUFVX3lxTE00dE1sa2Z2V2xBOFAwdVg1REpIQVNoYTVoQ0VpeS02Z2c5TlhBdG9JWmtROUJ5aW9hSUdiNGJPd192UDJneFFsaGE2OWR2cmF0LXBmUzl3b2xFUHZSd210WXFrU2V5eWNBay1zZ3NvY2FtVnpkMjJSbkx1ZUNRTGo3U3JhcWtjRWV1c21XWDBRZTY2aERSQVdxcTBaeEFFMGw0UXNBN00ybENpRUJEQ29pN2N3T3huTTEtNFZ6X0VsblZWVXFtVElBTlFoU1MyTXVBYmxEaWpBZzZad28xdnFVUHZrcw?oc=5",
-     "f": "2026-11-25"
-    },
-    {
-     "t": "Distinguieron a Alberto Crescenti en el Congreso de la Nación por su liderazgo y compromiso al frente del SAME - Buenos Aires Ciudad",
-     "medio": "Buenos Aires Ciudad",
-     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPZzVfdVBxNFIxXzZmUnR1bUc5ZDQxOFI2ZS1DUGFFUlVsUFZ4Y28yb3FueTZPMDVGbF9LdVY3MEJaazlNQkd4MFpZRG5XMExXYzNjd1FpbUU2X0x0ZGR1NWx6WXB4a1N6ZzNTQXpVNHBEZ1g4V0VEUDNJTS1NZTlFWG9tLXhLY3NQZ0Z0RXNrN0hEU2VVc2RYV21DdWs4NDFxWk9kQ1Z5dE96QS1mN29mMWZYUnRQWjlpMUxpaEcycGV3dEE?oc=5",
-     "f": "2026-11-25"
     }
    ],
-   "share": 6.7
+   "share": 6.8
   },
   "int": {
-   "n": 789,
+   "n": 799,
    "tono": {
-    "n": 789,
-    "pos": 4.7,
-    "neu": 81.6,
-    "neg": 13.7,
-    "agresivo": 8.2,
-    "neto": -9.0
+    "n": 799,
+    "pos": 4.9,
+    "neu": 81.0,
+    "neg": 14.1,
+    "agresivo": 2.4,
+    "neto": -9.2
    },
    "encuadre": {
     "a": 12,
-    "b": 185,
-    "b_pct": 93.9
+    "b": 187,
+    "b_pct": 94.0
    },
    "plataformas": {
-    "Medios": 721,
+    "Medios": 731,
     "YouTube": 68
    },
    "semanas": {
@@ -219,17 +218,23 @@
     "2026-10-05": 5,
     "2026-10-12": 2,
     "2026-10-19": 4,
-    "2026-10-26": 196,
+    "2026-10-26": 197,
     "2026-11-02": 97,
-    "2026-11-09": 90,
-    "2026-11-16": 298,
-    "2026-11-23": 52
+    "2026-11-09": 92,
+    "2026-11-16": 303,
+    "2026-11-23": 54
    },
    "titulares": [
     {
      "t": "FMI: Ecuador debe ir a un superávit fiscal en 2027 con recorte del gasto - Diario La Hora",
      "medio": "Diario La Hora",
      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNc2YwN1NRTUZvUGpzcHNTZ183SkFZaEhFZEJjaVZ2ZUtIeVVUUml5bmxXQUlvYjB3cXhEQl9yemdZMXBPLVo0dUV4c0o3dFNLcXVWYUN2SFNqREpIUWFPYWNyUkFETVRjdV93ZUpydTBCbkZOWnpCNkhLSFdIN2pIQ1JWVTNzbE9Bdm0yY2lVczNuazItRHExby1MS0xnMnp5VWtacENxZnRnUkdRRVp2NWg5bHl0YS1VT0haNTBKdnp1MXc?oc=5",
+     "f": "2026-11-25"
+    },
+    {
+     "t": "Javier Milei viaja hoy a Paraguay y podría cruzarse con Lula da Silva la semana próxima, en la cumbre del Mercosur - La Nación",
+     "medio": "La Nación",
+     "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQMlN2T3JlNkpqbG9fRF9LT2VvLTdQemZ3a19tNS1xSWhDYkk5eklXTm9XMmwzYUUtazV6MmUyUjBEZW5iVXZaV05pQzF4TnQyWUZUUGpfTGRrZEZUODI5YXNxX3FhYTFGZ2xhRVhZWFVTTl9kMkcyYklsRnpOLTZUVWVUd1ppR2hna3Z4UjhHckZ0U3dLMDBhSUVNeDBUZUpFZ3I5d0poanR1bzdMTm1oWk02Ny1uWEJOTFU2TUVJbC1Rbi14YVB5QmJ6V1Z6RG5EaUVpekZyZndPUER3ampmek5TeVc?oc=5",
      "f": "2026-11-25"
     },
     {
@@ -255,54 +260,66 @@
      "medio": "ANRed",
      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNZC1NdU15OUowX0t1UVp4M3VSbXdpR0NmcmE5YU84Q0FNMk42RG13S3RBMjRKanlPQy1SZC1UVUpWUTYyS0xnaXFBSDNoY29STzNjU1huekdTR0toT3NNQWFMWEdTSjF1TzlnenBiTGpDMEhHUExqMDNPMy03eGt3WmZZbmNDd1pwSk15M2g3MS1yYlVvMXc5dw?oc=5",
      "f": "2026-11-25"
-    },
-    {
-     "t": "¡Día D en el Atlántico Sur! El fallo por las Malvinas que puede cambiarlo todo - Ciudadano News",
-     "medio": "Ciudadano News",
-     "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNMjhyNlJmQkZMaFRzWTdob3o1dElxbWMybUZEeC10MEtvOEVCaGFMVV9oRmt6MVlWNGZaNXJFREVOd1pWcjZhVDg3UjJlcTVvODJyVXlXNHRrNzN6MjBOUlNYNjczcDBjUXREeFpGOUZTaW13alVNX0ppTDYzVG5KMF9Sb1B2WWY0NExYTVk0enVvSWRLX05IQlNwTmtQSTY4cm1XUEI1dlBFeWZLdVVTWUhXUWV0UmVUUVFyUUhLWGhCaXZmVFF2Y3dqZUpjRVFHS0F1MHRnLXJWZw?oc=5",
-     "f": "2026-11-25"
     }
    ],
-   "share": 10.8
+   "share": 10.5
   },
   "mil": {
-   "n": 550,
+   "n": 599,
    "tono": {
-    "n": 550,
-    "pos": 8.0,
-    "neu": 82.0,
-    "neg": 10.0,
-    "agresivo": 11.1,
-    "neto": -2.0
+    "n": 599,
+    "pos": 7.2,
+    "neu": 81.5,
+    "neg": 11.4,
+    "agresivo": 5.2,
+    "neto": -4.2
    },
    "encuadre": {
-    "a": 280,
+    "a": 291,
     "b": 13,
-    "b_pct": 4.4
+    "b_pct": 4.3
    },
    "plataformas": {
-    "Medios": 462,
-    "YouTube": 88
+    "Medios": 505,
+    "YouTube": 94
    },
    "semanas": {
     "2026-08-10": 1,
     "2026-08-17": 2,
-    "2026-08-24": 5,
+    "2026-08-24": 6,
     "2026-08-31": 5,
     "2026-09-07": 1,
     "2026-09-14": 6,
-    "2026-09-21": 2,
+    "2026-09-21": 7,
     "2026-09-28": 9,
     "2026-10-05": 7,
     "2026-10-12": 8,
     "2026-10-19": 5,
-    "2026-10-26": 44,
-    "2026-11-02": 98,
-    "2026-11-09": 104,
-    "2026-11-16": 157,
-    "2026-11-23": 96
+    "2026-10-26": 48,
+    "2026-11-02": 106,
+    "2026-11-09": 114,
+    "2026-11-16": 173,
+    "2026-11-23": 101
    },
    "titulares": [
+    {
+     "t": "Últimos sorteos del servicio militar obligatorio este domingo 29 de noviembre: horarios y sedes - El Cronista",
+     "medio": "El Cronista",
+     "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPRGZHZTFDcEw4bUYzZGZmNDFxaW1FQU9vOGtrZVpWaHVxQjJqMGFXbHVkZnZjbks3WU5Uek5QVmowck5oQThOakJRU0ZPa1h5Mi14V3BzcEdLU1Q1dHZFZVhnRlNQRFF3V0tMeVRmQ3FSZWVaWjZTRzI5SkhaRWp0bHZ6ZVNZSWtOakpjcTRfalh4RERXZkxsU2pYU1FzUmpQLW9lVS1fNEpvWmdiSkN0V0pRVDF5ZUR4YzJBU08zUjBsQjBlYkZ2X2E2QXJQcHlhc08tcHVERWfSAfMBQVVfeXFMTWVlOXdjc3o0aTJCa2NqT192cEE0enUzQnJhdDZvNG85Qjg1cWU2S015U3hqb2p2bGY4Z1JMWUZNQS05ZnJuakZ5azZCVlZDQkFXQTIzQkVWREx5Zk0wTVZwbzlOQndBS25wRFJ5TkFfSkdhSEp6THFZWm1uRU9QY3lubU95VWJkcEl0ZS1hUWRWaUM5NVJTWDNXdGNVUGdCcUNiUWRpSEdKQjhDaGt5eWNYVGJEZ3JGVkJMNUo5Vlk1SkF3X21tT2IwZUhyQlN2cWRucWtUZVNGY0xNTUdNSmVOeDRoRWlfVlR6NXlnRVluOGVn?oc=5",
+     "f": "2026-11-25"
+    },
+    {
+     "t": "Llama Gobierno estatal a participarán en el sorteo del Servicio Militar Nacional - Parabolica.MX",
+     "medio": "Parabolica.MX",
+     "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNU3FmYjBrMnhKZXp4OXRpVHdma1ktZzhEVXFoQlZZZWE5RDR5Q2lBOHliMERIM3Z4cTdpbDJSRUNaTWFlMXZBUS1wdWJIYkVHczJCYmZERzFfZ0djNUJjeWZ3V0NxQWdVa3AwRlpNVVlQQzkwQ3JMRG5sRm5XM2JKVWlMdlVJalUwcXZiZXBFUXJwbUZxUndEOC1PUE5EM2dZWHY2OFdIZmoyYUJmajhDQ1FUVWlTQ0VnUk5WX0N5VW5DS0xpeDZERV8zVQ?oc=5",
+     "f": "2026-11-25"
+    },
+    {
+     "t": "Fabricaciones Militares posterga el plan para sumar socios privados - iProfesional",
+     "medio": "iProfesional",
+     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOalpyS0s3ekFQMHZzRzNnSzlHRHFRX3R4S0g3WXlvUFg1SFRNc1R1UkQyTUFvNThpV3Fjb3RJZ0ZWa2VWblhETy0wbU5UVWpMYWZ6MUgtZ2dFTEo3SFJaTTBLM0RmRHVjeGxhYWtfYUc5ZnM2aTZJTWVGOWhXRWkzeUl3STJNMVZmMVpfMnVmd0xSNGZoeXpDcDFqMnJyRjhFb25nQzFKNFcxNVNFVktKV0J30gG3AUFVX3lxTE40MEp3ZHdqTEJyUWNCQ2VYRWlOclpHTDRjeTdHemNxcy1lVXgzdVowY09FQi1QZWdfTkYzY0NldTh5cmpOekxyR3JBbGZfUTVLdFB3STBFVWFBazJoeVpuUFpyZ29aUWRGWVdid1F6ZnJYVDRZVWFybE1rRG5JMFp3NmE3RWMxQ1B1RVNuWU00WGFiRnFPZjBJWTdaS1VmT2wwY1NudVpjc19Hd1FKdzZlcVd5NTYtOA?oc=5",
+     "f": "2026-11-25"
+    },
     {
      "t": "Gobiernos de la 4T elevan gasto militar, pero reducen recursos para policías y fiscalías - Debate",
      "medio": "Debate",
@@ -320,45 +337,27 @@
      "medio": "Mezha.net",
      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOSG5KOTRoQ0h2aXpscFBFM25IN0p0eTRlZXdRaUlCSHRkb3Vha084Vkl3VlctSEQyNFZiMmE1MDJlZHpES1ViVFhCOXFObFRPeUtUSUY3djlUcFR0cUZnMy1ybV9XcEtPalVIdDVUMEdVOW1TM19XZS0yaDhwWld3bUNaYnRBTGNJSFdUOUFuYml2c1hOeXBn?oc=5",
      "f": "2026-11-25"
-    },
-    {
-     "t": "España vs Marruecos: comparativa de poder militar en 2026 (gasto, aviones, blindados y armada) - Envanter Medya",
-     "medio": "Envanter Medya",
-     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPNDYtSHVrRnhEdy1lWlRQUTV2RTRxaWQ2RFRXUTBRdXpDaXUweGxmc0poVFBCVWVTeWRGVGdQV1hBM3Blb1J1YzBKS3FONWZibUU4LW1qMTNJOHJrb0kzSEFlMzdOX2RQcTN1cnJSUUVkdTJBZUpMZkJTQkwxbDRMT1dBX0Y?oc=5",
-     "f": "2026-11-25"
-    },
-    {
-     "t": "Argentina: Hacia un apoyo de fuego del siglo XXI - Pucará Defensa",
-     "medio": "Pucará Defensa",
-     "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQNGE3bGN5TmNELVZkNVlZazJlWlQ0djZaR3ZXaWZKSVozcUJBMWdOUEdZSHU4S1gxVFBrMkxGM1RONWdDSC1vVEJ2QmptWll1R1ZfSmpMYWlNNTE1Yy1KMmhnbU1fbHlJMm9MbF94ZkQ4ekNxOE5MWGdZQ25KWlZPdA?oc=5",
-     "f": "2026-11-25"
-    },
-    {
-     "t": "La defensa de Ian Moche apeló el sobreseimiento de Lilia Lemoine y cuestionó el sorteo de la Cámara - Agencia Comunas",
-     "medio": "Agencia Comunas",
-     "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNTXdMRXplOEVKbXlnWFBsbWpNTHBSNkFBcXVCdFVETlpUMDZZVU1WaVVRbzE2UU1fR3JZa2wwZkdpd3Z6UTBoMjhBaEpkQmZBeFRwS1pGNDV5Y0NwYW5IUGZSSWxucXFhNWtuZmNKZ09iM2FIZXVIaFppZTl4UFpnaks2NDJJTFc1ZmE5MG1HMDAwV1BVY0lZNG56X3pKY240cjBSSUM0RHhhcjE3WXB6UDdUakc5TGcxWEpwZ1hydXBESnc3LUllbzNB?oc=5",
-     "f": "2026-11-25"
     }
    ],
-   "share": 7.5
+   "share": 7.9
   },
   "lib": {
-   "n": 530,
+   "n": 549,
    "tono": {
-    "n": 530,
+    "n": 549,
     "pos": 5.1,
-    "neu": 78.9,
-    "neg": 16.0,
-    "agresivo": 10.0,
-    "neto": -10.9
+    "neu": 77.6,
+    "neg": 17.3,
+    "agresivo": 1.8,
+    "neto": -12.2
    },
    "encuadre": {
-    "a": 111,
+    "a": 112,
     "b": 8,
     "b_pct": 6.7
    },
    "plataformas": {
-    "Medios": 497,
+    "Medios": 516,
     "YouTube": 33
    },
    "semanas": {
@@ -372,11 +371,11 @@
     "2026-10-05": 2,
     "2026-10-12": 7,
     "2026-10-19": 4,
-    "2026-10-26": 68,
-    "2026-11-02": 100,
-    "2026-11-09": 118,
-    "2026-11-16": 132,
-    "2026-11-23": 83
+    "2026-10-26": 69,
+    "2026-11-02": 107,
+    "2026-11-09": 122,
+    "2026-11-16": 138,
+    "2026-11-23": 84
    },
    "titulares": [
     {
@@ -419,13 +418,13 @@
    "share": 7.2
   },
   "col": {
-   "n": 313,
+   "n": 317,
    "tono": {
-    "n": 313,
-    "pos": 5.8,
-    "neu": 79.9,
-    "neg": 14.4,
-    "agresivo": 5.8,
+    "n": 317,
+    "pos": 6.9,
+    "neu": 77.6,
+    "neg": 15.5,
+    "agresivo": 0.6,
     "neto": -8.6
    },
    "encuadre": {
@@ -434,7 +433,7 @@
     "b_pct": 78.9
    },
    "plataformas": {
-    "Medios": 298,
+    "Medios": 302,
     "YouTube": 15
    },
    "semanas": {
@@ -447,9 +446,9 @@
     "2026-10-19": 4,
     "2026-10-26": 42,
     "2026-11-02": 29,
-    "2026-11-09": 44,
+    "2026-11-09": 47,
     "2026-11-16": 159,
-    "2026-11-23": 28
+    "2026-11-23": 29
    },
    "titulares": [
     {
@@ -489,43 +488,43 @@
      "f": "2026-11-25"
     }
    ],
-   "share": 4.3
+   "share": 4.2
   },
   "rel": {
-   "n": 1065,
+   "n": 1102,
    "tono": {
-    "n": 1065,
-    "pos": 15.1,
-    "neu": 75.5,
-    "neg": 9.4,
-    "agresivo": 8.1,
-    "neto": 5.7
+    "n": 1102,
+    "pos": 14.3,
+    "neu": 74.5,
+    "neg": 11.2,
+    "agresivo": 0.5,
+    "neto": 3.1
    },
    "encuadre": {
     "a": 3,
-    "b": 238,
+    "b": 249,
     "b_pct": 98.8
    },
    "plataformas": {
-    "Medios": 979,
-    "YouTube": 86
+    "Medios": 1006,
+    "YouTube": 96
    },
    "semanas": {
     "2026-07-27": 2,
     "2026-08-03": 1,
     "2026-08-10": 2,
-    "2026-08-17": 14,
-    "2026-08-24": 3,
+    "2026-08-17": 15,
+    "2026-08-24": 10,
     "2026-09-07": 1,
     "2026-09-14": 1,
-    "2026-09-21": 1,
+    "2026-09-21": 3,
     "2026-10-05": 1,
     "2026-10-12": 3,
     "2026-10-19": 3,
-    "2026-10-26": 123,
-    "2026-11-02": 324,
-    "2026-11-09": 390,
-    "2026-11-16": 113,
+    "2026-10-26": 124,
+    "2026-11-02": 338,
+    "2026-11-09": 397,
+    "2026-11-16": 118,
     "2026-11-23": 83
    },
    "titulares": [
@@ -566,46 +565,58 @@
      "f": "2026-11-25"
     }
    ],
-   "share": 14.6
+   "share": 14.5
   },
   "pro": {
-   "n": 833,
+   "n": 861,
    "tono": {
-    "n": 833,
-    "pos": 9.2,
-    "neu": 73.9,
-    "neg": 16.8,
-    "agresivo": 10.1,
-    "neto": -7.6
+    "n": 861,
+    "pos": 8.7,
+    "neu": 73.8,
+    "neg": 17.5,
+    "agresivo": 0.6,
+    "neto": -8.8
    },
    "encuadre": {
-    "a": 192,
-    "b": 177,
-    "b_pct": 48.0
+    "a": 194,
+    "b": 191,
+    "b_pct": 49.6
    },
    "plataformas": {
-    "Medios": 771,
-    "YouTube": 62
+    "Medios": 788,
+    "YouTube": 73
    },
    "semanas": {
     "2026-08-03": 2,
     "2026-08-10": 1,
-    "2026-08-17": 17,
-    "2026-08-24": 2,
+    "2026-08-17": 21,
+    "2026-08-24": 7,
     "2026-08-31": 2,
-    "2026-09-07": 2,
+    "2026-09-07": 3,
     "2026-09-14": 4,
-    "2026-09-28": 1,
+    "2026-09-28": 2,
     "2026-10-05": 2,
     "2026-10-12": 2,
     "2026-10-19": 4,
     "2026-10-26": 95,
-    "2026-11-02": 239,
-    "2026-11-09": 120,
-    "2026-11-16": 222,
-    "2026-11-23": 118
+    "2026-11-02": 243,
+    "2026-11-09": 123,
+    "2026-11-16": 228,
+    "2026-11-23": 122
    },
    "titulares": [
+    {
+     "t": "➡ Educación Sexual Integral (ESI), salud sexual, hábitos de higiene y los alcances de la Ley EMA fueron los principales temas abordados durante una jornada de trabajo articulado entre Salud y Educación. ➡ En el marco de la propuesta denominada “Escuel - Instagram",
+     "medio": "Instagram",
+     "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5qU0lnS2hTM29KZXpvbzhLTmxVd1FZVWR3V2VXaVdCVHVQYUJpX2dyb3R0ZkJreWdKRTlXckZLUEUwM3RxTWxBUlF4SVg5RnY5Zmc?oc=5",
+     "f": "2026-11-25"
+    },
+    {
+     "t": "“El Presupuesto confirma el plan de Zdero: las familias chaqueñas se seguirán endeudando”, advirtió Moser - CHACODIAPORDIA.COM",
+     "medio": "CHACODIAPORDIA.COM",
+     "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQb3FPOVlvNjctc1lOLTVXOXFacV9IMG05NjlkXy0xanpkVTM0WTZuQVZkVXJsdU9scmFCOXNiVzFMaE1rSkhxNk45bWhVLVZOZnY2Wk5iZVI5MzZtNXRPOHdGQUhOWFJRNU1KSUpSeTVoVnVIQUpTdmJiUVctcnJ1bGtCanBDcG9VWXNTMmZ4SUxnVzA4dzFLd29pMUN2VXF5SWxfZE5qZm13YW9Ic21wYjFXTGNUN0toSDF1NVg5RjI4aW5vNXJCRA?oc=5",
+     "f": "2026-11-25"
+    },
     {
      "t": "VIDEO | Sáenz firmó convenio con Nación para implementar el programa Centros de Familia en Salta - NOVA Salta",
      "medio": "NOVA Salta",
@@ -629,31 +640,19 @@
      "medio": "Perfil",
      "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxNTkJiLUdaT1FFMmw0cXZ1bFRlbjlnVElXakphTS0yMzBkNkNWQ2N6S1hocUZ6cC1aaEx4cmo4TWVJb0Y4ekx1cmctTWdCcTZLZW9VMEdwb2pkR1NndjZMREdlb3dPaG1CaHh4T0g4dHJoMk9xT3VPVnUtMEQtYUphQzNLWURtRDUyUk1kX2xGcENnc01WVExHSGxjWmcxRjZrZERpbWREYnRtNXpvbzJCbjBjNzhyOHZ6RlZOdi1vRjNfUktBbmNwTEk2WUdONTJGNlNGNEJDZG5IQnAxWmVnNHFPbVdfdkw5UTlkVERXM19ETzRtLWpEZXdZYlBfRGRHaHc?oc=5",
      "f": "2026-11-25"
-    },
-    {
-     "t": "\"Se confirma el plan de Zdero, las familias chaqueñas se seguirán endeudando\", dijo Moser - Diario TAG",
-     "medio": "Diario TAG",
-     "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQUGpOeERIVG9HSG00bVp2Y09mU25lejlDLXpLOHROdXI4S1p4WUxzMWJrUkpJSVdOVkNIUTlKN2lQQkh5V3doMG5vT1RHWDcxYW9EMWdkSlBONkJ4ckNoWWJEVFlHcHAxX2o5eHJwbENqdzZlTjBLTGxmZWhNR01pT3hTbGlJcTVzZ21nZEd1YWZMQ05tQ3NqRDF3ek9wcXVmLUV6RF93blh0Q2U1dnZTTVRLcnAxTXcwZnc?oc=5",
-     "f": "2026-11-25"
-    },
-    {
-     "t": "Desmantelan red ilegal que vendía agua robada a más de 150 familias - LA17",
-     "medio": "LA17",
-     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQNF9hNEFHUzlYdXNsNkN6OWZFU3JtRVA5NTFNbHVSRDNDbWJkWDlJYnhTM2JtV3lGSmQ3THg3MmMzLV9PaVhJSkZKVWo4endqTE9iSUNFeWJzNW1vVFZ6OUpfNHNqNEtTeFAzeGVyeXVmWnNuellBV0U3N2VzM0tUdXdadmIzemlIa2dUMlJRcXBkTlFiYnhvc2Y5NzFrQW5CcFpB?oc=5",
-     "f": "2026-11-25"
     }
    ],
-   "share": 11.4
+   "share": 11.3
   },
   "mig": {
-   "n": 214,
+   "n": 217,
    "tono": {
-    "n": 214,
-    "pos": 5.1,
-    "neu": 76.2,
-    "neg": 18.7,
-    "agresivo": 14.5,
-    "neto": -13.6
+    "n": 217,
+    "pos": 3.7,
+    "neu": 74.2,
+    "neg": 22.1,
+    "agresivo": 11.5,
+    "neto": -18.4
    },
    "encuadre": {
     "a": 77,
@@ -661,7 +660,7 @@
     "b_pct": 23.0
    },
    "plataformas": {
-    "Medios": 173,
+    "Medios": 176,
     "YouTube": 41
    },
    "semanas": {
@@ -672,9 +671,9 @@
     "2026-10-05": 1,
     "2026-10-19": 1,
     "2026-10-26": 24,
-    "2026-11-02": 16,
-    "2026-11-09": 28,
-    "2026-11-16": 87,
+    "2026-11-02": 17,
+    "2026-11-09": 29,
+    "2026-11-16": 88,
     "2026-11-23": 20
    },
    "titulares": [
@@ -718,23 +717,23 @@
    "share": 2.9
   },
   "pla": {
-   "n": 486,
+   "n": 513,
    "tono": {
-    "n": 486,
-    "pos": 1.2,
-    "neu": 72.4,
-    "neg": 26.3,
-    "agresivo": 9.1,
-    "neto": -25.1
+    "n": 513,
+    "pos": 0.8,
+    "neu": 70.6,
+    "neg": 28.7,
+    "agresivo": 0.4,
+    "neto": -27.9
    },
    "encuadre": {
-    "a": 167,
-    "b": 157,
-    "b_pct": 48.5
+    "a": 183,
+    "b": 158,
+    "b_pct": 46.3
    },
    "plataformas": {
-    "Medios": 445,
-    "YouTube": 41
+    "Medios": 470,
+    "YouTube": 43
    },
    "semanas": {
     "2026-07-27": 2,
@@ -743,15 +742,16 @@
     "2026-08-31": 3,
     "2026-09-07": 1,
     "2026-09-14": 1,
-    "2026-09-21": 2,
+    "2026-09-21": 3,
+    "2026-09-28": 1,
     "2026-10-05": 2,
     "2026-10-12": 11,
     "2026-10-19": 5,
-    "2026-10-26": 82,
-    "2026-11-02": 72,
-    "2026-11-09": 84,
-    "2026-11-16": 158,
-    "2026-11-23": 58
+    "2026-10-26": 85,
+    "2026-11-02": 77,
+    "2026-11-09": 98,
+    "2026-11-16": 159,
+    "2026-11-23": 60
    },
    "titulares": [
     {
@@ -791,25 +791,25 @@
      "f": "2026-11-25"
     }
    ],
-   "share": 6.6
+   "share": 6.8
   },
   "glo": {
-   "n": 693,
+   "n": 708,
    "tono": {
-    "n": 693,
-    "pos": 3.9,
-    "neu": 85.1,
-    "neg": 11.0,
-    "agresivo": 6.2,
-    "neto": -7.1
+    "n": 708,
+    "pos": 3.7,
+    "neu": 84.3,
+    "neg": 12.0,
+    "agresivo": 0.8,
+    "neto": -8.3
    },
    "encuadre": {
-    "a": 88,
-    "b": 285,
-    "b_pct": 76.4
+    "a": 90,
+    "b": 293,
+    "b_pct": 76.5
    },
    "plataformas": {
-    "Medios": 668,
+    "Medios": 683,
     "YouTube": 25
    },
    "semanas": {
@@ -821,13 +821,19 @@
     "2026-09-21": 2,
     "2026-10-05": 1,
     "2026-10-19": 9,
-    "2026-10-26": 149,
-    "2026-11-02": 97,
-    "2026-11-09": 68,
-    "2026-11-16": 288,
-    "2026-11-23": 66
+    "2026-10-26": 155,
+    "2026-11-02": 98,
+    "2026-11-09": 70,
+    "2026-11-16": 291,
+    "2026-11-23": 69
    },
    "titulares": [
+    {
+     "t": "\"Milei es un sepulturero, para él toda la industria nacional tiene que morir\" - La Brújula 24",
+     "medio": "La Brújula 24",
+     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOdHFJa2hWa1VtQktzZDR6WkNCWkpSQTFZeWt3OG9ILXRXU2J0YndIRUJ5eUg1LWhneW94MzVVQ0FOZGpqbGNGS0NDemtwNnVkZ0diN2NURHhYOU1lbGpwYUZxc0w2SDJLZ3Bjc3lZX0xJcmlkUDh6QjlGSXFFUy1zdUpYN29YQldoT25acGktNEhUMVZUYnNOUGx6TUUxTXJlcXFEMjB6WlBMLXJETGdEX3lDMHc0RWE2aWpkREJ3bUR1LVRsZktJ?oc=5",
+     "f": "2026-11-25"
+    },
     {
      "t": "Patricia Bullrich reclamó cambios en el rumbo económico y pidió medidas para aliviar a las pymes - La Gaceta",
      "medio": "La Gaceta",
@@ -857,34 +863,28 @@
      "medio": "Filo News",
      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNdk9ybXNRaTNVX3NTTm5nWEt6YlloOFFqV3U0VjJkU1lnQkV1QzFjRElvS0Q3My1LTzE4V0tjVHlXVWY4X2NIVHNibXVXQWZNSzQxWndSeld6TzVDWHdId0twQ3hrRk40MWlGbGNNaTQ4MnhoaV9XNHdQZ3FyaG9CY3lKaVFPMjFOZ3M2aXB6TFpURnNSUnE2SGFoYWV6T0JNUEE4bmd1ZVRWdnZDUkVJZ3lNU0pJUW81eVNZaFYweWZEckF1b0xLWVJWV3F2Wk85dUtZVVJkeHZaZw?oc=5",
      "f": "2026-11-25"
-    },
-    {
-     "t": "Luis Caputo cuestionó la definición de recesión técnica y aseguró que la suba del dólar no se trasladará a los precios - minutodecierre.com",
-     "medio": "minutodecierre.com",
-     "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOY3VYOVE1MWhpV2hReVN1SUFMYzlZd3JPd0daM2RDTF9YTVFEVXgySmpuTlFSYzhoVDVSVFpsbkNYN283OWUxaV9Ga0dDU3NDYmpoV1FicExldGhsLU5BSUtkLURlenBiMlh2dnNTU1E4Wlk4Q081LUNXeGxSNGtKOURUQUtwQWI3U2dPcXBGcmFGMXBMM2tCZ3FTLUx2cHlFY2w4aDF4eDhRRFIwQXU1ZmE4bnpJR2NWcVVMOXF6RG1fOUdSVnJ0dTJral9IY09vcmxYOFBya0NMX3hvb1licmxtRVFNRDA3N0NfY25zZW5GanFkQ1J6VWQ1aENwWVg3WGtn?oc=5",
-     "f": "2026-11-25"
     }
    ],
-   "share": 9.5
+   "share": 9.3
   },
   "tec": {
-   "n": 498,
+   "n": 522,
    "tono": {
-    "n": 498,
-    "pos": 9.8,
-    "neu": 80.5,
-    "neg": 9.6,
-    "agresivo": 10.6,
-    "neto": 0.2
+    "n": 522,
+    "pos": 8.4,
+    "neu": 79.5,
+    "neg": 12.1,
+    "agresivo": 1.3,
+    "neto": -3.7
    },
    "encuadre": {
-    "a": 195,
+    "a": 203,
     "b": 59,
-    "b_pct": 23.2
+    "b_pct": 22.5
    },
    "plataformas": {
-    "Medios": 459,
-    "YouTube": 39
+    "Medios": 482,
+    "YouTube": 40
    },
    "semanas": {
     "2026-07-27": 1,
@@ -892,16 +892,16 @@
     "2026-08-10": 4,
     "2026-08-17": 1,
     "2026-09-07": 1,
-    "2026-09-21": 1,
+    "2026-09-21": 2,
     "2026-09-28": 4,
     "2026-10-05": 1,
     "2026-10-12": 6,
     "2026-10-19": 11,
-    "2026-10-26": 94,
-    "2026-11-02": 74,
-    "2026-11-09": 72,
-    "2026-11-16": 150,
-    "2026-11-23": 68
+    "2026-10-26": 100,
+    "2026-11-02": 79,
+    "2026-11-09": 74,
+    "2026-11-16": 157,
+    "2026-11-23": 71
    },
    "titulares": [
     {
@@ -923,58 +923,58 @@
      "f": "2026-11-25"
     },
     {
+     "t": "El Senado pone foco en el costo fiscal del RIGI, las compras a proveedores mineros y las inversiones efectivamente realizadas - Minería & Desarrollo",
+     "medio": "Minería & Desarrollo",
+     "url": "https://news.google.com/rss/articles/CBMimAJBVV95cUxPck81djJ4QXBUWTRjMzFpOU9yOHd6TXhuaHRSZXBkYm8zTk9rX1dnY3Jhb0owMmxmajc3enF0ckVLSmtXMHZBNDZCRUM0RV93eWlNbUstY1Qtb3QxQWh1dFd4ZFBwRkNsdnlOMjNiZjQ4Q0pVOUhvZlVSWnhDcHlhQ2hIMXZTbTVPSjhnQmNqVFVXZnVURldKckxvUzZVYjJlRzI4U3Z4Z1FySEVLTTNOdHNlS0FHem9UZjZGWlZwajNXdzZpR2lWeFpWdndyaGZBTVJVREE2OEdhTFhMQWNxN1Q3NThJM2RsZ00teEZNVVJybWZEQll0V2llUENPNW12elNRanduazB6Vi1CNkdfT3lsZ3N3RTZB0gGYAkFVX3lxTE9yTzV2MnhBcFRZNGMzMWk5T3I4d3pNeG5odFJlcGRibzNOT2tfV2djcmFvSjAybGZqNzd6cXRyRUtKa1cwdkE0NkJFQzRFX3d5aU1tSy1jVC1vdDFBaHV0V3hkUHBGQ2x2eU4yM2JmNDhDSlU5SG9mVVJaeENweWFDaEgxdlNtNU9KOGdCY2pUVVdmdVRGV0pyTG9TNlViMmVHMjhTdnhnUXJIRUtNM050c2VLQUd6b1RmNkZaVnBqM1d3NmlHaVZ4WlZ2d3JoZkFNUlVEQTY4R2FMWExBY3E3VDc1OEkzZGxnTS14Rk1VUnJtZkRCWXRXaWVQQ081bXZ6U1Fqd25rMHpWLUI2R19PeWxnc3dFNkE?oc=5",
+     "f": "2026-11-25"
+    },
+    {
+     "t": "Un decreto de Claudio Vidal habilitó un millonario negocio inmobiliario para un grupo árabe frente al glaciar Perito Moreno – Editorial RN - Editorial RN",
+     "medio": "Editorial RN",
+     "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNemh0eGlHa0VPQ3hmSHBQWHplTDhXVXZjSjZJcWxxbGw3NzEyUVNiTGR0djIzOUxDaGdqV1FxRlRZZ2EwdkxOTnVPZURNd1JMNGJDSy1mS09mS2h1bi1ha3lMel9INzdHXzRmbTNXR0Rma0NaQndPcHZhVGtCdHRuTkhRRVFXVzI4ZkpwVkljbjMySzEydElkS2JiQkszNnBhdTYyNDRlbXh3bkdFODFDeE5DRkdVT3V4SEp6Nk8tSE1zbzNUOWdKQ3VUcEhadzB5Nll2NzB1VVFzMURKdDlTM3Z5aFJvdw?oc=5",
+     "f": "2026-11-25"
+    },
+    {
      "t": "El Gobierno avanza con allanamientos para terminar con el “curro del agua” - Tiempo Sur",
      "medio": "Tiempo Sur",
      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPNEJlWWh4UklUUkd2TEJENkhsYUtUR19tUGtFbkpfTVdMYVBZeUlTdGNGa1FHUlpwcVRBalpkaHNxNlkzODRZUHN5VkdGZjgyWUhIMFBtMFJwanU2Tmt3QzBIc0ZiOFZWeEM4bFVNR21WN2luN0JLSUdQSVF4QWFmRDFNc1NrTXRpbFhsY2xWNVBENkJnNEtIUTlVSFZtNjFYbDZJaXB0Y09Dd9IBtwFBVV95cUxQaVR3Yk1UeHdSSXhBVG80YTg2NnNxazFkYVdVaVVJSmVrVHVoWkJOclpyQlIyalQtbUQzekZ6U3BlanFRc0NLekhDUjdkdkdMTnd3clFwQU5qUzZKdnB6OEVDMDZTSnBZUzJhSldZWkVQSFVTQzhkUnR2c1VnU0VEeHNmUmVjenUyM1ZoUjNzZDk2LWljOVRTRWxKaVZpaUJXSzlabGtBUmxJaDZGRklIRUF2Z2lyeXM?oc=5",
      "f": "2026-11-25"
-    },
-    {
-     "t": "La Xunta refuerza en Argentina los vínculos de colaboración en innovación, tecnología e industria - España Exterior",
-     "medio": "España Exterior",
-     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNRks0SU15NUFfVVhSVTdIN1hwTDZ3UDRqVjAtNVZTOUtib1I1NFBsNU1mVUR2YnlhSThPUVllaTFwbm5NeG1iMFFselNkUUY4VHhSTXYxZW5IVmhQUVpobzl1QW1aZmpkTDJhS2JFeGJHZVZoR3VsdGZ3QlQ5X0JHSFZjckhfYTk3MFpscGQ2NHFZTHI4Ym1GaERzazRjWmxOSE1LdmlFeXJrR213QkMzeDNmU3N3UlpreUZCR3BtSEtQSnByX3pB?oc=5",
-     "f": "2026-11-25"
-    },
-    {
-     "t": "Mema, Suarez y Petri: qué piensan sobre minería los posibles sucesores de Alfredo Cornejo en Mendoza - Minería & Desarrollo",
-     "medio": "Minería & Desarrollo",
-     "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPQUNRVE9uVGJ5cUdTbjEyaFJjdjFLMmJGRWdWeGZhSWdFbjBNWUludDdhNFByV1Z4ZTlMRVUxcHNLVldXUlk5QzkyOVFPcVN6R2h0WmM1VWRseWRPWGZFcmRzQ2VBYUJ5VE9qdXRRUTBKS3Z3a05jT21vRGNwTHc1TmczWXlpZF9mdVdiMW9DUFFKMUlIc3BVLVpNMC1Sa0JXTXd3R0FvdlZBR1VxRV9PMHZjUVdCT2xULTBWWl9ESlZUeEJsZmlGZHRrVDJDamRObTlHeTBma3h1cmx0aGVBZ3pMcjVqaU1yaHZKR3RfcTTSAfYBQVVfeXFMUDZ1TlllckdHbGkyOGM5d3VfTjlmQmNfYmhjd1JmMFpmNmM3UEMybEpQNXZSNWFwclVKaENuQUpGc2RzdHhZWVB5SHhvN1Bha2hvXzBka3l1SVJERmRTX3RkdXVUQ3Y4SHptam1fZk5UZFdFYV9XaUdlaDhiR1d3ekxfM0VDRnpESVFlMVk0SmR0U3JOTU5PWGdmYlRqME1uNEN2WGk2Q3BKWTcza005YlRyZi1SQWpPY2Z6NEsxcDF0TDB2ZkFOZjFSbm5SS1ZXNnBTX2JMa0ZZUUp3aTJyZXJVSG9nWkFjTXA1RnV3MXg4OEFOSF93?oc=5",
-     "f": "2026-11-25"
     }
    ],
-   "share": 6.8
+   "share": 6.9
   }
  },
  "figuras": {
   "Javier Milei": {
-   "n": 1496,
-   "sov": 18.7,
+   "n": 1605,
+   "sov": 19.5,
    "tono": {
-    "n": 1496,
-    "pos": 3.8,
-    "neu": 77.7,
-    "neg": 18.4,
-    "agresivo": 7.4,
-    "neto": -14.6
+    "n": 1605,
+    "pos": 2.5,
+    "neu": 78.1,
+    "neg": 19.4,
+    "agresivo": 0.2,
+    "neto": -16.9
    },
-   "ult7": 486,
-   "prev7": 346,
+   "ult7": 551,
+   "prev7": 360,
    "plataformas": {
-    "Medios": 1407,
-    "YouTube": 89
+    "Medios": 1515,
+    "YouTube": 90
    },
    "ejes": {
-    "fed": 76,
-    "dem": 71,
-    "int": 55,
-    "mil": 13,
+    "fed": 79,
+    "dem": 81,
+    "int": 56,
+    "mil": 14,
     "lib": 14,
     "col": 16,
-    "rel": 129,
-    "pro": 45,
+    "rel": 136,
+    "pro": 46,
     "mig": 9,
-    "pla": 80,
-    "glo": 71,
-    "tec": 26
+    "pla": 84,
+    "glo": 78,
+    "tec": 29
    },
    "ig": {
     "usuario": "javiermilei",
@@ -986,20 +986,20 @@
    }
   },
   "Karina Milei": {
-   "n": 190,
+   "n": 196,
    "sov": 2.4,
    "tono": {
-    "n": 190,
-    "pos": 4.7,
-    "neu": 88.4,
-    "neg": 6.8,
-    "agresivo": 2.6,
-    "neto": -2.1
+    "n": 196,
+    "pos": 4.1,
+    "neu": 89.3,
+    "neg": 6.6,
+    "agresivo": 0.5,
+    "neto": -2.5
    },
-   "ult7": 66,
+   "ult7": 71,
    "prev7": 64,
    "plataformas": {
-    "Medios": 187,
+    "Medios": 193,
     "YouTube": 3
    },
    "ejes": {
@@ -1018,20 +1018,20 @@
    }
   },
   "Victoria Villarruel": {
-   "n": 202,
+   "n": 203,
    "sov": 2.5,
    "tono": {
-    "n": 202,
+    "n": 203,
     "pos": 1.5,
-    "neu": 71.8,
-    "neg": 26.7,
-    "agresivo": 1.5,
-    "neto": -25.2
+    "neu": 72.4,
+    "neg": 26.1,
+    "agresivo": 0.0,
+    "neto": -24.6
    },
-   "ult7": 79,
+   "ult7": 80,
    "prev7": 23,
    "plataformas": {
-    "Medios": 202
+    "Medios": 203
    },
    "ejes": {
     "fed": 6,
@@ -1057,25 +1057,25 @@
    }
   },
   "Patricia Bullrich": {
-   "n": 353,
-   "sov": 4.4,
+   "n": 358,
+   "sov": 4.3,
    "tono": {
-    "n": 353,
-    "pos": 2.3,
-    "neu": 85.8,
-    "neg": 11.9,
-    "agresivo": 2.5,
-    "neto": -9.6
+    "n": 358,
+    "pos": 0.8,
+    "neu": 86.6,
+    "neg": 12.6,
+    "agresivo": 0.0,
+    "neto": -11.8
    },
-   "ult7": 161,
+   "ult7": 165,
    "prev7": 100,
    "plataformas": {
-    "Medios": 352,
+    "Medios": 357,
     "YouTube": 1
    },
    "ejes": {
     "fed": 9,
-    "dem": 14,
+    "dem": 15,
     "int": 6,
     "mil": 4,
     "lib": 2,
@@ -1097,20 +1097,20 @@
    }
   },
   "Luis Caputo": {
-   "n": 203,
+   "n": 204,
    "sov": 2.5,
    "tono": {
-    "n": 203,
+    "n": 204,
     "pos": 0.5,
-    "neu": 69.5,
-    "neg": 30.0,
-    "agresivo": 1.5,
-    "neto": -29.5
+    "neu": 69.1,
+    "neg": 30.4,
+    "agresivo": 0.0,
+    "neto": -29.9
    },
    "ult7": 111,
-   "prev7": 44,
+   "prev7": 45,
    "plataformas": {
-    "Medios": 203
+    "Medios": 204
    },
    "ejes": {
     "fed": 7,
@@ -1129,14 +1129,14 @@
   },
   "Manuel Adorni": {
    "n": 126,
-   "sov": 1.6,
+   "sov": 1.5,
    "tono": {
     "n": 126,
     "pos": 0.0,
-    "neu": 73.0,
-    "neg": 27.0,
+    "neu": 72.2,
+    "neg": 27.8,
     "agresivo": 0.0,
-    "neto": -27.0
+    "neto": -27.8
    },
    "ult7": 10,
    "prev7": 9,
@@ -1161,13 +1161,13 @@
   },
   "Federico Sturzenegger": {
    "n": 118,
-   "sov": 1.5,
+   "sov": 1.4,
    "tono": {
     "n": 118,
     "pos": 9.3,
     "neu": 64.4,
     "neg": 26.3,
-    "agresivo": 0.8,
+    "agresivo": 0.0,
     "neto": -17.0
    },
    "ult7": 33,
@@ -1191,20 +1191,20 @@
    }
   },
   "José Luis Espert": {
-   "n": 74,
+   "n": 75,
    "sov": 0.9,
    "tono": {
-    "n": 74,
+    "n": 75,
     "pos": 0.0,
-    "neu": 83.8,
-    "neg": 16.2,
-    "agresivo": 1.4,
-    "neto": -16.2
+    "neu": 84.0,
+    "neg": 16.0,
+    "agresivo": 0.0,
+    "neto": -16.0
    },
-   "ult7": 1,
+   "ult7": 2,
    "prev7": 5,
    "plataformas": {
-    "Medios": 74
+    "Medios": 75
    },
    "ejes": {
     "fed": 1,
@@ -1222,20 +1222,20 @@
    }
   },
   "Lilia Lemoine": {
-   "n": 109,
-   "sov": 1.4,
+   "n": 110,
+   "sov": 1.3,
    "tono": {
-    "n": 109,
+    "n": 110,
     "pos": 0.0,
-    "neu": 72.5,
-    "neg": 27.5,
-    "agresivo": 0.9,
-    "neto": -27.5
+    "neu": 72.7,
+    "neg": 27.3,
+    "agresivo": 0.0,
+    "neto": -27.3
    },
-   "ult7": 32,
+   "ult7": 33,
    "prev7": 29,
    "plataformas": {
-    "Medios": 109
+    "Medios": 110
    },
    "ejes": {
     "fed": 2,
@@ -1310,26 +1310,26 @@
    }
   },
   "Diego Santilli": {
-   "n": 221,
+   "n": 230,
    "sov": 2.8,
    "tono": {
-    "n": 221,
+    "n": 230,
     "pos": 0.9,
-    "neu": 95.0,
-    "neg": 4.1,
-    "agresivo": 0.5,
-    "neto": -3.2
+    "neu": 95.2,
+    "neg": 3.9,
+    "agresivo": 0.0,
+    "neto": -3.0
    },
-   "ult7": 166,
+   "ult7": 175,
    "prev7": 20,
    "plataformas": {
-    "Medios": 220,
+    "Medios": 229,
     "YouTube": 1
    },
    "ejes": {
-    "fed": 14,
+    "fed": 15,
     "dem": 22,
-    "int": 2,
+    "int": 3,
     "mil": 2,
     "lib": 0,
     "col": 0,
@@ -1338,7 +1338,7 @@
     "mig": 0,
     "pla": 6,
     "glo": 9,
-    "tec": 8
+    "tec": 10
    },
    "ig": {
     "usuario": "diegosantilliok",
@@ -1351,14 +1351,14 @@
   },
   "Mauricio Macri": {
    "n": 236,
-   "sov": 3.0,
+   "sov": 2.9,
    "tono": {
     "n": 236,
-    "pos": 9.3,
+    "pos": 4.7,
     "neu": 76.7,
-    "neg": 14.0,
-    "agresivo": 10.6,
-    "neto": -4.7
+    "neg": 18.6,
+    "agresivo": 0.8,
+    "neto": -13.9
    },
    "ult7": 61,
    "prev7": 63,
@@ -1390,20 +1390,20 @@
    }
   },
   "Jorge Macri": {
-   "n": 207,
+   "n": 211,
    "sov": 2.6,
    "tono": {
-    "n": 207,
-    "pos": 6.3,
-    "neu": 77.8,
-    "neg": 15.9,
-    "agresivo": 1.0,
-    "neto": -9.6
+    "n": 211,
+    "pos": 5.2,
+    "neu": 78.7,
+    "neg": 16.1,
+    "agresivo": 0.0,
+    "neto": -10.9
    },
-   "ult7": 79,
+   "ult7": 82,
    "prev7": 48,
    "plataformas": {
-    "Medios": 206,
+    "Medios": 210,
     "YouTube": 1
    },
    "ejes": {
@@ -1411,7 +1411,7 @@
     "dem": 0,
     "int": 0,
     "mil": 0,
-    "lib": 10,
+    "lib": 11,
     "col": 4,
     "rel": 24,
     "pro": 10,
@@ -1430,20 +1430,20 @@
    }
   },
   "Horacio Rodríguez Larreta": {
-   "n": 114,
+   "n": 116,
    "sov": 1.4,
    "tono": {
-    "n": 114,
-    "pos": 1.8,
-    "neu": 79.8,
-    "neg": 18.4,
+    "n": 116,
+    "pos": 1.7,
+    "neu": 79.3,
+    "neg": 19.0,
     "agresivo": 0.0,
-    "neto": -16.6
+    "neto": -17.3
    },
-   "ult7": 60,
+   "ult7": 62,
    "prev7": 16,
    "plataformas": {
-    "Medios": 113,
+    "Medios": 115,
     "YouTube": 1
    },
    "ejes": {
@@ -1451,7 +1451,7 @@
     "dem": 1,
     "int": 3,
     "mil": 0,
-    "lib": 2,
+    "lib": 3,
     "col": 0,
     "rel": 5,
     "pro": 6,
@@ -1743,20 +1743,20 @@
    }
   },
   "Martín Llaryora": {
-   "n": 180,
-   "sov": 2.3,
+   "n": 182,
+   "sov": 2.2,
    "tono": {
-    "n": 180,
-    "pos": 9.4,
-    "neu": 83.9,
-    "neg": 6.7,
+    "n": 182,
+    "pos": 9.3,
+    "neu": 83.0,
+    "neg": 7.7,
     "agresivo": 0.0,
-    "neto": 2.7
+    "neto": 1.6
    },
    "ult7": 67,
    "prev7": 56,
    "plataformas": {
-    "Medios": 179,
+    "Medios": 181,
     "YouTube": 1
    },
    "ejes": {
@@ -1766,32 +1766,32 @@
     "mil": 1,
     "lib": 12,
     "col": 0,
-    "rel": 21,
+    "rel": 22,
     "pro": 2,
-    "mig": 0,
+    "mig": 1,
     "pla": 3,
     "glo": 8,
     "tec": 0
    }
   },
   "Maximiliano Pullaro": {
-   "n": 139,
+   "n": 141,
    "sov": 1.7,
    "tono": {
-    "n": 139,
-    "pos": 15.1,
-    "neu": 77.7,
-    "neg": 7.2,
-    "agresivo": 14.4,
-    "neto": 7.9
+    "n": 141,
+    "pos": 17.0,
+    "neu": 73.0,
+    "neg": 9.9,
+    "agresivo": 0.0,
+    "neto": 7.1
    },
-   "ult7": 70,
-   "prev7": 30,
+   "ult7": 71,
+   "prev7": 31,
    "plataformas": {
-    "Medios": 139
+    "Medios": 141
    },
    "ejes": {
-    "fed": 30,
+    "fed": 31,
     "dem": 1,
     "int": 0,
     "mil": 0,
@@ -1802,12 +1802,12 @@
     "mig": 0,
     "pla": 0,
     "glo": 3,
-    "tec": 7
+    "tec": 8
    }
   },
   "Ignacio Torres": {
    "n": 44,
-   "sov": 0.6,
+   "sov": 0.5,
    "tono": {
     "n": 44,
     "pos": 2.3,
@@ -1816,8 +1816,8 @@
     "agresivo": 0.0,
     "neto": -4.5
    },
-   "ult7": 20,
-   "prev7": 11,
+   "ult7": 19,
+   "prev7": 12,
    "plataformas": {
     "Medios": 44
    },
@@ -1837,20 +1837,20 @@
    }
   },
   "Alfredo Cornejo": {
-   "n": 140,
-   "sov": 1.8,
+   "n": 153,
+   "sov": 1.9,
    "tono": {
-    "n": 140,
-    "pos": 7.9,
-    "neu": 80.7,
-    "neg": 11.4,
-    "agresivo": 1.4,
-    "neto": -3.5
+    "n": 153,
+    "pos": 7.8,
+    "neu": 80.4,
+    "neg": 11.8,
+    "agresivo": 0.0,
+    "neto": -4.0
    },
-   "ult7": 40,
+   "ult7": 47,
    "prev7": 26,
    "plataformas": {
-    "Medios": 140
+    "Medios": 153
    },
    "ejes": {
     "fed": 5,
@@ -1864,12 +1864,12 @@
     "mig": 0,
     "pla": 4,
     "glo": 12,
-    "tec": 9
+    "tec": 12
    }
   },
   "Gerardo Morales": {
    "n": 4,
-   "sov": 0.1,
+   "sov": 0.0,
    "tono": {
     "n": 4
    },
@@ -1894,21 +1894,21 @@
    }
   },
   "Cristina Kirchner": {
-   "n": 349,
-   "sov": 4.4,
+   "n": 352,
+   "sov": 4.3,
    "tono": {
-    "n": 349,
-    "pos": 3.2,
-    "neu": 86.5,
-    "neg": 10.3,
-    "agresivo": 6.0,
-    "neto": -7.1
+    "n": 352,
+    "pos": 1.4,
+    "neu": 88.1,
+    "neg": 10.5,
+    "agresivo": 0.3,
+    "neto": -9.1
    },
    "ult7": 140,
-   "prev7": 65,
+   "prev7": 67,
    "plataformas": {
-    "Medios": 346,
-    "YouTube": 3
+    "Medios": 348,
+    "YouTube": 4
    },
    "ejes": {
     "fed": 11,
@@ -1934,24 +1934,24 @@
    }
   },
   "Axel Kicillof": {
-   "n": 421,
-   "sov": 5.3,
+   "n": 424,
+   "sov": 5.1,
    "tono": {
-    "n": 421,
-    "pos": 3.6,
-    "neu": 85.5,
-    "neg": 10.9,
-    "agresivo": 5.9,
-    "neto": -7.3
+    "n": 424,
+    "pos": 3.8,
+    "neu": 84.9,
+    "neg": 11.3,
+    "agresivo": 0.0,
+    "neto": -7.5
    },
-   "ult7": 172,
-   "prev7": 106,
+   "ult7": 173,
+   "prev7": 107,
    "plataformas": {
-    "Medios": 418,
+    "Medios": 421,
     "YouTube": 3
    },
    "ejes": {
-    "fed": 33,
+    "fed": 34,
     "dem": 30,
     "int": 7,
     "mil": 0,
@@ -1974,20 +1974,20 @@
    }
   },
   "Máximo Kirchner": {
-   "n": 181,
-   "sov": 2.3,
+   "n": 182,
+   "sov": 2.2,
    "tono": {
-    "n": 181,
-    "pos": 2.2,
-    "neu": 90.6,
-    "neg": 7.2,
-    "agresivo": 5.0,
-    "neto": -5.0
+    "n": 182,
+    "pos": 0.5,
+    "neu": 91.8,
+    "neg": 7.7,
+    "agresivo": 0.0,
+    "neto": -7.2
    },
    "ult7": 103,
-   "prev7": 33,
+   "prev7": 34,
    "plataformas": {
-    "Medios": 181
+    "Medios": 182
    },
    "ejes": {
     "fed": 5,
@@ -2005,20 +2005,20 @@
    }
   },
   "Sergio Massa": {
-   "n": 227,
+   "n": 231,
    "sov": 2.8,
    "tono": {
-    "n": 227,
-    "pos": 4.0,
-    "neu": 87.7,
-    "neg": 8.4,
-    "agresivo": 1.8,
-    "neto": -4.4
+    "n": 231,
+    "pos": 3.5,
+    "neu": 88.3,
+    "neg": 8.2,
+    "agresivo": 0.0,
+    "neto": -4.7
    },
    "ult7": 84,
-   "prev7": 103,
+   "prev7": 107,
    "plataformas": {
-    "Medios": 226,
+    "Medios": 230,
     "YouTube": 1
    },
    "ejes": {
@@ -2084,20 +2084,20 @@
    }
   },
   "Mayra Mendoza": {
-   "n": 101,
-   "sov": 1.3,
+   "n": 102,
+   "sov": 1.2,
    "tono": {
-    "n": 101,
-    "pos": 15.8,
-    "neu": 78.2,
-    "neg": 5.9,
+    "n": 102,
+    "pos": 15.7,
+    "neu": 77.5,
+    "neg": 6.9,
     "agresivo": 0.0,
-    "neto": 9.9
+    "neto": 8.8
    },
-   "ult7": 38,
+   "ult7": 39,
    "prev7": 27,
    "plataformas": {
-    "Medios": 101
+    "Medios": 102
    },
    "ejes": {
     "fed": 7,
@@ -2153,11 +2153,11 @@
     "pos": 7.4,
     "neu": 82.1,
     "neg": 10.5,
-    "agresivo": 1.1,
+    "agresivo": 0.0,
     "neto": -3.1
    },
-   "ult7": 18,
-   "prev7": 26,
+   "ult7": 17,
+   "prev7": 27,
    "plataformas": {
     "Medios": 95
    },
@@ -2294,7 +2294,7 @@
   },
   "Gabriel Solano": {
    "n": 12,
-   "sov": 0.2,
+   "sov": 0.1,
    "tono": {
     "n": 12
    },
@@ -2319,51 +2319,51 @@
    }
   },
   "Sandra Pettovello": {
-   "n": 51,
-   "sov": 0.6,
+   "n": 84,
+   "sov": 1.0,
    "tono": {
-    "n": 51,
-    "pos": 5.9,
-    "neu": 92.2,
-    "neg": 2.0,
-    "agresivo": 35.3,
-    "neto": 3.9
+    "n": 84,
+    "pos": 6.0,
+    "neu": 86.9,
+    "neg": 7.1,
+    "agresivo": 0.0,
+    "neto": -1.1
    },
-   "ult7": 13,
-   "prev7": 9,
+   "ult7": 22,
+   "prev7": 23,
    "plataformas": {
-    "Medios": 51
+    "Medios": 84
    },
    "ejes": {
     "fed": 0,
-    "dem": 6,
+    "dem": 14,
     "int": 0,
     "mil": 0,
     "lib": 1,
-    "col": 2,
-    "rel": 6,
-    "pro": 1,
+    "col": 3,
+    "rel": 10,
+    "pro": 2,
     "mig": 0,
-    "pla": 11,
+    "pla": 19,
     "glo": 0,
     "tec": 1
    }
   },
   "Martín Menem": {
-   "n": 98,
+   "n": 99,
    "sov": 1.2,
    "tono": {
-    "n": 98,
-    "pos": 10.2,
-    "neu": 66.3,
-    "neg": 23.5,
-    "agresivo": 12.2,
-    "neto": -13.3
+    "n": 99,
+    "pos": 1.0,
+    "neu": 73.7,
+    "neg": 25.3,
+    "agresivo": 0.0,
+    "neto": -24.3
    },
    "ult7": 32,
    "prev7": 43,
    "plataformas": {
-    "Medios": 98
+    "Medios": 99
    },
    "ejes": {
     "fed": 4,
@@ -2385,14 +2385,14 @@
    "sov": 0.4,
    "tono": {
     "n": 34,
-    "pos": 8.8,
-    "neu": 67.6,
+    "pos": 2.9,
+    "neu": 73.5,
     "neg": 23.5,
-    "agresivo": 17.6,
-    "neto": -14.7
+    "agresivo": 0.0,
+    "neto": -20.6
    },
    "ult7": 14,
-   "prev7": 8,
+   "prev7": 7,
    "plataformas": {
     "Medios": 34
    },
@@ -2491,7 +2491,7 @@
   },
   "Cristian Ritondo": {
    "n": 12,
-   "sov": 0.2,
+   "sov": 0.1,
    "tono": {
     "n": 12
    },
@@ -2598,11 +2598,11 @@
    "sov": 0.3,
    "tono": {
     "n": 23,
-    "pos": 8.7,
-    "neu": 91.3,
+    "pos": 13.0,
+    "neu": 87.0,
     "neg": 0.0,
-    "agresivo": 17.4,
-    "neto": 8.7
+    "agresivo": 0.0,
+    "neto": 13.0
    },
    "ult7": 11,
    "prev7": 5,
@@ -2651,20 +2651,20 @@
    }
   },
   "Carlos Sadir": {
-   "n": 34,
+   "n": 35,
    "sov": 0.4,
    "tono": {
-    "n": 34,
-    "pos": 20.6,
-    "neu": 76.5,
-    "neg": 2.9,
-    "agresivo": 26.5,
-    "neto": 17.7
+    "n": 35,
+    "pos": 20.0,
+    "neu": 74.3,
+    "neg": 5.7,
+    "agresivo": 0.0,
+    "neto": 14.3
    },
    "ult7": 8,
-   "prev7": 5,
+   "prev7": 6,
    "plataformas": {
-    "Medios": 34
+    "Medios": 35
    },
    "ejes": {
     "fed": 10,
@@ -2812,7 +2812,7 @@
   },
   "Juan Manuel Abal Medina": {
    "n": 4,
-   "sov": 0.1,
+   "sov": 0.0,
    "tono": {
     "n": 4
    },
@@ -2862,7 +2862,7 @@
   },
   "Jorge Capitanich": {
    "n": 12,
-   "sov": 0.2,
+   "sov": 0.1,
    "tono": {
     "n": 12
    },
@@ -2891,11 +2891,11 @@
    "sov": 0.7,
    "tono": {
     "n": 58,
-    "pos": 19.0,
+    "pos": 17.2,
     "neu": 74.1,
-    "neg": 6.9,
-    "agresivo": 17.2,
-    "neto": 12.1
+    "neg": 8.6,
+    "agresivo": 0.0,
+    "neto": 8.6
    },
    "ult7": 16,
    "prev7": 7,
@@ -2922,11 +2922,11 @@
    "sov": 0.5,
    "tono": {
     "n": 42,
-    "pos": 9.5,
+    "pos": 7.1,
     "neu": 83.3,
-    "neg": 7.1,
-    "agresivo": 26.2,
-    "neto": 2.4
+    "neg": 9.5,
+    "agresivo": 0.0,
+    "neto": -2.4
    },
    "ult7": 23,
    "prev7": 7,
@@ -2949,20 +2949,20 @@
    }
   },
   "Sergio Uñac": {
-   "n": 31,
+   "n": 32,
    "sov": 0.4,
    "tono": {
-    "n": 31,
-    "pos": 0.0,
-    "neu": 93.5,
-    "neg": 6.5,
-    "agresivo": 22.6,
-    "neto": -6.5
+    "n": 32,
+    "pos": 6.2,
+    "neu": 87.5,
+    "neg": 6.2,
+    "agresivo": 0.0,
+    "neto": 0.0
    },
-   "ult7": 6,
+   "ult7": 7,
    "prev7": 9,
    "plataformas": {
-    "Medios": 31
+    "Medios": 32
    },
    "ejes": {
     "fed": 7,
@@ -2981,14 +2981,14 @@
   },
   "Osvaldo Jaldo": {
    "n": 44,
-   "sov": 0.6,
+   "sov": 0.5,
    "tono": {
     "n": 44,
-    "pos": 6.8,
-    "neu": 90.9,
-    "neg": 2.3,
-    "agresivo": 20.5,
-    "neto": 4.5
+    "pos": 4.5,
+    "neu": 86.4,
+    "neg": 9.1,
+    "agresivo": 0.0,
+    "neto": -4.6
    },
    "ult7": 17,
    "prev7": 9,
@@ -3011,23 +3011,23 @@
    }
   },
   "Raúl Jalil": {
-   "n": 64,
+   "n": 66,
    "sov": 0.8,
    "tono": {
-    "n": 64,
-    "pos": 7.8,
-    "neu": 85.9,
-    "neg": 6.2,
-    "agresivo": 14.1,
-    "neto": 1.6
+    "n": 66,
+    "pos": 10.6,
+    "neu": 83.3,
+    "neg": 6.1,
+    "agresivo": 0.0,
+    "neto": 4.5
    },
    "ult7": 26,
    "prev7": 10,
    "plataformas": {
-    "Medios": 64
+    "Medios": 66
    },
    "ejes": {
-    "fed": 9,
+    "fed": 11,
     "dem": 1,
     "int": 0,
     "mil": 0,
@@ -3037,29 +3037,29 @@
     "pro": 0,
     "mig": 1,
     "pla": 0,
-    "glo": 6,
+    "glo": 7,
     "tec": 6
    }
   },
   "Gustavo Sáenz": {
-   "n": 53,
-   "sov": 0.7,
+   "n": 65,
+   "sov": 0.8,
    "tono": {
-    "n": 53,
-    "pos": 5.7,
-    "neu": 84.9,
-    "neg": 9.4,
-    "agresivo": 9.4,
-    "neto": -3.7
+    "n": 65,
+    "pos": 6.2,
+    "neu": 84.6,
+    "neg": 9.2,
+    "agresivo": 0.0,
+    "neto": -3.0
    },
-   "ult7": 11,
-   "prev7": 28,
+   "ult7": 13,
+   "prev7": 36,
    "plataformas": {
-    "Medios": 53
+    "Medios": 65
    },
    "ejes": {
-    "fed": 18,
-    "dem": 1,
+    "fed": 20,
+    "dem": 2,
     "int": 0,
     "mil": 2,
     "lib": 0,
@@ -3067,9 +3067,9 @@
     "rel": 3,
     "pro": 1,
     "mig": 1,
-    "pla": 2,
+    "pla": 3,
     "glo": 0,
-    "tec": 0
+    "tec": 1
    }
   },
   "Hugo Passalacqua": {
@@ -3077,11 +3077,11 @@
    "sov": 0.3,
    "tono": {
     "n": 21,
-    "pos": 19.0,
-    "neu": 76.2,
+    "pos": 23.8,
+    "neu": 71.4,
     "neg": 4.8,
-    "agresivo": 23.8,
-    "neto": 14.2
+    "agresivo": 0.0,
+    "neto": 19.0
    },
    "ult7": 8,
    "prev7": 7,
@@ -3130,20 +3130,20 @@
    }
   },
   "Rolando Figueroa": {
-   "n": 90,
+   "n": 91,
    "sov": 1.1,
    "tono": {
-    "n": 90,
-    "pos": 7.8,
-    "neu": 90.0,
+    "n": 91,
+    "pos": 11.0,
+    "neu": 86.8,
     "neg": 2.2,
-    "agresivo": 16.7,
-    "neto": 5.6
+    "agresivo": 0.0,
+    "neto": 8.8
    },
    "ult7": 17,
-   "prev7": 26,
+   "prev7": 27,
    "plataformas": {
-    "Medios": 90
+    "Medios": 91
    },
    "ejes": {
     "fed": 5,
@@ -3161,24 +3161,24 @@
    }
   },
   "Claudio Vidal": {
-   "n": 85,
-   "sov": 1.1,
+   "n": 86,
+   "sov": 1.0,
    "tono": {
-    "n": 85,
-    "pos": 15.3,
-    "neu": 72.9,
-    "neg": 11.8,
-    "agresivo": 24.7,
-    "neto": 3.5
+    "n": 86,
+    "pos": 22.1,
+    "neu": 66.3,
+    "neg": 11.6,
+    "agresivo": 0.0,
+    "neto": 10.5
    },
-   "ult7": 27,
+   "ult7": 28,
    "prev7": 18,
    "plataformas": {
-    "Medios": 85
+    "Medios": 86
    },
    "ejes": {
     "fed": 6,
-    "dem": 5,
+    "dem": 6,
     "int": 0,
     "mil": 0,
     "lib": 8,
@@ -3188,7 +3188,7 @@
     "mig": 0,
     "pla": 2,
     "glo": 1,
-    "tec": 9
+    "tec": 10
    }
   },
   "Gustavo Melella": {
@@ -3250,11 +3250,11 @@
    "sov": 1.3,
    "tono": {
     "n": 104,
-    "pos": 3.8,
-    "neu": 65.4,
-    "neg": 30.8,
-    "agresivo": 34.6,
-    "neto": -27.0
+    "pos": 4.8,
+    "neu": 72.1,
+    "neg": 23.1,
+    "agresivo": 0.0,
+    "neto": -18.3
    },
    "ult7": 6,
    "prev7": 42,
@@ -3278,15 +3278,15 @@
    }
   },
   "Daniel Scioli": {
-   "n": 12,
+   "n": 13,
    "sov": 0.2,
    "tono": {
-    "n": 12
+    "n": 13
    },
    "ult7": 2,
    "prev7": 5,
    "plataformas": {
-    "Medios": 12
+    "Medios": 13
    },
    "ejes": {
     "fed": 0,
@@ -3305,7 +3305,7 @@
   },
   "Julián Domínguez": {
    "n": 4,
-   "sov": 0.1,
+   "sov": 0.0,
    "tono": {
     "n": 4
    },
@@ -3409,7 +3409,7 @@
   },
   "Hugo Yasky": {
    "n": 12,
-   "sov": 0.2,
+   "sov": 0.1,
    "tono": {
     "n": 12
    },
@@ -3487,14 +3487,14 @@
   },
   "Fernando Gray": {
    "n": 36,
-   "sov": 0.5,
+   "sov": 0.4,
    "tono": {
     "n": 36,
-    "pos": 8.3,
+    "pos": 2.8,
     "neu": 91.7,
-    "neg": 0.0,
-    "agresivo": 33.3,
-    "neto": 8.3
+    "neg": 5.6,
+    "agresivo": 0.0,
+    "neto": -2.8
    },
    "ult7": 14,
    "prev7": 6,
@@ -3594,12 +3594,12 @@
   },
   "Christian Castillo": {
    "n": 12,
-   "sov": 0.2,
+   "sov": 0.1,
    "tono": {
     "n": 12
    },
    "ult7": 3,
-   "prev7": 4,
+   "prev7": 5,
    "plataformas": {
     "Medios": 12
    },
@@ -3878,10 +3878,10 @@
    "tono": {
     "n": 31,
     "pos": 16.1,
-    "neu": 71.0,
-    "neg": 12.9,
-    "agresivo": 25.8,
-    "neto": 3.2
+    "neu": 67.7,
+    "neg": 16.1,
+    "agresivo": 0.0,
+    "neto": 0.0
    },
    "ult7": 11,
    "prev7": 8,
@@ -3980,20 +3980,20 @@
    }
   },
   "Leandro N. Alem": {
-   "n": 28,
+   "n": 29,
    "sov": 0.4,
    "tono": {
-    "n": 28,
-    "pos": 14.3,
-    "neu": 85.7,
-    "neg": 0.0,
-    "agresivo": 25.0,
-    "neto": 14.3
+    "n": 29,
+    "pos": 13.8,
+    "neu": 82.8,
+    "neg": 3.4,
+    "agresivo": 0.0,
+    "neto": 10.4
    },
    "ult7": 10,
-   "prev7": 6,
+   "prev7": 7,
    "plataformas": {
-    "Medios": 28
+    "Medios": 29
    },
    "ejes": {
     "fed": 0,
@@ -4011,29 +4011,29 @@
    }
   },
   "Roque Sáenz Peña": {
-   "n": 7,
+   "n": 12,
    "sov": 0.1,
    "tono": {
-    "n": 7
+    "n": 12
    },
    "ult7": 3,
-   "prev7": 3,
+   "prev7": 5,
    "plataformas": {
-    "Medios": 7
+    "Medios": 12
    },
    "ejes": {
     "fed": 0,
     "dem": 0,
     "int": 0,
     "mil": 0,
-    "lib": 1,
+    "lib": 2,
     "col": 0,
     "rel": 0,
     "pro": 1,
     "mig": 0,
     "pla": 0,
     "glo": 0,
-    "tec": 0
+    "tec": 1
    }
   },
   "Hipólito Yrigoyen": {
@@ -4041,11 +4041,11 @@
    "sov": 0.6,
    "tono": {
     "n": 49,
-    "pos": 4.1,
-    "neu": 79.6,
-    "neg": 16.3,
-    "agresivo": 20.4,
-    "neto": -12.2
+    "pos": 6.1,
+    "neu": 75.5,
+    "neg": 18.4,
+    "agresivo": 0.0,
+    "neto": -12.3
    },
    "ult7": 15,
    "prev7": 16,
@@ -4122,11 +4122,11 @@
    "sov": 0.4,
    "tono": {
     "n": 30,
-    "pos": 50.0,
-    "neu": 46.7,
-    "neg": 3.3,
-    "agresivo": 26.7,
-    "neto": 46.7
+    "pos": 6.7,
+    "neu": 83.3,
+    "neg": 10.0,
+    "agresivo": 0.0,
+    "neto": -3.3
    },
    "ult7": 6,
    "prev7": 6,
@@ -4226,10 +4226,10 @@
    "tono": {
     "n": 24,
     "pos": 0.0,
-    "neu": 100.0,
-    "neg": 0.0,
-    "agresivo": 4.2,
-    "neto": 0
+    "neu": 95.8,
+    "neg": 4.2,
+    "agresivo": 0.0,
+    "neto": -4.2
    },
    "ult7": 6,
    "prev7": 13,
@@ -4252,24 +4252,24 @@
    }
   },
   "Eva Perón": {
-   "n": 66,
+   "n": 67,
    "sov": 0.8,
    "tono": {
-    "n": 66,
-    "pos": 12.1,
-    "neu": 83.3,
-    "neg": 4.5,
-    "agresivo": 21.2,
-    "neto": 7.6
+    "n": 67,
+    "pos": 9.0,
+    "neu": 85.1,
+    "neg": 6.0,
+    "agresivo": 0.0,
+    "neto": 3.0
    },
-   "ult7": 19,
+   "ult7": 20,
    "prev7": 16,
    "plataformas": {
-    "Medios": 66
+    "Medios": 67
    },
    "ejes": {
     "fed": 1,
-    "dem": 0,
+    "dem": 1,
     "int": 0,
     "mil": 0,
     "lib": 3,
@@ -4310,7 +4310,7 @@
   },
   "Arturo Frondizi": {
    "n": 4,
-   "sov": 0.1,
+   "sov": 0.0,
    "tono": {
     "n": 4
    },
@@ -4559,11 +4559,11 @@
    "sov": 0.4,
    "tono": {
     "n": 29,
-    "pos": 31.0,
-    "neu": 65.5,
-    "neg": 3.4,
-    "agresivo": 51.7,
-    "neto": 27.6
+    "pos": 6.9,
+    "neu": 86.2,
+    "neg": 6.9,
+    "agresivo": 0.0,
+    "neto": 0.0
    },
    "ult7": 9,
    "prev7": 3,
@@ -4610,18 +4610,18 @@
    }
   },
   "Carlos Menem": {
-   "n": 13,
+   "n": 14,
    "sov": 0.2,
    "tono": {
-    "n": 13
+    "n": 14
    },
    "ult7": 0,
    "prev7": 8,
    "plataformas": {
-    "Medios": 13
+    "Medios": 14
    },
    "ejes": {
-    "fed": 0,
+    "fed": 1,
     "dem": 0,
     "int": 0,
     "mil": 1,
@@ -4636,24 +4636,24 @@
    }
   },
   "Domingo Cavallo": {
-   "n": 45,
+   "n": 52,
    "sov": 0.6,
    "tono": {
-    "n": 45,
+    "n": 52,
     "pos": 0.0,
-    "neu": 68.9,
-    "neg": 31.1,
-    "agresivo": 20.0,
-    "neto": -31.1
+    "neu": 69.2,
+    "neg": 30.8,
+    "agresivo": 0.0,
+    "neto": -30.8
    },
-   "ult7": 14,
-   "prev7": 10,
+   "ult7": 18,
+   "prev7": 12,
    "plataformas": {
-    "Medios": 45
+    "Medios": 52
    },
    "ejes": {
     "fed": 0,
-    "dem": 1,
+    "dem": 2,
     "int": 0,
     "mil": 0,
     "lib": 0,
@@ -4662,7 +4662,7 @@
     "pro": 0,
     "mig": 0,
     "pla": 0,
-    "glo": 9,
+    "glo": 10,
     "tec": 0
    }
   },
@@ -4741,20 +4741,20 @@
    }
   },
   "Néstor Kirchner": {
-   "n": 82,
-   "sov": 1.0,
+   "n": 87,
+   "sov": 1.1,
    "tono": {
-    "n": 82,
-    "pos": 9.8,
-    "neu": 89.0,
-    "neg": 1.2,
-    "agresivo": 64.6,
-    "neto": 8.6
+    "n": 87,
+    "pos": 6.9,
+    "neu": 88.5,
+    "neg": 4.6,
+    "agresivo": 0.0,
+    "neto": 2.3
    },
    "ult7": 7,
-   "prev7": 5,
+   "prev7": 8,
    "plataformas": {
-    "Medios": 82
+    "Medios": 87
    },
    "ejes": {
     "fed": 3,
@@ -4820,20 +4820,20 @@
    }
   },
   "Mario Roberto Santucho": {
-   "n": 66,
+   "n": 67,
    "sov": 0.8,
    "tono": {
-    "n": 66,
+    "n": 67,
     "pos": 1.5,
-    "neu": 68.2,
-    "neg": 30.3,
+    "neu": 68.7,
+    "neg": 29.9,
     "agresivo": 0.0,
-    "neto": -28.8
+    "neto": -28.4
    },
-   "ult7": 66,
+   "ult7": 67,
    "prev7": 0,
    "plataformas": {
-    "Medios": 66
+    "Medios": 67
    },
    "ejes": {
     "fed": 2,
@@ -4878,7 +4878,7 @@
   },
   "Agustín Tosco": {
    "n": 4,
-   "sov": 0.1,
+   "sov": 0.0,
    "tono": {
     "n": 4
    },
@@ -5153,20 +5153,20 @@
    }
   },
   "Rodolfo Walsh": {
-   "n": 48,
-   "sov": 0.6,
+   "n": 58,
+   "sov": 0.7,
    "tono": {
-    "n": 48,
-    "pos": 6.2,
-    "neu": 89.6,
-    "neg": 4.2,
-    "agresivo": 60.4,
-    "neto": 2.0
+    "n": 58,
+    "pos": 1.7,
+    "neu": 69.0,
+    "neg": 29.3,
+    "agresivo": 0.0,
+    "neto": -27.6
    },
-   "ult7": 4,
+   "ult7": 5,
    "prev7": 4,
    "plataformas": {
-    "Medios": 48
+    "Medios": 58
    },
    "ejes": {
     "fed": 0,
@@ -5236,20 +5236,20 @@
    }
   },
   "Facundo Quiroga": {
-   "n": 138,
+   "n": 139,
    "sov": 1.7,
    "tono": {
-    "n": 138,
-    "pos": 12.3,
-    "neu": 71.0,
-    "neg": 16.7,
-    "agresivo": 7.2,
-    "neto": -4.4
+    "n": 139,
+    "pos": 13.7,
+    "neu": 69.1,
+    "neg": 17.3,
+    "agresivo": 0.0,
+    "neto": -3.6
    },
    "ult7": 80,
-   "prev7": 32,
+   "prev7": 33,
    "plataformas": {
-    "Medios": 138
+    "Medios": 139
    },
    "ejes": {
     "fed": 1,
@@ -5267,20 +5267,20 @@
    }
   },
   "Manuel Belgrano": {
-   "n": 42,
+   "n": 43,
    "sov": 0.5,
    "tono": {
-    "n": 42,
-    "pos": 16.7,
-    "neu": 78.6,
-    "neg": 4.8,
-    "agresivo": 14.3,
-    "neto": 11.9
+    "n": 43,
+    "pos": 14.0,
+    "neu": 81.4,
+    "neg": 4.7,
+    "agresivo": 0.0,
+    "neto": 9.3
    },
    "ult7": 5,
-   "prev7": 24,
+   "prev7": 25,
    "plataformas": {
-    "Medios": 42
+    "Medios": 43
    },
    "ejes": {
     "fed": 1,
@@ -5298,20 +5298,20 @@
    }
   },
   "Mariano Moreno": {
-   "n": 75,
+   "n": 76,
    "sov": 0.9,
    "tono": {
-    "n": 75,
-    "pos": 8.0,
-    "neu": 88.0,
-    "neg": 4.0,
-    "agresivo": 17.3,
-    "neto": 4.0
+    "n": 76,
+    "pos": 11.8,
+    "neu": 84.2,
+    "neg": 3.9,
+    "agresivo": 0.0,
+    "neto": 7.9
    },
    "ult7": 22,
    "prev7": 28,
    "plataformas": {
-    "Medios": 75
+    "Medios": 76
    },
    "ejes": {
     "fed": 0,
@@ -5329,20 +5329,20 @@
    }
   },
   "José de San Martín": {
-   "n": 26,
+   "n": 27,
    "sov": 0.3,
    "tono": {
-    "n": 26,
-    "pos": 23.1,
-    "neu": 73.1,
-    "neg": 3.8,
-    "agresivo": 53.8,
-    "neto": 19.3
+    "n": 27,
+    "pos": 18.5,
+    "neu": 77.8,
+    "neg": 3.7,
+    "agresivo": 0.0,
+    "neto": 14.8
    },
    "ult7": 3,
    "prev7": 0,
    "plataformas": {
-    "Medios": 26
+    "Medios": 27
    },
    "ejes": {
     "fed": 1,
@@ -5363,50 +5363,50 @@
  "plataformas": {
   "Medios": {
    "tono": {
-    "n": 13715,
-    "pos": 6.6,
-    "neu": 80.8,
-    "neg": 12.6,
-    "agresivo": 9.2,
-    "neto": -6.0
+    "n": 14291,
+    "pos": 6.0,
+    "neu": 80.6,
+    "neg": 13.4,
+    "agresivo": 0.1,
+    "neto": -7.4
    },
    "ejes": {
-    "fed": 829,
-    "dem": 465,
-    "int": 721,
-    "mil": 462,
-    "lib": 497,
-    "col": 298,
-    "rel": 979,
-    "pro": 771,
-    "mig": 173,
-    "pla": 445,
-    "glo": 668,
-    "tec": 459
+    "fed": 864,
+    "dem": 488,
+    "int": 731,
+    "mil": 505,
+    "lib": 516,
+    "col": 302,
+    "rel": 1006,
+    "pro": 788,
+    "mig": 176,
+    "pla": 470,
+    "glo": 683,
+    "tec": 482
    }
   },
   "YouTube": {
    "tono": {
-    "n": 1341,
-    "pos": 24.8,
-    "neu": 47.1,
-    "neg": 28.2,
-    "agresivo": 24.4,
-    "neto": -3.4
+    "n": 1450,
+    "pos": 25.0,
+    "neu": 34.7,
+    "neg": 40.3,
+    "agresivo": 11.4,
+    "neto": -15.3
    },
    "ejes": {
     "fed": 24,
-    "dem": 26,
+    "dem": 32,
     "int": 68,
-    "mil": 88,
+    "mil": 94,
     "lib": 33,
     "col": 15,
-    "rel": 86,
-    "pro": 62,
+    "rel": 96,
+    "pro": 73,
     "mig": 41,
-    "pla": 41,
+    "pla": 43,
     "glo": 25,
-    "tec": 39
+    "tec": 40
    }
   }
  },
