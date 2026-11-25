@@ -79,6 +79,7 @@ jobs:
         with:
           path: |
             dirigentes/letcher/.store
+            dirigentes/strada/.store
           key: dirigentes3-store-${{ github.run_id }}
           restore-keys: dirigentes3-store-
       - name: Collect X and analyze
@@ -118,6 +119,7 @@ jobs:
         with:
           path: |
             dirigentes/letcher/.store
+            dirigentes/strada/.store
           key: dirigentes3-store-${{ github.run_id }}
       - name: Commit
         run: |

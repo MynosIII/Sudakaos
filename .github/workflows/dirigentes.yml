@@ -2,6 +2,11 @@ name: Dirigentes monitor
 
 on:
   workflow_dispatch:
+    inputs:
+      tablero:
+        description: 'Solo este tablero (slug, p. ej. strada). Vacío = todos'
+        required: false
+        default: ''
   # 08:15 UTC = 05:15 ART: primera corrida del día apenas se reinicia el cupo de YouTube (antes que Roca, Boca y Santa Cruz)
   schedule:
     - cron: '15 8 * * *'
@@ -32,6 +37,8 @@ jobs:
       # Sin X_BEARER_TOKEN a propósito: X es pago y solo se corre a mano (workflow "X tableros")
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 50
       # Corridas en cola: partir del último main (registro de gasto de X incluido), no del commit que las disparó
       - name: Update to latest
         run: git fetch --depth=50 origin "${GITHUB_REF_NAME}" && git merge --ff-only FETCH_HEAD || true
@@ -83,18 +90,32 @@ jobs:
         with:
           path: |
             dirigentes/letcher/.store
+            dirigentes/strada/.store
           key: dirigentes3-store-${{ github.run_id }}
           restore-keys: dirigentes3-store-
       - name: Collect and analyze
+        env:
+          SOLO: ${{ inputs.tablero }}
+          EVENTO: ${{ github.event_name }}
+          ANTES: ${{ github.event.before }}
         run: |
-          TODOS="pagano casielles braillard clark raverta otermin rehl ramos avila akirchner zicarelli presto danann letcher"
-          # Push en una rama (tablero nuevo): correr solo los tableros cuya config difiere de main, no los 14
-          if [ "${{ github.event_name }}" = push ] && [ "${GITHUB_REF_NAME}" != main ] && git fetch -q --depth=1 origin main; then
-            SOLO=$(git diff --name-only FETCH_HEAD HEAD -- 'dirigentes/*/config.json' | cut -d/ -f2 | sort -u | while read -r s; do [ -f "dirigentes/$s/config.json" ] && echo "$s"; done | tr '\n' ' ')
-            [ -n "${SOLO// }" ] && TODOS="$SOLO"
+          TODOS="pagano casielles braillard clark raverta otermin rehl ramos avila akirchner zicarelli presto danann letcher strada"
+          LISTA="$TODOS"
+          # A mano con un tablero, o un push que cambia configs sin tocar el código de recolección: correr solo esos (cuida el cupo de YouTube)
+          if [ -n "$SOLO" ]; then
+            case "$SOLO" in *[!a-z]*) echo "tablero inválido"; exit 1;; esac
+            LISTA="$SOLO"
+          elif [ "$EVENTO" = push ]; then
+            # Rama nueva: no hay "antes", se compara con el commit anterior
+            case "$ANTES" in ''|0000000000000000000000000000000000000000) ANTES="$GITHUB_SHA~1";; esac
+            CAMBIOS=$(git diff --name-only "$ANTES" "$GITHUB_SHA" 2>/dev/null || true)
+            CFG=$(echo "$CAMBIOS" | sed -n 's#^dirigentes/\([a-z]*\)/config.json$#\1#p' | tr '\n' ' ')
+            if [ -n "$CFG" ] && ! echo "$CAMBIOS" | grep -q '^dirigentes/[a-z_]*\.py$\|^x/'; then
+              LISTA="$CFG"
+            fi
           fi
-          echo "Tableros: $TODOS"
-          for d in $TODOS; do
+          echo "Tableros: $LISTA"
+          for d in $LISTA; do
             echo "::group::$d"
             timeout 1200 python dirigentes/collect.py "$d" || echo "recolección de $d cortada por tiempo"
             python dirigentes/analyze.py "$d"
@@ -132,6 +153,7 @@ jobs:
         with:
           path: |
             dirigentes/letcher/.store
+            dirigentes/strada/.store
           key: dirigentes3-store-${{ github.run_id }}
       - name: Commit aggregates
         run: |

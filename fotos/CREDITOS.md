@@ -65,6 +65,7 @@ Generado por `fotos/bajar.py`. Fotos de Wikimedia Commons (licencia libre, se re
 | Juan Ramos | `86c1a0bd` | Instagram @juanramosbaradero | perfil público | https://www.instagram.com/juanramosbaradero/ |
 | Juan Román Riquelme | `3bb5c26a` | Fobaledit | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Juan-Roman-Riquelme-presidente-de-Boca-Juniors.webp |
 | Juan Schiaretti | `e54745a1` | Unknown authorUnknown author | CC BY-SA 2.5 ar | https://commons.wikimedia.org/wiki/File:XV_Reuni%C3%B3n_Institucional_de_la_Regi%C3%B3n_Centro_-_02_(cropped).jpg |
+| Julia Strada | `2d82a1e7` | Cámara de Diputados de la Nación Argentina | Public domain | https://commons.wikimedia.org/wiki/File:Julia_Strada_Diputada_Nacional_2023.png |
 | Karina Milei | `f909be45` | [argentina.gob.ar Gobierno argentino] | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Karina_Milei.jpg |
 | Leandro Paredes | `1e0261f6` | Bryan Berlin | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Leandro_Paredes_Argentina_v_Egypt_7_July_2026-048.jpg |
 | Leandro Santoro | `ab81060c` | Pboffi | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Santoro54372_(cropped).jpg |
