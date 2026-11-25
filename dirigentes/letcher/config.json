@@ -533,6 +533,9 @@
   "salarios"
  ],
  "excluir_frases": [],
+ "excluir_textos": [
+  "strada"
+ ],
  "medios_locales": [],
  "sitios_locales": [],
  "rss": [
