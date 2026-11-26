@@ -232,3 +232,60 @@ th,td{padding:7px 6px}
 .js-plotly-plot,.plot-container,.svg-container{max-width:100%!important}
 .js-plotly-plot .modebar{display:none!important}
 }
+
+/* ---------- impacto visual: papel de mapa, retratos grandes y entrada de los datos ----------
+   Sin brillos ni contadores: las cifras aparecen, las líneas se trazan y las barras crecen una vez,
+   cuando el panel entra en pantalla. Con "reducir movimiento" todo queda quieto. Solo pantalla. */
+@media screen{
+/* retícula de carta náutica, muy tenue, fija detrás de todo */
+body{background-image:linear-gradient(rgba(160,170,185,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(160,170,185,.035) 1px,transparent 1px)!important;
+  background-size:32px 32px!important;background-attachment:fixed!important}
+/* en vivo: un latido discreto en el punto */
+.live b{position:relative}
+.live:not(.old) b::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:1px solid var(--ok);opacity:0;animation:sl-latido 2.4s ease-out infinite}
+@keyframes sl-latido{0%{transform:scale(.4);opacity:.9}100%{transform:scale(1.6);opacity:0}}
+/* pestaña activa: el filete se dibuja */
+nav button::after{content:"";position:absolute;left:12px;right:12px;bottom:0;height:2px;background:var(--sig);transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+nav button.on{box-shadow:none!important}
+nav button.on::after{transform:scaleX(1)}
+/* cifras: filete de acento que se tiende al aparecer */
+.kpi{overflow:hidden}
+.kpi::after{content:""!important;display:block!important;position:absolute;left:0;top:0;height:2px;width:100%;background:var(--sig);transform:scaleX(0);transform-origin:left;transition:transform .9s cubic-bezier(.2,.7,.2,1) .15s}
+.kpi.alert::after{background:var(--hot)}
+.sl-in .kpi::after,.kpi.sl-in::after{transform:scaleX(1)}
+.kpis .kpi:nth-child(2)::after{transition-delay:.25s}.kpis .kpi:nth-child(3)::after{transition-delay:.35s}.kpis .kpi:nth-child(4)::after{transition-delay:.45s}
+.kpis .kpi:nth-child(5)::after{transition-delay:.55s}.kpis .kpi:nth-child(6)::after{transition-delay:.65s}
+
+/* entrada de paneles (sala.js agrega .sl-rv y después .sl-in) */
+.sl-rv{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:var(--sl-d,0s)}
+.sl-rv.sl-in{opacity:1;transform:none}
+/* líneas que se trazan y barras que crecen (solo en los trazos que sala.js preparó) */
+.sl-rv path.js-line[pathLength]{stroke-dasharray:1;stroke-dashoffset:1}
+.sl-in path.js-line[pathLength]{animation:sl-trazo 1.6s cubic-bezier(.3,.6,.2,1) var(--sl-d,0s) forwards}
+@keyframes sl-trazo{to{stroke-dashoffset:0}}
+.sl-rv .barlayer .point path{transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(0)}
+.sl-rv [data-slh] .barlayer .point path{transform-origin:0 50%;transform:scaleX(0)}
+.sl-in .barlayer .point path{animation:sl-crece-y .9s cubic-bezier(.2,.7,.2,1) calc(var(--sl-d,0s) + .1s) forwards}
+.sl-in [data-slh] .barlayer .point path{animation-name:sl-crece-x}
+@keyframes sl-crece-y{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes sl-crece-x{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.sl-rv .scatterlayer .points path,.sl-rv .scattergeo .point,.sl-rv .scattergeo path.point{opacity:0}
+.sl-in .scatterlayer .points path,.sl-in .scattergeo .point,.sl-in .scattergeo path.point{animation:sl-aparece .6s ease calc(var(--sl-d,0s) + .5s) both}
+@keyframes sl-aparece{from{opacity:0}to{opacity:1}}
+}
+@media screen and (max-width:760px){
+/* retrato grande en la ficha de la persona: la foto manda */
+.hero:has(>.av.sl-foto){grid-template-columns:minmax(0,1fr)!important}
+.hero>.av.sl-foto{grid-column:1/-1;width:100%!important;height:min(62vw,250px)!important;background-position:50% 22%!important}
+.hero2 .me .hd{flex-direction:column;align-items:stretch;gap:12px}
+.hero2 .me .hd>.av.sl-foto{width:100%!important;height:min(62vw,250px)!important;background-position:50% 22%!important}
+.hero h1,.me h1{font-size:30px!important;line-height:1.08;letter-spacing:-.5px}
+.kpi .v,.kpi b{font-size:27px!important;letter-spacing:-.6px}
+}
+@media (prefers-reduced-motion:reduce){
+.sl-rv,.sl-rv.sl-in{opacity:1!important;transform:none!important;transition:none!important}
+.sl-rv path.js-line[pathLength]{stroke-dasharray:none!important;animation:none!important}
+.sl-rv .barlayer .point path,.sl-rv .scatterlayer .points path,.sl-rv .scattergeo .point{transform:none!important;opacity:1!important;animation:none!important}
+.live b::after{display:none}
+.kpi::after{transition:none!important}
+}
