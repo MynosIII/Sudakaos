@@ -1,12 +1,12 @@
 {
- "updated_at": "2026-11-25T23:31:39Z",
+ "updated_at": "2026-11-26T00:00:22Z",
  "simulado": false,
  "min_n": 30,
  "campo": {
-  "recibidas": 2,
+  "recibidas": 3,
   "validas": 0,
   "descartes": {
-   "demasiado rápida": 2
+   "demasiado rápida": 3
   },
   "por_version": {},
   "por_dia": {}

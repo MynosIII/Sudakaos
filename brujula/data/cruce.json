@@ -1,8 +1,8 @@
 {
- "updated_at": "2026-11-25T23:31:39Z",
+ "updated_at": "2026-11-26T00:00:22Z",
  "simulado": false,
  "n_quiz": 0,
- "textos": 16955,
+ "textos": 17135,
  "figuras": [
   {
    "nombre": "Agustín Tosco",
@@ -42,7 +42,7 @@
    "sov": 0.0,
    "brecha": 0.0,
    "tono": null,
-   "n": 2
+   "n": 3
   },
   {
    "nombre": "Eduardo Duhalde",
@@ -82,7 +82,7 @@
    "sov": 0.0,
    "brecha": 0.0,
    "tono": null,
-   "n": 2
+   "n": 3
   },
   {
    "nombre": "Itai Hagman",
@@ -330,7 +330,7 @@
    "sov": 0.1,
    "brecha": -0.1,
    "tono": null,
-   "n": 7
+   "n": 8
   },
   {
    "nombre": "Gustavo Valdés",
@@ -386,7 +386,7 @@
    "sov": 0.1,
    "brecha": -0.1,
    "tono": null,
-   "n": 8
+   "n": 9
   },
   {
    "nombre": "Julio Argentino Roca",
@@ -513,8 +513,8 @@
    "afinidad": 0.0,
    "sov": 0.2,
    "brecha": -0.2,
-   "tono": -14.3,
-   "n": 21
+   "tono": -13.6,
+   "n": 22
   },
   {
    "nombre": "Roque Sáenz Peña",
@@ -522,7 +522,7 @@
    "sov": 0.2,
    "brecha": -0.2,
    "tono": null,
-   "n": 14
+   "n": 15
   },
   {
    "nombre": "Alberto Weretilneck",
@@ -553,8 +553,8 @@
    "afinidad": 0.0,
    "sov": 0.3,
    "brecha": -0.3,
-   "tono": 13.4,
-   "n": 30
+   "tono": 12.9,
+   "n": 31
   },
   {
    "nombre": "Juan Domingo Perón",
@@ -637,14 +637,6 @@
    "n": 35
   },
   {
-   "nombre": "Martín Lousteau",
-   "afinidad": 0.0,
-   "sov": 0.4,
-   "brecha": -0.4,
-   "tono": -7.5,
-   "n": 40
-  },
-  {
    "nombre": "Nicolás Avellaneda",
    "afinidad": 0.0,
    "sov": 0.4,
@@ -675,6 +667,14 @@
    "brecha": -0.5,
    "tono": -4.3,
    "n": 47
+  },
+  {
+   "nombre": "Martín Lousteau",
+   "afinidad": 0.0,
+   "sov": 0.5,
+   "brecha": -0.5,
+   "tono": -7.4,
+   "n": 41
   },
   {
    "nombre": "Osvaldo Jaldo",
@@ -727,10 +727,18 @@
   {
    "nombre": "Ricardo Quintela",
    "afinidad": 0.0,
-   "sov": 0.7,
-   "brecha": -0.7,
+   "sov": 0.6,
+   "brecha": -0.6,
    "tono": 8.6,
    "n": 58
+  },
+  {
+   "nombre": "Gustavo Sáenz",
+   "afinidad": 0.0,
+   "sov": 0.7,
+   "brecha": -0.7,
+   "tono": -3.0,
+   "n": 67
   },
   {
    "nombre": "Rodolfo Walsh",
@@ -745,24 +753,16 @@
    "afinidad": 0.0,
    "sov": 0.8,
    "brecha": -0.8,
-   "tono": 2.9,
-   "n": 70
-  },
-  {
-   "nombre": "Gustavo Sáenz",
-   "afinidad": 0.0,
-   "sov": 0.8,
-   "brecha": -0.8,
-   "tono": -3.0,
-   "n": 67
+   "tono": 1.5,
+   "n": 71
   },
   {
    "nombre": "José Luis Espert",
    "afinidad": 0.0,
    "sov": 0.8,
    "brecha": -0.8,
-   "tono": -16.0,
-   "n": 75
+   "tono": -15.8,
+   "n": 76
   },
   {
    "nombre": "Manuel Belgrano",
@@ -789,20 +789,20 @@
    "n": 68
   },
   {
+   "nombre": "Mariano Moreno",
+   "afinidad": 0.0,
+   "sov": 0.9,
+   "brecha": -0.9,
+   "tono": 7.1,
+   "n": 85
+  },
+  {
    "nombre": "Claudio Vidal",
    "afinidad": 0.0,
    "sov": 1.0,
    "brecha": -1.0,
    "tono": 6.7,
    "n": 90
-  },
-  {
-   "nombre": "Mariano Moreno",
-   "afinidad": 0.0,
-   "sov": 1.0,
-   "brecha": -1.0,
-   "tono": 7.1,
-   "n": 85
   },
   {
    "nombre": "Néstor Kirchner",
@@ -826,7 +826,7 @@
    "sov": 1.0,
    "brecha": -1.0,
    "tono": 0.0,
-   "n": 86
+   "n": 87
   },
   {
    "nombre": "Juan Grabois",
@@ -873,16 +873,16 @@
    "afinidad": 0.0,
    "sov": 1.3,
    "brecha": -1.3,
-   "tono": -16.9,
-   "n": 118
+   "tono": -16.0,
+   "n": 119
   },
   {
    "nombre": "Lilia Lemoine",
    "afinidad": 0.0,
    "sov": 1.3,
    "brecha": -1.3,
-   "tono": -25.9,
-   "n": 112
+   "tono": -25.6,
+   "n": 113
   },
   {
    "nombre": "Mayra Mendoza",
@@ -895,18 +895,10 @@
   {
    "nombre": "Manuel Adorni",
    "afinidad": 0.0,
-   "sov": 1.5,
-   "brecha": -1.5,
+   "sov": 1.4,
+   "brecha": -1.4,
    "tono": -27.7,
    "n": 130
-  },
-  {
-   "nombre": "Maximiliano Pullaro",
-   "afinidad": 0.0,
-   "sov": 1.6,
-   "brecha": -1.6,
-   "tono": 6.9,
-   "n": 145
   },
   {
    "nombre": "Facundo Quiroga",
@@ -914,23 +906,31 @@
    "sov": 1.7,
    "brecha": -1.7,
    "tono": -3.3,
-   "n": 152
+   "n": 153
+  },
+  {
+   "nombre": "Maximiliano Pullaro",
+   "afinidad": 0.0,
+   "sov": 1.7,
+   "brecha": -1.7,
+   "tono": 7.2,
+   "n": 154
   },
   {
    "nombre": "Alfredo Cornejo",
    "afinidad": 0.0,
    "sov": 1.9,
    "brecha": -1.9,
-   "tono": -3.5,
-   "n": 169
+   "tono": -3.6,
+   "n": 170
   },
   {
    "nombre": "Máximo Kirchner",
    "afinidad": 0.0,
    "sov": 2.1,
    "brecha": -2.1,
-   "tono": -7.0,
-   "n": 187
+   "tono": -6.9,
+   "n": 188
   },
   {
    "nombre": "Karina Milei",
@@ -938,47 +938,47 @@
    "sov": 2.2,
    "brecha": -2.2,
    "tono": -2.5,
-   "n": 200
+   "n": 201
   },
   {
    "nombre": "Martín Llaryora",
    "afinidad": 0.0,
-   "sov": 2.3,
-   "brecha": -2.3,
+   "sov": 2.2,
+   "brecha": -2.2,
    "tono": 1.5,
-   "n": 201
+   "n": 202
   },
   {
    "nombre": "Jorge Macri",
    "afinidad": 0.0,
    "sov": 2.5,
    "brecha": -2.5,
-   "tono": -10.3,
-   "n": 223
+   "tono": -10.1,
+   "n": 228
   },
   {
    "nombre": "Luis Caputo",
    "afinidad": 0.0,
    "sov": 2.6,
    "brecha": -2.6,
-   "tono": -28.6,
-   "n": 231
+   "tono": -28.2,
+   "n": 234
   },
   {
    "nombre": "Victoria Villarruel",
    "afinidad": 0.0,
    "sov": 2.6,
    "brecha": -2.6,
-   "tono": -25.0,
-   "n": 232
+   "tono": -24.9,
+   "n": 233
   },
   {
    "nombre": "Mauricio Macri",
    "afinidad": 0.0,
    "sov": 2.8,
    "brecha": -2.8,
-   "tono": -13.9,
-   "n": 251
+   "tono": -14.1,
+   "n": 255
   },
   {
    "nombre": "Sergio Massa",
@@ -991,10 +991,10 @@
   {
    "nombre": "Diego Santilli",
    "afinidad": 0.0,
-   "sov": 3.3,
-   "brecha": -3.3,
-   "tono": -4.5,
-   "n": 293
+   "sov": 3.4,
+   "brecha": -3.4,
+   "tono": -3.9,
+   "n": 310
   },
   {
    "nombre": "Cristina Kirchner",
@@ -1007,26 +1007,26 @@
   {
    "nombre": "Patricia Bullrich",
    "afinidad": 0.0,
-   "sov": 4.5,
-   "brecha": -4.5,
+   "sov": 4.4,
+   "brecha": -4.4,
    "tono": -10.8,
-   "n": 397
+   "n": 398
   },
   {
    "nombre": "Axel Kicillof",
    "afinidad": 0.0,
-   "sov": 5.3,
-   "brecha": -5.3,
-   "tono": -8.6,
-   "n": 469
+   "sov": 5.2,
+   "brecha": -5.2,
+   "tono": -8.5,
+   "n": 473
   },
   {
    "nombre": "Javier Milei",
    "afinidad": 0.0,
-   "sov": 19.7,
-   "brecha": -19.7,
-   "tono": -16.4,
-   "n": 1758
+   "sov": 19.9,
+   "brecha": -19.9,
+   "tono": -16.1,
+   "n": 1796
   }
  ],
  "ejes": [
@@ -1040,7 +1040,7 @@
    "extremos": null,
    "encuadre": 0.0,
    "share": 12.1,
-   "n": 969,
+   "n": 979,
    "tono": -7.0,
    "brecha": null
   },
@@ -1052,10 +1052,10 @@
    "quiz": null,
    "sd": null,
    "extremos": null,
-   "encuadre": 34.8,
+   "encuadre": 34.5,
    "share": 6.8,
-   "n": 545,
-   "tono": -15.1,
+   "n": 550,
+   "tono": -14.9,
    "brecha": null
   },
   {
@@ -1067,9 +1067,9 @@
    "sd": null,
    "extremos": null,
    "encuadre": 94.1,
-   "share": 10.3,
-   "n": 824,
-   "tono": -8.9,
+   "share": 10.2,
+   "n": 826,
+   "tono": -8.8,
    "brecha": null
   },
   {
@@ -1082,8 +1082,8 @@
    "extremos": null,
    "encuadre": 4.1,
    "share": 7.9,
-   "n": 633,
-   "tono": -3.9,
+   "n": 637,
+   "tono": -4.1,
    "brecha": null
   },
   {
@@ -1094,10 +1094,10 @@
    "quiz": null,
    "sd": null,
    "extremos": null,
-   "encuadre": 7.6,
-   "share": 7.3,
-   "n": 587,
-   "tono": -11.9,
+   "encuadre": 7.5,
+   "share": 7.4,
+   "n": 600,
+   "tono": -11.7,
    "brecha": null
   },
   {
@@ -1108,10 +1108,10 @@
    "quiz": null,
    "sd": null,
    "extremos": null,
-   "encuadre": 78.1,
+   "encuadre": 78.4,
    "share": 4.1,
-   "n": 327,
-   "tono": -7.7,
+   "n": 330,
+   "tono": -7.5,
    "brecha": null
   },
   {
@@ -1124,7 +1124,7 @@
    "extremos": null,
    "encuadre": 98.9,
    "share": 14.5,
-   "n": 1166,
+   "n": 1175,
    "tono": 3.8,
    "brecha": null
   },
@@ -1136,10 +1136,10 @@
    "quiz": null,
    "sd": null,
    "extremos": null,
-   "encuadre": 52.0,
+   "encuadre": 52.3,
    "share": 11.4,
-   "n": 920,
-   "tono": -8.2,
+   "n": 927,
+   "tono": -8.3,
    "brecha": null
   },
   {
@@ -1150,10 +1150,10 @@
    "quiz": null,
    "sd": null,
    "extremos": null,
-   "encuadre": 23.1,
+   "encuadre": 22.9,
    "share": 2.9,
-   "n": 232,
-   "tono": -19.4,
+   "n": 235,
+   "tono": -19.2,
    "brecha": null
   },
   {
@@ -1164,9 +1164,9 @@
    "quiz": null,
    "sd": null,
    "extremos": null,
-   "encuadre": 46.3,
+   "encuadre": 46.6,
    "share": 6.7,
-   "n": 541,
+   "n": 544,
    "tono": -27.4,
    "brecha": null
   },
@@ -1178,9 +1178,9 @@
    "quiz": null,
    "sd": null,
    "extremos": null,
-   "encuadre": 75.8,
+   "encuadre": 75.9,
    "share": 9.3,
-   "n": 747,
+   "n": 755,
    "tono": -8.3,
    "brecha": null
   },
@@ -1192,10 +1192,10 @@
    "quiz": null,
    "sd": null,
    "extremos": null,
-   "encuadre": 22.7,
+   "encuadre": 22.5,
    "share": 6.8,
-   "n": 544,
-   "tono": -3.7,
+   "n": 550,
+   "tono": -3.8,
    "brecha": null
   }
  ],
@@ -1216,7 +1216,7 @@
    "id": "int",
    "nombre": "Mundo",
    "divide": null,
-   "se_habla": 10.3
+   "se_habla": 10.2
   },
   {
    "id": "mil",
@@ -1228,7 +1228,7 @@
    "id": "lib",
    "nombre": "Seguridad",
    "divide": null,
-   "se_habla": 7.3
+   "se_habla": 7.4
   },
   {
    "id": "col",
@@ -1282,7 +1282,7 @@
   },
   {
    "nivel": "media",
-   "t": "Luis Caputo: 127 menciones en 7 días, 2,3× la semana anterior."
+   "t": "Luis Caputo: 130 menciones en 7 días, 2,3× la semana anterior."
   },
   {
    "nivel": "media",
@@ -1290,11 +1290,15 @@
   },
   {
    "nivel": "media",
-   "t": "Diego Santilli: 236 menciones en 7 días, 10,7× la semana anterior."
+   "t": "Diego Santilli: 252 menciones en 7 días, 11,5× la semana anterior."
   },
   {
    "nivel": "media",
-   "t": "Martín Lousteau: 27 menciones en 7 días, 6,8× la semana anterior."
+   "t": "Martín Lousteau: 28 menciones en 7 días, 7,0× la semana anterior."
+  },
+  {
+   "nivel": "media",
+   "t": "Alfredo Cornejo: 56 menciones en 7 días, 2,0× la semana anterior."
   },
   {
    "nivel": "media",
