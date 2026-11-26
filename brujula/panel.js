@@ -93,7 +93,7 @@
     const fg = (q.figuras || []).slice(0, 15).reverse();
     plot('e-figs', [{ type: 'bar', orientation: 'h', y: fg.map(f => f.nombre), x: fg.map(f => f.pct), marker: { color: C.b }, hovertemplate: '%{y}: %{x:.1f}%<extra></extra>' }],
       lay(440, { margin: { l: 170, r: 10, t: 10, b: 30 } }));
-    const vars = [['genero', 'Género'], ['edad_g', 'Edad'], ['region', 'Región'], ['red', 'Red principal'], ['pais_res', 'País']];
+    const vars = [['genero', 'Género'], ['edad_g', 'Edad'], ['region', 'Región'], ['red', 'Red principal'], ['pais_res', 'País'], ['autodef', 'Autodefinición']];
     chips('e-var', vars, S.var, v => { S.var = v; encuesta() });
     const seg = q.por[S.var] || {};
     const gs = Object.keys(seg);

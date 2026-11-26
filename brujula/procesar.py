@@ -144,7 +144,8 @@ def simular(n, seed=7):
         rows.append({"recibido": f"2026-11-{rnd.randint(1, 23):02d}T{rnd.randint(0, 23):02d}:00Z", "schema": 2, "version": ver,
                      "lang": "pt" if ver == "br" else "es", "ids": ",".join(ids_v[ver]), "ans": ",".join(map(str, ans)),
                      "dur_s": rnd.randint(90, 900), "cid_hash": f"{rnd.getrandbits(48):012x}", "edad": edad, "genero": gen,
-                     "pais_res": pais, "prov": prov, "pais_nac": pais, "red": red})
+                     "pais_res": pais, "prov": prov, "pais_nac": pais, "red": red,
+                     "autodef": autodef_sint(lat, rnd)})
     return rows
 
 
@@ -242,6 +243,16 @@ def top_figuras(rows, w, ver):
         c[best["nombre"]] += wi
     tot = sum(c.values()) or 1
     return [{"nombre": n, "pct": round(100 * v / tot, 1)} for n, v in c.most_common()]
+
+
+def autodef_sint(lat, rnd):
+    """Autodefinición para los datos sintéticos: sigue la economía latente con ruido."""
+    x = lat.get("pla", 0) + 0.5 * lat.get("col", 0) + rnd.gauss(0, .8)
+    if rnd.random() < .12:
+        return rnd.choice(["Ninguna / apolítico", "Prefiero no decir"])
+    if x > 1.6 and lat.get("lib", 0) > 0:
+        return "Libertario"
+    return ["Izquierda", "Centroizquierda", "Centro", "Centroderecha", "Derecha"][min(4, max(0, int(round(x)) + 2))]
 
 
 def segmento(rows, w, var, ver):
@@ -376,7 +387,7 @@ def main():
         out["versiones"][ver] = {
             "n": len(rs), "n_efectivo": round(n_efectivo(w)), "ponderacion": pond,
             "certeza": certeza(rs, w), "ejes": medias(rs, w), "figuras": top_figuras(rs, w, ver),
-            "por": {var: segmento(rs, w, var, ver) for var in ("genero", "edad_g", "region", "red", "pais_res")},
+            "por": {var: segmento(rs, w, var, ver) for var in ("genero", "edad_g", "region", "red", "pais_res", "autodef")},
             "edad_genero": cruce(rs, w, "edad_g", "genero"),
             "region_edad": cruce(rs, w, "region", "edad_g"),
             "preguntas": preguntas(rs, w) if len(rs) >= MIN_N else [],

@@ -10,8 +10,9 @@ Tres piezas:
    conocidos a figuras menores). Idioma aparte del país: selector ES / PT / EN (Brasil arranca en portugués).
    Devuelve posición por eje, **certeza** por eje (qué tan firme y coherente es la postura, dibujada como una banda), los 5
    dirigentes más cercanos (la afinidad pesa más los ejes donde la persona está segura), un mapa economía × valores y un link
-   para compartir. Al final, cinco datos opcionales (edad en rango, género, país y provincia o estado, país de nacimiento, red
-   principal) con una casilla de consentimiento. Se publica en `/quiz/`. Los textos de la interfaz están en `quiz/i18n.js`.
+   para compartir. Al final, datos opcionales (edad en rango, género, país y provincia o estado, país de nacimiento, red
+   principal y cómo se define políticamente) con una casilla de consentimiento. La columna `autodef` es nueva:
+   hay que volver a pegar `apps_script/Code.gs` en el Apps Script e implementar una versión nueva. Se publica en `/quiz/`. Los textos de la interfaz están en `quiz/i18n.js`.
 2. **Social listener** (`listener/`): escucha pasiva por eje y por dirigente. Google News, YouTube (videos y comentarios),
    Biblioteca de Anuncios de Meta (avisos por tema con edad y género del público alcanzado), Instagram desde `meta/`, X solo a mano.
 3. **Tablero** (`index.html` + `panel.js`): Panorama, Encuesta, Conversación, Cruce, Resumen accionable (PDF) y Fuentes y método.

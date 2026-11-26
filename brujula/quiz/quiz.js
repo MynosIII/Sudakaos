@@ -403,6 +403,8 @@
   }
 
   // ------------------------------------------------------------ demográficas (opcionales)
+  // Autodefinición política (se guarda en español para que los agregados no dependan del idioma)
+  const AUTODEF = ['Izquierda', 'Centroizquierda', 'Centro', 'Centroderecha', 'Derecha', 'Libertario', 'Ninguna / apolítico', 'Prefiero no decir'];
   function opcionesDemo() {
     const f = $('#demo'), t = T();
     const opts = (a, sel) => `<option value="">${esc(t.elegi_op)}</option>` +
@@ -416,6 +418,7 @@
     f.pais_nac.innerHTML = opts(paises, keep('pais_nac') || paisDef);
     f.red.innerHTML = opts([['Instagram', 'Instagram'], ['X (Twitter)', 'X (Twitter)'], ['TikTok', 'TikTok'], ['YouTube', 'YouTube'], ['Facebook', 'Facebook'],
       ['WhatsApp / Telegram', 'WhatsApp / Telegram'], ['Ninguna: medios tradicionales', t.ninguna]], keep('red'));
+    f.autodef.innerHTML = opts(AUTODEF.map((v, i) => [v, t.autodef_op[i]]), keep('autodef'));
     provincias();
   }
   function provincias() {
@@ -674,6 +677,13 @@
 
   async function copiar(s) { try { await navigator.clipboard.writeText(s); $('#copiar').textContent = T().copiado } catch (e) { } }
 
+  // Compara cómo se definió la persona con lo que dicen sus respuestas en economía (y libertades, para "libertario")
+  function autodefCmp(sc, desdeLink) {
+    const i = AUTODEF.indexOf(S.autodef || '');
+    if (desdeLink || i < 0 || i > 5) return '';
+    const e = (sc.pla + sc.col) / 2, q = e > 65 && sc.lib > 65 ? 5 : e < 30 ? 0 : e < 45 ? 1 : e <= 55 ? 2 : e <= 70 ? 3 : 4, t = T();
+    return `<p class="autodef">${esc(t.autodef_cmp(t.autodef_op[i], t.autodef_op[q], i === q))}</p>`;
+  }
   function perfil(sc, cert, rk, desdeLink) {
     const t = T(), i0 = rk.ideo[0], i1 = rk.ideo[1], vals = Object.values(sc);
     const marc = vals.filter(v => Math.abs(v - 50) >= 25).length, cob = Object.values(cert).filter(c => c >= 40).length;
@@ -683,7 +693,7 @@
     const fuertes = dom.filter(x => Math.abs(sc[x.e.id] - 50) >= 15).slice(0, 3).map(x => polo(x.e, sc[x.e.id]));
     $('#r-perfil').innerHTML = `${ring(i0.af)}<div><div class="k">${esc(desdeLink ? t.res_link : t.af_principal)} · ${esc(nombreVer(S.ver))}</div>
       <h2>${esc(ideoNom(i0.i))}</h2><p>${esc(ideoDesc(i0.i))}</p>
-      <p>${esc(t.frase(ideoNom(i0.i), i1 && i1.af >= i0.af - 6 ? ideoNom(i1.i) : ''))} ${esc(fuertes.length ? t.define(lista(fuertes)) : t.centro)}</p></div>
+      <p>${esc(t.frase(ideoNom(i0.i), i1 && i1.af >= i0.af - 6 ? ideoNom(i1.i) : ''))} ${esc(fuertes.length ? t.define(lista(fuertes)) : t.centro)}</p>${autodefCmp(sc, desdeLink)}</div>
       <div class="kpis"><div><b>${marc}/12</b><small>${esc(t.k_marc)}</small></div><div><b>${cob}/12</b><small>${esc(t.k_cob)}</small></div>
       <div><b>${op}</b><small>${esc(t.k_op)}</small></div><div><b>${media(cert)}%</b><small>${esc(t.k_cert)}</small></div></div>`;
   }
@@ -1053,7 +1063,8 @@
       if (f.web.value) { resultado(false); return } // trampa para bots
       if (f.edad.value === '<16') { resultado('menor'); return } // no se guarda nada de menores de 16
       if (!f.edad.value) { err.textContent = T().falta; return } // la edad es lo único necesario para saber que es mayor de 16
-      const demo = { edad: f.edad.value, genero: f.genero.value, pais_res: f.pais_res.value, prov: $('#lab-prov').style.display === 'none' ? '' : f.prov.value, pais_nac: f.pais_nac.value, red: f.red.value };
+      const demo = { edad: f.edad.value, genero: f.genero.value, pais_res: f.pais_res.value, prov: $('#lab-prov').style.display === 'none' ? '' : f.prov.value, pais_nac: f.pais_nac.value, red: f.red.value, autodef: f.autodef.value };
+      S.autodef = f.autodef.value;
       resultado(await enviar(demo));
     };
   }
