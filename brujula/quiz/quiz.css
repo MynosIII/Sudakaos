@@ -348,3 +348,15 @@ body{font-variant-numeric:tabular-nums}.tema{font-size:14.5px;padding:4px 10px}
 .todas li b{font-weight:600}
 .todas li span{float:right;font-variant-numeric:tabular-nums;color:var(--muted,var(--dim))}
 .todas li small{display:block;color:var(--muted,var(--dim));font-size:14px;margin-top:2px}
+/* más análisis */
+.an2{margin-bottom:22px}
+.frs{margin:6px 0 0;padding-left:22px}
+.frs li{margin:0 0 12px;line-height:1.5}
+.frs q{display:block;quotes:"«" "»"}
+.frs small{display:inline-block;margin-top:3px;font-size:13.5px;color:var(--sig);font-weight:600}
+.frs.con small{color:var(--hot)}
+.aliado{display:flex;gap:12px;align-items:center;padding:12px;border:1px solid var(--line);border-radius:14px;margin-top:10px;background:var(--s2)}
+.aliado>div{flex:1;min-width:0}.aliado b{display:block}.aliado small{color:var(--dim);font-size:13.5px}
+.aliado p{margin:4px 0 0;font-size:15px;color:var(--muted)}
+.aliado .pc{font:700 20px var(--head);color:var(--sig)}
+.perfil .aviso{border-left:3px solid var(--hot);padding:6px 10px;background:color-mix(in srgb,var(--hot) 10%,transparent);border-radius:6px}

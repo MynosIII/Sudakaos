@@ -66,12 +66,17 @@
      Coherencia (modelo acumulativo, como 12axes): una frase de nivel L (1 moderada … 4 extrema) la aceptan quienes están del
      lado de su polo al menos (L - 1) × 12,5 puntos más allá del centro; cada respuesta que coincide con eso suma y la que no, resta. */
   function calcular(qs, ans, idsElegidos) {
-    const ids = idsElegidos || IDS(), Sm = {}, M = {}, D = {}, W = {}, sc = {}, cert = {};
-    ids.forEach(k => { Sm[k] = 0; M[k] = 0; D[k] = 0; W[k] = 0 });
+    const ids = idsElegidos || IDS(), Sm = {}, M = {}, D = {}, W = {}, sc = {}, cert = {}, P = {}, N = {};
+    ids.forEach(k => { Sm[k] = 0; M[k] = 0; D[k] = 0; W[k] = 0; P[k] = 0; N[k] = 0 });
+    // Balance de redacción: si un eje tiene más frases hacia un polo que hacia el otro, se equilibra el peso de cada lado
+    // (hasta ×3) para que estar de acuerdo con todo, o en desacuerdo con todo, no corra el resultado.
+    qs.forEach(q => { for (const [k, w] of Object.entries(q.e)) if (k in P) { if (w > 0) P[k] += w; else N[k] -= w } });
+    const bal = (k, w) => !P[k] || !N[k] ? w : w * Math.min(3, (P[k] + N[k]) / (2 * (w > 0 ? P[k] : N[k])));
     qs.forEach((q, i) => {
       const a = ans[i] ?? 0;
-      for (const [k, w] of Object.entries(q.e)) {
+      for (const [k, w0] of Object.entries(q.e)) {
         if (!(k in Sm)) continue;
+        const w = bal(k, w0);
         Sm[k] += a * w; M[k] += 2 * Math.abs(w); W[k] += Math.abs(w);
         D[k] += Math.abs(w) * (a === 0 ? 0 : Math.abs(a) === 1 ? .75 : 1);
       }
@@ -80,9 +85,9 @@
     ids.forEach(k => {
       let num = 0, den = 0;
       qs.forEach((q, i) => {
-        const w = q.e[k], a = ans[i] ?? 0;
+        const w = q.e[k] && bal(k, q.e[k]), a = ans[i] ?? 0;
         if (!w || !a) return;
-        const L = q.nivel || (Math.abs(w) >= 2 ? 3 : 1);
+        const L = q.nivel || (Math.abs(q.e[k]) >= 2 ? 3 : 1);
         const pred = Math.sign(w) * (sc[k] - 50) - (L - 1) * 12.5 >= 0 ? 1 : -1;
         num += (Math.sign(a) === pred ? 1 : -1) * Math.abs(w) * Math.abs(a); den += Math.abs(w) * Math.abs(a);
       });
@@ -429,9 +434,15 @@
   function demograficas() {
     const r = calcular(S.qs, S.ans); S.scores = r.sc; S.cert = r.cert;
     const r2 = calcular(S.qs, S.ans, IDS2()); S.scores2 = r2.sc; S.cert2 = r2.cert;
+    // Respuestas casi todas iguales (y no neutrales): el resultado dice poco, así que la certeza baja mucho.
+    const cnt = {}; S.ans.forEach(a => { if (a) cnt[a] = (cnt[a] || 0) + 1 });
+    const max = Math.max(0, ...Object.values(cnt)); S.igual = S.ans.length >= 20 && max / S.ans.length >= 0.8;
+    if (S.igual) [S.cert, S.cert2].forEach(c => Object.keys(c).forEach(k => { c[k] = Math.round(c[k] * 0.25) }));
     // respuestas por eje y distribución (para el análisis)
     S.nresp = {}; [...IDS(), ...IDS2()].forEach(k => { S.nresp[k] = 0 });
     S.qs.forEach((q, i) => { if (S.ans[i] !== null) Object.keys(q.e).forEach(k => { if (q.e[k] && k in S.nresp) S.nresp[k]++ }) });
+    // un eje complementario medido sólo con frases hacia un mismo polo no se puede equilibrar: se toma como no medido
+    IDS2().forEach(k => { const ws = S.qs.map(q => q.e[k]).filter(Boolean); if (!ws.some(w => w > 0) || !ws.some(w => w < 0)) S.nresp[k] = 0 });
     S.dist = [2, 1, 0, -1, -2].map(v => S.ans.filter(a => (a ?? 0) === v).length);
     if (!CFG.endpoint) { resultado(false); return } // sin destino configurado no tiene sentido pedir datos
     opcionesDemo();
@@ -693,7 +704,7 @@
     const fuertes = dom.filter(x => Math.abs(sc[x.e.id] - 50) >= 15).slice(0, 3).map(x => polo(x.e, sc[x.e.id]));
     $('#r-perfil').innerHTML = `${ring(i0.af)}<div><div class="k">${esc(desdeLink ? t.res_link : t.af_principal)} · ${esc(nombreVer(S.ver))}</div>
       <h2>${esc(ideoNom(i0.i))}</h2><p>${esc(ideoDesc(i0.i))}</p>
-      <p>${esc(t.frase(ideoNom(i0.i), i1 && i1.af >= i0.af - 6 ? ideoNom(i1.i) : ''))} ${esc(fuertes.length ? t.define(lista(fuertes)) : t.centro)}</p>${autodefCmp(sc, desdeLink)}</div>
+      <p>${esc(t.frase(ideoNom(i0.i), i1 && i1.af >= i0.af - 6 ? ideoNom(i1.i) : ''))} ${esc(fuertes.length ? t.define(lista(fuertes)) : t.centro)}</p>${autodefCmp(sc, desdeLink)}${!desdeLink && S.igual ? `<p class="aviso">${esc(t.aviso_igual)}</p>` : !desdeLink && S.dist && S.dist[2] >= 0.7 * S.dist.reduce((a, b) => a + b, 0) ? `<p class="aviso">${esc(t.aviso_neutral)}</p>` : ''}</div>
       <div class="kpis"><div><b>${marc}/12</b><small>${esc(t.k_marc)}</small></div><div><b>${cob}/12</b><small>${esc(t.k_cob)}</small></div>
       <div><b>${op}</b><small>${esc(t.k_op)}</small></div><div><b>${media(cert)}%</b><small>${esc(t.k_cert)}</small></div></div>`;
   }
@@ -810,9 +821,35 @@
     const lect = c => c >= 60 ? t.lect[0] : c >= 35 ? t.lect[1] : t.lect[2];
     const tabla = `<table class="tt"><thead><tr>${t.th.map((h, j) => `<th${j && j < 4 ? ' class="n"' : ''}>${esc(h)}</th>`).join('')}</tr></thead><tbody>${E.map(e =>
       `<tr><td><span class="sw" style="background:${COLOR[e.id]}"></span>${esc(e.nombre)}</td><td class="n">${sc[e.id]}</td><td class="n">${cert[e.id]}%</td><td class="n">${n ? n[e.id] : '—'}</td><td>${esc(lect(cert[e.id]))}</td></tr>`).join('')}</tbody></table>`;
-    $('#anal').innerHTML = `<div class="an"><div class="scat"><h4>${esc(t.a_mapa)}</h4>${g}<p class="meta">${esc(t.a_mapa_nota)}</p></div>
+    $('#anal').innerHTML = `${masAnalisis(sc, rk)}<div class="an"><div class="scat"><h4>${esc(t.a_mapa)}</h4>${g}<p class="meta">${esc(t.a_mapa_nota)}</p></div>
       <div><h4>${esc(t.a_tens)}</h4><div class="tens">${tensH}</div><div style="margin-top:16px">${dist}</div></div>
       <div>${sep}</div><div><h4>${esc(t.a_tabla)}</h4>${tabla}</div></div>`;
+  }
+  // Frases que más te definen, frases donde te contradijiste, aliado inesperado y rival.
+  function masAnalisis(sc, rk) {
+    const t = T(), todos = { ...sc, ...(S.scores2 || {}) }, R = respuestas();
+    let frases = '';
+    if (!S._link && S.qs && S.ans) {
+      // impacto de cada respuesta: cuánto empuja hacia donde quedaste (positivo) o en contra (negativo)
+      const imp = S.qs.map((q, i) => {
+        const a = S.ans[i] || 0; let v = 0;
+        for (const [k, w] of Object.entries(q.e)) if (todos[k] != null && k !== 'cer' && Math.abs(todos[k] - 50) >= 10) v += a * w * Math.sign(todos[k] - 50);
+        return { q, a, v };
+      }).filter(x => x.a);
+      const resp = a => R[[2, 1, 0, -1, -2].indexOf(a)].t;
+      const item = x => `<li><q>${esc(texto(x.q))}</q><small>${esc(resp(x.a))}</small></li>`;
+      const def = imp.filter(x => x.v > 0).sort((a, b) => b.v - a.v).slice(0, 4), con = imp.filter(x => x.v < -0.4).sort((a, b) => a.v - b.v).slice(0, 3);
+      frases = `<div><h4>${esc(t.m_def)}</h4>${def.length ? `<ol class="frs">${def.map(item).join('')}</ol>` : `<p class="meta">${esc(t.m_nada)}</p>`}</div>
+        <div><h4>${esc(t.m_con)}</h4>${con.length ? `<p class="meta">${esc(t.m_con_sub)}</p><ol class="frs con">${con.map(item).join('')}</ol>` : `<p class="meta">${esc(t.m_sin_con)}</p>`}</div>`;
+    }
+    // aliado inesperado: el dirigente más afín del otro lado de la economía; rival: el menos afín
+    const eco = p => (p.pla + p.col) / 2, yo = eco(sc), lado = yo >= 50 ? 1 : 0;
+    const otro = Math.abs(yo - 50) >= 8 ? rk.figs.find(x => (eco(x.f.pos) >= 50 ? 1 : 0) !== lado && Math.abs(eco(x.f.pos) - 50) >= 15) : null;
+    const rival = rk.figs[rk.figs.length - 1];
+    const fig = (x, txt) => x ? `<div class="aliado">${avatar(x.f, 'md')}<div><b>${esc(x.f.nombre)}</b><small>${esc(x.f.espacio || x.f.cargo || '')}</small><p>${esc(txt)}</p></div><span class="pc">${x.af}%</span></div>` : '';
+    const coinc = x => lista(cercanos(sc, x.f.pos, 2));
+    const gente = `<div><h4>${esc(t.m_gente)}</h4>${fig(otro, otro ? t.m_aliado(coinc(otro)) : '')}${fig(rival, t.m_rival)}</div>`;
+    return `<div class="an an2">${frases}${gente}</div>`;
   }
 
   // ------------------------------------------------------------ tarjeta 1080 × 1920 (canvas, se arma en el navegador)
@@ -1096,6 +1133,8 @@
     $('#tema').onclick = () => tema(document.documentElement.dataset.theme === 'light' ? 'dark' : 'light');
     window.addEventListener('hashchange', () => { if (!desdeHash()) ruta() });
     if (!desdeHash()) ruta();
+    // Gancho para las pruebas automáticas (tests/simular.js): sólo existe con ?test en la URL.
+    if (/[?&]test\b/.test(location.search)) window.__brujula = { S, seleccion, calcular, demograficas: () => { CFG.endpoint = ''; demograficas() }, polosFuertes, AUTODEF };
   }
   main();
 })();
