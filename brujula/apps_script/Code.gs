@@ -15,7 +15,7 @@
  */
 const HOJA = 'respuestas';
 const COLS = ['recibido', 'schema', 'version', 'ids', 'ans', 'scores', 'top', 'dur_s', 'cid_hash',
-  'edad', 'genero', 'pais_res', 'prov', 'pais_nac', 'red', 'mobile', 'lang', 'cert'];
+  'edad', 'genero', 'pais_res', 'prov', 'pais_nac', 'red', 'mobile', 'lang', 'cert', 'autodef'];
 const EDADES = ['16-17', '18-24', '25-34', '35-44', '45-54', '55-64', '65+'];
 const MAX_BYTES = 6000;
 
@@ -23,6 +23,8 @@ function hoja_() {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   let sh = ss.getSheetByName(HOJA);
   if (!sh) { sh = ss.insertSheet(HOJA); sh.appendRow(COLS); sh.setFrozenRows(1) }
+  // planillas creadas con una versión anterior: completar los encabezados que falten
+  if (sh.getLastColumn() < COLS.length) sh.getRange(1, 1, 1, COLS.length).setValues([COLS]);
   return sh;
 }
 
@@ -54,7 +56,8 @@ function doPost(e) {
         p.cid ? sha_(corto_(p.cid, 80)) : '',
         d.edad, corto_(d.genero, 30), corto_(d.pais_res, 40), corto_(d.prov, 40), corto_(d.pais_nac, 40), corto_(d.red, 40),
         p.ua_mobile ? 1 : 0,
-        /^(es|pt|en)$/.test(p.lang || '') ? p.lang : '', corto_(JSON.stringify(p.cert || {}), 300)
+        /^(es|pt|en)$/.test(p.lang || '') ? p.lang : '', corto_(JSON.stringify(p.cert || {}), 300),
+        corto_(d.autodef, 40)
       ]);
     } finally { lock.releaseLock() }
     return out_({ ok: true });
