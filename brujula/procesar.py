@@ -51,10 +51,24 @@ def calcular(ids, ans):
     cada una que contradice resta."""
     qs = [(PREG[q], a) for q, a in zip(ids, ans) if q in PREG]
     Sm, M, D, W = defaultdict(float), defaultdict(float), defaultdict(float), defaultdict(float)
-    for q, a in qs:
+    # balance de redacción por eje (igual que quiz.js): cada lado pesa lo mismo, con un tope de ×3
+    P, N = defaultdict(float), defaultdict(float)
+    for q, _ in qs:
         for k, w in q["e"].items():
+            if w > 0:
+                P[k] += w
+            else:
+                N[k] -= w
+
+    def bal(k, w):
+        if not P[k] or not N[k]:
+            return w
+        return w * min(3, (P[k] + N[k]) / (2 * (P[k] if w > 0 else N[k])))
+    for q, a in qs:
+        for k, w0 in q["e"].items():
             if k not in K:  # ejes complementarios: el agregado público usa los 12 principales
                 continue
+            w = bal(k, w0)
             Sm[k] += a * w
             M[k] += 2 * abs(w)
             D[k] += abs(w) * (0 if a == 0 else .75 if abs(a) == 1 else 1)
@@ -64,10 +78,11 @@ def calcular(ids, ans):
     for k in K:
         num = den = 0.0
         for q, a in qs:
-            w = q["e"].get(k)
-            if not w or not a:
+            w0 = q["e"].get(k)
+            if not w0 or not a:
                 continue
-            nivel = q.get("nivel") or (3 if abs(w) >= 2 else 1)
+            w = bal(k, w0)
+            nivel = q.get("nivel") or (3 if abs(w0) >= 2 else 1)
             pred = 1 if math.copysign(1, w) * (sc[k] - 50) - (nivel - 1) * 12.5 >= 0 else -1
             num += (1 if math.copysign(1, a) == pred else -1) * abs(w) * abs(a)
             den += abs(w) * abs(a)

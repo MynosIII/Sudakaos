@@ -51,6 +51,7 @@ Tres piezas:
 | `listener/collect.py`, `listener/analyze.py` | Recolección y agregados → `data/listener.json` |
 | `cruce.py` | Brechas, alertas y acciones → `data/cruce.json` |
 | `tests/test_pipeline.py` | Prueba de punta a punta con datos simulados (`--guardar-demo` regenera `data/demo/`) |
+| `tests/simular.js` | Perfiles simulados (izquierda, libertario, conservador, etc.) contra el quiz en el navegador: ejes, ideologías, dirigentes y sesgo de "todo de acuerdo". Servir `brujula/` en :8799 y correr con node |
 
 ## Certeza
 
