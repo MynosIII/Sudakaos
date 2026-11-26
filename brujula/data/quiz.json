@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-26T00:48:40Z",
+ "updated_at": "2026-11-26T02:30:10Z",
  "simulado": false,
  "min_n": 30,
  "campo": {
@@ -14,10 +14,11 @@
  "versiones": {},
  "metodo": {
   "muestra": "Autoselección online (quien entra al quiz y acepta sumar sus respuestas). No es una muestra probabilística: los resultados describen a quienes respondieron y, ponderados, se acercan a la población; el intervalo es de referencia.",
-  "puntaje": "12 ejes (preguntas base adaptadas de 12axes, MIT). Cada eje: 50 + 50 × (suma de respuesta × peso) / (suma de 2 × |peso|). 0 = polo a, 100 = polo b. a / b = % con puntaje < 40 / > 60.",
-  "certeza": "Certeza por eje (0-100) = decisión (qué tan lejos de neutral responde) × coherencia (acuerdo con frases cuyo nivel queda cerca de su posición y desacuerdo con las lejanas).",
+  "puntaje": "30 ejes: 12 principales (preguntas base adaptadas de 12axes, MIT), 17 complementarios y Certeza. Cada eje: 50 + 50 × (suma de respuesta × peso) / (suma de 2 × |peso|), con cada lado del eje equilibrado (tope ×3). 0 = polo a, 100 = polo b. a / b = % con puntaje < 40 / > 60. Un eje complementario cuenta para una persona si contestó 2+ frases de ese eje hacia los dos polos, y se publica si lo midieron al menos el mínimo de personas del grupo (columna n).",
+  "certeza": "Certeza por eje (0-100) = decisión (qué tan lejos de neutral responde) × coherencia (acuerdo con frases cuyo nivel queda cerca de su posición y desacuerdo con las lejanas). Si 80%+ de las respuestas son iguales se multiplica por 0,25. El eje Certeza (30) es el promedio de cada persona en los ejes que midió.",
+  "ideologias": "Ideología más cercana = la de menor distancia en los 12 ejes y los complementarios medidos, ponderada por certeza, contra las 85 posiciones editoriales de datos/ideologias.json (a revisar). Es la misma cuenta que muestra el quiz a cada persona.",
   "calidad": "Se descartan respuestas con menos de 2.5 s por pregunta, misma respuesta en todo, más de 60% neutral, incompletas y duplicadas por navegador (vale la última).",
   "publicacion": "Solo grupos con 30 respuestas o más. Intervalo 95% con n efectivo de Kish.",
-  "afinidad": "Dirigente más cercano = menor distancia promedio en los 12 ejes, ponderada por la certeza de cada persona, contra la codificación editorial de datos/figuras.json (a revisar)."
+  "afinidad": "Dirigente más cercano = menor distancia promedio en los 12 ejes y los complementarios medidos, ponderada por la certeza de cada persona, contra la codificación editorial de datos/figuras.json (a revisar)."
  }
 }
