@@ -41,7 +41,53 @@
     var cart=!t0.type||/^(scatter|bar|histogram|box|heatmap|violin)$/.test(t0.type);
     if(cart&&!lay.xaxis&&t0.x){lay.xaxis={};axisSkin(lay.xaxis,!xcat)}
     if(cart&&!lay.yaxis&&t0.y){lay.yaxis={};axisSkin(lay.yaxis,!ycat&&!horiz)}
+    if(movil())chico(data,lay,cart);
     return lay;
+  }
+
+  /* ---------- celular: gráficos que entran en la pantalla y no secuestran el scroll ---------- */
+  var MQ=window.matchMedia?window.matchMedia('(max-width:760px)'):{matches:false};
+  function movil(){return MQ.matches}
+  function corta(v,n){v=String(v);return v.length>n?v.slice(0,n-1)+'…':v}
+  function chico(data,lay,cart){
+    var m=Object.assign({},lay.margin||{});
+    // márgenes de escritorio (60-200px) se comen medio gráfico en 390px: se achican y Plotly agranda lo justo
+    if(m.l==null||m.l>48)m.l=cart?36:8;if(m.r==null||m.r>16)m.r=cart?10:8;
+    if(m.t==null||m.t>36)m.t=lay.title&&lay.title.text?36:18;if(m.b==null||m.b>44)m.b=cart?34:8;
+    // barras horizontales con la cifra afuera: dejar lugar para que no se corte
+    if(data.some(function(t){return t&&t.orientation==='h'&&(t.text||t.texttemplate)&&t.textposition!=='inside'}))m.r=Math.max(m.r,44);
+    lay.margin=m;
+    Object.keys(lay).forEach(function(k){
+      if(!/^[xy]axis\d*$/.test(k))return;var ax=lay[k];ax.automargin=true;
+      if(ax.title){if(typeof ax.title==='string')ax.title={text:ax.title};ax.title.font=Object.assign({},ax.title.font||{},{size:9.5});ax.title.standoff=4}
+      if(ax.tickfont&&ax.tickfont.size>10)ax.tickfont.size=10;
+    });
+    // etiquetas de categorías largas en barras horizontales: se recortan en pantalla (el tooltip conserva el texto completo)
+    data.forEach(function(t){
+      if(!t||t.orientation!=='h'||!Array.isArray(t.y)||!t.y.length||!cat(t.y[0]))return;
+      var largo=t.y.some(function(v){return String(v).length>22});if(!largo)return;
+
+      var ya=lay[(t.yaxis||'y').replace('y','yaxis')]||(lay.yaxis=lay.yaxis||{});
+      if(!ya.tickvals){ya.tickmode='array';ya.tickvals=t.y.slice();ya.ticktext=t.y.map(function(v){return corta(v,22)})}
+    });
+    // leyenda vertical a la derecha: pasa abajo y en horizontal
+    var hayLeg=lay.showlegend!==false&&(lay.legend!==undefined||data.filter(function(t){return t&&t.showlegend!==false}).length>1);
+    var pie=data.some(function(t){return t&&/^(pie|sunburst|treemap)$/.test(t.type)});
+    if(hayLeg&&!pie){var L=lay.legend||{};
+      if(L.orientation!=='h'){lay.legend=Object.assign({},L,{orientation:'h',x:0,xanchor:'left',y:-0.14,yanchor:'top'})}
+      lay.legend.font=Object.assign({},lay.legend.font||{},{size:10});lay.legend.itemwidth=30}
+    if(pie&&hayLeg)lay.legend=Object.assign({},lay.legend||{},{orientation:'h',x:0,y:-0.05,yanchor:'top',font:{size:10,color:'#98a2b2'}});
+    // barras de color de mapas y heatmaps más finas
+    data.forEach(function(t){if(t&&t.colorbar){t.colorbar=Object.assign({},t.colorbar,{thickness:8,len:.7,tickfont:{size:9}})}
+      if(t&&t.marker&&t.marker.colorbar){t.marker.colorbar=Object.assign({},t.marker.colorbar,{thickness:8,len:.7,tickfont:{size:9}})}});
+    // arrastrar con el dedo desplaza la página, no el gráfico (salvo el cubo 3D, que se gira)
+    var tres=Object.keys(lay).some(function(k){return /^scene\d*$/.test(k)})||data.some(function(t){return t&&/3d$/.test(t.type||'')});
+    if(!tres)lay.dragmode=false;
+  }
+  function cfgMovil(cfg){
+    if(!movil())return cfg;
+    cfg=Object.assign({},cfg||{});cfg.displayModeBar=false;cfg.scrollZoom=false;cfg.responsive=true;
+    if(cfg.doubleClick===undefined)cfg.doubleClick=false;return cfg;
   }
   function count(el,data){
     try{
@@ -57,8 +103,9 @@
     ['newPlot','react'].forEach(function(fn){
       var orig=P[fn];if(!orig)return;
       P[fn]=function(el,data,lay,cfg){
-        if(data&&typeof data==='object'&&!Array.isArray(data)&&data.data){var f=data;f.layout=skin(f.data,f.layout);count(el,f.data);try{consider(f.data)}catch(e){}return orig.call(P,el,f)}
+        if(data&&typeof data==='object'&&!Array.isArray(data)&&data.data){var f=data;f.layout=skin(f.data,f.layout);f.config=cfgMovil(f.config);count(el,f.data);try{consider(f.data)}catch(e){}return orig.call(P,el,f)}
         try{lay=skin(data,lay)}catch(e){}
+        try{cfg=cfgMovil(cfg)}catch(e){}
         count(el,data);try{consider(data)}catch(e){}
         return orig.call(P,el,data,lay,cfg);
       };
@@ -137,14 +184,42 @@
       var t=el.textContent.trim();el.classList.toggle('sl-txt',/[A-Za-zÁÉÍÓÚáéíóúñ]{4,}/.test(t)&&t.replace(/[\d.,%\s+-]/g,'').length>4);
     });
   }
+  /* ---------- celular: tablas que se deslizan y pestaña activa siempre a la vista ---------- */
+  function tablas(){
+    if(!movil())return;
+    document.querySelectorAll('main table, .tab table, section table').forEach(function(t){
+      var fila=t.querySelector('tr'),cols=0;if(fila)Array.prototype.forEach.call(fila.children,function(c){cols+=c.colSpan||1});
+      if(cols!==t.__slc){t.__slc=cols;t.classList.toggle('sl-ancha',cols>=5);if(cols>=5)t.style.setProperty('--sl-min',Math.min(cols*92,900)+'px')}
+      // en tablas anchas, las celdas de texto largo (titulares, narrativas) piden lugar en vez de estirar la fila
+      if(cols>=5)t.querySelectorAll('td').forEach(function(td){if(td.__sll!==td.textContent.length){td.__sll=td.textContent.length;td.classList.toggle('sl-largo',td.__sll>60)}});
+      if(t.__slt)return;t.__slt=1;
+      for(var q=t.parentElement;q&&q!==document.body;q=q.parentElement){
+        var o=getComputedStyle(q).overflowX;if(o==='auto'||o==='scroll'){q.classList.add('sl-tw');return}
+        if(q.classList.contains('card')||q.tagName==='MAIN')break;
+      }
+      var w=document.createElement('div');w.className='sl-tw';t.parentNode.insertBefore(w,t);w.appendChild(t);
+    });
+  }
+  var navTop=null;
+  function pestana(e){
+    var b=e.target.closest&&e.target.closest('nav button, nav .navlink');if(!b||!movil())return;
+    var n=b.parentElement;
+    if(navTop===null){var nv=b.closest('nav');navTop=nv?Math.max(0,nv.getBoundingClientRect().top+window.scrollY):0}
+    var y=window.scrollY,tope=navTop;
+    setTimeout(function(){
+      var x=b.offsetLeft-(n.clientWidth-b.offsetWidth)/2;try{n.scrollTo({left:x,behavior:'smooth'})}catch(_){n.scrollLeft=x}
+      if(y>tope&&window.scrollY>tope)window.scrollTo(0,tope);   // la pestaña nueva empieza arriba, con las pestañas a la vista
+    },30);
+  }
   function init(){
     document.documentElement.classList.add('sl-on');
     var li=document.querySelector('.logo i');
     if(li&&/^[◉·\s]*$/.test(li.textContent)&&!li.id){li.outerHTML=mark()}
     else if(!li){var lg=document.querySelector('.logo,.brand');if(lg)lg.insertAdjacentHTML('afterbegin',mark())}
-    kpiText();fotos();
+    kpiText();fotos();tablas();
+    document.addEventListener('click',pestana,true);
     new MutationObserver(function(){
-      if(pend)return;pend=1;requestAnimationFrame(function(){pend=0;kpiText();fotos()});
+      if(pend)return;pend=1;requestAnimationFrame(function(){pend=0;kpiText();fotos();tablas()});
     }).observe(document.body,{attributes:true,attributeFilter:['data-foto'],subtree:true,childList:true});
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();

@@ -155,3 +155,80 @@ header{background:var(--page)!important;border-bottom:1px solid var(--line2)!imp
 .find{border:1px solid var(--line)!important;border-left:2px solid var(--sig)!important;background:var(--s1)!important}
 .voz{background:var(--s1)!important;border-left:2px solid var(--line2)!important}
 }
+
+/* ---------- celular: legible, sin desbordes y navegable con el dedo ----------
+   Todo lo de acá es solo pantalla angosta; en escritorio y en el PDF no cambia nada. */
+@media screen{
+/* el titular corre por debajo de la etiqueta, nunca encima */
+.ticker{position:relative;overflow:hidden}
+.ticker .lab{position:relative;z-index:2;background:var(--page)!important}
+/* tablas anchas: se deslizan dentro de su panel (sala.js las envuelve) */
+.sl-tw{overflow-x:auto;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;max-width:100%}
+.sl-tw>table{margin:0}
+/* Instagram: la grilla de dos columnas no puede empujar la página */
+.igr-g2>*{min-width:0}
+}
+@media screen and (max-width:760px){
+html,body{overflow-x:clip}
+body{font-size:14.5px;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+main{padding:12px 10px 34px}
+main *{overflow-wrap:break-word}
+img,video,iframe,canvas{max-width:100%}
+.card{padding:12px 12px 14px}
+.card>h3:first-child{margin:-12px -12px 12px!important;padding:10px 12px 9px;font-size:15.5px!important}
+.g,.grid,.mapgrid{gap:10px}
+
+/* cabecera compacta: nombre arriba, reloj en una línea chica */
+.top .bar{padding:9px 12px;gap:6px 12px}
+.logo{font-size:16px!important;min-width:0}
+.logo>span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.clock{width:100%;margin-left:0!important;font-size:11px;gap:0;row-gap:2px;flex-wrap:wrap}
+.clock>span{padding:0 10px 0 0}
+.ticker{height:28px}
+.ticker .lab{padding:0 10px 0 12px;font-size:10.5px}
+.ticker .run{font-size:12.5px}
+#sl-wave .sl-wl{max-width:62%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* pestañas: una fila deslizable, objetivo táctil de 44px y aviso de que hay más a la derecha */
+nav{position:sticky;top:0;z-index:20}
+nav .in,header nav{display:flex;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;
+  scroll-snap-type:x proximity;scroll-padding:0 24px;padding:0 4px!important;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 14px,#000 calc(100% - 28px),transparent);
+          mask-image:linear-gradient(90deg,transparent 0,#000 14px,#000 calc(100% - 28px),transparent)}
+nav .in::-webkit-scrollbar,header nav::-webkit-scrollbar{display:none}
+nav button,nav .navlink{flex:none;white-space:nowrap;min-height:44px;padding:12px 12px!important;font-size:14px!important;scroll-snap-align:start;touch-action:manipulation}
+
+/* San Isidro: cabecera propia */
+header .top{padding:10px 12px 0;gap:4px 12px}
+header .brand{display:block;font-size:16px;line-height:1.3}
+header .brand small{display:none}
+header .meta{flex-basis:100%;margin-left:0;font-size:11px}
+header nav{padding:4px 4px 0!important}
+
+/* cifras: dos por fila, sin quedar apretadas */
+.kpis{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.kpi{padding:10px 12px 12px!important;min-width:0}
+.kpi .v,.kpi b{font-size:24px!important}
+.kpi .v.sl-txt,.kpi>b.sl-txt{font-size:16px!important}
+.kpi .l,.kpi span:not(.d):not(.sl-k){font-size:10.5px;letter-spacing:.04em}
+.hero h1,.me h1{font-size:25px!important}
+
+/* listas de chips y filtros: se acomodan en varias líneas y se tocan fácil */
+.pill,.chip,.chipx{padding-top:6px!important;padding-bottom:6px!important}
+input,select,textarea{font-size:16px!important;max-width:100%}  /* 16px: iOS no hace zoom al tocar */
+
+/* tablas: un poco más compactas */
+table{font-size:12.5px}
+th,td{padding:7px 6px}
+.sl-tw{margin:0 -12px;padding:0 12px;width:calc(100% + 24px);max-width:none;
+  background:linear-gradient(90deg,var(--s1) 30%,rgba(16,19,24,0)) left/24px 100% no-repeat local,
+             linear-gradient(270deg,var(--s1) 30%,rgba(16,19,24,0)) right/24px 100% no-repeat local,
+             linear-gradient(90deg,rgba(0,0,0,.45),transparent) left/12px 100% no-repeat scroll,
+             linear-gradient(270deg,rgba(0,0,0,.45),transparent) right/12px 100% no-repeat scroll}
+.sl-tw>table.sl-ancha{min-width:var(--sl-min,640px)}
+.sl-ancha td.sl-largo{min-width:230px}
+
+/* gráficos: que nunca empujen el ancho */
+.js-plotly-plot,.plot-container,.svg-container{max-width:100%!important}
+.js-plotly-plot .modebar{display:none!important}
+}
