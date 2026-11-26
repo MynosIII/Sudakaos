@@ -4032,6 +4032,54 @@
     "ipe": 90,
     "uni": 5
    }
+  },
+  {
+   "id": "libertarismo_derecha",
+   "pos": [
+    45,
+    50,
+    55,
+    25,
+    50,
+    95,
+    60,
+    75,
+    25,
+    97,
+    95,
+    15
+   ],
+   "es": {
+    "nombre": "Libertarismo de derecha",
+    "desc": "Libertario en lo económico pero no en lo social: mercado sin trabas y Estado mínimo, junto con valores tradicionales, mano dura y batalla cultural."
+   },
+   "pt": {
+    "nombre": "Libertarianismo de direita",
+    "desc": "Libertário na economia, mas não nos costumes: mercado sem amarras e Estado mínimo, com valores tradicionais, mão firme e batalha cultural."
+   },
+   "en": {
+    "nombre": "Right-libertarianism (conservative)",
+    "desc": "Libertarian on economics but not on social issues: free markets and a minimal state, with traditional values, law and order and a culture war."
+   },
+   "pos2": {
+    "ecl": 85,
+    "dis": 92,
+    "bie": 92,
+    "epi": 65,
+    "ges": 45,
+    "tra": 70,
+    "idc": 45,
+    "pen": 80,
+    "lab": 90,
+    "eti": 70,
+    "tem": 55,
+    "fut": 65,
+    "ind": 95,
+    "mon": 95,
+    "inf": 30,
+    "ipe": 40,
+    "uni": 60
+   }
   }
  ]
 }
