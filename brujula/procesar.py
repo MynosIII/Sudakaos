@@ -30,6 +30,12 @@ PREG = {q["id"]: q for q in json.loads((HERE / "datos" / "preguntas.json").read_
 FIG = json.loads((HERE / "datos" / "figuras.json").read_text(encoding="utf8"))
 MARG = HERE / "datos" / "marginales_ar.json"
 K = [e["id"] for e in EJES["ejes"]]
+# 17 ejes complementarios (se miden según las preguntas que tocó cada persona) y Certeza, el eje 30, que no es una postura
+# sino el promedio de la certeza en los ejes medidos (igual que fijarCerteza en quiz.js)
+K2 = [e["id"] for e in EJES.get("ejes2", []) if e.get("calc") != "certeza"]
+CER = "cer"
+KA = K + K2 + [CER]
+IDEO = json.loads((HERE / "datos" / "ideologias.json").read_text(encoding="utf8"))["ideologias"]
 MIN_N = int(os.environ.get("BRUJULA_MIN_N", "30"))
 SEG_S_POR_PREG = 2.5  # menos de 2,5 segundos por pregunta en promedio = no leyó
 REGION = {
@@ -43,12 +49,13 @@ EDAD_G = {"16-17": "16-24", "18-24": "16-24", "25-34": "25-34", "35-44": "35-49"
 
 
 # ------------------------------------------------------------------ cálculo (mismo criterio que quiz.js)
-def calcular(ids, ans):
+def calcular(ids, ans, keys=None):
     """Posición 0-100 por eje (0 = polo a) y certeza 0-100 = decisión × coherencia.
     Decisión: neutral 0, de acuerdo / en desacuerdo 0,75, muy 1 (promedio ponderado por peso).
     Coherencia (modelo acumulativo de 12axes): una frase de nivel L hacia un polo la aceptan quienes están del lado de ese polo
     al menos (L - 1) × 12,5 puntos más allá del centro. Cada respuesta que coincide con lo esperado para su posición suma,
     cada una que contradice resta."""
+    keys = keys or K
     qs = [(PREG[q], a) for q, a in zip(ids, ans) if q in PREG]
     Sm, M, D, W = defaultdict(float), defaultdict(float), defaultdict(float), defaultdict(float)
     # balance de redacción por eje (igual que quiz.js): cada lado pesa lo mismo, con un tope de ×3
@@ -66,16 +73,16 @@ def calcular(ids, ans):
         return w * min(3, (P[k] + N[k]) / (2 * (P[k] if w > 0 else N[k])))
     for q, a in qs:
         for k, w0 in q["e"].items():
-            if k not in K:  # ejes complementarios: el agregado público usa los 12 principales
+            if k not in keys:
                 continue
             w = bal(k, w0)
             Sm[k] += a * w
             M[k] += 2 * abs(w)
             D[k] += abs(w) * (0 if a == 0 else .75 if abs(a) == 1 else 1)
             W[k] += abs(w)
-    sc = {k: (50 + 50 * Sm[k] / M[k]) if M[k] else 50.0 for k in K}
+    sc = {k: (50 + 50 * Sm[k] / M[k]) if M[k] else 50.0 for k in keys}
     cert = {}
-    for k in K:
+    for k in keys:
         num = den = 0.0
         for q, a in qs:
             w0 = q["e"].get(k)
@@ -95,10 +102,55 @@ def puntajes(ids, ans):
     return calcular(ids, ans)[0]
 
 
-def afinidad(sc, pos, cert=None):
-    """100 - 2 × distancia media ponderada por certeza (los ejes donde la persona duda pesan menos)."""
-    c = {k: 0.3 + 0.7 * ((cert or {}).get(k, 50) / 100) for k in K}
-    return max(0.0, 100 - 2 * sum(c[k] * abs(sc[k] - pos[k]) for k in K) / sum(c.values()))
+def medir(ids, ans):
+    """Los 30 ejes de una respuesta, con el mismo criterio que el quiz:
+    - 12 principales siempre; complementarios solo si la persona contestó 2+ frases del eje con frases hacia los dos polos
+      (si todas empujan al mismo lado no se puede equilibrar y se toma como no medido);
+    - si el 80% o más de las respuestas son iguales (y no neutrales) la certeza se multiplica por 0,25;
+    - Certeza (eje 30) = promedio de la certeza en los 12 principales y en los complementarios medidos."""
+    sc, cert = calcular(ids, ans)
+    sc2, cert2 = calcular(ids, ans, K2)
+    med = []
+    for k in K2:
+        ws = [PREG[q]["e"][k] for q in ids if q in PREG and PREG[q]["e"].get(k)]
+        if len(ws) >= 2 and any(w > 0 for w in ws) and any(w < 0 for w in ws):
+            med.append(k)
+    nz = Counter(a for a in ans if a)
+    if len(ans) >= 20 and nz and max(nz.values()) / len(ans) >= 0.8:
+        cert = {k: v * 0.25 for k, v in cert.items()}
+        cert2 = {k: v * 0.25 for k, v in cert2.items()}
+    sc2 = {k: sc2[k] for k in med}
+    cert2 = {k: cert2[k] for k in med}
+    vals = list(cert.values()) + list(cert2.values())
+    return sc, cert, sc2, cert2, sum(vals) / len(vals)
+
+
+def valor(r, k):
+    """Posición de una respuesta limpia en cualquiera de los 30 ejes (None si ese eje no se midió)."""
+    if k == CER:
+        return r["_cer"]
+    return r["_sc"][k] if k in K else r["_sc2"].get(k)
+
+
+def afinidad(sc, pos, cert=None, sc2=None, cert2=None, pos2=None):
+    """100 - 2 × distancia media ponderada por certeza (los ejes donde la persona duda pesan menos).
+    Con sc2/pos2 suma los complementarios medidos que la figura o ideología tenga codificados, con el mismo peso (afinidad29 en quiz.js)."""
+    num = den = 0.0
+    for k in K:
+        c = 0.3 + 0.7 * ((cert or {}).get(k, 50) / 100)
+        num += c * abs(sc[k] - pos[k])
+        den += c
+    for k, v in (sc2 or {}).items():
+        if pos2 and pos2.get(k) is not None:
+            c = 0.3 + 0.7 * ((cert2 or {}).get(k, 50) / 100)
+            num += c * abs(v - pos2[k])
+            den += c
+    return max(0.0, 100 - 2 * num / den)
+
+
+def afin(r, f):
+    pos = f["pos"] if isinstance(f["pos"], dict) else dict(zip(K, f["pos"]))
+    return afinidad(r["_sc"], pos, r["_cert"], r["_sc2"], r["_cert2"], f.get("pos2"))
 
 
 # ------------------------------------------------------------------ lectura
@@ -139,8 +191,8 @@ def simular(n, seed=7):
         joven = edad in ("16-17", "18-24", "25-34")
         # sesgo simulado: varones jóvenes más pro mercado y autoridad; mujeres jóvenes más progresistas y laicas
         g = rnd.gauss(0, 0.7)  # eje izquierda-derecha general que correlaciona varios ejes
-        lat = {k: rnd.gauss(0, 0.6) for k in K}
-        for k, s_ in {"pla": 1, "col": .8, "glo": .7, "pro": .6, "rel": .5, "lib": -.4, "int": .4, "mig": -.3}.items():
+        lat = {k: rnd.gauss(0, 0.6) for k in K + K2}
+        for k, s_ in {"dis": .8, "bie": .7, "lab": .7, "ind": .5, "mon": .5, "ecl": .5, "pen": .4, "pla": 1, "col": .8, "glo": .7, "pro": .6, "rel": .5, "lib": -.4, "int": .4, "mig": -.3}.items():
             lat[k] += s_ * g
         if joven and gen == "Varón":
             lat["pla"] += .8; lat["col"] += .5; lat["dem"] += .5; lat["pro"] += .3; lat["tec"] -= .3
@@ -158,7 +210,7 @@ def simular(n, seed=7):
         prov = rnd.choices(provs, [8, 30, 12] + [2] * (len(provs) - 3))[0] if pais == "Argentina" else ""
         rows.append({"recibido": f"2026-11-{rnd.randint(1, 23):02d}T{rnd.randint(0, 23):02d}:00Z", "schema": 2, "version": ver,
                      "lang": "pt" if ver == "br" else "es", "ids": ",".join(ids_v[ver]), "ans": ",".join(map(str, ans)),
-                     "dur_s": rnd.randint(90, 900), "cid_hash": f"{rnd.getrandbits(48):012x}", "edad": edad, "genero": gen,
+                     "dur_s": int(len(ids_v[ver]) * rnd.uniform(3, 12)), "cid_hash": f"{rnd.getrandbits(48):012x}", "edad": edad, "genero": gen,
                      "pais_res": pais, "prov": prov, "pais_nac": pais, "red": red,
                      "autodef": autodef_sint(lat, rnd)})
     return rows
@@ -186,8 +238,8 @@ def limpiar(rows):
         if sum(1 for a in ans if a == 0) > 0.6 * len(ans):
             motivos["mayoría neutral"] += 1
             continue
-        sc, cert = calcular(ids, ans)
-        r = dict(r, _sc=sc, _cert=cert, _ids=ids, _ans=ans)
+        sc, cert, sc2, cert2, cer = medir(ids, ans)
+        r = dict(r, _sc=sc, _cert=cert, _sc2=sc2, _cert2=cert2, _cer=cer, _ids=ids, _ans=ans)
         if r.get("pais_res") == "Argentina":
             r["region"] = REGION.get(r.get("prov") or "", "Sin dato")
         else:
@@ -227,26 +279,33 @@ def n_efectivo(w):
 
 # ------------------------------------------------------------------ agregados
 def medias(rows, w):
+    """Media, intervalo, % en cada polo y certeza por eje, para los 30 ejes. Un eje complementario se publica solo si lo
+    midieron al menos MIN_N personas del grupo (cada persona contesta distintas preguntas según el modo)."""
     if not rows:
         return {}
-    X = np.array([[r["_sc"][k] for k in K] for r in rows])
-    C = np.array([[r["_cert"][k] for k in K] for r in rows])
-    ww = w / w.sum()
-    m = (X * ww[:, None]).sum(0)
-    cm = (C * ww[:, None]).sum(0)
-    var = ((X - m) ** 2 * ww[:, None]).sum(0)
-    ne = n_efectivo(w)
-    half = 1.96 * np.sqrt(var / max(ne, 1))
-    return {k: {"m": round(float(m[i]), 1), "ci": round(float(half[i]), 1), "sd": round(float(math.sqrt(var[i])), 1),
-                "a": round(float((X[:, i] < 40).astype(float) @ ww * 100), 1), "b": round(float((X[:, i] > 60).astype(float) @ ww * 100), 1),
-                "cert": round(float(cm[i]), 1)}
-            for i, k in enumerate(K)}
+    out = {}
+    for k in KA:
+        idx = [i for i, r in enumerate(rows) if valor(r, k) is not None]
+        if k not in K and len(idx) < MIN_N:
+            continue
+        x = np.array([valor(rows[i], k) for i in idx], dtype=float)
+        ws = w[idx]
+        ww = ws / ws.sum()
+        m = float(x @ ww)
+        var = float(((x - m) ** 2) @ ww)
+        half = 1.96 * math.sqrt(var / max(n_efectivo(ws), 1))
+        c = None if k == CER else float(np.array([rows[i]["_cert"][k] if k in K else rows[i]["_cert2"][k] for i in idx]) @ ww)
+        out[k] = {"m": round(m, 1), "ci": round(half, 1), "sd": round(math.sqrt(var), 1),
+                  "a": round(float((x < 40).astype(float) @ ww * 100), 1), "b": round(float((x > 60).astype(float) @ ww * 100), 1),
+                  "cert": None if c is None else round(c, 1), "n": len(idx)}
+    return out
 
 
 def certeza(rows, w):
+    """Certeza media del grupo: el eje 30 (promedio de certeza de cada persona en los ejes que midió)."""
     if not rows:
         return None
-    c = np.array([sum(r["_cert"].values()) / len(K) for r in rows])
+    c = np.array([r["_cer"] for r in rows])
     return round(float(c @ (w / w.sum())), 1)
 
 
@@ -254,10 +313,22 @@ def top_figuras(rows, w, ver):
     figs = FIG[EJES["versiones"][ver]["figuras"]]
     c = Counter()
     for r, wi in zip(rows, w):
-        best = max(figs, key=lambda f: afinidad(r["_sc"], f["pos"], r["_cert"]))
+        best = max(figs, key=lambda f: afin(r, f))
         c[best["nombre"]] += wi
     tot = sum(c.values()) or 1
     return [{"nombre": n, "pct": round(100 * v / tot, 1)} for n, v in c.most_common()]
+
+
+def top_ideologias(rows, w):
+    """% de personas cuya ideología más cercana (de las 85 de datos/ideologias.json) es cada una, y afinidad media con ella."""
+    c, af = Counter(), defaultdict(float)
+    for r, wi in zip(rows, w):
+        a, best = max((afin(r, i), i["id"]) for i in IDEO)
+        c[best] += wi
+        af[best] += wi * a
+    tot = sum(c.values()) or 1
+    nom = {i["id"]: i["es"]["nombre"] for i in IDEO}
+    return [{"id": k, "nombre": nom[k], "pct": round(100 * v / tot, 1), "afinidad": round(af[k] / v, 1)} for k, v in c.most_common()]
 
 
 def autodef_sint(lat, rnd):
@@ -279,7 +350,8 @@ def segmento(rows, w, var, ver):
         if len(idx) < MIN_N or g in ("Sin dato", "Prefiero no decir"):
             continue
         sub, ws = [rows[i] for i in idx], w[idx]
-        out[g] = {"n": len(idx), "certeza": certeza(sub, ws), "ejes": medias(sub, ws), "figuras": top_figuras(sub, ws, ver)[:5]}
+        out[g] = {"n": len(idx), "certeza": certeza(sub, ws), "ejes": medias(sub, ws), "figuras": top_figuras(sub, ws, ver)[:5],
+                  "ideologias": top_ideologias(sub, ws)[:5]}
     return out
 
 
@@ -364,7 +436,8 @@ def segmentos(rows, w, ver):
             c = Counter(r.get(var) or "Sin dato" for r in sub)
             comp[var] = {g: round(100 * v / len(sub), 1) for g, v in c.most_common()}
         out.append({"nombre": nombre, "n": int(len(idx)), "pct": round(100 * float(w[idx].sum() / w.sum()), 1), "centro": cen,
-                    "composicion": comp, "figuras": top_figuras(sub, w[idx], ver)[:3]})
+                    "composicion": comp, "figuras": top_figuras(sub, w[idx], ver)[:3], "ideologias": top_ideologias(sub, w[idx])[:3],
+                    "certeza": certeza(sub, w[idx])})
     return sorted(out, key=lambda s: -s["pct"])
 
 
@@ -402,6 +475,7 @@ def main():
         out["versiones"][ver] = {
             "n": len(rs), "n_efectivo": round(n_efectivo(w)), "ponderacion": pond,
             "certeza": certeza(rs, w), "ejes": medias(rs, w), "figuras": top_figuras(rs, w, ver),
+            "ideologias": top_ideologias(rs, w),
             "por": {var: segmento(rs, w, var, ver) for var in ("genero", "edad_g", "region", "red", "pais_res", "autodef")},
             "edad_genero": cruce(rs, w, "edad_g", "genero"),
             "region_edad": cruce(rs, w, "region", "edad_g"),
@@ -410,11 +484,12 @@ def main():
         }
     out["metodo"] = {
         "muestra": "Autoselección online (quien entra al quiz y acepta sumar sus respuestas). No es una muestra probabilística: los resultados describen a quienes respondieron y, ponderados, se acercan a la población; el intervalo es de referencia.",
-        "puntaje": "12 ejes (preguntas base adaptadas de 12axes, MIT). Cada eje: 50 + 50 × (suma de respuesta × peso) / (suma de 2 × |peso|). 0 = polo a, 100 = polo b. a / b = % con puntaje < 40 / > 60.",
-        "certeza": "Certeza por eje (0-100) = decisión (qué tan lejos de neutral responde) × coherencia (acuerdo con frases cuyo nivel queda cerca de su posición y desacuerdo con las lejanas).",
+        "puntaje": "30 ejes: 12 principales (preguntas base adaptadas de 12axes, MIT), 17 complementarios y Certeza. Cada eje: 50 + 50 × (suma de respuesta × peso) / (suma de 2 × |peso|), con cada lado del eje equilibrado (tope ×3). 0 = polo a, 100 = polo b. a / b = % con puntaje < 40 / > 60. Un eje complementario cuenta para una persona si contestó 2+ frases de ese eje hacia los dos polos, y se publica si lo midieron al menos el mínimo de personas del grupo (columna n).",
+        "certeza": "Certeza por eje (0-100) = decisión (qué tan lejos de neutral responde) × coherencia (acuerdo con frases cuyo nivel queda cerca de su posición y desacuerdo con las lejanas). Si 80%+ de las respuestas son iguales se multiplica por 0,25. El eje Certeza (30) es el promedio de cada persona en los ejes que midió.",
+        "ideologias": "Ideología más cercana = la de menor distancia en los 12 ejes y los complementarios medidos, ponderada por certeza, contra las 85 posiciones editoriales de datos/ideologias.json (a revisar). Es la misma cuenta que muestra el quiz a cada persona.",
         "calidad": f"Se descartan respuestas con menos de {SEG_S_POR_PREG} s por pregunta, misma respuesta en todo, más de 60% neutral, incompletas y duplicadas por navegador (vale la última).",
         "publicacion": f"Solo grupos con {MIN_N} respuestas o más. Intervalo 95% con n efectivo de Kish.",
-        "afinidad": "Dirigente más cercano = menor distancia promedio en los 12 ejes, ponderada por la certeza de cada persona, contra la codificación editorial de datos/figuras.json (a revisar).",
+        "afinidad": "Dirigente más cercano = menor distancia promedio en los 12 ejes y los complementarios medidos, ponderada por la certeza de cada persona, contra la codificación editorial de datos/figuras.json (a revisar).",
     }
     Path(args.out).parent.mkdir(parents=True, exist_ok=True)
     Path(args.out).write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf8")

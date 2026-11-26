@@ -46,8 +46,12 @@ assert L["figuras"]["Jorge Macri"]["n"] > 0 and L["figuras"]["Mauricio Macri"]["
 assert L["ejes"]["lib"]["encuadre"]["b_pct"] is not None
 Q = json.loads((tmp / "quiz.json").read_text())
 ar = Q["versiones"]["ar"]
-assert set(ar["ejes"]) == {"fed", "dem", "int", "mil", "lib", "col", "rel", "pro", "mig", "pla", "glo", "tec"}
-assert all(0 <= v["cert"] <= 100 for v in ar["ejes"].values()) and ar["certeza"] is not None
+E = json.loads((B / "datos" / "ejes.json").read_text())
+assert set(ar["ejes"]) == {e["id"] for e in E["ejes"] + E["ejes2"]}, "faltan ejes de los 30"
+assert all(v["cert"] is None or 0 <= v["cert"] <= 100 for v in ar["ejes"].values()) and ar["certeza"] is not None
+assert ar["ejes"]["cer"]["m"] == ar["certeza"]
+assert len(ar["ideologias"]) >= 10 and abs(sum(i["pct"] for i in ar["ideologias"]) - 100) < 1
+assert ar["por"]["autodef"] and all(g["ideologias"] for g in ar["por"]["autodef"].values())
 assert ar["ponderacion"].startswith("raking"), ar["ponderacion"]
 assert "br" in Q["versiones"], "falta la versión Brasil"
 assert len(L["ejes"]) == 12
