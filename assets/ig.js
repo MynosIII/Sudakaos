@@ -69,7 +69,7 @@
 .igr-note{color:var(--di);font-size:12.5px;margin:4px 0 14px}.igr-note b{color:var(--mu)}
 .igr-empty{color:var(--di);padding:20px;text-align:center}
 .igr-k2{display:inline-block;font:600 10.5px var(--mo);padding:1px 6px;border-radius:4px;background:var(--bg3);color:var(--mu)}
-@media(max-width:860px){.igr-g2{grid-template-columns:1fr}.igr-head h2{font-size:22px}.igr-rank{grid-template-columns:20px 110px 1fr 62px}}`;
+@media(max-width:860px){.igr-g2{grid-template-columns:minmax(0,1fr)}.igr-head h2{font-size:22px}.igr-rank{grid-template-columns:20px 110px 1fr 62px}}`;
 
   /* ---------------- cálculo ---------------- */
   function prep(D) {
