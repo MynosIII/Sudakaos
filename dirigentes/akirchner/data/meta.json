@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-26T18:42-03:00",
+ "updated_at": "2026-11-27T18:27-03:00",
  "ads_days": 90,
  "estado": "ok",
  "error": null,
@@ -15,47 +15,47 @@
    "name": "Claudio Vidal",
    "foco": false,
    "ads": {
-    "n": 4,
+    "n": 3,
     "activos": 0,
     "gasto": [
-     22000,
-     28996
+     19500,
+     25997
     ],
     "impresiones": [
-     31000,
-     42996
+     25000,
+     35997
     ],
     "moneda": "ARS",
     "regiones": {
-     "Buenos Aires": 26.5,
-     "Santa Cruz": 14.3,
-     "Córdoba": 6.2,
-     "Santa Fe": 5.8,
-     "Entre Rios": 4.0,
-     "Mendoza": 4.0,
+     "Buenos Aires": 25.1,
+     "Santa Cruz": 16.8,
+     "Córdoba": 6.1,
+     "Santa Fe": 5.6,
+     "Mendoza": 3.7,
+     "Entre Rios": 3.7,
      "Chaco": 3.6,
-     "Tucuman": 3.3
+     "Tucuman": 3.2
     },
     "edades": {
-     "65+": 41.5,
-     "55-64": 27.8,
+     "65+": 41.4,
+     "55-64": 26.7,
      "45-54": 15.4,
-     "35-44": 8.6,
-     "25-34": 5.2,
-     "18-24": 1.3
+     "35-44": 9.3,
+     "25-34": 5.8,
+     "18-24": 1.5
     },
     "genero": {
-     "male": 75.6,
-     "female": 24.2,
+     "male": 76.1,
+     "female": 23.7,
      "unknown": 0.2
     },
     "plataformas": {
-     "facebook": 4,
-     "instagram": 3,
-     "messenger": 2
+     "facebook": 3,
+     "instagram": 2,
+     "messenger": 1
     },
     "paginas": {
-     "Claudio Vidal": 4
+     "Claudio Vidal": 3
     },
     "avisos": [
      {
@@ -70,8 +70,8 @@
      },
      {
       "t": "This ad ran without a required disclaimer.",
-      "d": "2026-08-27",
-      "u": "https://www.facebook.com/ads/library/?id=1552870716588227"
+      "d": "2026-09-22",
+      "u": "https://www.facebook.com/ads/library/?id=1128581712939613"
      }
     ]
    }
@@ -80,15 +80,15 @@
    "name": "Jairo Guzmán",
    "foco": false,
    "ads": {
-    "n": 12,
-    "activos": 0,
+    "n": 14,
+    "activos": 2,
     "gasto": [
-     1979000,
-     2289988
+     2059000,
+     2379986
     ],
     "impresiones": [
-     853000,
-     1013988
+     876000,
+     1042986
     ],
     "moneda": "ARS",
     "regiones": {
@@ -98,25 +98,25 @@
      "Aysén Region": 0.0
     },
     "edades": {
-     "35-44": 19.8,
-     "45-54": 19.8,
-     "65+": 19.5,
+     "65+": 19.9,
+     "35-44": 19.7,
+     "45-54": 19.7,
      "55-64": 17.4,
-     "25-34": 16.8,
+     "25-34": 16.7,
      "18-24": 6.7,
      "Unknown": 0.0
     },
     "genero": {
-     "male": 63.2,
-     "female": 36.4,
+     "male": 62.8,
+     "female": 36.8,
      "unknown": 0.4
     },
     "plataformas": {
-     "facebook": 12,
-     "instagram": 12
+     "facebook": 14,
+     "instagram": 13
     },
     "paginas": {
-     "Jairo Henoch Guzman": 12
+     "Jairo Henoch Guzman": 14
     },
     "avisos": [
      {
