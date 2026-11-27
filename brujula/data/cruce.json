@@ -1,8 +1,8 @@
 {
- "updated_at": "2026-11-26T19:08:53Z",
+ "updated_at": "2026-11-27T19:08:36Z",
  "simulado": false,
  "n_quiz": 0,
- "textos": 18343,
+ "textos": 19981,
  "figuras": [
   {
    "nombre": "Agustín Tosco",
@@ -59,6 +59,14 @@
    "brecha": 0.0,
    "tono": null,
    "n": 1
+  },
+  {
+   "nombre": "Florencio Randazzo",
+   "afinidad": 0.0,
+   "sov": 0.0,
+   "brecha": 0.0,
+   "tono": null,
+   "n": 5
   },
   {
    "nombre": "Gerardo Morales",
@@ -165,6 +173,14 @@
    "n": 1
   },
   {
+   "nombre": "María Eugenia Vidal",
+   "afinidad": 0.0,
+   "sov": 0.0,
+   "brecha": 0.0,
+   "tono": null,
+   "n": 5
+  },
+  {
    "nombre": "Nicolás Márquez",
    "afinidad": 0.0,
    "sov": 0.0,
@@ -242,7 +258,7 @@
    "sov": 0.1,
    "brecha": -0.1,
    "tono": null,
-   "n": 9
+   "n": 11
   },
   {
    "nombre": "Arturo Illia",
@@ -266,7 +282,7 @@
    "sov": 0.1,
    "brecha": -0.1,
    "tono": null,
-   "n": 14
+   "n": 15
   },
   {
    "nombre": "Cristian Ritondo",
@@ -274,7 +290,7 @@
    "sov": 0.1,
    "brecha": -0.1,
    "tono": null,
-   "n": 13
+   "n": 15
   },
   {
    "nombre": "Daniel Scioli",
@@ -315,14 +331,6 @@
    "brecha": -0.1,
    "tono": null,
    "n": 9
-  },
-  {
-   "nombre": "Florencio Randazzo",
-   "afinidad": 0.0,
-   "sov": 0.1,
-   "brecha": -0.1,
-   "tono": null,
-   "n": 5
   },
   {
    "nombre": "Gabriel Solano",
@@ -370,7 +378,7 @@
    "sov": 0.1,
    "brecha": -0.1,
    "tono": null,
-   "n": 10
+   "n": 15
   },
   {
    "nombre": "Juan Manzur",
@@ -410,7 +418,7 @@
    "sov": 0.1,
    "brecha": -0.1,
    "tono": null,
-   "n": 13
+   "n": 15
   },
   {
    "nombre": "Lisandro de la Torre",
@@ -419,14 +427,6 @@
    "brecha": -0.1,
    "tono": null,
    "n": 11
-  },
-  {
-   "nombre": "María Eugenia Vidal",
-   "afinidad": 0.0,
-   "sov": 0.1,
-   "brecha": -0.1,
-   "tono": null,
-   "n": 5
   },
   {
    "nombre": "Pablo Moyano",
@@ -450,7 +450,7 @@
    "sov": 0.1,
    "brecha": -0.1,
    "tono": null,
-   "n": 11
+   "n": 13
   },
   {
    "nombre": "Saúl Ubaldini",
@@ -458,23 +458,23 @@
    "sov": 0.1,
    "brecha": -0.1,
    "tono": null,
-   "n": 8
+   "n": 9
   },
   {
    "nombre": "Bartolomé Mitre",
    "afinidad": 0.0,
    "sov": 0.2,
    "brecha": -0.2,
-   "tono": null,
-   "n": 19
+   "tono": 4.5,
+   "n": 22
   },
   {
    "nombre": "Carlos Menem",
    "afinidad": 0.0,
    "sov": 0.2,
    "brecha": -0.2,
-   "tono": null,
-   "n": 17
+   "tono": 4.6,
+   "n": 22
   },
   {
    "nombre": "Carlos Pellegrini",
@@ -482,7 +482,15 @@
    "sov": 0.2,
    "brecha": -0.2,
    "tono": null,
-   "n": 16
+   "n": 18
+  },
+  {
+   "nombre": "Guillermo Moreno",
+   "afinidad": 0.0,
+   "sov": 0.2,
+   "brecha": -0.2,
+   "tono": -19.3,
+   "n": 26
   },
   {
    "nombre": "Gustavo Valdés",
@@ -490,7 +498,7 @@
    "sov": 0.2,
    "brecha": -0.2,
    "tono": null,
-   "n": 15
+   "n": 17
   },
   {
    "nombre": "Hugo Moyano",
@@ -498,23 +506,31 @@
    "sov": 0.2,
    "brecha": -0.2,
    "tono": null,
-   "n": 15
+   "n": 16
   },
   {
-   "nombre": "Hugo Passalacqua",
+   "nombre": "Juan Domingo Perón",
    "afinidad": 0.0,
    "sov": 0.2,
    "brecha": -0.2,
-   "tono": 17.4,
-   "n": 23
+   "tono": -3.8,
+   "n": 26
+  },
+  {
+   "nombre": "Leandro Santoro",
+   "afinidad": 0.0,
+   "sov": 0.2,
+   "brecha": -0.2,
+   "tono": -32.0,
+   "n": 25
   },
   {
    "nombre": "Nicolás del Caño",
    "afinidad": 0.0,
    "sov": 0.2,
    "brecha": -0.2,
-   "tono": null,
-   "n": 19
+   "tono": -30.4,
+   "n": 23
   },
   {
    "nombre": "Rodrigo de Loredo",
@@ -530,15 +546,15 @@
    "sov": 0.2,
    "brecha": -0.2,
    "tono": null,
-   "n": 15
+   "n": 16
   },
   {
    "nombre": "Alberto Weretilneck",
    "afinidad": 0.0,
    "sov": 0.3,
    "brecha": -0.3,
-   "tono": 7.7,
-   "n": 26
+   "tono": 6.9,
+   "n": 29
   },
   {
    "nombre": "Elisa Carrió",
@@ -549,36 +565,28 @@
    "n": 31
   },
   {
-   "nombre": "Guillermo Moreno",
+   "nombre": "Hugo Passalacqua",
    "afinidad": 0.0,
    "sov": 0.3,
    "brecha": -0.3,
-   "tono": -19.3,
-   "n": 26
+   "tono": 16.6,
+   "n": 36
   },
   {
    "nombre": "José de San Martín",
    "afinidad": 0.0,
    "sov": 0.3,
    "brecha": -0.3,
-   "tono": 12.9,
-   "n": 31
+   "tono": 12.5,
+   "n": 32
   },
   {
-   "nombre": "Juan Domingo Perón",
+   "nombre": "Juan B. Justo",
    "afinidad": 0.0,
    "sov": 0.3,
    "brecha": -0.3,
-   "tono": -4.2,
-   "n": 24
-  },
-  {
-   "nombre": "Leandro Santoro",
-   "afinidad": 0.0,
-   "sov": 0.3,
-   "brecha": -0.3,
-   "tono": -33.3,
-   "n": 24
+   "tono": -2.7,
+   "n": 36
   },
   {
    "nombre": "Raúl Alfonsín",
@@ -586,22 +594,14 @@
    "sov": 0.3,
    "brecha": -0.3,
    "tono": 0.0,
-   "n": 33
+   "n": 35
   },
   {
    "nombre": "Rogelio Frigerio",
    "afinidad": 0.0,
    "sov": 0.3,
    "brecha": -0.3,
-   "tono": 10.0,
-   "n": 30
-  },
-  {
-   "nombre": "Sergio Uñac",
-   "afinidad": 0.0,
-   "sov": 0.3,
-   "brecha": -0.3,
-   "tono": 0.0,
+   "tono": 9.1,
    "n": 33
   },
   {
@@ -609,64 +609,48 @@
    "afinidad": 0.0,
    "sov": 0.4,
    "brecha": -0.4,
-   "tono": -17.2,
-   "n": 35
+   "tono": -20.5,
+   "n": 39
   },
   {
    "nombre": "Carlos Sadir",
    "afinidad": 0.0,
    "sov": 0.4,
    "brecha": -0.4,
-   "tono": 15.8,
-   "n": 38
+   "tono": 15.0,
+   "n": 40
   },
   {
    "nombre": "Fernando Gray",
    "afinidad": 0.0,
    "sov": 0.4,
    "brecha": -0.4,
-   "tono": -2.5,
-   "n": 39
-  },
-  {
-   "nombre": "Juan B. Justo",
-   "afinidad": 0.0,
-   "sov": 0.4,
-   "brecha": -0.4,
-   "tono": -2.9,
-   "n": 35
+   "tono": 0.0,
+   "n": 41
   },
   {
    "nombre": "Leandro N. Alem",
    "afinidad": 0.0,
    "sov": 0.4,
    "brecha": -0.4,
-   "tono": 8.9,
-   "n": 34
+   "tono": 10.6,
+   "n": 38
   },
   {
    "nombre": "Luis Petri",
    "afinidad": 0.0,
    "sov": 0.4,
    "brecha": -0.4,
-   "tono": -19.4,
-   "n": 36
+   "tono": -15.0,
+   "n": 40
   },
   {
    "nombre": "Martín Lousteau",
    "afinidad": 0.0,
    "sov": 0.4,
    "brecha": -0.4,
-   "tono": -7.4,
-   "n": 41
-  },
-  {
-   "nombre": "Miguel Ángel Pichetto",
-   "afinidad": 0.0,
-   "sov": 0.4,
-   "brecha": -0.4,
-   "tono": -35.7,
-   "n": 42
+   "tono": -6.8,
+   "n": 44
   },
   {
    "nombre": "Nicolás Avellaneda",
@@ -674,7 +658,31 @@
    "sov": 0.4,
    "brecha": -0.4,
    "tono": 0.0,
-   "n": 34
+   "n": 37
+  },
+  {
+   "nombre": "Sergio Uñac",
+   "afinidad": 0.0,
+   "sov": 0.4,
+   "brecha": -0.4,
+   "tono": 0.0,
+   "n": 41
+  },
+  {
+   "nombre": "Domingo Cavallo",
+   "afinidad": 0.0,
+   "sov": 0.5,
+   "brecha": -0.5,
+   "tono": -29.6,
+   "n": 54
+  },
+  {
+   "nombre": "Gildo Insfrán",
+   "afinidad": 0.0,
+   "sov": 0.5,
+   "brecha": -0.5,
+   "tono": 3.6,
+   "n": 56
   },
   {
    "nombre": "Guillermo Francos",
@@ -689,64 +697,56 @@
    "afinidad": 0.0,
    "sov": 0.5,
    "brecha": -0.5,
-   "tono": -5.8,
-   "n": 51
+   "tono": -5.6,
+   "n": 53
   },
   {
    "nombre": "Osvaldo Jaldo",
    "afinidad": 0.0,
    "sov": 0.5,
    "brecha": -0.5,
-   "tono": -2.1,
-   "n": 49
-  },
-  {
-   "nombre": "Domingo Cavallo",
-   "afinidad": 0.0,
-   "sov": 0.6,
-   "brecha": -0.6,
-   "tono": -30.2,
-   "n": 53
-  },
-  {
-   "nombre": "Gildo Insfrán",
-   "afinidad": 0.0,
-   "sov": 0.6,
-   "brecha": -0.6,
-   "tono": 3.6,
-   "n": 55
+   "tono": -2.0,
+   "n": 50
   },
   {
    "nombre": "Hipólito Yrigoyen",
    "afinidad": 0.0,
    "sov": 0.6,
    "brecha": -0.6,
-   "tono": -10.9,
-   "n": 55
+   "tono": -9.8,
+   "n": 61
   },
   {
    "nombre": "Myriam Bregman",
    "afinidad": 0.0,
    "sov": 0.6,
    "brecha": -0.6,
-   "tono": -30.9,
-   "n": 55
+   "tono": -28.1,
+   "n": 64
   },
   {
    "nombre": "Ricardo Quintela",
    "afinidad": 0.0,
    "sov": 0.6,
    "brecha": -0.6,
-   "tono": 8.0,
-   "n": 62
+   "tono": 7.8,
+   "n": 64
   },
   {
    "nombre": "Rodolfo Walsh",
    "afinidad": 0.0,
    "sov": 0.6,
    "brecha": -0.6,
-   "tono": -28.8,
-   "n": 59
+   "tono": -30.0,
+   "n": 60
+  },
+  {
+   "nombre": "Eva Perón",
+   "afinidad": 0.0,
+   "sov": 0.7,
+   "brecha": -0.7,
+   "tono": 0.0,
+   "n": 77
   },
   {
    "nombre": "Gustavo Sáenz",
@@ -757,20 +757,20 @@
    "n": 70
   },
   {
+   "nombre": "Manuel Belgrano",
+   "afinidad": 0.0,
+   "sov": 0.7,
+   "brecha": -0.7,
+   "tono": 5.2,
+   "n": 77
+  },
+  {
    "nombre": "Mario Roberto Santucho",
    "afinidad": 0.0,
    "sov": 0.7,
    "brecha": -0.7,
-   "tono": -28.2,
-   "n": 71
-  },
-  {
-   "nombre": "Eva Perón",
-   "afinidad": 0.0,
-   "sov": 0.8,
-   "brecha": -0.8,
-   "tono": 0.0,
-   "n": 74
+   "tono": -27.4,
+   "n": 73
   },
   {
    "nombre": "José Luis Espert",
@@ -781,20 +781,36 @@
    "n": 79
   },
   {
-   "nombre": "Manuel Belgrano",
+   "nombre": "Miguel Ángel Pichetto",
    "afinidad": 0.0,
    "sov": 0.8,
    "brecha": -0.8,
-   "tono": 6.8,
-   "n": 73
+   "tono": -43.8,
+   "n": 80
   },
   {
    "nombre": "Raúl Jalil",
    "afinidad": 0.0,
    "sov": 0.8,
    "brecha": -0.8,
-   "tono": 4.0,
-   "n": 75
+   "tono": 4.9,
+   "n": 81
+  },
+  {
+   "nombre": "Mariano Moreno",
+   "afinidad": 0.0,
+   "sov": 0.9,
+   "brecha": -0.9,
+   "tono": 10.3,
+   "n": 97
+  },
+  {
+   "nombre": "Rolando Figueroa",
+   "afinidad": 0.0,
+   "sov": 0.9,
+   "brecha": -0.9,
+   "tono": 9.5,
+   "n": 95
   },
   {
    "nombre": "Sandra Pettovello",
@@ -802,239 +818,223 @@
    "sov": 0.9,
    "brecha": -0.9,
    "tono": 0.0,
-   "n": 89
+   "n": 92
+  },
+  {
+   "nombre": "Néstor Kirchner",
+   "afinidad": 0.0,
+   "sov": 1.0,
+   "brecha": -1.0,
+   "tono": 3.8,
+   "n": 105
   },
   {
    "nombre": "Claudio Vidal",
    "afinidad": 0.0,
-   "sov": 1.0,
-   "brecha": -1.0,
-   "tono": 8.4,
-   "n": 95
+   "sov": 1.1,
+   "brecha": -1.1,
+   "tono": 8.7,
+   "n": 115
   },
   {
    "nombre": "Juan Grabois",
    "afinidad": 0.0,
-   "sov": 1.0,
-   "brecha": -1.0,
-   "tono": -3.1,
-   "n": 98
-  },
-  {
-   "nombre": "Mariano Moreno",
-   "afinidad": 0.0,
-   "sov": 1.0,
-   "brecha": -1.0,
-   "tono": 8.7,
-   "n": 92
-  },
-  {
-   "nombre": "Rolando Figueroa",
-   "afinidad": 0.0,
-   "sov": 1.0,
-   "brecha": -1.0,
-   "tono": 9.6,
-   "n": 94
+   "sov": 1.1,
+   "brecha": -1.1,
+   "tono": -10.0,
+   "n": 110
   },
   {
    "nombre": "Marcela Pagano",
    "afinidad": 0.0,
    "sov": 1.1,
    "brecha": -1.1,
-   "tono": -30.2,
-   "n": 106
+   "tono": -31.8,
+   "n": 110
   },
   {
    "nombre": "Martín Menem",
    "afinidad": 0.0,
    "sov": 1.1,
    "brecha": -1.1,
-   "tono": -23.4,
-   "n": 107
-  },
-  {
-   "nombre": "Néstor Kirchner",
-   "afinidad": 0.0,
-   "sov": 1.1,
-   "brecha": -1.1,
-   "tono": 3.9,
-   "n": 101
+   "tono": -23.8,
+   "n": 118
   },
   {
    "nombre": "Federico Sturzenegger",
    "afinidad": 0.0,
    "sov": 1.2,
    "brecha": -1.2,
-   "tono": -16.9,
-   "n": 119
+   "tono": -17.1,
+   "n": 123
+  },
+  {
+   "nombre": "Horacio Rodríguez Larreta",
+   "afinidad": 0.0,
+   "sov": 1.2,
+   "brecha": -1.2,
+   "tono": -15.7,
+   "n": 128
   },
   {
    "nombre": "Lilia Lemoine",
    "afinidad": 0.0,
    "sov": 1.2,
    "brecha": -1.2,
-   "tono": -25.8,
-   "n": 116
-  },
-  {
-   "nombre": "Horacio Rodríguez Larreta",
-   "afinidad": 0.0,
-   "sov": 1.3,
-   "brecha": -1.3,
-   "tono": -16.4,
-   "n": 122
+   "tono": -28.6,
+   "n": 126
   },
   {
    "nombre": "Alberto Fernández",
    "afinidad": 0.0,
-   "sov": 1.4,
-   "brecha": -1.4,
-   "tono": -18.4,
-   "n": 136
+   "sov": 1.3,
+   "brecha": -1.3,
+   "tono": -17.3,
+   "n": 139
+  },
+  {
+   "nombre": "Mayra Mendoza",
+   "afinidad": 0.0,
+   "sov": 1.3,
+   "brecha": -1.3,
+   "tono": 6.6,
+   "n": 137
   },
   {
    "nombre": "Manuel Adorni",
    "afinidad": 0.0,
    "sov": 1.4,
    "brecha": -1.4,
-   "tono": -26.8,
-   "n": 138
-  },
-  {
-   "nombre": "Mayra Mendoza",
-   "afinidad": 0.0,
-   "sov": 1.4,
-   "brecha": -1.4,
-   "tono": 7.6,
-   "n": 131
+   "tono": -28.5,
+   "n": 144
   },
   {
    "nombre": "Maximiliano Pullaro",
    "afinidad": 0.0,
-   "sov": 1.6,
-   "brecha": -1.6,
-   "tono": 5.2,
-   "n": 153
+   "sov": 1.7,
+   "brecha": -1.7,
+   "tono": 7.3,
+   "n": 176
   },
   {
    "nombre": "Facundo Quiroga",
    "afinidad": 0.0,
    "sov": 1.8,
    "brecha": -1.8,
-   "tono": -3.5,
-   "n": 172
+   "tono": -1.6,
+   "n": 183
   },
   {
    "nombre": "Alfredo Cornejo",
    "afinidad": 0.0,
    "sov": 1.9,
    "brecha": -1.9,
-   "tono": -3.8,
-   "n": 182
-  },
-  {
-   "nombre": "Máximo Kirchner",
-   "afinidad": 0.0,
-   "sov": 2.0,
-   "brecha": -2.0,
-   "tono": -6.7,
-   "n": 194
+   "tono": -4.0,
+   "n": 202
   },
   {
    "nombre": "Karina Milei",
    "afinidad": 0.0,
    "sov": 2.2,
    "brecha": -2.2,
-   "tono": -2.0,
-   "n": 207
+   "tono": -0.8,
+   "n": 230
+  },
+  {
+   "nombre": "Máximo Kirchner",
+   "afinidad": 0.0,
+   "sov": 2.2,
+   "brecha": -2.2,
+   "tono": -6.2,
+   "n": 226
   },
   {
    "nombre": "Martín Llaryora",
    "afinidad": 0.0,
    "sov": 2.3,
    "brecha": -2.3,
-   "tono": 1.8,
-   "n": 220
-  },
-  {
-   "nombre": "Jorge Macri",
-   "afinidad": 0.0,
-   "sov": 2.5,
-   "brecha": -2.5,
-   "tono": -10.9,
-   "n": 239
+   "tono": 2.5,
+   "n": 240
   },
   {
    "nombre": "Victoria Villarruel",
    "afinidad": 0.0,
-   "sov": 2.5,
-   "brecha": -2.5,
-   "tono": -25.0,
-   "n": 236
+   "sov": 2.4,
+   "brecha": -2.4,
+   "tono": -23.8,
+   "n": 248
+  },
+  {
+   "nombre": "Jorge Macri",
+   "afinidad": 0.0,
+   "sov": 2.6,
+   "brecha": -2.6,
+   "tono": -13.9,
+   "n": 273
   },
   {
    "nombre": "Luis Caputo",
    "afinidad": 0.0,
    "sov": 2.6,
    "brecha": -2.6,
-   "tono": -27.1,
-   "n": 247
-  },
-  {
-   "nombre": "Sergio Massa",
-   "afinidad": 0.0,
-   "sov": 2.7,
-   "brecha": -2.7,
-   "tono": -3.4,
-   "n": 259
+   "tono": -27.7,
+   "n": 267
   },
   {
    "nombre": "Mauricio Macri",
    "afinidad": 0.0,
-   "sov": 2.8,
-   "brecha": -2.8,
-   "tono": -14.4,
-   "n": 271
+   "sov": 2.7,
+   "brecha": -2.7,
+   "tono": -15.0,
+   "n": 285
+  },
+  {
+   "nombre": "Sergio Massa",
+   "afinidad": 0.0,
+   "sov": 2.9,
+   "brecha": -2.9,
+   "tono": -3.3,
+   "n": 305
   },
   {
    "nombre": "Diego Santilli",
    "afinidad": 0.0,
-   "sov": 3.7,
-   "brecha": -3.7,
-   "tono": -4.7,
-   "n": 358
-  },
-  {
-   "nombre": "Cristina Kirchner",
-   "afinidad": 0.0,
-   "sov": 4.5,
-   "brecha": -4.5,
-   "tono": -9.0,
-   "n": 432
+   "sov": 3.6,
+   "brecha": -3.6,
+   "tono": -5.3,
+   "n": 379
   },
   {
    "nombre": "Patricia Bullrich",
    "afinidad": 0.0,
-   "sov": 4.5,
-   "brecha": -4.5,
-   "tono": -10.8,
-   "n": 428
+   "sov": 4.6,
+   "brecha": -4.6,
+   "tono": -10.9,
+   "n": 480
+  },
+  {
+   "nombre": "Cristina Kirchner",
+   "afinidad": 0.0,
+   "sov": 4.7,
+   "brecha": -4.7,
+   "tono": -8.4,
+   "n": 490
   },
   {
    "nombre": "Axel Kicillof",
    "afinidad": 0.0,
-   "sov": 5.2,
-   "brecha": -5.2,
-   "tono": -7.8,
-   "n": 501
+   "sov": 5.3,
+   "brecha": -5.3,
+   "tono": -7.4,
+   "n": 555
   },
   {
    "nombre": "Javier Milei",
    "afinidad": 0.0,
-   "sov": 19.6,
-   "brecha": -19.6,
+   "sov": 19.4,
+   "brecha": -19.4,
    "tono": -16.3,
-   "n": 1875
+   "n": 2022
   }
  ],
  "ejes": [
@@ -1047,9 +1047,9 @@
    "sd": null,
    "extremos": null,
    "encuadre": 0.0,
-   "share": 12.1,
-   "n": 1037,
-   "tono": -6.5,
+   "share": 12.3,
+   "n": 1138,
+   "tono": -7.4,
    "brecha": null
   },
   {
@@ -1060,10 +1060,10 @@
    "quiz": null,
    "sd": null,
    "extremos": null,
-   "encuadre": 33.5,
-   "share": 6.8,
-   "n": 584,
-   "tono": -15.3,
+   "encuadre": 33.3,
+   "share": 7.0,
+   "n": 645,
+   "tono": -14.9,
    "brecha": null
   },
   {
@@ -1074,9 +1074,9 @@
    "quiz": null,
    "sd": null,
    "extremos": null,
-   "encuadre": 93.8,
-   "share": 10.0,
-   "n": 853,
+   "encuadre": 92.8,
+   "share": 9.8,
+   "n": 911,
    "tono": -8.6,
    "brecha": null
   },
@@ -1088,10 +1088,10 @@
    "quiz": null,
    "sd": null,
    "extremos": null,
-   "encuadre": 4.1,
-   "share": 8.0,
-   "n": 683,
-   "tono": -3.7,
+   "encuadre": 4.0,
+   "share": 7.7,
+   "n": 715,
+   "tono": -4.2,
    "brecha": null
   },
   {
@@ -1102,10 +1102,10 @@
    "quiz": null,
    "sd": null,
    "extremos": null,
-   "encuadre": 7.3,
-   "share": 7.4,
-   "n": 634,
-   "tono": -10.8,
+   "encuadre": 8.5,
+   "share": 7.3,
+   "n": 675,
+   "tono": -11.2,
    "brecha": null
   },
   {
@@ -1116,10 +1116,10 @@
    "quiz": null,
    "sd": null,
    "extremos": null,
-   "encuadre": 77.9,
-   "share": 4.0,
-   "n": 339,
-   "tono": -7.3,
+   "encuadre": 77.6,
+   "share": 3.9,
+   "n": 360,
+   "tono": -8.6,
    "brecha": null
   },
   {
@@ -1130,10 +1130,10 @@
    "quiz": null,
    "sd": null,
    "extremos": null,
-   "encuadre": 98.5,
-   "share": 14.2,
-   "n": 1220,
-   "tono": 3.8,
+   "encuadre": 98.6,
+   "share": 14.0,
+   "n": 1298,
+   "tono": 3.9,
    "brecha": null
   },
   {
@@ -1144,10 +1144,10 @@
    "quiz": null,
    "sd": null,
    "extremos": null,
-   "encuadre": 53.8,
+   "encuadre": 53.3,
    "share": 11.4,
-   "n": 981,
-   "tono": -7.8,
+   "n": 1054,
+   "tono": -7.3,
    "brecha": null
   },
   {
@@ -1158,10 +1158,10 @@
    "quiz": null,
    "sd": null,
    "extremos": null,
-   "encuadre": 21.6,
-   "share": 2.9,
-   "n": 248,
-   "tono": -19.0,
+   "encuadre": 21.1,
+   "share": 3.0,
+   "n": 276,
+   "tono": -21.0,
    "brecha": null
   },
   {
@@ -1172,10 +1172,10 @@
    "quiz": null,
    "sd": null,
    "extremos": null,
-   "encuadre": 46.0,
-   "share": 6.7,
-   "n": 577,
-   "tono": -27.0,
+   "encuadre": 47.1,
+   "share": 7.0,
+   "n": 649,
+   "tono": -28.4,
    "brecha": null
   },
   {
@@ -1186,10 +1186,10 @@
    "quiz": null,
    "sd": null,
    "extremos": null,
-   "encuadre": 77.2,
-   "share": 9.6,
-   "n": 822,
-   "tono": -7.3,
+   "encuadre": 78.2,
+   "share": 9.5,
+   "n": 883,
+   "tono": -7.1,
    "brecha": null
   },
   {
@@ -1200,10 +1200,10 @@
    "quiz": null,
    "sd": null,
    "extremos": null,
-   "encuadre": 21.9,
-   "share": 6.9,
-   "n": 590,
-   "tono": -4.1,
+   "encuadre": 20.3,
+   "share": 7.1,
+   "n": 656,
+   "tono": -5.1,
    "brecha": null
   }
  ],
@@ -1212,43 +1212,43 @@
    "id": "fed",
    "nombre": "Territorio",
    "divide": null,
-   "se_habla": 12.1
+   "se_habla": 12.3
   },
   {
    "id": "dem",
    "nombre": "Gobierno",
    "divide": null,
-   "se_habla": 6.8
+   "se_habla": 7.0
   },
   {
    "id": "int",
    "nombre": "Mundo",
    "divide": null,
-   "se_habla": 10.0
+   "se_habla": 9.8
   },
   {
    "id": "mil",
    "nombre": "Defensa",
    "divide": null,
-   "se_habla": 8.0
+   "se_habla": 7.7
   },
   {
    "id": "lib",
    "nombre": "Seguridad",
    "divide": null,
-   "se_habla": 7.4
+   "se_habla": 7.3
   },
   {
    "id": "col",
    "nombre": "Propiedad",
    "divide": null,
-   "se_habla": 4.0
+   "se_habla": 3.9
   },
   {
    "id": "rel",
    "nombre": "Religión",
    "divide": null,
-   "se_habla": 14.2
+   "se_habla": 14.0
   },
   {
    "id": "pro",
@@ -1260,25 +1260,25 @@
    "id": "mig",
    "nombre": "Cultura",
    "divide": null,
-   "se_habla": 2.9
+   "se_habla": 3.0
   },
   {
    "id": "pla",
    "nombre": "Economía",
    "divide": null,
-   "se_habla": 6.7
+   "se_habla": 7.0
   },
   {
    "id": "glo",
    "nombre": "Comercio",
    "divide": null,
-   "se_habla": 9.6
+   "se_habla": 9.5
   },
   {
    "id": "tec",
    "nombre": "Tecnología y ambiente",
    "divide": null,
-   "se_habla": 6.9
+   "se_habla": 7.1
   }
  ],
  "plataformas": [],
@@ -1286,43 +1286,43 @@
  "alertas": [
   {
    "nivel": "media",
-   "t": "Victoria Villarruel: 100 menciones en 7 días, 3,4× la semana anterior."
+   "t": "Luis Caputo: 150 menciones en 7 días, 2,4× la semana anterior."
   },
   {
    "nivel": "media",
-   "t": "Luis Caputo: 139 menciones en 7 días, 2,4× la semana anterior."
+   "t": "Lilia Lemoine: 35 menciones en 7 días, 2,2× la semana anterior."
   },
   {
    "nivel": "media",
-   "t": "Marcela Pagano: 41 menciones en 7 días, 2,4× la semana anterior."
+   "t": "Marcela Pagano: 42 menciones en 7 días, 2,6× la semana anterior."
   },
   {
    "nivel": "media",
-   "t": "Diego Santilli: 278 menciones en 7 días, 7,7× la semana anterior."
+   "t": "Diego Santilli: 287 menciones en 7 días, 6,8× la semana anterior."
   },
   {
    "nivel": "media",
-   "t": "Martín Lousteau: 28 menciones en 7 días, 7,0× la semana anterior."
+   "t": "Martín Lousteau: 29 menciones en 7 días, 7,2× la semana anterior."
   },
   {
    "nivel": "media",
-   "t": "Miguel Ángel Pichetto: 26 menciones en 7 días, 4,3× la semana anterior."
+   "t": "Miguel Ángel Pichetto: 61 menciones en 7 días, 6,8× la semana anterior."
   },
   {
    "nivel": "media",
-   "t": "Máximo Kirchner: 104 menciones en 7 días, 2,6× la semana anterior."
+   "t": "Máximo Kirchner: 123 menciones en 7 días, 3,2× la semana anterior."
   },
   {
    "nivel": "media",
-   "t": "Gildo Insfrán: 27 menciones en 7 días, 2,7× la semana anterior."
+   "t": "Ricardo Quintela: 20 menciones en 7 días, 3,3× la semana anterior."
   },
   {
    "nivel": "media",
-   "t": "Mario Roberto Santucho: 71 menciones en 7 días, 71,0× la semana anterior."
+   "t": "Hugo Passalacqua: 20 menciones en 7 días, 2,0× la semana anterior."
   },
   {
    "nivel": "media",
-   "t": "Facundo Quiroga: 93 menciones en 7 días, 2,1× la semana anterior."
+   "t": "Mario Roberto Santucho: 73 menciones en 7 días, 73,0× la semana anterior."
   },
   {
    "nivel": "info",
